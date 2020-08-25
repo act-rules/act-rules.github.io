@@ -38,8 +38,8 @@ The first [focusable][] element within the test target:
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of `link`; and
 - can be [activated][] using the keyboard; and
-- when [activated][], moves focus [to the start][at the start] of the [main section of content][] of the [document][]; and
-- has an [accessible name][] that communicates that it links to the [main section of content][].
+- when [activated][], moves focus [to the start][at the start] of the [main block of content][] of the [document][]; and
+- has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ## Assumptions
 
@@ -56,15 +56,15 @@ _There are no major accessibility support issues known for this rule._
 
 - [G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
-## Test Cases
+Unless specified otherwise, the [main block of content][] of each document is defined by the `main` element.
 
-**Note:** Unless specified otherwise, the [main section of content][] of each document is defined by the `main` element, and the complementary [section of content][] (`aside` element) does not include any [focusable][] element not shown explicitly.
+## Test Cases
 
 ### Passed
 
 #### Passed Example 1
 
-The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when [activated][] moves the focus to the [main section of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html lang="en">
@@ -75,10 +75,9 @@ The link to skip the complementary [section of repeated content][] is [visible][
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -105,10 +104,9 @@ The link to skip the complementary [section of repeated content][] is [included 
 		<nav class="visible-on-focus">
 			<a href="#main">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -135,10 +133,9 @@ The element to skip the complementary [section of repeated content][] is [visibl
 		<nav>
 			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -153,7 +150,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Passed Example 4
 
-The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the [main section of content][].
+The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -164,10 +161,9 @@ The link to skip the complementary [section of repeated content][] has an [acces
 		<nav>
 			<a href="#main" aria-label="Skip to main content">📖</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -190,10 +186,9 @@ Even though it is located after it in tree order, the link to skip the complemen
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<nav>
 			<a href="#main">Skip to main content</a>
@@ -211,7 +206,7 @@ Even though it is located after it in tree order, the link to skip the complemen
 
 #### Passed Example 6
 
-The first [focusable][] element within this page is the link to the [main section of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
+The first [focusable][] element within this page is the link to the [main block of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -223,10 +218,9 @@ The first [focusable][] element within this page is the link to the [main sectio
 			<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
 			<a href="#main" tabindex="1">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -255,10 +249,9 @@ There is no link to skip the complementary [section of repeated content][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -285,10 +278,9 @@ The link to skip the complementary [section of repeated content][] is not the fi
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -314,10 +306,9 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 		<nav>
 			<a href="#main" aria-hidden="true">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -343,10 +334,9 @@ The link to skip the complementary [section of repeated content][] is not [visib
 		<nav>
 			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -372,10 +362,9 @@ The element with a click event to skip the complementary [section of repeated co
 		<nav>
 			<span onclick="document.getElementById('main').focus()">Skip to main content</span>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -401,10 +390,9 @@ The element to skip the complementary [section of repeated content][] is [visibl
 		<nav>
 			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -419,7 +407,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Failed Example 7
 
-The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main section of content][].
+The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -430,10 +418,9 @@ The link to skip the complementary [section of repeated content][] does not refe
 		<nav>
 			<a href="#invalid-id">Skip to main content</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -459,10 +446,9 @@ The link to skip the complementary [section of repeated content][] does not have
 		<nav>
 			<a href="#main">Click me if you dare!</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -477,7 +463,7 @@ The link to skip the complementary [section of repeated content][] does not have
 
 #### Failed Example 9
 
-The first [focusable][] element within this page is the link to W3C. The link to the [main section of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
+The first [focusable][] element within this page is the link to W3C. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -489,10 +475,9 @@ The first [focusable][] element within this page is the link to W3C. The link to
 			<a href="#main" tabindex="2">Skip to main content</a>
 			<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
 		</nav>
-		<aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -529,7 +514,7 @@ This [document][] is not an [HTML web page][].
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[main section of content]: #main-section-of-content 'Definition of Main Section of Content'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [section of content]: #section-of-content 'Definition of Section of Content'
 [section of repeated content]: #section-of-repeated-content 'Definition of Section of Repeated Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

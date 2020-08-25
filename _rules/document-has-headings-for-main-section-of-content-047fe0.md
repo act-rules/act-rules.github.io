@@ -37,8 +37,8 @@ The first node in the [flat tree][] which is inside the [main block of content][
 
 ## Assumptions
 
-- This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
+- This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
 
 ## Accessibility Support
 

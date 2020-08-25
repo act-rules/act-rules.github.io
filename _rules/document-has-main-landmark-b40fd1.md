@@ -30,12 +30,12 @@ Within the test target, there is at least one element which:
 
 ## Assumptions
 
-- This rule assumes that the `main` [landmark][] is correctly used to identify the [main section of content][] of the page.
+- This rule assumes that the `main` [landmark][] is correctly used to identify the [main block of content][] of the page.
 - This rule assumes that [landmarks][landmark] are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
 
 ## Accessibility Support
 
-Having a `main` [landmark][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241] by identifying the [main section of content][] of a page. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmark navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
+Having a `main` [landmark][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241] by identifying the [main block of content][] of a page. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmark navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 
 ## Background
 
@@ -163,7 +163,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
-[main section of content]: #main-section-of-content 'Definition of Main Section of Content'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'

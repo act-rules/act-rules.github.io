@@ -78,6 +78,14 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	test.each([...authors, ...previous_authors])('has contributor data for author: `%s`', author => {
 		expect(metaData.contributors).toContain(author.toLowerCase())
 	})
+	const orderedAuthors = [...authors].sort((a, b) => a.localeCompare(b))
+	test('authors are ordered alphabetically', () => {
+		expect(authors).toStrictEqual(orderedAuthors)
+	})
+	const orderePreviousAuthors = [...previous_authors].sort((a, b) => a.localeCompare(b))
+	test('previous authors are ordered alphabetically', () => {
+		expect(previous_authors).toStrictEqual(orderePreviousAuthors)
+	})
 
 	/**
 	 * Check if `accessibility_requirements` (if any) has expected values

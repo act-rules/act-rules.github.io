@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML page has title
+name: HTML page has non-empty title
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page has a title.
+  This rule checks that a non-embedded HTML page has a non-empty title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -24,11 +24,11 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Wilco Fiers
-    - Stein Erik Skotkjerra
-    - Bryn Anderson
     - Anne Thyme Nørregaard
+    - Bryn Anderson
     - Jey Nandakumar
+    - Stein Erik Skotkjerra
+    - Wilco Fiers
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

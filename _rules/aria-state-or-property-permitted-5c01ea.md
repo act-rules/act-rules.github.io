@@ -132,18 +132,10 @@ The `aria-label` [state][] is [global][] and thus [inherited][] for all [semanti
 
 #### Passed Example 10
 
-This `aside` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [inherited][] for the `complementary` role.
+This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
 
 ```html
-<aside role="none" aria-label="About ACT rules" aria-expanded="true">ACT rules are cool!</aside>
-```
-
-#### Passed Example 11
-
-This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
-
-```html
-<aside role="none" tabindex="0" aria-expanded="true">ACT rules are cool!</aside>
+<button role="none" aria-pressed="false">ACT rules are cool!</button>
 ```
 
 ### Failed

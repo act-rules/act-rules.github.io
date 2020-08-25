@@ -31,8 +31,8 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Anne Thyme Nørregaard
+    - Wilco Fiers
   image:
     - Image used in passed example 10 and failed example 9 is courtesy of NASA/JPL-Caltech.
 htmlHintIgnore:

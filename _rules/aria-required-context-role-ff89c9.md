@@ -45,7 +45,7 @@ This rule assumes that the `role` attribute is used to give a [semantic role][] 
 
 The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
 
-An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li`role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
+An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
 The definition of [owned by][] used in this rule is different from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element).
 

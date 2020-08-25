@@ -6994,10 +6994,10 @@
       }
     },
     {
-      "testcaseId": "18a3021648c1a2641ac73b0d5afb3cd3e94d8566",
+      "testcaseId": "2048573913cb270073de6d289db46d01458fff67",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/ffd0e9/18a3021648c1a2641ac73b0d5afb3cd3e94d8566.html",
-      "relativePath": "testcases/ffd0e9/18a3021648c1a2641ac73b0d5afb3cd3e94d8566.html",
+      "url": "https://act-rules.github.io/testcases/ffd0e9/2048573913cb270073de6d289db46d01458fff67.html",
+      "relativePath": "testcases/ffd0e9/2048573913cb270073de6d289db46d01458fff67.html",
       "expected": "passed",
       "ruleId": "ffd0e9",
       "ruleName": "Heading has non-empty accessible name",

@@ -20,10 +20,10 @@ input_rules:
   - afb423
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
     - John Hicks
     - Rafal Charlampowicz
+    - Wilco Fiers
 ---
 
 ## Applicability

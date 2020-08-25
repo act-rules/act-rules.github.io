@@ -64,7 +64,7 @@ Unless specified otherwise, the [main block of content][] of each document is de
 
 #### Passed Example 1
 
-The link to skip the complementary [section of repeated content][] is [visible][], is [included in the accessibility tree][], and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+The first [focusable][] element is [visible][], is [included in the accessibility tree][], is a link, and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html lang="en">
@@ -92,7 +92,7 @@ The link to skip the complementary [section of repeated content][] is [visible][
 
 #### Passed Example 2
 
-The link to skip the complementary [section of repeated content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
+The link to skip to the [main block of content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
 
 ```html
 <html lang="en">
@@ -121,7 +121,7 @@ The link to skip the complementary [section of repeated content][] is [included 
 
 #### Passed Example 3
 
-The element to skip the complementary [section of repeated content][] is [visible][], has a [semantic role][] of `link` and can be [activated][] by keyboard only.
+The element to skip to the [main block of content][] is [visible][], has a [semantic role][] of `link` and can be [activated][] by keyboard only.
 
 ```html
 <html lang="en">
@@ -150,7 +150,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Passed Example 4
 
-The link to skip the complementary [section of repeated content][] has an [accessible name][] that communicates that it links to the [main block of content][].
+The link to skip to the [main block of content][] has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -178,7 +178,7 @@ The link to skip the complementary [section of repeated content][] has an [acces
 
 #### Passed Example 5
 
-Even though it is located after it in tree order, the link to skip the complementary [section of repeated content][] is still the first [focusable][] element within the page.
+Even though it is located after it in tree order, the link to skip to the [main block of content][] is still the first [focusable][] element within the page.
 
 ```html
 <html lang="en">
@@ -241,7 +241,7 @@ jumps to after a hr
 
 #### Failed Example 1
 
-There is no link to skip the complementary [section of repeated content][].
+There is no link to skip to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -266,7 +266,7 @@ There is no link to skip the complementary [section of repeated content][].
 
 #### Failed Example 2
 
-The link to skip the complementary [section of repeated content][] is not the first [focusable][] element within the page.
+The link to skip to the [main block of content][] is not the first [focusable][] element within the page.
 
 ```html
 <html lang="en">
@@ -295,7 +295,7 @@ The link to skip the complementary [section of repeated content][] is not the fi
 
 #### Failed Example 3
 
-The link to skip the complementary [section of repeated content][] is not [included in the accessibility tree][].
+The link to skip to the [main block of content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -323,7 +323,7 @@ The link to skip the complementary [section of repeated content][] is not [inclu
 
 #### Failed Example 4
 
-The link to skip the complementary [section of repeated content][] is not [visible][], even when focused.
+The link to skip to the [main block of content][] is not [visible][], even when focused.
 
 ```html
 <html lang="en">
@@ -351,7 +351,7 @@ The link to skip the complementary [section of repeated content][] is not [visib
 
 #### Failed Example 5
 
-The element with a click event to skip the complementary [section of repeated content][] does not have a [semantic role][] of `link`.
+The element with a click event to skip to the [main block of content][] does not have a [semantic role][] of `link`.
 
 ```html
 <html lang="en">
@@ -379,7 +379,7 @@ The element with a click event to skip the complementary [section of repeated co
 
 #### Failed Example 6
 
-The element to skip the complementary [section of repeated content][] is [visible][], cannot be [activated][] by keyboard only.
+The link to skip to the [main block of content][] cannot be [activated][] by keyboard only.
 
 ```html
 <html lang="en">
@@ -407,7 +407,7 @@ The element to skip the complementary [section of repeated content][] is [visibl
 
 #### Failed Example 7
 
-The link to skip the complementary [section of repeated content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
+The link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -435,7 +435,7 @@ The link to skip the complementary [section of repeated content][] does not refe
 
 #### Failed Example 8
 
-The link to skip the complementary [section of repeated content][] does not have an [accessible name][] that communicates its intent.
+The link to skip to the [main block of content][] does not have an [accessible name][] that communicates its intent.
 
 ```html
 <html lang="en">
@@ -515,8 +515,6 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
-[section of content]: #section-of-content 'Definition of Section of Content'
-[section of repeated content]: #section-of-repeated-content 'Definition of Section of Repeated Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
 [visible]: #visible 'Definition of Visible'

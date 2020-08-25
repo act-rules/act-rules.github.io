@@ -19,8 +19,8 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Bryn Anderson
     - Anne Thyme Nørregaard
+    - Bryn Anderson
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `id` attribute which is not an empty string (`""`), specified on a HTML or SVG element.
+Any `id` attribute whose value is not an empty string (`""`), specified on a HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 

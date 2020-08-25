@@ -23,13 +23,13 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind="descriptions"` attribute.
+The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind` [attribute value][] of `descriptions`.
 
 ## Expectation
 
@@ -132,4 +132,5 @@ A video element without audio.
 </html>
 ```
 
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [visible]: #visible 'Definition of visible'

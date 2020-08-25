@@ -19,8 +19,8 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Jey Nandakumar
     - Audrey Maniez
+    - Jey Nandakumar
 ---
 
 ## Applicability

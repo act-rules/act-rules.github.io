@@ -67,7 +67,7 @@ This `h1` element has a non-empty [accessible name][].
 This `div` element has a [semantic role][] of heading and a non-empty [accessible name][].
 
 ```html
-<div role="heading" aria-level="1">ACT rules</div>
+<div role="heading" aria-level="1">ACT rules</div>
 ```
 
 #### Passed Example 3

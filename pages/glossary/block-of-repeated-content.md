@@ -20,4 +20,4 @@ Note that this definition only consider pages at "distance 1" from the current p
 [block of content]: #block-of-content 'Definition of Block of Content'
 [equivalent resource]: #equivalent-resource 'Definition of Equivalent Resource'
 [html web page]: #web-page-html 'Definition of Web Page'
-[instrument]: #instrument 'Definition of Instrument'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'

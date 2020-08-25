@@ -229,6 +229,31 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
+#### Passed Example 7
+
+This [HTML web page][] is passing rules [block of content is expandable and collapsible][] and [link for skipping block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
+		<main>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1

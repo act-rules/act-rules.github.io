@@ -21,7 +21,7 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
   assets:
-    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
+    - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
 ## Applicability

@@ -12,9 +12,9 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
   assets:
-    - _Romance of the Three Kingdoms_ by Charles H. Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
-    - _Three Kingdoms_ by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
-    - _The Three Kingdoms_ by Yu Sumei (Tuttle publishing, May 2014, ISBN 9780804843935)
+    - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles H. Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
+    - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
+    - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
 ## Applicability

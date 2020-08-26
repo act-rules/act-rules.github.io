@@ -15744,18 +15744,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -15779,18 +15767,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -15816,18 +15792,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -15851,18 +15815,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -15888,18 +15840,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -15923,18 +15863,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -15960,18 +15888,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -15995,18 +15911,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16032,18 +15936,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16067,18 +15959,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16104,18 +15984,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16139,18 +16007,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16176,18 +16032,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16211,18 +16055,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16248,18 +16080,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16283,18 +16103,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16320,18 +16128,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16355,18 +16151,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16392,18 +16176,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16427,18 +16199,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16464,18 +16224,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16499,18 +16247,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16536,18 +16272,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16571,18 +16295,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16608,18 +16320,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16643,18 +16343,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }
@@ -16680,18 +16368,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -16715,18 +16391,6 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G18": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G145": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }

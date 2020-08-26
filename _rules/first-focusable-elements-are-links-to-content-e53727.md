@@ -33,38 +33,35 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of `link`; and
-- can be [activated][] by use of keyboard; and
-- when [activated][], moves focus [at the start][] of a [section of content][] within the same [document][]; and
-- has an [accessible name][] that communicates that it links to that specific [section of content][].
-
-**Note:** There is no requirement on how many [focusable][] elements are part of that [initial segment][], nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists.
+- can be [activated][] by use of keyboard.
 
 ## Expectation 2
 
-Each [section of content][] in the [document][] that is preceded (in tree order) by at least one [section of repeated content][] is the target of exactly one link from the [initial segment][] of [focusable][] elements found by Expectation 1.
+There exists a [segmentation][] of the test target in at least 2 [blocks of content][block of content], one of which being the [main block of content][], such that for each [block of content][] in it, except possibly for the first:
 
-**Note:** While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [section of content][]…)
+- there is exactly one link from the [initial segment][] found by Expectation 1 which, when [activated][], moves focus [at the start][] of this [block of content][]; and
+- that link has an [accessible name][] that communicates that it links to this specific [block of content][].
 
 ## Assumptions
 
+- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that the description of the link is provided through its [accessible name][].
 - This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be [activated][] by use of keyboard only (in order to be useful for keyboard users).
-- This rule assumes that [sections of repeated content][section of repeated content] have already been identified within the test target, for example by comparison with other test targets within the same website, or any other means.
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in). If such a banner is taken into account, the rule may fail incorrectly.
 
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._
 
-**Note to reviewers**: In its current state, the definition of [section of content][] would include, e.g. an advertising sidebar as a specific section of content. However, it is not clear that the lack of link to it would be a breach of G124 or SC 2.4.1… Idea?
-
 ## Background
+
+There is no requirement on how many [focusable][] elements are part of the [initial segment][] from Expectation 1, nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists. While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [block of content][]…)
 
 - [G124: Adding links at the top of the page to each area of the content][tech g124]
 
-## Test Cases
+Unless specified, in each of the test cases the [segmentation][] found by Expectation 2 has four [blocks of content][block of content]: the `ul` element, both `aside` elements, and the `main` element.
 
-**Note:** Unless specified otherwise, the [sections of content][section of content] of each document are defined by the [landmarks][landmark] (`aside`, `header` and `main` elements), and neither the banner nor the complementary [sections of content][section of content] (`header` and `aside` elements) include any [focusable][] element not shown explicitly.
+## Test Cases
 
 ### Passed
 
@@ -83,14 +80,13 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -117,14 +113,13 @@ The links in the [initial segment][] (composed of the first three focusable elem
 		<a class="visible-on-focus" href="#header">Skip to header</a>
 		<a class="visible-on-focus" href="#about">Skip to additional information</a>
 		<a class="visible-on-focus" href="#main">Skip to text</a>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -153,14 +148,14 @@ The first three [focusable][] elements have a [semantic role][] of `link` and ca
 			<li role="link" onclick="location.href='#about';" tabindex="0" id="link-about">Skip to additional information</li>
 			<li role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -188,14 +183,14 @@ The links in the [initial segment][] (composed of the first three focusable elem
 			<li><a href="#about" aria-label="Skip to additional information">➕</a></li>
 			<li><a href="#main" aria-label="Skip to text">📖</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -218,19 +213,19 @@ Even though they are after the first [section of repeated content][], the three 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
 		<ul>
 			<li><a href="#header">Skip to header</a></li>
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<aside id="about">
+
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -259,14 +254,14 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 			<li><a href="#main">Skip to text</a></li>
 			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -295,14 +290,14 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 			<li><a href="#main">Skip to text</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -331,14 +326,14 @@ The first three [focusable][] elements are the links to the various [sections of
 			<li><a href="#about" tabindex="2">Skip to additional information</a></li>
 			<li><a href="#main" tabindex="3">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -361,12 +356,15 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<form id="search" role="search"><a href="#header">Skip to header</a>Search in text</form>
-		<aside id="about">
-			<h1>About the book</h1>
+		<aside id="bio-translator">
+			<a href="#header">Skip to header</a>
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<a href="#about">Skip to additional information</a>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -380,7 +378,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 </html>
 ```
 
-one move in previous + one skip a hr
+one move in previous + one skip a hr (still at start)
 
 ### Failed
 
@@ -394,14 +392,13 @@ This [HTML web page][] has no link to skip to the various [sections of content][
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -428,14 +425,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -464,14 +461,14 @@ The second, third and fourth links form a set that fulfills Expectation 2 and mo
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -499,15 +496,16 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
 			<li><a href="#main" aria-hidden="true">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
-			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -534,14 +532,14 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 			<li><a href="#about" aria-hidden="true">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -569,14 +567,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" style="display: none">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -605,14 +603,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li id="link-main" onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -641,15 +639,16 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li role="link" onclick="location.href='#about';" tabindex="0" id="link-about">Skip to additional information</li>
 			<li role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
-			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -676,14 +675,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="https://www.w3.org/">Check out the W3C</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -711,14 +710,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">And now for something completely different!</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -746,14 +745,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main" aria-label="">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -782,14 +781,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#about">Skip to additional information</a></li>
 			<li><a href="#main">Skip to text</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -818,14 +817,14 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 			<li><a href="#main" tabindex="4">Skip to text</a></li>
 			<li><a href="https://www.w3.org/" tabindex="3">Check out the W3C</a></li>
 		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -838,7 +837,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-one jumps too early + one jumps too late
+one jumps too early + one jumps too late (not at start)
 
 ### Inapplicable
 
@@ -855,6 +854,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'
+[block of content]: #block-of-content 'Definition of Block of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of Document'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
@@ -862,8 +862,10 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [initial segment]: #initial-segment 'Definition of Initial Segment'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [section of content]: #section-of-content 'Definition of Section of Content'
 [section of repeated content]: #section-of-repeated-content 'Definition of Section of Repeated Content'
+[segmentation]: #segmentation 'Definition of Segmentation'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [visible]: #visible 'Definition of Visible'

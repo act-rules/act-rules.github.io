@@ -170,7 +170,7 @@ This `div` element has an `aria-expanded` state with invalid `true/false/undefin
 
 #### Failed Example 3
 
-This `div` element has an`aria-pressed` state with invalid tristate value.
+This `div` element has an `aria-pressed` state with invalid tristate value.
 
 ```html
 <div role="button" aria-pressed="horizontal">An other button</div>

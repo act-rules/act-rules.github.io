@@ -69,7 +69,7 @@ This `p` element has a `line-height` of `32px` (equals `2em` ) which is above th
 
 #### Passed Example 2
 
-This `p` element has a [line-height][] of `24px` specified via the style attribute, which is above the recommended minimum given the specified font size is 16 pixels.
+This `p` element has a [line-height][] of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels.
 
 ```html
 <html>

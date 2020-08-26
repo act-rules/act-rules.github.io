@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 842,
+  "count": 843,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6520,8 +6520,26 @@
       }
     },
     {
-      "testcaseId": "349a744f30b0601acbf12f43a7b8443c0018d903",
+      "testcaseId": "026ffbf28c6b07d062f6e2b1839199c84f633575",
       "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/e086e5/026ffbf28c6b07d062f6e2b1839199c84f633575.html",
+      "relativePath": "testcases/e086e5/026ffbf28c6b07d062f6e2b1839199c84f633575.html",
+      "expected": "passed",
+      "ruleId": "e086e5",
+      "ruleName": "Form field has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "349a744f30b0601acbf12f43a7b8443c0018d903",
+      "testcaseTitle": "Passed Example 6",
       "url": "https://act-rules.github.io/testcases/e086e5/349a744f30b0601acbf12f43a7b8443c0018d903.html",
       "relativePath": "testcases/e086e5/349a744f30b0601acbf12f43a7b8443c0018d903.html",
       "expected": "passed",

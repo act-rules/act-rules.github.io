@@ -47,8 +47,8 @@ input_rules:
   - ab4d13
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Test Procedure

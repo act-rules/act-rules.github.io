@@ -161,7 +161,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Passed Example 7
 
-These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], the same [context][programmatically determined link context], and link to the [same resource][].
+These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], the same [context][programmatically determined link context], and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -238,7 +238,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 3
 
-These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content.
+These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content.
 
 ```html
 <html lang="en">

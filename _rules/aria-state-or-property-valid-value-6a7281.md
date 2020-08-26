@@ -22,28 +22,28 @@ acknowledgments:
 
 ## Applicability
 
-Any [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is not empty (""), and that is specified on an HTML or SVG element.
+The rule applies to any HTML or SVG element that has any not empty (`""`) [WAI-ARIA 1.1 state or property][] specified.
 
 ## Expectation
 
-Each test target has a valid value according to its [WAI-ARIA 1.1 value type](https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value).
+Each test target has a valid value according to its [WAI-ARIA 1.1 value type][].
 
-For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element that specifies the target attribute.
+For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties][] at least one of the elements with the given ids exists in the same [document tree][] or [shadow tree][] as the element that specifies the target attribute.
 
-For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
+For value type `URI` the value matches the [generic URI syntax][].
 
-**Note:** Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
+**Note:** Only for [WAI-ARIA required properties][] with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
 
 **Note:**
 For value type `URI`, this rule does not require that the destination URI exists.
 
 ## Assumptions
 
-This rule catches values that are undefined in [WAI-ARIA Specifications][], and where the resulting behavior in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behavior defined in [WAI-ARIA Specifications][]. When values are used that do not have a defined behavior in [WAI-ARIA Specifications][], the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
+- This rule catches values that are undefined in [WAI-ARIA Specifications][], and where the resulting behavior in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behavior defined in [WAI-ARIA Specifications][]. When values are used that do not have a defined behavior in [WAI-ARIA Specifications][], the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
 
 ## Accessibility Support
 
-Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
+- Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
 
 ## Background
 
@@ -59,7 +59,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 1
 
-`aria-required` property with valid true/false value
+This `div` element has an `aria-required` property with valid `true/false` value.
 
 ```html
 <div role="textbox" aria-required="true" aria-label="A required textbox"></div>
@@ -67,7 +67,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 2
 
-`aria-expanded` state with valid true/false/undefined value
+This `div` element has an `aria-expanded` state with valid `true/false/undefined` value.
 
 ```html
 <div role="button" aria-expanded="undefined">A button</div>
@@ -75,7 +75,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 3
 
-`aria-pressed` state with valid tristate value
+This `div` element has an `aria-pressed` state with valid tristate value.
 
 ```html
 <div role="button" aria-pressed="mixed">An other button</div>
@@ -83,7 +83,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 4
 
-`aria-errormessage` property with valid ID reference value
+This `div` element has an `aria-errormessage` property with valid ID reference value.
 
 ```html
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
@@ -91,7 +91,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 5
 
-`aria-owns` property with valid ID reference list value
+This `div` element has an `aria-owns` property with valid ID reference list value.
 
 ```html
 <h1>Shopping list</h1>
@@ -102,7 +102,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 6
 
-`aria-rowindex` property with valid integer value
+This `div` element has an `aria-rowindex` property with valid integer value.
 
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
@@ -110,7 +110,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 7
 
-`aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
+This `div` element has an `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values.
 
 ```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
@@ -118,7 +118,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 8
 
-`aria-placeholder` property with valid string value
+This `div` element has an `aria-placeholder` property with valid string value.
 
 ```html
 <div role="textbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
@@ -128,7 +128,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 9
 
-`aria-dropeffect` property with valid token list value
+This `div` element has an `aria-dropeffect` property with valid token list value.
 
 ```html
 <div role="dialog" aria-dropeffect="copy move"></div>
@@ -136,7 +136,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Passed Example 10
 
-`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
+The second `div` element has an `aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
 
 ```html
 <div id="content1">Lorem ipsum...</div>
@@ -154,7 +154,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 1
 
-`aria-required` property with invalid true/false value
+This `div` element has an `aria-required` property with invalid `true/false` value.
 
 ```html
 <div role="textbox" aria-required="undefined" aria-label="A required textbox"></div>
@@ -162,7 +162,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 2
 
-`aria-expanded` state with invalid true/false/undefined value
+This `div` element has an `aria-expanded` state with invalid `true/false/undefined` value.
 
 ```html
 <div role="button" aria-expanded="mixed">A button</div>
@@ -170,7 +170,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 3
 
-`aria-pressed` state with invalid tristate value
+This `div` element has an`aria-pressed` state with invalid tristate value.
 
 ```html
 <div role="button" aria-pressed="horizontal">An other button</div>
@@ -178,7 +178,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 4
 
-`aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
+This `div` element has an `aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID.
 
 ```html
 <div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
@@ -186,7 +186,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 5
 
-`aria-rowindex` property with invalid integer value
+This `div` element has an `aria-rowindex` property with invalid integer value.
 
 ```html
 <div role="gridcell" aria-rowindex="2.5">Fred</div>
@@ -194,7 +194,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 6
 
-`aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
+This `div` element has an `aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values.
 
 ```html
 <div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two" aria-label="Choose a value"></div>
@@ -202,7 +202,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 7
 
-`aria-live` property with invalid token value
+This `div` element has an `aria-live` property with invalid token value.
 
 ```html
 <div role="main" aria-live="nope"></div>
@@ -210,7 +210,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 #### Failed Example 8
 
-Element with invalid token list value
+This `div` element has an Element with invalid token list value.
 
 ```html
 <div role="dialog" aria-dropeffect="invalid move"></div>
@@ -218,7 +218,7 @@ Element with invalid token list value
 
 #### Failed Example 9
 
-`aria-expanded` state with invalid true/false/undefined value for custom element
+This `div` element has an `aria-expanded` state with invalid `true/false/`undefined` value for custom element.
 
 ```html
 <my-button role="button" aria-expanded="collapsed">My button</my-button>
@@ -226,7 +226,7 @@ Element with invalid token list value
 
 #### Failed Example 10
 
-`aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
+This `div` element has an `aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
 
 ```html
 <div
@@ -243,7 +243,7 @@ Element with invalid token list value
 
 #### Inapplicable Example 1
 
-Element does not have any ARIA states or properties
+This `div` element does not have any ARIA states or properties.
 
 ```html
 <div>Some Content</div>
@@ -251,7 +251,7 @@ Element does not have any ARIA states or properties
 
 #### Inapplicable Example 2
 
-Element has ARIA role, but no ARIA states or properties
+This `div` element has ARIA role, but no ARIA states or properties.
 
 ```html
 <div role="button">Some Content</div>
@@ -259,7 +259,7 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable Example 3
 
-`aria-checked` state with empty value
+This `div` element has an `aria-checked` state with empty value.
 
 **Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However WAI-ARIA 1.1 indicates `aria-checked` has a default value of `undefined`.
 
@@ -269,10 +269,17 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable Example 4
 
-`aria-hidden` state on an element that is not an HTML or SVG element
+This `div` element has an `aria-hidden` state on an element that is not an HTML or SVG element.
 
 ```xml
 <math aria-hidden="true"></math>
 ```
 
 [wai-aria specifications]: #wai-aria-specifications 'List of WAI-ARIA Specifications'
+[wai-aria 1.1 state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def
+[wai-aria 1.1 value type]: https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value
+[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
+[document tree]: https://dom.spec.whatwg.org/#document-trees
+[shadow tree]: https://dom.spec.whatwg.org/#shadow-trees
+[generic uri syntax]: https://www.ietf.org/rfc/rfc3986.txt
+[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState

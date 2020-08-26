@@ -54,7 +54,7 @@ The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+Not all major web browsers parse the value of the `content` attribute in the same way. This can cause redirects to happen in some browsers, but not in others. This can cause some pages to pass this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
 

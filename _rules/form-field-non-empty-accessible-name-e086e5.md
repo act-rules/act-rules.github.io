@@ -1,6 +1,6 @@
 ---
 id: e086e5
-name: Form control has non-empty accessible name
+name: Form field has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each form field element has a non-empty accessible name.
@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
-  - CSS styling
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -45,6 +45,8 @@ The list of roles in the applicability is derived by taking all the roles from [
 
 - have [semantic roles][] that inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+
+Note that this rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
 
@@ -107,8 +109,7 @@ This `input` element has an [accessible name][] because of its `placeholder` att
 **Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
 
 ```html
-<input placeholder="Your search query" />
-<button type="submit">search</button>
+<input placeholder="Your search query" /> <button type="submit">search</button>
 ```
 
 #### Passed Example 6
@@ -160,7 +161,7 @@ This `select` element has an empty (`""`) [accessible name][] because the `div` 
 
 #### Failed Example 5
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form controls.
+This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
 <label>
@@ -171,7 +172,7 @@ This element with a `textbox` [role][semantic role] has an empty (`""`) [accessi
 
 #### Failed Example 6
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form controls.
+This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
 <label for="lastname">first name</label>

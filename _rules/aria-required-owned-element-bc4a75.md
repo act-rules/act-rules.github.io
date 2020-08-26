@@ -17,7 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
-  previous_authros:
+  previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
 ---
@@ -109,8 +109,8 @@ This element with the `menu` role only owns elements with the `menuitem`, `menui
 <div role="menu">
 	<li role="none"></li>
 	<li role="menuitem">Item 1</li>
-	<div role="menuitemradio">Item 2</div>
-	<div role="menuitemcheckbox">Item 3</div>
+	<div role="menuitemradio" aria-checked="false">Item 2</div>
+	<div role="menuitemcheckbox" aria-checked="false">Item 3</div>
 </div>
 ```
 

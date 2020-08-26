@@ -77,7 +77,7 @@ The first [focusable][] element is [visible][], is [included in the accessibilit
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -106,7 +106,7 @@ The link to skip to the [main block of content][] is [included in the accessibil
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -135,7 +135,7 @@ The element to skip to the [main block of content][] is [visible][], has a [sema
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -163,7 +163,7 @@ The link to skip to the [main block of content][] has an [accessible name][] tha
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -188,7 +188,7 @@ Even though it is located after it in tree order, the link to skip to the [main 
 	<body>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<nav>
 			<a href="#main">Skip to main content</a>
@@ -220,7 +220,7 @@ The first [focusable][] element within this page is the link to the [main block 
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -251,7 +251,7 @@ There is no link to skip to the [main block of content][].
 	<body>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -280,7 +280,7 @@ The link to skip to the [main block of content][] is not the first [focusable][]
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -308,7 +308,7 @@ The link to skip to the [main block of content][] is not [included in the access
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -336,7 +336,7 @@ The link to skip to the [main block of content][] is not [visible][], even when 
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -364,7 +364,7 @@ The element with a click event to skip to the [main block of content][] does not
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -392,7 +392,7 @@ The link to skip to the [main block of content][] cannot be [activated][] by key
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -420,7 +420,7 @@ The link to skip to the [main block of content][] does not reference a valid `id
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -448,7 +448,7 @@ The link to skip to the [main block of content][] does not have an [accessible n
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -477,7 +477,7 @@ The first [focusable][] element within this page is the link to W3C. The link to
 		</nav>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>

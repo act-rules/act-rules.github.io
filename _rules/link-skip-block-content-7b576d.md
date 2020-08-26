@@ -75,7 +75,7 @@ In this [document][], the complementary [block of repeated content][] starts wit
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -102,7 +102,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<a href="#main">Skip additional information</a>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -130,7 +130,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<div>Chapter 1</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -158,7 +158,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main" class="visible-on-focus">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -186,7 +186,7 @@ In this [document][], the `div` element just before the complementary [block of 
 		<div role="link" onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -213,7 +213,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<h1 tabindex="3">About the book</h1>
 			<a href="#main" tabindex="2">Skip additional information</a>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -241,7 +241,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<div tabindex="2">Chapter 1</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -268,7 +268,7 @@ In this [document][], the link at the start of the complementary [block of repea
 		<aside id="about-book">
 			<a href="#end-aside">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<div id="end-aside" />
 		</aside>
 		<main>
@@ -296,7 +296,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<hr />
@@ -324,7 +324,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
@@ -352,7 +352,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<div hidden>This is the start of Chapter 1</div>
@@ -378,7 +378,7 @@ This [document][] has no [block of repeated content][] because there is no other
 	<body>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -406,7 +406,7 @@ In this [document][], there is no link to skip the complementary [block of repea
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -434,7 +434,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<div tabindex="3">Chapter 1</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -461,7 +461,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<h1 tabindex="2">About the book</h1>
 			<a href="#main" tabindex="3">Skip additional information</a>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -489,7 +489,7 @@ In this [document][], the element to skip the complementary [block of repeated c
 		<div onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -516,7 +516,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main" aria-hidden="true">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -543,7 +543,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main" style="position: absolute; top: -999px">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -570,7 +570,7 @@ In this [document][], the element with a [semantic role][] of `link` which skips
 		<div role="link" onclick="location.href='#main';" tabindex="2">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -597,7 +597,7 @@ In this [document][], the link at the start of the first complementary [block of
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<aside id="bio-translator">
 			<h1>About the translator</h1>
@@ -628,7 +628,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 		<aside id="about-book">
 			<a href="#bio-translator">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<aside id="bio-translator">
 			<h1>About the translator</h1>
@@ -659,7 +659,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main">Read text</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -686,7 +686,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#end-aside">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<p id="end-aside">The text presented here is from a 2014 translation</p>
 		</aside>
 		<main>
@@ -714,7 +714,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<img

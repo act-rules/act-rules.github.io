@@ -107,9 +107,9 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			Yu Sumei is a professor of English at East China Normal University.
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<main>
@@ -143,9 +143,9 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			Yu Sumei is a professor of English at East China Normal University.
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<main>
@@ -233,7 +233,7 @@ This [document][] has no [block of repeated content][] because there is no other
 	<body>
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>

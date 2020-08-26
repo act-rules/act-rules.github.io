@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to `iframe` elements that are [included in the accessibility tree][].
+The rule applies to `iframe` elements.
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -42,6 +42,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
   - Some assistive technologies ignores `aria-label` and only announces `title` attribute as an [accessible name][] of `iframe` elements.
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are [focusable][] or if they have an [accessible name][].
   - Some assistive technologies always create an empty tab-stop for the `iframe`, even if they have an [accessible name][].
+  - Some assistive technologies continue to identify `iframe` elements that have been specified to be not [included in the accessibility tree][].
 
 ## Background
 
@@ -130,14 +131,6 @@ This page has no `iframe` element.
 
 ```html
 <button>take me somewhere</button>
-```
-
-#### Inapplicable Example 2
-
-This `iframe` is not [included in the accessibility tree][] because of setting a style of `display: none;`.
-
-```html
-<iframe style="display:none;" src="/test-assets/SC4-1-2-frame-doc.html"></iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

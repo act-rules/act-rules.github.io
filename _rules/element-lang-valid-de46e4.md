@@ -142,22 +142,6 @@ The `lang` attribute value consists of only [whitespace][] and is not a [valid l
 </html>
 ```
 
-#### Failed Example 4
-
-The `lang` attribute value has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
-
-```html
-<html>
-	<body>
-		<p lang="en">
-			<span style="display: none;">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</span>
-		</p>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -182,6 +166,22 @@ An empty value for the `lang` attribute is ignored, as the rule only applies to 
 		<article lang="">
 			They wandered into a strange Tiki bar on the edge of the small beach town.
 		</article>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 3
+
+The `lang` attribute value has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+
+```html
+<html>
+	<body>
+		<p lang="en">
+			<span style="display: none;">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</span>
+		</p>
 	</body>
 </html>
 ```

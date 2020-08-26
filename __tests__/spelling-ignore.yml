@@ -20,6 +20,7 @@
 
 # Domain-specific words, Definitions & other allowed terms
 - ABNF
+- uri
 - URI
 - UA/AT
 - WCAG

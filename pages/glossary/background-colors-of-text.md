@@ -4,7 +4,7 @@ key: background-colors-of-text
 unambiguous: true
 objective: true
 input_aspects:
-  - CSS styling
+  - CSS styling
   - DOM tree
 ---
 

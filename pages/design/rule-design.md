@@ -83,7 +83,7 @@ For more details, see [ACT Rules Format: Input](https://www.w3.org/TR/act-rules-
 
 ### Acknowledgments
 
-While optional, this can provide information on authors, previous authors, and other contributors who have helped with creation of a rule. When listing authors or other acknowledgments, names must be an exact match of names under the `contributors` property in `package.json`. Note: If an author does not exist in `package.json`, they should be added to that file as part of the relevant PR.
+While optional, this can provide information on authors, previous authors, and other contributors who have helped with creation of a rule. When listing authors or other acknowledgments, names must be an exact match of names under the `contributors` property in `package.json`. Note: If an author does not exist in `package.json`, they should be added to that file as part of the relevant PR. Authors should be listed in alphabetical order of their given name.
 
 ## Applicability
 

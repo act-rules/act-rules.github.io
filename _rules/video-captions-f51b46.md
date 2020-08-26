@@ -27,8 +27,8 @@ input_aspects:
   - Visual output
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability

@@ -28,8 +28,8 @@ acknowledgments:
 This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
 - the element is a [descendant][] in the [flat tree][] of a `body` element; and
-- the element has a [node document][] with a [content type][] of `text/html`.
-- the element has a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+- the element has a [node document][] with a [content type][] of `text/html`; and
+- the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
 
 ## Expectation
 

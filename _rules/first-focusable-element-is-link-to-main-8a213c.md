@@ -75,10 +75,12 @@ The first [focusable][] element is [visible][], is [included in the accessibilit
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -104,10 +106,12 @@ The link to skip to the [main block of content][] is [included in the accessibil
 		<nav class="visible-on-focus">
 			<a href="#main">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -133,10 +137,12 @@ The element to skip to the [main block of content][] is [visible][], has a [sema
 		<nav>
 			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -161,10 +167,12 @@ The link to skip to the [main block of content][] has an [accessible name][] tha
 		<nav>
 			<a href="#main" aria-label="Skip to main content">📖</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -190,9 +198,11 @@ Even though it is located after it in tree order, the link to skip to the [main 
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -218,10 +228,12 @@ The first [focusable][] element within this page is the link to the [main block 
 			<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
 			<a href="#main" tabindex="1">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -253,6 +265,7 @@ There is no link to skip to the [main block of content][].
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -275,13 +288,16 @@ The link to skip to the [main block of content][] is not the first [focusable][]
 	</head>
 	<body>
 		<a href="https://www.w3.org/">Check out the W3C</a>
+
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -306,10 +322,12 @@ The link to skip to the [main block of content][] is not [included in the access
 		<nav>
 			<a href="#main" aria-hidden="true">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -334,10 +352,12 @@ The link to skip to the [main block of content][] is not [visible][], even when 
 		<nav>
 			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -362,10 +382,12 @@ The element with a click event to skip to the [main block of content][] does not
 		<nav>
 			<span onclick="document.getElementById('main').focus()">Skip to main content</span>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -390,10 +412,12 @@ The link to skip to the [main block of content][] cannot be [activated][] by key
 		<nav>
 			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -418,10 +442,12 @@ The link to skip to the [main block of content][] does not reference a valid `id
 		<nav>
 			<a href="#invalid-id">Skip to main content</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -446,10 +472,12 @@ The link to skip to the [main block of content][] does not have an [accessible n
 		<nav>
 			<a href="#main">Click me if you dare!</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -475,10 +503,12 @@ The first [focusable][] element within this page is the link to W3C. The link to
 			<a href="#main" tabindex="2">Skip to main content</a>
 			<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>

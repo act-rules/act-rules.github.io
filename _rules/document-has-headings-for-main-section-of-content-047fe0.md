@@ -51,7 +51,7 @@ The first node in the [flat tree][] which is inside the [main block of content][
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `main` element. The `nav` element is another [block of content][].
+Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `main` element.
 
 ## Test Cases
 
@@ -73,6 +73,7 @@ This [document][] has a `h1` heading at the start of its [main block of content]
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -95,15 +96,15 @@ This [document][] has a `h2` heading at the start of its [main block of content]
 	</head>
 	<body>
 		<h1>The Three Kingdoms, Chapter 1</h1>
-		<nav>
-			<nav id="chapters-navigation">
-				<h2>Content</h2>
-				<ol>
-					<li>Chapter 1</li>
-					<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-				</ol>
-			</nav>
+
+		<nav id="chapters-navigation">
+			<h2>Content</h2>
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
+
 		<main>
 			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
 			<p>
@@ -162,6 +163,7 @@ In this [document][], the heading is not the first element of the [main block of
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<hr />
 			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
@@ -191,6 +193,7 @@ The image at the start of the [main block of content][] has an empty [accessible
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -220,6 +223,7 @@ The [main block of content][] of this [document][] starts with a `div` element w
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
 			<p>
@@ -247,6 +251,7 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>
 				<img
@@ -281,6 +286,7 @@ For the [main block of content][], the first node with a non-empty [accessible n
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
 			<p>
@@ -308,6 +314,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -335,6 +342,7 @@ The heading of the [main block of content][] is not [included in the accessibili
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -362,6 +370,7 @@ The `h1` element at the start of the [main block of content][] has an empty [acc
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<span id="label"></span>
 			<h1 aria-labelledby="label">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>

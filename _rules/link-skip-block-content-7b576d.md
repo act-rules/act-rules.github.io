@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-In the test cases, the link to the second Chapter is added in order to turn the `<aside id="about-book>` element into a [block of repeated content][]. Due to the nature of the rule, the navigational [block of content][] is not included in these test cases to avoid unrelated [focusable][] elements (the links to other Chapters) in the [block of repeated content][].
+In the test cases, the link to the second Chapter is added in order to turn the `<aside id="about-book">` element into a [block of repeated content][].
 
 ## Test Cases
 
@@ -72,11 +72,13 @@ In this [document][], the complementary [block of repeated content][] starts wit
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -99,11 +101,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<a href="#main">Skip additional information</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -126,12 +130,14 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<a href="#main">Skip additional information</a>
 		<div>Chapter 1</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -155,11 +161,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main" class="visible-on-focus">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -183,11 +191,13 @@ In this [document][], the `div` element just before the complementary [block of 
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<div role="link" onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -210,11 +220,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<h1 tabindex="3">About the book</h1>
 			<a href="#main" tabindex="2">Skip additional information</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -237,14 +249,16 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<a href="#main" tabindex="3">Skip additional information</a>
-		<div tabindex="2">Chapter 1</div>
+		<h1 tabindex="2">Chapter 1</h1>
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<h2>About the book</h2>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -265,12 +279,14 @@ In this [document][], the link at the start of the complementary [block of repea
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#end-aside">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<div id="end-aside" />
 		</aside>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -293,11 +309,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<hr />
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -321,11 +339,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -349,11 +369,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<div hidden>This is the start of Chapter 1</div>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -380,6 +402,7 @@ This [document][] has no [block of repeated content][] because there is no other
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -404,10 +427,12 @@ In this [document][], there is no link to skip the complementary [block of repea
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -430,14 +455,16 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<a href="#main" tabindex="2">Skip additional information</a>
-		<div tabindex="3">Chapter 1</div>
+		<h1 tabindex="3">Chapter 1</h1>
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<h2>About the book</h2>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -458,11 +485,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<h1 tabindex="2">About the book</h1>
 			<a href="#main" tabindex="3">Skip additional information</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -486,11 +515,13 @@ In this [document][], the element to skip the complementary [block of repeated c
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<div onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -513,11 +544,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main" aria-hidden="true">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -540,11 +573,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main" style="position: absolute; top: -999px">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -567,11 +602,13 @@ In this [document][], the element with a [semantic role][] of `link` which skips
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
+
 		<div role="link" onclick="location.href='#main';" tabindex="2">Skip additional information</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -594,6 +631,7 @@ In this [document][], the link at the start of the first complementary [block of
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
@@ -603,6 +641,7 @@ In this [document][], the link at the start of the first complementary [block of
 			<h1>About the translator</h1>
 			Yu Sumei is a professor of English at East China Normal University.
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -625,6 +664,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#bio-translator">Skip additional information</a>
 			<h1>About the book</h1>
@@ -634,6 +674,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 			<h1>About the translator</h1>
 			Yu Sumei is a professor of English at East China Normal University.
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -656,11 +697,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Read text</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -683,12 +726,14 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#end-aside">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<p id="end-aside">The text presented here is from a 2014 translation</p>
 		</aside>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -711,11 +756,13 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	</head>
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<img
 				src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"

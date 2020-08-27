@@ -70,6 +70,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 	</head>
 	<body>
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -77,6 +78,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -100,6 +102,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 	</head>
 	<body>
 		<button onclick="toggleHidden(['chapters-navigation', 'bio-translator'])">Toggle repeated content</button>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -107,6 +110,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -136,6 +140,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 	<body>
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 		<button onclick="toggleHidden('bio-translator')">Toggle extra content</button>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -143,6 +148,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -173,6 +179,7 @@ The [visibility][visible] of the navigational [block of repeated content][] can 
 	<body>
 		<a href="#" onclick="toggleVisibility('chapters-navigation')" aria-hidden="true">Toggle table of content</a>
 		<button onclick="toggleAriaHidden('chapters-navigation')" class="off-screen">Toggle table of content</button>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -180,6 +187,7 @@ The [visibility][visible] of the navigational [block of repeated content][] can 
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -203,6 +211,7 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 	</head>
 	<body>
 		<button onclick="hide('chapters-navigation')">Hide table of content</button>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -210,6 +219,7 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -235,6 +245,7 @@ This [document][] has no [block of repeated content][] because there is no other
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -265,6 +276,7 @@ There is no [instrument][] to toggle the navigational [block of repeated content
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -290,6 +302,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 		<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('chapters-navigation')"
 			>Toggle table of content</a
 		>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -297,6 +310,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -320,6 +334,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 	</head>
 	<body>
 		<a href="#" aria-hidden="true" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -327,6 +342,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -351,6 +367,7 @@ There is no [instrument][] to toggle the [inclusion in the accessibility tree][i
 	</head>
 	<body>
 		<a href="#" onclick="toggleVisibility('chapters-navigation')">Toggle table of content</a>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -358,6 +375,7 @@ There is no [instrument][] to toggle the [inclusion in the accessibility tree][i
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -381,6 +399,7 @@ There is no [instrument][] to toggle the [visibility][visible] of the navigation
 	</head>
 	<body>
 		<a href="#" onclick="toggleAriaHidden('chapters-navigation')">Toggle table of content</a>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -388,6 +407,7 @@ There is no [instrument][] to toggle the [visibility][visible] of the navigation
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>

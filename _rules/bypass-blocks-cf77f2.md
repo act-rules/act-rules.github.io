@@ -76,6 +76,7 @@ This [HTML web page][] is passing rule [block of content is expandable and colla
 	</head>
 	<body>
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
@@ -157,11 +158,12 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 		<nav>
 			<a href="#main">Skip to main content</a>
 		</nav>
-		<aside>
+
+		<aside id="about-book">
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -183,26 +185,28 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<ul>
-			<li><a href="#header">Skip to header</a></li>
-			<li><a href="#about">Skip to additional information</a></li>
-			<li><a href="#main">Skip to text</a></li>
-		</ul>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
-			<h1>About the book</h1>
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+		<nav>
+			<a href="#bio-translator">Skip to translator's biography</a>
+			<a href="#about-book">Skip to information about the book</a>
+			<a href="#main">Skip to text</a>
+		</nav>
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 		</main>
 	</body>
 </html>
@@ -218,12 +222,14 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<aside>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
+		<aside id="about-book">
 			<a href="#main">Skip additional information</a>
 			<h1>About the book</h1>
-			<!-- description of the book and biography of the authors, repeated on each page -->
-			<!-- does not include any focusable element -->
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
+
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -273,14 +279,13 @@ This [HTML web page][] does not pass any of the input rules.
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<header id="header">
-			<!-- Name and logo of the website -->
-			<!-- does not include any focusable element -->
-		</header>
-		<aside id="about">
-			<!-- description of the book and biography of the author and translator -->
-			<!-- does not include any focusable element -->
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
+
 		<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
 		<p>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
@@ -309,7 +314,6 @@ This [document][] is not an [HTML web page][].
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First Focusable Elements Are Links to Sections of Content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
-[focusable]: #focusable 'Definition of Focusable'
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for Skipping Block of Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'

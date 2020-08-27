@@ -32,12 +32,12 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
+- [Block of content is expandable and collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
-- [Link for skipping block of content][]; or
-- [Block of content is expandable and collapsible][]; or
 - [First focusable element is link to main content][]; or
-- [First focusable elements are links to sections of content][].
+- [First focusable elements are links to sections of content][]; or
+- [Link for skipping block of content][].
 
 ## Assumptions
 
@@ -62,23 +62,28 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 ## Test Cases
 
-**Note:** Unless specified otherwise, the [sections of content][] of each document are defined by the [landmarks][landmark]; the banner, complementary and navigational [sections of content][] (`header`, `aside` and `nav` elements) are [sections of repeated content][]; and the banner and complementary [sections of content][] do not include any [focusable][] element not shown explicitly.
-
 ### Passed
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [Document has heading for main section of content][].
+This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
 
 ```html
 <html>
 	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<!-- list of links to each chapter -->
+		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
 		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -91,6 +96,34 @@ This [HTML web page][] is passing rule [Document has heading for main section of
 ```
 
 #### Passed Example 2
+
+This [HTML web page][] is passing rule [Document has heading for main section of content][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 3
 
 This [HTML web page][] is passing rule [document has a main landmark][].
 
@@ -111,61 +144,7 @@ This [HTML web page][] is passing rule [document has a main landmark][].
 </html>
 ```
 
-#### Passed Example 3
-
-This [HTML web page][] is passing rule [link for skipping block of content][].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<aside>
-			<a href="#main">Skip additional information</a>
-			<h1>About the book</h1>
-			<!-- description of the book and biography of the authors, repeated on each page -->
-			<!-- does not include any focusable element -->
-		</aside>
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
 #### Passed Example 4
-
-This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" onclick="toggleHidden('navigation')">Toggle table of content</a>
-		<nav id="navigation">
-			<h1>Contents</h1>
-			<!-- list of links to each chapter, repeated on each page -->
-		</nav>
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 5
 
 This [HTML web page][] is passing rule [first focusable element is link to main content][].
 
@@ -194,7 +173,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][].
 
@@ -229,9 +208,36 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
+#### Passed Example 6
+
+This [HTML web page][] is passing rule [link for skipping block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside>
+			<a href="#main">Skip additional information</a>
+			<h1>About the book</h1>
+			<!-- description of the book and biography of the authors, repeated on each page -->
+			<!-- does not include any focusable element -->
+		</aside>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 #### Passed Example 7
 
-This [HTML web page][] is passing rules [block of content is expandable and collapsible][] and [link for skipping block of content][].
+This [HTML web page][] is passing rules [block of content is expandable and collapsible][] and [link for skipping block of content][] because it has no [block of repeated content][].
 
 ```html
 <html lang="en">
@@ -243,6 +249,7 @@ This [HTML web page][] is passing rules [block of content is expandable and coll
 			<h1>About the book</h1>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
+
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -296,16 +303,14 @@ This [document][] is not an [HTML web page][].
 ```
 
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Expandable and Collapsible'
+[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First Focusable Elements Are Links to Sections of Content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
 [focusable]: #focusable 'Definition of Focusable'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for Skipping Block of Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[sections of content]: #section-of-content 'Definition of Section of Content'
-[sections of repeated content]: #section-of-repeated-content 'Definition of Section of Repeated Content'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

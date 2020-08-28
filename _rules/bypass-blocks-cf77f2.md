@@ -11,6 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
+  - g0m9ub
   - 047fe0
   - 7b576d
   - 8a213c
@@ -32,6 +33,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
+- [Document no Has Repeated Content Before Main Content][]; or
 - [Block of content is expandable and collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
@@ -41,6 +43,8 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
+- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
+- This rule assumes that [Success Criterion 2.4.1: Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content, needs to be skipped, this rule may pass while [Success Criterion 2.4.1: Bypass blocks][sc241] is not satisfied.
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server side scripting can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 
@@ -243,7 +247,7 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 
 #### Passed Example 7
 
-This [HTML web page][] is passing rules [block of content is expandable and collapsible][] and [link for skipping block of content][] because it has no [block of repeated content][].
+This [HTML web page][] is passing rules [Document Has no Repeated Content Before Main Content][].
 
 ```html
 <html lang="en">
@@ -251,6 +255,10 @@ This [HTML web page][] is passing rules [block of content is expandable and coll
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
@@ -312,6 +320,7 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
+[document has no repeated content before main content]: https://act-rules.github.io/rules/g0m9ub 'Rule Document no Has Repeated Content Before Main Content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First Focusable Elements Are Links to Sections of Content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

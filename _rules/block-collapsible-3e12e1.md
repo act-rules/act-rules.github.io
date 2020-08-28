@@ -26,11 +26,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-For each [block of repeated content][] in the test target, there exists a [visible][] [instrument][] to make this [block of repeated content][] not [visible][].
+There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][], there exists a [visible][] [instrument][] to make this [block][block of content] not [visible][].
 
 ## Expectation 2
 
-For each [block of repeated content][] in the test target, there exists an [instrument][], [included in the accessibility tree][], to remove this [block of repeated content][] from the [accessibility tree][included in the accessibility tree].
+There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][block of content] from the [accessibility tree][included in the accessibility tree].
 
 **Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][].
 
@@ -42,6 +42,8 @@ For each [block of repeated content][] in the test target, there exists an [inst
 
 ## Assumptions
 
+- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
+- This rule assumes that there is at least one [block of repeated content][] in the content before the [main block of content][]. If this is not the case, then it is possible to fail this rule without failing [Technique SCR28: Using an expandable and collapsible menu to bypass block of content] as the technique only requires that repeated content is collapsible.
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does require that they can be toggled on and off. In any case, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 
 ## Accessibility Support
@@ -52,7 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link in inside the `nav` element to a page with similar [blocks of content][block of content].
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link in inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][]. Unless specified, the [semamntic segmentation][] fulfilling the expectations has one block for the `main` element; one for each of the `aside` and `nav` elements (if present); and one for the other content, if any.
 
 ## Test Cases
 
@@ -92,7 +94,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Passed Example 2
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document.
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, both the `nav` and `aside` elements form a single [block][block of content] of the [semantic segmentation][] fulfilling expectation.
 
 ```html
 <html>
@@ -222,32 +224,6 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 6
-
-This [document][] has no [block of repeated content][] because there is no other page linked from it.
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<aside id="about-book">
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -438,6 +414,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'

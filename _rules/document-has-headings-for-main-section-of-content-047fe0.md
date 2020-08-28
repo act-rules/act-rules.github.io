@@ -27,7 +27,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-The first node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
+The first non-[decorative][] node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
 
 - has a [semantic role][] of `heading`; and
 - is [visible][]; and
@@ -268,6 +268,35 @@ This [document][] is using image as heading, the [accessible name][] of the imag
 </html>
 ```
 
+#### Passed Example 8
+
+This [document][] has a `h1` heading at the start of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="chapters-navigation">
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<span>1.</span>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -401,6 +430,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [block of content]: #block-of-content 'Definition of Block of Content'
+[decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS definition of Flat Tree'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

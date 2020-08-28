@@ -33,7 +33,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Document no Has Repeated Content Before Main Content][]; or
+- [Document Has no Repeated Content Before Main Content][]; or
 - [Block of content is expandable and collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
@@ -316,7 +316,6 @@ This [document][] is not an [HTML web page][].
 ```
 
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Expandable and Collapsible'
-[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
@@ -325,5 +324,6 @@ This [document][] is not an [HTML web page][].
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for Skipping Block of Content'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'

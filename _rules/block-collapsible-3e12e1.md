@@ -43,7 +43,7 @@ There exists a [semantic segmentation][] of the test target such that for each [
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
-- This rule assumes that there is at least one [block of repeated content][] in the content before the [main block of content][]. If this is not the case, then it is possible to fail this rule without failing [Technique SCR28: Using an expandable and collapsible menu to bypass block of content] as the technique only requires that repeated content is collapsible.
+- This rule assumes that there is at least one [block of repeated content][] in the content before the [main block of content][]. If this is not the case, then it is possible to fail this rule without failing [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] as the technique only requires that repeated content is collapsible.
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does require that they can be toggled on and off. In any case, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 
 ## Accessibility Support
@@ -54,7 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link in inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][]. Unless specified, the [semamntic segmentation][] fulfilling the expectations has one block for the `main` element; one for each of the `aside` and `nav` elements (if present); and one for the other content, if any.
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link in inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][]. Unless specified, the [semantic segmentation][] fulfilling the expectations has one block for the `main` element; one for each of the `aside` and `nav` elements (if present); and one for the other content, if any.
 
 ## Test Cases
 
@@ -414,6 +414,8 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
+[segmentation]: #segmentation 'Definition of Segmentation'
 [semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'

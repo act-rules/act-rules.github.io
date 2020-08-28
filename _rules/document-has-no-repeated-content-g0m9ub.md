@@ -34,7 +34,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-[Success Criterion 2.4.1 Bypass Blocks][sc241] require a way to "bypass blocks of content that are repeated on multiple Web pages." However, [Understanding Sucess Criterion 2.4.1: Bypass Blocks][us241] states that the intent is to allow "more direct access to the primary content of the Web page" and many of its sufficient techniques only provide a way to skip to the main content (most notably [G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]). It is not fully clear whether there must be a way to skip repeated content located after the primary content (litteral reading of the Success Criterion suggest so); or to skip non-repeated content located before the primary content (such as local navigation) (the Understanding Document and sufficient techniques suggest so). In any case when this rule, it is a clear case where means to bypass blocks must be provided in order to satisfy [Success Criterion 2.4.1 Bypass Blocks][sc241].
+[Success Criterion 2.4.1 Bypass Blocks][sc241] require a way to "bypass blocks of content that are repeated on multiple Web pages." However, [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241] states that the intent is to allow "more direct access to the primary content of the Web page" and many of its sufficient techniques only provide a way to skip to the main content (most notably [G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]). It is not fully clear whether there must be a way to skip repeated content located after the primary content (literal reading of the Success Criterion suggest so); or to skip non-repeated content located before the primary content (such as local navigation) (the Understanding Document and sufficient techniques suggest so). In any case when this rule, it is a clear case where means to bypass blocks must be provided in order to satisfy [Success Criterion 2.4.1 Bypass Blocks][sc241].
 
 Because the definitions of [block of repeated content][] and [main block of content][] are subjective (they rely on interpreting the purpose of some content), they cannot be used in the Applicability of any rule. This rule is essentially a substitute for an Applicability of [Bypass Blocks of Content][] and its other atomic rules. Only when this rule fails is there a clear need to provide a way for bypassing content located before the [main block of content][].
 
@@ -176,6 +176,7 @@ This [document][] is not an [HTML web page][].
 
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks of content]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
+[document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [html web page]: #web-page-html 'Definition of HTML Web Page'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'

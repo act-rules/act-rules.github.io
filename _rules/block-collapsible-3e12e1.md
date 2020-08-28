@@ -26,15 +26,15 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][], there exists a [visible][] [instrument][] to make this [block][block of content] not [visible][].
+There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists a [visible][] [instrument][] to make this [block][block of content] not [visible][].
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][block of content] from the [accessibility tree][included in the accessibility tree].
+There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][block of content] from the [accessibility tree][included in the accessibility tree].
 
 **Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][].
 
-**Note:** The same [instrument][] may be used for several or even all the [blocks of repeated content][block of repeated content].
+**Note:** The same [instrument][] may be used for several of the [blocks of content][block of content].
 
 **Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
@@ -43,7 +43,6 @@ There exists a [semantic segmentation][] of the test target such that for each [
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
-- This rule assumes that there is at least one [block of repeated content][] in the content before the [main block of content][]. If this is not the case, then it is possible to fail this rule without failing [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] as the technique only requires that repeated content is collapsible.
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does require that they can be toggled on and off. In any case, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 
 ## Accessibility Support
@@ -103,7 +102,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<button onclick="toggleHidden(['chapters-navigation', 'bio-translator'])">Toggle repeated content</button>
+		<button onclick="toggleHidden(['chapters-navigation', 'about-book'])">Toggle repeated content</button>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
@@ -130,6 +129,48 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 ```
 
 #### Passed Example 3
+
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of each of the [blocks of repeated content][block of repeated content] can be toggled on and off by the buttons at the start of the document. In this case, the first `button` is toggling two of the [blocks of repeated content][block of repeated content]. Note that trying to put both `chapters-navigation` and `bio-translator` in the same [block][block of content] of the [segmentation][] is not possible because in that case nodes between them (namely, `about-book`) also have to be included in that [block of content][].
+
+```html
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<button onclick="toggleHidden(['chapters-navigation', 'bio-translator'])">Toggle navigation and biography</button>
+		<button onclick="toggleHidden(['about-book'])">Toggle additionaly information</button>
+
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 4
 
 The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off, each of them by a different [instrument][].
 
@@ -167,7 +208,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 The [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document.
 
@@ -201,7 +242,7 @@ The [visibility][visible] of the navigational [block of repeated content][] can 
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 The navigational [block of repeated content][] can be made non-[visible][] and removed from the accessibility tree by the button at the start of the document.
 

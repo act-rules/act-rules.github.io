@@ -49,7 +49,7 @@ The `type` attribute is used correctly according to the intended purpose of `inp
 
 ## Accessibility Support
 
-- While `autocomplete` in a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
+- While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
 
@@ -94,7 +94,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 #### Passed Example 4
 
-This `autocomplete` [attribute value][] has a `work` token, allowed because it is used before `email`. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] list includes a `work` token, allowed because it is used before `email`. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Work email<input autocomplete="Work Email"/></label>
@@ -102,7 +102,7 @@ This `autocomplete` [attribute value][] has a `work` token, allowed because it i
 
 #### Passed Example 5
 
-This `autocomplete` [attribute value][] has a `section-` token, which can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] list includes a `section-` token, which can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-partner email"/></label>
@@ -110,7 +110,7 @@ This `autocomplete` [attribute value][] has a `section-` token, which can prefac
 
 #### Passed Example 6
 
-This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] list includes `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
@@ -118,7 +118,7 @@ This `autocomplete` [attribute value][] has `section-`  and `billing` tokens. Th
 
 #### Passed Example 7
 
-This `autocomplete` [attribute value][] has all allowed types of tokens in the correct order. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] list includes all allowed types of tokens in the correct order. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
 <label>Email<input autocomplete="section-primary shipping work email"/></label>
@@ -136,7 +136,7 @@ The `autocomplete` attribute value is on an `input` element that does not have a
 
 #### Failed Example 1
 
-This `autocomplete` [attribute value][] does not have a [correct autocomplete field][].
+This `autocomplete` [attribute value][] has an unknown term that is not a [correct autocomplete field][].
 
 ```html
 <label>Username<input autocomplete="badterm"/></label>
@@ -168,7 +168,7 @@ This `autocomplete` [attribute value][] is comma separated instead of space usin
 
 #### Failed Example 5
 
-This `autocomplete` [attribute value][] is not appropriate for the field. It is not possible to type an e-mail using just numbers.
+This `autocomplete` [attribute value][] is not appropriate for the field. The form field's implied purpose is to input a quantity (a number) which cannot be a e-mail.
 
 ```html
 <label>Quantity<input type="number" autocomplete="email"/></label>

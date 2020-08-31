@@ -102,7 +102,7 @@ This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.1562
 	</style>
 
 	<body>
-		<strong style="word-spacing: 8px !important;">
+		<strong style="word-spacing: 2.5px !important;">
 			The toy brought back fond memories of being lost in the rain forest.
 		</strong>
 	</body>

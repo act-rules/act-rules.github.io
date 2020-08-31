@@ -91,7 +91,7 @@ This `p` element has a [word-spacing][] of `12px` specified via the style attrib
 
 #### Failed Example 1
 
-This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.15625em` ) which is below the recommended minimum, given the specified font size is 16 pixels.
+This `strong` element has a `word-spacing` of `2.5px !important` (equals `0.156em` ) which is below the recommended minimum, given the specified font size is 16 pixels.
 
 ```html
 <html>

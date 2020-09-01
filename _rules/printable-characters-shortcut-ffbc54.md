@@ -301,7 +301,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Inapplicable Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is a [non-printable character][non-printable characters].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is not a [printable character][printable characters].
 
 ```html
 <html>
@@ -357,7 +357,6 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 [set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [blocked event]: #blocked-event 'Definition of blocked event'
 [printable character]: #printable-characters 'Definition of printable characters'
-[non-printable characters]: #non-printable-characters 'Definition of non-printable characters'
 [valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'
 [same key events]: #same-key-events 'Definition of same key events'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

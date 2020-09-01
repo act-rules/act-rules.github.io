@@ -481,10 +481,10 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 </html>
 ```
 
-one move in previous + one skip a hr (still at start)
+TODO: one move in previous + one skip a hr (still at start)
 
-sub-blocks in main block. => to main rule.
-merging repeated blocks => to main rule.
+TODO: sub-blocks in main block. => to main rule.
+TODO: merging repeated blocks => to main rule.
 
 ### Failed
 
@@ -935,7 +935,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 </html>
 ```
 
-one jumps too early + one jumps too late (not at start)
+TODO: one jumps too early + one jumps too late (not at start)
 
 ### Inapplicable
 

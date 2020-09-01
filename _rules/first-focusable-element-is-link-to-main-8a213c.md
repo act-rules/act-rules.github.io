@@ -245,9 +245,9 @@ The first [focusable][] element within this page is the link to the [main block 
 </html>
 ```
 
-jumps to in previous section
+TODO: jumps to in previous section
 
-jumps to after a hr
+TODO: jumps to after a hr
 
 ### Failed
 
@@ -520,9 +520,9 @@ The first [focusable][] element within this page is the link to W3C. The link to
 </html>
 ```
 
-jumps too early.
+TODO: jumps too early.
 
-jumps too late.
+TODO: jumps too late.
 
 ### Inapplicable
 

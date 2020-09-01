@@ -274,6 +274,8 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 </html>
 ```
 
+TODO: local navigation not skipped.
+
 ### Failed
 
 #### Failed Example 1

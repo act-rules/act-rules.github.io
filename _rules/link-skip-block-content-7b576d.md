@@ -65,7 +65,7 @@ In the test cases, the link to the second Chapter is added in order to turn the 
 
 #### Passed Example 1
 
-In this [document][], the complementary [block of repeated content][] starts with a `link` that jumps to after it. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it odes not contain a [block of repeated content][], so this is not a problem. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
+In this [document][], the complementary [block of repeated content][] starts with a `link` that jumps to after it. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it does not contain a [block of repeated content][], so this is not a problem. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
 
 ```html
 <html lang="en">

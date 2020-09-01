@@ -29,21 +29,23 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-For each [block of repeated content][] within the test target, either the last [focusable][] element which is before any [focusable][] element inside this [block of repeated content][], or the first [focusable][] element which is inside this [block of repeated content][]:
+TODO: adapt to new defs.
+
+There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], either the last [focusable][] element which is before any [focusable][] element inside this [block][], or the first [focusable][] element which is inside this [block][]:
 
 - has a [semantic role][] of `link`; and
 - is [included in the accessibility tree][]; and
 - is [visible][] when [focused][]; and
 - can be [activated][] by use of keyboard; and
-- has an [accessible name][] that communicates that it skips this [block of repeated content][]; and
-- when [activated][], moves keyboard focus to a node which is [at the end][] of this [block of repeated content][].
+- has an [accessible name][] that communicates that it skips this [block][]; and
+- when [activated][], moves keyboard focus to a node which is [at the end][] of this [block][].
 
 **Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in [tree order][].
 
 ## Assumptions
 
+- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
-- This rule assumes that elements with a [semantic role][] of `none` or `presentation` are [pure decoration][] and that elements which are [pure decoration][] either have no [semantic role][] or a [semantic role][] of `none` or `presentation`. Otherwise, [perceivable content][] might be wrongly detected.
 - This rule assumes that the visual order of elements is close to their order in the [flat tree][]. If this is not the case, [blocks of content][block of content], and therefore [blocks of repeated content][block of repeated content] cannot be determined correctly.
 
 ## Accessibility Support
@@ -55,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-In the test cases, the link to the second Chapter is added in order to turn the `<aside id="about-book">` element into a [block of repeated content][].
+In the test cases, the link to the second Chapter is added in order to turn the `<aside id="about-book">` element into a [block of repeated content][]. Unless otherwise specified, the [semantic segmentation][] fulfilling the expectation has three [blocks][block]: one for the `aside` element, one for the `main` element, and one for the other content (if any).
 
 ## Test Cases
 
@@ -63,7 +65,7 @@ In the test cases, the link to the second Chapter is added in order to turn the 
 
 #### Passed Example 1
 
-In this [document][], the complementary [block of repeated content][] starts with a `link` that jumps to after it. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
+In this [document][], the complementary [block of repeated content][] starts with a `link` that jumps to after it. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it odes not contain a [block of repeated content][], so this is not a problem. Note that even if the target of the link is not itself a [focusable][] element, keyboard focus is still moving there and sequential focus navigation will continue from that point after activating the link.
 
 ```html
 <html lang="en">
@@ -793,6 +795,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'HTML definition of Activation'
 [at the end]: #start-end-content 'Definition of At the End'
+[block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'

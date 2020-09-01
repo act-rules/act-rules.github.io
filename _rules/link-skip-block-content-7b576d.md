@@ -29,8 +29,6 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-TODO: adapt to new defs.
-
 There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], either the last [focusable][] element which is before any [focusable][] element inside this [block][], or the first [focusable][] element which is inside this [block][]:
 
 - has a [semantic role][] of `link`; and
@@ -804,10 +802,12 @@ This [document][] is not an [HTML web page][].
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML specification of Palpable Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
-[pure decoration]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure Decoration'
-[tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
+[segmentation]: #segmentation 'Definition of Segmentation'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
+[tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
 [tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of Tree Order'
 [visible]: #visible 'Definition of Visible'

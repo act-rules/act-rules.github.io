@@ -26,11 +26,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists a [visible][] [instrument][] to make this [block][block of content] not [visible][].
+There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists a [visible][] [instrument][] to make this [block][] not [visible][].
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target such that for each [block][block of content] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][block of content] from the [accessibility tree][included in the accessibility tree].
+There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][] from the [accessibility tree][included in the accessibility tree].
 
 **Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][].
 
@@ -449,6 +449,7 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
+[block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'

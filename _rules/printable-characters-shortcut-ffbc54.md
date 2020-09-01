@@ -301,7 +301,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Inapplicable Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is not a [printable character][printable characters] (in this example, the Escape key).
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is not a [printable character][] (in this example, the Escape key).
 
 ```html
 <html>

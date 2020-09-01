@@ -654,6 +654,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'
+[block of content]: #block-of-content 'Definition of Block of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

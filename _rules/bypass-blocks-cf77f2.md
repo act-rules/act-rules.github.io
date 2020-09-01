@@ -279,7 +279,7 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 
 #### Passed Example 8
 
-This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main section of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main block of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -325,7 +325,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main section of content][] (the `main element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the`nav`and`aside` elementent are arguably different "areas of the content", and the technique requires excatly one link per such area.
+This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main block of content][] (the `main` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
 ```html
 <html lang="en">

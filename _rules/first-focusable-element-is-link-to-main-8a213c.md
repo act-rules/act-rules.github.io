@@ -245,9 +245,68 @@ The first [focusable][] element within this page is the link to the [main block 
 </html>
 ```
 
-TODO: jumps to in previous section
+#### Passed Example 7
 
-TODO: jumps to after a hr
+The first [focusable][] element within this page is the link to the [main block of content][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+			<span id="main"></span>
+		</aside>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 8
+
+The first [focusable][] element within this page is the link to the [main block of content][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main>
+			<hr />
+			<span id="main"></span>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
 
 ### Failed
 
@@ -520,9 +579,65 @@ The first [focusable][] element within this page is the link to W3C. The link to
 </html>
 ```
 
-TODO: jumps too early.
+#### Failed Example 10
 
-TODO: jumps too late.
+The first [focusable][] element within this page does not move focus [at the start][] of the [main block of content][] (the focus is moved before the start).
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p id="main">The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 11
+
+The first [focusable][] element within this page does not move focus [at the start][] of the [main block of content][] (the focus is moved after the start).
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p id="main">
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
 
 ### Inapplicable
 

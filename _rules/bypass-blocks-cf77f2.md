@@ -22,6 +22,8 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
   assets:
+    - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles Henry Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
+    - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
@@ -70,6 +72,36 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
+This [HTML web page][] is passing rules [Document Has no Repeated Content Before Main Content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
+
+		<main>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 2
+
 This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
 
 ```html
@@ -100,7 +132,7 @@ This [HTML web page][] is passing rule [block of content is expandable and colla
 </html>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
 This [HTML web page][] is passing rule [Document has heading for main section of content][].
 
@@ -128,7 +160,7 @@ This [HTML web page][] is passing rule [Document has heading for main section of
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 This [HTML web page][] is passing rule [document has a main landmark][].
 
@@ -149,7 +181,7 @@ This [HTML web page][] is passing rule [document has a main landmark][].
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 This [HTML web page][] is passing rule [first focusable element is link to main content][].
 
@@ -179,7 +211,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][].
 
@@ -216,7 +248,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 This [HTML web page][] is passing rule [link for skipping block of content][].
 
@@ -245,9 +277,55 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
-This [HTML web page][] is passing rules [Document Has no Repeated Content Before Main Content][].
+This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main section of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+
+```html
+<html>
+	<head>
+		<title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title>
+	</head>
+	<body>
+		<nav id="local-navigation">
+			<a href="#local-navigation">Skip to local navigation</a>
+			<a href="#about-book">Skip to information about the book</a>
+			<a href="#brewitt-taylor">Skip to Brewitt-Taylor's translation</a>
+			<a href="#roberts">Skip to Roberts' translation</a>
+			<a href="#yu">Skip to Yu's translation</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main>
+			<h1 id="brewitt-taylor">
+				Three Heroes Swear Brotherhood in the Peach Garden (Translation by Charles Henry Brewitt-Taylor)
+			</h1>
+			<p>
+				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
+				divide.
+			</p>
+
+			<h1 id="roberts">Three Bold Spirits Plight Mutual Faith in the Peach Garden (Translation by Moss Roberts)</h1>
+			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
+
+			<h1 id="yu">Three Heroes Swear Brotherhood at a Feast in the Peach Garden (Translation by Yu Sumei)</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 9
+
+This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main section of content][] (the `main element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the`nav`and`aside` elementent are arguably different "areas of the content", and the technique requires excatly one link per such area.
 
 ```html
 <html lang="en">
@@ -255,21 +333,23 @@ This [HTML web page][] is passing rules [Document Has no Repeated Content Before
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
+		<nav id="local-navigation">
+			<a href="#local-navigation">Skip to local navigation</a>
+			<a href="#main">Skip to text</a>
 		</nav>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 		</main>
 	</body>
 </html>
@@ -315,6 +395,7 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
+[block]: #block-of-content 'Definition of Block of Content'
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Expandable and Collapsible'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
@@ -326,4 +407,6 @@ This [document][] is not an [HTML web page][].
 [link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for Skipping Block of Content'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
+[tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'

@@ -38,7 +38,7 @@ The first [focusable][] element within the test target:
 - is [visible][] when [focused][]; and
 - has a [semantic role][] of `link`; and
 - can be [activated][] using the keyboard; and
-- when [activated][], moves focus [to the start][at the start] of the [main block of content][] of the [document][]; and
+- when [activated][], moves focus [at the start][] of the [main block of content][] of the [document][]; and
 - has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ## Assumptions

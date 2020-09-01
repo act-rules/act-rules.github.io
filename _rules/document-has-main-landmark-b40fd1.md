@@ -12,7 +12,7 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
   assets:
-    - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles H. Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
+    - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles Henry Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
     - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
@@ -81,7 +81,7 @@ This [document][] has several elements with a role of `main`, at least one of th
 		<title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title>
 	</head>
 	<body>
-		<div role="main" aria-label="Translation by C. H. Brewitt-Taylor (1925)" aria-hidden="true">
+		<div role="main" aria-label="Translation by Charles Henry Brewitt-Taylor (1925)" aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood in the Peach Garden</h1>
 			<p>
 				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to

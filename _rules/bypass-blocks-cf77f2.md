@@ -289,10 +289,10 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 	<body>
 		<nav id="local-navigation">
 			<a href="#local-navigation">Skip to local navigation</a>
-			<a href="#about-book">Skip to information about the book</a>
 			<a href="#brewitt-taylor">Skip to Brewitt-Taylor's translation</a>
 			<a href="#roberts">Skip to Roberts' translation</a>
 			<a href="#yu">Skip to Yu's translation</a>
+			<a href="#about-book">Skip to information about the book</a>
 		</nav>
 
 		<aside id="about-book">

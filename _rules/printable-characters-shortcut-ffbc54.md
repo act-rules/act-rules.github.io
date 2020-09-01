@@ -22,13 +22,13 @@ acknowledgments:
 
 The rule applies to any [keyboard event][] for which all of the following is true: 
 - the event's attribute `key` is a [printable character][] key; and
-- the event's method `getModifierState` returns `false` for any of the [valid modifier keys][]; and
+- the event's method `getModifierState` returns `false` for each of the [valid modifier keys][]; and
 - the event causes [changes in the content][changes in content] of the [HTML document][].
 
 ## Expectation
 
 For each test target at least one of the following is true:
-- (**remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for any of the [valid modifier keys][]; or
+- (**remap**:) there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for each of the [valid modifier keys][]; or
 - (**focus**:) the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
 
 ## Assumptions
@@ -301,7 +301,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Inapplicable Example 1
 
-This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is not a [printable character][printable characters].
+This [HTML document][] has a [keyboard event][] [dispatched][] to an [event target][] but it only causes [changes in content][] if the event's attribute `key` is not a [printable character][printable characters] (in this example, the Escape key).
 
 ```html
 <html>
@@ -310,8 +310,8 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
     <script src="/test-assets/ffbc54/shortcut.js"></script>
   </head>
 
-  <body onload="registerShortcut({ctrlKey: true}); activateShortcuts();">
-    <label for="target">Add to list (press "ctrl" to add):</label>
+  <body onload="registerShortcut({shortcutKey: 'Escape'}); activateShortcuts();">
+    <label for="target">Add to list (press "esc" to add):</label>
     <input type="text" id="target" />
     <br />
     <div>

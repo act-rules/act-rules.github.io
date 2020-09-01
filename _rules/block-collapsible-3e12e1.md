@@ -61,7 +61,7 @@ In the test cases, the `aside` and `nav` elements are each a [block of repeated 
 
 #### Passed Example 1
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document.
+The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it does not contain a [block of repeated content][], so this is not a problem.
 
 ```html
 <html>
@@ -273,8 +273,6 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 	</body>
 </html>
 ```
-
-TODO: local navigation not skipped.
 
 ### Failed
 

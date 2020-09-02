@@ -147,11 +147,8 @@ This `role` attribute is specified on an element which is not [included in the a
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
-[implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
-[semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

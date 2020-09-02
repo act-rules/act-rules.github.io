@@ -230,7 +230,7 @@ There is no element whose role has [required context role][] because the `header
 
 #### Inapplicable Example 5
 
-There is no element wit an [explicit role][] different from its [implicit role][]. This `li` element has an [explicit role][] of `listitem` which is identical to its [implicit role][].
+There is no element with an [explicit role][] different from its [implicit role][]. This `li` element has an [explicit role][] of `listitem` which is identical to its [implicit role][].
 
 ```html
 <ul>

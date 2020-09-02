@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false
     failed: not satisfied
@@ -41,7 +36,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-This rule assumes that the [implicit role][] of elements is not enough to satisfy [Success Criterion 4.1.2 Name, Role, Value][sc412]. In case of invalid `role` attribute, the [semantic role][] defaults to the [implicit role]. If this is the correct role for the element, the rule will fail but [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied. For example, the element `<img role="image" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />` will fail this rule (because `image` is not a valid role) but satisfies [Success Criterion 4.1.2 Name, Role, Value][sc412] because the element defaults to its [implicit role][] of `img`.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -55,7 +50,6 @@ Further reading:
 
 - [List of WAI-ARIA Roles][wai-aria role] and [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
 

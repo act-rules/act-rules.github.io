@@ -111,7 +111,7 @@ This `role` attribute contains two tokens, but none of these tokens is a valid r
 There is no `role` attribute.
 
 ```html
-<div>Some Content</div>
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Inapplicable Example 2

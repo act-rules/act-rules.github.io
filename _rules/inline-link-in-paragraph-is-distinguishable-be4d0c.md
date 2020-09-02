@@ -26,7 +26,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 - **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different color**: the element's [foreground color][] and the [foreground color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1, or the element's [background color][] and the [background color][] of the **non-link line text** elements have a [highest possible contrast][] that is at least 3.0:1.
+- **different hue**: the element's [foreground color][] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the element's [background color][] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
 ## Expectation
 
@@ -38,7 +38,6 @@ For at least one element of the set comprised by the test target and all of its 
 
 ## Assumptions
 
-- A 3:1 contrast difference, which is the minimum required to meet WCAG 2.0, between the colors of the link text and the non-link text is enough for [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html). This value is part of [technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183) but is not specified in the [1.4.1 success criterion](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
 - The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.

@@ -305,11 +305,11 @@ This link is not distinguishable by color from the other text rendered in its li
 
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[different hue]: #different-hue 'Definition of different hue'
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
-[highest possible contrast]: #highest-possible-contrast 'Definition of highest possible contrast'
 [hovered]: #hovered 'Definition of hovered'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

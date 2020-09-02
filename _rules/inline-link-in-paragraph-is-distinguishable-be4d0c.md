@@ -504,9 +504,9 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[different hue]: #different-hue 'Definition of different hue'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
-[highest possible contrast]: #highest-possible-contrast 'Definition of highest possible contrast'
 [outcome]: #outcome 'Definition of outcome'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

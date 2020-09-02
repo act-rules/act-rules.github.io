@@ -55,7 +55,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
+This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -78,7 +78,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 2
 
-This link, that is distinguishable by the background color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
+This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -97,7 +97,7 @@ This link, that is distinguishable by the background color from the other text i
 
 #### Passed Example 3
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -125,7 +125,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 4
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -151,7 +151,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 5
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused.
 
 ```html
 <style>
@@ -174,7 +174,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 6
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable font-style when it is hovered or focused.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is hovered or focused.
 
 ```html
 <style>
@@ -197,7 +197,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 7
 
-This link, that is distinguishable by color from the other text in the same line, has an icon that appears when the link is focused or hovered. This icon distinguishes the element as a link.
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is focused or hovered. This icon indicates the element is a link.
 
 ```html
 <style>
@@ -226,7 +226,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 8
 
-This link had a descendant element that is distinguishable by color from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
+This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -250,7 +250,7 @@ This link had a descendant element that is distinguishable by color from the oth
 
 #### Failed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
+This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>
@@ -289,7 +289,7 @@ This link is the only text rendered in its line.
 
 #### Inapplicable Example 4
 
-Each link is the only text rendered in their respective line.
+Each link is the only text rendered in their respective lines.
 
 ```html
 <ul>
@@ -308,16 +308,16 @@ There is no text belonging to non [semantic links][semantic link] in this line.
 
 #### Inapplicable Example 6
 
-This link is not distinguishable by color from the other text rendered in its line.
+This link is not distinguishable by color (hue) from the other text rendered in its line.
 
 ```html
 <style>
 	p {
-		color: black;
+		color: #0A415C;
 		background-color: white;
 	}
 	a {
-		color: black;
+		color: #19A1E6;
 		background-color: white;
 	}
 </style>

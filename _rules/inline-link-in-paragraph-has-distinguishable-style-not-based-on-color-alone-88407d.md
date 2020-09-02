@@ -1,9 +1,9 @@
 ---
 id: 88407d
-name: Inline link has distinguishable style not based on color alone or content that indicates it is a link
+name: Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link
 rule_type: atomic
 description: |
-  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color alone or have content that indicates they are links.
+  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or have content that indicates they are links.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -55,7 +55,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -74,7 +74,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 2
 
-This link, that is distinguishable by the background color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -93,7 +93,7 @@ This link, that is distinguishable by the background color from the other text i
 
 #### Passed Example 3
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -117,7 +117,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 4
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable bottom border.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border.
 
 ```html
 <style>
@@ -140,7 +140,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 5
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable box-shadow.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
 
 ```html
 <style>
@@ -160,7 +160,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 6
 
-This link, that is distinguishable by color from the other text in the same line, has a distinguishable font-style.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style.
 
 ```html
 <style>
@@ -180,7 +180,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 7
 
-This link, that is distinguishable by color from the other text in the same line, has an icon that makes it distinguishable as a link.
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -202,7 +202,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Passed Example 8
 
-This link, that is distinguishable by color from the other text in the same line, has text that makes it distinguishable as a link.
+This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -223,7 +223,7 @@ This link, that is distinguishable by color from the other text in the same line
 
 #### Failed Example 1
 
-This link, that is distinguishable by color from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
+This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
 
 ```html
 <style>
@@ -268,7 +268,7 @@ This link is the only text rendered in its line.
 
 #### Inapplicable Example 4
 
-Each link is the only text rendered in their respective line.
+Each link is the only text rendered in their respective lines.
 
 ```html
 <ul>
@@ -292,11 +292,11 @@ This link is not distinguishable by color from the other text rendered in its li
 ```html
 <style>
 	p {
-		color: black;
+		color: #0A415C;
 		background-color: white;
 	}
 	a {
-		color: black;
+		color: #19A1E6;
 		background-color: white;
 	}
 </style>

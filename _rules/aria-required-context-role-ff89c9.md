@@ -157,7 +157,7 @@ These elements with an [explicit role][] of `listitem` are not [owned by][] an e
 
 #### Failed Example 3
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][]. They are instead [owned by][] the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are not [owned by][] an element with their [required context role][]. They are instead [owned by][] the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
 
 ```html
 <div role="list">

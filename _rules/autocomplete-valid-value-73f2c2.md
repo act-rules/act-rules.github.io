@@ -43,7 +43,7 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Expectation 3
 
-Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still be programmatically identifiable.
+Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still programmatically identifiable.
 
 ## Assumptions
 

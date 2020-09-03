@@ -41,10 +41,11 @@ This rule applies to any [text node][] that is either [visible][] or [included i
 
 For each test target that includes at least one of the [visual reference words][], one of the following is true:
 
-- (**no indication**) the test target does not identify any [web content][] through the use of any [visual reference words][]; or
 - (**non-visual reference**) the test target is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] by a non-visual characteristic; or
 - (**visible words**) each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
-- (**accessible words**) each [visual reference word][] in the test target is included in the [accessible name][] of the identified content.
+- (**accessible words**) each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
+- (**no indication**) the test target does not identify any [web content][] through the use of any [visual reference words][]; or
+- (**no instruction**) the test target does not give instructions about any [web content][] through the use of any of the [visual reference words][].
 
 ## Assumptions
 
@@ -216,7 +217,7 @@ This paragraph includes the [visual reference word][] "star" but there is also a
 
 #### Passed Example 10
 
-This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction, thus matching the (**no indication**) condition.
+This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction, thus matching the (**no instruction**) condition.
 
 ```html
 <p>

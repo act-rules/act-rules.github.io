@@ -84,7 +84,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 	}
 	a {
 		color: black;
-		background-color: #C84D32;
+		background-color: #c84d32;
 		text-decoration: underline;
 	}
 </style>
@@ -216,14 +216,14 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 		text-decoration: none;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
+<p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
+This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed. Even though the link has a different color (blue) from the other text (black) the low difference in contrast between them means they are not distinguishing colors.
 
 ```html
 <style>
@@ -292,11 +292,11 @@ This link is not distinguishable by color from the other text rendered in its li
 ```html
 <style>
 	p {
-		color: #0A415C;
+		color: #0a415c;
 		background-color: white;
 	}
 	a {
-		color: #19A1E6;
+		color: #19a1e6;
 		background-color: white;
 	}
 </style>

@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-Two elements have _distinguishable styles_ if one of the following is true:
+Two elements have _distinguishable styles_ if at least one of the following is true:
 
 - they have [distinguishable colors](#distinguishable-colors); or
 - they have [distinguishable borders](#distinguishable-borders); or

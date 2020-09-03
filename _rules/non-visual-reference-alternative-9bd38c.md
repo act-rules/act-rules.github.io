@@ -29,6 +29,7 @@ acknowledgments:
   authors:
     - Brian Bors
     - Daniël Strik
+    - Jean-Yves Moyen
     - Wilco Fiers
 ---
 
@@ -233,38 +234,44 @@ This paragraph includes the [visual reference word][] "circle" but in this case 
 
 #### Passed Example 11
 
-This paragraph includes the [visual reference word][] "circle" but in this case it is no instruction, thus matching the (**no indication**) condition. Note that this example is applicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
+This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the (**non-visual reference**) condition. Note that this example is applicable because, despite the fact that the text is not visible, it is included in the accessibility tree.
 
 ```html
-<p style="position:absolute; top:-9999em">
-	This circle is nice.
-	<span
-		style="height: 25px;
-		     width: 25px;
-		     background-color: #bbb;
-		     border-radius: 50%;
-		     display: inline-block;"
-	>
-	</span>
-</p>
+<head>
+	<title>Passed example 1 9bd38c</title>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p style="position:absolute; top:-9999em">Click "howdy" on the right, for a surprise</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Howdy</button>
+		</div>
+	</div>
+</body>
 ```
 
 #### Passed Example 12
 
-This paragraph includes the [visual reference word][] "circle" but in this case it is no instruction, thus matching the (**no indication**) condition. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
+This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the (**non-visual reference**) condition. Note that this example is not inapplicable because, despite the fact that the text is not in the accessibility tree, it is visible.
 
 ```html
-<p aria-hidden="true">
-	This circle is nice.
-	<span
-		style="height: 25px;
-		     width: 25px;
-		     background-color: #bbb;
-		     border-radius: 50%;
-		     display: inline-block;"
-	>
-	</span>
-</p>
+<head>
+	<title>Passed example 1 9bd38c</title>
+	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+</head>
+<body>
+	<div class="col-container">
+		<div class="col">
+			<p aria-hidden="true">Click "howdy" on the right, for a surprise</p>
+		</div>
+		<div class="col">
+			<button onclick="alert('Surprise!')">Howdy</button>
+		</div>
+	</div>
+</body>
 ```
 
 #### Passed Example 13

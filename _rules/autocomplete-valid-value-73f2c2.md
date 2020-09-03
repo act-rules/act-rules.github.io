@@ -41,10 +41,6 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is an [appropriate][appropriate field for the form control] for that test target.
 
-## Expectation 3
-
-Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still programmatically identifiable.
-
 ## Assumptions
 
 The `autocomplete` attribute is not used on form fields that:
@@ -63,6 +59,7 @@ The `aria-disabled` state is used on `input` elements which are not part of [seq
 - While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
+- Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still programmatically identifiable.
 
 ## Background
 

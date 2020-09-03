@@ -136,14 +136,6 @@ This paragraph includes the [visual reference word][] "right". The visual refere
 
 #### Passed Example 4
 
-This paragraph includes the [visual reference word][] "square" but it is not identifying web content, thus it matches the (**no indication**) condition.
-
-```html
-<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
-```
-
-#### Passed Example 5
-
 This text includes the [visual reference word][] "tilted" and identifies web content (namely itself). But the text also includes the word "this" which makes it apparent that the description is about the same content, thus matching the (**non-visual reference**) condition.
 
 ```html
@@ -164,7 +156,7 @@ This text includes the [visual reference word][] "tilted" and identifies web con
 </body>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 This paragraph includes the [visual reference word][] "round". The button is identified by this word which is also included in the [visible text content][] of the element, thus matching the (**visible words**) condition.
 
@@ -185,6 +177,17 @@ This paragraph includes the [visual reference word][] "round". The button is ide
 </body>
 ```
 
+#### Passed Example 6
+
+This paragraph includes the [visual reference word][] "triangle" which is included in the heading of the menu, thus matching the (**visible words**) condition. The fact that the described content is on another page of the same website does not restrict this rule.
+
+```html
+<p>
+	On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples
+	within the triangle menu.
+</p>
+```
+
 #### Passed Example 7
 
 This paragraph includes the [visual reference words][] "wide" and "narrow". The images are indicated by these words which are also included in the [accessible names][accessible name] of the images, thus matching the (**accessible words**) condition.
@@ -197,25 +200,13 @@ This paragraph includes the [visual reference words][] "wide" and "narrow". The 
 
 #### Passed Example 8
 
-This paragraph includes the [visual reference word][] "triangle" which is included in the heading of the menu, thus matching the (**visible words**) condition. The fact that the described content is on another page of the same website does not restrict this rule.
+This paragraph includes the [visual reference word][] "square" but it is not identifying web content, thus it matches the (**no indication**) condition.
 
 ```html
-<p>
-	On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples
-	within the triangle menu.
-</p>
+<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
 ```
 
 #### Passed Example 9
-
-This paragraph includes the [visual reference word][] "star" but there is also a heading "examples" that can be referenced, thus matching the (**non-visual references**) condition. The fact that the identified content is in an `iframe` does not restrict this rule.
-
-```html
-<p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
-<iframe title="star" src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
-```
-
-#### Passed Example 10
 
 This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction, thus matching the (**no instruction**) condition.
 
@@ -231,6 +222,15 @@ This paragraph includes the [visual reference word][] "circle" but in this case 
 	>
 	</span>
 </p>
+```
+
+#### Passed Example 10
+
+This paragraph includes the [visual reference word][] "star" but there is also a heading "examples" that can be referenced, thus matching the (**non-visual references**) condition. The fact that the identified content is in an `iframe` does not restrict this rule.
+
+```html
+<p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
+<iframe title="star" src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
 ```
 
 #### Passed Example 11

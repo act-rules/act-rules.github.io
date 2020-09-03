@@ -422,7 +422,7 @@ This link had a descendant element that is distinguishable by color (hue) from t
 
 #### Failed Example 1
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed.
+This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed. Even though the link has a different color (blue) from the other text (black) the low difference in contrast between them means they are not distinguishing colors.
 
 ```html
 <style>

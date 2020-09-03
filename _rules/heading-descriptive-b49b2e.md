@@ -29,13 +29,13 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 **Note:** This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
 
-## Expectation
+## Expectation 1
 
-Each target element describes the topic or purpose of the first non-[decorative][] [palpable content][] which is:
+Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].
 
-- after the target, in tree order in the [flat tree][]; and
-- [visible][], if the target is [visible][]; and
-- [included in the accessibility tree][], if the target is [included in the accessibility tree][].
+## Expectation 2
+
+Each target element which is [included in the accessibility tree][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

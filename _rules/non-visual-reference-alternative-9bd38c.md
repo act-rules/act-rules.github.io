@@ -305,6 +305,15 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 </body>
 ```
 
+#### Passed Example 14
+
+No [text node][] on this page include any of the [visual reference words][].
+
+```html
+<p>Click the button, for a surprise</p>
+<button onclick="alert('Surprise!')">Howdy</button>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -402,16 +411,6 @@ This paragraph includes the [visual reference word][] "star" (which is not inclu
 ### Inapplicable
 
 #### Inapplicable Example 1
-
-TODO: this is now passing with new Applicability.
-There is no visual reference word on the page.
-
-```html
-<p>Click the button, for a surprise</p>
-<button onclick="alert('Surprise!')">Howdy</button>
-```
-
-#### Inapplicable Example 2
 
 The content is indicated with the word "box" (a visual reference word), but this indication is hidden and not included in the accessibility tree because it has 'display:none'.
 

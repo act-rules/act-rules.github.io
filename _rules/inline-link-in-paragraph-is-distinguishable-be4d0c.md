@@ -222,7 +222,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 		text-decoration: none;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage by following this link</a>.</p>
+<p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
 ```
 
 #### Passed Example 9

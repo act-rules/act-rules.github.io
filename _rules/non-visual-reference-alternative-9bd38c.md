@@ -200,7 +200,7 @@ This paragraph includes the [visual reference words][] "wide" and "narrow". The 
 
 #### Passed Example 8
 
-This paragraph includes the [visual reference word][] "square" but it is not identifying web content, thus it matches the (**no indication**) condition.
+This paragraph includes the [visual reference word][] "square" but in this case it is not identifying any [web content][], thus matching the (**no indication**) condition.
 
 ```html
 <p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
@@ -208,7 +208,7 @@ This paragraph includes the [visual reference word][] "square" but it is not ide
 
 #### Passed Example 9
 
-This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction, thus matching the (**no instruction**) condition.
+This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction about any [web content][], thus matching the (**no instruction**) condition.
 
 ```html
 <p>

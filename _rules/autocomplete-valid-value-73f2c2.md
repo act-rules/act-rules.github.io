@@ -157,7 +157,7 @@ This `autocomplete` [attribute value][] has an unknown term that is not a [corre
 
 #### Failed Example 2
 
-This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however "work" can not be used with "photo".
+This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however `work` can not be used with `photo`.
 
 ```html
 <label>Photo<input autocomplete="work photo"/></label>

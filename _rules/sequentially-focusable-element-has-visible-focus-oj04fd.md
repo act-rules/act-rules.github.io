@@ -10,16 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag22:2.4.11: # Focus Appearance (Minimum) (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-  wcag22:2.4.12: # Focus Appearance (Enhanced) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - CSS styling
   - DOM tree
@@ -32,21 +22,13 @@ acknowledgments:
 
 The rule applies to any element which is part of [sequential focus navigation][] in a document with at least two [focusable][] elements.
 
-## Expectation 1
+## Expectation
 
-For each target element, there is at least one pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] from when it is not.
-
-## Expectation 2
-
-For each target element and each other [focusable][] element in the document, the set of pixels whose color is different when the test target is [focused][] and when it is not, and the set of pixels whose color is different when the other element is [focused][] and when it is not, are different.
-
-**Note:** Some pixels might be the same, but the sets have to be unique for each test target.
+For each target element, there is at least one device pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] from when it is not.
 
 ## Assumptions
 
 This rule assumes that documents with only one focusable element automatically satisfies [Success Criterion 2.4.7 Focus Visible][sc247], as stated in [Understanding Success Criterion 2.4.7: Focus Visible][usc247]: "if there is only one keyboard actionable control on the screen, the success criterion would be met".
-
-This rule assumes that it is not possible to satisfy [Success Criterion 2.4.7 Focus Visible][sc247] if two or more focusable elements have the exact same focus indication area. If this is not the case, it is possible to fail Expectation 2 while still satisfying [Success Criterion 2.4.7 Focus Visible][sc247].
 
 ## Accessibility Support
 
@@ -57,6 +39,8 @@ There are no major accessibility support issues known for this rule.
 Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
 WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411] and [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412] specifying how big the focus indicator should be. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
+
+WCAG has no clear requirement of unicity of the focus indicator for each [focusable][] element. Therefore, this rule can pass even if several focus indicators are identical. Such a situation may nonetheless cause confusion and all Examples in this rule avoid it.
 
 - [Success Criterion 2.4.7 Focus Visible][sc247]
 - [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411]
@@ -71,7 +55,7 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -79,7 +63,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. The 
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (due to default User Agent's styling) is unique. The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (due to default User Agent's styling).
 
 ```html
 <span tabindex="0">Act rules</span> <button tabindex="-1">Dummy button</button>
@@ -87,7 +71,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. The 
 
 #### Passed Example 3
 
-The first [focusable][] element, is part of [sequential focus navigation][]. The set of pixels that change color when it is [focused][] (the border of the `span` element) is unique (it does not change when any other element is [focused][]). The second [focusable][] element is also part of [sequential focus navigation][] and has a unique focus indicator due to default styling.
+The first [focusable][] element, is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (the border of the `span` element).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -108,7 +92,7 @@ The first [focusable][] element, is part of [sequential focus navigation][]. The
 
 #### Passed Example 4
 
-For each of these three [focusable][] elements, the set of pixels changing color when it is [focused][] is unique. For the element with `id` "wcag", each of these pixels also change color when another element is [focused][], but they do not all change color for the same other element. Thus, the set of pixels changing color is also unique for this one.
+Each of these three [focusable][] elements has at least one pixel which changes color when it is [focused][].
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -155,34 +139,6 @@ The first [focusable][] element does not have any pixel changing color when it i
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button tabindex="-1">Dummy button</button>
-```
-
-#### Failed Example 2
-
-Both of these [focusable][] elements have the exact same set of pixels changing color when they
-are [focused][].
-
-```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js" />
-
-<a
-	id="act"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator')"
-	onblur="toggleActivation('indicator')"
-	href="https://act-rules.github.io/"
-	>ACT rules</a
->
-<span id="indicator" class="indicator solid"></span>
-<a
-	id="wcag"
-	class="no-focus-default"
-	onfocus="toggleActivation('indicator')"
-	onblur="toggleActivation('indicator')"
-	href="https://www.w3.org/TR/WCAG21/"
-	>WCAG</a
->
 ```
 
 ### Inapplicable

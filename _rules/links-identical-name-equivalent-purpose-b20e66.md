@@ -141,7 +141,7 @@ These two links go to pages that have the same advertised key content but use di
 
 #### Passed Example 8
 
-These two HTML `span` element have an [explicit role][] of link, and lead to the [same resource][].
+These two HTML `span` element have an [explicit role][] of link, and lead to the [same resource][].
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ The same [accessible name][] is used for two links going to web pages that are s
 
 #### Failed Example 3
 
-These two HTML `span` elements have an [explicit role][] of link, but lead to resources that offer different content.
+These two HTML `span` elements have an [explicit role][] of link, but lead to resources that offer different content.
 
 ```html
 <html lang="en">

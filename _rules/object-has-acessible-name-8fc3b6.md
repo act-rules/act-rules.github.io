@@ -95,7 +95,7 @@ This `object` element placed off screen has a non-empty [accessible name][] thro
 
 #### Failed Example 1
 
-This `object` element has an empty [accessible name][].
+This `object` element has an empty [accessible name][] because the `title` attribute is empty.
 
 ```html
 <object title="" data="/test-assets/moon-audio/moon-speech.mp3"></object>
@@ -103,7 +103,7 @@ This `object` element has an empty [accessible name][].
 
 #### Failed Example 2
 
-This `object` element has an empty [accessible name][].
+This `object` element has an empty [accessible name][] because the `span` element with `id="label"` is empty.
 
 ```html
 <span id="label"></span> <object aria-labelledby="label" data="/test-assets/moon-audio/moon-speech.mp3"></object>
@@ -119,7 +119,7 @@ This `object` element has an empty [accessible name][] because the `aria-labelle
 
 #### Failed Example 4
 
-This `object` element has an empty [accessible name][].
+This `object` element has an empty [accessible name][] because it does not provide an accessible name through one of `title`, `aria-label` or `aria-labelledby` attributes.
 
 ```html
 <object data="/test-assets/moon-audio/moon-speech.mp3"></object>

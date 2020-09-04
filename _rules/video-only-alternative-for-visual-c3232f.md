@@ -77,22 +77,7 @@ See [Video Only Element Has Description Track: accessibility support](https://ac
 
 #### Passed Example 1
 
-This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. (Passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf))
-
-```html
-<html lang="en">
-	<p>
-		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
-		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
-		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
-	</p>
-	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
-</html>
-```
-
-#### Passed Example 2
-
-This `video` element, which has no audio, has a `track` element with descriptions. (Passes rule [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6))
+This `video` element, which has no audio, has a `track` element with descriptions. Thus, it passes rule [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6).
 
 ```html
 <html lang="en">
@@ -104,9 +89,9 @@ This `video` element, which has no audio, has a `track` element with description
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
-This `video` element, which has no audio, has a text transcript available on the same page. (Passes rule [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5))
+This `video` element, which has no audio, has a text transcript available on the same page. Thus, it passes rule [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5).
 
 ```html
 <html lang="en">
@@ -120,9 +105,9 @@ Then he stops to scratch his bottom.</p>
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
-This `video` element, which has no audio, has a separate audio track that describes the visual information. (Passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54))
+This `video` element, which has no audio, has a separate audio track that describes the visual information. Thus, it passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54).
 
 ```html
 <html lang="en">
@@ -137,24 +122,24 @@ This `video` element, which has no audio, has a separate audio track that descri
 </html>
 ```
 
-### Failed
+#### Passed Example 4
 
-#### Failed Example 1
-
-This `video` element, which has no audio, is a media alternative for the text in the page but not labeled as such.
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. Thus, it passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf).
 
 ```html
 <html lang="en">
 	<p>
 		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
 		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
-		Keyboard compatibility is described in WCAG.
+		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
 	</p>
 	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
 </html>
 ```
 
-#### Failed Example 2
+### Failed
+
+#### Failed Example 1
 
 This `video` element, which has no audio, has a `track` element with incorrect descriptions.
 
@@ -168,7 +153,7 @@ This `video` element, which has no audio, has a `track` element with incorrect d
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 2
 
 This `video` element, which has no audio, has a incorrect text transcript available through a link on the same page.
 
@@ -182,7 +167,7 @@ This `video` element, which has no audio, has a incorrect text transcript availa
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 This `video` element, which has no audio, has a separate audio track that incorrectly describes the visual information.
 
@@ -196,6 +181,21 @@ This `video` element, which has no audio, has a separate audio track that incorr
 	<audio controls>
 		<source src="/test-assets/rabbit-video/incorrect-audio-description.mp3" type="audio/mpeg" />
 	</audio>
+</html>
+```
+
+#### Failed Example 4
+
+This `video` element, which has no audio, is a media alternative for the text in the page but not labeled as such.
+
+```html
+<html lang="en">
+	<p>
+		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
+		Keyboard compatibility is described in WCAG.
+	</p>
+	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
 </html>
 ```
 

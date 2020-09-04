@@ -19,8 +19,9 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Annika Nietzio
     - Jey Nandakumar
+  previous_authors:
+    - Annika Nietzio
 ---
 
 ## Applicability

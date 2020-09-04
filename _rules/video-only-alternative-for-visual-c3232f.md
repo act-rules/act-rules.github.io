@@ -32,10 +32,10 @@ input_rules:
   - d7ba54
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
     - John Hicks
     - Rafal Charlampowicz
+    - Wilco Fiers
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

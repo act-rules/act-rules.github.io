@@ -17,9 +17,9 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
+    - Carlos Duarte
     - Dagfinn Rømen
     - Geir Sindre Fossøy
-    - Carlos Duarte
 ---
 
 ## Applicability

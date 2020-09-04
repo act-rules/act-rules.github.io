@@ -16,8 +16,8 @@ input_aspects:
   - Accessibility tree
 acknowledgments:
   authors:
-    - João Vicente
     - Carlos Duarte
+    - João Vicente
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

@@ -124,8 +124,8 @@ This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based sele
 	<img
 		src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
 		srcset="
-			test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
-			test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
+			/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
+			/test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
 		"
 		alt="Nyhavn"
 	/>
@@ -139,8 +139,8 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
+		<source media="(min-width: 1000px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 320px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
 		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>
@@ -198,8 +198,8 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
+		<source media="(min-width: 1000px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 320px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
 		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>

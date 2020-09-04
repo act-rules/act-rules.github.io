@@ -31,7 +31,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-_There are currently no assumptions._
+The `object` element is not rendered for presentational purposes. If the `object` is decorative and not [marked as decorative][] then the rule might fail but the success criterion might still be satisfied.
 
 ## Accessibility Support
 
@@ -156,7 +156,7 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 This `object` element is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
 
 ```html
-<object type="image/png" role="presentation" data="/test-assets/contrast/example.png"> </object>
+<object type="image/png" role="presentation" data="/test-assets/contrast/example.png"></object>
 ```
 
 #### Inapplicable Example 5
@@ -169,3 +169,4 @@ There is no `object` element.
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'

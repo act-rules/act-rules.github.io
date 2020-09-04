@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that each `object` element  has a non-empty accessible name.
 accessibility_requirements:
-  wcag20:1.1.1: # Non-text Content (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -41,8 +36,6 @@ Non-supported media formats make screen readers render the text content of the e
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-
 ## Test Cases
 
 ### Passed
@@ -60,7 +53,7 @@ This `object` element has a non-empty [accessible name][] through its `aria-labe
 This `object` element has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
-<object title="Moon speech" data="/test-assets/moon-audio/moon-speech.mp3"></object>
+<object title="My University" data="/test-assets/shared/index.html"></object>
 ```
 
 #### Passed Example 3
@@ -68,8 +61,7 @@ This `object` element has a non-empty [accessible name][] through its `title` at
 This `object` element has a non-empty [accessible name][] through its `aria-labelledby` attribute.
 
 ```html
-<span id="label">Moon speech</span>
-<object aria-labelledby="label" data="/test-assets/moon-audio/moon-speech.mp3"></object>
+<span id="label">W3C</span> <object aria-labelledby="label" data="/test-assets/shared/w3c-logo.png"></object>
 ```
 
 #### Passed Example 4
@@ -98,7 +90,7 @@ This `object` element placed off screen has a non-empty [accessible name][] thro
 This `object` element has an empty [accessible name][] because the `title` attribute is empty.
 
 ```html
-<object title="" data="/test-assets/moon-audio/moon-speech.mp3"></object>
+<object title="" data="/test-assets/shared/index.html"></object>
 ```
 
 #### Failed Example 2
@@ -106,7 +98,7 @@ This `object` element has an empty [accessible name][] because the `title` attri
 This `object` element has an empty [accessible name][] because the `span` element with `id="label"` is empty.
 
 ```html
-<span id="label"></span> <object aria-labelledby="label" data="/test-assets/moon-audio/moon-speech.mp3"></object>
+<span id="label"></span> <object aria-labelledby="label" data="/test-assets/shared/w3c-logo.png"></object>
 ```
 
 #### Failed Example 3
@@ -132,7 +124,7 @@ This `object` element has an empty [accessible name][] because it does not provi
 This `object` element is not [included in the accessibility tree][] due to `display:none`.
 
 ```html
-<object data="/test-assets/moon-audio/moon-speech.mp3" style="display: none;"></object>
+<object data="/test-assets/shared/index.html" style="display: none;"></object>
 ```
 
 #### Inapplicable Example 2
@@ -140,7 +132,7 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 This `object` element is not [included in the accessibility tree][] due to `visibility:hidden`.
 
 ```html
-<object data="/test-assets/moon-audio/moon-speech.mp3" style="visibility: hidden;"></object>
+<object data="/test-assets/shared/w3c-logo.png" style="visibility: hidden;"></object>
 ```
 
 #### Inapplicable Example 3

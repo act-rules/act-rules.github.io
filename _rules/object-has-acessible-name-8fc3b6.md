@@ -35,7 +35,7 @@ The `object` element is not rendered for presentational purposes. If the `object
 
 ## Accessibility Support
 
-Non supported media formats make screen readers render the text content of the element instead of other attributes.
+Non-supported media formats make screen readers render the text content of the element instead of other attributes.
 
 ## Background
 

@@ -1,18 +1,13 @@
 ---
 id: be4d0c
-name: Inline link is distinguishable
-rule_type: composite
+name: Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link
+rule_type: atomic
 description: |
-  This rule checks that inline links have a way to distinguish them from any surrounding text other than color alone.
-accessibility_requirements: # Remove whatever is not applicable
-  wcag20:1.4.1: # Use of Color (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-input_rules:
-  - 88407d
-  - 548868
+  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or have content that indicates they are links.
+accessibility_requirements:
+input_aspects:
+  - DOM Tree
+  - CSS Styling
 acknowledgments:
   authors:
     - Brian Bors
@@ -30,11 +25,10 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For each test target the [outcome][] of one of the following rules is "passed":
+There exists at least one [inclusive descendant element][] and one [adequate inspection state][] of the test target such that at least one of the following is true for all [interaction states][]:
 
-- [Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)
-- [Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)
-
+- **distinguishing style**: the [inclusive descendant element][] has a [distinguishable style][] from the **non-link line text** elements; or
+- **distinguishing content**: the [inclusive descendant element][] has adjacent content (such as an image or text) that indicates the test target is a link.
 
 ## Assumptions
 
@@ -61,7 +55,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -80,7 +74,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 2
 
-This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -90,7 +84,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 	}
 	a {
 		color: black;
-		background-color: #C84D32;
+		background-color: #c84d32;
 		text-decoration: underline;
 	}
 </style>
@@ -99,7 +93,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 
 #### Passed Example 3
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -123,7 +117,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 4
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border.
 
 ```html
 <style>
@@ -146,7 +140,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 5
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
 
 ```html
 <style>
@@ -166,7 +160,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 6
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style. This example passes rule "[Inline link has distinguishable style or content not based on color alone](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style.
 
 ```html
 <style>
@@ -186,7 +180,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 7
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -208,7 +202,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 8
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link. This example passes rule "[Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link](https://act-rules.github.io/rules/88407d)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -227,7 +221,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 9
 
-This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -250,7 +244,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 10
 
-This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -260,7 +254,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 	}
 	a {
 		color: black;
-		background-color: #C84D32;
+		background-color: #c84d32;
 		text-decoration: underline;
 	}
 </style>
@@ -269,7 +263,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 
 #### Passed Example 11
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -297,7 +291,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 12
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -323,7 +317,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 13
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused.
 
 ```html
 <style>
@@ -346,7 +340,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 14
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is hovered or focused.
 
 ```html
 <style>
@@ -369,7 +363,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 15
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link it focused or hovered. This icon indicates the element is a link. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is focused or hovered. This icon indicates the element is a link.
 
 ```html
 <style>
@@ -398,7 +392,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 16
 
-This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused. This example passes rule "[Inline link has distinguishable style or content on hover and focus](https://act-rules.github.io/rules/548868)".
+This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -437,6 +431,29 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 	}
 </style>
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Failed Example 2
+
+This link, that is distinguishable by color (hue) from the other text in the same line, has a different style because of its color and foreground color. But when the link has been visited, the style is the same of the other text on the same line.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		color: lightblue;
+		background-color: #111111;
+		text-decoration: none;
+	}
+	a:visited {
+		color: black;
+		background-color: white;
+	}
+</style>
+<p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI webpage</a>.</p>
 ```
 
 ### Inapplicable
@@ -486,28 +503,32 @@ There is no text belonging to non [semantic links][semantic link] in this line.
 
 #### Inapplicable Example 6
 
-This link is not distinguishable by color (hue) from the other text rendered in its line.
+This link is not distinguishable by color from the other text rendered in its line.
 
 ```html
 <style>
 	p {
-		color: #0A415C;
+		color: #0a415c;
 		background-color: white;
 	}
 	a {
-		color: #19A1E6;
+		color: #19a1e6;
 		background-color: white;
 	}
 </style>
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
+[adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [different hue]: #different-hue 'Definition of different hue'
+[distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
-[outcome]: #outcome 'Definition of outcome'
+[hovered]: #hovered 'Definition of hovered'
+[incluside descendant element]: #inclusive-descendant-element 'Definition of inclusive descendant element'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

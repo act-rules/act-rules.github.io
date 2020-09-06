@@ -142,6 +142,38 @@ The `lang` attribute value consists of only [whitespace][] and is not a [valid l
 </html>
 ```
 
+#### Failed Example 4
+
+The `lang` attribute value has a valid language tag, but its [descendant][] is not [included in the accessibility tree][].
+
+```html
+<html>
+	<body>
+		<article lang="en-US-GB">
+			<p aria-hidden="true">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</p>
+		</article>
+	</body>
+</html>
+```
+
+#### Failed Example 5
+
+The `lang` attribute value has a valid language tag, but its [descendant][] is not [visible][], it is still [included in the accessibility tree][].
+
+```html
+<html>
+	<body>
+		<article lang="en-US-GB">
+			<p style="position: absolute; top: -9999px">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</p>
+		</article>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

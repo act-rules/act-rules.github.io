@@ -22,16 +22,16 @@ acknowledgments:
 
 This rule applies to any HTML element that is [visible][], for which the `style` attribute [declares][declared] the [word-spacing][] CSS property.
 
-## Expectation 1
+## Expectation
 
-For the test target's [word-spacing][] property, one of the following is true:
+For the test target, one of the following is true:
 
-- the [declared][] value specified via the `style` attribute does not have the [important flag][]; or
-- the [computed][] value is at least `0.16` times its [computed][] [font-size][].
+- the [declared][] value of its [word-spacing][] property, specified via the `style` attribute, does not have the [important flag][]; or
+- the [computed][] value of its [word-spacing][] property is at least `0.16` times its [computed][] [font-size][].
 
 ## Assumptions
 
-There is no mechanism available on the page to adjust word spacing. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+There is no mechanism available on the page to adjust [word spacing][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
 
 ## Accessibility Support
 

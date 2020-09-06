@@ -39,7 +39,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include, but are not limited to:
   - Some assistive technologies can be set up to exclude the `title` attribute from the [accessible name][] of `iframe` elements
-  - Some assistive technologies ignores `aria-label` and only announces `title` attribute as an [accessible name][] of `iframe` elements.
+  - Some assistive technologies ignore `aria-label` and only announce `title` attribute as an [accessible name][] of `iframe` elements.
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are [focusable][] or if they have an [accessible name][].
   - Some assistive technologies always create an empty tab-stop for the `iframe`, even if they have an [accessible name][].
   - Some assistive technologies continue to identify `iframe` elements that have been specified to be not [included in the accessibility tree][].

@@ -232,3 +232,4 @@ The `lang` attribute value has a valid language tag, but does not have a [visibl
 [text node]: https://dom.spec.whatwg.org/#text
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[included in the accessibility tree]: #included-in-the-accessibility-tree

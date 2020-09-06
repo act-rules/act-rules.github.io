@@ -82,9 +82,9 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	test('authors are ordered alphabetically', () => {
 		expect(authors).toStrictEqual(orderedAuthors)
 	})
-	const orderePreviousAuthors = [...previous_authors].sort((a, b) => a.localeCompare(b))
+	const orderedPreviousAuthors = [...previous_authors].sort((a, b) => a.localeCompare(b))
 	test('previous authors are ordered alphabetically', () => {
-		expect(previous_authors).toStrictEqual(orderePreviousAuthors)
+		expect(previous_authors).toStrictEqual(orderedPreviousAuthors)
 	})
 
 	/**

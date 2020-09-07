@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
-  - CSS styling
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -103,6 +103,16 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 ```
 
 #### Passed Example 5
+
+This `input` element has an [accessible name][] because of its `placeholder` attribute.
+
+**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
+
+```html
+<input placeholder="Your search query" /> <button type="submit">search</button>
+```
+
+#### Passed Example 6
 
 This element with a `combobox` [role][semantic role] has an [accessible name][] because of its `aria-label` attribute.
 
@@ -206,3 +216,6 @@ This `select` element is not [included in the accessibility tree][] because it i
 Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of Visible'
+[label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'WCAG definition of Labels'
+[sc332]: https://www.w3.org/TR/WCAG21/#labels-or-instructions

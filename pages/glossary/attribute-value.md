@@ -7,7 +7,7 @@ input_aspects:
   - DOM tree
 ---
 
-The _attribute value_ of an attribute set on an HTML element is the value that the attribute gets after being parsed and computed according to specifications. It may differ from the value that is actually written in the HTML code due to trimming whitespace or non-digits characters, default values, or case-insensitivity.
+The _attribute value_ of an attribute set on an HTML element is the value that the attribute gets after being parsed and computed according to specifications. It may differ from the value that is actually written in the HTML code due to trimming whitespace or non-digits characters, default values, or case-insensitivity.
 
 Some notable case of attribute value, among others:
 

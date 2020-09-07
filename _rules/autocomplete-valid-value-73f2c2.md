@@ -34,7 +34,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
-3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-*"; then
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
 4. A required token from the [correct autocomplete field][].
 
 ## Expectation 2
@@ -43,15 +43,23 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Assumptions
 
-The `autocomplete` attribute is not used on form fields that do not correspond to an autocomplete field described in the HTML 5.2 specification. If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the specification, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed. 
+The `autocomplete` attribute is not used on form fields that:
+
+- do not correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes), and
+- do not collect information about the user.
+
+If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the list of `input` purposes, or the form fields do not collect information about the user, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
+
+The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). It means that this rule may fail elements which satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
 ## Accessibility Support
 
 - While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
+- Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still programmatically identifiable.
 
 ## Background
 
@@ -75,13 +83,15 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 #### Passed Example 2
 
-This `autocomplete` [attribute value][] only has the required token, and is valid for a `select` element.
+This `autocomplete` [attribute value][] only has the required token, and is valid for a `select` element. Adding the `autocomplete="off"` to the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
 ```html
-<select autocomplete="bday-month">
-	<option>January</option>
-	<option>...</option>
-</select>
+<form autocomplete="off">
+	<select autocomplete="bday-month">
+		<option>January</option>
+		<option>...</option>
+	</select>
+</form>
 ```
 
 #### Passed Example 3
@@ -110,7 +120,7 @@ This `autocomplete` [attribute value][] list includes a `section-` token, which 
 
 #### Passed Example 6
 
-This `autocomplete` [attribute value][] list includes `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. 
+This `autocomplete` [attribute value][] list includes `section-` and `billing` tokens. These tokens can preface any [correct autocomplete field][].
 
 ```html
 <label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
@@ -144,7 +154,7 @@ This `autocomplete` [attribute value][] has an unknown term that is not a [corre
 
 #### Failed Example 2
 
-This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however "work" can not be used with "photo".
+This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however `work` can not be used with `photo`.
 
 ```html
 <label>Photo<input autocomplete="work photo"/></label>
@@ -240,11 +250,11 @@ This `autocomplete` attribute is ignored because it is on an element with a [sem
 <label>Username<input type="text" role="none" disabled autocomplete="username"/></label>
 ```
 
-[ASCII whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/08/12'
+[ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/08/12'
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [appropriate field for the form control]: #appropriate-field-for-the-form-control 'Definition of Appropriate field for the form control'
 [correct autocomplete field]: #correct-autocomplete-field 'Definition of Correct autocomplete field'
-[HTML specification for Autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens 'HTML Autofill Detail, 2020/08/12'
+[html specification for autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens 'HTML Autofill Detail, 2020/08/12'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc135]: https://www.w3.org/TR/WCAG21/#identify-input-purpose 'WCAG 2.1 success criterion 1.3.5 Identify Input Purpose'

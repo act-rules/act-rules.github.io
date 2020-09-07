@@ -85,7 +85,7 @@ This `ol` element contains at least one [descendant][] of type [palpable content
 
 #### Failed Example 1
 
-This `ul` element contains [palpable content][] `li` element, that is [hidden][].
+This `ul` element contains [palpable content][] that is [hidden][].
 
 ```html
 <ul>
@@ -97,7 +97,7 @@ This `ul` element contains [palpable content][] `li` element, that is [hidden][]
 
 #### Failed Example 2
 
-This `ol` element does not any [descendant][] of type [palpable content][].
+This `ol` element does not have any [descendant][] of type [palpable content][].
 
 ```html
 <ol>

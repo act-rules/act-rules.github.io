@@ -30,11 +30,11 @@ Each test target has a valid value according to its [WAI-ARIA 1.1 value type][].
 
 ## Assumptions
 
-- This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some case, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
+This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some case, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
 
 ## Accessibility Support
 
-- Some user agents treat the value of `aria-*` attributes as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
+Some user agents treat the value of `aria-*` attributes as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
 
 ## Background
 

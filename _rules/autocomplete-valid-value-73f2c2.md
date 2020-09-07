@@ -110,7 +110,7 @@ This `autocomplete` [attribute value][] list includes a `section-` token, which 
 
 #### Passed Example 6
 
-This `autocomplete` [attribute value][] list includes `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
+This `autocomplete` [attribute value][] list includes `section-`  and `billing` tokens. These tokens can preface any [correct autocomplete field][]. 
 
 ```html
 <label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
@@ -121,7 +121,7 @@ This `autocomplete` [attribute value][] list includes `section-`  and `billing` 
 This `autocomplete` [attribute value][] list includes all allowed types of tokens in the correct order. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
-<label>Email<input autocomplete="section-primary shipping work email"/></label>
+<label>Email<input type="text" autocomplete="section-primary shipping work email"/></label>
 ```
 
 #### Passed Example 8

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 853,
+  "count": 854,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -19388,6 +19388,54 @@
       }
     },
     {
+      "testcaseId": "a01e2129885e0f10406e23a719301da436ba2653",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/a01e2129885e0f10406e23a719301da436ba2653.html",
+      "relativePath": "testcases/2ee8b8/a01e2129885e0f10406e23a719301da436ba2653.html",
+      "expected": "passed",
+      "ruleId": "2ee8b8",
+      "ruleName": "Visible label is part of accessible name",
+      "rulePage": "https://act-rules.github.io/rules/2ee8b8",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "65be0004543e57d44dd4a53d9f582c482503727c",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/2ee8b8/65be0004543e57d44dd4a53d9f582c482503727c.html",
+      "relativePath": "testcases/2ee8b8/65be0004543e57d44dd4a53d9f582c482503727c.html",
+      "expected": "passed",
+      "ruleId": "2ee8b8",
+      "ruleName": "Visible label is part of accessible name",
+      "rulePage": "https://act-rules.github.io/rules/2ee8b8",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.5.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G208": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "acef6cb2db9b70d2960efa94ab31692f5f772d9b",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/2ee8b8/acef6cb2db9b70d2960efa94ab31692f5f772d9b.html",
@@ -19536,30 +19584,6 @@
       "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/2ee8b8/d99c16137d8c09932a14875a1b68cd8d0313623a.html",
       "relativePath": "testcases/2ee8b8/d99c16137d8c09932a14875a1b68cd8d0313623a.html",
-      "expected": "inapplicable",
-      "ruleId": "2ee8b8",
-      "ruleName": "Visible label is part of accessible name",
-      "rulePage": "https://act-rules.github.io/rules/2ee8b8",
-      "ruleAccessibilityRequirements": {
-        "wcag21:2.5.3": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G208": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "a01e2129885e0f10406e23a719301da436ba2653",
-      "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/2ee8b8/a01e2129885e0f10406e23a719301da436ba2653.html",
-      "relativePath": "testcases/2ee8b8/a01e2129885e0f10406e23a719301da436ba2653.html",
       "expected": "inapplicable",
       "ruleId": "2ee8b8",
       "ruleName": "Visible label is part of accessible name",

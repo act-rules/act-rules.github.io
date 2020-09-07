@@ -39,11 +39,11 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ## Assumptions
 
-- This rule catches values that are undefined in [WAI-ARIA Specifications][], and where the resulting behavior in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behavior defined in [WAI-ARIA Specifications][]. When values are used that do not have a defined behavior in [WAI-ARIA Specifications][], the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
+- This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some case, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
 
 ## Accessibility Support
 
-- Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
+- Some user agents treat the value of `aria-*` attributes as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
 
 ## Background
 
@@ -218,7 +218,7 @@ This `div` element has an Element with invalid token list value.
 
 #### Failed Example 9
 
-This `div` element has an `aria-expanded` state with invalid `true/false/`undefined` value for custom element.
+This `div` element has an `aria-expanded` state with invalid `true/false/undefined` value for custom element.
 
 ```html
 <my-button role="button" aria-expanded="collapsed">My button</my-button>

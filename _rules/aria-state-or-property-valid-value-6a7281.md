@@ -22,20 +22,11 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that has any not empty (`""`) [WAI-ARIA 1.1 state or property][] specified.
+The rule applies to any [WAI-ARIA 1.1 state or property][] that is not empty (`""`), and is specified on an HTML or SVG element.
 
 ## Expectation
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type][].
-
-For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties][] at least one of the elements with the given ids exists in the same [document tree][] or [shadow tree][] as the element that specifies the target attribute.
-
-For value type `URI` the value matches the [generic URI syntax][].
-
-**Note:** Only for [WAI-ARIA required properties][] with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
-
-**Note:**
-For value type `URI`, this rule does not require that the destination URI exists.
 
 ## Assumptions
 
@@ -52,6 +43,11 @@ For value type `URI`, this rule does not require that the destination URI exists
 - [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
 - [WAI-ARIA 1.1, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
+
+**Note:** Only for [WAI-ARIA required properties][] with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
+
+**Note:**
+For value type `URI`, this rule does not require that the destination URI exists.
 
 ## Test Cases
 
@@ -86,12 +82,13 @@ This `div` element has an `aria-pressed` state with valid tristate value.
 This `div` element has an `aria-errormessage` property with valid ID reference value.
 
 ```html
+<div id="my-error">Please provide a valid username</div>
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
 ```
 
 #### Passed Example 5
 
-This `div` element has an `aria-owns` property with valid ID reference list value.
+This `div` element with the `aria-owns` property, has a valid ID reference list value.
 
 ```html
 <h1>Shopping list</h1>
@@ -140,14 +137,7 @@ The second `div` element has an `aria-controls`, which is a required property fo
 
 ```html
 <div id="content1">Lorem ipsum...</div>
-<div
-	role="scrollbar"
-	aria-controls="content1 content2"
-	aria-orientation="vertical"
-	aria-valuemax="100"
-	aria-valuemin="0"
-	aria-valuenow="25"
-></div>
+<div role="scrollbar" aria-controls="content1 content2"></div>
 ```
 
 ### Failed
@@ -229,14 +219,7 @@ This `div` element has an `aria-expanded` state with invalid `true/false/`undefi
 This `div` element has an `aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
 
 ```html
-<div
-	role="scrollbar"
-	aria-controls="content1"
-	aria-orientation="vertical"
-	aria-valuemax="100"
-	aria-valuemin="0"
-	aria-valuenow="25"
-></div>
+<div role="scrollbar" aria-controls="content1"></div>
 ```
 
 ### Inapplicable

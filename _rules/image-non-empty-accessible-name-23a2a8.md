@@ -152,7 +152,7 @@ This off screen `img` element has an [implicit role][] of `presentation` because
 
 #### Failed Example 1
 
-This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
+This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it it is missing an `alt` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" />

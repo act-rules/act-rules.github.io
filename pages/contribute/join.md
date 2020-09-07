@@ -6,7 +6,7 @@ The best way to stay informed about the activities of ACT-Rules Community is to 
 
 ## Mailing list keeps you up to date
 
-By becoming a member you will be added to the mailing list, and you will receive all the latest updates, meeting invites, etc. You will receive "final call" e-mails. These are announcements of changes that have been approved in a GitHub pull request, and will be merged if no feedback
+By becoming a member you will be added to the mailing list, and you will receive all the latest updates, meeting invites, etc. You will receive "final call" e-mails. These are announcements of changes that have been approved in a GitHub pull request, and will be merged if there is no unresolved feedback.
 
 ## Join us on Slack
 
@@ -14,7 +14,7 @@ The ACT-Rules community is active in the #act-rules channel on the W3C Community
 
 ## Participate in our calls
 
-The Community Group has conference calls twice a month. The first call is (usually) on the **second Thursday of the month** from [16:00 to 17:00 Central European Time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT-R+call&iso=20200813T16&p1=16&ah=1&am=00). The second monthly call is on every **fourth Thursday of the month** from [10:00 to 11:00 Central European Time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT-R+call&iso=20200827T10&p1=16&ah=1&am=00).
+The Community Group has conference calls twice a month. Usually, the first call is on the **second Thursday of the month** from [16:00 to 17:00 Central European Time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT-R+call&iso=20200813T16&p1=16&ah=1&am=00), and the second monthly call is on every **fourth Thursday of the month** from [10:00 to 11:00 Central European Time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=ACT-R+call&iso=20200827T10&p1=16&ah=1&am=00).
 
 Participating in our conference calls is the easiest way to become an active contributor, get to know the other members of the Community Group, and learn from the shared pool of knowledge held by the accessibility experts in the group.
 

@@ -2,7 +2,7 @@
 title: How to Contribute
 ---
 
-ACT-Rules Community is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated. We welcome contributions from everyone, and there are many ways to contribute, from GitHub issues and pull requests, to contribution to ours teleconferences.
+ACT-Rules Community is a [W3C](https://www.w3.org/) [Community Group](https://www.w3.org/community/) open to anyone interested in accessibility testing, manually or automated. We welcome contributions from everyone, and there are many ways to contribute, from GitHub issues and pull requests, to contribution to our teleconferences.
 
 You don't have to be a member of the Community Group to contribute.
 

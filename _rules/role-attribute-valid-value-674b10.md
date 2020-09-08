@@ -5,6 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
+  aria11:role_definitions:
+    title: ARIA 1.1, 5.4 Definition of Roles
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false
     failed: not satisfied

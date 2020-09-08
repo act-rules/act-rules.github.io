@@ -52,7 +52,7 @@ If the `autocomplete` field is used to describe "custom" taxonomy, rather than t
 
 The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
 
-The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). It means that this rule may fail elements which satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
+The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable) and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
 ## Accessibility Support
 

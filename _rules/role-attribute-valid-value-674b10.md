@@ -9,7 +9,19 @@ accessibility_requirements:
     title: ARIA 1.1, 5.4 Definition of Roles
     forConformance: true
     failed: not satisfied
-    passed: satisfied
+    passed: further testing needed
+    inapplicable: satisfied
+  graphics-aria:role_definitions:
+    title: ARIA Graphics module 1.0, 4.1 Definition of Roles
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: satisfied
+  dpub-aria:role_definitions:
+    title: ARIA Digital Publishing module 1.0, 4.1 Definition of Roles
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
     inapplicable: satisfied
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false

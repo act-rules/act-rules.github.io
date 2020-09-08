@@ -34,7 +34,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
-3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-*"; then
 4. A required token from the [correct autocomplete field][].
 
 ## Expectation 2
@@ -43,16 +43,16 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Assumptions
 
-The `autocomplete` attribute is not used on form fields that:
+The `autocomplete` attribute is used on form fields that:
 
-- do not correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes), and
-- do not collect information about the user.
+- correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes); and
+- collect information about the user.
 
 If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the list of `input` purposes, or the form fields do not collect information about the user, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
 
-The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). It means that this rule may fail elements which satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
+The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable) and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
 ## Accessibility Support
 

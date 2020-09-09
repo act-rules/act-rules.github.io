@@ -5,7 +5,7 @@ unambiguous: true
 objective: true
 ---
 
-A condition is meet for all _interaction states_ if it is meet when the element is in each of the following states:
+A condition is met for all _interaction states_ if it is met when the element is in each of the following states:
 
 - the element is neither [active][] nor [visited][]; and
 - the element is [active][] and not [visited][]; and

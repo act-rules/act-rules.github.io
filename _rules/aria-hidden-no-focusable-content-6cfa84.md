@@ -94,7 +94,7 @@ This `input` element cannot be focused because of the `disabled` attribute.
 
 #### Failed Example 1
 
-This `a` element positioned offscreen can still be focused through keyboard.
+This `a` element positioned off screen can still be focused through keyboard.
 
 ```html
 <div aria-hidden="true">

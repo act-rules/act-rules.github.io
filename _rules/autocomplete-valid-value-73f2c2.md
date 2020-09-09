@@ -34,7 +34,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
-3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-*"; then
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
 4. A required token from the [correct autocomplete field][].
 
 ## Expectation 2
@@ -59,11 +59,13 @@ The `aria-disabled` state is used on `input` elements which are not part of [seq
 - While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
-- Test targets can have a [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) with the `autocomplete` [attribute value][] set to `off`. In such a case, user agents may not autofill the form fields, but those elements are still programmatically identifiable.
+- In some user agents querying the value of the `autocomplete` property returns an empty string (""). It affects assistive technologies which rely on this property to personalise input fields collecting information about the user.
 
 ## Background
 
 The intent of this rule is to ensure that the `autocomplete` attribute can be used to support personalization. Many users may find it easier to fill out forms if those can be styled or laid out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
+
+The autocompleting feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting the `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the User Agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
@@ -83,7 +85,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 #### Passed Example 2
 
-This `autocomplete` [attribute value][] only has the required token, and is valid for a `select` element. Adding the `autocomplete="off"` to the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+This `autocomplete` [attribute value][] only has the required token, and is valid for a `select` element. Even though the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) has `autocomplete="off"`, thus preventing the user agent from completing it, it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
 ```html
 <form autocomplete="off">

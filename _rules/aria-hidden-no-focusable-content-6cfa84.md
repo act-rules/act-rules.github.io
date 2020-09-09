@@ -37,7 +37,8 @@ The rule applies to any element with an `aria-hidden` [attribute value][] of `tr
 
 ## Expectation
 
-None of the target elements are part of [sequential focus navigation](https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation), nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of [sequential focus navigation](https://html.spec.whatwg.org/#sequential-focus-navigation).
+None of the target elements can be [focused][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that can be [focused][].
+
 
 ## Assumptions
 
@@ -65,7 +66,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 
 #### Passed Example 1
 
-Content not [focusable][] by default.
+This `<p>` element cannot be focused by default.
 
 ```html
 <p aria-hidden="true">Some text</p>
@@ -73,7 +74,7 @@ Content not [focusable][] by default.
 
 #### Passed Example 2
 
-Content hidden through CSS.
+This `a` element cannot be focused because it is hidden through CSS.
 
 ```html
 <div aria-hidden="true">
@@ -83,49 +84,17 @@ Content hidden through CSS.
 
 #### Passed Example 3
 
-Content taken out of sequential focus order using `tabindex`.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-1">Some button</button>
-</div>
-```
-
-#### Passed Example 4
-
-Content made [unfocusable][focusable] through `disabled` attribute.
+This `input` element cannot be focused because of the `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
-```
-
-#### Passed Example 5
-
-`aria-hidden` can't be reset once set to true on an ancestor.
-
-```html
-<div aria-hidden="true">
-	<div aria-hidden="false">
-		<button tabindex="-1">Some button</button>
-	</div>
-</div>
-```
-
-#### Passed Example 6
-
-Content taken out of sequential focus order using `tabindex`.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-2">Some button</button>
-</div>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-[Focusable][] off screen link.
+This `a` element positioned offscreen can still be focused through keyboard.
 
 ```html
 <div aria-hidden="true">
@@ -135,7 +104,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 2
 
-[Focusable][] form field, incorrectly disabled.
+This `input` element can still be focused because it was incorrectly disabled.
 
 ```html
 <div aria-hidden="true">
@@ -145,7 +114,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 3
 
-`aria-hidden` can't be reset once set to true on an ancestor.
+This `button` element can be still be focused because `aria-hidden` can't be reset once set to true on an ancestor.
 
 ```html
 <div aria-hidden="true">
@@ -157,7 +126,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 4
 
-[Focusable][] content through `tabindex`.
+This `p` can be focused because of the `tabindex` attribute.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
@@ -165,7 +134,17 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Failed Example 5
 
-[Focusable][] `summary` element.
+This `p` can still be focused through pointer or touch because of the `tabindex` attribute.
+
+```html
+<div aria-hidden="true">
+	<button tabindex="-1">Some button</button>
+</div>
+```
+
+#### Failed Example 6
+
+This `summary` element can be focused.
 
 ```html
 <details aria-hidden="true">
@@ -178,7 +157,7 @@ Content taken out of sequential focus order using `tabindex`.
 
 #### Inapplicable Example 1
 
-Ignore `aria-hidden` with null value.
+This `aria-hidden` attribute is ignored with null value.
 
 ```html
 <button tabindex="-1" aria-hidden>Some button</button>
@@ -186,7 +165,7 @@ Ignore `aria-hidden` with null value.
 
 #### Inapplicable Example 2
 
-Ignore `aria-hidden` false.
+This `aria-hidden` attribute is ignored with value `false`.
 
 ```html
 <p aria-hidden="false">Some text</p>
@@ -194,7 +173,7 @@ Ignore `aria-hidden` false.
 
 #### Inapplicable Example 3
 
-Incorrect value of `aria-hidden`.
+This `aria-hidden` attribute has an incorrect value.
 
 ```html
 <div aria-hidden="yes">
@@ -204,3 +183,4 @@ Incorrect value of `aria-hidden`.
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [focusable]: #focusable 'Definition of focusable'
+[focused]: #focused 'Definition of focused'

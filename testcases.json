@@ -517,10 +517,10 @@
       }
     },
     {
-      "testcaseId": "0aa8e4b62297eac2cae21a73c9ca52ce60169ffd",
+      "testcaseId": "39c0a2b75b4795e2e3ebb46520c926c6e01c90bd",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/ff89c9/0aa8e4b62297eac2cae21a73c9ca52ce60169ffd.html",
-      "relativePath": "testcases/ff89c9/0aa8e4b62297eac2cae21a73c9ca52ce60169ffd.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/39c0a2b75b4795e2e3ebb46520c926c6e01c90bd.html",
+      "relativePath": "testcases/ff89c9/39c0a2b75b4795e2e3ebb46520c926c6e01c90bd.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -535,10 +535,10 @@
       }
     },
     {
-      "testcaseId": "08384cfb44e1ced9ef5b14bd47b9c948a2688b1c",
+      "testcaseId": "736423f6e0784237d9b94101d63d860c5d5a707e",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/ff89c9/08384cfb44e1ced9ef5b14bd47b9c948a2688b1c.html",
-      "relativePath": "testcases/ff89c9/08384cfb44e1ced9ef5b14bd47b9c948a2688b1c.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/736423f6e0784237d9b94101d63d860c5d5a707e.html",
+      "relativePath": "testcases/ff89c9/736423f6e0784237d9b94101d63d860c5d5a707e.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -553,10 +553,10 @@
       }
     },
     {
-      "testcaseId": "fa9df3eb8efa4027e7c85697fb6e02f1cfd483b6",
+      "testcaseId": "f5a5b5d56db070843fe93a8f1029ab8a3637bdee",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/ff89c9/fa9df3eb8efa4027e7c85697fb6e02f1cfd483b6.html",
-      "relativePath": "testcases/ff89c9/fa9df3eb8efa4027e7c85697fb6e02f1cfd483b6.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/f5a5b5d56db070843fe93a8f1029ab8a3637bdee.html",
+      "relativePath": "testcases/ff89c9/f5a5b5d56db070843fe93a8f1029ab8a3637bdee.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -571,10 +571,10 @@
       }
     },
     {
-      "testcaseId": "ebf6dfbebcfcd91a1ce52d5ac281fcfd83e9dc39",
+      "testcaseId": "5fd647e66f943908ce64333b49ba9309d44ec3d5",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/ff89c9/ebf6dfbebcfcd91a1ce52d5ac281fcfd83e9dc39.html",
-      "relativePath": "testcases/ff89c9/ebf6dfbebcfcd91a1ce52d5ac281fcfd83e9dc39.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/5fd647e66f943908ce64333b49ba9309d44ec3d5.html",
+      "relativePath": "testcases/ff89c9/5fd647e66f943908ce64333b49ba9309d44ec3d5.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -589,10 +589,10 @@
       }
     },
     {
-      "testcaseId": "0a2837a63aa0fc85f5434b40d1f1ddad09ce2ed9",
+      "testcaseId": "7ec9a70548f600f1f74b0fc3a6bbf89d3ab2f4f5",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/ff89c9/0a2837a63aa0fc85f5434b40d1f1ddad09ce2ed9.html",
-      "relativePath": "testcases/ff89c9/0a2837a63aa0fc85f5434b40d1f1ddad09ce2ed9.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/7ec9a70548f600f1f74b0fc3a6bbf89d3ab2f4f5.html",
+      "relativePath": "testcases/ff89c9/7ec9a70548f600f1f74b0fc3a6bbf89d3ab2f4f5.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -607,10 +607,10 @@
       }
     },
     {
-      "testcaseId": "782e8b881c5e19cc50eb03527f0e7b95d898b84e",
+      "testcaseId": "b86943f7a563dbd10ea493ce437ae7ea9a572119",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/ff89c9/782e8b881c5e19cc50eb03527f0e7b95d898b84e.html",
-      "relativePath": "testcases/ff89c9/782e8b881c5e19cc50eb03527f0e7b95d898b84e.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/b86943f7a563dbd10ea493ce437ae7ea9a572119.html",
+      "relativePath": "testcases/ff89c9/b86943f7a563dbd10ea493ce437ae7ea9a572119.html",
       "expected": "passed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -643,10 +643,10 @@
       }
     },
     {
-      "testcaseId": "6732a36759ba9852ba384d7bd7816d66f7ced63d",
+      "testcaseId": "ff17242184b34c5dfef7d5fd0d1a9279f0ba23ea",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/ff89c9/6732a36759ba9852ba384d7bd7816d66f7ced63d.html",
-      "relativePath": "testcases/ff89c9/6732a36759ba9852ba384d7bd7816d66f7ced63d.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/ff17242184b34c5dfef7d5fd0d1a9279f0ba23ea.html",
+      "relativePath": "testcases/ff89c9/ff17242184b34c5dfef7d5fd0d1a9279f0ba23ea.html",
       "expected": "failed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -661,10 +661,10 @@
       }
     },
     {
-      "testcaseId": "66fec780969037c7abadb167f9da936a669f052f",
+      "testcaseId": "dbdabc97037d644bbf483da28e874c47bc696196",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/ff89c9/66fec780969037c7abadb167f9da936a669f052f.html",
-      "relativePath": "testcases/ff89c9/66fec780969037c7abadb167f9da936a669f052f.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/dbdabc97037d644bbf483da28e874c47bc696196.html",
+      "relativePath": "testcases/ff89c9/dbdabc97037d644bbf483da28e874c47bc696196.html",
       "expected": "failed",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
@@ -679,29 +679,11 @@
       }
     },
     {
-      "testcaseId": "f4035ae5c598ec28d2321348b31e7e363c96c668",
+      "testcaseId": "289c7bc0b1fb7ac0bfe22337f428db57d50bc599",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/ff89c9/f4035ae5c598ec28d2321348b31e7e363c96c668.html",
-      "relativePath": "testcases/ff89c9/f4035ae5c598ec28d2321348b31e7e363c96c668.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/289c7bc0b1fb7ac0bfe22337f428db57d50bc599.html",
+      "relativePath": "testcases/ff89c9/289c7bc0b1fb7ac0bfe22337f428db57d50bc599.html",
       "expected": "failed",
-      "ruleId": "ff89c9",
-      "ruleName": "ARIA required context role",
-      "rulePage": "https://act-rules.github.io/rules/ff89c9",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "f8285d3b759c9dd04f2615b01cf0139fd6cd2f28",
-      "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/ff89c9/f8285d3b759c9dd04f2615b01cf0139fd6cd2f28.html",
-      "relativePath": "testcases/ff89c9/f8285d3b759c9dd04f2615b01cf0139fd6cd2f28.html",
-      "expected": "inapplicable",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",
       "rulePage": "https://act-rules.github.io/rules/ff89c9",
@@ -716,7 +698,7 @@
     },
     {
       "testcaseId": "918f49afca4d9b0f1e4faad2d844c70f60db815a",
-      "testcaseTitle": "Inapplicable Example 2",
+      "testcaseTitle": "Inapplicable Example 1",
       "url": "https://act-rules.github.io/testcases/ff89c9/918f49afca4d9b0f1e4faad2d844c70f60db815a.html",
       "relativePath": "testcases/ff89c9/918f49afca4d9b0f1e4faad2d844c70f60db815a.html",
       "expected": "inapplicable",
@@ -733,8 +715,44 @@
       }
     },
     {
-      "testcaseId": "02a985578845e27c987f8d5663e93cd438230b82",
+      "testcaseId": "f8285d3b759c9dd04f2615b01cf0139fd6cd2f28",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/ff89c9/f8285d3b759c9dd04f2615b01cf0139fd6cd2f28.html",
+      "relativePath": "testcases/ff89c9/f8285d3b759c9dd04f2615b01cf0139fd6cd2f28.html",
+      "expected": "inapplicable",
+      "ruleId": "ff89c9",
+      "ruleName": "ARIA required context role",
+      "rulePage": "https://act-rules.github.io/rules/ff89c9",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd29cef3dee3387ba01839d53801d84b3fdca542",
       "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
+      "relativePath": "testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
+      "expected": "inapplicable",
+      "ruleId": "ff89c9",
+      "ruleName": "ARIA required context role",
+      "rulePage": "https://act-rules.github.io/rules/ff89c9",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "02a985578845e27c987f8d5663e93cd438230b82",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/ff89c9/02a985578845e27c987f8d5663e93cd438230b82.html",
       "relativePath": "testcases/ff89c9/02a985578845e27c987f8d5663e93cd438230b82.html",
       "expected": "inapplicable",
@@ -752,27 +770,9 @@
     },
     {
       "testcaseId": "f500e970e8432c0ac28fa7c4480b43a5b87eac67",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/ff89c9/f500e970e8432c0ac28fa7c4480b43a5b87eac67.html",
       "relativePath": "testcases/ff89c9/f500e970e8432c0ac28fa7c4480b43a5b87eac67.html",
-      "expected": "inapplicable",
-      "ruleId": "ff89c9",
-      "ruleName": "ARIA required context role",
-      "rulePage": "https://act-rules.github.io/rules/ff89c9",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "cd29cef3dee3387ba01839d53801d84b3fdca542",
-      "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
-      "relativePath": "testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
       "expected": "inapplicable",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",

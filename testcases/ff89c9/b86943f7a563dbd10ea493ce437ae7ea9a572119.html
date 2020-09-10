@@ -1,0 +1,7 @@
+<!DOCTYPE html> <div id="host" role="list"></div>
+
+<script>
+	const host = document.querySelector('#host')
+	const root = host.attachShadow({ mode: 'open' })
+	root.innerHTML = '<div role="listitem">List item 1</div> <div role="listitem">List item 2</div>'
+</script>

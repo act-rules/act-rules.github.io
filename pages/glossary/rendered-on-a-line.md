@@ -7,7 +7,7 @@ objective: true
 
 All nodes that generate an [inline box][] that are part of a [line box][] are considered _rendered on a line_. These are _line rendering nodes_.
 
-Any [flat tree][] [descendants][] of _line rendering nodes_ are also considered part of a line if one of its [clientRects][] overlaps with the position of the [line box][], and if all the following is true for each [ancestor][] in the [flat tree][] up to the _line rendering node_:
+Any [flat tree][] [descendants][] of line rendering nodes are also considered part of a line if one of its [clientRects][] overlaps with the position of the [line box][], and if all the following is true for each [ancestor][] in the [flat tree][] up to the line rendering node:
 
 - the ancestor is an [inline box][]; and
 - the ancestor is not [floating][]; and

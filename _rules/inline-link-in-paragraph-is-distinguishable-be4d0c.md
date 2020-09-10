@@ -38,10 +38,11 @@ For all [link history states][] there exists at least one [visible][] [inclusive
 ## Assumptions
 
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- The same foreground color and the same background color is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise color can not be a distinguishing factor.
-- The same `box-shadow` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
-- The same `border` is used by all the visible text nodes of the _ancestor_ element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
-- The perceived visual styling of elements is the result of CSS styling applied to those elements and inherited from their _ancestor_ elements. Through manipulation of the positioning and styles of other elements, including non inherited styles of _ancestor_ elements, an element may end up with a perceived distinguishable style not resulting from its own and inherited styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
+- The same foreground color and the same background color is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise color can not be a distinguishing factor.
+- The same `border` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
+- The same `box-shadow` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
+- The same text style is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise the [text style properties][] can not be a distinguishing factor.
+- The perceived visual styling of elements is the result of CSS styling applied to those elements and inherited from their [ancestor][] elements. Through manipulation of the positioning and styles of other elements, including non inherited styles of [ancestor][] elements, an element may end up with a perceived distinguishable style not resulting from its own and inherited styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
 
 ## Accessibility Support
 
@@ -525,6 +526,7 @@ This link is not distinguishable by color from the other text rendered in its li
 ```
 
 [adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [different hue]: #different-hue 'Definition of different hue'
@@ -537,4 +539,5 @@ This link is not distinguishable by color from the other text rendered in its li
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text node]: https://dom.spec.whatwg.org/#text
+[text style properties]: #text-style-properties 'Definition of text style properties'
 [visible]: #visible 'Definition of visible'

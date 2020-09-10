@@ -148,6 +148,28 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 5
 
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable color because the color contrast is 4.98.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: crimson;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
+</p>
+```
+
+#### Passed Example 6
+
 This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
 ```html
@@ -172,7 +194,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
 
@@ -192,7 +214,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is focused.
 
@@ -214,7 +236,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
 
@@ -236,7 +258,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 </p>
 ```
 
-#### Passed Example 9
+#### Passed Example 10
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
 
@@ -255,7 +277,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is hovered. This icon indicates the element is a link.
 
@@ -283,7 +305,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 </p>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
@@ -305,7 +327,7 @@ This link had a descendant element that is distinguishable by color (hue) from t
 </p>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 This link is distinguishable by color (hue) from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
 
@@ -419,16 +441,16 @@ There is no text belonging to non [semantic links][semantic link] in this line.
 
 #### Inapplicable Example 6
 
-This link is not distinguishable by color from the other text rendered in its line.
+This link is not distinguishable by color (hue) from the other text rendered in its line.
 
 ```html
 <style>
 	p {
-		color: #0a415c;
+		color: #0a415c; /* hsl(200,80,20) */
 		background-color: white;
 	}
 	a {
-		color: #19a1e6;
+		color: #19a1e6; /* hsl(200,80,50); */
 		background-color: white;
 	}
 </style>

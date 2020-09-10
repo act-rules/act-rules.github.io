@@ -5,6 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or have content that indicates they are links.
 accessibility_requirements:
+  wcag20:1.4.1: # Use of Color (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling

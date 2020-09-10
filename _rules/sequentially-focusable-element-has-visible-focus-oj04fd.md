@@ -55,7 +55,7 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -63,7 +63,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. Ther
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (due to default User Agent's styling).
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling).
 
 ```html
 <span tabindex="0">Act rules</span> <button tabindex="-1">Dummy button</button>
@@ -71,7 +71,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. Ther
 
 #### Passed Example 3
 
-The first [focusable][] element, is part of [sequential focus navigation][]. There is at least one pixel that changes color when it is [focused][] (the border of the `span` element).
+The first [focusable][] element, is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
@@ -92,7 +92,7 @@ The first [focusable][] element, is part of [sequential focus navigation][]. The
 
 #### Passed Example 4
 
-Each of these three [focusable][] elements has at least one pixel which changes color when it is [focused][].
+Each of these three [focusable][] elements has a blue square in front of it when it is [focused][].
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />

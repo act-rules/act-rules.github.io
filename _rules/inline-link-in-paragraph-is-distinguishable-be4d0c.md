@@ -25,7 +25,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 ## Expectation
 
-For all [interaction states][] there exists at least one [visible][] [inclusive descendant][] and one [adequate inspection state][] of the test target such that at least one of the following is true:
+For all [link history states][] there exists at least one [visible][] [inclusive descendant][] and one [adequate inspection state][] of the test target such that at least one of the following is true:
 
 - **distinguishing style**: the [visible][] [inclusive descendant][] has a [distinguishable style][] from the **non-link line text** elements; or
 - **distinguishing content**: the [visible][] [inclusive descendant][] has adjacent content (such as an image or text) that indicates the test target is a link.
@@ -527,7 +527,7 @@ This link is not distinguishable by color from the other text rendered in its li
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
-[interaction states]: #interaction-states 'Definition of interaction states'
+[link history states]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

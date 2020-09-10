@@ -80,6 +80,29 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 2
 
+This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a {
+		text-decoration: none;
+		color: blue;
+		background-color: white;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+```
+
+#### Passed Example 3
+
 This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
@@ -90,14 +113,14 @@ This link, that is distinguishable by the background color (hue) from the other 
 	}
 	a {
 		color: black;
-		background-color: #c84d32;
+		background-color: #indianred;
 		text-decoration: underline;
 	}
 </style>
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
@@ -121,181 +144,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 </p>
 ```
 
-#### Passed Example 4
-
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a.test {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-		border-style: solid;
-		border-color: red;
-		border-width: 0px;
-		border-bottom-width: 1px;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
 #### Passed Example 5
-
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a.test {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-		box-shadow: 4px 4px;
-	}
-</style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 6
-
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-		font-style: italic;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 7
-
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a.test {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>
-	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
-</p>
-```
-
-#### Passed Example 8
-
-This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a.test {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
-```
-
-#### Passed Example 9
-
-This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a {
-		text-decoration: none;
-		color: blue;
-		background-color: white;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 10
-
-This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a {
-		color: black;
-		background-color: #c84d32;
-		text-decoration: underline;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
-```
-
-#### Passed Example 11
-
-This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
-
-```html
-<style>
-	p {
-		color: black;
-		background-color: white;
-	}
-	a {
-		color: blue;
-		background-color: white;
-		text-decoration: none;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-</style>
-<p>This is indicated in the cost of a <a href="#bcc0f155" role="doc-glossref">credit default swap</a>.</p>
-<h1>Glossary</h1>
-<p id="bcc0f155">
-	A credit default swap (CDS) is a financial derivative or contract that allows an investor to "swap" or offset his or
-	her credit risk with that of another investor.
-</p>
-```
-
-#### Passed Example 12
 
 This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
@@ -321,9 +170,9 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 13
+#### Passed Example 6
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow when it is hovered or focused.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
 
 ```html
 <style>
@@ -331,22 +180,19 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 		color: black;
 		background-color: white;
 	}
-	a {
+	a.test {
 		color: blue;
 		background-color: white;
 		text-decoration: none;
-	}
-	a:hover,
-	a:focus {
 		box-shadow: 4px 4px;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 14
+#### Passed Example 7
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is hovered or focused.
+This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is focused.
 
 ```html
 <style>
@@ -359,7 +205,6 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 		background-color: white;
 		text-decoration: none;
 	}
-	a:hover,
 	a:focus {
 		font-style: italic;
 	}
@@ -367,9 +212,50 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
-#### Passed Example 15
+#### Passed Example 8
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is focused or hovered. This icon indicates the element is a link.
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>
+	Read about WAI on the
+	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+</p>
+```
+
+#### Passed Example 9
+
+This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a.test {
+		color: blue;
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
+```
+
+#### Passed Example 10
+
+This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is hovered. This icon indicates the element is a link.
 
 ```html
 <style>
@@ -385,8 +271,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 	.hide {
 		display: none;
 	}
-	a:hover img.hide,
-	a:focus img.hide {
+	a:hover img.hide {
 		display: inline;
 	}
 </style>
@@ -396,7 +281,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 </p>
 ```
 
-#### Passed Example 16
+#### Passed Example 11
 
 This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
@@ -416,6 +301,29 @@ This link had a descendant element that is distinguishable by color (hue) from t
 	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI webpage</span></a
 	>.
 </p>
+```
+
+#### Passed Example 12
+
+This link is distinguishable by color (hue) from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
+
+```html
+<style>
+	p {
+		color: black;
+		background-color: white;
+	}
+	a:link {
+		color: white;
+		background-color: blue;
+		text-decoration: none;
+	}
+	a:visited {
+		color: blue;
+		background-color: lightgray;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
 ```
 
 ### Failed

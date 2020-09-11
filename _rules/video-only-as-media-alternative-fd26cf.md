@@ -52,7 +52,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such.
+This `video` element, which has no audio, is a media alternative for the text in the page and it is labeled as such.
 
 ```html
 <html lang="en">

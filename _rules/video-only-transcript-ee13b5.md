@@ -71,7 +71,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Passed Example 2
 
-This `video` element, which has no audio, has a text transcript available through a link on the same page.
+This `video` element, which has no audio, has a transcript which does not convey information included in the video-only content. The transcript is available through a link on the same page.
 
 ```html
 <html lang="en">
@@ -133,7 +133,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Failed Example 4
 
-This `video` element, which has no audio, has a text transcript available on the same page, but the transcript it not [included in the accessibility tree][].
+This `video` element, which has no audio, has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">

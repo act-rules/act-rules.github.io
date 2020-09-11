@@ -155,7 +155,7 @@ This `video` element, which has no audio, has a `track` element with incorrect d
 
 #### Failed Example 2
 
-This `video` element, which has no audio, has a incorrect text transcript available through a link on the same page.
+This `video` element, which has no audio, has a transcript which does not convey the information included in the video-only content. The transcript is available through a link on the same page.
 
 ```html
 <html lang="en">
@@ -186,7 +186,7 @@ This `video` element, which has no audio, has a separate audio track that incorr
 
 #### Failed Example 4
 
-This `video` element, which has no audio, is a media alternative for the text in the page but not labeled as such.
+This `video` element, which has no audio, is a media alternative for the text in the page but it is not labeled as such.
 
 ```html
 <html lang="en">

@@ -43,9 +43,9 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element that has:
 
-- an `autoplay` [attribute value][] of `true`, and
-- a `muted` [attribute value][] of `false`, and
-- a `paused` [attribute value][] of `false`, and
+- an `autoplay` [attribute value][] of `true`; and
+- a `muted` [attribute value][] of `false`; and
+- a `paused` [attribute value][] of `false`; and
 - either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
 
 ## Expectation

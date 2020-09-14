@@ -74,7 +74,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 #### Passed Example 1
 
-This `audio` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element has a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -93,7 +93,7 @@ This `video` element does not play for longer than 3 seconds.
 
 #### Passed Example 3
 
-This `video` element autoplays and has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element autoplays and has a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <head>
@@ -130,7 +130,7 @@ This `video` element autoplays and has a [mechanism](https://www.w3.org/TR/WCAG2
 
 #### Failed Example 1
 
-This `audio` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element autoplays, lasts for more than 3 seconds, and does not have a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -138,7 +138,7 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element audio autoplays for longer than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element audio autoplays for longer than 3 seconds, and does not have a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>
@@ -180,4 +180,5 @@ This `audio` element does not play automatically.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[instrument]: #instrument.md 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'

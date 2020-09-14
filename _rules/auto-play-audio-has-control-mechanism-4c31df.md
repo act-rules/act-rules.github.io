@@ -36,11 +36,11 @@ This rule applies to any `audio` or `video` element that has:
 
 ## Expectation 1
 
-For each test target a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) is provided to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
+For each test target, there is at least one [instrument][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
 
 ## Expectation 2
 
-The [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace) , and is [included in the accessibility tree](#included-in-the-accessibility-tree).
+The [instrument][] to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Assumptions
 
@@ -62,7 +62,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 #### Passed Example 1
 
-This `audio` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element has a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -70,7 +70,7 @@ This `audio` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Passed Example 2
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element has a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay controls>
@@ -81,7 +81,7 @@ This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Passed Example 3
 
-This `video` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause or stop or turn the audio volume off.
+This `video` element has a custom [instrument][] to pause or stop or turn the audio volume off.
 
 ```html
 <head>
@@ -118,7 +118,7 @@ This `video` element has a custom [mechanism](https://www.w3.org/TR/WCAG21/#dfn-
 
 #### Failed Example 1
 
-This `audio` element does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element does not have a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -126,7 +126,7 @@ This `audio` element does not have a [mechanism](https://www.w3.org/TR/WCAG21/#d
 
 #### Failed Example 2
 
-This `video` element autoplays and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element autoplays and does not have a [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>
@@ -137,7 +137,7 @@ This `video` element autoplays and does not have a [mechanism](https://www.w3.or
 
 #### Failed Example 3
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but the mechanism is not visible.
+This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not visible.
 
 ```html
 <head>
@@ -173,7 +173,7 @@ This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Failed Example 4
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
+This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
 
 ```html
 <head>
@@ -208,7 +208,7 @@ This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 #### Failed Example 5
 
-This `video` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
+This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
 
 ```html
 <head>
@@ -274,4 +274,5 @@ This `audio` element does not autoplay.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[instrument]: #instrument.md 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'

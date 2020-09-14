@@ -57,7 +57,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-_There are currently no assumptions_
+- This rule assumes that it is not possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142] if the total length of the audio is more than 3 seconds, even if there are pauses in the sound and no more than 3 seconds in a row with actual sound.
 
 ## Accessibility Support
 
@@ -182,3 +182,4 @@ This `audio` element does not play automatically.
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [instrument]: #instrument.md 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'
+[sc142]: https://www.w3.org/TR/WCAG21/#audio-control 'Success Criterion 1.4.2 Audio Control'

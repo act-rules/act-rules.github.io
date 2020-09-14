@@ -36,7 +36,7 @@ This rule applies to any `audio` or `video` element that has:
 
 ## Expectation 1
 
-For each test target, there is at least one [instrument][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
+For each test target, there is at least one [instrument][] in the same [web page][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
 
 ## Expectation 2
 
@@ -276,3 +276,4 @@ This `audio` element does not autoplay.
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [instrument]: #instrument.md 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'
+[web page]: #web-page-html 'Definition of HTML web page'

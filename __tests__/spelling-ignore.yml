@@ -46,6 +46,8 @@
 - DNS
 - BCP
 - bcp
+- IDL
+- idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -64,6 +66,7 @@
 - wai-aria-specifications
 - autoplay
 - autoplays
+- autoplaying
 - columnheader
 - rowheader
 - colspan

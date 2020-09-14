@@ -187,7 +187,7 @@ This `audio` element does not play automatically.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
-[instrument]: #instrument.md 'Definition of Instrument to Achieve an Objective'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'
 [sc142]: https://www.w3.org/TR/WCAG21/#audio-control 'Success Criterion 1.4.2 Audio Control'
 [web page]: #web-page-html 'Definition of HTML web page'

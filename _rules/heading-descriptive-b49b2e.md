@@ -212,7 +212,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 5
 
-This heading does not describe the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
+This heading does not describe the first [palpable content][] after it- the first `p` element. The next [palpable content][], the second `p` element, is not considered by this rule.
 
 ```html
 <html lang="en">

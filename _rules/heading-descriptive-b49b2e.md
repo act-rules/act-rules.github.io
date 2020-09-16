@@ -152,7 +152,7 @@ Heading marked up with `h1` element that describes the topic or purpose of the f
 
 #### Passed Example 8
 
-This heading describes the first [palpable content][] after it. The next one (the second `p` element) is not considered by this rule.
+This heading describes the first [palpable content][] after it- the first `p` element. The next [palpable content][], the second `p` element, is not considered by this rule.
 
 ```html
 <html lang="en">

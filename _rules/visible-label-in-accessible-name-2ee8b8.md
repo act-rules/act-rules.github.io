@@ -70,7 +70,7 @@ This link has [visible][] text that, ignoring trailing whitespace, matches the [
 This link has [visible][] text that, ignoring case, matches the [accessible name][].
 
 ```html
-<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
+<a href="https://act-rules.github.io/" aria-label="act rules">ACT rules</a>
 ```
 
 #### Passed Example 3

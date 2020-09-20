@@ -31,11 +31,11 @@ For the test target, one of the following is true:
 
 ## Assumptions
 
-There is no mechanism available on the page to adjust [line height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override [line height][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override [line-height][] through [author origin][], this rule should not be used.
 
 ## Background
 

@@ -35,7 +35,7 @@ There is no mechanism available on the page to adjust letter spacing. If there i
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override [letter spacing][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies can not create styles with a high enough [priority][] to override a `style` attribute with the [important flag][]. If accessibility support does not include assistive technologies that override [letter-spacing][] through [author origin][], this rule should not be used.
 
 ## Background
 

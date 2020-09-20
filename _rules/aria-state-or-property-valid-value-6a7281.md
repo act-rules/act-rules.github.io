@@ -44,10 +44,9 @@ Some user agents treat the value of `aria-*` attributes as case-sensitive (even 
 - [WAI-ARIA 1.1, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
-**Note:** Only for [WAI-ARIA required properties][] with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement.
+Depending on the role of an elements, certain WAI-ARIA properties are or not required. This rule considers that when such a property has a value type of `ID reference` or `ID reference list`, then an element with one of the given ids must exist. On another hand, if a property that is not required refers to an incorrect id, it is less clear that this will cause an accessibility issue (the property is not required on the first place, so the element can live without it, and maybe later interaction with the page will create the correct id and this is the intended behaviour). Therefore, the rule has no extra requirement for properties with type `ID reference` or `ID reference list` that are not required.
 
-**Note:**
-For value type `URI`, this rule does not require that the destination URI exists.
+For value type `URI`, this rule does not require that the destination URI exists. Testing that the link is not dead is out of scope for the rule and therefore ignored.
 
 ## Test Cases
 

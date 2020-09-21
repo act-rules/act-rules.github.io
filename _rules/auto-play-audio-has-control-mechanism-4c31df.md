@@ -126,7 +126,7 @@ This `audio` element does not have an [instrument][] to pause, stop, or turn the
 
 #### Failed Example 2
 
-This `video` element autoplays and does not have a [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element autoplays and does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>

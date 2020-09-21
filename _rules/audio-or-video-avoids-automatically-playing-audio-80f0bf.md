@@ -81,7 +81,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 #### Passed Example 1
 
-This `audio` element has a [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -100,7 +100,7 @@ This `video` element does not play for longer than 3 seconds.
 
 #### Passed Example 3
 
-This `video` element autoplays and has a [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element autoplays and has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <head>
@@ -137,7 +137,7 @@ This `video` element autoplays and has a [instrument][] to pause, stop, or turn 
 
 #### Failed Example 1
 
-This `audio` element autoplays, lasts for more than 3 seconds, and does not have a [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element autoplays, lasts for more than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -145,7 +145,7 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element audio autoplays for longer than 3 seconds, and does not have a [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>

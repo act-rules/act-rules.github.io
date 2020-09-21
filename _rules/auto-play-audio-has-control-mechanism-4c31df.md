@@ -62,7 +62,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 #### Passed Example 1
 
-This `audio` element has a [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -70,7 +70,7 @@ This `audio` element has a [instrument][] to pause, stop, or turn the audio volu
 
 #### Passed Example 2
 
-This `video` element has a [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay controls>
@@ -118,7 +118,7 @@ This `video` element has a custom [instrument][] to pause or stop or turn the au
 
 #### Failed Example 1
 
-This `audio` element does not have a [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -137,7 +137,7 @@ This `video` element autoplays and does not have a [instrument][] to pause, stop
 
 #### Failed Example 3
 
-This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not visible.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not visible.
 
 ```html
 <head>
@@ -173,7 +173,7 @@ This `video` element has a [instrument][] to pause, stop, or turn the audio volu
 
 #### Failed Example 4
 
-This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
 
 ```html
 <head>
@@ -208,7 +208,7 @@ This `video` element has a [instrument][] to pause, stop, or turn the audio volu
 
 #### Failed Example 5
 
-This `video` element has a [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
 
 ```html
 <head>

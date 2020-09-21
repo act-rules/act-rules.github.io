@@ -44,7 +44,7 @@ Some user agents treat the value of `aria-*` attributes as case-sensitive (even 
 - [WAI-ARIA 1.1, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
-Depending on the role of an elements, certain WAI-ARIA properties are or not required. This rule considers that when such a property has a value type of `ID reference` or `ID reference list`, then an element with one of the given ids must exist. On another hand, if a property that is not required refers to an incorrect id, it is less clear that this will cause an accessibility issue (the property is not required on the first place, so the element can live without it, and maybe later interaction with the page will create the correct id and this is the intended behaviour). Therefore, the rule has no extra requirement for properties with type `ID reference` or `ID reference list` that are not required.
+Depending on the role of an elements, certain WAI-ARIA properties are or not required. This rule considers that when such a property has a value type of `ID reference` or `ID reference list`, then an element with one of the given ids must exist. On another hand, if a property that is not required refers to an incorrect id, it is less clear that this will cause an accessibility issue (the property is not required on the first place, so the element can live without it, and maybe later interaction with the page will create the correct id and this is the intended behavior). Therefore, the rule has no extra requirement for properties with type `ID reference` or `ID reference list` that are not required.
 
 For value type `URI`, this rule does not require that the destination URI exists. Testing that the link is not dead is out of scope for the rule and therefore ignored.
 
@@ -259,8 +259,3 @@ This `div` element has an `aria-hidden` state on an element that is not an HTML 
 [wai-aria specifications]: #wai-aria-specifications 'List of WAI-ARIA Specifications'
 [wai-aria 1.1 state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def
 [wai-aria 1.1 value type]: https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value
-[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
-[document tree]: https://dom.spec.whatwg.org/#document-trees
-[shadow tree]: https://dom.spec.whatwg.org/#shadow-trees
-[generic uri syntax]: https://www.ietf.org/rfc/rfc3986.txt
-[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState

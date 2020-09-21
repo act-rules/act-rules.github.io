@@ -78,15 +78,6 @@ This `div` element has an `aria-pressed` state with valid tristate value.
 
 #### Passed Example 4
 
-This `div` element has an `aria-errormessage` property with valid ID reference value.
-
-```html
-<div id="my-error">Please provide a valid username</div>
-<div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
-```
-
-#### Passed Example 5
-
 This `div` element with the `aria-owns` property, has a valid ID reference list value.
 
 ```html
@@ -96,7 +87,7 @@ This `div` element with the `aria-owns` property, has a valid ID reference list 
 <div id="item2">Bananas</div>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 This `div` element has an `aria-rowindex` property with valid integer value.
 
@@ -104,7 +95,7 @@ This `div` element has an `aria-rowindex` property with valid integer value.
 <div role="gridcell" aria-rowindex="2">Fred</div>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This `div` element has an `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values.
 
@@ -112,7 +103,7 @@ This `div` element has an `aria-valuemin`, `aria-valuemax` and `aria-valuenow` p
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 This `div` element has an `aria-placeholder` property with valid string value.
 
@@ -122,7 +113,7 @@ This `div` element has an `aria-placeholder` property with valid string value.
 </div>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 This `div` element has an `aria-dropeffect` property with valid token list value.
 
@@ -130,13 +121,21 @@ This `div` element has an `aria-dropeffect` property with valid token list value
 <div role="dialog" aria-dropeffect="copy move"></div>
 ```
 
-#### Passed Example 10
+#### Passed Example 9
 
 The second `div` element has an `aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
 
 ```html
 <div id="content1">Lorem ipsum...</div>
 <div role="scrollbar" aria-controls="content1 content2"></div>
+```
+
+#### Passed Example 10
+
+This `div` element has an `aria-errormessage`, which is not a required property & therefore it is not essential that the element referred by the `ID reference` exists, although this element may be added programmatically when an error is detected.
+
+```html
+<div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
 ```
 
 ### Failed

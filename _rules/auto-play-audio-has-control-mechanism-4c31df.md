@@ -27,12 +27,12 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any `audio` or `video` element that has:
+This rule applies to any `audio` or `video` element for which all the following are true:
 
-- an `autoplay` [attribute value][] of `true`; and
-- a `muted` [attribute value][] of `false`; and
-- a `paused` [attribute value][] of `false`; and
-- a [media resource][] lasting more than 3 seconds and that contains audio.
+- (**autoplay**) the element has an `autoplay` [attribute value][] of `true`; and
+- (**not muted**) the element has a `muted` [attribute value][] of `false`; and
+- (**not paused**) the element has a `paused` [attribute value][] of `false`; and
+- (**duration**) the element has a [media resource][] lasting more than 3 seconds and that contains audio.
 
 ## Expectation 1
 

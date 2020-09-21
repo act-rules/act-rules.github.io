@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 854,
+  "count": 864,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -14519,6 +14519,186 @@
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2fc4ee678df845a5b2cb17335cab6dfdc8759d15",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/ffbc54/2fc4ee678df845a5b2cb17335cab6dfdc8759d15.html",
+      "relativePath": "testcases/ffbc54/2fc4ee678df845a5b2cb17335cab6dfdc8759d15.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9fd92326f599531b696f10d716f53fbf322a4f23",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/ffbc54/9fd92326f599531b696f10d716f53fbf322a4f23.html",
+      "relativePath": "testcases/ffbc54/9fd92326f599531b696f10d716f53fbf322a4f23.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "722c5f14d12d9d7bdce3dd7c33c95769891f8f7a",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/ffbc54/722c5f14d12d9d7bdce3dd7c33c95769891f8f7a.html",
+      "relativePath": "testcases/ffbc54/722c5f14d12d9d7bdce3dd7c33c95769891f8f7a.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e4ad01e00aaa40f5023f2c11fe5d4ea39fdca080",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/ffbc54/e4ad01e00aaa40f5023f2c11fe5d4ea39fdca080.html",
+      "relativePath": "testcases/ffbc54/e4ad01e00aaa40f5023f2c11fe5d4ea39fdca080.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "53eabe10d76a801f86a387f642ca92ca7009eaea",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/ffbc54/53eabe10d76a801f86a387f642ca92ca7009eaea.html",
+      "relativePath": "testcases/ffbc54/53eabe10d76a801f86a387f642ca92ca7009eaea.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a83c74791c65a847eb713fc5c9b892250fc3ebb0",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/ffbc54/a83c74791c65a847eb713fc5c9b892250fc3ebb0.html",
+      "relativePath": "testcases/ffbc54/a83c74791c65a847eb713fc5c9b892250fc3ebb0.html",
+      "expected": "passed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "84ce30d62ee6244f29a39f8f1e96ebd267c7989c",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/ffbc54/84ce30d62ee6244f29a39f8f1e96ebd267c7989c.html",
+      "relativePath": "testcases/ffbc54/84ce30d62ee6244f29a39f8f1e96ebd267c7989c.html",
+      "expected": "failed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2fbd04b8f57bd9ef107bc166a24078e38e0eca30",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/ffbc54/2fbd04b8f57bd9ef107bc166a24078e38e0eca30.html",
+      "relativePath": "testcases/ffbc54/2fbd04b8f57bd9ef107bc166a24078e38e0eca30.html",
+      "expected": "failed",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f317bd334986230260e3804a4dd30449cce52b45",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/ffbc54/f317bd334986230260e3804a4dd30449cce52b45.html",
+      "relativePath": "testcases/ffbc54/f317bd334986230260e3804a4dd30449cce52b45.html",
+      "expected": "inapplicable",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "251cc525520437e8102fc9fc96694f1927b8b3dd",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/ffbc54/251cc525520437e8102fc9fc96694f1927b8b3dd.html",
+      "relativePath": "testcases/ffbc54/251cc525520437e8102fc9fc96694f1927b8b3dd.html",
+      "expected": "inapplicable",
+      "ruleId": "ffbc54",
+      "ruleName": "No keyboard shortcut uses only printable characters",
+      "rulePage": "https://act-rules.github.io/rules/ffbc54",
+      "ruleAccessibilityRequirements": {
+        "wcag21:2.1.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
           "inapplicable": "further testing needed"
         }
       }

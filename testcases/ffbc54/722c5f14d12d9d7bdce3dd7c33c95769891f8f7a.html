@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 3</title>
+		<script src="/test-assets/ffbc54/shortcut.js"></script>
+	</head>
+	<body
+		onload="registerShortcut({id: 'firstShortcut', shortcutKey: '+'}); registerShortcut({id: 'secondShortcut', shortcutKey: 'a'}); activateShortcuts();"
+	>
+		<label for="target">Add to list (press "+" or "a" to add):</label>
+		<input type="text" id="target" />
+		<div>
+			<div>Remap shortcut</div>
+			<div>
+				<label>
+					<input id="remap1" type="checkbox" onclick="toggleModifier('firstShortcut', this.checked)" />
+					Use "ctrl" key together with the "+" key
+				</label>
+				<label>
+					<input id="remap2" type="checkbox" onclick="toggleModifier('secondShortcut', this.checked)" />
+					Use "ctrl" key together with the "a" key
+				</label>
+			</div>
+		</div>
+		<br />
+		<div>
+			To do list
+		</div>
+		<ul id="list"></ul>
+	</body>
+</html>

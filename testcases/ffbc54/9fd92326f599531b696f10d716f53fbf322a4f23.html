@@ -1,0 +1,19 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 2</title>
+		<script src="/test-assets/ffbc54/shortcut.js"></script>
+	</head>
+	<body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
+		<label for="target">Add to list (press "+" to add):</label>
+		<input type="text" id="target" />
+		<label>
+			<input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked />
+			Toggle single character keyboard shortcut
+		</label>
+		<br />
+		<div>
+			To do list
+		</div>
+		<ul id="list"></ul>
+	</body>
+</html>

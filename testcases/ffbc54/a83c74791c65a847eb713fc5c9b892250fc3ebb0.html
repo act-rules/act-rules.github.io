@@ -1,0 +1,32 @@
+<!DOCTYPE html> <html>
+	<head>
+		<title>Passed Example 6</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/ffbc54/styles.css" />
+		<script src="/test-assets/ffbc54/shortcut.js"></script>
+	</head>
+	<body onload="registerShortcut({id: 'singleShortcut', shortcutKey: '+'}); activateShortcuts();">
+		<div id="overlay">
+			<p>Disable/remap shortcut</p>
+			<label>
+				<input type="checkbox" onclick="toggleDisabled('singleShortcut', !this.checked)" checked />
+				Toggle single character keyboard shortcut
+			</label>
+			<br />
+			<label>
+				<input id="remap" type="checkbox" onclick="toggleModifier('singleShortcut', this.checked)" />
+				Use "ctrl" key together with the "+" key
+			</label>
+			<br />
+			<button onclick="closeModal();">Dismiss</button>
+		</div>
+		<p>To control the shortcuts activate the "Control shortcuts" button.</p>
+		<input type="button" onclick="openModal()" value="Control shortcuts" />
+
+		<label for="target">Add to list (press "+" to add):</label>
+		<input type="text" id="target" />
+		<div>
+			To do list
+		</div>
+		<ul id="list"></ul>
+	</body>
+</html>

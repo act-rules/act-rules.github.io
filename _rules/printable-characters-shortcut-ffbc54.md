@@ -14,8 +14,9 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - João Vicente
     - Carlos Duarte
+    - João Vicente
+    
 ---
 
 ## Applicability

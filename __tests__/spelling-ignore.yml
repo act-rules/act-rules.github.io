@@ -41,6 +41,7 @@
 - PDFs
 - DOCX
 - DPUB
+- dpub # lowercase needed in reference list
 - CSSOM
 - DNS
 - BCP
@@ -195,6 +196,7 @@
 - scrollable
 - scrollbars
 - subconditions
+- subtree
 
 # Parts of Unicode
 - 000A
@@ -211,3 +213,7 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+
+# Language codes
+- da
+- nl

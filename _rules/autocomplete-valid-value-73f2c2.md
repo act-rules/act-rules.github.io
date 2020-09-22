@@ -43,10 +43,7 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 ## Assumptions
 
-The `autocomplete` attribute is used on form fields that:
-
-- correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes); and
-- collect information about the user.
+The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
 If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the list of `input` purposes, or the form fields do not collect information about the user, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 

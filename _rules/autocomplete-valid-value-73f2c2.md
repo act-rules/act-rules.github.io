@@ -39,7 +39,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 ## Expectation 2
 
-Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is an [appropriate][appropriate field for the form control] for that test target.
+Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is [appropriate][appropriate field for the form control] for that test target.
 
 ## Assumptions
 

@@ -167,7 +167,7 @@ The `lang` attribute value has a valid language tag, but its [descendant][] is n
 ```html
 <html>
 	<body>
-		<article lang="en-US-GB">
+		<article lang="English">
 			<p style="position: absolute; top: -9999px">
 				They wandered into a strange Tiki bar on the edge of the small beach town.
 			</p>

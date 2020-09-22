@@ -33,11 +33,11 @@ This rules applies to any HTML element with a `lang` [attribute value][] that is
 
 ## Expectation
 
-For each test target, the value of the `lang` attribute is a [valid language tag][].
+For each test target, the value of the `lang` [attribute value][] is a [valid language tag][].
 
 ## Assumptions
 
-- The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
+- The `lang` [attribute value][] is assumed to be used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
@@ -60,7 +60,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-The `lang` attribute has a value that is not empty (`""`) and has a valid language tag.
+The `lang` [attribute value][] is not empty (`""`) and has a valid language tag.
 
 ```html
 <html>
@@ -74,7 +74,7 @@ The `lang` attribute has a value that is not empty (`""`) and has a valid langua
 
 #### Passed Example 2
 
-The `lang` attribute has a value that is not empty (`""`) and has a valid language tag. The region section in the value is ignored by the rule.
+The `lang` [attribute value][] is not empty (`""`) and has a valid language tag. The region section in the value is ignored by the rule.
 
 ```html
 <html>
@@ -88,7 +88,7 @@ The `lang` attribute has a value that is not empty (`""`) and has a valid langua
 
 #### Passed Example 3
 
-The `lang` attribute value has a valid language tag, but a syntactically invalid region subtag.
+The `lang` [attribute value][] has a valid language tag, but a syntactically invalid region subtag.
 
 ```html
 <html>
@@ -104,7 +104,7 @@ The `lang` attribute value has a valid language tag, but a syntactically invalid
 
 #### Failed Example 1
 
-The `lang` attribute value is not a primary language subtag.
+The `lang` [attribute value][] is not a primary language subtag.
 
 ```html
 <html>
@@ -118,7 +118,7 @@ The `lang` attribute value is not a primary language subtag.
 
 #### Failed Example 2
 
-The `lang` attribute value is not empty (`""`) and is not a primary language subtag.
+The `lang` [attribute value][] is not empty (`""`) and is not a primary language subtag.
 
 ```html
 <html>
@@ -132,7 +132,7 @@ The `lang` attribute value is not empty (`""`) and is not a primary language sub
 
 #### Failed Example 3
 
-The `lang` attribute value consists of only [whitespace][] and is not a [valid language tag][].
+The `lang` [attribute value][] consists of only [whitespace][] and is not a [valid language tag][].
 
 ```html
 <html>
@@ -146,12 +146,12 @@ The `lang` attribute value consists of only [whitespace][] and is not a [valid l
 
 #### Failed Example 4
 
-The `lang` attribute value has a valid language tag, but its [descendant][] is not [included in the accessibility tree][].
+The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [included in the accessibility tree][].
 
 ```html
 <html>
 	<body>
-		<article lang="en-US-GB">
+		<article lang="english">
 			<p aria-hidden="true">
 				They wandered into a strange Tiki bar on the edge of the small beach town.
 			</p>
@@ -162,7 +162,7 @@ The `lang` attribute value has a valid language tag, but its [descendant][] is n
 
 #### Failed Example 5
 
-The `lang` attribute value has a valid language tag, but its [descendant][] is not [visible][], it is still [included in the accessibility tree][].
+The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [visible][], it is still [included in the accessibility tree][].
 
 ```html
 <html>
@@ -192,7 +192,7 @@ The rule applies to elements within the `body` of a webpage. `html` elements are
 
 #### Inapplicable Example 2
 
-An empty value for the `lang` attribute is ignored, as the rule only applies to `lang` attributes that are not empty (`""`).
+An empty `lang` [attribute value][] is ignored, as the rule only applies to `lang` attributes that are not empty (`""`).
 
 ```html
 <html>
@@ -206,7 +206,7 @@ An empty value for the `lang` attribute is ignored, as the rule only applies to 
 
 #### Inapplicable Example 3
 
-The `lang` attribute value has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+The `lang` [attribute value][] has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
 
 ```html
 <html>

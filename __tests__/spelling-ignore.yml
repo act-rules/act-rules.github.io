@@ -41,6 +41,7 @@
 - PDFs
 - DOCX
 - DPUB
+- dpub # lowercase needed in reference list
 - CSSOM
 - DNS
 - BCP
@@ -69,6 +70,9 @@
 - presentational
 - sc
 - dropdown
+- getModifierState
+- accesskey
+- Accesskeys
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -145,6 +149,7 @@
 - columnheader
 - innerText
 - isTrusted
+- isComposing
 
 # DOM Events
 - auxclick
@@ -154,6 +159,7 @@
 - dblclick
 - keydown
 - keyup
+- keypressed
 - mousedown
 - mouseenter
 - mouseleave
@@ -190,6 +196,7 @@
 - scrollable
 - scrollbars
 - subconditions
+- subtree
 
 # Parts of Unicode
 - 000A

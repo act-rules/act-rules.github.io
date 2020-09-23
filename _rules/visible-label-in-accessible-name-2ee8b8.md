@@ -161,7 +161,7 @@ This `div` element does not have a widget role, so the [visible][] text does not
 This link has no [visible text content][].
 
 ```html
-<a href="//w3.org" aria-label="W3C homepage">
+<a href="https://w3.org" aria-label="W3C homepage">
 	<img src="/test-assets/shared/w3c-logo.png" alt="w3c logo" />
 </a>
 ```

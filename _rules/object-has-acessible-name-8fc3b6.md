@@ -60,7 +60,7 @@ This `object` element which embeds an audio resource has a non-empty [accessible
 This `object` element which embeds a video resource has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
-<object title="My University" data="/test-assets/rabbit-video/video.mp4"></object>
+<object title="Rabbit animated short" data="/test-assets/rabbit-video/video.mp4"></object>
 ```
 
 #### Passed Example 3

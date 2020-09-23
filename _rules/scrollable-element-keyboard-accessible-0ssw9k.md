@@ -135,13 +135,13 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 </style>
 <h1>Our sponsors:</h1>
 <section>
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 </section>
 ```
 
@@ -238,7 +238,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 This `iframe` element is not a [scrollable element][scrollable].
 
 ```html
-<iframe src="//www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>
+<iframe src="http://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>
 ```
 
 [visible]: #visible

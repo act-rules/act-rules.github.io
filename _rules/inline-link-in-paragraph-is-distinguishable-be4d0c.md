@@ -415,13 +415,25 @@ This link is not [visible][].
 
 #### Inapplicable Example 3
 
+This link with no text nodes has no **link text**.
+
+```html
+<p>
+	Read about WAI on the
+	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI" /></a>
+	webpage.
+</p>
+```
+
+#### Inapplicable Example 4
+
 This link is the only text rendered in its line, so there is no **non-link line text**.
 
 ```html
 <p><a href="http://w3.org/WAI">WAI webpage</a></p>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
 Each link is the only text rendered in their respective lines, so there is no **non-link line text**.
 
@@ -432,7 +444,7 @@ Each link is the only text rendered in their respective lines, so there is no **
 </ul>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 There is no text belonging to non [semantic links][semantic link] in this line.
 
@@ -440,7 +452,7 @@ There is no text belonging to non [semantic links][semantic link] in this line.
 <p><a href="https://www.w3.org">W3C </a><span role="link" onclick="location='https://www.w3.org/WAI/'">WAI</span></p>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 This link is not distinguishable by color (hue) from the other text rendered in its line.
 

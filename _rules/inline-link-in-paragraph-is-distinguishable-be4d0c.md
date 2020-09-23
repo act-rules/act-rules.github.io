@@ -415,7 +415,7 @@ This link is not [visible][].
 
 #### Inapplicable Example 3
 
-This link is the only text rendered in its line.
+This link is the only text rendered in its line, so there is no **non-link line text**.
 
 ```html
 <p><a href="http://w3.org/WAI">WAI webpage</a></p>
@@ -423,7 +423,7 @@ This link is the only text rendered in its line.
 
 #### Inapplicable Example 4
 
-Each link is the only text rendered in their respective lines.
+Each link is the only text rendered in their respective lines, so there is no **non-link line text**.
 
 ```html
 <ul>

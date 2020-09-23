@@ -266,5 +266,4 @@ This viewport `meta` element does not have a `content` attribute.
 [page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [visible]: #visible 'Definition of visible'
-
-[css pixels]: https://www.w3.org/TR/WCAG21/#dfn-css-pixels 'WCAG 2.1 definition, CSS pixels
+[css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'

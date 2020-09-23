@@ -14713,11 +14713,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14743,11 +14758,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14773,11 +14803,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14803,11 +14848,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14833,11 +14893,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14854,20 +14929,35 @@
       }
     },
     {
-      "testcaseId": "e85561e433618bd6ef98744417c10f15d62ec793",
+      "testcaseId": "4374cbb747d5a9b7ac8a838ac119df1f322bf617",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
-      "relativePath": "testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
+      "url": "https://act-rules.github.io/testcases/674b10/4374cbb747d5a9b7ac8a838ac119df1f322bf617.html",
+      "relativePath": "testcases/674b10/4374cbb747d5a9b7ac8a838ac119df1f322bf617.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14893,11 +14983,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14923,11 +15028,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14953,11 +15073,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,
@@ -14983,11 +15118,26 @@
       "ruleName": "`role` attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
+        "aria11:role_definitions": {
+          "title": "ARIA 1.1, 5.4 Definition of Roles",
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
-          "inapplicable": "further testing needed"
+          "inapplicable": "satisfied"
+        },
+        "graphics-aria:role_definitions": {
+          "title": "ARIA Graphics module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
+        },
+        "dpub-aria:role_definitions": {
+          "title": "ARIA Digital Publishing module 1.0, 4.1 Definition of Roles",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "satisfied"
         },
         "wcag-technique:ARIA4": {
           "forConformance": false,

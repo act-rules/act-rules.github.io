@@ -1110,7 +1110,7 @@
           "assertedBy": "_:evaluator",
           "subject": "_:website",
           "result": {
-            "outcome": "earl:cantTell",
+            "outcome": "earl:inapplicable",
             "description": "",
             "date": ""
           },
@@ -1194,9 +1194,9 @@
               "WebPage"
             ],
             "id": "_:struct_5",
-            "description": "https://act-rules.github.io/testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
-            "source": "https://act-rules.github.io/testcases/674b10/e85561e433618bd6ef98744417c10f15d62ec793.html",
-            "title": "e85561e433618bd6ef98744417c10f15d62ec793",
+            "description": "https://act-rules.github.io/testcases/674b10/4374cbb747d5a9b7ac8a838ac119df1f322bf617.html",
+            "source": "https://act-rules.github.io/testcases/674b10/4374cbb747d5a9b7ac8a838ac119df1f322bf617.html",
+            "title": "4374cbb747d5a9b7ac8a838ac119df1f322bf617",
             "tested": false
           },
           {

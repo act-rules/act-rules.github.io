@@ -36,8 +36,11 @@ For each test target, the `content` attribute, whose value is mapped to a list o
 
 ## Assumptions
 
+If any of the following is true, this rule can file while the [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
+
 - The [page][] has [visible][] [content][].
 - There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.
+- The [content][] is not by default rendered in a way that fits in an area of 320 by 256 [CSS pixels][], and needs to reflow to do so.
 
 ## Accessibility Support
 
@@ -263,3 +266,5 @@ This viewport `meta` element does not have a `content` attribute.
 [page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [visible]: #visible 'Definition of visible'
+
+[css pixels]: https://www.w3.org/TR/WCAG21/#dfn-css-pixels 'WCAG 2.1 definition, CSS pixels

@@ -83,7 +83,7 @@ See [Video element description track: accessibility support](https://act-rules.g
 
 ## Background
 
-This rule is designed specificially for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which has the expected either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adiquiatly test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
+This rule is designed specificially for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which expects either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adequately test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
 
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)

@@ -15628,7 +15628,7 @@
       "relativePath": "testcases/d0f69e/935750fd6d058a02a13b7972f659c438b665479e.html",
       "expected": "passed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15652,7 +15652,7 @@
       "relativePath": "testcases/d0f69e/166d899fcda47760741b83dbfe93d2ecc2806e7f.html",
       "expected": "passed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15676,7 +15676,7 @@
       "relativePath": "testcases/d0f69e/e482fe32bf882a421a50ac41dd151a2f49cccb14.html",
       "expected": "passed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15700,7 +15700,7 @@
       "relativePath": "testcases/d0f69e/15d27cf0b188b398cb3a6fae685ca6ae5bbed81d.html",
       "expected": "passed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15724,7 +15724,7 @@
       "relativePath": "testcases/d0f69e/64103f4efc2232fb5fe883978a9d482d58fe8ad1.html",
       "expected": "passed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15748,7 +15748,7 @@
       "relativePath": "testcases/d0f69e/c9c8800cc765aaaabeb43cf35a7554bc9be804f1.html",
       "expected": "failed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15772,7 +15772,7 @@
       "relativePath": "testcases/d0f69e/db675b58cc2eb76b9aa743cc1778ba6ae92abd93.html",
       "expected": "failed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15796,7 +15796,7 @@
       "relativePath": "testcases/d0f69e/46645a39378f2367d97c5695325e0a9119767910.html",
       "expected": "failed",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15820,7 +15820,7 @@
       "relativePath": "testcases/d0f69e/2cdd6e0b265589e1ff563898c31876eda7e95d87.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15844,7 +15844,7 @@
       "relativePath": "testcases/d0f69e/0ef275b3a74497b34d5e91eb48e26d21640292a5.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15868,7 +15868,7 @@
       "relativePath": "testcases/d0f69e/7d7180595fa9587977e1d566cbb245ec9bbeaedb.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15892,7 +15892,7 @@
       "relativePath": "testcases/d0f69e/5de0ea0573fb8ac046d99eecf3a76cf87d7306b4.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15916,7 +15916,7 @@
       "relativePath": "testcases/d0f69e/d0c1c70e84250de4d9e1e0099ab2ba33a48fa279.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15940,7 +15940,7 @@
       "relativePath": "testcases/d0f69e/336923a1e43907057e7770ff1403d384497f5584.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15964,7 +15964,7 @@
       "relativePath": "testcases/d0f69e/ff32ca86520d84cabb4b7f2419b9ae0d77f8650a.html",
       "expected": "inapplicable",
       "ruleId": "d0f69e",
-      "ruleName": "All table header cells have assigned data cells",
+      "ruleName": "Table header cell has assigned data cells",
       "rulePage": "https://act-rules.github.io/rules/d0f69e",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -15988,7 +15988,7 @@
       "relativePath": "testcases/a25f45/a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16012,7 +16012,7 @@
       "relativePath": "testcases/a25f45/b50314a077856c381dc97b7ab137c47feeec3317.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16036,7 +16036,7 @@
       "relativePath": "testcases/a25f45/9cdd965f187709288c389a2f3063f64689ea25a8.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16060,7 +16060,7 @@
       "relativePath": "testcases/a25f45/4c7ecdda09a93d361c292de91d2f89f751dabde2.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16084,7 +16084,7 @@
       "relativePath": "testcases/a25f45/dec322a713059aa4e1ad4f8c03bf2e3f43f9b474.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16108,7 +16108,7 @@
       "relativePath": "testcases/a25f45/9950efbcae11c6a74d285355e65f3010de06b0f1.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16132,7 +16132,7 @@
       "relativePath": "testcases/a25f45/b4a1ee541c688a4274f8f44cf59fb61504e50126.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16156,7 +16156,7 @@
       "relativePath": "testcases/a25f45/7b0aec741508524b48e73fd0ec10435409994e9c.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16180,7 +16180,7 @@
       "relativePath": "testcases/a25f45/8a42cd31f491f68b18e499b70d181e30e24485a3.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16204,7 +16204,7 @@
       "relativePath": "testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16228,7 +16228,7 @@
       "relativePath": "testcases/a25f45/15630361d51726629bdf84d3ec140a6cc154d06a.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16252,7 +16252,7 @@
       "relativePath": "testcases/a25f45/98f8a6a4387e780e8fbcd8201244750091df857a.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16276,7 +16276,7 @@
       "relativePath": "testcases/a25f45/3aba7777d893a814310a22dfc1399fd8d932e405.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16300,7 +16300,7 @@
       "relativePath": "testcases/a25f45/a94873974601333ff15523c51145f056d8e3af87.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16324,7 +16324,7 @@
       "relativePath": "testcases/a25f45/cf152e4f1f83863272aeb9809601677935a57e6b.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -16348,7 +16348,7 @@
       "relativePath": "testcases/a25f45/00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {

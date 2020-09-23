@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - All table header cells have assigned data cells",
+      "title": "Report for ACT-R Rule - Table header cell has assigned data cells",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - All table header cells have assigned data cells",
+          "siteName": "ACT-R Rule - Table header cell has assigned data cells",
           "siteScope": "https://act-rules.github.io/testcases/d0f69e/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

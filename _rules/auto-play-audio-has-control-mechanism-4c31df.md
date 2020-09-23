@@ -137,7 +137,7 @@ This `video` element autoplays and does not have an [instrument][] to pause, sto
 
 #### Failed Example 3
 
-This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not visible.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not visible.
 
 ```html
 <head>

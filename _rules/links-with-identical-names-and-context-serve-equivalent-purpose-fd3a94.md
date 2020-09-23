@@ -362,15 +362,6 @@ These two `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 5
-
-The second HTML `a` element has an empty [accessible name][].
-
-```html
-<a href="https://act-rules.github.io/">ACT rules</a>
-<a href="https://act-rules.github.io/"><img src="/test-assets/shared/act-logo.png"/></a>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'

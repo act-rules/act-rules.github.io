@@ -370,23 +370,6 @@ These `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 4
-
-These links have empty [accessible names][accessible name].
-
-```html
-<a href="https://act-rules.github.io/"></a> <a href="https://www.w3.org/community/act-r/"></a>
-```
-
-#### Inapplicable Example 5
-
-These image links have empty [accessible names][accessible name].
-
-```html
-<a href="https://act-rules.github.io/"><img src="/test-assets/shared/act-logo.png"/></a>
-<a href="https://www.w3.org/community/act-r/"><img src="/test-assets/shared/act-logo.png"/></a>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [browsing context]: https://html.spec.whatwg.org/#browsing-context 'Definition of browsing context'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'

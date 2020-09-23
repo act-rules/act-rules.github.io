@@ -36,7 +36,7 @@ For each test target, the `content` attribute, whose value is mapped to a list o
 
 ## Assumptions
 
-If any of the following is true, this rule can file while the [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
+If any of the following is false, this rule can fail while Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
 
 - The [page][] has [visible][] [content][].
 - There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.

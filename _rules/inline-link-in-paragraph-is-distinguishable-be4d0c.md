@@ -26,7 +26,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 - **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the element's [foreground colors][foreground color] and the [foreground colors][foreground color] of the **non-link line text** elements have a [different hue][], or the element's [background colors][background color] and the [background colors][background color] of the **non-link line text** elements have a [different hue][].
+- **different hue**: the element's [foreground colors][foreground color] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
 ## Expectation
 
@@ -38,10 +38,10 @@ For all [link history states][] there exists at least one [visible][] [inclusive
 ## Assumptions
 
 - Any change in font is sufficiently distinguishable, and fonts are loaded when they are present.
-- The same foreground color and the same background color is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise color can not be a distinguishing factor.
-- The same `border` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise `border` can not be a distinguishing factor.
-- The same `box-shadow` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise `box-shadow` can not be a distinguishing factor.
-- The same text style is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not part of the target element, otherwise the [text style properties][] can not be a distinguishing factor.
+- The same foreground color and the same background color is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise color can not be a distinguishing factor.
+- The same `border` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise `border` can not be a distinguishing factor.
+- The same `box-shadow` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise `box-shadow` can not be a distinguishing factor.
+- The same text style is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise the [text style properties][] can not be a distinguishing factor.
 - The perceived visual styling of elements is the result of CSS styling applied to those elements and inherited from their [ancestor][] elements. Through manipulation of the positioning and styles of other elements, including non inherited styles of [ancestor][] elements, an element may end up with a perceived distinguishable style not resulting from its own and inherited styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
 - This rule considers that [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) only applies if the elements have different hues as stated in the [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) document. If the hues are the same and saturation or lightness are not, this creates a difference in contrast, not in the perceived color and [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) does not apply. If [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) applies to elements that have the same hue but different saturation and lightness, this rule will be inapplicable while [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) may still fail.
 

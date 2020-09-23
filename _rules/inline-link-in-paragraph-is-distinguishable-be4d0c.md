@@ -64,7 +64,7 @@ Some examples for this rule change the default user agent styling of links. This
 
 #### Passed Example 1
 
-This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This link, with a **different hue** from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -83,7 +83,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 2
 
-This link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
+This link, with a **different hue** from the other text in the same line, uses a style similar to the default styling of links (underline) when it is focused or hovered.
 
 ```html
 <style>
@@ -106,7 +106,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 3
 
-This link, that is distinguishable by the background color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This link, with a background with a **different hue** from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -125,7 +125,7 @@ This link, that is distinguishable by the background color (hue) from the other 
 
 #### Passed Example 4
 
-This element with a [semantic role][] that inherits from link, that is distinguishable by color (hue) from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
+This element with a [semantic role][] that inherits from link, with a **different hue** from the other text in the same line, uses a style similar to the default styling of links which underlines them in most browsers, making it a distinguishable style.
 
 ```html
 <style>
@@ -149,7 +149,7 @@ This element with a [semantic role][] that inherits from link, that is distingui
 
 #### Passed Example 5
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable color because the color contrast is 4.98.
+This link, with a **different hue** from the other text in the same line, has a distinguishable color because the color contrast is 4.98.
 
 ```html
 <style>
@@ -171,7 +171,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 6
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
+This link, with a **different hue** from the other text in the same line, has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -197,7 +197,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 7
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable box-shadow.
+This link, with a **different hue** from the other text in the same line, has a distinguishable box-shadow.
 
 ```html
 <style>
@@ -217,7 +217,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 8
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a distinguishable font-style when it is focused.
+This link, with a **different hue** from the other text in the same line, has a distinguishable font-style when it is focused.
 
 ```html
 <style>
@@ -239,7 +239,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 9
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that makes it distinguishable as a link.
+This link, with a **different hue** from the other text in the same line, has an icon that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -261,7 +261,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 10
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has text that makes it distinguishable as a link.
+This link, with a **different hue** from the other text in the same line, has text that makes it distinguishable as a link.
 
 ```html
 <style>
@@ -280,7 +280,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 11
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has an icon that appears when the link is hovered. This icon indicates the element is a link.
+This link, with a **different hue** from the other text in the same line, has an icon that appears when the link is hovered. This icon indicates the element is a link.
 
 ```html
 <style>
@@ -308,7 +308,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Passed Example 12
 
-This link had a descendant element that is distinguishable by color (hue) from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
+This link has a descendant element with a **different hue** from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
 ```html
 <style>
@@ -330,7 +330,7 @@ This link had a descendant element that is distinguishable by color (hue) from t
 
 #### Passed Example 13
 
-This link is distinguishable by color (hue) from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
+This link has a **different hue** from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
 
 ```html
 <style>

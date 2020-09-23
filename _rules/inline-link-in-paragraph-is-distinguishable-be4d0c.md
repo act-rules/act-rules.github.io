@@ -51,7 +51,7 @@ _No accessibility support issues known._
 
 ## Background
 
-Some examples for this rule change the default user agent styling of links. This is done to illustrate the rule. Changing the default styles of links is not endorsed by this rule.
+Some examples for this rule change the default user agent styling of links. This is done to illustrate the rule. Changing the default styles of links is not endorsed by this rule. With most user agents, this rule passes with the default style; explicit styles are added to make sure the examples work as intended.
 
 - [Understanding Success Criterion 1.4.1: Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 - [G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them](https://www.w3.org/WAI/WCAG21/Techniques/general/G183)

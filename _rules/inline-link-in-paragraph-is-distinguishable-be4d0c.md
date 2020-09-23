@@ -26,11 +26,11 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 - **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the element's [foreground colors][foreground color] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
+- **different hue**: the element's [foreground colors][foreground color] and the [foreground color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][].
 
 ## Expectation
 
-For all [link history states][] there exists at least one [visible][] [inclusive descendant][] and one [adequate inspection state][] of the test target such that at least one of the following is true:
+For each [link history state][] with a [different hue][] there exists at least one [visible][] [inclusive descendant][] and one [adequate inspection state][] of the test target such that at least one of the following is true:
 
 - **distinguishing style**: the [visible][] [inclusive descendant][] has a [distinguishable style][] from each element containing **non-link line text**; or
 - **distinguishing content**: the [visible][] [inclusive descendant][] has adjacent content (such as an image or text) that indicates the test target is a link.
@@ -355,7 +355,7 @@ This link has a **different hue** from the other text in the same line in both l
 
 #### Failed Example 1
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has no other visual cues of being recognized as a link with the underline removed. Even though the link has a different color (blue) from the other text (black) the low difference in contrast between them means they are not distinguishing colors.
+This link, with a **different hue** from the other text in the same line, has no other visual cues of being recognized as a link because the underline has been removed. Even though the link has a different color (blue) from the other text (black) the low difference in contrast between them means they are not distinguishing colors.
 
 ```html
 <style>
@@ -374,7 +374,7 @@ This link, that is distinguishable by color (hue) from the other text in the sam
 
 #### Failed Example 2
 
-This link, that is distinguishable by color (hue) from the other text in the same line, has a different style because of its color and foreground color. But when the link has been visited, the style is the same of the other text on the same line.
+This link, with a **different hue** from the other text in the same line, has a different style because of its color and foreground color. But when the link has been visited, the style is the same of the other text on the same line (only the hue is different).
 
 ```html
 <style>
@@ -467,7 +467,7 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
-[link history states]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
+[link history state]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'
 [semantic role]: #semantic-role 'Definition of semantic role'

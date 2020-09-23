@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 864,
+  "count": 866,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6790,6 +6790,24 @@
       }
     },
     {
+      "testcaseId": "f32765d70e0f730a7a3a859dc8cd396c186bce4a",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/b49b2e/f32765d70e0f730a7a3a859dc8cd396c186bce4a.html",
+      "relativePath": "testcases/b49b2e/f32765d70e0f730a7a3a859dc8cd396c186bce4a.html",
+      "expected": "passed",
+      "ruleId": "b49b2e",
+      "ruleName": "Heading is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/b49b2e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "680f45d618bff74142de42e6ed6c7ee2e33b0f6c",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/b49b2e/680f45d618bff74142de42e6ed6c7ee2e33b0f6c.html",
@@ -6848,6 +6866,24 @@
       "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/b49b2e/c3ed1f47a0892ce17a390e0953c715e5ed1ae5db.html",
       "relativePath": "testcases/b49b2e/c3ed1f47a0892ce17a390e0953c715e5ed1ae5db.html",
+      "expected": "failed",
+      "ruleId": "b49b2e",
+      "ruleName": "Heading is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/b49b2e",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "14551f2cbf465d95236ef1417e0e2b5fb82249a6",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/b49b2e/14551f2cbf465d95236ef1417e0e2b5fb82249a6.html",
+      "relativePath": "testcases/b49b2e/14551f2cbf465d95236ef1417e0e2b5fb82249a6.html",
       "expected": "failed",
       "ruleId": "b49b2e",
       "ruleName": "Heading is descriptive",

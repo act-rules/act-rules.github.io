@@ -208,7 +208,7 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Failed Example 5
 
-This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the mechanism is not included in the accessibility tree.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not included in the accessibility tree.
 
 ```html
 <head>

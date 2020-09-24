@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -56,6 +61,8 @@ When followed, the links in each set of target elements resolve to the [same res
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
@@ -378,6 +385,7 @@ The second HTML `a` element has an empty [accessible name][].
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [same resource]: #same-resource 'Definition of same resource'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

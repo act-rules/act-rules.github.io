@@ -18441,44 +18441,8 @@
       }
     },
     {
-      "testcaseId": "7d7a94d0ae749de98095b3af35f0adf65cb01bd1",
-      "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
-      "relativePath": "testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
-      "expected": "passed",
-      "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/c3232f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G159": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G166": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "17189684688eb0b0fb6cbb3109527bf1558756b3",
-      "testcaseTitle": "Passed Example 2",
+      "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
       "relativePath": "testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
       "expected": "passed",
@@ -18514,7 +18478,7 @@
     },
     {
       "testcaseId": "6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96",
-      "testcaseTitle": "Passed Example 3",
+      "testcaseTitle": "Passed Example 2",
       "url": "https://act-rules.github.io/testcases/c3232f/6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96.html",
       "relativePath": "testcases/c3232f/6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96.html",
       "expected": "passed",
@@ -18550,7 +18514,7 @@
     },
     {
       "testcaseId": "85b0303b527a3d2836b4256a73cb438081bbc224",
-      "testcaseTitle": "Passed Example 4",
+      "testcaseTitle": "Passed Example 3",
       "url": "https://act-rules.github.io/testcases/c3232f/85b0303b527a3d2836b4256a73cb438081bbc224.html",
       "relativePath": "testcases/c3232f/85b0303b527a3d2836b4256a73cb438081bbc224.html",
       "expected": "passed",
@@ -18585,11 +18549,11 @@
       }
     },
     {
-      "testcaseId": "f0a60f2924c927d3dc97676d02c83ab38025955f",
-      "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
-      "relativePath": "testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
-      "expected": "failed",
+      "testcaseId": "7d7a94d0ae749de98095b3af35f0adf65cb01bd1",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
+      "relativePath": "testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
+      "expected": "passed",
       "ruleId": "c3232f",
       "ruleName": "`video` element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
@@ -18622,7 +18586,7 @@
     },
     {
       "testcaseId": "26130992612441b49f6975a5fa48f5051e627e1e",
-      "testcaseTitle": "Failed Example 2",
+      "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/c3232f/26130992612441b49f6975a5fa48f5051e627e1e.html",
       "relativePath": "testcases/c3232f/26130992612441b49f6975a5fa48f5051e627e1e.html",
       "expected": "failed",
@@ -18658,7 +18622,7 @@
     },
     {
       "testcaseId": "28ec159184ae06f3854db2cce0dbb80f29d73f66",
-      "testcaseTitle": "Failed Example 3",
+      "testcaseTitle": "Failed Example 2",
       "url": "https://act-rules.github.io/testcases/c3232f/28ec159184ae06f3854db2cce0dbb80f29d73f66.html",
       "relativePath": "testcases/c3232f/28ec159184ae06f3854db2cce0dbb80f29d73f66.html",
       "expected": "failed",
@@ -18694,9 +18658,45 @@
     },
     {
       "testcaseId": "f600a7ad3e0d61dd5ef28703702918ae54226aea",
-      "testcaseTitle": "Failed Example 4",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/c3232f/f600a7ad3e0d61dd5ef28703702918ae54226aea.html",
       "relativePath": "testcases/c3232f/f600a7ad3e0d61dd5ef28703702918ae54226aea.html",
+      "expected": "failed",
+      "ruleId": "c3232f",
+      "ruleName": "`video` element visual-only content has accessible alternative",
+      "rulePage": "https://act-rules.github.io/rules/c3232f",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f0a60f2924c927d3dc97676d02c83ab38025955f",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
+      "relativePath": "testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
       "expected": "failed",
       "ruleId": "c3232f",
       "ruleName": "`video` element visual-only content has accessible alternative",
@@ -19004,10 +19004,10 @@
       }
     },
     {
-      "testcaseId": "37a4612f75de804360b62ea77d1717d549b34ddb",
+      "testcaseId": "f931e98962823c2ae50951afc5f3fc19e194cfb7",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
-      "relativePath": "testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
+      "url": "https://act-rules.github.io/testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
+      "relativePath": "testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
@@ -19040,10 +19040,10 @@
       }
     },
     {
-      "testcaseId": "f931e98962823c2ae50951afc5f3fc19e194cfb7",
+      "testcaseId": "37a4612f75de804360b62ea77d1717d549b34ddb",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
-      "relativePath": "testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
+      "url": "https://act-rules.github.io/testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
+      "relativePath": "testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
       "ruleName": "`video` element visual-only content has description track",
@@ -19166,10 +19166,10 @@
       }
     },
     {
-      "testcaseId": "82a0aa825af5d4d97bec9039a0de8da3cd1159b7",
+      "testcaseId": "53283de0652d7b4132aa00dc2fdd3d60fbd657cf",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/ee13b5/82a0aa825af5d4d97bec9039a0de8da3cd1159b7.html",
-      "relativePath": "testcases/ee13b5/82a0aa825af5d4d97bec9039a0de8da3cd1159b7.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/53283de0652d7b4132aa00dc2fdd3d60fbd657cf.html",
+      "relativePath": "testcases/ee13b5/53283de0652d7b4132aa00dc2fdd3d60fbd657cf.html",
       "expected": "inapplicable",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
@@ -19184,10 +19184,10 @@
       }
     },
     {
-      "testcaseId": "53283de0652d7b4132aa00dc2fdd3d60fbd657cf",
+      "testcaseId": "82a0aa825af5d4d97bec9039a0de8da3cd1159b7",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/ee13b5/53283de0652d7b4132aa00dc2fdd3d60fbd657cf.html",
-      "relativePath": "testcases/ee13b5/53283de0652d7b4132aa00dc2fdd3d60fbd657cf.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/82a0aa825af5d4d97bec9039a0de8da3cd1159b7.html",
+      "relativePath": "testcases/ee13b5/82a0aa825af5d4d97bec9039a0de8da3cd1159b7.html",
       "expected": "inapplicable",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",

@@ -267,3 +267,5 @@ This viewport `meta` element does not have a `content` attribute.
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [visible]: #visible 'Definition of visible'
 [css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
+[sc144]: https://www.w3.org/TR/WCAG21/#resize-text 'Success Criterion 1.4.4 Resize text'
+[sc1410]: https://www.w3.org/TR/WCAG21/#reflow 'Success Criterion 1.4.10 Reflow'

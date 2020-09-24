@@ -44,7 +44,7 @@ _There are currently no assumptions._
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-- The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return and empty name without defaulting to the next steps, but isn't very clear about this. Several user agents and assistive technologies chose to use the next step in the computation in this case.
+- The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return and empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case.
 
 ## Background
 

@@ -3,7 +3,7 @@ id: ep1s13
 name: Additional content triggered on hover is hoverable
 rule_type: atomic
 description: |
-  This rule checks that any additional content that was triggered by hovering an element remains available to the user while the mouse pointer is over that content
+  This rule checks that any additional content that was triggered by hovering an element remains available to the user while the mouse pointer is over the element or the additional content
 accessibility_requirements:
   wcag21:1.4.13: # Content on Hover or Focus (AA)
     forConformance: true
@@ -36,6 +36,7 @@ There are no [visible changes in content][] while the target element is [hovered
 
 - The user does not dismiss the tooltip causing the changes in content by pressing a key on the keyboard. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 - The content displayed on the rectangle with the changes in content does not become irrelevant. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
+- The element and the rectangle defined by the additional content are adjacent, so that it is possible to move the mouse pointer from one to the other without causing the additional content to disappear.
 
 ## Accessibility Support
 

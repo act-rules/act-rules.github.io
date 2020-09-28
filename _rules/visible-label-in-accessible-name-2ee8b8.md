@@ -75,7 +75,7 @@ This link has [visible][] text that, ignoring case, matches the [accessible name
 
 #### Passed Example 3
 
-This button has [visible][] text that is included in the [accessible name][].
+This button has [visible][] text that is contained within the [accessible name][].
 
 ```html
 <button aria-label="Next Page in the list">Next Page</button>
@@ -83,7 +83,7 @@ This button has [visible][] text that is included in the [accessible name][].
 
 #### Passed Example 4
 
-This button has [visible][] text that does not need to be included in the [accessible name][], because the "x" text node is [non-text content][].
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
 
 ```html
 <button aria-label="close">X</button>
@@ -91,7 +91,7 @@ This button has [visible][] text that does not need to be included in the [acces
 
 #### Passed Example 5
 
-This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be included in the [accessible name][].
+This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -115,7 +115,7 @@ This link has [visible][] text that is different from the [accessible name][].
 
 #### Failed Example 2
 
-This button has [visible][] text that is only partially included in the [accessible name][].
+This button has [visible][] text that is only partially contained within the [accessible name][].
 
 ```html
 <button aria-label="the full">The full label</button>

@@ -149,7 +149,7 @@ The description should:
 
 > _For example: "This page has a `title` element with content."_
 
-For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
+For a detailed description on what to write test cases for see [test case design](test-cases.html). For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
 
 ## Listed conditions
 

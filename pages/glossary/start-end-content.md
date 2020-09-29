@@ -19,7 +19,7 @@ In other words, the node is either the first [perceivable content][] inside the 
 A node is _at the end_ of a [block of content][] if one of the following is true:
 
 - the node is the first [perceivable content][] after this [block][]; or
-- the is before the first [perceivable content][] after this [block][] and there is no other [perceivable content][] between the [block][] and the node.
+- the node is before the first [perceivable content][] after this [block][] and there is no other [perceivable content][] between the [block][] and the node.
 
 In other words, the node is either the first [perceivable content][] after the [block][], any non-[perceivable content][] after the block but before the next [perceivable content][], or any non-[perceivable content][] inside the [block][] but after the last [perceivable content][] in it.
 

@@ -36,8 +36,11 @@ For each test target, the `content` attribute, whose value is mapped to a list o
 
 ## Assumptions
 
+If any of the following is false, this rule can fail while Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
+
 - The [page][] has [visible][] [content][].
 - There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.
+- The [content][] is not by default rendered in a way that fits in an area of 320 by 256 [CSS pixels][], and needs to reflow to do so.
 
 ## Accessibility Support
 

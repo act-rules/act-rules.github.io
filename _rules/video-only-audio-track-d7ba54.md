@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element [visible][] where the video doesn't contains audio.
+The rule applies to any [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video does not contain audio.
 
 ## Expectation
 
@@ -31,8 +31,8 @@ The visual information of each test target is available through an audio track.
 
 ## Assumptions
 
-- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -49,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-A video element without audio has a separate audio track that describes the visual information.
+This `video` element, which has no audio, has a separate audio track that describes the visual information.
 
 ```html
 <html lang="en">
@@ -68,7 +68,7 @@ A video element without audio has a separate audio track that describes the visu
 
 #### Failed Example 1
 
-A video element without an audio track.
+This `video` element, which has no audio, does not have an audio track describing the visual information.
 
 ```html
 <html lang="en">
@@ -81,7 +81,7 @@ A video element without an audio track.
 
 #### Failed Example 2
 
-A video element without audio has a separate audio track that incorrectly describes the visual information.
+This `video` element, which has no audio, has a separate audio track that incorrectly describes the visual information.
 
 ```html
 <html lang="en">
@@ -100,7 +100,7 @@ A video element without audio has a separate audio track that incorrectly descri
 
 #### Inapplicable Example 1
 
-A video element with audio.
+This `video` element has audio.
 
 ```html
 <html lang="en">
@@ -113,7 +113,7 @@ A video element with audio.
 
 #### Inapplicable Example 2
 
-A video element without sound that is not [visible][].
+This `video` element is not [visible][].
 
 ```html
 <html lang="en">

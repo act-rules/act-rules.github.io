@@ -75,7 +75,7 @@ A set of two HTML `a` elements have the same [accessible name][] and link to the
 
 #### Passed Example 2
 
-A set of two HTML `a` elements that both resolve to [same resource][] after instant redirect. The redirect means the URLs look different but load the same page.
+These two HTML `a` elements resolve to the [same resource][] after instant redirect. The redirect means that the URLs look different but load the same page.
 
 ```html
 <html lang="en">
@@ -119,7 +119,7 @@ These two HTML `a` elements link to URLs that differ due to trailing slashes, bu
 
 #### Passed Example 6
 
-These two links go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link. In the example, the call us details are the same format but in different locations.
+These two links go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link. In the example, the phone number is in the same format but in different locations.
 
 ```html
 <html lang="en">
@@ -165,7 +165,7 @@ These two HTML `span` element have an [explicit role][] of link, and lead to the
 
 #### Passed Example 9
 
-A set of two SVG `a` elements have the same [accessible name][] and link to the [same resource][]. The example is one SVG area but with 2 formats of links. One uses an image and the other uses text.
+These two SVG `a` elements have the same [accessible name][] and link to the [same resource][]. The example is one SVG area but with 2 formats of links. One uses an image and the other uses text.
 
 ```html
 <html lang="en">
@@ -199,7 +199,7 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 
 #### Passed Example 11
 
-All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][]. Hence, only the first and third link are considered by this rule and they both point to the [same resource][]. The second link is not part of the page rendered to the user.
+All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][] (and thus not rendered). Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -240,7 +240,7 @@ from the top level.
 
 #### Failed Example 1
 
-Both links have the same [accessible name][] but go to different resources. They open completely different pages.
+These two links have the same [accessible name][] but go to different resources. They open completely different pages.
 
 ```html
 <html lang="en">
@@ -299,7 +299,7 @@ The same [accessible name][] is used for image links going to different resource
 
 #### Failed Example 5
 
-A set of two SVG `a` elements that have the same [accessible name][] but link to different resources. They open completely different pages.
+These two SVG `a` elements have the same [accessible name][] but link to different resources. They open completely different pages.
 
 ```html
 <html lang="en">
@@ -319,7 +319,7 @@ A set of two SVG `a` elements that have the same [accessible name][] but link to
 
 #### Failed Example 6
 
-Both links resolve to [same resource][] after redirect, but the redirect is not instant. The user will notice the redirect due to a pause.
+These two links resolve to [same resource][] after redirect, but the redirect is not instant. The user will notice the redirect due to a pause.
 
 ```html
 <html lang="en">

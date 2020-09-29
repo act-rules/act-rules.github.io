@@ -166,7 +166,7 @@ In this document, there is a [block of repeated content][] before the [main bloc
 
 #### Inapplicable Example 1
 
-This [document][] is not an [HTML web page][].
+This [document][] is not a [HTML web page][].
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

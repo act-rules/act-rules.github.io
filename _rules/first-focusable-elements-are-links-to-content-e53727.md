@@ -555,7 +555,7 @@ This [HTML web page][] has no link to skip to the various [blocks of content][bl
 
 #### Failed Example 2
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][].
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. A [segmentation][] with one block for the `nav` element, one for the first `aside` element, and one for both the second `aside` and the `main` elements is not a [semantic segmentation][] since the third block contain nodes from both inside and outside the [main block of content][] (the `main` element).
 
 ```html
 <html lang="en">

@@ -135,7 +135,7 @@ This `circle` element has an [explicit role][] of `graphics-symbol` but has an e
 
 #### Failed Example 4
 
-This `svg` element has an [explicit role][] of `img` has an empty (`""`) [accessible name][]. The SVG `text` element is not used in computing the accessible name.
+This `svg` element with an [explicit role][] of `img` has an empty (`""`) [accessible name][]. The SVG `text` element is not used in computing the accessible name.
 
 ```html
 <p>How many circles are there?</p>

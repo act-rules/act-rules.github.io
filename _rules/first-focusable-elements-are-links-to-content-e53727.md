@@ -782,7 +782,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 9
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
+The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intent. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">

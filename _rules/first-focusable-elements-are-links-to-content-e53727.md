@@ -54,7 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-There is no requirement on how many [focusable][] elements are part of the [initial segment][] from Expectation 1, nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists. While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [block of content][]…)
+There is no requirement on how many [focusable][] elements are part of the [initial segment][] from Expectation 1, nor any requirement to provide a way to determine (programmatically or not) where that [initial segment][] stops. Technique [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124), and this rule, only require that such a set exists. While Expectation 1 can always be passed by an empty [initial segment][] (i.e. a set of zero [focusable][] elements), Expectation 2 forces that [initial segment][] to have one or more elements (unless the page itself is empty and has zero [blocks of content][block of content])
 
 - [G124: Adding links at the top of the page to each area of the content][tech g124]
 

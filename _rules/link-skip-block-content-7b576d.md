@@ -688,7 +688,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 
 #### Failed Example 10
 
-In this [document][], the link to skip the complementary [block of repeated content][] has non-descriptive name.
+In this [document][], the link to skip the complementary [block of repeated content][] has a non-descriptive name.
 
 ```html
 <html lang="en">

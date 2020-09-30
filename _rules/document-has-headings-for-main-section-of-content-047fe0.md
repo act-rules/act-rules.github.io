@@ -166,7 +166,7 @@ In this [document][], the heading is not the first element of the [main block of
 
 		<main>
 			<hr />
-			<h1><span>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</span></h1>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.

@@ -9,7 +9,7 @@ input_aspects:
   - DOM tree
 ---
 
-A [segmentation][] of an [HTML web page][] is a _semantic segmentation_ if there is no [block][] in the [segmentation][] that contain both nodes from inside and outside the [main block of content][] (if it exists).
+A [segmentation][] of an [HTML web page][] is a _semantic segmentation_ if there is no [block][] in the [segmentation][] that contains nodes from both inside and outside the [main block of content][] (if it exists).
 
 The [main block of content][] doesn't need to be a single [block] in the [segmentation][]. It may be split into sub-[blocks][block]. But it is not possible for a [block][] to "overlap" the boundaries of the [main block of content][].
 

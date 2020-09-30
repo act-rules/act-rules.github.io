@@ -33,8 +33,6 @@ The first non-[decorative][] node in the [flat tree][] which is inside the [main
 - is [visible][]; and
 - is [included in the accessibility tree][].
 
-**Note** Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
-
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
@@ -46,6 +44,8 @@ The first non-[decorative][] node in the [flat tree][] which is inside the [main
 - When headings are rendered without sufficient visual cues, they are not perceived as headings by sighted users. In this case, passing this rule might still fail [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] and [Success Criterion 2.4.1: Bypass blocks][sc241]. Additionally, this is likely a failure of [Success Criterion 1.3.1: Info and Relationships][sc131].
 
 ## Background
+
+Neither this rule, nor technique [H69: Providing heading elements at the beginning of each section of content][tech h69], expects the heading to accurately describe its corresponding section. However, having non descriptive headings fails [Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)
 
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]

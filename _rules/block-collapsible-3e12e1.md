@@ -32,14 +32,6 @@ There exists a [semantic segmentation][] of the test target such that for each [
 
 There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][] (B) from the [accessibility tree][included in the accessibility tree].
 
-**Note:** The same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][].
-
-**Note:** The same [instrument][] may be used for several of the [blocks of content][block of content].
-
-**Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
-
-**Note:** [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require anything concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
-
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
@@ -50,6 +42,12 @@ There exists a [semantic segmentation][] of the test target such that for each [
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][]. And that the same [instrument][] may be used for several of the [blocks of content][block of content].
+
+[Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive, hence this rule doesn't require it either. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
+
+[Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require anything concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
 
 - [SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 

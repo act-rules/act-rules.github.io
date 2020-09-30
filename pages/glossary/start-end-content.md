@@ -25,9 +25,10 @@ In other words, the node is either the first [perceivable content][] after the [
 
 Several nodes may be at the start or end of a [block][], especially if there are several non-[perceivable content][] nodes next to each other.
 
-Order ("first", "before", …) in this definition is tree order in the [flat tree][].
+Order ("first", "before", …) in this definition is [tree order][] in the [flat tree][].
 
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [perceivable content]: #perceivable-content 'Definition of perceivable content'
+[tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of Tree Order'

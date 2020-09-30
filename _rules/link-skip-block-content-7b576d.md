@@ -38,7 +38,7 @@ There exists a [semantic segmentation][] of the test target such that for each [
 - has an [accessible name][] that communicates that it skips this [block][]; and
 - when [activated][], moves keyboard focus to a node which is [at the end][] of this [block][].
 
-**Note:** "last" and "first" [focusable][] elements are to be taken in focus order, not in [tree order][].
+where "last" and "first" [focusable][] elements are to be understood in focus order, not in [tree order][].
 
 ## Assumptions
 

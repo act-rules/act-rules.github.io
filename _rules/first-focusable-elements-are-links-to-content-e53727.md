@@ -152,7 +152,7 @@ The [initial segment][] composed of the first four [focusable][] elements in thi
 		<nav id="local-navigation">
 			<a href="#local-navigation">Skip to local navigation</a>
 			<a href="#part1">Skip to first part</a>
-			<a href="#part1">Skip to first part</a>
+			<a href="#part2">Skip to second part</a>
 			<a href="#bio-translator">Skip to translator's biography</a>
 		</nav>
 
@@ -162,6 +162,7 @@ The [initial segment][] composed of the first four [focusable][] elements in thi
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
+
 			<h1 id="part2">The Sworn Brothers Render Good Services in Fighting Against the Rebels</h1>
 			<p>
 				Several days later, a messenger came with the news that a rebel army of 50,000 men was marching toward the city.

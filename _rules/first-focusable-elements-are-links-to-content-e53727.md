@@ -66,7 +66,7 @@ Each test case contains a link to the second chapter of the book so that each `a
 
 #### Passed Example 1
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations.
+The [initial segment][] composed of the first four [focusable][] elements in this [document][] fulfills both expectations.
 
 ```html
 <html lang="en">

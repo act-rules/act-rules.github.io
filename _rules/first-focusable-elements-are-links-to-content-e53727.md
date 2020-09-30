@@ -994,6 +994,7 @@ This [document][] is not an [HTML web page][].
 [initial segment]: #initial-segment 'Definition of Initial Segment'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
+[segmentation]: #segmentation 'Definition of Segmentation'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
 [visible]: #visible 'Definition of Visible'

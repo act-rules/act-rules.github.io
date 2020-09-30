@@ -335,7 +335,7 @@ Even though they are after the first [block of content][], the four links are st
 
 #### Passed Example 8
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it is styled similarly.
+The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element is not part of the [initial segment][] even though it is styled similarly.
 
 ```html
 <html lang="en">

@@ -72,7 +72,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rules [Document Has no Repeated Content Before Main Content][].
+This [HTML web page][] is passing rule [Document Has no Repeated Content Before Main Content][].
 
 ```html
 <html lang="en">

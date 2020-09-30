@@ -1,6 +1,6 @@
 ---
 id: g0m9ub
-name: Document Has no Repeated Content Before Main Content
+name: Document has no repeated content before main content
 rule_type: atomic
 description: |
   This rule checks that each page has no repeated content before its main content.
@@ -44,7 +44,7 @@ Because the definitions of [block of repeated content][] and [main block of cont
 
 #### Passed Example 1
 
-In this document, the [main block of content][] is the `main` element. The `aside` element is a [block of repeated content][] because it is also present in the document linked at the end of the `main` element. There is no [block of repeated content][] before the [main block of content][]. The only [block of repeated content][] is located after the [main block of content][]. Note that the `nav` element is not a [block of repeated content][].
+In this document, the [main block of content][] is the `main` element. The `aside` element is a [block of repeated content][] because it is also present in the document linked at the end of the `main` element. There is no [block of repeated content][] before the [main block of content][]. The only [block of repeated content][] is located after the [main block of content][].
 
 ```html
 <html lang="en">
@@ -52,10 +52,6 @@ In this document, the [main block of content][] is the `main` element. The `asid
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
-
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -83,10 +79,6 @@ This document has no [block of repeated content][] because none of its content i
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
-
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -101,7 +93,7 @@ This document has no [block of repeated content][] because none of its content i
 
 #### Passed Example 3
 
-This document has no [block of repeated content][] because it does not link any other document.
+This document has no [block of repeated content][] because it does not link any other document. Note that here the `aside` element is not a [block of repeated content][] because this document links to no other.
 
 ```html
 <html lang="en">
@@ -166,7 +158,7 @@ In this document, there is a [block of repeated content][] before the [main bloc
 
 #### Inapplicable Example 1
 
-This [document][] is not a [HTML web page][].
+This [document][] is not an [HTML web page][].
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">

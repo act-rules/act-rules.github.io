@@ -272,6 +272,32 @@ The navigational [block of repeated content][] can be made non-[visible][] and r
 </html>
 ```
 
+#### Passed Example 7
+
+This [document][] has no [block of repeated content][] because there is no other page linked from it.
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1

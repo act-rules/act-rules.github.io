@@ -237,7 +237,7 @@ The [main block of content][] of this [document][] starts with a `div` element w
 
 #### Passed Example 7
 
-This [document][] is using image as heading, the [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
+This [document][] is using an image as heading. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
 
 ```html
 <html>

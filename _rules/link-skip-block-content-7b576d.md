@@ -27,7 +27,7 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectations
+## Expectation
 
 There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], either the last [focusable][] element which is before any [focusable][] element inside this [block][], or the first [focusable][] element which is inside this [block][]:
 

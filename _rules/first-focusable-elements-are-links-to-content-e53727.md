@@ -141,7 +141,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 #### Passed Example 3
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The links do not need to be in the same order as the [blocks of content][block of content].
+The [initial segment][] composed of the first four [focusable][] elements in this [document][] fulfills both expectations. The links do not need to be in the same order as the [blocks of content][block of content].
 
 ```html
 <html lang="en">

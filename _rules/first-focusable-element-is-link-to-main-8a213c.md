@@ -11,8 +11,9 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
+  - Accessibility Tree
   - CSS styling
+  - DOM Tree
   - Language
 acknowledgments:
   authors:

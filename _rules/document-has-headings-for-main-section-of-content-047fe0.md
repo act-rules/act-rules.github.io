@@ -11,8 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
+  - CSS Styling
   - DOM Tree
-  - CSS styling
 acknowledgments:
   authors:
     - Jean-Yves Moyen

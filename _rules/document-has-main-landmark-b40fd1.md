@@ -6,8 +6,9 @@ description: |
   This rule checks that each page has an element with a semantic role of `main`
 accessibility_requirements:
 input_aspects:
-  - DOM Tree
+  - Accessibility Tree
   - CSS styling
+  - DOM Tree
 acknowledgments:
   authors:
     - Jean-Yves Moyen

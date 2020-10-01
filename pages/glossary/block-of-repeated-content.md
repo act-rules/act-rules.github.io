@@ -12,7 +12,7 @@ input_aspects:
 A [block of content][], B, inside an [HTML web page][], P, is a _block of repeated content_ if:
 
 - (**distance 1**) there exist an [instrument][] in P  which leads the user to another [HTML web page][] P'; and
-- (**repeated**) there exist in P' a [block of content][] which is [equivalent][equivalent resource] to B.
+- (**repeated**) there exist a [block of content][] in P'  which is [equivalent][equivalent resource] to B.
 
 Note that this definition only consider pages at "distance 1" from the current page. The instrument leading there will usually be either a link, sometimes a button. Note also that P' can be any page and is not restricted, for example, to pages of the same website.
 

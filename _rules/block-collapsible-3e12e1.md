@@ -1,6 +1,6 @@
 ---
 id: 3e12e1
-name: Block of content is expandable and collapsible
+name: Block of repeated content is expandable and collapsible
 rule_type: atomic
 description: |
   This rule checks that repeated blocks of content are expandable and collapsible
@@ -11,8 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
+  - CSS Styling
   - DOM Tree
-  - CSS styling
 acknowledgments:
   authors:
     - Jean-Yves Moyen

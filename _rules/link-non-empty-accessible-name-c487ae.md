@@ -185,7 +185,7 @@ This `a` element has an empty [accessible name][].
 
 #### Failed Example 2
 
-This `a` element with an image has an empty [accessible name][]. The image is decorative because it has an empty `alt` [attribute value][].
+This `a` element with an image has an empty [accessible name][]. The image is decorative and is marked as such with an empty `alt` [attribute value][].
 
 ```html
 <a href="http://www.w3.org/WAI"><img src="/test-assets/shared/w3c-logo.png" alt=""/></a>

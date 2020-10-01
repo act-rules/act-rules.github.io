@@ -86,7 +86,7 @@ This `h1` element has an non-empty [accessible name][] given by the `aria-labell
 This `h1` element has an non-empty [accessible name][] given by the `alt` attribute of its content.
 
 ```html
-<h1><img src="#" alt="ACT rules" /></h1>
+<h1><img src="/test-assets/shared/act-logo.png" alt="ACT rules" /></h1>
 ```
 
 #### Passed Example 5
@@ -113,7 +113,7 @@ This `h1` element has an empty [accessible name][] given by its `aria-labelledby
 This `h1` element has an empty [accessible name][] because the `img` element has a [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element. Note that the `alt` attribute does not trigger [Presentational Roles Conflict Resolution][] because it is not an ARIA attribute.
 
 ```html
-<h1><img src="#" alt="ACT rules" role="presentation" /></h1>
+<h1><img src="/test-assets/shared/act-logo.png" alt="ACT rules" role="presentation" /></h1>
 ```
 
 #### Failed Example 3

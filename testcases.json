@@ -2242,6 +2242,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -2275,6 +2281,12 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -2316,6 +2328,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -2349,6 +2367,12 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -2390,6 +2414,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -2423,6 +2453,12 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -2464,6 +2500,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         }
       }
     },
@@ -2497,6 +2539,12 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G170": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G171": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",

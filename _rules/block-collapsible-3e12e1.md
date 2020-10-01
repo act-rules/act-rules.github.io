@@ -303,7 +303,7 @@ This [document][] has no [block of repeated content][] because there is no other
 
 #### Failed Example 1
 
-There is no [instrument][] to toggle the navigational [block of repeated content][].
+In this document, there is no [instrument][] to toggle the navigational [block of repeated content][].
 
 ```html
 <html>
@@ -332,7 +332,7 @@ There is no [instrument][] to toggle the navigational [block of repeated content
 
 #### Failed Example 2
 
-The [instrument][] to toggle the navigational [block of repeated content][] is not [visible][].
+In this document, the [instrument][] to toggle the navigational [block of repeated content][] is not [visible][].
 
 ```html
 <html>
@@ -366,7 +366,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 
 #### Failed Example 3
 
-The [instrument][] to toggle the navigational [block of repeated content][] is not [included in the accessibility tree][].
+In this document, the [instrument][] to toggle the navigational [block of repeated content][] is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -398,7 +398,7 @@ The [instrument][] to toggle the navigational [block of repeated content][] is n
 
 #### Failed Example 4
 
-There is no [instrument][] to toggle the [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][].
+In this document, there is an [instrument][] to toggle [visibility][visible] of the navigational [block of repeated content][], but none to toggle its [inclusion in the accessibility tree][included in the accessibility tree].
 
 ```html
 <html>
@@ -431,7 +431,7 @@ There is no [instrument][] to toggle the [inclusion in the accessibility tree][i
 
 #### Failed Example 5
 
-There is no [instrument][] to toggle the [visibility][visible] of the navigational [block of repeated content][].
+In this document, there is an instrument to toggle [inclusion on the accessibility tree][included in the accessibility tree] of the [block of repeated content][], but none to toggle its [visibility][visible].
 
 ```html
 <html>

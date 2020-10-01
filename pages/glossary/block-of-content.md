@@ -16,7 +16,7 @@ A _block of content_ in an [HTML web page][] is a set of nodes from that page su
 - (**downward closure**) if a node is in the block, then all its descendants are also in the block; and
 - (**parent closure**) if all children of a node are in the block, then this node is also in the block.
 
-Note that when the rendering order of nodes on a page greatly differ from the DOM tree order, blocks of content as defined here may be different from what is visually perceived as "content in close relationship".
+**Note:** When the rendering order of nodes on a page greatly differs from the DOM tree order, blocks of content as defined here may be different from what is visually perceived as "content in a close relationship".
 
 [html web page]: #web-page-html 'Definition of Web Page'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'

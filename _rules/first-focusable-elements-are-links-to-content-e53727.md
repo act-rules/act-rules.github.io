@@ -67,7 +67,7 @@ Each test case contains a link to the second chapter of the book so that each `a
 
 #### Passed Example 1
 
-The [initial segment][] composed of the first four [focusable][] elements in this [document][] fulfills both expectations.
+In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations.
 
 ```html
 <html lang="en">
@@ -105,7 +105,7 @@ The [initial segment][] composed of the first four [focusable][] elements in thi
 
 #### Passed Example 2
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. There is no link in it to go to the `nav` [block of content][], but this is not a problem since it is the first [block of content][] in the [semantic segmentation][].
+In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. There is no link in it to go to the `nav` [block of content][], but this is not a problem since it is the first [block of content][] in the [semantic segmentation][].
 
 ```html
 <html lang="en">
@@ -142,7 +142,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 #### Passed Example 3
 
-The [initial segment][] composed of the first four [focusable][] elements in this [document][] fulfills both expectations. In this case, the four [blocks][block of content] of the [semantic segmentation][] are the `nav` element, the `aside` element, and both parts of the text (`h1` and `p` elements). Note that the [main block of content][] is split into several [blocks][block of content] in this [semantic segmentation][].
+In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations. In this case, the four [blocks][block of content] of the [semantic segmentation][] are the `nav` element, the `aside` element, and both parts of the text (`h1` and `p` elements). Note that the [main block of content][] is split into several [blocks][block of content] in this [semantic segmentation][].
 
 ```html
 <html lang="en">
@@ -181,7 +181,7 @@ The [initial segment][] composed of the first four [focusable][] elements in thi
 
 #### Passed Example 4
 
-The [initial segment][] composed of the first four [focusable][] elements in this [document][] fulfills both expectations. The links do not need to be in the same order as the [blocks of content][block of content].
+In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations. The links do not need to be in the same order as the [blocks of content][block of content].
 
 ```html
 <html lang="en">
@@ -219,7 +219,7 @@ The [initial segment][] composed of the first four [focusable][] elements in thi
 
 #### Passed Example 5
 
-The links in the [initial segment][] (composed of the first three focusable elements) are [visible][] when [focused][].
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) are [visible][] when [focused][].
 
 ```html
 <html lang="en">
@@ -257,7 +257,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 6
 
-The first three [focusable][] elements have a [semantic role][] of `link` and can be [activated][] by keyboard.
+In this document, the first three [focusable][] elements have a [semantic role][] of `link` and can be [activated][] by keyboard.
 
 ```html
 <html lang="en">
@@ -299,7 +299,7 @@ The first three [focusable][] elements have a [semantic role][] of `link` and ca
 
 #### Passed Example 7
 
-The links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
 <html lang="en">
@@ -336,7 +336,7 @@ The links in the [initial segment][] (composed of the first three focusable elem
 
 #### Passed Example 8
 
-Even though they are after the first [block of content][], the four links are still the first [focusable][] elements and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
+In this document, the four links are the first [focusable][] elements, even though they are after the first [block of content][], and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
 <html lang="en">
@@ -375,7 +375,7 @@ Even though they are after the first [block of content][], the four links are st
 
 #### Passed Example 9
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element is not part of the [initial segment][] even though it is styled similarly.
+In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. The fourth [focusable][] element is not part of the [initial segment][] even though it is styled similarly.
 
 ```html
 <html lang="en">
@@ -413,7 +413,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 #### Passed Example 10
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [block of content][] inside the [semantic segmentation][].
+In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [block of content][] inside the [semantic segmentation][].
 
 ```html
 <html lang="en">
@@ -451,7 +451,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 #### Passed Example 11
 
-The first three [focusable][] elements are the links to the various [blocks of content][block of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
+In this document, the first three [focusable][] elements are the links to the various [blocks of content][block of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -489,7 +489,7 @@ The first three [focusable][] elements are the links to the various [blocks of c
 
 #### Passed Example 12
 
-The [initial segment][] composed of the first three [focusable][] elements in this [document][] fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements. In this case, there are only three [blocks of content][block of content] in the [semantic segmentation][]: both `aside` elements and the `main` element.
+In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements. In this case, there are only three [blocks of content][block of content] in the [semantic segmentation][]: both `aside` elements and the `main` element.
 
 ```html
 <html lang="en">
@@ -525,7 +525,7 @@ The [initial segment][] composed of the first three [focusable][] elements in th
 
 #### Failed Example 1
 
-This [HTML web page][] has no link to skip to the various [blocks of content][block of content]. Even if we consider a [semantic segmentation][] with only two [blocks][block of content] (both `aside` elements in a single block), there is still no link to skip to the second one.
+This document has no link to skip to the various [blocks of content][block of content]. Even if we consider a [semantic segmentation][] with only two [blocks][block of content] (both `aside` elements in a single block), there is still no link to skip to the second one.
 
 ```html
 <html lang="en">
@@ -556,7 +556,7 @@ This [HTML web page][] has no link to skip to the various [blocks of content][bl
 
 #### Failed Example 2
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. A [segmentation][] with one block for the `nav` element, one for the first `aside` element, and one for both the second `aside` and the `main` elements is not a [semantic segmentation][] since the third block contain nodes from both inside and outside the [main block of content][] (the `main` element).
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. A [segmentation][] with one block for the `nav` element, one for the first `aside` element, and one for both the second `aside` and the `main` elements is not a [semantic segmentation][] since the third block contain nodes from both inside and outside the [main block of content][] (the `main` element).
 
 ```html
 <html lang="en">
@@ -592,8 +592,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 3
 
-The first, second and fourth links form a set that fulfills Expectation 2 and most of Expectation 1. However, the presence of the third link means that this set is not an [initial segment][]. The first two links form an [initial segment][] fulfilling Expectation 1, but not Expectation 2 because there is no link to the [main block of content][].
-There is no [initial segment][] fulfilling both expectations.
+In this document, the first, second and fourth links form a set that fulfills Expectation 2 and most of Expectation 1. However, the presence of the third link means that this set is not an [initial segment][]. The first two links form an [initial segment][] fulfilling Expectation 1, but not Expectation 2 because there is no link to the [main block of content][]. There is no [initial segment][] fulfilling both expectations.
 
 ```html
 <html lang="en">
@@ -631,7 +630,7 @@ There is no [initial segment][] fulfilling both expectations.
 
 #### Failed Example 4
 
-The first three [focusable][] elements in this [document][] form an [initial segment][] that fulfills most conditions but none of these elements are [included in the accessibility tree][].
+In this document, the first three [focusable][] elements in this [document][] form an [initial segment][] that fulfills most conditions but none of these elements are [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -668,7 +667,7 @@ The first three [focusable][] elements in this [document][] form an [initial seg
 
 #### Failed Example 5
 
-The first [focusable][] element form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The first three [focusable][] elements form an [initial segment][] that fulfills Expectation 2 but not Expectation 1 because the second [focusable][] element is not [included in the accessibility tree][]. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first [focusable][] element form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The first three [focusable][] elements form an [initial segment][] that fulfills Expectation 2 but not Expectation 1 because the second [focusable][] element is not [included in the accessibility tree][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -705,7 +704,7 @@ The first [focusable][] element form an [initial segment][] that fulfills Expect
 
 #### Failed Example 6
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it is not [visible][], even when [focused][]. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it is not [visible][], even when [focused][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -742,7 +741,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 7
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not have a [semantic role][] of `link`. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it does not have a [semantic role][] of `link`. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -780,7 +779,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 8
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it cannot be [activated][] by keyboard. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because it cannot be [activated][] by keyboard. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -822,7 +821,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 9
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intent. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] does not communicate the intent. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -859,7 +858,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 10
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element does not fulfill Expectation 1 because its [accessible name][] is empty and thus does not communicate the intend. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">
@@ -896,7 +895,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 11
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation 2 because there are two links to the same [block of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The first three or four [focusable][] elements form an [initial segment][] that does not fulfill Expectation 2 because there are two links to the same [block of content][]. Thus, there is no [initial segment][] of [focusable][] element fulfilling both Expectations.
 
 ```html
 <html lang="en">
@@ -934,7 +933,7 @@ The first two [focusable][] elements form an [initial segment][] that fulfills E
 
 #### Failed Example 12
 
-The first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the [main block of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [block of content][]. Thus, no [initial segment][] fulfills both Expectations.
+In this document, the first two [focusable][] elements form an [initial segment][] that fulfills Expectation 1 but not Expectation 2 because there is no link to the [main block of content][]. The third [focusable][] element is the link to W3C (even though it is located after the link to the [main block of content][] in tree order, it is before it in focus order due to the `tabindex` attribute). It does not fulfill Expectation 1 because it does not moves focus to a [block of content][]. Thus, no [initial segment][] fulfills both Expectations.
 
 ```html
 <html lang="en">

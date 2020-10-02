@@ -129,21 +129,21 @@ This [document][] has one [block of content][] for the navigation links, and the
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<!-- Navigational section of content starts here -->
+		<!-- Navigational block of content starts here -->
 		<h1>Content</h1>
 		<ol>
 			<li>Chapter 1</li>
 			<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 		</ol>
-		<!-- Navigational section of content ends here -->
+		<!-- Navigational block of content ends here -->
 
-		<!-- Main section of content starts here -->
+		<!-- Main block of content starts here -->
 		<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 		<p>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
 		</p>
-		<!-- Main section of content ends here -->
+		<!-- Main block of content ends here -->
 	</body>
 </html>
 ```
@@ -179,7 +179,7 @@ In this [document][], the heading is not the first element of the [main block of
 
 #### Passed Example 5
 
-The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
+In this document, the image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
 
 ```html
 <html>
@@ -302,7 +302,7 @@ This [document][] has a `h1` heading at the start of its [main block of content]
 
 #### Failed Example 1
 
-For the [main block of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
+In this document, inside the [main block of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
 
 ```html
 <html>
@@ -358,7 +358,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 
 #### Failed Example 3
 
-The heading of the [main block of content][] is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
+The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [included in the accessibility tree][] (because of the `aria-hidden` attribute).
 
 ```html
 <html>
@@ -375,39 +375,6 @@ The heading of the [main block of content][] is not [included in the accessibili
 
 		<main>
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Failed Example 4
-
-The `h1` element at the start of the [main block of content][] has an empty [accessible name][] (because of the `aria-labelledby` attribute). Therefore, the first node with a non-empty [accessible name][] is the `img` element which does not have a [semantic role][] of `heading`.
-
-```html
-<html>
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav id="chapters-navigation">
-			<ol>
-				<li>Chapter 1</li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<main>
-			<span id="label"></span>
-			<h1 aria-labelledby="label">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<img
-				src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
-				alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
-			/>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.

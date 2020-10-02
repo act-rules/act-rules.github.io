@@ -60,7 +60,7 @@ In the test cases, the `aside` and `nav` elements are each a [block of repeated 
 
 #### Passed Example 1
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it does not contain a [block of repeated content][], so this is not a problem.
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it does not contain a [block of repeated content][], so this is not a problem.
 
 ```html
 <html>
@@ -92,7 +92,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Passed Example 2
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, both the `nav` and `aside` elements form a single [block][block of content] of the [semantic segmentation][] fulfilling expectation.
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, both the `nav` and `aside` elements form a single [block][block of content] of the [semantic segmentation][] fulfilling expectation.
 
 ```html
 <html>
@@ -171,7 +171,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Passed Example 4
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off, each of them by a different [instrument][].
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off, each of them by a different [instrument][].
 
 ```html
 <html>
@@ -209,7 +209,7 @@ The [visibility][visible] and [inclusion in the accessibility tree][included in 
 
 #### Passed Example 5
 
-The [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document.
+In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document.
 
 ```html
 <html>
@@ -243,7 +243,7 @@ The [visibility][visible] of the navigational [block of repeated content][] can 
 
 #### Passed Example 6
 
-The navigational [block of repeated content][] can be made non-[visible][] and removed from the accessibility tree by the button at the start of the document.
+In this document, the navigational [block of repeated content][] can be made non-[visible][] and [removed from the accessibility tree][included in the accessibility tree] by the button at the start of the document. In this case, there is no way to show it again once it's hidden.
 
 ```html
 <html>
@@ -303,7 +303,7 @@ This [document][] has no [block of repeated content][] because there is no other
 
 #### Failed Example 1
 
-In this document, there is no [instrument][] to toggle the navigational [block of repeated content][].
+This document has no [instrument][] to toggle the navigational [block of repeated content][].
 
 ```html
 <html>
@@ -332,7 +332,7 @@ In this document, there is no [instrument][] to toggle the navigational [block o
 
 #### Failed Example 2
 
-In this document, the [instrument][] to toggle the navigational [block of repeated content][] is not [visible][].
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [visible][].
 
 ```html
 <html>
@@ -366,7 +366,7 @@ In this document, the [instrument][] to toggle the navigational [block of repeat
 
 #### Failed Example 3
 
-In this document, the [instrument][] to toggle the navigational [block of repeated content][] is not [included in the accessibility tree][].
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [included in the accessibility tree][].
 
 ```html
 <html>
@@ -398,7 +398,7 @@ In this document, the [instrument][] to toggle the navigational [block of repeat
 
 #### Failed Example 4
 
-In this document, there is an [instrument][] to toggle [visibility][visible] of the navigational [block of repeated content][], but none to toggle its [inclusion in the accessibility tree][included in the accessibility tree].
+This document has an [instrument][] to toggle [visibility][visible] of the navigational [block of repeated content][], but none to toggle its [inclusion in the accessibility tree][included in the accessibility tree].
 
 ```html
 <html>
@@ -431,7 +431,7 @@ In this document, there is an [instrument][] to toggle [visibility][visible] of 
 
 #### Failed Example 5
 
-In this document, there is an instrument to toggle [inclusion on the accessibility tree][included in the accessibility tree] of the [block of repeated content][], but none to toggle its [visibility][visible].
+This document has an instrument to toggle [inclusion on the accessibility tree][included in the accessibility tree] of the [block of repeated content][], but none to toggle its [visibility][visible].
 
 ```html
 <html>

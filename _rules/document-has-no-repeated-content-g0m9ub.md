@@ -93,7 +93,7 @@ This document has no [block of repeated content][] because none of its content i
 
 #### Passed Example 3
 
-This document has no [block of repeated content][] because it does not link any other document. Note that here the `aside` element is not a [block of repeated content][] because this document links to no other.
+This document has no [block of repeated content][] because it does not link any other document. Note that the `aside` element might actually be repeated on other pages of the same website, but without direct link to them, it does not fulfil the condition for being a [block of repeated content][].
 
 ```html
 <html lang="en">

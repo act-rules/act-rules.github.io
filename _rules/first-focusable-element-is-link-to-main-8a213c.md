@@ -65,7 +65,7 @@ Unless specified otherwise, the [main block of content][] of each document is de
 
 #### Passed Example 1
 
-The first [focusable][] element is [visible][], is [included in the accessibility tree][], is a link, and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+In this document, the first [focusable][] element is [visible][], is [included in the accessibility tree][], is a link, and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html lang="en">
@@ -95,7 +95,7 @@ The first [focusable][] element is [visible][], is [included in the accessibilit
 
 #### Passed Example 2
 
-The link to skip to the [main block of content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
+In this document, the link to skip to the [main block of content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
 
 ```html
 <html lang="en">
@@ -126,7 +126,7 @@ The link to skip to the [main block of content][] is [included in the accessibil
 
 #### Passed Example 3
 
-The element to skip to the [main block of content][] is [visible][], has a [semantic role][] of `link` and can be [activated][] by keyboard only.
+In this document, the element to skip to the [main block of content][] is [visible][], has a [semantic role][] of `link` and can be [activated][] by keyboard only.
 
 ```html
 <html lang="en">
@@ -157,7 +157,7 @@ The element to skip to the [main block of content][] is [visible][], has a [sema
 
 #### Passed Example 4
 
-The link to skip to the [main block of content][] has an [accessible name][] that communicates that it links to the [main block of content][].
+In this document, the link to skip to the [main block of content][] has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -187,7 +187,7 @@ The link to skip to the [main block of content][] has an [accessible name][] tha
 
 #### Passed Example 5
 
-Even though it is located after it in tree order, the link to skip to the [main block of content][] is still the first [focusable][] element within the page.
+In this document, the link to skip to the [main block of content][] is the first [focusable][] element, even though it is located after the `aside` element in tree order.
 
 ```html
 <html lang="en">
@@ -217,7 +217,7 @@ Even though it is located after it in tree order, the link to skip to the [main 
 
 #### Passed Example 6
 
-The first [focusable][] element within this page is the link to the [main block of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
+In this document, the first [focusable][] element is the link to the [main block of content][]. The link to W3C is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -248,7 +248,7 @@ The first [focusable][] element within this page is the link to the [main block 
 
 #### Passed Example 7
 
-The first [focusable][] element within this page is the link to the [main block of content][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][].
+In this document, the first [focusable][] element is the link to the [main block of content][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][].
 
 ```html
 <html lang="en">
@@ -279,7 +279,7 @@ The first [focusable][] element within this page is the link to the [main block 
 
 #### Passed Example 8
 
-The first [focusable][] element within this page is the link to the [main block of content][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][].
+In this document, the first [focusable][] element is the link to the [main block of content][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][].
 
 ```html
 <html lang="en">
@@ -313,7 +313,7 @@ The first [focusable][] element within this page is the link to the [main block 
 
 #### Failed Example 1
 
-There is no link to skip to the [main block of content][].
+This document has no link to skip to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -339,7 +339,7 @@ There is no link to skip to the [main block of content][].
 
 #### Failed Example 2
 
-The link to skip to the [main block of content][] is not the first [focusable][] element within the page.
+In this document, the link to skip to the [main block of content][] is not the first [focusable][] element within the page.
 
 ```html
 <html lang="en">
@@ -371,7 +371,7 @@ The link to skip to the [main block of content][] is not the first [focusable][]
 
 #### Failed Example 3
 
-The link to skip to the [main block of content][] is not [included in the accessibility tree][].
+In this document, the link to skip to the [main block of content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -401,7 +401,7 @@ The link to skip to the [main block of content][] is not [included in the access
 
 #### Failed Example 4
 
-The link to skip to the [main block of content][] is not [visible][], even when focused.
+In this document, the link to skip to the [main block of content][] is not [visible][], even when focused.
 
 ```html
 <html lang="en">
@@ -431,7 +431,7 @@ The link to skip to the [main block of content][] is not [visible][], even when 
 
 #### Failed Example 5
 
-The element with a click event to skip to the [main block of content][] does not have a [semantic role][] of `link`.
+In this document, the element with a click event to skip to the [main block of content][] does not have a [semantic role][] of `link`.
 
 ```html
 <html lang="en">
@@ -461,7 +461,7 @@ The element with a click event to skip to the [main block of content][] does not
 
 #### Failed Example 6
 
-The link to skip to the [main block of content][] cannot be [activated][] by keyboard only.
+In this document, the link to skip to the [main block of content][] cannot be [activated][] by keyboard only.
 
 ```html
 <html lang="en">
@@ -491,7 +491,7 @@ The link to skip to the [main block of content][] cannot be [activated][] by key
 
 #### Failed Example 7
 
-The link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
+In this document, the link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -521,7 +521,7 @@ The link to skip to the [main block of content][] does not reference a valid `id
 
 #### Failed Example 8
 
-The link to skip to the [main block of content][] does not have an [accessible name][] that communicates its intent.
+In this document, the link to skip to the [main block of content][] does not have an [accessible name][] that communicates its intent.
 
 ```html
 <html lang="en">
@@ -551,7 +551,7 @@ The link to skip to the [main block of content][] does not have an [accessible n
 
 #### Failed Example 9
 
-The first [focusable][] element within this page is the link to W3C. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
+In this document, the first [focusable][] element is the link to W3C. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -582,7 +582,7 @@ The first [focusable][] element within this page is the link to W3C. The link to
 
 #### Failed Example 10
 
-The first [focusable][] element within this page does not move focus [at the start][] of the [main block of content][] (the focus is moved before the start).
+In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved before the start).
 
 ```html
 <html lang="en">
@@ -612,7 +612,7 @@ The first [focusable][] element within this page does not move focus [at the sta
 
 #### Failed Example 11
 
-The first [focusable][] element within this page does not move focus [at the start][] of the [main block of content][] (the focus is moved after the start).
+In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved after the start).
 
 ```html
 <html lang="en">

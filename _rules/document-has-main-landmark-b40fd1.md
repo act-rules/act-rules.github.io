@@ -129,7 +129,7 @@ This [document][] has no element with a role of `main`.
 
 #### Failed Example 2
 
-The `main` [landmark][] is not [included in the accessibility tree][].
+This document has a `main` [landmark][], but it is not [included in the accessibility tree][].
 
 ```html
 <html>

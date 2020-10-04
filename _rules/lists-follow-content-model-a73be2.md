@@ -21,11 +21,25 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to every `ul` , `ol` , and `dl` HTML elements where the [semantic role][] is the same as the [implicit semantic role][].
+The rule applies to every `ul` , `ol` , and `dl` [HTML elements][] for which
 
-## Expectation
+- the [semantic role][] is the same as the [implicit semantic role][]; and
+- is [included in the accessibility tree][]; and
+- is [visible][].
 
-Each test target has at least one [descendant][] in the [flat tree][] that is categorized as [palpable content][], which does not have the [hidden][] attribute specified.
+## Expectation 1
+
+Each test target of type [HTML `<ul>` element][] or [HTML `<ol>` element][], has at least one [HTML `<li>` element][] as a [descendant][] in the [flat tree][] which
+
+- has non-empty [text][]; and
+- does not have the [hidden][] attribute.
+
+## Expectation 2
+
+Each test target of type [HTML `<dl>` element][] has at least one name-value group as a [descendant][] in the [flat tree][] which
+
+- has non-empty [text][]; and
+- does not have the [hidden][] attribute.
 
 ## Assumptions
 
@@ -37,9 +51,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [HTML Specification - Content model](https://html.spec.whatwg.org/#concept-element-content-model)
-- [HTML Specification - Flow content](https://html.spec.whatwg.org/#flow-content)
-- [HTML Specification - Palpable content](https://html.spec.whatwg.org/#palpable-content)
 
 ## Test Cases
 
@@ -47,7 +60,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `ul` element has a [descendant][] of type [palpable content][].
+This [HTML `<ul>` element][] has a non-empty [descendant][] of type [HTML `<li>` element][].
 
 ```html
 <ul>
@@ -59,7 +72,7 @@ This `ul` element has a [descendant][] of type [palpable content][].
 
 #### Passed Example 2
 
-This `dl` element contains at least one [descendant][] of type [palpable content][].
+This [HTML `<dl>` element][] contains at least one name-value group as [descendant][].
 
 ```html
 <dl>
@@ -70,7 +83,7 @@ This `dl` element contains at least one [descendant][] of type [palpable content
 
 #### Passed Example 3
 
-This `ol` element contains at least one [descendant][] of type [palpable content][].
+This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][].
 
 ```html
 <ol>
@@ -85,7 +98,7 @@ This `ol` element contains at least one [descendant][] of type [palpable content
 
 #### Failed Example 1
 
-This `ul` element contains [palpable content][] that is [hidden][].
+This [HTML `<ul>` element][] contains [HTML `<li>` element][] that is [hidden][].
 
 ```html
 <ul>
@@ -97,7 +110,7 @@ This `ul` element contains [palpable content][] that is [hidden][].
 
 #### Failed Example 2
 
-This `ol` element does not have any [descendant][] of type [palpable content][].
+This [HTML `<ol>` element][] has [HTML `<li>` element][] with empty [text][] as [descendant][].
 
 ```html
 <ol>
@@ -127,9 +140,28 @@ This rule is not applicable to `ul` element where the [semantic role][] is not t
 </ul>
 ```
 
+#### Inapplicable Example 3
+
+This rule is not applicable to [HTML elements][] with `list` or `listitem` ARIA roles, because the [semantic role][] is not the same as the [implicit semantic role][].
+
+```html
+<div role="list">
+	<div role="listitem">
+		<p>Some text</p>
+	</div>
+</div>
+```
+
+[html elements]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [semantic role]: #semantic-role 'Definition of semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
-[palpable content]: https://html.spec.whatwg.org/#palpable-content 'HTML Specification - Palpable content'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'HTML Specification - Descendants'
 [hidden]: https://html.spec.whatwg.org/#the-hidden-attribute 'HTML Specification - The hidden attribute'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[text]: https://html.spec.whatwg.org/multipage/dom.html#text-content
+[html `<ol>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
+[html `<ul>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
+[html `<li>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+[html `<dl>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
+[visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

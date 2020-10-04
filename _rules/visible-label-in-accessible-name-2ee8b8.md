@@ -36,9 +36,7 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-The complete [visible text content][] of the target element either matches or is contained within its [accessible name][].
-
-**Note:** Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+For each target element, all [text nodes][] in the [visible text content][] either match or are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -77,10 +75,32 @@ This link has [visible][] text that, ignoring case, matches the [accessible name
 
 #### Passed Example 3
 
-This button has [visible][] text that is included in the [accessible name][].
+This button has [visible][] text that is contained within the [accessible name][].
 
 ```html
 <button aria-label="Next Page in the list">Next Page</button>
+```
+
+#### Passed Example 4
+
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
+
+```html
+<button aria-label="close">X</button>
+```
+
+#### Passed Example 5
+
+This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+	button {
+		font-family: 'Material Icons';
+	}
+</style>
+<button aria-label="Find">search</button>
 ```
 
 ### Failed
@@ -95,7 +115,7 @@ This link has [visible][] text that is different from the [accessible name][].
 
 #### Failed Example 2
 
-This button has [visible][] text that is only partially included in the [accessible name][].
+This button has [visible][] text that is only partially contained within the [accessible name][].
 
 ```html
 <button aria-label="the full">The full label</button>
@@ -141,21 +161,13 @@ This `div` element does not have a widget role, so the [visible][] text does not
 This link has no [visible text content][].
 
 ```html
-<a href="//w3.org" aria-label="W3C homepage">
+<a href="https://w3.org" aria-label="W3C homepage">
 	<img src="/test-assets/shared/w3c-logo.png" alt="w3c logo" />
 </a>
 ```
 
-#### Inapplicable Example 5
-
-The content of this link is [non-text content][].
-
-```html
-<button aria-label="close">X</button>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'Definition of Non-text content'
+[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
@@ -163,3 +175,4 @@ The content of this link is [non-text content][].
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
 [widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
+[text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, 2020/08/18'

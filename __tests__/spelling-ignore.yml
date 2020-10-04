@@ -26,6 +26,7 @@
 - WCAG2
 - WCAG21
 - CSS3
+- css # lowercase needed in reference list
 - UA
 - UI
 - api # lowercase needed in reference list
@@ -41,10 +42,13 @@
 - PDFs
 - DOCX
 - DPUB
+- dpub # lowercase needed in reference list
 - CSSOM
 - DNS
 - BCP
 - bcp
+- IDL
+- idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -63,12 +67,16 @@
 - wai-aria-specifications
 - autoplay
 - autoplays
+- autoplaying
 - columnheader
 - rowheader
 - colspan
 - presentational
 - sc
 - dropdown
+- getModifierState
+- accesskey
+- Accesskeys
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -145,6 +153,7 @@
 - columnheader
 - innerText
 - isTrusted
+- isComposing
 
 # DOM Events
 - auxclick
@@ -154,6 +163,7 @@
 - dblclick
 - keydown
 - keyup
+- keypressed
 - mousedown
 - mouseenter
 - mouseleave
@@ -175,6 +185,7 @@
 - nowrap
 - javascript
 - Reflow
+- reflow
 - Viewport
 - dom-meta-content
 
@@ -190,6 +201,7 @@
 - scrollable
 - scrollbars
 - subconditions
+- subtree
 
 # Parts of Unicode
 - 000A
@@ -206,3 +218,7 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+
+# Language codes
+- da
+- nl

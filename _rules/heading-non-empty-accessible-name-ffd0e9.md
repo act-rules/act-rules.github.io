@@ -44,6 +44,8 @@ _There are currently no assumptions._
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
+- The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case.
+
 ## Background
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
@@ -84,7 +86,7 @@ This `h1` element has an non-empty [accessible name][] given by the `aria-labell
 This `h1` element has an non-empty [accessible name][] given by the `alt` attribute of its content.
 
 ```html
-<h1><img src="#" alt="ACT rules" /></h1>
+<h1><img src="/test-assets/shared/act-logo.png" alt="ACT rules" /></h1>
 ```
 
 #### Passed Example 5
@@ -111,7 +113,7 @@ This `h1` element has an empty [accessible name][] given by its `aria-labelledby
 This `h1` element has an empty [accessible name][] because the `img` element has a [semantic role][] of `presentation`, and thus does not provide an [accessible name][] to the `h1` element. Note that the `alt` attribute does not trigger [Presentational Roles Conflict Resolution][] because it is not an ARIA attribute.
 
 ```html
-<h1><img src="#" alt="ACT rules" role="presentation" /></h1>
+<h1><img src="/test-assets/shared/act-logo.png" alt="ACT rules" role="presentation" /></h1>
 ```
 
 #### Failed Example 3

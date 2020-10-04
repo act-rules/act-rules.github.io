@@ -162,7 +162,7 @@ The `lang` [attribute value][] has a valid language tag, but its [descendant][] 
 
 #### Failed Example 5
 
-The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [visible][], it is still [included in the accessibility tree][].
+The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
 
 ```html
 <html>
@@ -211,7 +211,7 @@ The `lang` [attribute value][] has a valid language tag, but does not have a [vi
 ```html
 <html>
 	<body>
-		<p lang="en">
+		<p lang="hidden">
 			<span style="display: none;">
 				They wandered into a strange Tiki bar on the edge of the small beach town.
 			</span>

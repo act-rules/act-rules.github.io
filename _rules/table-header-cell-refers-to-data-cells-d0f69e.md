@@ -1,6 +1,6 @@
 ---
 id: d0f69e
-name: All table header cells have assigned data cells
+name: Table header cell has assigned data cells
 rule_type: atomic
 description: |
   This rule checks that each table header has assigned data cells in a table element.

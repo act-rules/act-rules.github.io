@@ -209,7 +209,7 @@ This [text node][] has no [ancestor][] with `overflow: hidden` or `clip`.
 This [text node][] has an [ancestor][] with `aria-hidden` set to `true`.
 
 ```html
-<img src="/assets/shared/w3c-logo.png" alt="W3C logo" /> <span aria-hidden="true">(W3C Logo)</span>
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" /> <span aria-hidden="true">(W3C Logo)</span>
 ```
 
 #### Inapplicable Example 5

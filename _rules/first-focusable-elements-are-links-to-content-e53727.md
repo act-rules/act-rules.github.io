@@ -38,7 +38,7 @@ Within the test target, there is an [initial segment][] of the [focusable][] ele
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target, such that for each [block of content][] in it, except possibly for the first:
+There exists a [semantic segmentation][] of the test target, such that for the the first [block][] inside the [main block of content][], and for each [block of content][] which is before the [main block of content][] and contains at least one [block of repeated content][], except possibly for the first:
 
 - there is exactly one link from the [initial segment][] found by Expectation 1 which, when [activated][], moves focus [at the start][] of this [block of content][]; and
 - that link has an [accessible name][] that communicates that it links to this specific [block of content][].
@@ -141,6 +141,8 @@ In this document, the [initial segment][] composed of the first three [focusable
 ```
 
 #### Passed Example 3
+
+TODO: REMOVE? OR CHANGE A BIT. SUBSECTIONS MIGHT STILL BE WORTH SHOWING
 
 In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations. In this case, the four [blocks][block of content] of the [semantic segmentation][] are the `nav` element, the `aside` element, and both parts of the text (`h1` and `p` elements). Note that the [main block of content][] is split into several [blocks][block of content] in this [semantic segmentation][].
 

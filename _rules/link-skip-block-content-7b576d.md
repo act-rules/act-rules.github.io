@@ -53,6 +53,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. Any [semantic segmentation][] would then satisfy the expectation because universal quantification on the empty set is always true.
+
 - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 

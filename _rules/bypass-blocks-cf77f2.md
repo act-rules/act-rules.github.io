@@ -11,7 +11,6 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_rules:
-  - g0m9ub
   - 047fe0
   - 7b576d
   - 8a213c
@@ -35,7 +34,6 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Document Has no Repeated Content Before Main Content][]; or
 - [Block of content is expandable and collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
@@ -72,36 +70,6 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [Document Has no Repeated Content Before Main Content][].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
-		</aside>
-
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 2
-
 This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
 
 ```html
@@ -132,7 +100,7 @@ This [HTML web page][] is passing rule [block of content is expandable and colla
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
 This [HTML web page][] is passing rule [Document has heading for main section of content][].
 
@@ -160,7 +128,7 @@ This [HTML web page][] is passing rule [Document has heading for main section of
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 This [HTML web page][] is passing rule [document has a main landmark][].
 
@@ -181,7 +149,7 @@ This [HTML web page][] is passing rule [document has a main landmark][].
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 This [HTML web page][] is passing rule [first focusable element is link to main content][].
 
@@ -211,7 +179,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][].
 
@@ -248,7 +216,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This [HTML web page][] is passing rule [link for skipping block of content][].
 
@@ -277,7 +245,7 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main block of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
@@ -323,7 +291,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main block of content][] (the `main` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
@@ -350,6 +318,36 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 9
+
+This [HTML web page][] is passing both rules [Block of content is expandable and collapsible][] and [Link for skipping block of content][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
+
+		<main>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
 		</main>
 	</body>
 </html>
@@ -400,7 +398,6 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
-[document has no repeated content before main content]: https://act-rules.github.io/rules/g0m9ub 'Rule Document no Has Repeated Content Before Main Content'
 [first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First Focusable Elements Are Links to Sections of Content'
 [first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

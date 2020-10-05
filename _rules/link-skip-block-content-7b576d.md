@@ -3,7 +3,7 @@ id: 7b576d
 name: Link for skipping block of content
 rule_type: atomic
 description: |
-  This rule checks that blocks of content can be skipped by a link at their beginning
+  This rule checks that blocks of repeated content can be skipped by a link at their beginning
 accessibility_requirements:
   wcag-technique:G123: # Adding a link at the beginning of a block of repeated content to go to the end of the block
     forConformance: false
@@ -625,39 +625,6 @@ In this [document][], the element with a [semantic role][] of `link` which skips
 
 #### Failed Example 8
 
-In this [document][], the link at the start of the first complementary [block of repeated content][] skips more than just this [block of repeated content][] (it also skips the second complementary [block of repeated content][]).
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-
-		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			Yu Sumei is a professor of English at East China Normal University.
-		</aside>
-
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Failed Example 9
-
 In this [document][], there is a link to skip the first complementary [block of repeated content][], but not the second one.
 
 ```html
@@ -689,7 +656,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 9
 
 In this [document][], the link to skip the complementary [block of repeated content][] has a non-descriptive name.
 
@@ -718,7 +685,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 10
 
 In this [document][], the link to skip the complementary [block of repeated content][] jumps before the last [perceivable content][] in it.
 
@@ -748,7 +715,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 </html>
 ```
 
-#### Failed Example 12
+#### Failed Example 11
 
 In this [document][], the link to skip the complementary [block of repeated content][] jumps after the first [perceivable content][] in the next section (the image).
 

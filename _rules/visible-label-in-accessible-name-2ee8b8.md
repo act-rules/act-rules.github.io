@@ -59,39 +59,47 @@ This rule applies to elements with a [widget roles][] that [support name from co
 
 #### Passed Example 1
 
-This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
+This link has [visible][] text that matches the [accessible name][].
 
 ```html
-<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
+<a href="https://act-rules.github.io/" aria-label="ACT rules">ACT rules</a>
 ```
 
 #### Passed Example 2
 
-This link has [visible][] text that, ignoring case, matches the [accessible name][].
+This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
 
 ```html
-<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
+<a href="https://act-rules.github.io/" aria-label="  ACT rules  ">ACT rules</a>
 ```
 
 #### Passed Example 3
 
-This button has [visible][] text that is included in the [accessible name][].
+This link has [visible][] text that, ignoring case, matches the [accessible name][].
+
+```html
+<a href="https://act-rules.github.io/" aria-label="act rules">ACT rules</a>
+```
+
+#### Passed Example 4
+
+This button has [visible][] text that is contained within the [accessible name][].
 
 ```html
 <button aria-label="Next Page in the list">Next Page</button>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
-This button has [visible][] text that does not need to be included in the [accessible name][], because the "x" text node is [non-text content][].
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
 
 ```html
 <button aria-label="close">X</button>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
-This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be included in the [accessible name][].
+This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -115,7 +123,7 @@ This link has [visible][] text that is different from the [accessible name][].
 
 #### Failed Example 2
 
-This button has [visible][] text that is only partially included in the [accessible name][].
+This button has [visible][] text that is only partially contained within the [accessible name][].
 
 ```html
 <button aria-label="the full">The full label</button>
@@ -161,7 +169,7 @@ This `div` element does not have a widget role, so the [visible][] text does not
 This link has no [visible text content][].
 
 ```html
-<a href="//w3.org" aria-label="W3C homepage">
+<a href="https://w3.org" aria-label="W3C homepage">
 	<img src="/test-assets/shared/w3c-logo.png" alt="w3c logo" />
 </a>
 ```

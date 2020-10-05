@@ -222,7 +222,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
-<a href="//example.org" aria-label="SVG star">
+<a href="https://example.org" aria-label="SVG star">
 	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>

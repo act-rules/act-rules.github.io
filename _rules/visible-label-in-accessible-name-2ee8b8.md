@@ -3,7 +3,7 @@ id: 2ee8b8
 name: Visible label is part of accessible name
 rule_type: atomic
 description: |
-  This rule checks that interactive elements labeled through their content have their visible label as part of their accessible name.
+  This rule checks that interactive elements labeled through content have their visible label as part of their accessible name.
 accessibility_requirements:
   wcag21:2.5.3: # Label in Name
     forConformance: true
@@ -30,7 +30,7 @@ acknowledgments:
 
 This rule applies to any element for which all the following is true:
 
-- The element has a [semantic role][] that is a [widget][widget roles] that [supports name from content][]; and
+- The element has a [semantic role][] that is a [widget][widget role] that [supports name from content][]; and
 - The element has [visible text content][]; and
 - The element has an `aria-label` or `aria-labelledby` attribute.
 
@@ -48,9 +48,11 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
-This rule applies to elements with a [widget roles][] that [support name from content][supports name from content]. This includes the following: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
+This rule applies to elements with a [widget role][] that [support name from content][supports name from content]. This includes the following: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
-- [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+The understanding document of [2.5.3 Label in Name][understand253] use the term "symbolic text characters" to refer to a type of [non-text content][] that text chraacters as symbols, such as using "x" to mean "close". Because there is no definition for symbolic text characters, this rule uses non-text content instead.
+
+- [Understanding Success Criterion 2.5.3: Label in Name][understand253]
 - [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
 
 ## Test Cases
@@ -149,7 +151,7 @@ This `nav` is not a widget, so the [visible][] text does not need to match the [
 
 #### Inapplicable Example 2
 
-This text field does not need to have its [visible][] text match the [accessible name][]. The content of a textfield shows its value instead of its label. The label is usually adjacent to the textfield instead.
+This email text field does not need to have its [visible][] text match the [accessible name][]. The content of a textfield shows its value instead of its label; it does not [support name from content][supports name from content]. The label is usually adjacent to the textfield instead.
 
 ```html
 <div>E-mail</div>
@@ -182,5 +184,6 @@ This link has no [visible text content][].
 [visible]: #visible 'Definition of visible'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
-[widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
+[widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
 [text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, 2020/08/18'
+[understand253]: https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html

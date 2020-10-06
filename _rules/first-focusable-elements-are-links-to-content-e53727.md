@@ -3,7 +3,7 @@ id: e53727
 name: First focusable elements are links to sections of content
 rule_type: atomic
 description: |
-  This rule checks that the first focusable elements are links to sections of content on the same page
+  This rule checks that the first focusable elements are links to different sections of content on the same page
 accessibility_requirements:
   wcag-technique:G124: # Adding links at the top of the page to each area of the content
     forConformance: false
@@ -142,47 +142,6 @@ In this document, the [initial segment][] composed of the first three [focusable
 
 #### Passed Example 3
 
-TODO: REMOVE? OR CHANGE A BIT. SUBSECTIONS MIGHT STILL BE WORTH SHOWING
-
-In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations. In this case, the four [blocks][block of content] of the [semantic segmentation][] are the `nav` element, the `aside` element, and both parts of the text (`h1` and `p` elements). Note that the [main block of content][] is split into several [blocks][block of content] in this [semantic segmentation][].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav id="local-navigation">
-			<a href="#local-navigation">Skip to local navigation</a>
-			<a href="#part1">Skip to first part</a>
-			<a href="#part2">Skip to second part</a>
-			<a href="#bio-translator">Skip to translator's biography</a>
-		</nav>
-
-		<main>
-			<h1 id="part1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-
-			<h1 id="part2">The Sworn Brothers Render Good Services in Fighting Against the Rebels</h1>
-			<p>
-				Several days later, a messenger came with the news that a rebel army of 50,000 men was marching toward the city.
-			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
-
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			<p>Yu Sumei is a professor of English at East China Normal University.</p>
-		</aside>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
 In this document, the [initial segment][] composed of the first four [focusable][] elements fulfills both expectations. The links do not need to be in the same order as the [blocks of content][block of content].
 
 ```html
@@ -219,9 +178,9 @@ In this document, the [initial segment][] composed of the first four [focusable]
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) are [visible][] when [focused][].
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are not always [visible][], but are so when [focused][].
 
 ```html
 <html lang="en">
@@ -257,9 +216,9 @@ In this document, the links in the [initial segment][] (composed of the first th
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-In this document, the first three [focusable][] elements have a [semantic role][] of `link` and can be [activated][] by keyboard.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are not always [visible][], but are so when [focused][]. Here, the links are not native HTML links but `span` elements with a [semantic role][] of `link` and they can be [activated][] by keyboard.
 
 ```html
 <html lang="en">
@@ -299,9 +258,9 @@ In this document, the first three [focusable][] elements have a [semantic role][
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) have an [accessible name][] provided by their `aria-label` attribute.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
 <html lang="en">
@@ -336,9 +295,9 @@ In this document, the links in the [initial segment][] (composed of the first th
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
-In this document, the four links are the first [focusable][] elements, even though they are after the first [block of content][], and thus are an [initial segment][] of [focusable][] elements fulfilling the expectations.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are after the first [block of content][], but still are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
 <html lang="en">
@@ -375,7 +334,7 @@ In this document, the four links are the first [focusable][] elements, even thou
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. The fourth [focusable][] element is not part of the [initial segment][] even though it is styled similarly.
 
@@ -413,7 +372,7 @@ In this document, the [initial segment][] composed of the first three [focusable
 </html>
 ```
 
-#### Passed Example 10
+#### Passed Example 9
 
 In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. The fourth [focusable][] element can be left out of the [initial segment][] even though it moves focus to a [block of content][] inside the [semantic segmentation][].
 
@@ -451,7 +410,7 @@ In this document, the [initial segment][] composed of the first three [focusable
 </html>
 ```
 
-#### Passed Example 11
+#### Passed Example 10
 
 In this document, the first three [focusable][] elements are the links to the various [blocks of content][block of content]. Even through the link to W3C is before them in tree order, it is the fourth [focusable][] element due to the `tabindex` attributes. Therefore, the first three [focusable][] elements form an [initial segment][] that fulfills both Expectations.
 
@@ -489,7 +448,7 @@ In this document, the first three [focusable][] elements are the links to the va
 </html>
 ```
 
-#### Passed Example 12
+#### Passed Example 11
 
 In this document, the [initial segment][] composed of the first three [focusable][] elements fulfills both expectations. Even though the links are spread around the page, they are still an [initial segment][] of the [focusable][] elements. In this case, there are only three [blocks of content][block of content] in the [semantic segmentation][]: both `aside` elements and the `main` element.
 

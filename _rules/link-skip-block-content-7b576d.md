@@ -44,7 +44,7 @@ where "last" and "first" [focusable][] elements are to be understood in focus or
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
-- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard only (in order to be useful for keyboard users).
+- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard (in order to be useful for keyboard users).
 - This rule assumes that the visual order of elements is close to their order in the [flat tree][]. If this is not the case, [blocks of content][block of content], and therefore [blocks of repeated content][block of repeated content] cannot be determined correctly.
 
 ## Accessibility Support

@@ -60,7 +60,7 @@ Unless otherwise specified, the [main block of content][] in the test cases corr
 
 #### Passed Example 1
 
-This [document][] has a `h1` heading at the start of its [main block of content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][].
 
 ```html
 <html>
@@ -88,7 +88,7 @@ This [document][] has a `h1` heading at the start of its [main block of content]
 
 #### Passed Example 2
 
-This [document][] has a `h2` heading at the start of its [main block of content][].
+This [document][] has a `h2` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][].
 
 ```html
 <html>
@@ -119,7 +119,7 @@ This [document][] has a `h2` heading at the start of its [main block of content]
 
 #### Passed Example 3
 
-This [document][] has one [block of content][] for the navigation links, and the [main block of content][]. Each starts with a `h1` heading.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][].
 
 **Note:** In this [document][], the [blocks of content][block of content] are identified by the level 1 heading at their start.
 
@@ -150,7 +150,7 @@ This [document][] has one [block of content][] for the navigation links, and the
 
 #### Passed Example 4
 
-In this [document][], the heading is not the first element of the [main block of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>
@@ -179,7 +179,7 @@ In this [document][], the heading is not the first element of the [main block of
 
 #### Passed Example 5
 
-In this document, the image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] is the `h1` element and the rule passes.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] in is the `h1` element
 
 ```html
 <html>
@@ -209,7 +209,7 @@ In this document, the image at the start of the [main block of content][] has an
 
 #### Passed Example 6
 
-The [main block of content][] of this [document][] starts with a `div` element with a role of `heading`.
+This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][].
 
 ```html
 <html>
@@ -238,7 +238,7 @@ The [main block of content][] of this [document][] starts with a `div` element w
 
 #### Passed Example 7
 
-This [document][] is using an image as heading. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
 
 ```html
 <html>
@@ -271,7 +271,7 @@ This [document][] is using an image as heading. The [accessible name][] of the i
 
 #### Passed Example 8
 
-This [document][] has a `h1` heading at the start of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
 
 ```html
 <html>

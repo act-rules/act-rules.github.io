@@ -150,7 +150,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 4
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first with a non-empty [accessible name][] (inherited from its content).
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessiblity tree][], at the start of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first one which is non-[decorative][] and has a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>

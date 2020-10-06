@@ -139,7 +139,7 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 This `object` element is not [included in the accessibility tree][] due to `visibility:hidden`.
 
 ```html
-<object data="/test-assets/shared/w3c-logo.png" style="visibility: hidden;"></object>
+<object data="/test-assets/moon-audio/moon-speech.mp3" style="visibility: hidden;"></object>
 ```
 
 #### Inapplicable Example 3
@@ -147,7 +147,7 @@ This `object` element is not [included in the accessibility tree][] due to `visi
 This `object` element is not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
 ```html
-<object data="/test-assets/moon-audio/moon-speech.mp3" aria-hidden="true"></object>
+<object data="/test-assets/shared/w3c-logo.png" aria-hidden="true"></object>
 ```
 
 #### Inapplicable Example 4

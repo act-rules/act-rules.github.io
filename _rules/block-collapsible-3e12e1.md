@@ -27,15 +27,16 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists a [visible][] [instrument][] to make this [block][] (B) not [visible][].
+There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], which is [visible][] and can by [activated][] by use of keyboard, to make this [block][] (B) not [visible][].
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], [included in the accessibility tree][], to remove this [block][] (B) from the [accessibility tree][included in the accessibility tree].
+There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], which is [included in the accessibility tree][] and can by [activated][] by use of keyboard, to remove this [block][] (B) from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
+- This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires the that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does require that they can be toggled on and off. In any case, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 
 ## Accessibility Support
@@ -463,6 +464,38 @@ This document has an instrument to toggle [inclusion on the accessibility tree][
 </html>
 ```
 
+#### Failed Example 6
+
+This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accesibility tree][included in the accessibility tree] of its [block of repeated content][], but it cannot be [activated][] by use of keyboard.
+
+```html
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<span onclick="toggleHidden('chapters-navigation')">Toggle table of content</span>
+
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li>Chapter 1</li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -476,6 +509,7 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
+[activated]: https://html.spec.whatwg.org/#activation 'HTML definition of Activation'
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'

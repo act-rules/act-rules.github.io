@@ -171,7 +171,7 @@ This `object` element embeds an HTML resource.
 There is no `object` element.
 
 ```html
-<audio title="Moon speech" src="/test-assets/contrast/example.png"></audio>
+<audio title="Moon speech" src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
 

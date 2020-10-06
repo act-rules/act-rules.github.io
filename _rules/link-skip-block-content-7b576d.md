@@ -77,7 +77,7 @@ In this [document][], the complementary [block of repeated content][] starts wit
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -107,7 +107,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 		<aside id="about-book">
 			<h1>About the book</h1>
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
@@ -134,7 +134,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
-		<a href="#main">Skip additional information</a>
+		<a href="#main">Skip to main content</a>
 		<div>Chapter 1</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -154,7 +154,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 #### Passed Example 4
 
-In this [document][], the link to skip the complementary [block of repeated content][] is not normally [visible][] but becomes so when [focused][].
+In this [document][], the link to skip the complementary [block of repeated content][] is not always [visible][] but becomes so when [focused][].
 
 ```html
 <html lang="en">
@@ -166,7 +166,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main" class="visible-on-focus">Skip additional information</a>
+			<a href="#main" class="visible-on-focus">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -184,7 +184,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 #### Passed Example 5
 
-In this [document][], the `div` element just before the complementary [block of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by keyboard only, and skips the [block of repeated content][].
+In this [document][], the `div` element just before the complementary [block of repeated content][] has a [semantic role][] of `link`, can be [focused][] and activated by use of keyboard, and skips the [block of repeated content][].
 
 ```html
 <html lang="en">
@@ -195,7 +195,7 @@ In this [document][], the `div` element just before the complementary [block of 
 	<body onload="ClickOnEnter('skip-link')">
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
 
-		<div role="link" onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
+		<div role="link" onclick="location.href='#main';" tabindex="2" id="skip-link">Skip to main content</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -226,7 +226,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 		<aside id="about-book">
 			<h1 tabindex="3">About the book</h1>
-			<a href="#main" tabindex="2">Skip additional information</a>
+			<a href="#main" tabindex="2">Skip to main content</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
@@ -253,7 +253,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
 
-		<a href="#main" tabindex="3">Skip additional information</a>
+		<a href="#main" tabindex="3">Skip to main content</a>
 		<h1 tabindex="2">Chapter 1</h1>
 		<aside id="about-book">
 			<h2>About the book</h2>
@@ -284,7 +284,7 @@ In this [document][], the link at the start of the complementary [block of repea
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#end-aside">Skip additional information</a>
+			<a href="#end-aside">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<div id="end-aside" />
@@ -314,7 +314,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -344,7 +344,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -374,7 +374,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -459,7 +459,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
 
-		<a href="#main" tabindex="2">Skip additional information</a>
+		<a href="#main" tabindex="2">Skip to main content</a>
 		<h1 tabindex="3">Chapter 1</h1>
 		<aside id="about-book">
 			<h2>About the book</h2>
@@ -491,7 +491,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 		<aside id="about-book">
 			<h1 tabindex="2">About the book</h1>
-			<a href="#main" tabindex="3">Skip additional information</a>
+			<a href="#main" tabindex="3">Skip to main content</a>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
@@ -519,7 +519,7 @@ In this [document][], the element to skip the complementary [block of repeated c
 	<body onload="ClickOnEnter('skip-link')">
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
 
-		<div onclick="location.href='#main';" tabindex="2" id="skip-link">Skip additional information</div>
+		<div onclick="location.href='#main';" tabindex="2" id="skip-link">Skip to main content</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -549,7 +549,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main" aria-hidden="true">Skip additional information</a>
+			<a href="#main" aria-hidden="true">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -578,7 +578,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main" style="position: absolute; top: -999px">Skip additional information</a>
+			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -596,7 +596,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 
 #### Failed Example 7
 
-In this [document][], the element with a [semantic role][] of `link` which skips the complementary [block of repeated content][] cannot be activated by keyboard only.
+In this [document][], the element with a [semantic role][] of `link` which skips the complementary [block of repeated content][] cannot be activated by use of keyboard.
 
 ```html
 <html lang="en">
@@ -606,7 +606,7 @@ In this [document][], the element with a [semantic role][] of `link` which skips
 	<body>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html" tabindex="1">Read Chapter 2</a>
 
-		<div role="link" onclick="location.href='#main';" tabindex="2">Skip additional information</div>
+		<div role="link" onclick="location.href='#main';" tabindex="2">Skip to main content</div>
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -636,7 +636,7 @@ In this [document][], there is a link to skip the first complementary [block of 
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#bio-translator">Skip additional information</a>
+			<a href="#bio-translator">Skip to biography of the translator</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -669,7 +669,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Read text</a>
+			<a href="#main">And now for something completely different</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -698,7 +698,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#end-aside">Skip additional information</a>
+			<a href="#end-aside">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 			<p id="end-aside">The text presented here is from a 2014 translation</p>
@@ -728,7 +728,7 @@ In this [document][], the link to skip the complementary [block of repeated cont
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>

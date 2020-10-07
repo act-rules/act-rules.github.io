@@ -35,10 +35,8 @@ There is at least one [focusable][] element within the test target.
 
 The first [focusable][] element within the test target:
 
-- is [included in the accessibility tree][]; and
-- is [visible][] when [focused][]; and
+- is [keyboard actionable][]; and
 - has a [semantic role][] of `link`; and
-- can be [activated][] using the keyboard; and
 - when [activated][], moves focus [at the start][] of the [main block of content][] of the [document][]; and
 - has an [accessible name][] that communicates that it links to the [main block of content][].
 
@@ -46,7 +44,7 @@ The first [focusable][] element within the test target:
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that the description of the link is provided through its [accessible name][].
-- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard (in order to be useful for keyboard users).
+- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). If such a banner is taken into account, the rule may fail incorrectly.
 
 ## Accessibility Support
@@ -661,7 +659,9 @@ This [document][] is not an [HTML web page][].
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
 [visible]: #visible 'Definition of Visible'

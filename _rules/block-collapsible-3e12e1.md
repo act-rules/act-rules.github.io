@@ -466,7 +466,7 @@ This document has an instrument to toggle [inclusion on the accessibility tree][
 
 #### Failed Example 6
 
-This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accesibility tree][included in the accessibility tree] of its [block of repeated content][], but it cannot be [activated][] by use of keyboard.
+This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of its [block of repeated content][], but it cannot be [activated][] by use of keyboard.
 
 ```html
 <html>

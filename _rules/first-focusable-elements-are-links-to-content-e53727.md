@@ -29,16 +29,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-Within the test target, there is an [initial segment][] of the [focusable][] elements (in focus order) such that each element in that [initial segment][]:
-
-- is [included in the accessibility tree][]; and
-- is [visible][] when [focused][]; and
-- has a [semantic role][] of `link`; and
-- can be [activated][] by use of keyboard.
+Within the test target, there is an [initial segment][] of the [focusable][] elements (in focus order) such that each element in that [initial segment][] has a [semantic role][] of `link` and is [keyboard actionable][].
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target, such that for the the first [block][] inside the [main block of content][], and for each [block of content][] which is before the [main block of content][] and contains at least one [block of repeated content][], except possibly for the first:
+There exists a [semantic segmentation][] of the test target, such that for the first [block][] inside the [main block of content][], and for each [block of content][] which is before the [main block of content][] and contains at least one [block of repeated content][], except possibly for the first:
 
 - there is exactly one link from the [initial segment][] found by Expectation 1 which, when [activated][], moves focus [at the start][] of this [block of content][]; and
 - that link has an [accessible name][] that communicates that it links to this specific [block of content][].
@@ -46,7 +41,7 @@ There exists a [semantic segmentation][] of the test target, such that for the t
 ## Assumptions
 
 - This rule assumes that the description of the link is provided through its [accessible name][].
-- This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be [activated][] by use of keyboard (in order to be useful for keyboard users).
+- This rule assumes that [Technique G124: Adding links at the top of the page to each area of the content][tech g124] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). Since that content is _not_ repeated (is it only shown once for the full site), it is not a problem to have it, and it may appear on any page of the site (depending where the user first comes in). If such a banner is taken into account, the rule may fail incorrectly.
 
 ## Accessibility Support
@@ -180,7 +175,7 @@ In this document, the [initial segment][] composed of the first four [focusable]
 
 #### Passed Example 4
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are not always [visible][], but are so when [focused][].
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfills both expectations. Here, the links are not always [visible][], but are so when [focused][].
 
 ```html
 <html lang="en">
@@ -218,7 +213,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 
 #### Passed Example 5
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are not always [visible][], but are so when [focused][]. Here, the links are not native HTML links but `span` elements with a [semantic role][] of `link` and they can be [activated][] by keyboard.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfills both expectations. Here, the links are not always [visible][], but are so when [focused][]. Here, the links are not native HTML links but `span` elements with a [semantic role][] of `link` and they can be [activated][] by keyboard.
 
 ```html
 <html lang="en">
@@ -260,7 +255,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 
 #### Passed Example 6
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links have an [accessible name][] provided by their `aria-label` attribute.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfills both expectations. Here, the links have an [accessible name][] provided by their `aria-label` attribute.
 
 ```html
 <html lang="en">
@@ -297,7 +292,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 
 #### Passed Example 7
 
-In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfils both expectations. Here, the links are after the first [block of content][], but still are an [initial segment][] of [focusable][] elements fulfilling the expectations.
+In this document, the links in the [initial segment][] (composed of the first three focusable elements) fulfills both expectations. Here, the links are after the first [block of content][], but still are an [initial segment][] of [focusable][] elements fulfilling the expectations.
 
 ```html
 <html lang="en">
@@ -945,6 +940,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'
+[block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of Document'
@@ -953,9 +949,11 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [initial segment]: #initial-segment 'Definition of Initial Segment'
+[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [segmentation]: #segmentation 'Definition of Segmentation'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [visible]: #visible 'Definition of Visible'

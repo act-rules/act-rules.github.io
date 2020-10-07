@@ -33,9 +33,7 @@ This rule applies to any [HTML web page][].
 There exists a [semantic segmentation][] of the test target such that for each [block][] in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], either the last [focusable][] element which is before any [focusable][] element inside this [block][], or the first [focusable][] element which is inside this [block][]:
 
 - has a [semantic role][] of `link`; and
-- is [included in the accessibility tree][]; and
-- is [visible][] when [focused][]; and
-- can be [activated][] by use of keyboard; and
+- is [keyboard actionable][]; and
 - has an [accessible name][] that communicates that it skips this [block][]; and
 - when [activated][], moves keyboard focus to a node which is [at the end][] of this [block][].
 
@@ -44,7 +42,7 @@ where "last" and "first" [focusable][] elements are to be understood in focus or
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
-- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard (in order to be useful for keyboard users).
+- This rule assumes that that [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] requires the that the link can be activated by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that the visual order of elements is close to their order in the [flat tree][]. If this is not the case, [blocks of content][block of content], and therefore [blocks of repeated content][block of repeated content] cannot be determined correctly.
 
 ## Accessibility Support
@@ -772,12 +770,14 @@ This [document][] is not an [HTML web page][].
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML specification of Palpable Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [segmentation]: #segmentation 'Definition of Segmentation'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
 [tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of Tree Order'
 [visible]: #visible 'Definition of Visible'

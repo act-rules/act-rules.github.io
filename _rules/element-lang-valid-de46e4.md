@@ -88,7 +88,7 @@ The `lang` [attribute value][] is not empty (`""`) and has a valid language tag.
 
 #### Passed Example 3
 
-The `lang` [attribute value][] has a valid language tag, but a syntactically invalid region subtag.
+The `lang` [attribute value][] has a valid language tag, but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
 <html>

@@ -28,6 +28,8 @@ The rule applies to any [WAI-ARIA 1.1 state or property][] that is not empty (`"
 
 Each test target has a valid value according to its [WAI-ARIA 1.1 value type][].
 
+**Note:** For [WAI-ARIA required properties][] with [value type][] of `ID reference` and `ID reference list` at least one of the referenced elements with the given ids should exist in the same [document tree][] or [shadow tree][].
+
 ## Assumptions
 
 This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some case, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
@@ -44,7 +46,7 @@ Some user agents treat the value of `aria-*` attributes as case-sensitive (even 
 - [WAI-ARIA 1.1, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
-Depending on the role of an elements, certain WAI-ARIA properties are or not required. This rule considers that when such a property has a value type of `ID reference` or `ID reference list`, then an element with one of the given ids must exist. On another hand, if a property that is not required refers to an incorrect id, it is less clear that this will cause an accessibility issue (the property is not required on the first place, so the element can live without it, and maybe later interaction with the page will create the correct id and this is the intended behavior). Therefore, the rule has no extra requirement for properties with type `ID reference` or `ID reference list` that are not required.
+Depending on the role of an element, certain [WAI-ARIA properties][] are not required. This rule considers that when such a property has a value type of `ID reference` or `ID reference list`, then an element with one of the given ids must exist. On another hand, if a property that is not required refers to an incorrect id, it is less clear that this will cause an accessibility issue (the property is not required on the first place, so the element can live without it, and maybe later interaction with the page will create the correct id and this is the intended behavior). Therefore, the rule has no extra requirement for properties with type `ID reference` or `ID reference list` that are not required.
 
 For value type `URI`, this rule does not require that the destination URI exists. Testing that the link is not dead is out of scope for the rule and therefore ignored.
 
@@ -65,7 +67,7 @@ This `div` element has an `aria-required` property with valid `true/false` value
 This `div` element has an `aria-expanded` state with valid `true/false/undefined` value.
 
 ```html
-<div role="button" aria-expanded="undefined">A button</div>
+<button type="button" aria-expanded="undefined">A button</button>
 ```
 
 #### Passed Example 3
@@ -82,9 +84,9 @@ This `div` element with the `aria-owns` property, has a valid ID reference list 
 
 ```html
 <h1>Shopping list</h1>
-<div role="list" aria-owns="item1 item2"></div>
-<div id="item1">Apples</div>
-<div id="item2">Bananas</div>
+<ul aria-owns="item1 item2"></ul>
+<li id="item1">Apples</li>
+<li id="item2">Bananas</li>
 ```
 
 #### Passed Example 5
@@ -108,9 +110,7 @@ This `div` element has an `aria-valuemin`, `aria-valuemax` and `aria-valuenow` p
 This `div` element has an `aria-placeholder` property with valid string value.
 
 ```html
-<div role="textbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
-	MM-DD-YYYY
-</div>
+<input type="text" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate" />
 ```
 
 #### Passed Example 8
@@ -127,7 +127,7 @@ The second `div` element has an `aria-controls`, which is a required property fo
 
 ```html
 <div id="content1">Lorem ipsum...</div>
-<div role="scrollbar" aria-controls="content1 content2"></div>
+<div role="scrollbar" aria-controls="content1 content2" aria-valuenow="4" aria-valuemin="1" aria-valuemax="10"></div>
 ```
 
 #### Passed Example 10
@@ -169,7 +169,7 @@ This `div` element has an `aria-pressed` state with invalid tristate value.
 This `div` element has an `aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID.
 
 ```html
-<div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
+<input type="text" aria-errormessage="error1 error2" aria-label="A textbox with an error" />
 ```
 
 #### Failed Example 5
@@ -235,7 +235,7 @@ This `div` element does not have any ARIA states or properties.
 This `div` element has ARIA role, but no ARIA states or properties.
 
 ```html
-<div role="button">Some Content</div>
+<button type="button">Some Content</button>
 ```
 
 #### Inapplicable Example 3
@@ -259,3 +259,8 @@ This `div` element has an `aria-hidden` state on an element that is not an HTML 
 [wai-aria specifications]: #wai-aria-specifications 'List of WAI-ARIA Specifications'
 [wai-aria 1.1 state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def
 [wai-aria 1.1 value type]: https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value
+[wai-aria properties]: https://www.w3.org/TR/wai-aria-1.1/#dfn-property
+[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
+[value type]: https://www.w3.org/TR/wai-aria-1.1/#propcharacteristic_value
+[document tree]: https://dom.spec.whatwg.org/#document-trees
+[shadow tree]: https://dom.spec.whatwg.org/#shadow-trees

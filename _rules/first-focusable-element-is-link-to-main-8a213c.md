@@ -549,6 +549,36 @@ In this document, the link to skip to the [main block of content][] does not hav
 
 #### Failed Example 9
 
+In this document, the link to skip to the [main block of content][] has an empty, hence non-descriptive, [accessible name][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main" aria-label=" ">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 10
+
 In this document, the first [focusable][] element is the link to W3C. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
@@ -578,7 +608,7 @@ In this document, the first [focusable][] element is the link to W3C. The link t
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved before the start).
 
@@ -608,7 +638,7 @@ In this document, the first [focusable][] element does not move focus [at the st
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved after the start).
 

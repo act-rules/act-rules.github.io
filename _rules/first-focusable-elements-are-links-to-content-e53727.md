@@ -74,7 +74,7 @@ In this document, the [initial segment][] composed of the first four [focusable]
 			<a href="#local-navigation">Skip to local navigation</a>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -111,7 +111,7 @@ In this document, the [initial segment][] composed of the first three [focusable
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -149,7 +149,7 @@ In this document, the [initial segment][] composed of the first four [focusable]
 			<a href="#about-book">Skip to information about the book</a>
 			<a href="#local-navigation">Skip to local navigation</a>
 			<a href="#bio-translator">Skip to translator's biography</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -187,7 +187,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 		<nav>
 			<a class="visible-on-focus" href="#bio-translator">Skip to translator's biography</a>
 			<a class="visible-on-focus" href="#about-book">Skip to information about the book</a>
-			<a class="visible-on-focus" href="#main">Skip to text</a>
+			<a class="visible-on-focus" href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -229,7 +229,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 			<span role="link" onclick="location.href='#about-book';" tabindex="0" id="link-book"
 				>Skip to information about the book</span
 			>
-			<span role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</span>
+			<span role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to main content</span>
 		</nav>
 
 		<aside id="bio-translator">
@@ -266,7 +266,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 		<nav>
 			<a href="#bio-translator" aria-label="Skip to translator's biography">👩</a>
 			<a href="#about-book" aria-label="Skip to information about the book">❓</a>
-			<a href="#main" aria-label="Skip to text">📖</a>
+			<a href="#main" aria-label="Skip to main content">📖</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -309,7 +309,7 @@ In this document, the links in the [initial segment][] (composed of the first th
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#local-navigation">Skip to local navigation</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="about-book">
@@ -342,7 +342,7 @@ In this document, the [initial segment][] composed of the first three [focusable
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 			<a href="https://www.w3.org/">Check out the W3C</a>
 		</nav>
 
@@ -380,8 +380,8 @@ In this document, the [initial segment][] composed of the first three [focusable
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -419,7 +419,7 @@ In this document, the first three [focusable][] elements are the links to the va
 			<a href="https://www.w3.org/" tabindex="4">Check out the W3C</a>
 			<a href="#bio-translator" tabindex="1">Skip to translator's biography</a>
 			<a href="#about-book" tabindex="2">Skip to information about the book</a>
-			<a href="#main" tabindex="3">Skip to text</a>
+			<a href="#main" tabindex="3">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -453,20 +453,20 @@ In this document, the [initial segment][] composed of the first three [focusable
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<aside id="bio-translator">
+		<aside>
 			<a href="#bio-translator">Skip to translator's biography</a>
-			<h1>About the translator</h1>
+			<h1 id="bio-translator">About the translator</h1>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
-		<aside id="about-book">
+		<aside>
 			<a href="#about-book">Skip to information about the book</a>
-			<h1>About the book</h1>
+			<h1 id="about-book">About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<a href="#main">Skip to text</a>
+		<main>
+			<a href="#main">Skip to main content</a>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -560,7 +560,7 @@ In this document, the first, second and fourth links form a set that fulfills Ex
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
 			<a href="https://www.w3.org/">Check out the W3C</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -597,7 +597,7 @@ In this document, the first three [focusable][] elements in this [document][] fo
 		<nav>
 			<a href="#bio-translator" aria-hidden="true">Skip to translator's biography</a>
 			<a href="#about-book" aria-hidden="true">Skip to information about the book</a>
-			<a href="#main" aria-hidden="true">Skip to text</a>
+			<a href="#main" aria-hidden="true">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -634,7 +634,7 @@ In this document, the first [focusable][] element form an [initial segment][] th
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book" aria-hidden="true">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -671,7 +671,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main" style="display: none">Skip to text</a>
+			<a href="#main" style="display: none">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -709,7 +709,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<span id="link-main" onclick="document.getElementById('main').focus()" tabindex="0">Skip to text</span>
+			<span id="link-main" onclick="document.getElementById('main').focus()" tabindex="0">Skip to main content</span>
 		</nav>
 
 		<aside id="bio-translator">
@@ -751,7 +751,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 			<span role="link" onclick="location.href='#about-book';" tabindex="0" id="link-about"
 				>Skip to information about the book</span
 			>
-			<span role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to text</span>
+			<span role="link" onclick="location.href='#main';" tabindex="0" id="link-main">Skip to main content</span>
 		</nav>
 
 		<aside id="bio-translator">
@@ -825,7 +825,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main" aria-label="">Skip to text</a>
+			<a href="#main" aria-label="">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -863,7 +863,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -900,7 +900,7 @@ In this document, the first two [focusable][] elements form an [initial segment]
 		<nav>
 			<a href="#bio-translator" tabindex="1">Skip to translator's biography</a>
 			<a href="#about-book" tabindex="2">Skip to information about the book</a>
-			<a href="#main" tabindex="4">Skip to text</a>
+			<a href="#main" tabindex="4">Skip to main content</a>
 			<a href="https://www.w3.org/" tabindex="3">Check out the W3C</a>
 		</nav>
 

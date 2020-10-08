@@ -192,7 +192,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 		<nav>
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="bio-translator">
@@ -303,7 +303,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 	<body>
 		<nav id="local-navigation">
 			<a href="#local-navigation">Skip to local navigation</a>
-			<a href="#main">Skip to text</a>
+			<a href="#main">Skip to main content</a>
 		</nav>
 
 		<aside id="about-book">

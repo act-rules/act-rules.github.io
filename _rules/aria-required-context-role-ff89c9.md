@@ -211,11 +211,9 @@ This `section` element with an [explicit role][] of `doc-biblioentry` has a role
 ```html
 <section role="doc-bibliography">
 	<h1>Cited Works</h1>
-	<div role="list">
-		<p role="doc-biblioentry" id="b8cab5dd-bc24-459c-9858-7afa9da69b64">
-			John Steinbeck, The Grapes of Wrath (New York: The Viking Press, 1939)
-		</p>
-	</div>
+	<p role="doc-biblioentry" id="b8cab5dd-bc24-459c-9858-7afa9da69b64">
+		John Steinbeck, The Grapes of Wrath (New York: The Viking Press, 1939)
+	</p>
 </section>
 ```
 

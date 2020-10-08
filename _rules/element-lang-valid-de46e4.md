@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-	- CSS Styling
-	- DOM Tree
-	- Accessibility Tree
+  - CSS Styling
+  - DOM Tree
+  - Accessibility Tree
 acknowledgments:
   authors:
     - Bryn Anderson

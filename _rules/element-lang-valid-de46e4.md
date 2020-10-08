@@ -16,7 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
+	- CSS Styling
+	- DOM Tree
+	- Accessibility Tree
 acknowledgments:
   authors:
     - Bryn Anderson
@@ -146,7 +148,7 @@ The `lang` [attribute value][] consists of only [whitespace][] and is not a [val
 
 #### Failed Example 4
 
-The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [included in the accessibility tree][].
+The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [included in the accessibility tree][] though it is still [visible][].
 
 ```html
 <html>

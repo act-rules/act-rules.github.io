@@ -6,7 +6,6 @@ Closes issue(s):
 
 Need for Final Call:
 << choose one of the following and remove the rest >>
-<< leave the "How to Review and Approve" section in your pull request description >>
 << check https://act-rules.github.io/pages/design/process/#final-call-aka-call-for-consensus-cfc >>
 This can be merged with 1 approval << choose reason: editorial changes to website/test code, adding new contributor, other (explain). >>
 This will not require a Final Call << choose reason(s): editorial changes (including to the applicability, expectation or examples section), changes to assumptions, background, accessibility support, change to website/test code (not rule), other (explain). >>
@@ -20,6 +19,7 @@ This will require a 2 weeks Final Call << new rule, or substantial changes affec
 ### **When creating PR:**
 
 - [ ] Make sure you're requesting to **pull a branch** (right side) to the `develop` branch (left side).
+- [ ] Make sure you do not remove the "How to Review and Approve" section in your pull request description
 
 ### **After creating PR:**
 

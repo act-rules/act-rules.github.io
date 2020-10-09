@@ -45,7 +45,7 @@ This rule assumes that all [scrollable elements][scrollable] with visible conten
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+Some browsers will automatically make any scrollable element focusable to ensure keyboard accessibility. Those elements become inaccessible only if they have negative number as a tabindex [attribute value][].
 
 ## Background
 

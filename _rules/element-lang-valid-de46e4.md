@@ -148,7 +148,7 @@ The `lang` [attribute value][] consists of only [whitespace][] and is not a [val
 
 #### Failed Example 4
 
-The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [included in the accessibility tree][] though it is still [visible][].
+The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [included in the accessibility tree][] though it is still [visible][].
 
 ```html
 <html>
@@ -164,7 +164,7 @@ The `lang` [attribute value][] has a valid language tag, but its [descendant][] 
 
 #### Failed Example 5
 
-The `lang` [attribute value][] has a valid language tag, but its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
+The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
 
 ```html
 <html>
@@ -208,7 +208,7 @@ An empty `lang` [attribute value][] is ignored, as the rule only applies to `lan
 
 #### Inapplicable Example 3
 
-The `lang` [attribute value][] has a valid language tag, but does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+The `lang` [attribute value][] does not have a valid language tag, and does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
 
 ```html
 <html>

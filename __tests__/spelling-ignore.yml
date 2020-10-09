@@ -73,6 +73,7 @@
 - getModifierState
 - accesskey
 - Accesskeys
+- iframes
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

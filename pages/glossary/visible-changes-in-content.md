@@ -8,20 +8,21 @@ input_aspects:
   - DOM tree
 ---
 
-An _[event][] originated change in the content_ of a [web page][] occurs when any [animation frame callbacks][] resulting from the same event are [processed][run the animation frame callbacks] during the [rendering update][update the rendering] step of the [window event loop][] of the [Window][] object associated the [web page][].
+An [event][] originates _visible changes in the content_ of a [web page][] when all the following are true
 
-An [animation frame callback][animation frame callback] results from an event when any [steps][] of the [task][] dispatching the event [insert the callback][] in the [map of animation frame callbacks][] of the [Window][] associated with the same [Document][] of the event's [EventTarget][] object.
+- the [event][] [queues a task][queuing] in the [task source][] of an [event loop][] of a [Document][] of the [web page][]; and
+- the [processing][] of that [task][] causes an [update to the rendering][update the rendering] of the [Document][]; and
+- the execution of steps 12 and 15 of the [update the rendering][] algorithm changes the rendered pixels in any part of the [Document][] [associated Window][] object, that is currently within the [viewport][] or that can be brought into the [viewport][] via scrolling.
 
-
-[animation frame callbacks]: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames 'Definition of Animation frames'
+[associated Window]: https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window 'Definition of Window associated to a Document'
 [Document]: https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window 'Definition of Document'
-[EventTarget]: https://dom.spec.whatwg.org/#interface-eventtarget 'Definition of EventTarget'
-[insert the callback]: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe 'Definition of the requestAnimationFrame method'
-[map of animation frame callbacks]: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#list-of-animation-frame-callbacks 'Definition of map of animation frame callbacks'
-[run the animation frame callbacks]: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#run-the-animation-frame-callbacks 'Definition of the run the animation frame callbacks algorithm'
-[steps]: https://html.spec.whatwg.org/multipage/webappapis.html#concept-task-steps 'Definition of event loop task steps'
+[event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
+[event loop]: https://html.spec.whatwg.org/multipage/webappapis.html#event-loop 'Definition of event loop'
+[processing]: https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model 'Definition of the event loops processing model'
+[queuing]: https://html.spec.whatwg.org/multipage/webappapis.html#queuing-tasks 'Definition of queuing tasks'
 [task]: https://html.spec.whatwg.org/multipage/webappapis.html#concept-task 'Definition of event loop task'
+[task source]: https://html.spec.whatwg.org/multipage/webappapis.html#task-source 'Definition of task source'
 [update the rendering]: https://html.spec.whatwg.org/multipage/webappapis.html#update-the-rendering 'Definition of the update the rendering algorithm in the event loop processing model'
+[viewport]: https://drafts.csswg.org/css2/visuren.html#viewport 'Definition of viewport'
 [web page]: #web-page-html 'Definition of web page'
 [Window]: https://html.spec.whatwg.org/multipage/window-object.html#window 'Definition of Window'
-[window event loop]: https://html.spec.whatwg.org/multipage/webappapis.html#window-event-loop 'Definition of window event loop'

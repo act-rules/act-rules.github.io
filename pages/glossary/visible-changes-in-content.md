@@ -25,4 +25,3 @@ An [event][] originates _visible changes in the content_ of a [web page][] when 
 [update the rendering]: https://html.spec.whatwg.org/multipage/webappapis.html#update-the-rendering 'Definition of the update the rendering algorithm in the event loop processing model'
 [viewport]: https://drafts.csswg.org/css2/visuren.html#viewport 'Definition of viewport'
 [web page]: #web-page-html 'Definition of web page'
-[Window]: https://html.spec.whatwg.org/multipage/window-object.html#window 'Definition of Window'

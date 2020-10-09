@@ -199,10 +199,10 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 ```html
 <html lang="en">
 	<p>
-		<a href="http://facebook.com">Follow us</a>
+		<a href="https://act-rules.github.io/">ACT rules</a>
 
 		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="http://facebook.com" aria-label="Follow us">
+			<a href="https://act-rules.github.io/" aria-label="ACT rules">
 				<circle cx="50" cy="40" r="35" />
 			</a>
 		</svg>
@@ -220,8 +220,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		We are on social media:
-		<a href="http://facebook.com">Follow us</a>
-		<a href="http://twitter.com">Follow us</a>
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 	</p>
 </html>
 ```
@@ -273,13 +273,13 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 <html lang="en">
 	<p>
 		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="http://facebook.com" aria-label="Follow us">
+			<a href="https://act-rules.github.io/" aria-label="ACT rules">
 				<circle cx="50" cy="40" r="35" />
 			</a>
 
-			<a href="http://twitter.com">
+			<a href="https://www.w3.org/community/act-r/">
 				<text x="50" y="90" text-anchor="middle">
-					Follow us
+					ACT rules
 				</text>
 			</a>
 		</svg>
@@ -367,14 +367,6 @@ These two `span` elements do not have a [semantic role][] of link.
 		>)
 	</p>
 </html>
-```
-
-#### Inapplicable Example 5
-
-The second HTML `a` element has an empty [accessible name][].
-
-```html
-<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

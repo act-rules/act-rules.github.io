@@ -304,7 +304,7 @@ The [accessible name][] (from the link's text) does not describe the purpose of 
 An `a` element with its [semantic role][] changed from `link` to another role.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
+<a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
 
 #### Inapplicable Example 2
@@ -312,7 +312,7 @@ An `a` element with its [semantic role][] changed from `link` to another role.
 The `link` element is not [included in the accessibility tree][].
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"
+<a href="https://www.w3.org/WAI" style="display: none;"
 	><img src="/test-assets/5effbb/cart.svg" alt="Checkout" />Checkout</a
 >
 ```

@@ -159,7 +159,7 @@ This includes, but might not be limited to changes that changes, extends or limi
 
 These changes are considered non-substantial and will not require a "Final call" before being published:
 
-- Editorial changes, that does not change the meaning of a rule (also if it's in the Applicability, Expectations or Examples)
+- Editorial changes, that do not change the meaning of a rule (also if it's in the Applicability, Expectations or Examples)
 - Changes to the Assumptions, Background, Accessibility Support. If changes to these sections seem to impact the possible outcomes of a rule, probably these sections have been misused.
 
 ### Passes this stage when:

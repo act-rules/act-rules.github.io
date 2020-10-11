@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.2.5: # Audio Description (Prerecorded) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
     forConformance: true
     failed: not satisfied
@@ -77,6 +82,8 @@ See [Video element audio described: accessibility support](https://act-rules.git
 See [Video element description track: accessibility support](https://act-rules.github.io/rules/f196ce#accessibility-support).
 
 ## Background
+
+This rule is designed specifically for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which expects either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][sc125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adequately test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][sc125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
 
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
@@ -231,3 +238,6 @@ A video element that is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
+[sc123]: https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'
+[sc125]: https://www.w3.org/TR/WCAG21/#audio-description-prerecorded 'WCAG 2.1, Success Criterion 1.2.5 Audio Description (Prerecorded)'
+[sc128]: https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.8 Media Alternative (Prerecorded)'

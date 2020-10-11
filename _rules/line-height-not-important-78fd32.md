@@ -26,7 +26,7 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 For the test target, one of the following is true:
 
-- the [declared][] value of its [line-height][] property, specified via the `style` attribute, does not have the [important flag][]; or
+- the [cascaded][] value of its [line-height][] property, specified via the `style` attribute, does not have the [important flag][]; or
 - the [computed][] value of its [line-height][] property is at least `1.5` times its [computed][] [font-size][].
 
 ## Assumptions
@@ -158,3 +158,4 @@ This `body` element does not have a `style` attribute specified.
 [font-size]: https://www.w3.org/TR/css-fonts-3/#propdef-font-size 'CSS Fonts Module Level 3- Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
 [declared]: https://www.w3.org/TR/css-cascade-3/#declared 'CSS Cascading and Inheritance Level 3 - Declared Values'
+[cascaded]: https://www.w3.org/TR/css-cascade-3/#cascaded 'CSS Cascading and Inheritance Level 3 - Cascaded Values'

@@ -26,13 +26,11 @@ The rule applies to any [WAI-ARIA 1.1 state or property][] that is not empty (`"
 
 ## Expectation
 
-Each test target has a valid value according to its [WAI-ARIA 1.1 value type][].
-
-**Note:** For [WAI-ARIA required properties][] with [value type][] of `ID reference` and `ID reference list` at least one of the referenced elements with the given ids should exist in the same [document tree][] or [shadow tree][].
+Each test target has a valid value according to its [WAI-ARIA 1.1 value type][]. For [WAI-ARIA required properties][] with [value type][] of `ID reference` and `ID reference list` at least one of the referenced elements with the given ids should exist in the same [document tree][] or [shadow tree][].
 
 ## Assumptions
 
-This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some case, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
+This rule assumes that the default value of the attributes do not match the author's intention. ARIA state and properties have a default value as defined in the [WAI-ARIA Specifications][], and this default is used when the provided value is invalid. In some cases, the default value may happen to match the author's intention in using this attribute. In such a case, the rule will fail without creating an accessibility issue.
 
 ## Accessibility Support
 

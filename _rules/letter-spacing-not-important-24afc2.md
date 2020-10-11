@@ -3,7 +3,7 @@ id: 24afc2
 name: Letter spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that the letter spacing can be adjusted by the user, i.e. that `!important` is not applied to the style, unless the style has already exceeded the specified metric for retaining content visibility and functionality.
+	This rule checks that the `style` attribute is not used to prevent adjusting `letter- spacing` by using `!important`, except if it's at least `0.12` times the font size.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true

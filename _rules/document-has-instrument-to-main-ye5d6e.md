@@ -59,6 +59,8 @@ While it is clear that a "skip link" is a valid way to satisfy [Success Criterio
 
 Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Unless specified otherwise, the [main block of content][] of each document is defined by the `main` element.
 
+Due to the differences between the 3 techinques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and passes different techniques. The rest of the Passed Examples illustrate variation inside the rule and are mostly based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
+
 ## Test Cases
 
 ### Passed

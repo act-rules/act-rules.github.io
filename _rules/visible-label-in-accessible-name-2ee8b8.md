@@ -59,21 +59,29 @@ This rule applies to elements with a [widget roles][] that [support name from co
 
 #### Passed Example 1
 
-This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
+This link has [visible][] text that matches the [accessible name][].
 
 ```html
-<a href="https://act-rules.github.io/" aria-label="ACT rules ">ACT rules</a>
+<a href="https://act-rules.github.io/" aria-label="ACT rules">ACT rules</a>
 ```
 
 #### Passed Example 2
 
-This link has [visible][] text that, ignoring case, matches the [accessible name][].
+This link has [visible][] text that, ignoring trailing whitespace, matches the [accessible name][].
 
 ```html
-<a href="https://act-rules.github.io/" aria-label="act rules ">ACT rules</a>
+<a href="https://act-rules.github.io/" aria-label="  ACT rules  ">ACT rules</a>
 ```
 
 #### Passed Example 3
+
+This link has [visible][] text that, ignoring case, matches the [accessible name][].
+
+```html
+<a href="https://act-rules.github.io/" aria-label="act rules">ACT rules</a>
+```
+
+#### Passed Example 4
 
 This button has [visible][] text that is contained within the [accessible name][].
 
@@ -81,7 +89,7 @@ This button has [visible][] text that is contained within the [accessible name][
 <button aria-label="Next Page in the list">Next Page</button>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
 
@@ -89,7 +97,7 @@ This button has [visible][] text that does not need to be contained within the [
 <button aria-label="close">X</button>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 This `button` element has the text "search" rendered as an hourglass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
 

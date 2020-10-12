@@ -45,7 +45,8 @@ This rule assumes that all [scrollable elements][scrollable] with visible conten
 
 ## Accessibility Support
 
-Some browsers will automatically make any scrollable element focusable to ensure keyboard accessibility. Those elements become inaccessible only if they have negative number as a tabindex [attribute value][].
+Some browsers will automatically make any scrollable element focusable to ensure keyboard accessibility. However, the browser does not included these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
+
 
 ## Background
 

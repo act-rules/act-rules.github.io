@@ -27,6 +27,9 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
+TODO: no need for semantic segmentation.
+TODO: only visible when focused.
+
 There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], which is [visible][] and can by [activated][] by use of keyboard, to make this [block][] (B) not [visible][].
 
 ## Expectation 2

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 865,
+  "count": 866,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -5331,6 +5331,24 @@
       "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/7d6734/38ce008f37f6044eaf424a5a095079d37eeff2ab.html",
       "relativePath": "testcases/7d6734/38ce008f37f6044eaf424a5a095079d37eeff2ab.html",
+      "expected": "failed",
+      "ruleId": "7d6734",
+      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/7d6734",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8e8856994838daabd460b798776a8b6ff4b70701",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/7d6734/8e8856994838daabd460b798776a8b6ff4b70701.html",
+      "relativePath": "testcases/7d6734/8e8856994838daabd460b798776a8b6ff4b70701.html",
       "expected": "failed",
       "ruleId": "7d6734",
       "ruleName": "`svg` element with explicit role has non-empty accessible name",

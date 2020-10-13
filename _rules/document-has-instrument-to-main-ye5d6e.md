@@ -353,7 +353,7 @@ In this document, the first `a` element is [visible][], is a [keyboard actionabl
 
 #### Failed Example 1
 
-This document has no link to skip to the [main block of content][].
+This document has no [instrument][] to skip to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -361,6 +361,8 @@ This document has no link to skip to the [main block of content][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+
 		<aside id="about-book">
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -387,9 +389,8 @@ In this document, the link to skip to the [main block of content][] does not ref
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#invalid-id">Skip to main content</a>
-		</nav>
+		<a href="#invalid-id">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -417,9 +418,8 @@ In this document, the link to skip to the [main block of content][] is not [incl
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" aria-hidden="true">Skip to main content</a>
-		</nav>
+		<a href="#main" aria-hidden="true">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -476,9 +476,8 @@ In this document, the link to skip to the [main block of content][] is not [visi
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
-		</nav>
+		<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -506,9 +505,8 @@ In this document, the link to skip to the [main block of content][] cannot be [a
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
-		</nav>
+		<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -536,9 +534,8 @@ In this document, the first [focusable][] element does not move focus [at the st
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -566,9 +563,8 @@ In this document, the first [focusable][] element does not move focus [at the st
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -596,9 +592,8 @@ In this document, the link to skip to the [main block of content][] does not hav
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Click me if you dare!</a>
-		</nav>
+		<a href="#main">Click me if you dare!</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -626,9 +621,8 @@ In this document, the link to skip to the [main block of content][] has an empty
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" aria-label=" ">Skip to main content</a>
-		</nav>
+		<a href="#main" aria-label=" ">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>

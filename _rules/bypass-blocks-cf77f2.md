@@ -312,7 +312,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main section of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -485,7 +485,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 
 #### Passed Example 14
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] user interface component with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships][https://www.w3.org/tr/wcag21/#info-and-relationships] and [4.1.2 Name, Role, Value][https://www.w3.org/tr/wcag21/#name-role-value] and should thus be avoided.
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] user interface component with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
 ```html
 <html lang="en">
@@ -555,15 +555,22 @@ This [document][] is not an [HTML web page][].
 ```
 
 [activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
-[block]: #block-of-content 'Definition of Block of Content'
+[at the start]: #start-end-content 'Definition of Start and End of Content'
 [block of content is collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Collapsible'
+[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has an instrument to move focus to main block of content]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
+[focusable]: #focusable 'Definition of Focusable'
+[focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
@@ -571,3 +578,4 @@ This [document][] is not an [HTML web page][].
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing Heading Elements at the Beginning of each Section of Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'
+[visible]: #visible 'Definition of Visible'

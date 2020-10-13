@@ -36,9 +36,13 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectation
+## Expectation 1
 
-Within the test target, there exists at least one [keyboard actionable][] [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][], and that [instrument][] has an [accessible name][] that communicates that it jumps to the [main block of content][].
+Within the test target, there exists at least one [keyboard actionable][] [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][].
+
+## Expectation 2
+
+Within the test target, there exists at least one [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][] which is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to the [main block of content][].
 
 ## Assumptions
 
@@ -52,6 +56,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass still rule and still fail [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
+
+In most practical cases, the same [instrument][] is used to fulfil both expectations since it would be wasted effort to duplicate the work.
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
@@ -71,7 +77,7 @@ The examples sometimes group the skip links inside a `nav` landmark (notably whe
 
 #### Passed Example 1
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][]. It is [included in the accessibility tree][] and its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 
 ```html
 <html lang="en">
@@ -100,7 +106,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 2
 
-In this [document][], the third `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G124: Adding links at the top of the page to each area of the content][tech g124].
+In this [document][], the third `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. It is [included in the accessibility tree][] and its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G124: Adding links at the top of the page to each area of the content][tech g124].
 
 ```html
 <html lang="en">
@@ -137,7 +143,7 @@ In this [document][], the third `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 3
 
-In this [document][], the second `a` element (inside the second `aside` element) is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
+In this [document][], the second `a` element (inside the second `aside` element) is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. It is [included in the accessibility tree][] and its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
 
 ```html
 <html lang="en">
@@ -170,7 +176,7 @@ In this [document][], the second `a` element (inside the second `aside` element)
 
 #### Passed Example 4
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the element is normally hidden but is [visible][] when [focused][].
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][], it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the element is normally hidden but is [visible][] when [focused][].
 
 ```html
 <html lang="en">
@@ -202,7 +208,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 5
 
-In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting.
+In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][], it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting.
 
 ```html
 <html lang="en">
@@ -232,7 +238,7 @@ In this [document][], the first `div` element is [visible][], is a [keyboard act
 
 #### Passed Example 6
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the target and the [main block of content][].
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][], it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the target and the [main block of content][].
 
 ```html
 <html lang="en">
@@ -262,7 +268,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 7
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][].
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][], it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][].
 
 ```html
 <html lang="en">
@@ -293,7 +299,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 8
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the link is rendered as non-text content and has an [accessible name][] given by its `aria-label` attribute.
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][], it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the link is rendered as non-text content and has an [accessible name][] given by its `aria-label` attribute.
 
 ```html
 <html lang="en">
@@ -381,7 +387,7 @@ In this [document][], the link to skip to the [main block of content][] does not
 
 #### Failed Example 3
 
-In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it is not [included in the accessibility tree][].
+In this [document][], the link to skip to the [main block of content][] is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">

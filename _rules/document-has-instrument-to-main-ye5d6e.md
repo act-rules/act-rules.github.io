@@ -57,13 +57,118 @@ While it is clear that a "skip link" is a valid way to satisfy [Success Criterio
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
 
-Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Unless specified otherwise, the [main block of content][] of each document is defined by the `main` element.
+Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Even though [blocks of repeated content][block of repeated content] are not considered by this rule, there is no need to provide a skip link if there is no repeated content to bypass, therefore the examples illustrate situations where the link is actually needed.
 
-Due to the differences between the 3 techinques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and passes different techniques. The rest of the Passed Examples illustrate variation inside the rule and are mostly based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
+Unless specified otherwise, the [main block of content][] of each document is defined by its `main` element.
+
+Due to the differences between the 3 techniques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and passes different techniques. The rest of the Passed Examples illustrate variations inside the rule and are mostly based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
+
+The examples sometimes group the skip links inside a `nav` landmark (notably when there are several). According to [WAI-ARIA authoring practices][navigation landmark], if another `nav` landmark was present on the page (e.g. for site navigation), then each should have a different accessible name.
 
 ## Test Cases
 
 ### Passed
+
+#### Passed Example 1
+
+In this document, the `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 2
+
+In this document, the third `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G124: Adding links at the top of the page to each area of the content][tech g124].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="local-navigation">
+			<a href="#bio-translator">Skip to translator's biography</a>
+			<a href="#about-book">Skip to information about the book</a>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="bio-translator">
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
+In this document, the second `a` element (inside the second `aside` element) is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside id="bio-translator">
+			<a href="#about-book">Skip to information about the book</a>
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
+			<a href="#main">Skip to main content</a>
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
+TODO (main rule): link to W3C + link to main
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
@@ -76,6 +181,7 @@ Due to the differences between the 3 techinques considered here, it is almost im
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
+[navigation landmark]: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_navigation 'WAI-ARIA authoring practices, Navigation Landmark'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'

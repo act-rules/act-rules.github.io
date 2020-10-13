@@ -27,14 +27,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-TODO: no need for semantic segmentation.
-TODO: only visible when focused.
-
-There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], which is [visible][] and can by [activated][] by use of keyboard, to make this [block][] (B) not [visible][].
+For each [block of repeated content][] in the test target which is before the [main block of content][], there exists a [keyboard actionable][] [instrument][] to make this [block][] not [visible][].
 
 ## Expectation 2
 
-There exists a [semantic segmentation][] of the test target such that for each [block][], B, in this [segmentation] which is before the [main block of content][] and contains at least one [block of repeated content][], there exists an [instrument][], which is [included in the accessibility tree][] and can by [activated][] by use of keyboard, to remove this [block][] (B) from the [accessibility tree][included in the accessibility tree].
+For each [block of repeated content][] in the test target which is before the [main block of content][], there exists an [instrument][], which is [included in the accessibility tree][], to remove this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 
@@ -50,7 +47,7 @@ _There are no major accessibility support issues known for this rule._
 
 Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][]. And that the same [instrument][] may be used for several of the [blocks of content][block of content].
 
-Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. Any [semantic segmentation][] would then satisfy both expectations because universal quantification on the empty set is always true.
+Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. It is possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the [main block of content][].
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive, hence this rule doesn't require it either. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
@@ -520,9 +517,8 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
-[segmentation]: #segmentation 'Definition of Segmentation'
-[semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'

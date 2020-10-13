@@ -31,7 +31,7 @@ acknowledgments:
 
 This rule applies to any HTML or SVG element which
 
-- has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
+- has the [semantic role][] of [link][link] or a [semantic role][] that inherits from the [link][link] role; and
 - is [included in the accessibility tree][]; and
 - has a non-empty ("") [accessible name][].
 

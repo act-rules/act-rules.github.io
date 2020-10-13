@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 - [G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
-Unless specified otherwise, the [main block of content][] of each document is defined by the `main` element.
+Unless specified otherwise, the [main block of content][] of each test case is defined by the `main` element.
 
 ## Test Cases
 

@@ -65,7 +65,7 @@ In most practical cases, the same [instrument][] is used to fulfill both expecta
 
 Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Even though [blocks of repeated content][block of repeated content] are not considered by this rule, there is no need to provide a skip link if there is no repeated content to bypass, therefore the examples illustrate situations where the link is actually needed.
 
-Unless specified otherwise, the [main block of content][] of each [document][] is defined by its `main` element.
+Unless specified otherwise, the [main block of content][] of each test case is defined by its `main` element.
 
 Due to the differences between the 3 techniques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and passes different techniques. The rest of the Passed Examples illustrate variations inside the rule and are mostly based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
 

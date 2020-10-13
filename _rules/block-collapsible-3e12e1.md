@@ -55,7 +55,7 @@ Note that if there is no [block of repeated content][] before the [main block of
 
 - [SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][]. Unless specified, the [semantic segmentation][] fulfilling the expectations has one block for the `main` element; one for each of the `aside` and `nav` elements (if present); and one for the other content, if any.
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][].
 
 ## Test Cases
 

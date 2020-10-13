@@ -384,7 +384,8 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-TODO (main rule): link to W3C + link to main
+TODO: link to W3C + link to main
+TODO: Separate skip link visible/accessible
 
 ### Failed
 

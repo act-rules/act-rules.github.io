@@ -77,7 +77,7 @@ The examples sometimes group the skip links inside a `nav` landmark (notably whe
 
 #### Passed Example 1
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][]. It is [included in the accessibility tree][] and its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
+In this [document][], the first `a` element is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][]. It is [included in the accessibility tree][] and its [accessible name][] (coming from content) communicates that it skips to the main content. This example passes [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 
 ```html
 <html lang="en">

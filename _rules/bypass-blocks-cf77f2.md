@@ -32,7 +32,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Block of content is expandable and collapsible][]; or
+- [Block of content is collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
 - [Document has an instrument to move focus to main block of content][].
@@ -41,8 +41,9 @@ For each test target, the outcome of at least one of the following rules is pass
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that if a "skip link" or similar instrument is provided to jump to the [main block of content][], it must be can be possible to [activate][activation] it by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
+- This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 - This rule assumes that [Success Criterion 2.4.1: Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content, needs to be skipped, this rule may pass while [Success Criterion 2.4.1: Bypass blocks][sc241] is not satisfied.
-- This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
+- This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [Block of content is collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 
 ## Accessibility Support
@@ -53,13 +54,13 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - Creating links to skip blocks of content:
-  - [G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG21/Techniques/general/G1)
-  - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block](https://www.w3.org/WAI/WCAG21/Techniques/general/G123)
-  - [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124)
+  - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
+  - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
+  - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
 - Grouping and identifying blocks of content:
-  - [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11)
-  - [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69)
-  - [SCR28: Using an expandable and collapsible menu to bypass block of content](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28)
+  - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
+  - [Technique H69: Providing heading elements at the beginning of each section of content][tech h69]
+  - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
 ## Test Cases
 
@@ -67,7 +68,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [block of content is expandable and collapsible][].
+This [HTML web page][] is passing rule [block of content is collapsible][].
 
 ```html
 <html>
@@ -81,7 +82,7 @@ This [HTML web page][] is passing rule [block of content is expandable and colla
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -109,7 +110,7 @@ This [HTML web page][] is passing rule [Document has heading for main section of
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -135,6 +136,13 @@ This [HTML web page][] is passing rule [document has a main landmark][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
+		<nav id="chapters-navigation">
+			<ol>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
@@ -245,11 +253,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-TODO:
-
 #### Passed Example 7
 
-This [HTML web page][] is passing rule [Block of content is expandable and collapsible][].
+This [HTML web page][] is passing rule [Block of content is collapsible][] because it has no [block of repeated content][] before its [main block of content][]. Note that this does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the [block of repeated content][] which is after the [main block of content][] cannot be toggled.
 
 ```html
 <html lang="en">
@@ -257,14 +263,7 @@ This [HTML web page][] is passing rule [Block of content is expandable and colla
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
-		</aside>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<main>
 			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -273,13 +272,18 @@ This [HTML web page][] is passing rule [Block of content is expandable and colla
 				of time.
 			</p>
 		</main>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
 	</body>
 </html>
 ```
 
 #### Passed Example 8
 
-In this [document][], the `button` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case the [instrument][] is a button, not a link.
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
 
 ```html
 <html lang="en">
@@ -308,7 +312,7 @@ In this [document][], the `button` element is [visible][], is a [keyboard action
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main block of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main section of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -354,7 +358,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 
 #### Passed Example 10
 
-This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main block of content][] (the `main` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
 ```html
 <html lang="en">
@@ -386,7 +390,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 
 #### Passed Example 11
 
-In this document, the navigational [block of repeated content][] can be made non-[visible][] and [removed from the accessibility tree][included in the accessibility tree] by the button at the start of the document. In this case, there is no way to show it again once it's hidden.
+This [HTML web page][] is passing rule [block of content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
 
 ```html
 <html>
@@ -418,7 +422,7 @@ In this document, the navigational [block of repeated content][] can be made non
 
 #### Passed Example 12
 
-In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, the [instrument][] is only [visible][] when [focused][].
+This [HTML web page][] is passing rule [block of content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires the [instrument][] to be always [visible][], but here it is only [visible][] when [focused][].
 
 ```html
 <html>
@@ -449,8 +453,66 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 </html>
 ```
 
-TODO: link to W3C + link to main
-TODO: Separate skip link visible/accessible
+#### Passed Example 13
+
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 14
+
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] user interface component with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships][https://www.w3.org/tr/wcag21/#info-and-relationships] and [4.1.2 Name, Role, Value][https://www.w3.org/tr/wcag21/#name-role-value] and should thus be avoided.
+
+```html
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#main" aria-hidden="true">Skip to main content</a>
+		<a href="#main" class="off-screen">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
 
 ### Failed
 
@@ -494,7 +556,7 @@ This [document][] is not an [HTML web page][].
 
 [activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [block]: #block-of-content 'Definition of Block of Content'
-[block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Expandable and Collapsible'
+[block of content is collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Collapsible'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has an instrument to move focus to main block of content]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
@@ -502,6 +564,10 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'
+[tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'
+[tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
+[tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
+[tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing Heading Elements at the Beginning of each Section of Content'
+[tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'

@@ -353,6 +353,8 @@ This [HTML web page][] is passing both rules [Block of content is expandable and
 </html>
 ```
 
+TODO (main rule): link to W3C + link to main
+
 ### Failed
 
 #### Failed Example 1

@@ -652,8 +652,6 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-TODO (main rule): link to W3C + link to main
-
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activate]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'

@@ -36,6 +36,7 @@ There is at least one [focusable][] element within the test target.
 The first [focusable][] element within the test target:
 
 - is [keyboard actionable][]; and
+- is [included in the accessibility tree][]; and
 - has a [semantic role][] of `link`; and
 - when [activated][], moves focus [at the start][] of the [main block of content][] of the [document][]; and
 - has an [accessible name][] that communicates that it links to the [main block of content][].
@@ -63,7 +64,7 @@ Unless specified otherwise, the [main block of content][] of each test case is d
 
 #### Passed Example 1
 
-In this document, the first [focusable][] element is [visible][], is [included in the accessibility tree][], is a link, and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+In this document, the first [focusable][] element is a [keyboard actionable][] link, [included in the accessibility tree][], and when [activated][] moves the focus to the [main block of content][]. Its [accessible name][] (coming from content) communicates that it skips to the main content.
 
 ```html
 <html lang="en">
@@ -71,9 +72,7 @@ In this document, the first [focusable][] element is [visible][], is [included i
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -93,7 +92,7 @@ In this document, the first [focusable][] element is [visible][], is [included i
 
 #### Passed Example 2
 
-In this document, the link to skip to the [main block of content][] is [included in the accessibility tree][], and is [visible][] when [focused][].
+In this document, the first [focusable][] element is a [keyboard actionable][] skip link. In this case, the link is normally hidden but is [visible][] when [focused][].
 
 ```html
 <html lang="en">
@@ -102,9 +101,7 @@ In this document, the link to skip to the [main block of content][] is [included
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav class="visible-on-focus">
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main" class="visible-on-focus">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -124,7 +121,7 @@ In this document, the link to skip to the [main block of content][] is [included
 
 #### Passed Example 3
 
-In this document, the element to skip to the [main block of content][] is [visible][], has a [semantic role][] of `link` and can be [activated][] by using the keyboard.
+In this document, the first [focusable][] element is a [keyboard actionable][] skip link.
 
 ```html
 <html lang="en">
@@ -133,9 +130,7 @@ In this document, the element to skip to the [main block of content][] is [visib
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
-		<nav>
-			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
-		</nav>
+		<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -163,9 +158,7 @@ In this document, the link to skip to the [main block of content][] has an [acce
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" aria-label="Skip to main content">📖</a>
-		</nav>
+		<a href="#main" aria-label="Skip to main content">📖</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -198,9 +191,7 @@ In this document, the link to skip to the [main block of content][] is the first
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<main id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
@@ -254,9 +245,7 @@ In this document, the first [focusable][] element is the link to the [main block
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -285,9 +274,7 @@ In this document, the first [focusable][] element is the link to the [main block
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -345,9 +332,8 @@ In this document, the link to skip to the [main block of content][] is not the f
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="https://www.w3.org/">Check out the W3C</a>
-
 		<nav>
+			<a href="https://www.w3.org/">Check out the W3C</a>
 			<a href="#main">Skip to main content</a>
 		</nav>
 
@@ -377,9 +363,7 @@ In this document, the link to skip to the [main block of content][] is not [incl
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" aria-hidden="true">Skip to main content</a>
-		</nav>
+		<a href="#main" aria-hidden="true">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -407,9 +391,7 @@ In this document, the link to skip to the [main block of content][] is not [visi
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
-		</nav>
+		<a href="#main" style="position: absolute; top: -999px">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -437,9 +419,7 @@ In this document, the element with a click event to skip to the [main block of c
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<span onclick="document.getElementById('main').focus()">Skip to main content</span>
-		</nav>
+		<span onclick="document.getElementById('main').focus()">Skip to main content</span>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -467,9 +447,7 @@ In this document, the link to skip to the [main block of content][] cannot be [a
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<div role="link" onclick="location.href='#main';" tabindex="1" id="skip-link">Skip to main content</div>
-		</nav>
+		<div role="link" onclick="location.href='#main';" tabindex="0" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -497,9 +475,7 @@ In this document, the link to skip to the [main block of content][] does not ref
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#invalid-id">Skip to main content</a>
-		</nav>
+		<a href="#invalid-id">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -527,9 +503,7 @@ In this document, the link to skip to the [main block of content][] does not hav
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Click me if you dare!</a>
-		</nav>
+		<a href="#main">Click me if you dare!</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -557,9 +531,7 @@ In this document, the link to skip to the [main block of content][] has an empty
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main" aria-label=" ">Skip to main content</a>
-		</nav>
+		<a href="#main" aria-label=" ">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -618,9 +590,7 @@ In this document, the first [focusable][] element does not move focus [at the st
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -648,9 +618,7 @@ In this document, the first [focusable][] element does not move focus [at the st
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>

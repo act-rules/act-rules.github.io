@@ -69,8 +69,9 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	</head>
 	<body>
 		<nav id="chapters-navigation">
+			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -101,7 +102,7 @@ This [document][] has a `h2` heading, which is [visible][] and [included in the 
 		<nav id="chapters-navigation">
 			<h2>Content</h2>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -132,7 +133,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 		<!-- Navigational block of content starts here -->
 		<h1>Content</h1>
 		<ol>
-			<li>Chapter 1</li>
+			<li><a>Chapter 1</a></li>
 			<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 		</ol>
 		<!-- Navigational block of content ends here -->
@@ -160,7 +161,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -190,7 +191,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -220,7 +221,7 @@ This [document][] has a `div` element with a role of `heading`, which is [visibl
 		<nav id="chapters-navigation">
 			<div role="heading" aria-level="1">Contents</div>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -248,7 +249,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -281,7 +282,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -312,7 +313,7 @@ In this document, inside the [main block of content][], the first node with a no
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -335,6 +336,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 ```html
 <html>
 	<head>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -346,7 +348,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 		</nav>
 
 		<main>
-			<h1 style="position: absolute; top:-999px">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<h1 class="off-screen">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -368,7 +370,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>

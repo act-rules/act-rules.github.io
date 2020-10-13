@@ -43,7 +43,7 @@ Within the test target, there exists at least one [keyboard actionable][] [instr
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
-- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1], [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123], and [Technique G124: Adding links at the top of the page to each area of the content][tech g124] require that the links can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
+- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1], [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123], and [Technique G124: Adding links at the top of the page to each area of the content][tech g124] require that the links can be [activated][activation] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 
 ## Accessibility Support
 
@@ -231,7 +231,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 6
 
-In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the [activation][activate] behaviour, and the possibility to [activate][] the element with keyboard, is doe by scripting.
+In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting.
 
 ```html
 <html lang="en">
@@ -381,7 +381,7 @@ This [document][] has no [instrument][] to skip to the [main block of content][]
 
 #### Failed Example 2
 
-In this [document][], the link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
+In this [document][], the link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][activation] will not move focus to the [main block of content][].
 
 ```html
 <html lang="en">
@@ -497,7 +497,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 
 #### Failed Example 6
 
-In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it cannot be [activated][] by using the keyboard.
+In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it cannot be [activated][activation] by using the keyboard.
 
 ```html
 <html lang="en">
@@ -653,9 +653,10 @@ This [document][] is not an [HTML web page][].
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[activate]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
+[activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
+[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
@@ -666,11 +667,11 @@ This [document][] is not an [HTML web page][].
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [navigate]: https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate 'HTML specification of navigate'
 [navigation landmark]: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_navigation 'WAI-ARIA authoring practices, Navigation Landmark'
+[perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [visible]: #visible 'Definition of Visible'
-[whitespace]: #whitespcae 'Definition of whitespace'
+[whitespace]: #whitespace 'Definition of whitespace'

@@ -24,10 +24,10 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-Within the test target, there is at least one element which:
+Within the test target, there is at least one element for which all the following are true:
 
-- has [semantic role][] of `main`; and
-- is [included in the accessibility tree][].
+- the element has [semantic role][] of `main`; and
+- the element is [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -42,7 +42,9 @@ Having a `main` [landmark][] is sufficient to pass [Success Criterion 2.4.1: Byp
 
 Authors SHOULD not use more than one element with a [semantic role][] of `main`. This is, however, not a requirement for this rule and can be valid in certain cases.
 
-- [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
+[Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] only checks that landmarks are correctly used, but does not check whether landmarks could have been used and were omitted. Therefore, failing this rule (not having a `main` landmark) does not necessarily fail that technique, and it is not listed as an accessibility mapping.
+
+- [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)

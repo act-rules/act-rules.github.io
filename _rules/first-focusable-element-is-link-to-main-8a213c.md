@@ -127,7 +127,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 3
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][activated] behavior, and the possibility to [activate][activated] the element with keyboard, is done by scripting.
 
 ```html
 <html lang="en">
@@ -677,6 +677,7 @@ This [document][] is not an [HTML web page][].
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
 [at the start]: #start-end-content 'Definition of Start and End of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
+[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has an instrument to move focus to main block of content]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
@@ -686,6 +687,7 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
+[perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'

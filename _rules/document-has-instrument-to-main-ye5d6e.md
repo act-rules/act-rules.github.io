@@ -377,7 +377,7 @@ This document has no link to skip to the [main block of content][].
 </html>
 ```
 
-#### Failed Example 7
+#### Failed Example 2
 
 In this document, the link to skip to the [main block of content][] does not reference a valid `id` attribute and thus when [activated][] will not move focus to the [main block of content][].
 
@@ -407,7 +407,7 @@ In this document, the link to skip to the [main block of content][] does not ref
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
 In this document, the link to skip to the [main block of content][] is not [included in the accessibility tree][].
 
@@ -437,7 +437,7 @@ In this document, the link to skip to the [main block of content][] is not [incl
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 not in sequential focus order.
 
@@ -466,7 +466,7 @@ not in sequential focus order.
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 In this document, the link to skip to the [main block of content][] is not [visible][], even when focused.
 
@@ -526,7 +526,7 @@ In this document, the link to skip to the [main block of content][] cannot be [a
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 7
 
 In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved before the start).
 
@@ -556,7 +556,7 @@ In this document, the first [focusable][] element does not move focus [at the st
 </html>
 ```
 
-#### Failed Example 12
+#### Failed Example 8
 
 In this document, the first [focusable][] element does not move focus [at the start][] of the [main block of content][] (the focus is moved after the start).
 
@@ -586,7 +586,7 @@ In this document, the first [focusable][] element does not move focus [at the st
 </html>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 In this document, the link to skip to the [main block of content][] does not have an [accessible name][] that communicates its intent.
 
@@ -616,7 +616,7 @@ In this document, the link to skip to the [main block of content][] does not hav
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 In this document, the link to skip to the [main block of content][] has an empty, hence non-descriptive, [accessible name][].
 

@@ -1,9 +1,9 @@
 ---
 id: 3e12e1
-name: Block of repeated content is expandable and collapsible
+name: Block of repeated content is collapsible
 rule_type: atomic
 description: |
-  This rule checks that repeated blocks of content are expandable and collapsible
+  This rule checks that repeated blocks of content are collapsible
 accessibility_requirements:
   wcag-technique:SCR28: # Using an expandable and collapsible menu to bypass block of content
     forConformance: false
@@ -37,7 +37,6 @@ For each [block of repeated content][] in the test target which is before the [m
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires the that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
-- This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does require that they can be toggled on and off. In any case, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 
 ## Accessibility Support
 
@@ -53,7 +52,7 @@ Note that if there is no [block of repeated content][] before the [main block of
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require anything concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
 
-- [SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
+- [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
 In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][].
 

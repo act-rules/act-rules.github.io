@@ -45,7 +45,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][]. And that the same [instrument][] may be used for several of the [blocks of content][block of content].
+Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of content][block of content].
 
 Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. It is possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the [main block of content][].
 
@@ -63,7 +63,7 @@ In the test cases, the `aside` and `nav` elements are each a [block of repeated 
 
 #### Passed Example 1
 
-In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document. The first [block][] of the [segmentation][] (the first link) cannot be skipped, but it does not contain a [block of repeated content][], so this is not a problem.
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the link at the start of the document.
 
 ```html
 <html>
@@ -77,7 +77,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -95,7 +95,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 
 #### Passed Example 2
 
-In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, both the `nav` and `aside` elements form a single [block][block of content] of the [semantic segmentation][] fulfilling expectation.
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, both the `nav` and `aside` elements can be toggled together.
 
 ```html
 <html>
@@ -104,12 +104,12 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<button onclick="toggleHidden(['chapters-navigation', 'about-book'])">Toggle repeated content</button>
+		<button onclick="toggleHidden('chapters-navigation', 'about-book')">Toggle repeated content</button>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -132,48 +132,6 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 
 #### Passed Example 3
 
-The [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of each of the [blocks of repeated content][block of repeated content] can be toggled on and off by the buttons at the start of the document. In this case, the first `button` is toggling two of the [blocks of repeated content][block of repeated content]. Note that trying to put both `chapters-navigation` and `bio-translator` in the same [block][block of content] of the [segmentation][] is not possible because in that case nodes between them (namely, `about-book`) also have to be included in that [block of content][].
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<button onclick="toggleHidden(['chapters-navigation', 'bio-translator'])">Toggle navigation and biography</button>
-		<button onclick="toggleHidden(['about-book'])">Toggle additionaly information</button>
-
-		<nav id="chapters-navigation">
-			<h1>Content</h1>
-			<ol>
-				<li>Chapter 1</li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			<p>Yu Sumei is a professor of English at East China Normal University.</p>
-		</aside>
-
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
 In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of both the complementary and the navigational [blocks of repeated content][block of repeated content] can be toggled on and off, each of them by a different [instrument][].
 
 ```html
@@ -189,7 +147,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -210,7 +168,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document.
 
@@ -228,71 +186,13 @@ In this document, the [visibility][visible] of the navigational [block of repeat
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
 		<main>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 6
-
-In this document, the navigational [block of repeated content][] can be made non-[visible][] and [removed from the accessibility tree][included in the accessibility tree] by the button at the start of the document. In this case, there is no way to show it again once it's hidden.
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<button onclick="hide('chapters-navigation')">Hide table of content</button>
-
-		<nav id="chapters-navigation">
-			<h1>Content</h1>
-			<ol>
-				<li>Chapter 1</li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 7
-
-This [document][] has no [block of repeated content][] because there is no other page linked from it.
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<aside id="about-book">
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -317,7 +217,7 @@ This document has no [instrument][] to toggle the navigational [block of repeate
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -335,23 +235,22 @@ This document has no [instrument][] to toggle the navigational [block of repeate
 
 #### Failed Example 2
 
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [visible][].
+This document has an [instrument][] to toggle [visibility][visible] of the navigational [block of repeated content][], but none to toggle its [inclusion in the accessibility tree][included in the accessibility tree].
 
 ```html
 <html>
 	<head>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#" style="position: absolute; top: -999px" onclick="toggleHidden('chapters-navigation')"
-			>Toggle table of content</a
-		>
+		<a href="#" onclick="toggleVisibility('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -369,7 +268,7 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 
 #### Failed Example 3
 
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [included in the accessibility tree][].
+This document has an instrument to toggle [inclusion on the accessibility tree][included in the accessibility tree] of the [block of repeated content][], but none to toggle its [visibility][visible].
 
 ```html
 <html>
@@ -378,12 +277,12 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#" aria-hidden="true" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+		<a href="#" onclick="toggleAriaHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -401,22 +300,22 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 
 #### Failed Example 4
 
-This document has an [instrument][] to toggle [visibility][visible] of the navigational [block of repeated content][], but none to toggle its [inclusion in the accessibility tree][included in the accessibility tree].
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it is not in [sequential focus navigation][] order.
 
 ```html
 <html>
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#" onclick="toggleVisibility('chapters-navigation')">Toggle table of content</a>
+		<a href="#" tabindex="-1" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -434,21 +333,22 @@ This document has an [instrument][] to toggle [visibility][visible] of the navig
 
 #### Failed Example 5
 
-This document has an instrument to toggle [inclusion on the accessibility tree][included in the accessibility tree] of the [block of repeated content][], but none to toggle its [visibility][visible].
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it is never [visible][].
 
 ```html
 <html>
 	<head>
 		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#" onclick="toggleAriaHidden('chapters-navigation')">Toggle table of content</a>
+		<a href="#" class="off-screen" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -466,7 +366,7 @@ This document has an instrument to toggle [inclusion on the accessibility tree][
 
 #### Failed Example 6
 
-This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of its [block of repeated content][], but it cannot be [activated][] by use of keyboard.
+This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of its [block of repeated content][], but it is not [keyboard actionable][] because it cannot be [activated][] by use of keyboard.
 
 ```html
 <html>
@@ -480,7 +380,39 @@ This document has an [instrument][] to toggle the [visibility][visible] and [inc
 		<nav id="chapters-navigation">
 			<h1>Content</h1>
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 7
+
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [included in the accessibility tree][].
+
+```html
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#" aria-hidden="true" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
+
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
@@ -521,5 +453,6 @@ This [document][] is not an [HTML web page][].
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'
 [visible]: #visible 'Definition of Visible'

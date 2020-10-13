@@ -247,7 +247,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 
 TODO:
 
-#### Passed Example 9
+#### Passed Example 7
 
 This [HTML web page][] is passing rule [Block of content is expandable and collapsible][].
 
@@ -277,7 +277,7 @@ This [HTML web page][] is passing rule [Block of content is expandable and colla
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 8
 
 In this [document][], the `button` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case the [instrument][] is a button, not a link.
 
@@ -306,7 +306,7 @@ In this [document][], the `button` element is [visible][], is a [keyboard action
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 9
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main block of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
@@ -352,7 +352,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 10
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] containing both the `nav` and `aside` elements, and one block for the [main block of content][] (the `main` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
@@ -384,7 +384,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 11
 
 In this document, the navigational [block of repeated content][] can be made non-[visible][] and [removed from the accessibility tree][included in the accessibility tree] by the button at the start of the document. In this case, there is no way to show it again once it's hidden.
 
@@ -416,7 +416,7 @@ In this document, the navigational [block of repeated content][] can be made non
 </html>
 ```
 
-#### Passed Example 2
+#### Passed Example 12
 
 In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [blocks of repeated content][block of repeated content] can be toggled on and off by the button at the start of the document. In this case, the [instrument][] is only [visible][] when [focused][].
 

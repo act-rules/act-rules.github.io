@@ -12,11 +12,9 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_rules:
   - 047fe0
-  - 7b576d
-  - 8a213c
   - b40fd1
   - 3e12e1
-  - e53727
+  - ye5d6e
 acknowledgments:
   authors:
     - Jean-Yves Moyen
@@ -37,13 +35,12 @@ For each test target, the outcome of at least one of the following rules is pass
 - [Block of content is expandable and collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
-- [First focusable element is link to main content][]; or
-- [First focusable elements are links to sections of content][]; or
-- [Link for skipping block of content][].
+- [Document has an instrument to move focus to main block of content][].
 
 ## Assumptions
 
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
+- This rule assumes that if a "skip link" or similar instrument is provided to jump to the [main block of content][], it must be can be possible to [activate][activation] it by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that [Success Criterion 2.4.1: Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content, needs to be skipped, this rule may pass while [Success Criterion 2.4.1: Bypass blocks][sc241] is not satisfied.
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [Block of content is expandable and collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1: Bypass blocks][sc241] could nonetheless be satisfied.
@@ -151,7 +148,7 @@ This [HTML web page][] is passing rule [document has a main landmark][].
 
 #### Passed Example 4
 
-This [HTML web page][] is passing rule [first focusable element is link to main content][].
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -159,9 +156,8 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -181,7 +177,7 @@ This [HTML web page][] is passing rule [first focusable element is link to main 
 
 #### Passed Example 5
 
-This [HTML web page][] is passing rule [first focusable elements are links to sections of content][].
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -189,7 +185,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav>
+		<nav id="local-navigation">
 			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
 			<a href="#main">Skip to main content</a>
@@ -218,7 +214,7 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 
 #### Passed Example 6
 
-This [HTML web page][] is passing rule [link for skipping block of content][].
+This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -226,10 +222,13 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-
+		<aside id="bio-translator">
+			<a href="#about-book">Skip to information about the book</a>
+			<h1>About the translator</h1>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
 		<aside id="about-book">
-			<a href="#main">Skip additional information</a>
+			<a href="#main">Skip to main content</a>
 			<h1>About the book</h1>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
@@ -240,6 +239,7 @@ This [HTML web page][] is passing rule [link for skipping block of content][].
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 		</main>
 	</body>
 </html>
@@ -395,15 +395,14 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
+[activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content is expandable and collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Content is Expandable and Collapsible'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[document has an instrument to move focus to main block of content]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
 [document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
-[first focusable elements are links to sections of content]: https://act-rules.github.io/rules/e53727 'Rule First Focusable Elements Are Links to Sections of Content'
-[first focusable element is link to main content]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element Is Link to Main Content'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
-[link for skipping block of content]: https://act-rules.github.io/rules/7b576d 'Rule Link for Skipping Block of Content'
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic segmentation]: #semantic-segmentation 'Definition of Semantic Segmentation'

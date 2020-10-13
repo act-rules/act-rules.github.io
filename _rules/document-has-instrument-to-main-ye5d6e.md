@@ -170,35 +170,6 @@ In this [document][], the second `a` element (inside the second `aside` element)
 
 #### Passed Example 4
 
-In this [document][], the `button` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case the [instrument][] is a button, not a link.
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<button onclick="window.location.assign('#main')">Skip to main content</button>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 5
-
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the element is normally hidden but is [visible][] when [focused][].
 
 ```html
@@ -229,7 +200,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting.
 
@@ -259,7 +230,7 @@ In this [document][], the first `div` element is [visible][], is a [keyboard act
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the target and the [main block of content][].
 
@@ -289,7 +260,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][].
 
@@ -320,7 +291,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case, the link is rendered as non-text content and has an [accessible name][] given by its `aria-label` attribute.
 

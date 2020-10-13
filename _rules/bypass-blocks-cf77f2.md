@@ -245,6 +245,67 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
+TODO:
+
+#### Passed Example 9
+
+This [HTML web page][] is passing rule [Block of content is expandable and collapsible][].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			The Romance of the Three Kingdoms is a 14th century historical novel.
+		</aside>
+
+		<main>
+			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
+In this [document][], the `button` element is [visible][], is a [keyboard actionable][] [instrument][] to [navigate][] and thus move the focus to the [main block of content][] and has a descriptive [accessible name][]. In this case the [instrument][] is a button, not a link.
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<button onclick="window.location.assign('#main')">Skip to main content</button>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
 #### Passed Example 7
 
 This [HTML web page][] is passing rule [first focusable elements are links to sections of content][] with a [semantic segmentation][] that has one [block][] for each of the `nav` and `aside` element, and three [blocks][block] inside the [main block of content][] (each starting at a `h1` element). Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
@@ -318,36 +379,6 @@ This [HTML web page][] is passing rule [first focusable elements are links to se
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 9
-
-This [HTML web page][] is passing both rules [Block of content is expandable and collapsible][] and [Link for skipping block of content][].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav>
-			<a href="#main">Skip to main content</a>
-		</nav>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			The Romance of the Three Kingdoms is a 14th century historical novel.
-		</aside>
-
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
 		</main>
 	</body>
 </html>

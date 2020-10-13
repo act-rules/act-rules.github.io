@@ -24,9 +24,8 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
+The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if one of the following is true:
 
-- the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
 - the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this [attribute value][].
 
@@ -230,23 +229,13 @@ This `ul` element does not have an [explicit semantic role][].
 
 #### Inapplicable Example 3
 
-This `ul` element has the same [explicit semantic role][] as its [implicit semantic role][].
-
-```html
-<ul role="list">
-	<li>Item 1</li>
-</ul>
-```
-
-#### Inapplicable Example 4
-
 This element with the `progressbar` role does not need [required owned elements][].
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
 
@@ -256,7 +245,7 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 </ul>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
 

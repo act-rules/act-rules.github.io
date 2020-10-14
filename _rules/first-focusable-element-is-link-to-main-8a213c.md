@@ -37,7 +37,7 @@ The first [focusable][] element within the test target:
 
 - is [keyboard actionable][]; and
 - is [included in the accessibility tree][]; and
-- has a [semantic role][] of `link`; and
+- is a [semantic link][]; and
 - when [activated][], moves focus [at the start][] of the [main block of content][] of the [document][]; and
 - has an [accessible name][] that communicates that it links to the [main block of content][].
 
@@ -719,6 +719,7 @@ This [document][] is not an [HTML web page][].
 [main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[semantic link]: #semantic-link 'Definition of Semantic Link'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'

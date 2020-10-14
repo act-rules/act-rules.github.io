@@ -49,6 +49,7 @@ Within the test target, there exists at least one [instrument][] to move focus [
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1], [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123], and [Technique G124: Adding links at the top of the page to each area of the content][tech g124] require that the links can be [activated][activation] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that there is at least one [block of repeated content][] before the [main block of content][], and therefore [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] will require a link to the [main block of content][] in order to skip this [block of repeated content][]. If there is no [block of repeated content][] before the [main block of content][], then it is possible to fail this rule but still pass [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

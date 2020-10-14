@@ -55,7 +55,7 @@ Authors SHOULD not use more than one element with a [semantic role][] of `main`.
 
 #### Passed Example 1
 
-This [document][] has one element with a [semantic role][] of `main`.
+In this [document][], the `main` element has a [semantic role][] of `main` and is [included in the accessibility tree][].
 
 ```html
 <html>
@@ -76,6 +76,27 @@ This [document][] has one element with a [semantic role][] of `main`.
 
 #### Passed Example 2
 
+In this [document][] the `div` element has a [semantic role][] of `main` and is [included in the accessibility tree][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<div role="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
 This [document][] has several elements with a role of `main`, at least one of them is [included in the accessibility tree][].
 
 ```html
@@ -84,26 +105,26 @@ This [document][] has several elements with a role of `main`, at least one of th
 		<title>Comparing translations of the Romance of the Three Kingdoms, Chapter one</title>
 	</head>
 	<body>
-		<div role="main" aria-label="Translation by Charles Henry Brewitt-Taylor (1925)" aria-hidden="true">
+		<main aria-label="Translation by Charles Henry Brewitt-Taylor (1925)" aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood in the Peach Garden</h1>
 			<p>
 				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
 				divide.
 			</p>
-		</div>
+		</main>
 
-		<div role="main" aria-label="Translation by Moss Roberts (1976)">
+		<main aria-label="Translation by Moss Roberts (1976)">
 			<h1>Three Bold Spirits Plight Mutual Faith in the Peach Garden</h1>
 			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
-		</div>
+		</main>
 
-		<div role="main" aria-label="Translation by Yu Sumei (2014)" aria-hidden="true">
+		<main aria-label="Translation by Yu Sumei (2014)" aria-hidden="true">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</div>
+		</main>
 	</body>
 </html>
 ```

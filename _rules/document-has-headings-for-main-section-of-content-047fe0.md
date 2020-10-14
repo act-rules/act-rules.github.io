@@ -60,7 +60,7 @@ Unless otherwise specified, the [main block of content][] in the test cases corr
 
 #### Passed Example 1
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
 
 ```html
 <html>
@@ -89,7 +89,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 2
 
-This [document][] has a `h2` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][].
+This [document][] has a `h2` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
 
 ```html
 <html>
@@ -120,7 +120,7 @@ This [document][] has a `h2` heading, which is [visible][] and [included in the 
 
 #### Passed Example 3
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
 
 **Note:** In this [document][], the [blocks of content][block of content] are identified by the level 1 heading at their start.
 
@@ -151,7 +151,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 4
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first one which is non-[decorative][] and has a non-empty [accessible name][] (inherited from its content).
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first one which is non-[decorative][] and has a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>
@@ -180,7 +180,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 5
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][]. The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] in is the `h1` element
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] in is the `h1` element
 
 ```html
 <html>
@@ -210,7 +210,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 6
 
-This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][].
+This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
 
 ```html
 <html>
@@ -239,7 +239,7 @@ This [document][] has a `div` element with a role of `heading`, which is [visibl
 
 #### Passed Example 7
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][]. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
 
 ```html
 <html>
@@ -272,7 +272,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 8
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the start of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
 
 ```html
 <html>
@@ -331,6 +331,36 @@ In this document, inside the [main block of content][], the first node with a no
 
 #### Failed Example 2
 
+In this document, inside the [main block of content][], the first node with a non-empty [accessible name][] is the image, not the heading. The image is not [decorative][], thus users navigating by heading will skip some meaningful content and lose information.
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" alt="The Peach Garden Oath" />
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
 The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off screen).
 
 ```html
@@ -358,7 +388,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [included in the accessibility tree][] (because of the `aria-hidden` attribute).
 

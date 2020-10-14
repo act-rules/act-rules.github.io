@@ -60,7 +60,7 @@ This rule and [Technique G1: Adding a link at the top of each page that goes dir
 
 Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Even though [blocks of repeated content][block of repeated content] are not considered by this rule, there is no need to provide a skip link if there is no repeated content to bypass, therefore the examples illustrate situations where the link is actually needed.
 
-Unless specified otherwise, the [main block of content][] of each test case is defined by the `main` element.
+Unless specified otherwise, the [main block of content][] of each test case is its `main` element.
 
 ## Test Cases
 
@@ -186,7 +186,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 5
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, it is the first [focusable][] element, even though it is located after the `aside` element in tree order.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, it is the first [focusable][] element, even though it is located after the `aside` element in tree order. Note that such a link is not very useful for users who read sequentially (as there is nothing more to skip once the link is reached) and is only useful for users who can pull a list of links and follow them independently of reading order (such a functionality is often present in assistive technologies).
 
 ```html
 <html lang="en">
@@ -224,7 +224,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 	</head>
 	<body>
 		<nav>
-			<a href="https://www.w3.org/" tabindex="2">Check out the W3C</a>
+			<a href="https://act-rules.github.io/" tabindex="2">ACT rules</a>
 			<a href="#main" tabindex="1">Skip to main content</a>
 		</nav>
 
@@ -247,7 +247,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 7
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the target and the [main block of content][].
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the link target and the [main block of content][]. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -277,7 +277,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 8
 
-Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the target and the [main block of content][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][].
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">
@@ -375,7 +375,7 @@ In this [document][], the link to skip to the [main block of content][] is not t
 	</head>
 	<body>
 		<nav>
-			<a href="https://www.w3.org/">Check out the W3C</a>
+			<a href="https://act-rules.github.io/">ACT rules</a>
 			<a href="#main">Skip to main content</a>
 		</nav>
 
@@ -398,7 +398,7 @@ In this [document][], the link to skip to the [main block of content][] is not t
 
 #### Failed Example 4
 
-In this [document][], the first [focusable][] element is the link to W3C. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
+In this [document][], the first [focusable][] element is the link to ACT rules. The link to the [main block of content][] is located before in tree order but after in focus order due to the `tabindex` attributes.
 
 ```html
 <html lang="en">
@@ -408,7 +408,7 @@ In this [document][], the first [focusable][] element is the link to W3C. The li
 	<body>
 		<nav>
 			<a href="#main" tabindex="2">Skip to main content</a>
-			<a href="https://www.w3.org/" tabindex="1">Check out the W3C</a>
+			<a href="https://act-rules.github.io/" tabindex="1">ACT rules</a>
 		</nav>
 
 		<aside id="about-book">
@@ -429,6 +429,36 @@ In this [document][], the first [focusable][] element is the link to W3C. The li
 ```
 
 #### Failed Example 5
+
+In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it is not in [sequential focus navigation][] order.
+
+```html
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<a href="#main" tabindex="-1">Skip to main content</a>
+
+		<aside id="about-book">
+			<h1>About the book</h1>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<main id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
+		</main>
+	</body>
+</html>
+```
+
+#### Failed Example 6
 
 In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it is not [visible][], even when focused.
 
@@ -458,7 +488,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 In this [document][], the link to skip to the [main block of content][] is not [keyboard actionable][] because it cannot be [activated][] by using the keyboard.
 
@@ -487,7 +517,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 </html>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 In this [document][], the link to skip to the [main block of content][] is not [included in the accessibility tree][].
 
@@ -516,7 +546,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 </html>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 In this [document][], the element to skip to the [main block of content][] does not have a [semantic role][] of `link` (it has a role of `button`).
 
@@ -545,7 +575,7 @@ In this [document][], the element to skip to the [main block of content][] does 
 </html>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 In this [document][], the link to skip to the [main block of content][] does not have an [accessible name][] that communicates its intent.
 
@@ -574,7 +604,7 @@ In this [document][], the link to skip to the [main block of content][] does not
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 In this [document][], the link to skip to the [main block of content][] has a [whitespace][] only, hence non-descriptive, [accessible name][].
 
@@ -603,9 +633,9 @@ In this [document][], the link to skip to the [main block of content][] has a [w
 </html>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
-In this [document][], the first [focusable][] element does not move focus [at the start][] of the [main block of content][]. The focus is moved before the start, on [perceivable content][] which is not inside the [main block of content][].
+In this [document][], the first [focusable][] element does not move focus [at the start][] of the [main block of content][]. The focus is moved before the start, on [perceivable content][] which is not inside the [main block of content][]. Thus, following the link does not skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -632,9 +662,9 @@ In this [document][], the first [focusable][] element does not move focus [at th
 </html>
 ```
 
-#### Failed Example 12
+#### Failed Example 13
 
-In this [document][], the first [focusable][] element does not move focus [at the start][] of the [main block of content][]. The focus is moved after the start, on [perceivable content][] which is not the first inside the [main block of content][].
+In this [document][], the first [focusable][] element does not move focus [at the start][] of the [main block of content][]. The focus is moved after the start, on [perceivable content][] which is not the first inside the [main block of content][]. Thus, following the link does skip part of the non-repeated content and users will miss some important information.
 
 ```html
 <html lang="en">

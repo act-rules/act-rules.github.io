@@ -44,7 +44,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of content][block of content].
+Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both expectations for a given [block of repeated content][] since it would be wasted effort to duplicate the work.
 
 Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. It is possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the [main block of content][].
 
@@ -169,7 +169,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 
 #### Passed Example 4
 
-In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document.
+In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document. Note that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
 ```html
 <html>
@@ -365,7 +365,7 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 
 #### Failed Example 6
 
-This document has an [instrument][] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of its [block of repeated content][], but it is not [keyboard actionable][] because it cannot be [activated][] by use of keyboard.
+This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it cannot be [activated][] by use of keyboard.
 
 ```html
 <html>
@@ -445,6 +445,7 @@ This [document][] is not an [HTML web page][].
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
+[focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'

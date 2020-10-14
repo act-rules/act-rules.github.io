@@ -675,7 +675,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
-[at the start]: #start-end-content 'Definition of Start and End of Content'
+[at the start]: #at-the-start 'Definition of At the Start of a block'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'

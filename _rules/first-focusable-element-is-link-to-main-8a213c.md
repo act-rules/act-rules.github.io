@@ -136,7 +136,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
-		<div role="link" onclick="window.location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
+		<div role="link" onclick="location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -498,7 +498,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<div role="link" onclick="window.location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
+		<div role="link" onclick="location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -556,7 +556,7 @@ In this [document][], the element to skip to the [main block of content][] does 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<button onclick="window.location.assign('#main')">Skip to main content</button>
+		<button onclick="location.assign('#main')">Skip to main content</button>
 
 		<aside id="about-book">
 			<h1>About the book</h1>

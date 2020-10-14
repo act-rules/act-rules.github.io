@@ -218,7 +218,7 @@ In this [document][], the first `div` element is [visible][], is a [keyboard act
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
-		<div role="link" onclick="location.href='#main';" tabindex="0" id="skip-link">Skip to main content</div>
+		<div role="link" onclick="location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
 			<h1>About the book</h1>
@@ -484,7 +484,7 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<div role="link" onclick="window.location.assign('#main');" tabindex="1" id="skip-link">Skip to main content</div>
+		<div role="link" onclick="location.assign('#main');" tabindex="1" id="skip-link">Skip to main content</div>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">

@@ -318,7 +318,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<button onclick="window.location.assign('#main')">Skip to main content</button>
+		<button onclick="location.assign('#main')">Skip to main content</button>
 
 		<aside id="about-book">
 			<h1>About the book</h1>

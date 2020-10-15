@@ -48,8 +48,6 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 
 ## Background
 
-HTML elements with an [implicit semantic role][] corresponding to [explicit semantic role][] are not tested in this rule because some of these elements have different requirements. For example, an element that has an implicit semantic role of `menu` is identical to an element with the explicit semantic `role="menu"`. In the HTML, only the `li` and [script-supporting](https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements-2) elements can be [owned by][] the element with the [implicit semantic role][] of `menu`. The list of [required owned elements][] for the [explicit semantic role][] of `menu` does not include elements with the `role="listitem"`.
-
 Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
 The unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][] limit the scope of this rule to [WAI-ARIA 1.1][] roles only. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].

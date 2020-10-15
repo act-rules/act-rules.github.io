@@ -53,7 +53,7 @@ HTML elements with an [implicit semantic role][] corresponding to [explicit sema
 
 Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
-The unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][] limit the scope of this rule to [WAI-ARIA 1.1][] roles only. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
+The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][wai-aria 1.1] roles. The [WAI-ARIA Graphics Module][] does not include any [required owned elements][]. The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] only has three roles with [required owned elements][] (`doc-bibliography`, `doc-endnotes` and `doc-glossary`); they have issues with their use of role inheritance, and all of them have no [required owned elements][] in the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] editor's draft.
 
 The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
 
@@ -265,6 +265,7 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
 [required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [required owned elements]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [owns]: #owned-by
@@ -274,6 +275,6 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
-[digital publishing wai-aria module]: https://www.w3.org/TR/dpub-aria-1.0/
-[wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/
+[dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/
+[wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'

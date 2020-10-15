@@ -43,7 +43,7 @@ This rule assumes that the `role` attribute is used to give a [semantic role][] 
 
 ## Background
 
-The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles, since there are unresolved issues with how [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] uses role inheritance to define the [required context roles][], which makes it deviate from the model defined in [WAI-ARIA 1.1][aria 1.1]. The [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) does not include any [required context roles][].
+The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][aria 1.1] roles. The [WAI-ARIA Graphics Module][] does not include any [required context roles][]. The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] only has two roles with [required context roles][] (`doc-biblioentry` and `doc-endnote`); both of them have issues with their use of role inheritance, and both of them are deprecated in the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] editor's draft.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
@@ -239,6 +239,7 @@ There is no element with an [explicit role][] different from its [implicit role]
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI ARIA 1.1 specifications'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/ 'Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0'
+[dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [explicit semantic role]: #explicit-role 'Definition of Explicit Role'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
@@ -251,3 +252,4 @@ There is no element with an [explicit role][] different from its [implicit role]
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [subclass role]: https://www.w3.org/TR/wai-aria-1.1/#subclassroles 'ARIA Specification of Subclass Role'
 [ul]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element 'HTML specification of the ul element'
+[wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'

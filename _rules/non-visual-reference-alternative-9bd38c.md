@@ -316,7 +316,7 @@ No [text node][] on this page includes any of the [visual reference words][].
 
 #### Passed Example 15
 
-The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `dispaly:none` styling. The [text node][] inside the `button` element does not includes any of the [visual reference words][].
+The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `display:none` styling. The [text node][] inside the `button` element does not includes any of the [visual reference words][].
 
 ```html
 <p style="display:none">Click the box, for a surprise</p>

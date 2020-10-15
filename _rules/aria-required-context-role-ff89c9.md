@@ -206,14 +206,11 @@ There is no element with an [explicit role][].
 
 #### Inapplicable Example 3
 
-This `section` element with an [explicit role][] of `doc-biblioentry` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.1 Recommendation][aria 1.1].
+This `section` element with an [explicit role][] of `doc-abstract` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.1 Recommendation][aria 1.1].
 
 ```html
-<section role="doc-bibliography">
-	<h1>Cited Works</h1>
-	<p role="doc-biblioentry" id="b8cab5dd-bc24-459c-9858-7afa9da69b64">
-		John Steinbeck, The Grapes of Wrath (New York: The Viking Press, 1939)
-	</p>
+<section role="doc-abstract" aria-label="Abstract">
+	<p>Accessibility of web content requires semantic information about widgets, structures, and behaviors …</p>
 </section>
 ```
 

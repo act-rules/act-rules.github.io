@@ -34,11 +34,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 Each test target only [owns][] elements with a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
 
-**Note:** Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `list` has `group → listitem` as one of its [required owned elements][], meaning that elements with a role of `list` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `listitem`.
-
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
-
-**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
 
 ## Assumptions
 
@@ -53,15 +49,19 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 
 ## Background
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
-- [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
+HTML elements with an [implicit semantic role][] corresponding to [explicit semantic role][] are not tested in this rule because some of these elements have different requirements. For example, an element that has an implicit semantic role of `menu` is identical to an element with the explicit semantic `role="menu"`. In the HTML, only the `li` and [script-supporting](https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements-2) elements can be [owned by][] the element with the [implicit semantic role][] of `menu`. The list of [required owned elements][] for the [explicit semantic role][] of `menu` does not include elements with the `role="listitem"`.
 
-HTML elements with an [implicit semantic role][] corresponding with [explicit semantic role][] are not tested in this rule because some of these elements have additional requirements. For example, an element that has an implicit semantic role that is identical to its explicit semantic role is a `ul` element that has `role="list"`. However, there is no native HTML element to "group" `li` elements in a `ul` element.
+Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
 The unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][] limit the scope of this rule to [WAI-ARIA 1.1][] roles only. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
 
 The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
+
+**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
+
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
+- [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
 
 ## Test Cases
 

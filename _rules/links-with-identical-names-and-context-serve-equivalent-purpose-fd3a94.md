@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -56,6 +61,8 @@ When followed, the links in each set of target elements resolve to the [same res
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
@@ -192,10 +199,10 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 ```html
 <html lang="en">
 	<p>
-		<a href="http://facebook.com">Follow us</a>
+		<a href="https://act-rules.github.io/">ACT rules</a>
 
 		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="http://facebook.com" aria-label="Follow us">
+			<a href="https://act-rules.github.io/" aria-label="ACT rules">
 				<circle cx="50" cy="40" r="35" />
 			</a>
 		</svg>
@@ -213,8 +220,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		We are on social media:
-		<a href="http://facebook.com">Follow us</a>
-		<a href="http://twitter.com">Follow us</a>
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 	</p>
 </html>
 ```
@@ -266,13 +273,13 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 <html lang="en">
 	<p>
 		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="http://facebook.com" aria-label="Follow us">
+			<a href="https://act-rules.github.io/" aria-label="ACT rules">
 				<circle cx="50" cy="40" r="35" />
 			</a>
 
-			<a href="http://twitter.com">
+			<a href="https://www.w3.org/community/act-r/">
 				<text x="50" y="90" text-anchor="middle">
-					Follow us
+					ACT rules
 				</text>
 			</a>
 		</svg>
@@ -362,14 +369,6 @@ These two `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 5
-
-The second HTML `a` element has an empty [accessible name][].
-
-```html
-<a href="http://facebook.com">Follow us</a> <a href="http://facebook.com"><img src="facebook.jpg"/></a>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'
@@ -378,6 +377,7 @@ The second HTML `a` element has an empty [accessible name][].
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [same resource]: #same-resource 'Definition of same resource'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

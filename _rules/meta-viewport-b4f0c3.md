@@ -1,6 +1,6 @@
 ---
 id: b4f0c3
-name: '`meta` `viewport` does not prevent zoom'
+name: '`meta` `viewport` allows for zoom'
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.
@@ -36,14 +36,19 @@ For each test target, the `content` attribute, whose value is mapped to a list o
 
 ## Assumptions
 
+If any of the following is false, this rule can fail while Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
+
 - The [page][] has [visible][] [content][].
 - There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.
+- The [content][] is not by default rendered in a way that fits in an area of 320 by 256 [CSS pixels][], and needs to reflow to do so.
 
 ## Accessibility Support
 
 Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
 
 ## Background
+
+This rule is designed specifically for [1.4.4 Resize text][sc144], which requires that text can be resized up to 200%. Because text that can not be resized up to 200% can not fit in an area of 320 by 256 [CSS pixels][], this rule maps to [1.4.10 Reflow][sc1410] as well. All passed examples in this rule satisfy both success criteria.
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
 - [HTML Specification - The `meta` element][meta]
@@ -263,3 +268,6 @@ This viewport `meta` element does not have a `content` attribute.
 [page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [visible]: #visible 'Definition of visible'
+[css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
+[sc144]: https://www.w3.org/TR/WCAG21/#resize-text 'WCAG 2.1 Success Criterion 1.4.4 Resize text'
+[sc1410]: https://www.w3.org/TR/WCAG21/#reflow 'WCAG 2.1 Success Criterion 1.4.10 Reflow'

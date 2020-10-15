@@ -30,19 +30,18 @@ The rule applies to every [non-streaming](#non-streaming-media-element) `video` 
 
 The visual information of each test target is described with a description `track` element that has the same language as the video or the same language as the page.
 
-_Note_: Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
-
 ## Assumptions
 
-- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-Currently the description track is not supported by most assistive technology. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
+Currently the description track is not supported by most assistive technologies. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
 ## Background
 
+- Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
@@ -52,7 +51,7 @@ Currently the description track is not supported by most assistive technology. V
 
 #### Passed Example 1
 
-A video only element with a track element that contains descriptions.
+This `video` element, which has no audio, has a `track` element with descriptions.
 
 ```html
 <html lang="en">
@@ -68,7 +67,7 @@ A video only element with a track element that contains descriptions.
 
 #### Failed Example 1
 
-A video only element with a track element that contains incorrect descriptions.
+This `video` element, which has no audio, has a `track` element with incorrect descriptions.
 
 ```html
 <html lang="en">
@@ -84,20 +83,21 @@ A video only element with a track element that contains incorrect descriptions.
 
 #### Inapplicable Example 1
 
-A video only element without a track element.
+This `video` element has audio.
 
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
 	</video>
 </html>
 ```
 
 #### Inapplicable Example 2
 
-A video only element that is not [visible][].
+This `video` element is not [visible][].
 
 ```html
 <html lang="en">
@@ -111,14 +111,13 @@ A video only element that is not [visible][].
 
 #### Inapplicable Example 3
 
-A video element with audio.
+This `video` element, which has no audio, does not have a `track` element.
 
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
 </html>
 ```

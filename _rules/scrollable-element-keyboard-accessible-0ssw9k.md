@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G202: # Ensuring keyboard control for all functionality
     forConformance: false
     failed: not satisfied
@@ -40,7 +45,8 @@ This rule assumes that all [scrollable elements][scrollable] with visible conten
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+Some browsers will automatically make any [scrollable element][scrollable] focusable to ensure keyboard accessibility. However, the browser does not include these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
+
 
 ## Background
 
@@ -243,6 +249,7 @@ This `iframe` element is not a [scrollable element][scrollable].
 
 [visible]: #visible
 [scrollable]: #scrollable-element
+[attribute value]: #attribute-value
 [children]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM child, 2020/04/03'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM descendant, 2020/04/03'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML sequential focus navigation, 2020/04/03'

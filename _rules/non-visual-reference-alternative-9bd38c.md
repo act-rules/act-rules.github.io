@@ -41,11 +41,11 @@ This rule applies to any [text node][] that is either [visible][] or [included i
 
 For each test target that includes at least one of the [visual reference words][], one of the following is true:
 
-- (**non-visual reference**) the test target is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] by a non-visual characteristic; or
-- (**visible words**) each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
-- (**accessible words**) each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
 - (**no indication**) the test target does not identify any [web content][] through the use of any [visual reference words][]; or
-- (**no instruction**) the test target does not give instructions about any [web content][] through the use of any of the [visual reference words][].
+- (**non-visual reference**) the test target identifies some [web content][] and is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] by a non-visual characteristic; or
+- (**visible words**) the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
+- (**accessible words**) the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
+- (**no instruction**) the test target identifies some [web content][] but does not give instructions about it through the use of any of the [visual reference words][].
 
 ## Assumptions
 
@@ -314,6 +314,15 @@ No [text node][] on this page includes any of the [visual reference words][].
 <button onclick="alert('Surprise!')">Howdy</button>
 ```
 
+#### Passed Example 15
+
+The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `dispaly:none` styling. The [text node][] inside the `button` element does not includes any of the [visual reference words][].
+
+```html
+<p style="display:none">Click the box, for a surprise</p>
+<button onclick="alert('Surprise!')">Howdy</button>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -412,11 +421,10 @@ This paragraph includes the [visual reference word][] "star" (which is not inclu
 
 #### Inapplicable Example 1
 
-The content is indicated with the word "box" (a visual reference word), but this indication is hidden and not included in the accessibility tree because it has 'display:none'.
+This image link contains no [text node][].
 
 ```html
-<p style="display:none">Click the box, for a surprise</p>
-<button onclick="alert('Surprise!')">Howdy</button>
+<a href="https://act-rules.github.io/"><img src="test-assets/shared/act-logo.png" alt="ACT rules"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'

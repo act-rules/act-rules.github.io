@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element which is part of [sequential focus navigation][] in a document with at least two [focusable][] elements.
+The rule applies to any element which is part of [sequential focus navigation][] in an [HTML document](https://html.spec.whatwg.org/#document) with at least two [focusable][] elements.
 
 ## Expectation
 
@@ -28,7 +28,7 @@ For each target element, there is at least one device pixel inside the [scrollin
 
 ## Assumptions
 
-This rule assumes that documents with only one focusable element automatically satisfies [Success Criterion 2.4.7 Focus Visible][sc247], as stated in [Understanding Success Criterion 2.4.7: Focus Visible][usc247]: "if there is only one keyboard actionable control on the screen, the success criterion would be met".
+This rule assumes that documents with only one focusable element automatically satisfy [Success Criterion 2.4.7 Focus Visible][sc247], as stated in [Understanding Success Criterion 2.4.7: Focus Visible][usc247]: "if there is only one keyboard actionable control on the screen, the success criterion would be met".
 
 ## Accessibility Support
 
@@ -38,7 +38,7 @@ There are no major accessibility support issues known for this rule.
 
 Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
-WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411] and [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412] specifying how big the focus indicator should be. All Examples in this rule avoid focus indications that are too small, too far away, too weak, …
+WCAG does not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411] and [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412] specifying how big the focus indicator should be. All Examples in this rule avoid focus indications that are too small, too far away, have low contrast, …
 
 WCAG has no clear requirement of unicity of the focus indicator for each [focusable][] element. Therefore, this rule can pass even if several focus indicators are identical. Such a situation may nonetheless cause confusion and all Examples in this rule avoid it.
 
@@ -55,7 +55,7 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the first one applicable.
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the rule applicable to the first one.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
@@ -161,7 +161,7 @@ This document contains only one [focusable][] element.
 
 #### Inapplicable Example 3
 
-None of the [focusable][] elements in this document is part of [sequential focus navigation][].
+None of the [focusable][] elements in this document are part of [sequential focus navigation][].
 
 ```html
 <a tabindex="-1" href="https://act-rules.github.io/">ACT rules</a>

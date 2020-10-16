@@ -257,7 +257,6 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 [owns]: #owned-by
 [owned by]: #owned-by
 [explicit semantic role]: #explicit-role
-[implicit semantic role]: #implicit-role
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/

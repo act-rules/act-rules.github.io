@@ -57,10 +57,10 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Block of repeated content is collapsible][]; or
-- [Document has heading for main section of content][]; or
-- [Document has a main landmark][]; or
-- [Document has an instrument to move focus to main block of content][].
+- [_Block of repeated content is collapsible_][block collapsible]; or
+- [_Document has heading for main section of content_][document has heading for main]; or
+- [_Document has a main landmark_][document has main]; or
+- [_Document has an instrument to move focus to main block of content_][document has instrument to main].
 
 ## Assumptions
 
@@ -68,7 +68,7 @@ For each test target, the outcome of at least one of the following rules is pass
 - This rule assumes that if a "skip link" or similar instrument is provided to jump to the [main block of content][], it must be possible to [activate][activation] it by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 - This rule assumes that [Success Criterion 2.4.1 Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content needs to be skipped, this rule may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
-- This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [Block of repeated content is collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
+- This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [_Block of repeated content is collapsible_][block collapsible] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
@@ -96,7 +96,7 @@ In the test cases, the `aside` and `nav` elements are each a [block of repeated 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [Block of repeated content is collapsible][].
+This [HTML web page][] is passing rule [_Block of repeated content is collapsible_][block collapsible].
 
 ```html
 <html>
@@ -128,7 +128,7 @@ This [HTML web page][] is passing rule [Block of repeated content is collapsible
 
 #### Passed Example 2
 
-This [HTML web page][] is passing rules [Document has heading for main section of content][] and [Document has a main landmark][].
+This [HTML web page][] is passing rules [_Document has heading for main section of content_][document has heading for main] and [_Document has a main landmark_][document has main].
 
 ```html
 <html>
@@ -156,7 +156,7 @@ This [HTML web page][] is passing rules [Document has heading for main section o
 
 #### Passed Example 3
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -185,7 +185,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 4
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -222,7 +222,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 5
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -255,7 +255,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 6
 
-This [HTML web page][] is passing rule [Block of repeated content is collapsible][] because it has no [block of repeated content][] before its [main block of content][]. Note that this does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the [block of repeated content][] which is after the [main block of content][] cannot be toggled.
+This [HTML web page][] is passing rule [_Block of repeated content is collapsible_][block collapsible] because it has no [block of repeated content][] before its [main block of content][]. Note that this does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the [block of repeated content][] which is after the [main block of content][] cannot be toggled.
 
 ```html
 <html lang="en">
@@ -283,7 +283,7 @@ This [HTML web page][] is passing rule [Block of repeated content is collapsible
 
 #### Passed Example 7
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
 
 ```html
 <html lang="en">
@@ -312,7 +312,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 8
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -358,7 +358,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
 ```html
 <html lang="en">
@@ -390,7 +390,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 10
 
-This [HTML web page][] is passing rule [Block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
+This [HTML web page][] is passing rule [_Block of repeated content is collapsible_][block collapsible]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
 
 ```html
 <html>
@@ -422,7 +422,7 @@ This [HTML web page][] is passing rule [Block of repeated content is collapsible
 
 #### Passed Example 11
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
 
 ```html
 <html lang="en">
@@ -452,7 +452,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 12
 
-This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
 ```html
 <html lang="en">
@@ -483,7 +483,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 
 #### Passed Example 13
 
-This [HTML web page][] is passing rule [Document has heading for main section of content][]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
+This [HTML web page][] is passing rule [_Document has heading for main section of content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 
 ```html
 <html>
@@ -552,12 +552,12 @@ This [document][] is not an [HTML web page][].
 [activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [at the start]: #at-the-start 'Definition of At the Start of a block'
 [block of content]: #block-of-content 'Definition of Block of Content'
-[block of repeated content is collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
+[block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has a main landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
-[document has an instrument to move focus to main block of content]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
-[document has heading for main section of content]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
+[document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Main Block of Content'
+[document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
 [focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

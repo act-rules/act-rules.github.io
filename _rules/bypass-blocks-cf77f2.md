@@ -96,7 +96,7 @@ In the test cases, the `aside` and `nav` elements are each a [block of repeated 
 
 #### Passed Example 1
 
-This [HTML web page][] is passing rule [block of repeated content is collapsible][].
+This [HTML web page][] is passing rule [Block of repeated content is collapsible][].
 
 ```html
 <html>
@@ -128,7 +128,7 @@ This [HTML web page][] is passing rule [block of repeated content is collapsible
 
 #### Passed Example 2
 
-This [HTML web page][] is passing rule [Document has heading for main section of content][].
+This [HTML web page][] is passing rules [Document has heading for main section of content][] and [Document has a main landmark][].
 
 ```html
 <html>
@@ -156,35 +156,7 @@ This [HTML web page][] is passing rule [Document has heading for main section of
 
 #### Passed Example 3
 
-This [HTML web page][] is passing rule [document has a main landmark][].
-
-```html
-<html>
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -211,9 +183,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -248,9 +220,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][].
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][].
 
 ```html
 <html lang="en">
@@ -281,7 +253,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This [HTML web page][] is passing rule [Block of repeated content is collapsible][] because it has no [block of repeated content][] before its [main block of content][]. Note that this does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the [block of repeated content][] which is after the [main block of content][] cannot be toggled.
 
@@ -309,9 +281,9 @@ This [HTML web page][] is passing rule [Block of repeated content is collapsible
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
 
 ```html
 <html lang="en">
@@ -338,9 +310,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -384,9 +356,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 10
+#### Passed Example 9
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][]. Note that is does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
 ```html
 <html lang="en">
@@ -416,9 +388,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 11
+#### Passed Example 10
 
-This [HTML web page][] is passing rule [block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
+This [HTML web page][] is passing rule [Block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
 
 ```html
 <html>
@@ -448,9 +420,9 @@ This [HTML web page][] is passing rule [block of repeated content is collapsible
 </html>
 ```
 
-#### Passed Example 12
+#### Passed Example 11
 
-This [HTML web page][] is passing rule [block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires the [instrument][] to be always [visible][], but here it is only [visible][] when [focused][].
+This [HTML web page][] is passing rule [Block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires the [instrument][] to be always [visible][], but here it is only [visible][] when [focused][].
 
 ```html
 <html>
@@ -481,9 +453,9 @@ This [HTML web page][] is passing rule [block of repeated content is collapsible
 </html>
 ```
 
-#### Passed Example 13
+#### Passed Example 12
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
 
 ```html
 <html lang="en">
@@ -511,9 +483,9 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 14
+#### Passed Example 13
 
-This [HTML web page][] is passing rule [document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
+This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
 ```html
 <html lang="en">
@@ -542,7 +514,7 @@ This [HTML web page][] is passing rule [document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 15
+#### Passed Example 14
 
 This [HTML web page][] is passing rule [Document has heading for main section of content][]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 

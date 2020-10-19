@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [Document has an instrument to move focus to main block of content][], therefore, this rule is not need to pass rule [Bypass blocks of content][bypass blocks].
+This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [Document has an instrument to move focus to main block of content][], therefore, this rule is not needed to pass rule [Bypass blocks of content][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
@@ -128,7 +128,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 3
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][activated] behavior, and the possibility to [activate][activated] the element with keyboard, is done by scripting.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][activated] behavior, and the possibility to [activate][activated] the element with keyboard, is done by scripting and by having a `tabindex` attribute with a value of 0.
 
 ```html
 <html lang="en">
@@ -248,7 +248,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 7
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the link target and the [main block of content][]. Thus, following the link does skip all the repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the link target and the [main block of content][]. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -278,7 +278,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 8
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even through its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][]. Thus, following the link does not skip any non-repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] before the target inside the [main block of content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">

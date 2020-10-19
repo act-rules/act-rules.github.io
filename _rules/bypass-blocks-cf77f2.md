@@ -57,7 +57,7 @@ This rule applies to any [HTML web page][].
 
 For each test target, the outcome of at least one of the following rules is passed:
 
-- [Block of content is collapsible][]; or
+- [Block of repeated content is collapsible][]; or
 - [Document has heading for main section of content][]; or
 - [Document has a main landmark][]; or
 - [Document has an instrument to move focus to main block of content][].
@@ -67,7 +67,7 @@ For each test target, the outcome of at least one of the following rules is pass
 - This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that if a "skip link" or similar instrument is provided to jump to the [main block of content][], it must be possible to [activate][activation] it by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
-- This rule assumes that [Success Criterion 2.4.1 Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content, needs to be skipped, this rule may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
+- This rule assumes that [Success Criterion 2.4.1 Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content needs to be skipped, this rule may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [Block of content is collapsible][] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.

@@ -33,7 +33,7 @@ There is at least one [focusable][] element within the test target.
 
 ## Expectation 2
 
-The first [focusable][] element within the test target:
+The first [focusable][] element (in [sequential focus navigation][] order) within the test target:
 
 - is [keyboard actionable][]; and
 - is [included in the accessibility tree][]; and

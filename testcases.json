@@ -14638,10 +14638,10 @@
       }
     },
     {
-      "testcaseId": "0bfd1a2583228790f79bbcd14c9d9f1f1358a8c9",
+      "testcaseId": "460cd7eb48ac9286b4ef3aee32bbd3e803abd63e",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/8fc3b6/0bfd1a2583228790f79bbcd14c9d9f1f1358a8c9.html",
-      "relativePath": "testcases/8fc3b6/0bfd1a2583228790f79bbcd14c9d9f1f1358a8c9.html",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/460cd7eb48ac9286b4ef3aee32bbd3e803abd63e.html",
+      "relativePath": "testcases/8fc3b6/460cd7eb48ac9286b4ef3aee32bbd3e803abd63e.html",
       "expected": "inapplicable",
       "ruleId": "8fc3b6",
       "ruleName": "Object element rendering non-text content has non-empty accessible name",
@@ -14656,10 +14656,10 @@
       }
     },
     {
-      "testcaseId": "2951771b6a4cb805efd8da94e3ae758f580b25d0",
+      "testcaseId": "56873223515a7341f3e29d1128f8eb9aa152eb78",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/8fc3b6/2951771b6a4cb805efd8da94e3ae758f580b25d0.html",
-      "relativePath": "testcases/8fc3b6/2951771b6a4cb805efd8da94e3ae758f580b25d0.html",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/56873223515a7341f3e29d1128f8eb9aa152eb78.html",
+      "relativePath": "testcases/8fc3b6/56873223515a7341f3e29d1128f8eb9aa152eb78.html",
       "expected": "inapplicable",
       "ruleId": "8fc3b6",
       "ruleName": "Object element rendering non-text content has non-empty accessible name",
@@ -14710,10 +14710,10 @@
       }
     },
     {
-      "testcaseId": "697b943fde788ab0ee9d2303ac78afd61fe1b864",
+      "testcaseId": "df5a5aa0842bb70b9890d2fa39beed470723b0ec",
       "testcaseTitle": "Inapplicable Example 6",
-      "url": "https://act-rules.github.io/testcases/8fc3b6/697b943fde788ab0ee9d2303ac78afd61fe1b864.html",
-      "relativePath": "testcases/8fc3b6/697b943fde788ab0ee9d2303ac78afd61fe1b864.html",
+      "url": "https://act-rules.github.io/testcases/8fc3b6/df5a5aa0842bb70b9890d2fa39beed470723b0ec.html",
+      "relativePath": "testcases/8fc3b6/df5a5aa0842bb70b9890d2fa39beed470723b0ec.html",
       "expected": "inapplicable",
       "ruleId": "8fc3b6",
       "ruleName": "Object element rendering non-text content has non-empty accessible name",

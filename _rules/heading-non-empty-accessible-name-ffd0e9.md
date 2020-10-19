@@ -106,7 +106,7 @@ This `h1` element is not [visible][], but is still [included in the accessibilit
 
 #### Failed Example 1
 
-This `h1` element has an empty [accessible name][] given because its content is not exposed to assistive technologies.
+This `h1` element has an empty [accessible name][] because its content is not exposed to assistive technologies.
 
 ```html
 <h1><img src="/test-assets/shared/act-logo.png" alt="" /></h1>
@@ -165,7 +165,7 @@ This `div` element with a [semantic role][] of `heading` has an empty [accessibl
 
 #### Failed Example 8
 
-This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-labelledby` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][] given by its `aria-label` attribute and the lack of accessible content to fallback to.
+This `h1` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `heading` due to [Presentational Roles Conflict Resolution][]. It has an empty [accessible name][] given by its `aria-label` attribute and the lack of accessible content to fallback to.
 
 ```html
 <h1 aria-label="" role="none"><span aria-hidden="true">ACT rules</span></h1>

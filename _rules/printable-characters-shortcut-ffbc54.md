@@ -36,6 +36,7 @@ For each test target at least one of the following is true:
 ## Assumptions
 
 - If there are ways to disable the result of [keyboard events][keyboard event] that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
+- After being disabled, the event remains disabled until being re-enabled again. If the event is re-enabled through other non-user controlled means (e.g. a timeout) then this rule may pass while [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4] is not satisfied.
 
 ## Accessibility Support
 
@@ -43,7 +44,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 ## Background
 
-- [Understanding Success Criterion 2.1.4: Character Key Shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html)
+- [Understanding Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]
 - [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
 - [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)
 
@@ -355,18 +356,19 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 </html>
 ```
 
-[html document]: https://dom.spec.whatwg.org/#concept-document
-[focus]: https://html.spec.whatwg.org/#focusable-area
-[event target]: https://dom.spec.whatwg.org/#eventtarget
-[keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
-[legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
-[dispatched]: https://dom.spec.whatwg.org/#dispatching-events
+[blocked event]: #blocked-event 'Definition of blocked event'
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
+[dispatched]: https://dom.spec.whatwg.org/#dispatching-events
+[event target]: https://dom.spec.whatwg.org/#eventtarget
+[focus]: https://html.spec.whatwg.org/#focusable-area
+[html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
-[blocked event]: #blocked-event 'Definition of blocked event'
+[keyboard event]: https://www.w3.org/TR/uievents/#events-keyboardevents
+[legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [printable character]: #printable-characters 'Definition of printable characters'
-[valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'
 [same key events]: #same-key-events 'Definition of same key events'
+[sc2.1.4]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
+[valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'

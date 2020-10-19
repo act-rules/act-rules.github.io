@@ -174,7 +174,6 @@ There is no `object` element.
 <audio title="Moon speech" src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'

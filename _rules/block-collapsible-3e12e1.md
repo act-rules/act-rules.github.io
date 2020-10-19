@@ -201,6 +201,39 @@ In this document, the [visibility][visible] of the navigational [block of repeat
 </html>
 ```
 
+#### Passed Example 5
+
+In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the button at the start of the document. In this case, the [instrument][] is only [visible][] when [focused][].
+
+```html
+<html>
+	<head>
+		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<button onclick="toggleHidden('chapters-navigation')" class="visible-on-focus">Toggle repeated content</button>
+
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<main>
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1

@@ -422,39 +422,6 @@ This [HTML web page][] is passing rule [Block of repeated content is collapsible
 
 #### Passed Example 11
 
-This [HTML web page][] is passing rule [Block of repeated content is collapsible][]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires the [instrument][] to be always [visible][], but here it is only [visible][] when [focused][].
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<button onclick="toggleHidden('chapters-navigation')" class="visible-on-focus">Toggle repeated content</button>
-
-		<nav id="chapters-navigation">
-			<h1>Content</h1>
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 12
-
 This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
 
 ```html
@@ -483,7 +450,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 13
+#### Passed Example 12
 
 This [HTML web page][] is passing rule [Document has an instrument to move focus to main block of content][] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
@@ -514,7 +481,7 @@ This [HTML web page][] is passing rule [Document has an instrument to move focus
 </html>
 ```
 
-#### Passed Example 14
+#### Passed Example 13
 
 This [HTML web page][] is passing rule [Document has heading for main section of content][]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 

@@ -6106,7 +6106,7 @@
       "relativePath": "testcases/cc0f0a/0ed8074a5bee7052a1a28f9fd718b7d35a645cfd.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6130,7 +6130,7 @@
       "relativePath": "testcases/cc0f0a/90d77d3e5b2fdc19bce47f9f9362283861d3903b.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6154,7 +6154,7 @@
       "relativePath": "testcases/cc0f0a/2a3113551e8b6285b44b1495356235222b75542f.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6178,7 +6178,7 @@
       "relativePath": "testcases/cc0f0a/88a1646138c707f4d488ac76215fde0fd398bb94.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6202,7 +6202,7 @@
       "relativePath": "testcases/cc0f0a/d4d6cdf8ad02ff5770cba8490a592f254f15a620.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6226,7 +6226,7 @@
       "relativePath": "testcases/cc0f0a/4ac46ad6306dbd23511a9a8f1b52cb7c2baa7829.html",
       "expected": "passed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6250,7 +6250,7 @@
       "relativePath": "testcases/cc0f0a/94d3003abb03281265a5423caf07d3dc4cc2a190.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6274,7 +6274,7 @@
       "relativePath": "testcases/cc0f0a/ec284879633645f114751de5cf1d14978030ab77.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6298,7 +6298,7 @@
       "relativePath": "testcases/cc0f0a/80c83d04972e8a4a4127ced657b3d724435d06b0.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6322,7 +6322,7 @@
       "relativePath": "testcases/cc0f0a/bc1e857a7e34736ddf5451ef48362bbf507da4f6.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6346,7 +6346,7 @@
       "relativePath": "testcases/cc0f0a/39bc0aa3e75812c1e3b8bae1bc1ae88730494409.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6370,7 +6370,7 @@
       "relativePath": "testcases/cc0f0a/157786f62350f04201614e3b4b6b741a1ec41b8b.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6394,7 +6394,7 @@
       "relativePath": "testcases/cc0f0a/071ed0f3870c0c3d4c0dec0a8d0f629b8dd684f1.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6418,7 +6418,7 @@
       "relativePath": "testcases/cc0f0a/43548ef28fac9a7964a4a1d964df4aff6113053e.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {
@@ -6442,7 +6442,7 @@
       "relativePath": "testcases/cc0f0a/2679bd4d437e0a5a49d279a1c39b06d6d9ab427f.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
-      "ruleName": "Form control label is descriptive",
+      "ruleName": "Form field label is descriptive",
       "rulePage": "https://act-rules.github.io/rules/cc0f0a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.6": {

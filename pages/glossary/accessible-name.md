@@ -26,6 +26,6 @@ For more details, see [examples of accessible name](/pages/examples/accessible-n
 - Because the [accessible name and description computation][] is not clear about which whitespace are considered, browsers behave differently when trimming and flattening the accessible name. For example, some browsers completely trim non-breaking spaces while some keep them in the accessible name.
 - There exists a popular browser which does not perform the same trimming and flattening depending whether the accessible name comes from content, an `aria-label` attribute, or an `alt` attribute.
 - There exists a popular browser which assign no accessible name (`null`) when none is provided, instead of assigned an empty accessible name (`""`).
-- The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case (ultimately defaulting to the content).
+- The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case.
 
 [accessible name and description computation]: https://www.w3.org/TR/accname 'Accessible Name and Description Computation'

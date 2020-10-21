@@ -51,7 +51,7 @@ For each test target that includes at least one of the [visual reference words][
 
 - This rule assumes that [visual reference words][] are forms of information conveyed through presentation. Because of this, failing this rule fails both [Success Criterion 1.3.1 Info and Relationships][sc131] and [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this test. Note, however, that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only referring to the visual order of things in which case it is not a correct reference.
+- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backwards" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this rule. Note, however, that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only referring to the visual order of things in which case it is not a correct reference.
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
@@ -256,7 +256,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 
 #### Passed Example 12
 
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the (**non-visual reference**) condition. Note that, despite the fact that the text is not visible, this example is applicable because it is visible.
+This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the (**non-visual reference**) condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
 
 ```html
 <head>
@@ -316,7 +316,7 @@ No [text node][] on this page includes any of the [visual reference words][].
 
 #### Passed Example 15
 
-The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `display:none` styling. The [text node][] inside the `button` element does not includes any of the [visual reference words][].
+The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `display:none` styling. The [text node][] inside the `button` element does not include any of the [visual reference words][].
 
 ```html
 <p style="display:none">Click the box, for a surprise</p>

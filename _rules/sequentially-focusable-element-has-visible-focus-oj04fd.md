@@ -71,7 +71,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 
 #### Passed Example 3
 
-The first [focusable][] element, is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element).
+The first [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element).
 
 ```html
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />

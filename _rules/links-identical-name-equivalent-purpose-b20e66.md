@@ -86,7 +86,7 @@ These two HTML `a` elements resolve to the [same resource][] after instant redir
 
 #### Passed Example 3
 
-These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, in this case the contact details being the same in 2 locations, thus serving the same purpose.
+These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, in this case the contact details being the same in two locations, thus serving the same purpose.
 
 ```html
 <html lang="en">

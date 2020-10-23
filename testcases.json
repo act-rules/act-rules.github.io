@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 867,
+  "count": 866,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -1039,26 +1039,8 @@
       }
     },
     {
-      "testcaseId": "3a89f00d60ba9fd365fe10e119cb602f6137db16",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/bc4a75/3a89f00d60ba9fd365fe10e119cb602f6137db16.html",
-      "relativePath": "testcases/bc4a75/3a89f00d60ba9fd365fe10e119cb602f6137db16.html",
-      "expected": "inapplicable",
-      "ruleId": "bc4a75",
-      "ruleName": "ARIA required owned elements",
-      "rulePage": "https://act-rules.github.io/rules/bc4a75",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "14a9c0527cac9b6abdd9172f01158f57925c9b39",
-      "testcaseTitle": "Inapplicable Example 4",
+      "testcaseTitle": "Inapplicable Example 3",
       "url": "https://act-rules.github.io/testcases/bc4a75/14a9c0527cac9b6abdd9172f01158f57925c9b39.html",
       "relativePath": "testcases/bc4a75/14a9c0527cac9b6abdd9172f01158f57925c9b39.html",
       "expected": "inapplicable",
@@ -1076,7 +1058,7 @@
     },
     {
       "testcaseId": "b53db66e471e734e9f494c6028fa6c8312b4e9e9",
-      "testcaseTitle": "Inapplicable Example 5",
+      "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/bc4a75/b53db66e471e734e9f494c6028fa6c8312b4e9e9.html",
       "relativePath": "testcases/bc4a75/b53db66e471e734e9f494c6028fa6c8312b4e9e9.html",
       "expected": "inapplicable",
@@ -1094,7 +1076,7 @@
     },
     {
       "testcaseId": "53e6031392d279eddb2b8f7e2db60a76f82bfa30",
-      "testcaseTitle": "Inapplicable Example 6",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/bc4a75/53e6031392d279eddb2b8f7e2db60a76f82bfa30.html",
       "relativePath": "testcases/bc4a75/53e6031392d279eddb2b8f7e2db60a76f82bfa30.html",
       "expected": "inapplicable",

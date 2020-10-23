@@ -356,7 +356,7 @@ These links have different [accessible names][accessible name]. The rule only ap
 
 #### Inapplicable Example 3
 
-These `span` elements do not have a [semantic role][] of link. They are not valid links.
+These `span` elements do not have a [semantic role][] of `link`. They are not valid links.
 
 ```html
 <html lang="en">

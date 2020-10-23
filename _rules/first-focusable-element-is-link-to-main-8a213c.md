@@ -29,11 +29,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-There is at least one [focusable][] element within the test target.
+The [sequential focus navigation order][sequential focus navigation] of the test target is not empty.
 
 ## Expectation 2
 
-The first [focusable][] element (in [sequential focus navigation][] order) within the test target:
+The first element in the [sequential focus navigation order][sequential focus navigation] of the test target:
 
 - is [keyboard actionable][]; and
 - is [included in the accessibility tree][]; and

@@ -170,13 +170,13 @@ These two SVG `a` elements have the same [accessible name][] and link to the [sa
 ```html
 <html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<a href="http://facebook.com" aria-label="Follow us">
+		<a href="https://act-rules.github.io/" aria-label="ACT rules">
 			<circle cx="50" cy="40" r="35" />
 		</a>
 
-		<a href="http://facebook.com">
+		<a href="https://act-rules.github.io/">
 			<text x="50" y="90" text-anchor="middle">
-				Follow us
+				ACT rules
 			</text>
 		</a>
 	</svg>
@@ -188,10 +188,10 @@ These two SVG `a` elements have the same [accessible name][] and link to the [sa
 A set of one SVG `a` element and one HTML `a` element that have the same [accessible name][] and link to the [same resource][].
 
 ```html
-<a href="http://facebook.com">Follow us</a>
+<a href="https://act-rules.github.io/">ACT rules</a>
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<a href="http://facebook.com" aria-label="Follow us">
+	<a href="https://act-rules.github.io/" aria-label="ACT rules">
 		<circle cx="50" cy="40" r="35" />
 	</a>
 </svg>
@@ -244,8 +244,8 @@ These two links have the same [accessible name][] but go to different resources.
 
 ```html
 <html lang="en">
-	<a href="http://facebook.com">Follow us</a>
-	<a href="http://twitter.com">Follow us</a>
+	<a href="https://act-rules.github.io/">ACT rules</a>
+	<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 </html>
 ```
 
@@ -292,8 +292,8 @@ The same [accessible name][] is used for image links going to different resource
 
 ```html
 <html lang="en">
-	<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
-	<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us"/></a>
+	<a href="https://act-rules.github.io/"><img src="/test-assets/shared/act-logo.png" alt="ACT rules"/></a>
+	<a href="https://www.w3.org/community/act-r/"><img src="/test-assets/shared/act-logo.png" alt="ACT rules"/></a>
 </html>
 ```
 
@@ -304,13 +304,13 @@ These two SVG `a` elements have the same [accessible name][] but link to differe
 ```html
 <html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<a href="http://facebook.com" aria-label="Follow us">
+		<a href="https://act-rules.github.io/" aria-label="ACT rules">
 			<circle cx="50" cy="40" r="35" />
 		</a>
 
-		<a href="http://twitter.com">
+		<a href="https://www.w3.org/community/act-r/">
 			<text x="50" y="90" text-anchor="middle">
-				Follow us
+				ACT rules
 			</text>
 		</a>
 	</svg>
@@ -368,22 +368,6 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 		Contact Us
 	</span>
 </html>
-```
-
-#### Inapplicable Example 4
-
-These links have empty [accessible names][accessible name]. The links have no text alternative.
-
-```html
-<a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
-```
-
-#### Inapplicable Example 5
-
-These image links have empty [accessible names][accessible name]. The links have no text alternative.
-
-```html
-<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

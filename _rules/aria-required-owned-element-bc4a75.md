@@ -24,9 +24,8 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
+The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if one of the following is true:
 
-- the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
 - the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this [attribute value][].
 
@@ -48,8 +47,6 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 - Some user agents treat the value of `aria-busy` as case-sensitive.
 
 ## Background
-
-HTML elements with an [implicit semantic role][] corresponding to [explicit semantic role][] are not tested in this rule because some of these elements have different requirements. For example, an element that has an implicit semantic role of `menu` is identical to an element with the explicit semantic `role="menu"`. In the HTML, only the `li` and [script-supporting](https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements-2) elements can be [owned by][] the element with the [implicit semantic role][] of `menu`. The list of [required owned elements][] for the [explicit semantic role][] of `menu` does not include elements with the `role="listitem"`.
 
 Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
@@ -230,23 +227,13 @@ This `ul` element does not have an [explicit semantic role][].
 
 #### Inapplicable Example 3
 
-This `ul` element has the same [explicit semantic role][] as its [implicit semantic role][].
-
-```html
-<ul role="list">
-	<li>Item 1</li>
-</ul>
-```
-
-#### Inapplicable Example 4
-
 This element with the `progressbar` role does not need [required owned elements][].
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
 
@@ -256,7 +243,7 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 </ul>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
 
@@ -270,7 +257,6 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 [owns]: #owned-by
 [owned by]: #owned-by
 [explicit semantic role]: #explicit-role
-[implicit semantic role]: #implicit-role
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/

@@ -21,22 +21,17 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [visible changes in content][].
+The rule applies to any element that when [hovered][] causes [visible changes in content][] and the [area affected by the changes][area affected by visible changes] is adjacent or overlaps the target content.
 
 ## Expectation
 
-There are no [visible changes in content][] while the target element is [hovered][] or the mouse pointer remains inside a rectangle defined by the following coordinates:
-
-- (**top**:) the lowest value of the y coordinate of any pixel affected by the [visible changes in content][]; and
-- (**left**:) the lowest value of the x coordinate of any pixel affected by the [visible changes in content][]; and
-- (**bottom**:) the highest value of the y coordinate of any pixel affected by the [visible changes in content][]; and
-- (**right**:) the highest value of the x coordinate of any pixel affected by the [visible changes in content][].
+There are no [visible changes in content][] while the target element is [hovered][] or the mouse pointer remains inside the [area affected by the changes][area affected by visible changes].
 
 ## Assumptions
 
 - The user does not dismiss the tooltip causing the changes in content by pressing a key on the keyboard. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 - The content displayed on the rectangle with the changes in content does not become irrelevant. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
-- The element and the rectangle defined by the additional content are adjacent, so that it is possible to move the mouse pointer from one to the other without causing the additional content to disappear.
+- The additional content displayed on hover does not include animations. An animation would cause visible changes to the content of the page and therefore fail this rule. However, if the animation is displayed only while the mouse pointer hovers above the target element or the rectangle with the changes [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 
 ## Accessibility Support
 
@@ -103,6 +98,7 @@ This element does not cause [visible changes in content][] when [hovered][].
 <button>WCAG</button>
 ```
 
+[area affected by visible changes]: #area-affected-visible-changes 'Definition of area affected by visible changes'
 [hovered]: #hovered 'Definition of hovered'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'
 [visible changes in content]: #visible-changes-in-content 'Definition of visible changes in content'

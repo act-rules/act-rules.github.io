@@ -253,7 +253,7 @@ This `img` element has no [accessible name][] because it is not [included in the
 This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
-<a href="//w3.org" aria-label="W3C Website">
+<a href="https://w3.org" aria-label="W3C Website">
 	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>

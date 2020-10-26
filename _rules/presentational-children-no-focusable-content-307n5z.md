@@ -76,10 +76,12 @@ This element with `checkbox` role has no [descendants][] that are included in [s
 
 This element with `menuitemcheckbox` role has an `input` element as a descendant. Because the `input` is disabled it is not included in [sequential focus navigation][].
 
+**Note**: The `input` checkbox has a `role` [attribute value][] of `none` to ensure it is ignored by browsers that to not support [presentational children][].
+
 ```html
 <ul role="menu">
 	<li role="menuitemcheckbox" aria-checked="true">
-		<input type="checkbox" disabled checked />
+		<input type="checkbox" role="none" disabled checked />
 		Sort by Last Modified
 	</li>
 </ul>
@@ -130,6 +132,7 @@ This element has a `link` role which does not have [presentational children][].
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible name'
+[attribute value]: #attribute-value 'Definition of Attribute value'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [accessibility tree]: https://www.w3.org/TR/accname-1.1/#dfn-accessibility-tree 'Definition of Accessibility tree'
 [presentational children]: https://www.w3.org/TR/wai-aria-1.1/#childrenArePresentational 'WAI-ARIA 1.1 Presentational Children'

@@ -117,7 +117,7 @@ This link, with a background with a **different hue** from the other text in the
 	}
 	a {
 		color: black;
-		background-color: #indianred;
+		background-color: indianred;
 		text-decoration: underline;
 	}
 </style>
@@ -150,7 +150,7 @@ This element with a [semantic role][] that inherits from link, with a **differen
 
 #### Passed Example 5
 
-This link, with a **different hue** from the other text in the same line, has a distinguishable color because the color contrast is 4.98.
+This link, with a **different hue** from the other text in the same line, has a distinguishable color because the color contrast is 5.0:1.
 
 ```html
 <style>

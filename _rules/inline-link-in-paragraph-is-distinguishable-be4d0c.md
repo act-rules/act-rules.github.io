@@ -23,11 +23,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] HTML element that is a [semantic link][], for which all the following is true:
+This rule applies to each [link history state][] of any [semantic link][], for which all the following is true:
 
-- **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
-- **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the [foreground colors][foreground color] of the element's **link text** and the [foreground color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][].
+- **link text**: the [semantic link][] element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
+- **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
+- **different hue**: the [foreground colors][foreground color] of the [semantic link's][semantic link] **link text** and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [semantic link's][semantic link] [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
 ## Expectation
 

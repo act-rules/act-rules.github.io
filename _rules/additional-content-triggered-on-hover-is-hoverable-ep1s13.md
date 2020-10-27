@@ -21,7 +21,10 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [visible changes in content][] and the [area affected by the changes][area affected by visible changes] is [adjacent][adjacent areas] or [overlaps][overlapping areas] the bounding box of the target content.
+The rule applies to any element that when [hovered][] causes [visible changes in content][] and for the [area affected by the changes][area affected by visible changes] all the following are true:
+
+- the area is [adjacent][adjacent areas] or [overlaps][overlapping areas] the [bounding box][] of the target element; and
+- the area is not [contained][] inside the [bounding box][] of the target element.
 
 ## Expectation
 
@@ -31,6 +34,7 @@ There are no [visible changes in content][] while the target element is [hovered
 
 - The user does not dismiss the tooltip causing the changes in content by pressing a key on the keyboard. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 - The content displayed on the rectangle with the changes in content does not become irrelevant. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
+- The changes in content resulting from the hovering are
 - The additional content displayed on hover does not include animations. An animation would cause visible changes to the content of the page and therefore fail this rule. However, if the animation is displayed only while the mouse pointer hovers above the target element or the rectangle with the changes [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 
 ## Accessibility Support
@@ -116,6 +120,14 @@ This button element causes [visible changes in content][] by presenting a toolti
 		</p>
 	</div>
 </body>
+```
+
+#### Inapplicable Example 3
+
+This element causes [visible changes in content][] when [hovered][] (due to default user agent styling). However, all the visible changes are inside the element's bounding box.
+
+```html
+<a href="https://www.w3.org/WAI/">WAI</a>
 ```
 
 

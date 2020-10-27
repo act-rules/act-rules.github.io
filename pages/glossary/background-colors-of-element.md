@@ -8,4 +8,6 @@ input_aspects:
   - DOM tree
 ---
 
-The colors of all pixels, excluding the [foreground colors](#foreground-colors-of-text) pixels, in the element's [bounding client rectangle](https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect).
+The colors of all pixels, excluding the [foreground colors](#foreground-colors-of-text) pixels of the element's [text nodes][], in the element's [bounding client rectangle](https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect).
+
+[text nodes]: https://dom.spec.whatwg.org/#text

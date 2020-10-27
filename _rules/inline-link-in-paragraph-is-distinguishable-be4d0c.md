@@ -70,11 +70,11 @@ This link, with a **different hue** from the other text in the same line, uses a
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: underline;
 	}
@@ -89,12 +89,12 @@ This link, with a **different hue** from the other text in the same line, uses a
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
 		text-decoration: none;
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 	}
 	a:hover,
@@ -112,12 +112,12 @@ This link, with a background with a **different hue** from the other text in the
 ```html
 <style>
 	p {
-		color: black;
-		background-color: white;
+		color: white;
+		background-color: hsl(232, 50%, 25%);
 	}
 	a {
-		color: black;
-		background-color: indianred;
+		color: white;
+		background-color: hsl(0, 50%, 25%);
 		text-decoration: underline;
 	}
 </style>
@@ -131,11 +131,11 @@ This element with a [semantic role][] that inherits from link, with a **differen
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: underline;
 	}
@@ -177,11 +177,11 @@ This link, with a **different hue** from the other text in the same line, has a 
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -203,11 +203,11 @@ This link, with a **different hue** from the other text in the same line, has a 
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a.test {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 		box-shadow: 4px 4px;
@@ -223,11 +223,11 @@ This link, with a **different hue** from the other text in the same line, has a 
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -245,11 +245,11 @@ This link, with a **different hue** from the other text in the same line, has an
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a.test {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -267,11 +267,11 @@ This link, with a **different hue** from the other text in the same line, has te
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a.test {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -286,11 +286,11 @@ This link, with a **different hue** from the other text in the same line, has an
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -336,7 +336,7 @@ This link has a **different hue** from the other text in the same line in both l
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a:link {
@@ -345,7 +345,7 @@ This link has a **different hue** from the other text in the same line in both l
 		text-decoration: none;
 	}
 	a:visited {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: lightgray;
 	}
 </style>
@@ -356,16 +356,16 @@ This link has a **different hue** from the other text in the same line in both l
 
 #### Failed Example 1
 
-This link, with a **different hue** from the other text in the same line, has no other visual cues of being recognized as a link because the underline has been removed. Even though the link has a different color (blue) from the other text (black) the low difference in contrast between them means they are not distinguishing colors.
+This link, with a **different hue** from the other text in the same line, has no other visual cues of being recognized as a link because the underline has been removed. Even though the link has a different color from the other text the low difference in contrast (1.2:1) between them means they are not distinguishing colors.
 
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a.test {
-		color: blue;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
@@ -375,21 +375,21 @@ This link, with a **different hue** from the other text in the same line, has no
 
 #### Failed Example 2
 
-This link, with a **different hue** from the other text in the same line, has a different style because of its color and foreground color. But when the link has been visited, the style is the same of the other text on the same line (only the hue is different).
+This link, with a **different hue** from the other text in the same line, has a different style because of its color and background color. But when the link has been visited, the style is the same of the other text on the same line (only the hue is different).
 
 ```html
 <style>
 	p {
-		color: black;
+		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
 	a {
-		color: lightblue;
+		color: hsl(232, 50%, 25%);
 		background-color: #111111;
 		text-decoration: none;
 	}
 	a:visited {
-		color: black;
+		color: hsl(232, 50%, 25%);
 		background-color: white;
 	}
 </style>

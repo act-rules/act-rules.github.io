@@ -16,7 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
-    - Carlos Duarte
+	- Carlos Duarte
+  previous_authors:
     - Wilco Fiers
 ---
 

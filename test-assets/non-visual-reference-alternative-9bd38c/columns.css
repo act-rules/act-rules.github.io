@@ -1,8 +1,8 @@
-col-container {
+.col-container {
 	display: table;
 	width: 100%;
 }
-col {
+.col {
 	display: table-cell;
 	padding: 16px;
 }

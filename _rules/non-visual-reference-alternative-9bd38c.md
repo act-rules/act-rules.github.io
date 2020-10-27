@@ -152,7 +152,7 @@ This text includes the [visual reference word][] "tilted" and identifies web con
 	</style>
 </head>
 <body>
-	<div class="tilt">look at this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
+	<div class="tilt">search this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
 </body>
 ```
 
@@ -171,7 +171,9 @@ This paragraph includes the [visual reference word][] "round". The button is ide
 			<p>Click the round button, for a surprise</p>
 		</div>
 		<div class="col">
-			<button onclick="alert('Surprise!')">Round button</button>
+			<button style="border-radius: 50%; height: 100px; width: 100px;" onclick="alert('Surprise!')">
+				Round button
+			</button>
 		</div>
 	</div>
 </body>
@@ -194,7 +196,7 @@ This paragraph includes the [visual reference word][] "triangle" which is includ
 This paragraph includes the [visual reference words][] "wide" and "narrow". The images are indicated by these words which are also included in the [accessible names][accessible name] of the images, thus matching the (**accessible words**) condition.
 
 ```html
-<p>Look at the wide image which is awesome. Now compare it with the narrow image which isn't.</p>
+<p>The wide image is awesome. The narrow image isn't.</p>
 <img
 	scr="/test-assets/non-visual-reference-alternative-9bd38c/awesome_wide.jfif"
 	alt="Wide photo of an awesome landscape."
@@ -207,7 +209,7 @@ This paragraph includes the [visual reference words][] "wide" and "narrow". The 
 
 #### Passed Example 8
 
-This paragraph includes the [visual reference word][] "square" but in this case it is not identifying any [web content][], thus matching the (**no indication**) condition.
+This paragraph includes the [visual reference words][] "square" and "right" but in this case they are not identifying any [web content][], thus matching the (**no indication**) condition.
 
 ```html
 <p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
@@ -221,6 +223,7 @@ This paragraph includes the [visual reference word][] "circle" but in this case 
 <p>
 	This circle is nice.
 	<span
+		role="presentation"
 		style="height: 25px;
 		     width: 25px;
 		     background-color: #bbb;
@@ -273,10 +276,10 @@ This paragraph includes the [visual reference word][] "right". The content in th
 <body>
 	<div class="col-container">
 		<div class="col">
-			<p aria-hidden="true">Click the button labelled "howdy", on the right, for a surprise</p>
+			<p aria-hidden="true">Click the green button labelled "howdy" for a surprise</p>
 		</div>
 		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
+			<button style="background-color: green" onclick="alert('Surprise!')">Howdy</button>
 		</div>
 	</div>
 </body>

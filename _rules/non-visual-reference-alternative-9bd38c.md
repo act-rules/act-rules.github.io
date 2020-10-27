@@ -82,7 +82,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 ```html
 <head>
 	<title>Passed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -112,7 +112,7 @@ This paragraph includes the [visual reference word][] "right". The visual refere
 ```html
 <head>
 	<title>Passed example 3 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -163,7 +163,7 @@ This paragraph includes the [visual reference word][] "round". The button is ide
 ```html
 <head>
 	<title>Passed example 5 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -183,8 +183,9 @@ This paragraph includes the [visual reference word][] "triangle" which is includ
 
 ```html
 <p>
-	On the <a href="/test-assets/SC1.3.3-triangle-menu-with-heading.html">information page</a> you can find more examples
-	within the triangle menu.
+	On the
+	<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-with-heading.html">information page</a>
+	you can find more examples within the triangle menu.
 </p>
 ```
 
@@ -194,8 +195,14 @@ This paragraph includes the [visual reference words][] "wide" and "narrow". The 
 
 ```html
 <p>Look at the wide image which is awesome. Now compare it with the narrow image which isn't.</p>
-<img scr="/test-assets/images/awesome_wide.jfif" alt="Wide photo of an awesome landscape." />
-<img scr="/test-assets/images/Non_awesome_narrow.jpg" alt="Narrow photo of a dull landscape." />
+<img
+	scr="/test-assets/non-visual-reference-alternative-9bd38c/awesome_wide.jfif"
+	alt="Wide photo of an awesome landscape."
+/>
+<img
+	scr="/test-assets/non-visual-reference-alternative-9bd38c/non_awesome_narrow.jpg"
+	alt="Narrow photo of a dull landscape."
+/>
 ```
 
 #### Passed Example 8
@@ -230,7 +237,7 @@ This paragraph includes the [visual reference word][] "star" but there is also a
 
 ```html
 <p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
-<iframe title="star" src="/test-assets/SC1.3.3-star-with-heading.html"></iframe>
+<iframe title="star" src="/test-assets/non-visual-reference-alternative-9bd38c/star-with-heading.html"></iframe>
 ```
 
 #### Passed Example 11
@@ -240,7 +247,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 ```html
 <head>
 	<title>Passed example 11 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -261,7 +268,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 ```html
 <head>
 	<title>Passed example 12 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -282,7 +289,7 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 ```html
 <head>
 	<title>Passed example 13 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -332,7 +339,7 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 ```html
 <head>
 	<title>Failed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<div class="col-container">
@@ -360,7 +367,7 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 ```html
 <head>
 	<title>Failed example 2 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="../test-assets/9bd38c/columns.css" />
+	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
 </head>
 <body>
 	<nav>
@@ -400,8 +407,11 @@ This paragraph includes the [visual reference word][] "triangle" (which is not i
 ```html
 <body>
 	<p>
-		On the <a href="/test-assets/SC1.3.3-triangle-menu-without-heading.html">information page</a> you can find more
-		examples within the triangle menu
+		On the
+		<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-without-heading.html"
+			>information page</a
+		>
+		you can find more examples within the triangle menu
 	</p>
 </body>
 ```
@@ -413,7 +423,7 @@ This paragraph includes the [visual reference word][] "star" (which is not inclu
 ```html
 <body>
 	<p>More examples can be found when you look underneath the star</p>
-	<iframe src="/test-assets/SC1.3.3-star-without-heading.html"></iframe>
+	<iframe src="/test-assets/non-visual-reference-alternative-9bd38c/star-without-heading.html"></iframe>
 </body>
 ```
 

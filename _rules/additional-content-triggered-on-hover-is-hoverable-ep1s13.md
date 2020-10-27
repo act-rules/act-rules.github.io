@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [visible changes in content][] and the [area affected by the changes][area affected by visible changes] is adjacent or overlaps the target content.
+The rule applies to any element that when [hovered][] causes [visible changes in content][] and the [area affected by the changes][area affected by visible changes] is [adjacent][adjacent areas] or [overlaps][overlapping areas] the bounding box of the target content.
 
 ## Expectation
 
@@ -98,7 +98,31 @@ This element does not cause [visible changes in content][] when [hovered][].
 <button>WCAG</button>
 ```
 
+#### Inapplicable Example 2
+
+This button element causes [visible changes in content][] by presenting a tooltip when [hovered][]. However, the tooltip is not adjacent neither overlaps the button.
+
+```html
+<link rel="stylesheet" type="text/css" href="/test-assets/ep1s13/stylesbad.css" />
+<script src="/test-assets/ep1s13/scripts.js"></script>
+
+<body onload="bindEvents({tooltipRemains: true})">
+	<div class="tooltip-container">
+		<button aria-labelledby="tooltip">
+			<span aria-hidden>WCAG</span>
+		</button>
+		<p id="tooltip" role="tooltip" hidden>
+			Web Content Accessibility Guidelines
+		</p>
+	</div>
+</body>
+```
+
+
+[adjacent areas]: #adjacent-areas 'Definition of adjacent areas'
 [area affected by visible changes]: #area-affected-visible-changes 'Definition of area affected by visible changes'
+[bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [hovered]: #hovered 'Definition of hovered'
+[overlapping areas]: #overlapping-areas 'Definition of overlapping areas'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'
 [visible changes in content]: #visible-changes-in-content 'Definition of visible changes in content'

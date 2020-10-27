@@ -134,6 +134,7 @@ This element causes [visible changes in content][] when [hovered][] (due to defa
 [adjacent areas]: #adjacent-areas 'Definition of adjacent areas'
 [area affected by visible changes]: #area-affected-visible-changes 'Definition of area affected by visible changes'
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
+[contained]: #contained-area 'Definition of contained area'
 [hovered]: #hovered 'Definition of hovered'
 [overlapping areas]: #overlapping-areas 'Definition of overlapping areas'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'

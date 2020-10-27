@@ -27,7 +27,7 @@ This rule applies to any [visible][] HTML element that is a [semantic link][], f
 
 - **link text**: the element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the element's [foreground colors][foreground color] and the [foreground color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][].
+- **different hue**: the [foreground colors][foreground color] of the element's **link text** and the [foreground color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][], or the element's [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][] in at least one [link history state][].
 
 ## Expectation
 

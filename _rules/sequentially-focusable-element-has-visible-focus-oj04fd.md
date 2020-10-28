@@ -76,8 +76,8 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 The first [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element).
 
 ```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js"></script>
+<link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
+<script src="/test-assets/focus-visible-oj04fd/script.js"></script>
 
 <span id="indicator" class="border">
 	<a
@@ -97,8 +97,8 @@ The first [focusable][] element is part of [sequential focus navigation][]. Its 
 Each of these three [focusable][] elements has a blue square in front of it when it is [focused][].
 
 ```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
-<script src="../test-assets/focus-visible/script.js"></script>
+<link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
+<script src="/test-assets/focus-visible-oj04fd/script.js"></script>
 
 <span id="indicator-act" class="indicator solid"></span>
 <a
@@ -137,7 +137,7 @@ Each of these three [focusable][] elements has a blue square in front of it when
 The first [focusable][] element does not have any pixel changing color when it is [focused][] because the default styling has been overwritten by a style that removes the outline.
 
 ```html
-<link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
+<link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
 <button class="no-focus-default">Dummy button</button>

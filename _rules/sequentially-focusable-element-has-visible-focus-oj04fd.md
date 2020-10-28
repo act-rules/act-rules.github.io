@@ -170,6 +170,14 @@ None of the [focusable][] elements in this document are part of [sequential focu
 <a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
+#### Inapplicable Example 4
+
+The [sequential focus navigation order][sequential focus navigation] of this document contains only one element.
+
+```html
+<a href="https://act-rules.github.io/">ACT rules</a> <a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
+```
+
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: #focused 'Definition of Focused'
 [sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7 Focus Visible'

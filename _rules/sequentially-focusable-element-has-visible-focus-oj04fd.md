@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element which is part of [sequential focus navigation][] in an [HTML document](https://html.spec.whatwg.org/#document) with at least two [focusable][] elements.
+The rule applies to any element which is part of [sequential focus navigation][] in an [HTML document](https://html.spec.whatwg.org/#document) with at least two elements in its [sequential focus navigation order][sequential focus navigation].
 
 ## Expectation
 
@@ -49,16 +49,18 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 - [Understanding Success Criterion 2.4.11: Focus Appearance (Minimum)][usc2411]
 - [Understanding Success Criterion 2.4.12: Focus Appearance (Enhanced)][usc2412]
 
+Due to the Applicability of this rule, test cases must have at least two elements in their [sequential focus navigation order][sequential focus navigation]. In order to keep the test case focused on one aspect of the rule, most of them include a button labelled "Dummy button" whose sole purpose is to make the other element applicable. This dummy button is passing the rule (due to default User Agent's styling) for the Passed test cases, and failing it for the Failed test case; and it is never mentioned further in the test cases descriptions.
+
 ## Test Cases
 
 ### Passed
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The second [focusable][] element is not applicable because it has been removed from [sequential focus navigation][] due to the negative value for the `tabindex` attribute. Its presence is nonetheless enough to make the rule applicable to the first one.
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling).
 
 ```html
-<a href="https://act-rules.github.io/">ACT rules</a> <button tabindex="-1">Dummy button</button>
+<a href="https://act-rules.github.io/">ACT rules</a> <button>Dummy button</button>
 ```
 
 #### Passed Example 2
@@ -66,7 +68,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling).
 
 ```html
-<span tabindex="0">Act rules</span> <button tabindex="-1">Dummy button</button>
+<span tabindex="0">Act rules</span> <button>Dummy button</button>
 ```
 
 #### Passed Example 3
@@ -87,7 +89,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. Its 
 		>ACT rules</a
 	>
 </span>
-<button tabindex="-1">Dummy button</button>
+<button>Dummy button</button>
 ```
 
 #### Passed Example 4
@@ -138,7 +140,7 @@ The first [focusable][] element does not have any pixel changing color when it i
 <link rel="stylesheet" href="../test-assets/focus-visible/styles.css" />
 
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<button tabindex="-1">Dummy button</button>
+<button class="no-focus-default">Dummy button</button>
 ```
 
 ### Inapplicable

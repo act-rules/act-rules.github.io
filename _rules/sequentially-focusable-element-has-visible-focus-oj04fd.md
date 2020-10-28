@@ -49,7 +49,7 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 - [Understanding Success Criterion 2.4.11: Focus Appearance (Minimum)][usc2411]
 - [Understanding Success Criterion 2.4.12: Focus Appearance (Enhanced)][usc2412]
 
-Due to the Applicability of this rule, test cases must have at least two elements in their [sequential focus navigation order][sequential focus navigation]. In order to keep the test case focused on one aspect of the rule, most of them include a button labelled "Dummy button" whose sole purpose is to make the other element applicable. This dummy button is passing the rule (due to default User Agent's styling) for the Passed test cases, and failing it for the Failed test case; and it is never mentioned further in the test cases descriptions.
+Due to the Applicability of this rule, test cases must have at least two elements in their [sequential focus navigation order][sequential focus navigation]. In order to keep the test case focused on one aspect of the rule, most of them include a button labeled "Dummy button" whose sole purpose is to make the other element applicable. This dummy button is passing the rule (due to default User Agent's styling) for the Passed test cases, and failing it for the Failed test cases; and it is never mentioned further in the test cases descriptions.
 
 ## Test Cases
 

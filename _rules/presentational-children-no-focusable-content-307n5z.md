@@ -3,7 +3,7 @@ id: 307n5z
 name: Element with presentational children has no focusable content
 rule_type: atomic
 description: |
-  This rule checks that elements with a role that makes it children presentational do not contain focusable elements.
+  This rule checks that elements with a role that makes its children presentational do not contain focusable elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -25,7 +25,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element with a [semantic role][] that defines its [children][child] to be [presentational children][].
+This rule applies to any HTML or SVG element with a [semantic role][] that defines its [children][child] to be [presentational children][].
 
 ## Expectation
 
@@ -53,7 +53,7 @@ Elements with a [semantic role][] that has [presentational children][] will not 
 
 #### Passed Example 1
 
-Neither `button` element has no [descendants][] that are included in [sequential focus navigation][].
+None of these `button` elements has [descendants][] that are included in [sequential focus navigation][].
 
 ```html
 <button>Save</button> <button aria-label="save options" aria-expanded="false">▼</button>
@@ -76,7 +76,7 @@ This element with `checkbox` role has no [descendants][] that are included in [s
 
 This element with `menuitemcheckbox` role has an `input` element as a descendant. Because the `input` is disabled it is not included in [sequential focus navigation][].
 
-**Note**: The `input` checkbox has a `role` [attribute value][] of `none` to ensure it is ignored by browsers that to not support [presentational children][].
+**Note**: The `input` checkbox has a `role` [attribute value][] of `none` to ensure it is ignored by browsers that do not support [presentational children][].
 
 ```html
 <ul role="menu">
@@ -91,7 +91,7 @@ This element with `menuitemcheckbox` role has an `input` element as a descendant
 
 #### Failed Example 1
 
-The `button` element has a [child][] `span` element that is included in [sequential focus navigation][].
+This `button` element has a [child][] `span` element that is included in [sequential focus navigation][].
 
 ```html
 <button>

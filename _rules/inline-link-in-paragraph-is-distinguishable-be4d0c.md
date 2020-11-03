@@ -27,7 +27,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 
 - **link text**: the [semantic link][] element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the [foreground colors][foreground color] of the [semantic link's][semantic link] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [semantic link's][semantic link] [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
+- **different hue**: the [foreground colors][foreground color] of the [semantic link][] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [background colors][background color] of the [semantic link][] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
 ## Expectation
 

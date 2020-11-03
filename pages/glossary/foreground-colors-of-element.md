@@ -8,4 +8,4 @@ input_aspects:
   - DOM tree
 ---
 
-The _foreground colors of an element_ are the [foreground colors](#foreground-colors-of-text) of all [visible](#visible) [text nodes](https://dom.spec.whatwg.org/#text) of that element. 
+The _foreground colors of an element_ are the [foreground colors](#foreground-colors-of-text) of all [visible](#visible) [text nodes](https://dom.spec.whatwg.org/#text) that are [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) of that element. 

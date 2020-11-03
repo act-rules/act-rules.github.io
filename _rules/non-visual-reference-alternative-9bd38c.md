@@ -43,6 +43,7 @@ For each test target that includes at least one of the [visual reference words][
 
 - (**no indication**) the test target does not identify any [web content][] through the use of any [visual reference words][]; or
 - (**non-visual reference**) the test target identifies some [web content][] and is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] without any [visual reference word][]; or
+- (**non-sensory meaning**) the test target identifies some [web content][], but at least one of the [visual reference words][] that identifies the [web content][] is used with a non-sensory meaning.
 - (**visible words**) the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
 - (**accessible words**) the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
 - (**no instruction**) the test target identifies some [web content][] but does not give instructions about it through the use of any of the [visual reference words][].
@@ -51,8 +52,6 @@ For each test target that includes at least one of the [visual reference words][
 
 - This rule assumes that [visual reference words][] are forms of information conveyed through visual presentation. Therefore, failing this rule fails both [Success Criterion 1.3.1 Info and Relationships][sc131] and [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Visual presentation is not limited to CSS and includes images such as the image of a circle with text.
 
-- This rule assumes that non-visual users will interpret some visual reference words as meaning "ahead" or "backward" in the reading order. For example in most contexts "see the content below" will mean ahead in the DOM tree reading order which is not a visual reference and should pass this rule. Note, that the DOM tree reading order can be different from the visual order of things, which could result in "see the content below" only referring to the visual order of things in which case it is not a correct reference.
-
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
@@ -60,6 +59,8 @@ For each test target that includes at least one of the [visual reference words][
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+[Visual reference words][] that can be interpreted with the non-sensory meaning include, in English, expressions like "right after this" where "right" is a [visual reference word][] used with the meaning "immediately"; or words like "below" that is often used with the meaning "further in reading order".
 
 The rule doesn't require the non-visual characteristic description to be included in the accessibility tree. If the alternatives are not included in the accessibility tree, only [Success Criteria 1.3.1 Info and Relationships][sc131] would fail instead of both [Success Criterion 1.3.3 Sensory Characteristics][sc133] and [Success Criteria 1.3.1 Info and Relationships][sc131]. Hence, the rule passes in these cases as it is not a failure of all accessibility requirements.
 
@@ -98,10 +99,10 @@ This paragraph includes the [visual reference word][] "right". The content in th
 
 #### Passed Example 2
 
-This paragraph includes the [visual reference word][] "box". The button is identified with the word "box" but also identified by referencing that the content can be found below this content in the DOM order. Note that "below" is also a visual reference word but in this case it can also be accurately interpreted as "further in the DOM tree order" which does not rely on visual attributes alone. Hence, the paragraph matches the (**non-visual reference**) condition.
+This paragraph includes the [visual reference word][] "below" which can here be accurately interpreted as "further in the reading order". Hence, the paragraph matches the (**non-sensory meaning**) condition.
 
 ```html
-<p>Interact with the box below this paragraph, for a surprise</p>
+<p>Interact with the button below this paragraph, for a surprise</p>
 <button onclick="alert('Surprise!')">Howdy</button>
 ```
 

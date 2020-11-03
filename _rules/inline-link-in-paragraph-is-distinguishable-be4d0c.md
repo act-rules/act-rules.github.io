@@ -27,7 +27,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 
 - **link text**: the [semantic link][] element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
-- **different hue**: the [foreground colors][foreground color] of the [semantic link's][semantic link] **link text** and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [semantic link's][semantic link] [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
+- **different hue**: the [foreground colors][foreground color] of the [semantic link's][semantic link] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [semantic link's][semantic link] [background colors][background color] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
 ## Expectation
 
@@ -478,7 +478,7 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [different hue]: #different-hue 'Definition of different hue'
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[foreground color]: #foreground-colors-of-text 'Definition of foreground colors of text'
+[foreground color]: #foreground-colors-of-element 'Definition of foreground colors of element'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
 [link history state]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'

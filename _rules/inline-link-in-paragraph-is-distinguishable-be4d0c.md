@@ -31,7 +31,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 
 ## Expectation
 
-For each [link history state][] of the [semantic link][] there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that at least one of the following is true:
+For each test target, there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that at least one of the following is true:
 
 - **distinguishing style**: the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**; or
 - **distinguishing content**: the [visible][] [inclusive descendant][] has adjacent content (such as an image or text) that indicates the test target is a link.

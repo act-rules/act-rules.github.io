@@ -153,7 +153,7 @@ This text includes the [visual reference word][] "tilted" and identifies web con
 	</style>
 </head>
 <body>
-	<div class="tilt">search this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
+	<div class="tilt">Search this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
 </body>
 ```
 

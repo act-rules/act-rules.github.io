@@ -733,10 +733,10 @@
       }
     },
     {
-      "testcaseId": "cd29cef3dee3387ba01839d53801d84b3fdca542",
+      "testcaseId": "d54d8fbd9acc6ce0c4fb9ef5fa48c5acbda9827c",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
-      "relativePath": "testcases/ff89c9/cd29cef3dee3387ba01839d53801d84b3fdca542.html",
+      "url": "https://act-rules.github.io/testcases/ff89c9/d54d8fbd9acc6ce0c4fb9ef5fa48c5acbda9827c.html",
+      "relativePath": "testcases/ff89c9/d54d8fbd9acc6ce0c4fb9ef5fa48c5acbda9827c.html",
       "expected": "inapplicable",
       "ruleId": "ff89c9",
       "ruleName": "ARIA required context role",

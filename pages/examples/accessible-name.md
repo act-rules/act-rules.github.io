@@ -37,7 +37,7 @@ This `img` element has an accessible name of "ACT rules" given by its `alt` attr
 <img src="#" alt="ACT rules" />
 ```
 
-## Using explicit labels
+## Using implicit labels
 
 The `button` element has an accessible name of "Share ACT rules" given by the enclosing `label` element (implicit `label`)
 
@@ -45,7 +45,7 @@ The `button` element has an accessible name of "Share ACT rules" given by the en
 <label>Share ACT rules<button>Share</button></label>
 ```
 
-## Using implicit labels
+## Using explicit labels
 
 The `button` element has an accessible name of "Share ACT rules" given by the associated `label` element (explicit `label`)
 

@@ -9,7 +9,7 @@ input_aspects:
   - DOM tree
 ---
 
-A _block of content_ in an [HTML web page][] is a set of nodes from that page such that:
+A _block of content_ in an [HTML web page][] is a set of nodes from that page for which of of the following are true:
 
 - (**content**) there is at least one [perceivable content][] in the block; and
 - (**continuity**) if two nodes are in the block, then any node between them (in tree order) is also in the block; and

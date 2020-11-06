@@ -9,7 +9,7 @@ input_aspects:
   - DOM tree
 ---
 
-A [block of content][] B, inside an [HTML web page][] P, is a _block of repeated content_ if:
+A [block of content][] B, inside an [HTML web page][] P, is a _block of repeated content_ if both the following are true:
 
 - (**distance 1**) there exist an [instrument][] in P which leads the user to another [HTML web page][] P'; and
 - (**repeated**) there exist a [block of content][] in P' which is [equivalent][equivalent resource] to B.

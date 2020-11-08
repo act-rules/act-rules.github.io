@@ -241,29 +241,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 
 #### Passed Example 9
 
-This link, with a **different hue** from the other text in the same line, has an icon that makes it distinguishable as a link.
-
-```html
-<style>
-	p {
-		color: hsl(0, 50%, 25%);
-		background-color: white;
-	}
-	a.test {
-		color: hsl(232, 50%, 25%);
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>
-	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage <img src="/test-assets/be4d0c/icon.png" alt="" /></a>.
-</p>
-```
-
-#### Passed Example 10
-
-This link, with a **different hue** from the other text in the same line, has text that makes it distinguishable as a link.
+This link, with a **different hue** from the other text in the same line, has the word "link" in the text nodes of inclusive descendant elements.
 
 ```html
 <style>
@@ -280,9 +258,9 @@ This link, with a **different hue** from the other text in the same line, has te
 <p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
 ```
 
-#### Passed Example 11
+#### Passed Example 10
 
-This link, with a **different hue** from the other text in the same line, has an icon that appears when the link is hovered. This icon indicates the element is a link.
+This link, with a **different hue** from the other text in the same line, has the word "link" in the text nodes of inclusive sibling elements.
 
 ```html
 <style>
@@ -290,25 +268,19 @@ This link, with a **different hue** from the other text in the same line, has an
 		color: hsl(0, 50%, 25%);
 		background-color: white;
 	}
-	a {
+	a.test {
 		color: hsl(232, 50%, 25%);
 		background-color: white;
 		text-decoration: none;
 	}
-	.hide {
-		display: none;
-	}
-	a:hover img.hide {
-		display: inline;
-	}
 </style>
 <p>
-	Read about WAI on the
-	<a href="http://w3.org/WAI">WAI webpage <img class="hide" src="/test-assets/be4d0c/icon.png" alt="" /></a>.
+	To read about the Web Accessibility Initiative follow the link:
+	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
 </p>
 ```
 
-#### Passed Example 12
+#### Passed Example 11
 
 This link has a descendant element with a **different hue** from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
@@ -330,7 +302,7 @@ This link has a descendant element with a **different hue** from the other text 
 </p>
 ```
 
-#### Passed Example 13
+#### Passed Example 12
 
 This link has a **different hue** from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
 
@@ -395,6 +367,28 @@ This link, with a **different hue** from the other text in the same line, has a 
 	}
 </style>
 <p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI webpage</a>.</p>
+```
+
+#### Failed Example 3
+
+This link, with a **different hue** from the other text in the same line, has text in the sibling elements that might be understood as indication the presence of a link but does not use the word "link".
+
+```html
+<style>
+	p {
+		color: hsl(0, 50%, 25%);
+		background-color: white;
+	}
+	a.test {
+		color: hsl(232, 50%, 25%);
+		background-color: white;
+		text-decoration: none;
+	}
+</style>
+<p>
+	To read about the Web Accessibility Initiative click here:
+	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
+</p>
 ```
 
 ### Inapplicable

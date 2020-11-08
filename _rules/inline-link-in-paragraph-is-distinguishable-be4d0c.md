@@ -1,9 +1,9 @@
 ---
 id: be4d0c
-name: Inline link has either distinguishable style not based on color (hue) alone or content that indicates it is a link
+name: Inline link has either distinguishable style not based on color (hue) alone or is identified by the word link
 rule_type: atomic
 description: |
-  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or have content that indicates they are links.
+  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or are identified by the word link.
 accessibility_requirements:
   wcag20:1.4.1: # Use of Color (A)
     forConformance: true
@@ -13,6 +13,7 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
+  - Language
 acknowledgments:
   authors:
     - Brian Bors
@@ -34,7 +35,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 For each test target, there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that at least one of the following is true:
 
 - **distinguishing style**: the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**; or
-- **distinguishing content**: the [visible][] [inclusive descendant][] has adjacent content (such as an image or text) that indicates the test target is a link.
+- **distinguishing content**: the [text nodes][text node] of the [visible][] [inclusive descendant][] or the [text nodes][text node] [visible][] of the [inclusive sibling][] include the word "link" (or a translation of "link" to the [default page language][]).
 
 ## Assumptions
 
@@ -474,6 +475,7 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
 [background color]: #background-colors-of-element 'Definition of background colors of element'
+[default page language]: #default-page-language
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [different hue]: #different-hue 'Definition of different hue'
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'

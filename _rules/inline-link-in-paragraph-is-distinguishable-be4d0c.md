@@ -78,7 +78,7 @@ This link, with a **different hue** from the other text in the same line, uses a
 		text-decoration: underline;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 2
@@ -101,7 +101,7 @@ This link, with a **different hue** from the other text in the same line, uses a
 		text-decoration: underline;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 3
@@ -120,7 +120,7 @@ This link, with a background with a **different hue** from the other text in the
 		text-decoration: underline;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 4
@@ -165,7 +165,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 </style>
 <p>
 	Read about WAI on the
-	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
+	<a class="test" href="http://w3.org/WAI">WAI website</a>.
 </p>
 ```
 
@@ -192,7 +192,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 		border-bottom-width: 1px;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 7
@@ -212,7 +212,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 		box-shadow: 4px 4px;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 8
@@ -234,7 +234,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 		font-style: italic;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Passed Example 9
@@ -254,7 +254,7 @@ This link has a descendant element with a **different hue** from the other text 
 </style>
 
 <p>
-	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI webpage</span></a
+	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI website</span></a
 	>.
 </p>
 ```
@@ -279,7 +279,7 @@ This link has a **different hue** from the other text in the same line in both l
 		background-color: lightgray;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 ### Failed
@@ -300,7 +300,7 @@ This link, with a **different hue** from the other text in the same line, has no
 		text-decoration: none;
 	}
 </style>
-<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a class="test" href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 #### Failed Example 2
@@ -323,7 +323,7 @@ This link, with a **different hue** from the other text in the same line, has a 
 		background-color: white;
 	}
 </style>
-<p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI website</a>.</p>
 ```
 
 ### Inapplicable
@@ -341,7 +341,7 @@ There is no [semantic link][] element.
 This link is not [visible][].
 
 ```html
-<p>Read about WAI on the <a href="http://w3.org/WAI" style="visibility:hidden">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI" style="visibility:hidden">WAI website</a>.</p>
 ```
 
 #### Inapplicable Example 3
@@ -352,7 +352,7 @@ This link with no text nodes has no **link text**.
 <p>
 	Read about WAI on the
 	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI" /></a>
-	webpage.
+	website.
 </p>
 ```
 
@@ -361,7 +361,7 @@ This link with no text nodes has no **link text**.
 This link is the only text rendered in its line, so there is no **non-link line text**.
 
 ```html
-<p><a href="http://w3.org/WAI">WAI webpage</a></p>
+<p><a href="http://w3.org/WAI">WAI website</a></p>
 ```
 
 #### Inapplicable Example 5
@@ -398,7 +398,7 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 		background-color: white;
 	}
 </style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI webpage</a>.</p>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
 [adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'

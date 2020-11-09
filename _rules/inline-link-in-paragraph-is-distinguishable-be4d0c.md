@@ -13,7 +13,6 @@ accessibility_requirements:
 input_aspects:
   - DOM Tree
   - CSS Styling
-  - Language
 acknowledgments:
   authors:
     - Brian Bors
@@ -404,7 +403,6 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
 [background color]: #background-colors-of-element 'Definition of background colors of element'
-[default page language]: #default-page-language
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [different hue]: #different-hue 'Definition of different hue'
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'

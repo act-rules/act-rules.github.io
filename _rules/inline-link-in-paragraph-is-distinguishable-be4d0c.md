@@ -1,9 +1,9 @@
 ---
 id: be4d0c
-name: Inline link has either distinguishable style not based on color (hue) alone or is identified by the word link
+name: Inline link has distinguishable style not based on color (hue) alone
 rule_type: atomic
 description: |
-  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone or are identified by the word link.
+  This rule checks that inline links are distinguishable from the surrounding text through a difference in style not based on color (hue) alone.
 accessibility_requirements:
   wcag20:1.4.1: # Use of Color (A)
     forConformance: true
@@ -32,10 +32,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 
 ## Expectation
 
-For each test target, there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that at least one of the following is true:
-
-- **distinguishing style**: the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**; or
-- **distinguishing content**: the [text nodes][text node] of the [visible][] [inclusive descendant][] or the [text nodes][text node] [visible][] of the [inclusive sibling][] include the word "link" (or a translation of "link" to the [default page language][]).
+For each test target, there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
 
 ## Assumptions
 
@@ -44,6 +41,7 @@ For each test target, there exists at least one [adequate inspection state][] an
 - The same `border` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise `border` can not be a distinguishing factor.
 - The same `box-shadow` is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise `box-shadow` can not be a distinguishing factor.
 - The same text style is used by all the visible text nodes of the [line rendering][rendered on a line] element that are not [descendants][descendant] in the [flat tree][] of a [semantic link][], otherwise the [text style properties][] can not be a distinguishing factor.
+- This rule assumes there is no content (textual or otherwise) to indicate the presence of the link. If there is such content, the rule may fail while [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
 - The perceived visual styling of elements is the result of CSS styling applied to those elements and inherited from their [ancestor][] elements. Through manipulation of the positioning and styles of other elements, including non inherited styles of [ancestor][] elements, an element may end up with a perceived distinguishable style not resulting from its own and inherited styling. In that case, this rule might fail while the [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) might still be satisfied.
 - This rule considers that [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) only applies if the elements have different hues as stated in the [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) document. If the hues are the same and saturation or lightness are not, this creates a difference in contrast, not in the perceived color and [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) does not apply. If [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) applies to elements that have the same hue but different saturation and lightness, this rule will be inapplicable while [Success Criterion 1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) may still fail.
 
@@ -241,47 +239,6 @@ This link, with a **different hue** from the other text in the same line, has a 
 
 #### Passed Example 9
 
-This link, with a **different hue** from the other text in the same line, has the word "link" in the text nodes of inclusive descendant elements.
-
-```html
-<style>
-	p {
-		color: hsl(0, 50%, 25%);
-		background-color: white;
-	}
-	a.test {
-		color: hsl(232, 50%, 25%);
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>To read about WAI, <a class="test" href="http://w3.org/WAI">follow this link to the WAI webpage</a>.</p>
-```
-
-#### Passed Example 10
-
-This link, with a **different hue** from the other text in the same line, has the word "link" in the text nodes of inclusive sibling elements.
-
-```html
-<style>
-	p {
-		color: hsl(0, 50%, 25%);
-		background-color: white;
-	}
-	a.test {
-		color: hsl(232, 50%, 25%);
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>
-	To read about the Web Accessibility Initiative follow the link:
-	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
-</p>
-```
-
-#### Passed Example 11
-
 This link has a descendant element with a **different hue** from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
 
 ```html
@@ -302,7 +259,7 @@ This link has a descendant element with a **different hue** from the other text 
 </p>
 ```
 
-#### Passed Example 12
+#### Passed Example 10
 
 This link has a **different hue** from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
 
@@ -367,28 +324,6 @@ This link, with a **different hue** from the other text in the same line, has a 
 	}
 </style>
 <p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI webpage</a>.</p>
-```
-
-#### Failed Example 3
-
-This link, with a **different hue** from the other text in the same line, has text in the sibling elements that might be understood as indication the presence of a link but does not use the word "link".
-
-```html
-<style>
-	p {
-		color: hsl(0, 50%, 25%);
-		background-color: white;
-	}
-	a.test {
-		color: hsl(232, 50%, 25%);
-		background-color: white;
-		text-decoration: none;
-	}
-</style>
-<p>
-	To read about the Web Accessibility Initiative click here:
-	<a class="test" href="http://w3.org/WAI">WAI webpage</a>.
-</p>
 ```
 
 ### Inapplicable

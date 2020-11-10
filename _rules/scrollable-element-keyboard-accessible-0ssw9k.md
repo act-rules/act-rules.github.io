@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G202: # Ensuring keyboard control for all functionality
     forConformance: false
     failed: not satisfied
@@ -34,17 +39,17 @@ Any HTML element that has [visible][] [children][] in the [flat tree][] for whic
 
 Each test target is either included in [sequential focus navigation][] or has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][].
 
-**Note:** Focus must be on or in a scrollable region, to ensure there is some element from which arrow keys can be used to control the scroll position. This can still create an issue if scripts are used to prevent the keyboard events from reaching the scrollable region. This must be tested separately.
-
 ## Assumptions
 
-This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][] or because scroll can be controlled some other way, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
+This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][] or because scroll can be controlled in some other keyboard accessible way such as through a button or custom scrollbar, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+Some browsers will automatically make any [scrollable element][scrollable] focusable to ensure keyboard accessibility. However, the browser does not include these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
 
 ## Background
+
+To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
 
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html)
 - [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
@@ -79,7 +84,7 @@ This [scrollable][] `section` element contains a link that is included in [seque
 ```html
 <section style="height: 100px; width: 500px; overflow: scroll;">
 	<h1>
-		<a href="//www.w3.org/TR/WCAG21/#abstract">
+		<a href="https://www.w3.org/TR/WCAG21/#abstract">
 			WCAG 2.1 Abstract
 		</a>
 	</h1>
@@ -135,13 +140,13 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 </style>
 <h1>Our sponsors:</h1>
 <section>
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
-	<img src="/test-asset/shared/eu-logo.svg" alt="EU" />
-	<img src="/test-asset/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 </section>
 ```
 
@@ -173,7 +178,7 @@ This `section` element has a [scroll distance][scrollable] of 0 in both directio
 ```html
 <section style="height: 95px; width: 500px; overflow: auto;">
 	<p>
-		<a href="//www.w3.org/TR/WCAG21/#abstract">
+		<a href="https://www.w3.org/TR/WCAG21/#abstract">
 			WCAG 2.1 Abstract
 		</a>
 	</p>
@@ -186,7 +191,7 @@ This `section` element is not [scrollable][] because it has a [computed][] [over
 
 ```html
 <h1>
-	<a href="//www.w3.org/TR/WCAG21/#abstract">
+	<a href="https://www.w3.org/TR/WCAG21/#abstract">
 		WCAG 2.1 Abstract
 	</a>
 </h1>
@@ -238,11 +243,12 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 This `iframe` element is not a [scrollable element][scrollable].
 
 ```html
-<iframe src="//www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>
+<iframe src="https://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>
 ```
 
 [visible]: #visible
 [scrollable]: #scrollable-element
+[attribute value]: #attribute-value
 [children]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM child, 2020/04/03'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM descendant, 2020/04/03'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML sequential focus navigation, 2020/04/03'

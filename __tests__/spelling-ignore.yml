@@ -19,6 +19,7 @@
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- aam # lowercase needed in reference list
 - ABNF
 - URI
 - UA/AT
@@ -26,6 +27,7 @@
 - WCAG2
 - WCAG21
 - CSS3
+- css # lowercase needed in reference list
 - UA
 - UI
 - api # lowercase needed in reference list
@@ -46,6 +48,8 @@
 - DNS
 - BCP
 - bcp
+- IDL
+- idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -64,6 +68,7 @@
 - wai-aria-specifications
 - autoplay
 - autoplays
+- autoplaying
 - columnheader
 - rowheader
 - colspan
@@ -181,6 +186,7 @@
 - nowrap
 - javascript
 - Reflow
+- reflow
 - Viewport
 - dom-meta-content
 

@@ -350,7 +350,7 @@ This link with no text nodes has no **link text**.
 ```html
 <p>
 	Read about WAI on the
-	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI" /></a>
+	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI"></a>
 	website.
 </p>
 ```

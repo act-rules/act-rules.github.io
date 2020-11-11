@@ -31,7 +31,7 @@ This rule applies to each [link history state][] of any [semantic link][], for w
 
 ## Expectation
 
-For each test target, there exists at least one [adequate inspection state][] and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
+For each target, when its [semantic link][] is not in the [focused][] state and the [hovered][] state at the same time, there exists at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
 
 ## Assumptions
 
@@ -400,14 +400,15 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 <p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
 ```
 
-[adequate inspection state]: #adequate-inspection-state 'Definition of adequate inspection state'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
 [background color]: #background-colors-of-element 'Definition of background colors of element'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [different hue]: #different-hue 'Definition of different hue'
 [distinguishable style]: #distinguishable-styles 'Definition of distinguishable styles'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[focused]: #focused 'Definition of focused'
 [foreground color]: #foreground-colors-of-element 'Definition of foreground colors of element'
+[hovered]: #hovered 'Definition of hovered'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
 [link history state]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'

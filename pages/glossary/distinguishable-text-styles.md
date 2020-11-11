@@ -12,3 +12,4 @@ Two elements have _distinguishable text styles_ if they have different [computed
 - a `text-transform` property equal to `none`.
 
 [computed values]: https://www.w3.org/TR/css-cascade/#computed-value 'Definition of computed values'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant

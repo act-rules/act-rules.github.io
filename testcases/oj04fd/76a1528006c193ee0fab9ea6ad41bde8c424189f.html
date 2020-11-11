@@ -1,0 +1,31 @@
+<!DOCTYPE html> <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
+<script src="/test-assets/focus-visible-oj04fd/script.js"></script>
+
+<span id="indicator-act" class="indicator solid"></span>
+<a
+	id="act"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
+	onblur="toggleActivation('indicator-act'); toggleActivation('indicator-wcag')"
+	href="https://act-rules.github.io/"
+	>ACT rules</a
+>
+<span id="indicator-wcag" class="indicator solid"></span>
+<a
+	id="wcag"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
+	onblur="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
+	href="https://www.w3.org/TR/WCAG21/"
+	>WCAG</a
+>
+<span id="indicator-w3c" class="indicator solid"></span>
+<a
+	id="w3c"
+	class="no-focus-default"
+	onfocus="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
+	onblur="toggleActivation('indicator-w3c'); toggleActivation('indicator-final')"
+	href="https://www.w3.org/"
+	>WCAG</a
+>
+<span id="indicator-final" class="indicator solid"></span>

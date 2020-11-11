@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 868,
+  "count": 877,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -15963,6 +15963,168 @@
         },
         "wcag-technique:G202": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1b7a2ed4290e55f4130c1dc715c4123dff398871",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/oj04fd/1b7a2ed4290e55f4130c1dc715c4123dff398871.html",
+      "relativePath": "testcases/oj04fd/1b7a2ed4290e55f4130c1dc715c4123dff398871.html",
+      "expected": "passed",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e64f0e222ab0002455b45f08a887c3226a7b4d71",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/oj04fd/e64f0e222ab0002455b45f08a887c3226a7b4d71.html",
+      "relativePath": "testcases/oj04fd/e64f0e222ab0002455b45f08a887c3226a7b4d71.html",
+      "expected": "passed",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8784917764b66a645bc38a751805a2aac2201e21",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/oj04fd/8784917764b66a645bc38a751805a2aac2201e21.html",
+      "relativePath": "testcases/oj04fd/8784917764b66a645bc38a751805a2aac2201e21.html",
+      "expected": "passed",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "76a1528006c193ee0fab9ea6ad41bde8c424189f",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/oj04fd/76a1528006c193ee0fab9ea6ad41bde8c424189f.html",
+      "relativePath": "testcases/oj04fd/76a1528006c193ee0fab9ea6ad41bde8c424189f.html",
+      "expected": "passed",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a4cd21db636880a4f6f074307bf8307a07edf51e",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/oj04fd/a4cd21db636880a4f6f074307bf8307a07edf51e.html",
+      "relativePath": "testcases/oj04fd/a4cd21db636880a4f6f074307bf8307a07edf51e.html",
+      "expected": "failed",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b3fe5c5105b3553e06cbe80a2c95eef5914a2b0d",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/oj04fd/b3fe5c5105b3553e06cbe80a2c95eef5914a2b0d.html",
+      "relativePath": "testcases/oj04fd/b3fe5c5105b3553e06cbe80a2c95eef5914a2b0d.html",
+      "expected": "inapplicable",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1a1e6674b96c4cbdedc55801679fe0c06c248fac",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/oj04fd/1a1e6674b96c4cbdedc55801679fe0c06c248fac.html",
+      "relativePath": "testcases/oj04fd/1a1e6674b96c4cbdedc55801679fe0c06c248fac.html",
+      "expected": "inapplicable",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "af1ec85ed52818990bc95f50677336f575d05ce1",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/oj04fd/af1ec85ed52818990bc95f50677336f575d05ce1.html",
+      "relativePath": "testcases/oj04fd/af1ec85ed52818990bc95f50677336f575d05ce1.html",
+      "expected": "inapplicable",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0a492595c81007ffe1ff2ca2a4a57fc24fe10635",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/oj04fd/0a492595c81007ffe1ff2ca2a4a57fc24fe10635.html",
+      "relativePath": "testcases/oj04fd/0a492595c81007ffe1ff2ca2a4a57fc24fe10635.html",
+      "expected": "inapplicable",
+      "ruleId": "oj04fd",
+      "ruleName": "Element in sequential focus order has visible focus",
+      "rulePage": "https://act-rules.github.io/rules/oj04fd",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.7": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

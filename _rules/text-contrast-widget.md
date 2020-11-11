@@ -1,6 +1,6 @@
 ---
 id: xxtodo
-name: Text imnside widget has minimum contrast
+name: Text inside widget has minimum contrast
 rule_type: atomic
 description: |
   TODO

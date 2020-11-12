@@ -46,6 +46,8 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 - Text that has the same foreground and background color (a contrast ratio of 1:1) is not considered to be "visual presentation of text", making it inapplicable to the success criterion. Text hidden in this way can still cause accessibility issues under other success criteria, depending on the content.
 
+- The definition of [disabled element][disabled] assumes that the presence of the `aria-disabled` attribute is matched by similar techniques for users not relying on assistive technologies. If this is not the case, that definition may produce incorrect results and in consequence this rule might be Inapplicable to some text nodes that still require a good contrast ratio.
+
 ## Accessibility Support
 
 - Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.

@@ -17,7 +17,7 @@ An element is _disabled_ when it has been rendered [inoperable][] in one of the 
 
 [actually disabled]: https://html.spec.whatwg.org/multipage/semantics-other.html#concept-element-disabled 'HTML definition of Actually Disabled'
 [assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies
-[attribute value]: #atttribute-value 'Definition of Attribute Value'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [disabled pseudo-class]: https://drafts.csswg.org/selectors/#disabled-pseudo "CSS Selectors Level 4 (Editor's Draft), definition of the :disabled pseudo-class"
 [inoperable]: https://www.w3.org/TR/wai-aria/#dfn-operable
 [shadow-including ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor

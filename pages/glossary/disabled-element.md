@@ -9,7 +9,7 @@ input_aspects:
 
 An element is _disabled_ when it has been rendered [inoperable][] in one of the following ways:
 
-1. The element matches the [`:disabled` pseudo-class][disabled pseudo-class], for HTML elements, it means that the element is [actually disabled][].
+1. The element matches the [`:disabled` pseudo-class][disabled pseudo-class]. For HTML elements this means that the element is [actually disabled][].
 
 2. The element has a [shadow-including ancestor][] whose `aria-disabled` [attribute value][] is "true".
 

@@ -1,9 +1,9 @@
 ---
-id: xxtodo
-name: Text inside widget has minimum contrast
+id: nqzcj8
+name: Text inside HTML widget has minimum contrast
 rule_type: atomic
 description: |
-  TODO
+  This rule checks that, for text in native HTML widgets, the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
     forConformance: true
@@ -27,6 +27,8 @@ acknowledgments:
 ---
 
 ## Applicability
+
+This rule
 
 The rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
 

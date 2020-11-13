@@ -28,20 +28,21 @@ acknowledgments:
 
 ## Applicability
 
-This rule
+This rule applies to any HTML element, character in a [text node][] and set of [widget pseudo-classes][] for which all of the following are true:
 
-The rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+- (**native widget**) the element has an [implicit role][] that inherit from `widget` and a [semantic role][] that inherit from `widget`; and
+- (**ancestor**) the element is an [ancestor][] in the [flat tree][] of the text node, and is its closest [ancestor][] with a [semantic role][] that inherit from `widget`; and
+- (**visible**) the character is [visible][]; and
+- (**enabled**) the set of [widget pseudo-classes][] does not contain `:disabled`; and
+- (**ignored transient states**) the set of [widget pseudo-classes][] contains `:active` and `:hover`; and
+- (**matching**) the element matches all of the classes in the set of [widget pseudo-classes][], except possibly `:active` and `:hover`; and
+- (**only matching**) the element does not match any [widget pseudo-class][] out of the set.
 
-- **disabled label**: the ancestor is used in the [accessible name][] of a `widget` that is [disabled][]; or
-- **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
-
-and where the text node has at least one ancestor in the flat tree matching at least one of these [pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes): link, visited, enabled, checked, indeterminate, default, placeholder-shown, valid, invalid, in-range, out-of-range, required, optional, read-only, read-write.
-
-Note: `:active` ignored as it is normally super short and not clear that bad contrast when `:active` will fail WCAG.
+Note: `:active` and `:hover` ignored as they are normally rather short (especially `:active`) and not clear that bad contrast when `:active` or `:hover` will fail WCAG.
 
 ## Expectation
 
-For each test target and each [inspection state](https://github.com/act-rules/act-rules.github.io/blob/a0b35eef9c1c12c8182a05e438f6f339f823e5a2/pages/glossary/inspection-states.md) of the ancestor [note: here refering to the one matching the pseudo-class], the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 4.5:1 or 3.0:1 for [larger scale text][], except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
+For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] of the character is at least 4.5:1 or 3.0:1 for [larger scale text][], except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
 
 ## Assumptions
 
@@ -77,15 +78,14 @@ When the text color or background color is not specified in the web page, colors
 
 ### Inapplicable
 
-[accessible name]: #accessible-name 'Definition of Accessible Name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
 [background colors]: #background-colors-of-text 'Definition of Background color of text'
-[child]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM, child, 2020/07/23'
 [disabled]: #disabled-element 'Definition of Disabled'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/07/23'
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
+[implicit role]: #implicit-semantic-role
 [larger scale text]: #large-scale-text 'Definition of Large scale text'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
@@ -95,3 +95,5 @@ When the text color or background color is not specified in the web page, colors
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
+[widget pseudo-class]: #widget-pseudo-classes
+[widget pseudo-classes]: #widget-pseudo-classes

@@ -22,23 +22,26 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Brian Bors
-    - Wilco Fiers
+    - Jean-Yves Moyen
 ---
 
 ## Applicability
 
 This rule applies to any HTML element, character in a [text node][] and set of [widget pseudo-classes][] for which all of the following are true:
 
-- (**native widget**) the element has an [implicit role][] that inherit from `widget` and a [semantic role][] that inherit from `widget`; and
+- (**widget**) the element has a [semantic role][] that inherit from `widget`; and
 - (**ancestor**) the element is an [ancestor][] in the [flat tree][] of the text node, and is its closest [ancestor][] with a [semantic role][] that inherit from `widget`; and
 - (**visible**) the character is [visible][]; and
-- (**enabled**) the set of [widget pseudo-classes][] does not contain `:disabled`; and
+- (**enabled**) the element is not [disabled][]; and
 - (**ignored transient states**) the set of [widget pseudo-classes][] contains `:active` and `:hover`; and
 - (**matching**) the element matches all of the classes in the set of [widget pseudo-classes][], except possibly `:active` and `:hover`; and
 - (**only matching**) the element does not match any [widget pseudo-class][] out of the set.
 
 Note: `:active` and `:hover` ignored as they are normally rather short (especially `:active`) and not clear that bad contrast when `:active` or `:hover` will fail WCAG.
+
+Note: (**enabled**) effectively prevent `:disabled` to be in the set.
+
+Note: ARIA widgets (e.g. `<span role="link">`), won't match most of the pseudo classes. They might match `:focus`. They will nonetheless be considered with the set containing only `:focus` and `:hover`, ignoring them through the (**matching**) condition… Except from possibly `:focus`, they won't be tested in other states, e.g. if a `onclick` change their CSS class to change their appearance, the rule will ignore that.
 
 ## Expectation
 
@@ -78,22 +81,22 @@ When the text color or background color is not specified in the web page, colors
 
 ### Inapplicable
 
-[ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
-[background colors]: #background-colors-of-text 'Definition of Background color of text'
+[ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM specification of Ancestor'
+[background colors]: #background-colors-of-text 'Definition of Background Color of Text'
 [disabled]: #disabled-element 'Definition of Disabled'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/07/23'
-[foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
-[highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
-[human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
-[implicit role]: #implicit-semantic-role
-[larger scale text]: #large-scale-text 'Definition of Large scale text'
-[origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
-[text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree "CSS definition of flat tree (editor's draft)"
+[foreground colors]: #foreground-colors-of-text 'Definition of Foreground Color of Text'
+[highest possible contrast]: #highest-possible-contrast 'Definition of Highest Possible Contrast'
+[human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1 definition of Human language'
+[larger scale text]: #large-scale-text 'Definition of Large Scale Text'
+[origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS definition of Origin'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA definition of the Presentational Roles Conflict Resolution'
+[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1 definition of Purely decorative'
+[text node]: https://dom.spec.whatwg.org/#text 'DOM specification of text node'
 [sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
-[semantic role]: #semantic-role 'Definition of Semantic role'
-[user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
+[sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS definition of User Origin'
 [visible]: #visible 'Definition of Visible'
-[widget pseudo-class]: #widget-pseudo-classes
-[widget pseudo-classes]: #widget-pseudo-classes
+[widget pseudo-class]: #widget-pseudo-classes 'Definition of Widget Pseudo-Classes'
+[widget pseudo-classes]: #widget-pseudo-classes 'Definition of Widget Pseudo-Classes'

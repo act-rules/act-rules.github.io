@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
   - CSS Styling
   - DOM Tree
-  - Accessibility Tree
 acknowledgments:
   authors:
     - Bryn Anderson
@@ -35,11 +35,11 @@ This rules applies to any HTML element with a `lang` [attribute value][] that is
 
 ## Expectation
 
-For each test target, the value of the `lang` [attribute value][] is a [valid language tag][].
+For each test target, the `lang` [attribute value][] is a [valid language tag][].
 
 ## Assumptions
 
-- The `lang` [attribute value][] is assumed to be used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
+- This rule assumes that the `lang` [attribute value][] is used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate the programming language of a `code` element), the content may still conform to WCAG despite failing this rule.
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
@@ -62,7 +62,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-The `lang` [attribute value][] is not empty (`""`) and has a valid language tag.
+This `article` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][].
 
 ```html
 <html>
@@ -76,13 +76,13 @@ The `lang` [attribute value][] is not empty (`""`) and has a valid language tag.
 
 #### Passed Example 2
 
-The `lang` [attribute value][] is not empty (`""`) and has a valid language tag. The region section in the value is ignored by the rule.
+This `blockquote` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][]. The region section in the value is ignored by the rule (and the definition of [valid language tag][]).
 
 ```html
 <html>
 	<body>
 		<blockquote lang="fr-CH">
-			Ils se sont promenés dans un étrange bar Tiki en bordure de la petite ville balnéaire.
+			Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
 		</blockquote>
 	</body>
 </html>
@@ -90,7 +90,7 @@ The `lang` [attribute value][] is not empty (`""`) and has a valid language tag.
 
 #### Passed Example 3
 
-The `lang` [attribute value][] has a valid language tag, but a syntactically invalid region subtag which is ignored by the rule.
+This `p` element has a`lang` [attribute value][] which has a [valid language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
 <html>
@@ -106,7 +106,7 @@ The `lang` [attribute value][] has a valid language tag, but a syntactically inv
 
 #### Failed Example 1
 
-The `lang` [attribute value][] is not a primary language subtag.
+This `article` element has a `lang` [attribute value][] which does not have a [valid language tag][] because its primary language subtag does not exist in the registry.
 
 ```html
 <html>
@@ -120,7 +120,7 @@ The `lang` [attribute value][] is not a primary language subtag.
 
 #### Failed Example 2
 
-The `lang` [attribute value][] is not empty (`""`) and is not a primary language subtag.
+This `article` element has a `lang` [attribute value][] which is not a [valid language tag][].
 
 ```html
 <html>
@@ -134,7 +134,7 @@ The `lang` [attribute value][] is not empty (`""`) and is not a primary language
 
 #### Failed Example 3
 
-The `lang` [attribute value][] consists of only [whitespace][] and is not a [valid language tag][].
+This `article` element` has a `lang` [attribute value][] which consists of only [whitespace][] and thus is not a [valid language tag][].
 
 ```html
 <html>
@@ -194,7 +194,7 @@ The rule applies to elements within the `body` of a webpage. `html` elements are
 
 #### Inapplicable Example 2
 
-An empty `lang` [attribute value][] is ignored, as the rule only applies to `lang` attributes that are not empty (`""`).
+There is no element with a non-empty `lang` [attribute value][].
 
 ```html
 <html>
@@ -208,7 +208,7 @@ An empty `lang` [attribute value][] is ignored, as the rule only applies to `lan
 
 #### Inapplicable Example 3
 
-The `lang` [attribute value][] does not have a valid language tag, and does not have a [visible][] [text node][] as a [descendant][] in the [flat tree][].
+There is no element with a [text node][] as a [descendant][] in the [flat tree][] that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html>
@@ -222,16 +222,15 @@ The `lang` [attribute value][] does not have a valid language tag, and does not 
 </html>
 ```
 
-[node document]: https://dom.spec.whatwg.org/#concept-node-document
+[attribute value]: #attribute-value 'Definition of Attribute Value'
+[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
-[bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
-[valid language tag]: #valid-language-tag
-[whitespace]: #whitespace 'Definition of Whitespace'
-[visible]: #visible 'Definition of visible'
-[text node]: https://dom.spec.whatwg.org/#text
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree
+[node document]: https://dom.spec.whatwg.org/#concept-node-document
+[text node]: https://dom.spec.whatwg.org/#text
+[valid language tag]: #valid-language-tag
+[visible]: #visible 'Definition of visible'
+[whitespace]: #whitespace 'Definition of Whitespace'

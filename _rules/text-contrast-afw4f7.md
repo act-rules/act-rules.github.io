@@ -3,7 +3,7 @@ id: afw4f7
 name: Text has minimum contrast
 rule_type: atomic
 description: |
-  This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement.
+  This rule checks that, for text out of widgets, the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
     forConformance: true
@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
 
 - **widget**: the ancestor has a [semantic role][] that inherits from `widget`; or
 - **disabled label**: the ancestor is used in the [accessible name][] of a `widget` that is [disabled][]; or

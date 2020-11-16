@@ -23,15 +23,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to each [link history state][] of any [semantic link][], for which all the following is true:
+This rule applies to any [semantic link][], for which all the following is true:
 
 - **link text**: the [semantic link][] element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
 - **different hue**: the [foreground colors][foreground color] of the [semantic link][] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [background colors][background color] of the [semantic link][] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
-## Expectation
+## Expectation 1
 
-For each target, when its [semantic link][] is not in the [focused][] state and the [hovered][] state at the same time, there exists at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
+For each test target, there exists at least one [inspection state][] that is not [focused][] and [hovered][] at the same time and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
+
+## Expectation 2
+
+If the test target matches the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), Expectation 1 must hold for each [link history state][] with a **different hue**.
 
 ## Assumptions
 
@@ -304,7 +308,7 @@ This link, with a **different hue** from the other text in the same line, has no
 
 #### Failed Example 2
 
-This link, with a **different hue** from the other text in the same line, has a different style because of its color and background color. But when the link has been visited, the style is the same of the other text on the same line (only the hue is different).
+This link, with a **different hue** from the other text in the same line, has a different style because of its color and background color. But when the link has been visited, the style is the same of the other text on the same line (only the hue is different), therefore failing Expectation 2.
 
 ```html
 <style>
@@ -410,6 +414,7 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [foreground color]: #foreground-colors-of-element 'Definition of foreground colors of element'
 [hovered]: #hovered 'Definition of hovered'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
+[inspection state]: #inspection-states 'Definition of inspection states'
 [link history state]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

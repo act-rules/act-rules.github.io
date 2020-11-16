@@ -46,7 +46,7 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 - Text that has the same foreground and background color (a contrast ratio of 1:1) is not considered to be "visual presentation of text", making it inapplicable to the success criterion. Text hidden in this way can still cause accessibility issues under other success criteria, depending on the content.
 
-- The definition of [disabled element][disabled] assumes that the presence of the `aria-disabled` attribute is matched by similar techniques for users not relying on assistive technologies. If this is not the case, that definition may produce incorrect results and in consequence this rule might be Inapplicable to some text nodes that still require a good contrast ratio.
+- The definition of [disabled element][disabled] assumes that when the `aria-disabled` attribute is specified on an element, this element has also been disabled for users that do not rely on [assistive technology][]. If this is not the case, that definition may produce incorrect results and in consequence this rule might be Inapplicable to some text nodes that still require a good contrast ratio.
 
 ## Accessibility Support
 
@@ -382,6 +382,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
+[assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies 'WCAG definition of Assistive Technologies'
 [background colors]: #background-colors-of-text 'Definition of Background color of text'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM, child, 2020/07/23'
 [disabled]: #disabled-element 'Definition of Disabled'

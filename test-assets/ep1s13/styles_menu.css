@@ -1,0 +1,32 @@
+  :root {
+    --tooltip-thingy-width: 0.5em;
+  }
+  
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  [role="tooltip"] {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    padding: 0.5em 0.5em;
+    color: white;
+    background: black;
+    min-width: max-content;
+  }
+  
+  
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    outline: solid 1px black;
+    margin: 0;
+    padding: 1em;
+  }

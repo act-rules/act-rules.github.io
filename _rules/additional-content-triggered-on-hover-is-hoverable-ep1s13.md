@@ -28,13 +28,14 @@ The rule applies to any element that when [hovered][] causes [visible changes in
 
 ## Expectation
 
-There are no [visible changes in content][] while the target element is [hovered][] or the mouse pointer remains inside the [area affected by the changes][area affected by visible changes].
+There are no [visible changes in content][] in the [area affected by the changes][area affected by visible changes] while the target element is [hovered][] or the mouse pointer remains inside that area.
 
 ## Assumptions
 
 - The user does not dismiss the tooltip causing the changes in content by pressing a key on the keyboard. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 - The content displayed on the rectangle with the changes in content does not become irrelevant. In this instance the rule will fail while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
-- The additional content displayed on hover does not include animations. An animation would cause visible changes to the content of the page and therefore fail this rule. However, if the animation is displayed only while the mouse pointer hovers above the target element or the rectangle with the changes [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
+- The additional content displayed on hover does not include animations. An animation would cause visible changes to the content of the page and therefore fail this rule. However, if the animation is displayed only while the mouse pointer hovers above the target element or the rectangle with the changes, [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
+- Additional changes in content, triggered by hovering an element which appeared because of the initial hovering, happen outside the originally affected area (e.g. cascading menus that are triggered on successive hovering actions). If the new changes happen inside the originally affected area this rule will fail, while [success criterion 1.4.13: Content on Hover or Focus][sc1.4.13] might be satisfied.
 
 ## Accessibility Support
 

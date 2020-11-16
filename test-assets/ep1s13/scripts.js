@@ -1,23 +1,27 @@
 function bindEvents(bind) {
-    let container;
+    let containers;
     if (bind.tooltipRemains)
-        container = document.querySelector(".tooltip-container");
+        containers = document.querySelectorAll(".tooltip-container");
     else
-        container = document.querySelector("button");
-    container.addEventListener("mouseenter", () => {
-        showTooltip();
-    });
-    container.addEventListener("mouseleave", () => {
-        hideTooltip();
-    });
+        containers = document.querySelectorAll("button");
+    for (const container of containers) {
+        container.addEventListener("mouseenter", () => {
+            console.log(container);
+            showTooltip(container);
+        });
+        container.addEventListener("mouseleave", () => {
+            hideTooltip(container);
+        });
+    }
 }
 
-function showTooltip() {
-    const tooltip = document.querySelector("[role=tooltip]");
+function showTooltip(elem) {
+    const tooltip = elem.querySelector("[role=tooltip]");
+    console.log(tooltip);
     tooltip.removeAttribute("hidden");
 }
 
-function hideTooltip() {
-    const tooltip = document.querySelector("[role=tooltip]");
+function hideTooltip(elem) {
+    const tooltip = elem.querySelector("[role=tooltip]");
     tooltip.setAttribute("hidden", "hidden");
 }

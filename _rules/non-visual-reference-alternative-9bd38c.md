@@ -352,17 +352,6 @@ No [text node][] on this page includes any of the [visual reference words][].
 </html>
 ```
 
-#### Passed Example 15
-
-The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `display:none` styling. The [text node][] inside the `button` element does not include any of the [visual reference words][].
-
-```html
-<html lang="en">
-	<p style="display:none">Click the box, for a surprise</p>
-	<button onclick="alert('Surprise!')">Howdy</button>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -477,6 +466,19 @@ This image link contains no [text node][].
 ```html
 <html lang="en">
 	<a href="https://act-rules.github.io/"><img src="test-assets/shared/act-logo.png" alt="ACT rules"/></a>
+</html>
+```
+
+#### Inapplicable Example 2
+
+This document contains no [text node][] that is either [visible][] or [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<div style="display:none">
+		<p>Click the box, for a surprise</p>
+		<button onclick="alert('Surprise!')">Howdy</button>
+	</div>
 </html>
 ```
 

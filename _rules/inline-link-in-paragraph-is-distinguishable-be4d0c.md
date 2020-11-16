@@ -35,7 +35,7 @@ For each test target, there exists at least one [inspection state][] that is not
 
 ## Expectation 2
 
-If the test target matches the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), Expectation 1 must hold for each [link history state][] with a **different hue**.
+Either the test target does not match the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), or Expectation 1 holds for each [link history state][] with a **different hue**.
 
 ## Assumptions
 

@@ -33,8 +33,8 @@ This rule applies to any HTML element, character in a [text node][] and set of [
 - **ancestor**: the element is an [ancestor][] in the [flat tree][] of the text node, and is its closest [ancestor][] with a [semantic role][] that inherit from `widget`; and
 - **visible**: the character is [visible][]; and
 - **enabled**: the element is not [disabled][]; and
-- **ignored transient states**: the set of [widget pseudo-classes][] contains `:active` and `:hover`; and
-- **matching**: the element matches all of the classes in the set of [widget pseudo-classes][], except `:active` and `:hover`; and
+- **ignored transient states**: the set of [widget pseudo-classes][] contains neither `:active` nor `:hover`; and
+- **matching**: the element matches all the classes in the set of [widget pseudo-classes][]; and
 - **only matching**: the element does not match any [widget pseudo-class][] out of the set.
 
 ## Expectation
@@ -51,7 +51,7 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 - This rule considers that `:hover` and especially `:active` are transient states and therefore a poor color contrast during the short time when they are matched is not causing any issue. Therefore, the rule does not check widgets in these state. If these states still require a high contrast ratio, it is possible to pass still rule while still failing [Success criterion 1.4.3: Contrast (Minimum)][sc143] and [Success criterion 1.4.6: Contrast (Enhanced)][sc146].
 
-- This rule only checks the various appearances of widgets that correspond to the [widget pseudo-classes][]. Scripting can result in changes of appearance after interaction that are not reflected that way. For example, a `onclick` function could change the CSS classes on an element and thus result in changing the text colors. This rule does not check these and thus can pass while still failing [Success criterion 1.4.3: Contrast (Minimum)][sc143] and [Success criterion 1.4.6: Contrast (Enhanced)][sc146]. Such interactions must be tested separatly.
+- This rule only checks the various appearances of widgets that correspond to the [widget pseudo-classes][]. Scripting can result in changes of appearance after interaction that are not reflected that way. For example, a `onclick` function could change the CSS classes on an element and thus result in changing the text colors. This rule does not check these and thus can pass while still failing [Success criterion 1.4.3: Contrast (Minimum)][sc143] and [Success criterion 1.4.6: Contrast (Enhanced)][sc146]. Such interactions must be tested separately.
 
 ## Accessibility Support
 
@@ -60,11 +60,11 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 ## Background
 
-Note that the **enabled** condition effectively prevent `:disabled` to be in the set of [widget pseudo-classes][].
+The **enabled** condition effectively prevent `:disabled` to be in the set of [widget pseudo-classes][].
 
 Many combinations of [widget pseudo-classes][] are impossible, in the sense that no element can match all of them at the same time. The **matching** condition is thus fairly restrictive in which sets of [widget pseudo-classes][] are applicable to this rule.
 
-The [widget pseudo-classes][] are naturally mapped to the native "HTML widgets" (elements whose [implicit role][] inherits from `widget`) depending on the state of the page. On the other hand, "ARIA widgets" (elements whose [implicit role][] does not inherit from `widget` but with an [explicit role][]) normally can't match any [widget pseudo-class][]. For example, an HTML link (such as an `a` element with an `href` attribute) will always match either the `:link` or `:visited` [widget pseudo-class][], but an ARIA link (such as a `<span role="link">`) will never match any of these. This is a consequence of ARIA's [Non-interference with the Host Language][]. ARIA widgets are nonetheless considered by this rule with an empty set of [widget pseudo-classes][] (or more precisely one containing only the **ignored transient states**), and sometimes also with `:focus` if the element has been made [focusable][].
+The [widget pseudo-classes][] are naturally mapped to the native "HTML widgets" (elements whose [implicit role][] inherits from `widget`) depending on the state of the page. On the other hand, "ARIA widgets" (elements whose [implicit role][] does not inherit from `widget` but with an [explicit role][]) normally can't match any [widget pseudo-class][]. For example, an HTML link (such as an `a` element with an `href` attribute) will always match either the `:link` or `:visited` [widget pseudo-class][], but an ARIA link (such as a `<span role="link">`) will never match any of these. This is a consequence of ARIA's [Non-interference with the Host Language][]. ARIA widgets are nonetheless considered by this rule with an empty set of [widget pseudo-classes][], and sometimes also with `:focus` if the element has been made [focusable][].
 
 Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 

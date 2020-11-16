@@ -39,14 +39,13 @@ This rule applies to any [text node][] that is either [visible][] or [included i
 
 ## Expectation
 
-For each test target that includes at least one of the [visual reference words][], one of the following is true:
+For each test target, either it contains none of the [visual reference words][], or it does not identify any [web content][] through the use of any [visual reference words][], or it does identify some [web content][] and at least one of the following is true:
 
-- **no indication**: the test target does not identify any [web content][] through the use of any [visual reference words][]; or
-- **non-visual reference**: the test target identifies some [web content][] and is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] without any [visual reference word][]; or
-- **non-sensory meaning**: the test target identifies some [web content][], but at least one of the [visual reference words][] that identifies the [web content][] is used with a non-sensory meaning.
-- **visible words**: the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
-- **accessible words**: the test target identifies some [web content][] and each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
-- **no instruction**: the test target identifies some [web content][] but does not give instructions about it through the use of any of the [visual reference words][].
+- **non-visual reference**: the test target is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] without any [visual reference word][]; or
+- **non-sensory meaning**: at least one of the [visual reference words][] that identifies the [web content][] is used with a non-sensory meaning.
+- **visible words**: each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
+- **accessible words**: each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
+- **no instruction**: the test target does not give instructions about it through the use of any of the [visual reference words][].
 
 ## Assumptions
 
@@ -210,7 +209,7 @@ This paragraph includes the [visual reference words][] "wide" and "narrow". The 
 
 #### Passed Example 8
 
-This paragraph includes the [visual reference words][] "square" and "right" but in this case they are not identifying any [web content][], thus matching the **no indication** condition.
+This paragraph includes the [visual reference words][] "square" and "right" but in this case they are not identifying any [web content][].
 
 ```html
 <p>A square is a regular quadrilateral with four equal sides and four right angles.</p>

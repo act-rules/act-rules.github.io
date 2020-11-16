@@ -80,20 +80,22 @@ The identified web content does not have to be positioned on the same web page a
 This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition.
 
 ```html
-<head>
-	<title>Passed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Click the button labelled "howdy", on the right, for a surprise</p>
+<html lang="en">
+	<head>
+		<title>Passed example 1 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p>Click the button labelled "howdy", on the right, for a surprise</p>
+			</div>
+			<div class="col">
+				<button onclick="alert('Surprise!')">Howdy</button>
+			</div>
 		</div>
-		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
+	</body>
+</html>
 ```
 
 #### Passed Example 2
@@ -101,8 +103,10 @@ This paragraph includes the [visual reference word][] "right". The content in th
 This paragraph includes the [visual reference word][] "below" which can here be accurately interpreted as "further in the reading order". Hence, the paragraph matches the **non-sensory meaning** condition.
 
 ```html
-<p>Interact with the button below this paragraph, for a surprise</p>
-<button onclick="alert('Surprise!')">Howdy</button>
+<html lang="en">
+	<p>Interact with the button below this paragraph, for a surprise</p>
+	<button onclick="alert('Surprise!')">Howdy</button>
+</html>
 ```
 
 #### Passed Example 3
@@ -110,197 +114,18 @@ This paragraph includes the [visual reference word][] "below" which can here be 
 This paragraph includes the [visual reference word][] "right". The visual reference made by the word "right" is complemented by the non-visual reference made by the word "menu" to the content identified by the "Menu" heading, thus matching the **non-visual reference** condition.
 
 ```html
-<head>
-	<title>Passed example 3 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Find the menu on the right, to navigate</p>
-		</div>
-		<div class="col">
-			<h1>Menu</h1>
-			<ul>
-				<li>
-					<a href="https://www.w3.org/Consortium/contact">Contact</a>
-				</li>
-				<li>
-					<a href="https://www.w3.org/Help/">Help and FAQ</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
-```
-
-#### Passed Example 4
-
-This text includes the [visual reference word][] "tilted" and identifies web content (namely itself). But the text also includes the word "this" which makes it apparent that the description is about the same content, thus matching the **non-visual reference** condition.
-
-```html
-<head>
-	<title>Passed example 4 9bd38c</title>
-	<style>
-		div.tilt {
-			height: 750px;
-			width: 150px;
-			-ms-transform: rotate(20deg); /* IE 9 */
-			-webkit-transform: rotate(20deg); /* Safari 3-8 */
-			transform: rotate(20deg);
-		}
-	</style>
-</head>
-<body>
-	<div class="tilt">Search this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
-</body>
-```
-
-#### Passed Example 5
-
-This paragraph includes the [visual reference word][] "round". The button is identified by this word which is also included in the [visible text content][] of the element, thus matching the **visible words** condition.
-
-```html
-<head>
-	<title>Passed example 5 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Click the round button, for a surprise</p>
-		</div>
-		<div class="col">
-			<button style="border-radius: 50%; height: 100px; width: 100px;" onclick="alert('Surprise!')">
-				Round button
-			</button>
-		</div>
-	</div>
-</body>
-```
-
-#### Passed Example 6
-
-This paragraph includes the [visual reference word][] "triangle" which is included in the heading of the menu, thus matching the **visible words** condition. The fact that the described content is on another page of the same website does not restrict this rule.
-
-```html
-<p>
-	On the
-	<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-with-heading.html">information page</a>
-	you can find more examples within the triangle menu.
-</p>
-```
-
-#### Passed Example 7
-
-This paragraph includes the [visual reference words][] "wide" and "narrow". The images are indicated by these words which are also included in the [accessible names][accessible name] of the images, thus matching the **accessible words** condition.
-
-```html
-<p>The wide image is awesome. The narrow image isn't.</p>
-<img
-	scr="/test-assets/non-visual-reference-alternative-9bd38c/awesome_wide.jfif"
-	alt="Wide photo of an awesome landscape."
-/>
-<img
-	scr="/test-assets/non-visual-reference-alternative-9bd38c/non_awesome_narrow.jpg"
-	alt="Narrow photo of a dull landscape."
-/>
-```
-
-#### Passed Example 8
-
-This paragraph includes the [visual reference words][] "square" and "right" but in this case they are not identifying any [web content][].
-
-```html
-<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
-```
-
-#### Passed Example 9
-
-This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction about any [web content][], thus matching the **no instruction** condition.
-
-```html
-<p>
-	This circle is nice.
-	<span
-		role="presentation"
-		style="height: 25px;
-		     width: 25px;
-		     background-color: #bbb;
-		     border-radius: 50%;
-		     display: inline-block;"
-	>
-	</span>
-</p>
-```
-
-#### Passed Example 10
-
-This paragraph includes the [visual reference word][] "star" but there is also a heading "examples" that can be referenced, thus matching the **non-visual references** condition. The fact that the identified content is in an `iframe` does not restrict this rule.
-
-```html
-<p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
-<iframe title="star" src="/test-assets/non-visual-reference-alternative-9bd38c/star-with-heading.html"></iframe>
-```
-
-#### Passed Example 11
-
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not visible, this example is applicable because it is included in the accessibility tree.
-
-```html
-<head>
-	<title>Passed example 11 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p style="position:absolute; top:-9999em">Click the button labelled "howdy", on the right, for a surprise</p>
-		</div>
-		<div class="col">
-			<button onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
-```
-
-#### Passed Example 12
-
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
-
-```html
-<head>
-	<title>Passed example 12 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p aria-hidden="true">Click the green button labelled "howdy" for a surprise</p>
-		</div>
-		<div class="col">
-			<button style="background-color: green" onclick="alert('Surprise!')">Howdy</button>
-		</div>
-	</div>
-</body>
-```
-
-#### Passed Example 13
-
-This paragraph includes the [visual reference word][] "right". The user is told to find the navigation on the right and the navigation is also correctly identified by a `nav` element whose [accessible name][] contains the word "navigation", thus matching the **non-visual reference** condition.
-
-```html
-<head>
-	<title>Passed example 13 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Find the navigation on the right, for the non-essential links</p>
-		</div>
-		<nav>
+<html lang="en">
+	<head>
+		<title>Passed example 3 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
 			<div class="col">
+				<p>Find the menu on the right, to navigate</p>
+			</div>
+			<div class="col">
+				<h1>Menu</h1>
 				<ul>
 					<li>
 						<a href="https://www.w3.org/Consortium/contact">Contact</a>
@@ -310,9 +135,210 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 					</li>
 				</ul>
 			</div>
-		</nav>
-	</div>
-</body>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
+This text includes the [visual reference word][] "tilted" and identifies web content (namely itself). But the text also includes the word "this" which makes it apparent that the description is about the same content, thus matching the **non-visual reference** condition.
+
+```html
+<html lang="en">
+	<head>
+		<title>Passed example 4 9bd38c</title>
+		<style>
+			div.tilt {
+				height: 750px;
+				width: 150px;
+				-ms-transform: rotate(20deg); /* IE 9 */
+				-webkit-transform: rotate(20deg); /* Safari 3-8 */
+				transform: rotate(20deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tilt">Search this pieCe of tiLted text fOr clueS on whEre to find The monster.</div>
+	</body>
+</html>
+```
+
+#### Passed Example 5
+
+This paragraph includes the [visual reference word][] "round". The button is identified by this word which is also included in the [visible text content][] of the element, thus matching the **visible words** condition.
+
+```html
+<html lang="en">
+	<head>
+		<title>Passed example 5 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p>Click the round button, for a surprise</p>
+			</div>
+			<div class="col">
+				<button style="border-radius: 50%; height: 100px; width: 100px;" onclick="alert('Surprise!')">
+					Round button
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 6
+
+This paragraph includes the [visual reference word][] "triangle" which is included in the heading of the menu, thus matching the **visible words** condition. The fact that the described content is on another page of the same website does not restrict this rule.
+
+```html
+<html lang="en">
+	<p>
+		On the
+		<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-with-heading.html">information page</a>
+		you can find more examples within the triangle menu.
+	</p>
+</html>
+```
+
+#### Passed Example 7
+
+This paragraph includes the [visual reference words][] "wide" and "narrow". The images are indicated by these words which are also included in the [accessible names][accessible name] of the images, thus matching the **accessible words** condition.
+
+```html
+<html lang="en">
+	<p>The wide image is awesome. The narrow image isn't.</p>
+	<img
+		scr="/test-assets/non-visual-reference-alternative-9bd38c/awesome_wide.jfif"
+		alt="Wide photo of an awesome landscape."
+	/>
+	<img
+		scr="/test-assets/non-visual-reference-alternative-9bd38c/non_awesome_narrow.jpg"
+		alt="Narrow photo of a dull landscape."
+	/>
+</html>
+```
+
+#### Passed Example 8
+
+This paragraph includes the [visual reference words][] "square" and "right" but in this case they are not identifying any [web content][].
+
+```html
+<html lang="en">
+	<p>A square is a regular quadrilateral with four equal sides and four right angles.</p>
+</html>
+```
+
+#### Passed Example 9
+
+This paragraph includes the [visual reference word][] "circle" but in this case it is not an instruction about any [web content][], thus matching the **no instruction** condition.
+
+```html
+<html lang="en">
+	<p>
+		This circle is nice.
+		<span
+			role="presentation"
+			style="height: 25px;
+		     width: 25px;
+		     background-color: #bbb;
+		     border-radius: 50%;
+		     display: inline-block;"
+		>
+		</span>
+	</p>
+</html>
+```
+
+#### Passed Example 10
+
+This paragraph includes the [visual reference word][] "star" but there is also a heading "examples" that can be referenced, thus matching the **non-visual references** condition. The fact that the identified content is in an `iframe` does not restrict this rule.
+
+```html
+<html lang="en">
+	<p>More examples can be found when you look underneath the star or you can search for the "Examples" heading</p>
+	<iframe title="star" src="/test-assets/non-visual-reference-alternative-9bd38c/star-with-heading.html"></iframe>
+</html>
+```
+
+#### Passed Example 11
+
+This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not visible, this example is applicable because it is included in the accessibility tree.
+
+```html
+<html lang="en">
+	<head>
+		<title>Passed example 11 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p style="position:absolute; top:-9999em">Click the button labelled "howdy", on the right, for a surprise</p>
+			</div>
+			<div class="col">
+				<button onclick="alert('Surprise!')">Howdy</button>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 12
+
+This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
+
+```html
+<html lang="en">
+	<head>
+		<title>Passed example 12 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p aria-hidden="true">Click the green button labelled "howdy" for a surprise</p>
+			</div>
+			<div class="col">
+				<button style="background-color: green" onclick="alert('Surprise!')">Howdy</button>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 13
+
+This paragraph includes the [visual reference word][] "right". The user is told to find the navigation on the right and the navigation is also correctly identified by a `nav` element whose [accessible name][] contains the word "navigation", thus matching the **non-visual reference** condition.
+
+```html
+<html lang="en">
+	<head>
+		<title>Passed example 13 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p>Find the navigation on the right, for the non-essential links</p>
+			</div>
+			<nav>
+				<div class="col">
+					<ul>
+						<li>
+							<a href="https://www.w3.org/Consortium/contact">Contact</a>
+						</li>
+						<li>
+							<a href="https://www.w3.org/Help/">Help and FAQ</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>
 ```
 
 #### Passed Example 14
@@ -320,8 +346,10 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 No [text node][] on this page includes any of the [visual reference words][].
 
 ```html
-<p>Click the button, for a surprise</p>
-<button onclick="alert('Surprise!')">Howdy</button>
+<html lang="en">
+	<p>Click the button, for a surprise</p>
+	<button onclick="alert('Surprise!')">Howdy</button>
+</html>
 ```
 
 #### Passed Example 15
@@ -329,8 +357,10 @@ No [text node][] on this page includes any of the [visual reference words][].
 The [text node][] inside the `p` element is not applicable because it is neither [visible][] nor [included in the accessibility tree][] due to its `display:none` styling. The [text node][] inside the `button` element does not include any of the [visual reference words][].
 
 ```html
-<p style="display:none">Click the box, for a surprise</p>
-<button onclick="alert('Surprise!')">Howdy</button>
+<html lang="en">
+	<p style="display:none">Click the box, for a surprise</p>
+	<button onclick="alert('Surprise!')">Howdy</button>
+</html>
 ```
 
 ### Failed
@@ -340,54 +370,16 @@ The [text node][] inside the `p` element is not applicable because it is neither
 This paragraph includes the [visual reference word][] "right". The user is told to find the menu on the right but the menu is not identified in any other way.
 
 ```html
-<head>
-	<title>Failed example 1 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<div class="col-container">
-		<div class="col">
-			<p>Find the menu on the right, to navigate</p>
-		</div>
-		<div class="col">
-			<ul>
-				<li>
-					<a href="https://www.w3.org/Consortium/contact">Contact</a>
-				</li>
-				<li>
-					<a href="https://www.w3.org/Help/">Help and FAQ</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
-```
-
-#### Failed Example 2
-
-This paragraph includes the [visual reference word][] "right". The user is told to find the navigation on the right and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use (the non-visual reference is ambiguous and does not identify a specific [web content][]).
-
-```html
-<head>
-	<title>Failed example 2 9bd38c</title>
-	<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
-</head>
-<body>
-	<nav>
-		<ul>
-			<li>
-				<a href="https://www.w3.org/">W3C homepage</a>
-			</li>
-			<li>
-				<a href="https://www.w3.org/standards/">Standards</a>
-			</li>
-		</ul>
-	</nav>
-	<div class="col-container">
-		<div class="col">
-			<p>Find the navigation on the right, for the non-essential links</p>
-		</div>
-		<nav>
+<html lang="en">
+	<head>
+		<title>Failed example 1 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<div class="col-container">
+			<div class="col">
+				<p>Find the menu on the right, to navigate</p>
+			</div>
 			<div class="col">
 				<ul>
 					<li>
@@ -398,9 +390,51 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 					</li>
 				</ul>
 			</div>
+		</div>
+	</body>
+</html>
+```
+
+#### Failed Example 2
+
+This paragraph includes the [visual reference word][] "right". The user is told to find the navigation on the right and the navigation is correctly identified by a `nav` element, but there are 2 `nav` elements on the page so the user doesn't know which one to use (the non-visual reference is ambiguous and does not identify a specific [web content][]).
+
+```html
+<html lang="en">
+	<head>
+		<title>Failed example 2 9bd38c</title>
+		<link rel="stylesheet" type="text/css" href="/test-assets/non-visual-reference-alternative-9bd38c/columns.css" />
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="https://www.w3.org/">W3C homepage</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/standards/">Standards</a>
+				</li>
+			</ul>
 		</nav>
-	</div>
-</body>
+		<div class="col-container">
+			<div class="col">
+				<p>Find the navigation on the right, for the non-essential links</p>
+			</div>
+			<nav>
+				<div class="col">
+					<ul>
+						<li>
+							<a href="https://www.w3.org/Consortium/contact">Contact</a>
+						</li>
+						<li>
+							<a href="https://www.w3.org/Help/">Help and FAQ</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</body>
+</html>
 ```
 
 #### Failed Example 3
@@ -408,15 +442,17 @@ This paragraph includes the [visual reference word][] "right". The user is told 
 This paragraph includes the [visual reference word][] "triangle" (which is not included in the identified content) and no other indication is present so the rule fails. The fact that the triangle menu is on a different page of the same website does not restrict the rule.
 
 ```html
-<body>
-	<p>
-		On the
-		<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-without-heading.html"
-			>information page</a
-		>
-		you can find more examples within the triangle menu
-	</p>
-</body>
+<html lang="en">
+	<body>
+		<p>
+			On the
+			<a href="/test-assets/non-visual-reference-alternative-9bd38c/triangle-menu-without-heading.html"
+				>information page</a
+			>
+			you can find more examples within the triangle menu
+		</p>
+	</body>
+</html>
 ```
 
 #### Failed Example 4
@@ -424,10 +460,12 @@ This paragraph includes the [visual reference word][] "triangle" (which is not i
 This paragraph includes the [visual reference word][] "star" (which is not included in the identified content) and there is no other indication. The content described is in an `iframe`.
 
 ```html
-<body>
-	<p>More examples can be found when you look underneath the star</p>
-	<iframe src="/test-assets/non-visual-reference-alternative-9bd38c/star-without-heading.html"></iframe>
-</body>
+<html lang="en">
+	<body>
+		<p>More examples can be found when you look underneath the star</p>
+		<iframe src="/test-assets/non-visual-reference-alternative-9bd38c/star-without-heading.html"></iframe>
+	</body>
+</html>
 ```
 
 ### Inapplicable
@@ -437,7 +475,9 @@ This paragraph includes the [visual reference word][] "star" (which is not inclu
 This image link contains no [text node][].
 
 ```html
-<a href="https://act-rules.github.io/"><img src="test-assets/shared/act-logo.png" alt="ACT rules"/></a>
+<html lang="en">
+	<a href="https://act-rules.github.io/"><img src="test-assets/shared/act-logo.png" alt="ACT rules"/></a>
+</html>
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'

@@ -1,6 +1,6 @@
 ---
 id: 9bd38c
-name: Content has non-visual reference alternative
+name: Content has alternative for visual reference
 rule_type: atomic
 description: |
   This rule checks that when content is identified through a visual reference, there are also non-visual references identifying the same content.

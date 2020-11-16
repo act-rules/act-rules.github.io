@@ -63,9 +63,34 @@ This button element causes [visible changes in content][] by presenting a toolti
 		<button aria-labelledby="tooltip">
 			<span>WCAG</span>
 		</button>
-		<p id="tooltip" role="tooltip" hidden>
-			Web Content Accessibility Guidelines
-		</p>
+		<p id="tooltip" role="tooltip" hidden>Web Content Accessibility Guidelines</p>
+	</div>
+</body>
+```
+
+#### Passed Example 2
+
+This list item element causes [visible changes in content][] by presenting a menu item when [hovered][]. The menu item remains displayed, resulting in no further [visible changes in content][] to the area originally affected, even if further [visible changes in content][] happen outside this area when a submenu item is displayed.
+
+```html
+<link rel="stylesheet" type="text/css" href="test-assets/ep1s13/styles_menu.css" />
+<script src="test-assets/ep1s13/scripts.js"></script>
+
+<body onload="bindEvents({tooltipRemains: true})">
+	<div>
+		<ul class="tooltip-container">
+			<li>menu</li>
+			<div role="tooltip" hidden>
+				<ul class="tooltip-container">
+					<li>submenu</li>
+					<div role="tooltip" hidden>
+						<ul>
+							<li>subsubmenu</li>
+						</ul>
+					</div>
+				</ul>
+			</div>
+		</ul>
 	</div>
 </body>
 ```
@@ -85,9 +110,7 @@ This button element causes [visible changes in content][] by presenting a toolti
 		<button aria-labelledby="tooltip">
 			<span>WCAG</span>
 		</button>
-		<p id="tooltip" role="tooltip" hidden>
-			Web Content Accessibility Guidelines
-		</p>
+		<p id="tooltip" role="tooltip" hidden>Web Content Accessibility Guidelines</p>
 	</div>
 </body>
 ```
@@ -115,9 +138,7 @@ This button element causes [visible changes in content][] by presenting a toolti
 		<button aria-labelledby="tooltip">
 			<span>WCAG</span>
 		</button>
-		<p id="tooltip" role="tooltip" hidden>
-			Web Content Accessibility Guidelines
-		</p>
+		<p id="tooltip" role="tooltip" hidden>Web Content Accessibility Guidelines</p>
 	</div>
 </body>
 ```
@@ -129,7 +150,6 @@ This element causes [visible changes in content][] when [hovered][] (due to defa
 ```html
 <a href="https://www.w3.org/WAI/">WAI</a>
 ```
-
 
 [adjacent areas]: #adjacent-areas 'Definition of adjacent areas'
 [area affected by visible changes]: #area-affected-visible-changes 'Definition of area affected by visible changes'

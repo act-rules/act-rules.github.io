@@ -352,6 +352,18 @@ No [text node][] on this page includes any of the [visual reference words][].
 </html>
 ```
 
+#### Passed Example 15
+
+No [text node][] on this page includes any of the [visual reference words][]. The word "square" in French (the language of the page) never has the meaning of the geometrical figure. Hence, it is not the translation of any of the [visual reference words][]. The sentence means "After school, he's taking his kids to the public garden."
+
+```html
+<html lang="fr">
+	<p>
+		Après l'école, il emmène ses enfants jouer au square.
+	</p>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1

@@ -30,13 +30,13 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation 1
 
-Each target's `headers` [attribute value][] is [a set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
+Each target's `headers` [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
 
 **Note:** `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Expectation 2
 
-Each target's `headers` [attribute value][] is [a set of space separated tokens][] that is not the value of `id` attribute of the element on which the test target is specified.
+Each target's `headers` [attribute value][] is a [set of space separated tokens][] that is not the value of `id` attribute of the element on which the test target is specified.
 
 **Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 

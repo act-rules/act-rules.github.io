@@ -60,7 +60,7 @@ This button element causes [visible changes in content][] by presenting a toolti
 <body onload="bindEvents({tooltipRemains: true})">
 	<div class="tooltip-container">
 		<button aria-labelledby="tooltip">
-			<span aria-hidden>WCAG</span>
+			<span>WCAG</span>
 		</button>
 		<p id="tooltip" role="tooltip" hidden>
 			Web Content Accessibility Guidelines
@@ -82,7 +82,7 @@ This button element causes [visible changes in content][] by presenting a toolti
 <body onload="bindEvents({tooltipRemains: false})">
 	<div class="tooltip-container">
 		<button aria-labelledby="tooltip">
-			<span aria-hidden>WCAG</span>
+			<span>WCAG</span>
 		</button>
 		<p id="tooltip" role="tooltip" hidden>
 			Web Content Accessibility Guidelines
@@ -112,7 +112,7 @@ This button element causes [visible changes in content][] by presenting a toolti
 <body onload="bindEvents({tooltipRemains: true})">
 	<div class="tooltip-container">
 		<button aria-labelledby="tooltip">
-			<span aria-hidden>WCAG</span>
+			<span>WCAG</span>
 		</button>
 		<p id="tooltip" role="tooltip" hidden>
 			Web Content Accessibility Guidelines

@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any HTML or SVG element that has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
 
 ## Expectation
 

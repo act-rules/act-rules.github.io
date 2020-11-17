@@ -31,7 +31,6 @@ Within each test target, there is at least one element for which all the followi
 
 ## Assumptions
 
-- This rule assumes that the `main` [landmark][] is correctly used to identify the [main block of content][] of the page.
 - This rule assumes that [landmarks][landmark] are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
 
 ## Accessibility Support

@@ -24,7 +24,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-Within the test target, there is at least one element for which all the following are true:
+Within each test target, there is at least one element for which all the following are true:
 
 - the element has [semantic role][] of `main`; and
 - the element is [included in the accessibility tree][].

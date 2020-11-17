@@ -28,11 +28,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-The first non-[decorative][] node in the [flat tree][] which is inside the [main block of content][] of the test target and has a non-empty [accessible name][]:
+For each test target, all the following are true for the first non-[decorative][] node in it which is inside the [main block of content][] of this test target and has a non-empty [accessible name][]:
 
-- has a [semantic role][] of `heading`; and
-- is [visible][]; and
-- is [included in the accessibility tree][].
+- the node has a [semantic role][] of `heading`; and
+- the node is [visible][]; and
+- the node is [included in the accessibility tree][].
 
 ## Assumptions
 

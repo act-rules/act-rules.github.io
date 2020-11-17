@@ -38,11 +38,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-Within the test target, there exists at least one [keyboard actionable][] [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][].
+Within each test target, there exists at least one [keyboard actionable][] [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][].
 
 ## Expectation 2
 
-Within the test target, there exists at least one [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][]; and this [instrument][] is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to the [main block of content][].
+Within each test target, there exists at least one [instrument][] to move focus [at the start][] of the [main block of content][] of the [document][]; and this [instrument][] is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to the [main block of content][].
 
 ## Assumptions
 

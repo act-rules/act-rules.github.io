@@ -29,17 +29,17 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-The [sequential focus navigation order][sequential focus navigation] of the test target is not empty.
+Each test target has a non-empty [sequential focus navigation order][sequential focus navigation].
 
 ## Expectation 2
 
-The first element in the [sequential focus navigation order][sequential focus navigation] of the test target:
+For each test target, all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
 
-- is [keyboard actionable][]; and
-- is [included in the accessibility tree][]; and
-- is a [semantic link][]; and
-- when [activated][], moves focus [at the start][] of the [main block of content][] of the [document][]; and
-- has an [accessible name][] that communicates that it links to the [main block of content][].
+- the focusable element is [keyboard actionable][]; and
+- the focusable element is [included in the accessibility tree][]; and
+- the focusable element is a [semantic link][]; and
+- when the focusable element is [activated][], focus moves [at the start][] of the [main block of content][] of the [document][]; and
+- the focusable element has an [accessible name][] that communicates that it links to the [main block of content][].
 
 ## Assumptions
 

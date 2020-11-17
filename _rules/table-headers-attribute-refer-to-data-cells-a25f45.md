@@ -36,7 +36,7 @@ Each target's [attribute value][] is a [set of space separated tokens][]. Each t
 
 ## Expectation 2
 
-Each target's `headers` [attribute value][] is a [set of space separated tokens][] that is not the value of `id` attribute of the element on which the test target is specified.
+Each target's [attribute value][] is a [set of space separated tokens][], and none of these tokens is the value of `id` attribute of the element on which the test target is specified.
 
 **Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 

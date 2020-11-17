@@ -15,7 +15,7 @@ A node is _perceivable content_ if all the following are true:
 - the node is either [visible][] or [included in the accessibility tree][]; and
 - if the node is an element, it does not have a [semantic role][] of `none` or `presentation`.
 
-**Note:** Perceivable content corresponds to nodes that contain information and are perceived by some categories of users.
+Perceivable content corresponds to nodes that contain information and are perceived by some categories of users.
 
 #### Assumptions
 

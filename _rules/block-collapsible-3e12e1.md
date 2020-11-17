@@ -27,11 +27,11 @@ This rule applies to any [HTML web page][].
 
 ## Expectation 1
 
-For each [block of repeated content][] in the test target which is before the [main block of content][], there exists a [keyboard actionable][] [instrument][] to make this [block][] not [visible][].
+For each [block of repeated content][] in the test target which is before the [main block of content][], there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][].
 
 ## Expectation 2
 
-For each [block of repeated content][] in the test target which is before the [main block of content][], there exists an [instrument][], which is [included in the accessibility tree][], to remove this [block][] from the [accessibility tree][included in the accessibility tree].
+For each [block of repeated content][] in the test target which is before the [main block of content][], there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 

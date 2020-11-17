@@ -641,6 +641,8 @@ This [document][] is not an [HTML web page][].
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
+[document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Main Section of Content'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

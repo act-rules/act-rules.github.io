@@ -60,7 +60,7 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 ## Background
 
-The **enabled** condition effectively prevent `:disabled` to be in the set of [widget pseudo-classes][].
+The **enabled** condition effectively prevents `:disabled` to be in the set of [widget pseudo-classes][].
 
 Many combinations of [widget pseudo-classes][] are impossible, in the sense that no element can match all of them at the same time. The **matching** condition is thus fairly restrictive in which sets of [widget pseudo-classes][] are applicable to this rule.
 

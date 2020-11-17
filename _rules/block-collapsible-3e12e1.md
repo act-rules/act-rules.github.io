@@ -54,7 +54,9 @@ Note that if there is no [block of repeated content][] before the [main block of
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][].
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use bold text instead of heading (to avoid also passing rule [_Document has heading for main section of content_][document has heading for main]) and a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These are bad practices and should be avoided. In addition, this often create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `<div id="main">` element is the [main block of content][].
 
 ## Test Cases
 
@@ -74,20 +76,20 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -106,7 +108,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<button onclick="toggleHidden('chapters-navigation', 'about-book')">Toggle repeated content</button>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
@@ -114,17 +116,17 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		</nav>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -144,7 +146,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<button onclick="toggleHidden('bio-translator')">Toggle extra content</button>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
@@ -152,17 +154,17 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		</nav>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -183,20 +185,20 @@ In this document, the [visibility][visible] of the navigational [block of repeat
 		<button onclick="toggleAriaHidden('chapters-navigation')" class="off-screen">Toggle table of content</button>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -216,20 +218,20 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 		<button onclick="toggleHidden('chapters-navigation')" class="visible-on-focus">Toggle repeated content</button>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -247,20 +249,20 @@ This document has no [instrument][] to toggle the navigational [block of repeate
 	</head>
 	<body>
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -280,20 +282,20 @@ This document has an [instrument][] to toggle [visibility][visible] of the navig
 		<a href="#" onclick="toggleVisibility('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -312,20 +314,20 @@ This document has an instrument to toggle [inclusion on the accessibility tree][
 		<a href="#" onclick="toggleAriaHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -345,20 +347,20 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 		<a href="#" tabindex="-1" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -378,20 +380,20 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 		<a href="#" class="off-screen" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -410,20 +412,20 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 		<span onclick="toggleHidden('chapters-navigation')">Toggle table of content</span>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -442,20 +444,20 @@ This document has an [instrument][] to toggle the navigational [block of repeate
 		<a href="#" aria-hidden="true" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -477,6 +479,7 @@ This [document][] is not an [HTML web page][].
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

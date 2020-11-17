@@ -65,9 +65,11 @@ In most practical cases, the same [instrument][] is used to fulfill both expecta
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
 
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use bold text instead of heading (to avoid also passing rule [_Document has heading for main section of content_][document has heading for main]) and a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These are bad practices and should be avoided. In addition, this often create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+
 Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][]. Even though [blocks of repeated content][block of repeated content] are not considered by this rule, there is no need to provide a skip link if there is no repeated content to bypass, therefore the examples illustrate situations where the link is actually needed.
 
-Unless specified, the [main block of content][] of each test case is defined by its `main` element.
+Unless specified, the [main block of content][] of each test case is defined by its `<div id="main">` element.
 
 Due to the differences between the 3 techniques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and pass different techniques. The rest of the Passed Examples illustrate variations inside the rule and are based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
 
@@ -91,17 +93,17 @@ In this [document][], the first `a` element is a [keyboard actionable][] [instru
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -123,22 +125,22 @@ In this [document][], the third `a` element is [visible][], is a [keyboard actio
 		</nav>
 
 		<aside id="bio-translator">
-			<h1>About the translator</h1>
+			<b>About the translator</b>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -155,44 +157,12 @@ In this [document][], the second `a` element (inside the second `aside` element)
 	<body>
 		<aside id="bio-translator">
 			<a href="#about-book">Skip to information about the book</a>
-			<h1>About the translator</h1>
+			<b>About the translator</b>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
 		<aside id="about-book">
 			<a href="#main">Skip to main content</a>
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
-In this [document][], the first `a` element is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][].
-
-**Note:** In this example, the [main block of content][] is the `div` element with an `id` of `main`. It is not specifically marked up as being the main content but nonetheless fulfills the expectation of users navigating to the page. The lack of correct markup for the main content, or for the heading with the Chapter's title is likely a violation of [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships). It is only done here to illustrate that this rule does not require any specific markup for the [main block of content][].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#main">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
@@ -202,12 +172,13 @@ In this [document][], the first `a` element is a [keyboard actionable][] [instru
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the element is normally hidden but is [visible][] when [focused][].
 
@@ -223,23 +194,23 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		</nav>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 In this [document][], the first `div` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][] behavior, and the possibility to [activate][activation] the element with keyboard, is done by scripting and the `tabindex` attribute with a value of 0.
 
@@ -253,23 +224,23 @@ In this [document][], the first `div` element is [visible][], is a [keyboard act
 		<div role="link" onclick="location.assign('#main');" tabindex="0" id="skip-link">Skip to main content</div>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside another [block of content][], it is still [at the start][] of the [main block of content][] because there is no [perceivable content][] between the link target and the [main block of content][]. Thus, following the link does skip all the repeated content.
 
@@ -279,27 +250,27 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#main">Skip to main content</a>
+		<a href="#at-the-start-of-main">Skip to main content</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-			<span id="main"></span>
+			<span id="at-the-start-of-main"></span>
 		</aside>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element in it, it is still [at the start][] of the [main block of content][] because it is before any [perceivable content][] inside the [main block of content][]. Thus, following the link does not skip any non-repeated content.
 
@@ -309,28 +280,28 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#main">Skip to main content</a>
+		<a href="#at-the-start-of-main">Skip to main content</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
+		<div id="main">
 			<hr />
-			<span id="main"></span>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<span id="at-the-start-of-main"></span>
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the [main block of content][], is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the link is rendered as non-text content and has an [accessible name][] given by its `aria-label` attribute.
 
@@ -343,18 +314,18 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		<a href="#main" aria-label="Skip to main content">📖</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -374,17 +345,17 @@ This [document][] has no [instrument][] to skip to the [main block of content][]
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -403,17 +374,17 @@ In this [document][], the link to skip to the [main block of content][] does not
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -432,17 +403,17 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -461,17 +432,17 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -491,17 +462,17 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -520,17 +491,17 @@ In this [document][], the link to skip to the [main block of content][] is not [
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -545,21 +516,21 @@ In this [document][], the skip link does not move focus [at the start][] of the 
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#main">Skip to main content</a>
+		<a href="#before-main">Skip to main content</a>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
-			<p id="main">The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+			<b>About the book</b>
+			<p id="before-main">The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -574,21 +545,21 @@ In this [document][], the first [focusable][] element does not move focus [at th
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#main">Skip to main content</a>
+		<a href="#inside-main">Skip to main content</a>
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p id="main">
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
+			<p id="inside-main">
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -607,17 +578,17 @@ In this [document][], the link to skip to the [main block of content][] does not
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -636,17 +607,17 @@ In this [document][], the link to skip to the [main block of content][] has a [w
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -668,6 +639,7 @@ This [document][] is not an [HTML web page][].
 [at the start]: #at-the-start 'Definition of At the Start of a block'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

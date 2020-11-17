@@ -52,7 +52,9 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `main` element.
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided. In addition, this may create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+
+Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `<div id="main">` element.
 
 ## Test Cases
 
@@ -76,13 +78,13 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -107,13 +109,13 @@ This [document][] has a `h2` heading, which is [visible][] and [included in the 
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h2>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h2>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -160,20 +162,21 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	</head>
 	<body>
 		<nav id="chapters-navigation">
+			<h1>Content</h1>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<hr />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -196,21 +199,21 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
 #### Passed Example 6
 
-This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
+This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. Note that repurposing an element instead of using native HTML is a violation of the [First Rule of ARIA Use](https://www.w3.org/TR/using-aria/#rule1) and should normally be avoided.
 
 ```html
 <html>
@@ -226,13 +229,13 @@ This [document][] has a `div` element with a role of `heading`, which is [visibl
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<div role="heading" aria-level="1">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</div>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -248,13 +251,14 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	</head>
 	<body>
 		<nav id="chapters-navigation">
+			<h1>Content</h1>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h1>
 				<img
 					src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
@@ -265,7 +269,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -281,20 +285,21 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 	</head>
 	<body>
 		<nav id="chapters-navigation">
+			<h1>Content</h1>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<span>1.</span>
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -318,13 +323,13 @@ In this document, inside the [main block of content][], the first node with a no
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -347,14 +352,14 @@ In this document, inside the [main block of content][], the first node with a no
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" alt="The Peach Garden Oath" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -372,18 +377,18 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 	<body>
 		<nav id="chapters-navigation">
 			<ol>
-				<li>Chapter 1</li>
+				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h1 class="off-screen">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -405,13 +410,13 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h1 aria-hidden="true">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -430,6 +435,7 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [block of content]: #block-of-content 'Definition of Block of Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS definition of Flat Tree'

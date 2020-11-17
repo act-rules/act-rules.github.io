@@ -88,7 +88,9 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
   - [Technique H69: Providing heading elements at the beginning of each section of content][tech h69]
   - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link to a page with similar [blocks of content][block of content]; and the `main` element is the [main block of content][].
+In order to focus on single aspect of the rule at a time, and given the very nature of some of the input rules, most test cases use bold text instead of heading (to avoid also passing rule [_Document has heading for main section of content_][document has heading for main]) and a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These are bad practices and should be avoided. In addition, this often create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link to a page with similar [blocks of content][block of content]; and the `main` (or `<div id="main">`) element is the [main block of content][].
 
 ## Test Cases
 
@@ -108,27 +110,55 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
 #### Passed Example 2
 
-This [HTML web page][] is passing rules [_Document has heading for main section of content_][document has heading for main] and [_Document has a main landmark_][document has main].
+This [HTML web page][] is passing rule [_Document has heading for main section of content_][document has heading for main].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="chapters-navigation">
+			<ol>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<div id="main">
+			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
+This [HTML web page][] is passing rule [_Document has a main landmark_][document has main].
 
 ```html
 <html>
@@ -144,36 +174,7 @@ This [HTML web page][] is passing rules [_Document has heading for main section 
 		</nav>
 
 		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</main>
-	</body>
-</html>
-```
-
-#### Passed Example 3
-
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main].
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#main">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-
-		<aside id="about-book">
-			<h1>About the book</h1>
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -193,29 +194,21 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<nav id="local-navigation">
-			<a href="#bio-translator">Skip to translator's biography</a>
-			<a href="#about-book">Skip to information about the book</a>
-			<a href="#main">Skip to main content</a>
-		</nav>
+		<a href="#main">Skip to main content</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
-		<aside id="bio-translator">
-			<h1>About the translator</h1>
-			<p>Yu Sumei is a professor of English at East China Normal University.</p>
-		</aside>
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -230,30 +223,67 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<aside id="bio-translator">
+		<nav id="local-navigation">
+			<a href="#bio-translator">Skip to translator's biography</a>
 			<a href="#about-book">Skip to information about the book</a>
-			<h1>About the translator</h1>
+			<a href="#main">Skip to main content</a>
+		</nav>
+
+		<aside id="bio-translator">
+			<b>About the translator</b>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
 		<aside id="about-book">
-			<a href="#main">Skip to main content</a>
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
 #### Passed Example 6
+
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<aside id="bio-translator">
+			<a href="#about-book">Skip to information about the book</a>
+			<b>About the translator</b>
+			<p>Yu Sumei is a professor of English at East China Normal University.</p>
+		</aside>
+		<aside id="about-book">
+			<a href="#main">Skip to main content</a>
+			<b>About the book</b>
+			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
+		</aside>
+
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		</div>
+	</body>
+</html>
+```
+
+#### Passed Example 7
 
 This [HTML web page][] is passing rule [_Block of repeated content is collapsible_][block collapsible] because it has no [block of repeated content][] before its [main block of content][]. Note that this does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the [block of repeated content][] which is after the [main block of content][] cannot be toggled.
 
@@ -263,25 +293,25 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<main>
-			<h1 id="main">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 	</body>
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
 
@@ -294,23 +324,23 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<button onclick="location.assign('#main')">Skip to main content</button>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [at the start][] of the [main block of content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the [main block of content][] is arguably a single "area of the content", and the technique requires only one link per such area.
 
@@ -329,34 +359,34 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		</nav>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main>
-			<h1 id="brewitt-taylor">
+		<div id="main">
+			<b id="brewitt-taylor">
 				Three Heroes Swear Brotherhood in the Peach Garden (Translation by Charles Henry Brewitt-Taylor)
-			</h1>
+			</b>
 			<p>
 				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
 				divide.
 			</p>
 
-			<h1 id="roberts">Three Bold Spirits Plight Mutual Faith in the Peach Garden (Translation by Moss Roberts)</h1>
+			<b id="roberts">Three Bold Spirits Plight Mutual Faith in the Peach Garden (Translation by Moss Roberts)</b>
 			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
 
-			<h1 id="yu">Three Heroes Swear Brotherhood at a Feast in the Peach Garden (Translation by Yu Sumei)</h1>
+			<b id="yu">Three Heroes Swear Brotherhood at a Feast in the Peach Garden (Translation by Yu Sumei)</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 9
+#### Passed Example 10
 
 This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
@@ -372,23 +402,23 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		</nav>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 This [HTML web page][] is passing rule [_Block of repeated content is collapsible_][block collapsible]. Note that it does not pass [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] because the technique requires that the blocks can be toggled on and off, but here they can only be removed.
 
@@ -402,25 +432,25 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<button onclick="hide('chapters-navigation')">Hide table of content</button>
 
 		<nav id="chapters-navigation">
-			<h1>Content</h1>
+			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
 			</ol>
 		</nav>
 
-		<main>
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
 
@@ -435,22 +465,22 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 This [HTML web page][] is passing rule [_Document has an instrument to move focus to main block of content_][document has instrument to main] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
@@ -466,22 +496,22 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<main id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
+		<div id="main">
+			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
 
-#### Passed Example 13
+#### Passed Example 14
 
 This [HTML web page][] is passing rule [_Document has heading for main section of content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 
@@ -498,13 +528,13 @@ This [HTML web page][] is passing rule [_Document has heading for main section o
 			</ol>
 		</nav>
 
-		<main>
+		<div id="main">
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-		</main>
+		</div>
 	</body>
 </html>
 ```
@@ -524,15 +554,17 @@ This [HTML web page][] does not pass any of the input rules.
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<h1>About the book</h1>
+			<b>About the book</b>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 
-		<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
-		<p>
-			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
-			time.
-		</p>
+		<div id="main">
+			<strong style="font-size: 18pt">Three Heroes Swear Brotherhood at a Feast in the Peach Garden</strong>
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</div>
 	</body>
 </html>
 ```

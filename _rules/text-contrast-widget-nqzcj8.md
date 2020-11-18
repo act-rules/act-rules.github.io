@@ -103,7 +103,7 @@ With default browser styling, the text in this `button` element has a light gray
 
 #### Passed Example 3
 
-The text in this link, on white background, has color contrast ratios of 8.6:1, 10:1, 5.1:1, and 5.2:1 in the 4 states listed in the `style` element.
+The text in this link, on default white background, has color contrast ratios of 8.6:1, 10:1, 5.1:1, and 5.2:1 in the 4 states listed in the `style` element.
 
 ```html
 <style>
@@ -125,7 +125,23 @@ The text in this link, on white background, has color contrast ratios of 8.6:1, 
 
 #### Passed Example 4
 
-The text in this `input` element, on white background, has color contrast ratios of 8.6:1, 10:1, and 5.1:1 in the 3 states listed in the `style` element. Note that when the `input` element is matching both the `:placeholder-shown` and the `:focus` [widget pseudo-classes][], the styling defined latest takes precedence. Note that in modern browsers, the text itself is included in a shadow-tree inside the `input` element.
+The text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 8.6:1 when it's focused or not. Note that in modern browsers, the text itself is included in a shadow-tree inside the `input` element.
+
+```html
+<style>
+	input {
+		color: blue;
+	}
+	input:focus {
+		color: green;
+	}
+</style>
+<input value="ACT rules" />
+```
+
+#### Passed Example 4
+
+The text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 10:1 when it's focused or not. Note that when the `input` element is matching both the `:placeholder-shown` and the `:focus` [widget pseudo-classes][], the styling defined latest takes precedence. The text keeps a color ratio of 8.6:1 if some value is provided.
 
 ```html
 <style>
@@ -139,7 +155,7 @@ The text in this `input` element, on white background, has color contrast ratios
 		color: green;
 	}
 </style>
-<input value="ACT rules" placeholder="W3C" />
+<input placeholder="W3C" />
 ```
 
 #### Passed Example 5

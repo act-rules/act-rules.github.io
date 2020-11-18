@@ -155,6 +155,7 @@
 - innerText
 - isTrusted
 - isComposing
+- onclick
 
 # DOM Events
 - auxclick
@@ -224,3 +225,8 @@
 # Language codes
 - da
 - nl
+
+# Color names
+- 0000EE
+- 551A8B
+- EFEFEF

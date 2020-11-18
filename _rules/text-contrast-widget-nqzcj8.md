@@ -139,7 +139,7 @@ The text in this `input` element, on default white background, has color contras
 <input value="ACT rules" />
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 The text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 10:1 when it's focused or not. Note that when the `input` element is matching both the `:placeholder-shown` and the `:focus` [widget pseudo-classes][], the styling defined latest takes precedence. The text keeps a color ratio of 8.6:1 if some value is provided.
 
@@ -158,7 +158,7 @@ The text in this `input` element, on default white background, has color contras
 <input placeholder="W3C" />
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 With default browser styling, the text in this link, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background. When the link matches both `:link` and `:active`, the contrast ratio of its text is only 2:1, however, the `:active` [widget pseudo-class][] is ignored by this rule.
 
@@ -171,7 +171,7 @@ With default browser styling, the text in this link, has a white background and 
 <a href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it cannot match any of the [widget pseudo-classes][] and is thus only applicable with the empty set of such pseudo-classes.
 
@@ -181,7 +181,7 @@ The dark gray text in this `span` element with an [explicit role][] of `link` ha
 </span>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it can only match the `:focus` [widget pseudo-class][] and is thus only applicable with the empty set and with the singleton set {`:focus`}.
 
@@ -191,7 +191,7 @@ The dark gray text in this `span` element with an [explicit role][] of `link` ha
 </span>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 The dark gray text in this link has a contrast ratio between 12.6:1 and 9.5:1 on the white to blue gradient background.
 
@@ -201,7 +201,7 @@ The dark gray text in this link has a contrast ratio between 12.6:1 and 9.5:1 on
 </p>
 ```
 
-#### Passed Example 9
+#### Passed Example 10
 
 This light gray text in this link has a contrast ratio between 13:1 and 5:1 on the background image.
 
@@ -213,7 +213,7 @@ This light gray text in this link has a contrast ratio between 13:1 and 5:1 on t
 </p>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray background.
 
@@ -221,7 +221,7 @@ The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray
 <a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 The 14pt bold black text in this link has a contrast ratio of 3.6:1 on the gray background.
 
@@ -229,7 +229,7 @@ The 14pt bold black text in this link has a contrast ratio of 3.6:1 on the gray 
 <a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 The text in this `button` element does not convey anything in human language.
 
@@ -335,7 +335,7 @@ The light gray text in this `span` element with an [explicit role][] of `link` h
 </span>
 ```
 
-#### Failed Example 9
+#### Failed Example 8
 
 The light gray text in this link has a contrast ratio between 1.6:1 and 1.2:1 on the white to blue gradient background.
 

@@ -279,7 +279,7 @@ The text in this link, on default white background, has color contrast ratios of
 
 #### Failed Example 4
 
-With default browser styling, the text in this link, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background. However, when the link matcehs both `:visited` and `:focus`, it only has a color contrast ratio of 2:1.
+With default browser styling, the text in this link, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background. However, when the link matches both `:visited` and `:focus`, it only has a color contrast ratio of 2:1.
 
 ```html
 <style>
@@ -308,7 +308,7 @@ The text in this `input` element, on default white background, has color contras
 
 #### Failed Example 6
 
-The placeholder text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 10:1 when it's focused or not. However, when text is inputed and the placeholder is not shown, the text has only a 1.5:1 color contrast ratio.
+The placeholder text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 10:1 when it's focused or not. However, when text is entered and the placeholder is not shown, the text has only a 1.5:1 color contrast ratio.
 
 ```html
 <style>

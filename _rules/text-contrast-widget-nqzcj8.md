@@ -160,6 +160,19 @@ The text in this `input` element, on default white background, has color contras
 
 #### Passed Example 5
 
+With default browser styling, the text in this link, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background. When the link matches both `:link` and `:active`, the contrast ratio of its text is only 2:1, however, the `:active` [widget pseudo-class][] is ignored by this rule.
+
+```html
+<style>
+	:link:active {
+		color: orange;
+	}
+</style>
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Passed Example 6
+
 The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it cannot match any of the [widget pseudo-classes][] and is thus only applicable with the empty set of such pseudo-classes.
 
 ```html
@@ -168,7 +181,7 @@ The dark gray text in this `span` element with an [explicit role][] of `link` ha
 </span>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it can only match the `:focus` [widget pseudo-class][] and is thus only applicable with the empty set and with the singleton set {`:focus`}.
 
@@ -178,7 +191,7 @@ The dark gray text in this `span` element with an [explicit role][] of `link` ha
 </span>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 The dark gray text in this link has a contrast ratio between 12.6:1 and 9.5:1 on the white to blue gradient background.
 
@@ -188,7 +201,7 @@ The dark gray text in this link has a contrast ratio between 12.6:1 and 9.5:1 on
 </p>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 This light gray text in this link has a contrast ratio between 13:1 and 5:1 on the background image.
 
@@ -200,7 +213,7 @@ This light gray text in this link has a contrast ratio between 13:1 and 5:1 on t
 </p>
 ```
 
-#### Passed Example 9
+#### Passed Example 10
 
 The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray background.
 
@@ -208,7 +221,7 @@ The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray
 <a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 The 14pt bold black text in this link has a contrast ratio of 3.6:1 on the gray background.
 
@@ -216,7 +229,7 @@ The 14pt bold black text in this link has a contrast ratio of 3.6:1 on the gray 
 <a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 The text in this `button` element does not convey anything in human language.
 
@@ -226,7 +239,173 @@ The text in this `button` element does not convey anything in human language.
 
 ### Failed
 
+#### Failed Example 1
+
+The text in this link has a contrast ratio of 3.6:1.
+
+```html
+<a style="color: #000; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Failed Example 2
+
+The text in this button has a contrast ratio of 3.6:1.
+
+```html
+<button style="color: #000; background: #666;">ACT rules</button>
+```
+
+#### Failed Example 3
+
+The text in this link, on default white background, has color contrast ratios of 1.5:1, 4:1, 1.3:1, and 2:1 in the 4 states listed in the `style` element.
+
+```html
+<style>
+	:link {
+		color: lightblue;
+	}
+	:visited {
+		color: red;
+	}
+	:link:focus {
+		color: cyan;
+	}
+	:visited:focus {
+		color: orange;
+	}
+</style>
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Failed Example 4
+
+With default browser styling, the text in this link, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background. However, when the link matcehs both `:visited` and `:focus`, it only has a color contrast ratio of 2:1.
+
+```html
+<style>
+	a:visited:focus {
+		color: orange;
+	}
+</style>
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Failed Example 5
+
+The text in this `input` element, on default white background, has color contrast ratios of 2:1, and 1.5:1 when it's focused or not.
+
+```html
+<style>
+	input {
+		color: lightblue;
+	}
+	input:focus {
+		color: orange;
+	}
+</style>
+<input value="ACT rules" />
+```
+
+#### Failed Example 6
+
+The placeholder text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 10:1 when it's focused or not. However, when text is inputed and the placeholder is not shown, the text has only a 1.5:1 color contrast ratio.
+
+```html
+<style>
+	input {
+		color: lightblue;
+	}
+	input:placeholder-shown {
+		color: darkred;
+	}
+	input:focus {
+		color: green;
+	}
+</style>
+<input placeholder="W3C" />
+```
+
+#### Failed Example 7
+
+The light gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 2.3:1 on the white background.
+
+```html
+<span style="color: #AAA; background: #FFF;" role="link" tabindex="0">
+	Some text in a human language
+</span>
+```
+
+#### Failed Example 9
+
+The light gray text in this link has a contrast ratio between 1.6:1 and 1.2:1 on the white to blue gradient background.
+
+```html
+<p style="background: linear-gradient(to right, #fff, #00f); width: 500px;">
+	<a style="color: #CCC;" href="https://act-rules.github.io/">ACT rules</a>
+</p>
+```
+
 ### Inapplicable
+
+#### Inapplicable Example 1
+
+There is no HTML element.
+
+```html
+<svg>
+	<a href="https://act-rules.github.io/">ACT rules</a>
+</svg>
+```
+
+#### Inapplicable Example 2
+
+There is no text which is part of a [text node][].
+
+```html
+<a href="https://act-rules.github.io/">
+	<img scr="/test-assets/shared/act-logo.png" alt="ACT rule" />
+</a>
+```
+
+#### Inapplicable Example 3
+
+There is no [text node][] with a widget as an [ancestor].
+
+```html
+<p>I love ACT rules!</p>
+```
+
+#### Inapplicable Example 4
+
+The text in this link is not [visible][] because of `display: none`.
+
+```html
+<a style="display: none" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Inapplicable Example 5
+
+The text in this link is not [visible][] because it is positioned off-screen.
+
+```html
+<a style="position:absolute; top: -999em" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Inapplicable Example 6
+
+The text in this link is not [visible][] because the foreground color is the same as the background color.
+
+```html
+<a style="color: white; background: white;" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Inapplicable Example 7
+
+This text is in a [disabled][] widget.
+
+```html
+<button style="color: #000; background: #666;" disabled>ACT rules</button>
+```
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM specification of Ancestor'
 [background colors]: #background-colors-of-text 'Definition of Background Color of Text'

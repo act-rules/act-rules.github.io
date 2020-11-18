@@ -186,7 +186,7 @@ This light gray text in this link has a contrast ratio between 13:1 and 5:1 on t
 
 #### Passed Example 9
 
-The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray background. Note that the [`:any-link` pseudo-class][any-link] matches both `:link` and `:visited`.
+The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
 <a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
@@ -215,12 +215,14 @@ The text in this `button` element does not convey anything in human language.
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM specification of Ancestor'
 [background colors]: #background-colors-of-text 'Definition of Background Color of Text'
 [disabled]: #disabled-element 'Definition of Disabled'
+[explicit role]: #explicit-role 'Definition of Explicit Semantic Role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree "CSS definition of flat tree (editor's draft)"
 [focusable]: #focusable 'Definition of Focusable'
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground Color of Text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest Possible Contrast'
 [html pseudo-classes]: https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes 'HTML mapping of CSS selectors'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1 definition of Human language'
+[implicit role]: #implicit-role 'Definition of Implicit Semantic Role'
 [larger scale text]: #large-scale-text 'Definition of Large Scale Text'
 [non-interference with the host language]: https://www.w3.org/TR/wai-aria-1.1/#ua_noninterference 'ARIA Non-interference with the Host Language'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS definition of Origin'

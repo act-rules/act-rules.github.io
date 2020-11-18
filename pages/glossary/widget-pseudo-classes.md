@@ -1,6 +1,6 @@
 ---
-title: Widgets Pseudo Classes
-key: widgets-pseudo-classes
+title: Widget Pseudo Classes
+key: widget-pseudo-classes
 unambiguous: true
 objective: true
 input_aspects:

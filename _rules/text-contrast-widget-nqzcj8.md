@@ -64,7 +64,7 @@ The **enabled** condition effectively prevents `:disabled` to be in the set of [
 
 Many combinations of [widget pseudo-classes][] are impossible, in the sense that no element can match all of them at the same time. The **matching** condition is thus fairly restrictive in which sets of [widget pseudo-classes][] are applicable to this rule.
 
-The [widget pseudo-classes][] are naturally mapped to the native "HTML widgets" (elements whose [implicit role][] inherits from `widget`) depending on the state of the page. On the other hand, "ARIA widgets" (elements whose [implicit role][] does not inherit from `widget` but with an [explicit role][]) normally can't match any [widget pseudo-class][]. For example, an HTML link (such as an `a` element with an `href` attribute) will always match either the `:link` or `:visited` [widget pseudo-class][], but an ARIA link (such as a `<span role="link">`) will never match any of these. This is a consequence of ARIA's [Non-interference with the Host Language][]. ARIA widgets are nonetheless considered by this rule with an empty set of [widget pseudo-classes][], and sometimes also with `:focus` if the element has been made [focusable][].
+The [widget pseudo-classes][] are naturally mapped to the native "HTML widgets" (elements whose [implicit role][] inherits from `widget`) depending on the state of the page and according to the [HTML pseudo-classes][]. On the other hand, "ARIA widgets" (elements whose [implicit role][] does not inherit from `widget` but with an [explicit role][]) normally can't match any [widget pseudo-class][]. For example, an HTML link (such as an `a` element with an `href` attribute) will always match either the `:link` or `:visited` [widget pseudo-class][], but an ARIA link (such as a `<span role="link">`) will never match any of these. This is a consequence of ARIA's [Non-interference with the Host Language][]. ARIA widgets are nonetheless considered by this rule with an empty set of [widget pseudo-classes][], and sometimes also with `:focus` if the element has been made [focusable][].
 
 Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
@@ -77,9 +77,136 @@ When the text color or background color is not specified in the web page, colors
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F83)
 - [CSS Scoping Module Level 1 (Editor's Draft)](https://drafts.csswg.org/css-scoping/)
 
+Due to the various [widget pseudo-classes][] that a given element can match, each example often contains several test targets. For example, a link is applicable with the set of [widget pseudo-classes][] {`:link`}, {`:link`, `:focus`}, {`:visited`}, and {`:visited`, `:focus`}. Test case descriptions often do not list all of these, unless the example illustrates something about them.
+
+Some test cases have styling which copy default browser styling. This ensures that all the information needed to understand the example are present. Other test cases rely on the default browser styling and assume it hasn't been overridden by user styling or other means.
+
 ## Test Cases
 
 ### Passed
+
+#### Passed Example 1
+
+With default browser styling, the text in this `a` element with an [implicit role][] of `link`, has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`; whether it matches or not `:focus` doesn't change its color. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background.
+
+```html
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Passed Example 2
+
+With default browser styling, the text in this `button` element has a light gray background (`#EFEFEF`) and black text, resulting in a 18.3:1 contrast ratio.
+
+```html
+<button>ACT rules</button>
+```
+
+#### Passed Example 3
+
+The text in this link, on white background, has color contrast ratios of 8.6:1, 10:1, 5.1:1, and 5.2:1 in the 4 states listed in the `style` element.
+
+```html
+<style>
+	:link {
+		color: blue;
+	}
+	:visited {
+		color: darkred;
+	}
+	:link:focus {
+		color: green;
+	}
+	:visited:focus {
+		color: #707000;
+	}
+</style>
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Passed Example 4
+
+The text in this `input` element, on white background, has color contrast ratios of 8.6:1, 10:1, and 5.1:1 in the 3 states listed in the `style` element. Note that when the `input` element is matching both the `:placeholder-shown` and the `:focus` [widget pseudo-classes][], the styling defined latest takes precedence. Note that in modern browsers, the text itself is included in a shadow-tree inside the `input` element.
+
+```html
+<style>
+	input {
+		color: blue;
+	}
+	input:placeholder-shown {
+		color: darkred;
+	}
+	input:focus {
+		color: green;
+	}
+</style>
+<input value="ACT rules" placeholder="W3C" />
+```
+
+#### Passed Example 5
+
+The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it cannot match any of the [widget pseudo-classes][] and is thus only applicable with the empty set of such pseudo-classes.
+
+```html
+<span style="color: #333; background: #FFF;" role="link">
+	Some text in a human language
+</span>
+```
+
+#### Passed Example 6
+
+The dark gray text in this `span` element with an [explicit role][] of `link` has a color contrast ratio of 12.6:1 on the white background. Note that it can only match the `:focus` [widget pseudo-class][] and is thus only applicable with the empty set and with the singleton set {`:focus`}.
+
+```html
+<span style="color: #333; background: #FFF;" role="link" tabindex="0">
+	Some text in a human language
+</span>
+```
+
+#### Passed Example 7
+
+The dark gray text in this link has a contrast ratio between 12.6:1 and 9.5:1 on the white to blue gradient background.
+
+```html
+<p style="background: linear-gradient(to right, #fff, #00f); width: 500px;">
+	<a style="color: #333;" href="https://act-rules.github.io/">ACT rules</a>
+</p>
+```
+
+#### Passed Example 8
+
+This light gray text in this link has a contrast ratio between 13:1 and 5:1 on the background image.
+
+```html
+<p
+	style="height: 50px; padding-top: 15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
+>
+	<a style="color: #ccc;" href="https://act-rules.github.io/">ACT rules</a>
+</p>
+```
+
+#### Passed Example 9
+
+The 18pt large black text in this link has a contrast ratio of 3.6:1 on the gray background. Note that the [`:any-link` pseudo-class][any-link] matches both `:link` and `:visited`.
+
+```html
+<a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Passed Example 10
+
+The 14pt bold black text in this link has a contrast ratio of 3.6:1 on the gray background.
+
+```html
+<a style="color: #000; font-size: 18pt; background: #666;" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Passed Example 11
+
+The text in this `button` element does not convey anything in human language.
+
+```html
+<button style="color: #000; background: #666;">X</button>
+```
 
 ### Failed
 
@@ -92,6 +219,7 @@ When the text color or background color is not specified in the web page, colors
 [focusable]: #focusable 'Definition of Focusable'
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground Color of Text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest Possible Contrast'
+[html pseudo-classes]: https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes 'HTML mapping of CSS selectors'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1 definition of Human language'
 [larger scale text]: #large-scale-text 'Definition of Large Scale Text'
 [non-interference with the host language]: https://www.w3.org/TR/wai-aria-1.1/#ua_noninterference 'ARIA Non-interference with the Host Language'

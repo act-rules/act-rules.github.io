@@ -148,7 +148,7 @@ This `article` element` has a `lang` [attribute value][] which consists of only 
 
 #### Failed Example 4
 
-The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [included in the accessibility tree][] though it is still [visible][].
+The `lang` [attribute value][] does not have a valid language tag. The `lang` attribute must be valid because the content is [visible][].
 
 ```html
 <html>

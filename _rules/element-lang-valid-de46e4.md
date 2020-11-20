@@ -90,7 +90,7 @@ This `blockquote` element has a `lang` [attribute value][] which is not empty (`
 
 #### Passed Example 3
 
-This `p` element has a`lang` [attribute value][] which has a [valid language tag][], but a syntactically invalid region subtag which is ignored by the rule.
+This `p` element has a `lang` [attribute value][] which has a [valid language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
 <html>

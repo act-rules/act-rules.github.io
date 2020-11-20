@@ -182,7 +182,7 @@ The `lang` [attribute value][] does not have a valid language tag, and its [desc
 
 #### Inapplicable Example 1
 
-The rule applies to elements within the `body` of a webpage. `html` elements are ignored by the rule.
+There is no element with a lang attribute value which is a descendant of a body element".
 
 ```html
 <html lang="en">

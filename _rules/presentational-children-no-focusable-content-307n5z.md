@@ -93,7 +93,7 @@ This element with `menuitemcheckbox` role has an `input` element as a descendant
 
 #### Failed Example 1
 
-This `button` element has a [child][] `span` element that is included in [sequential focus navigation][].
+This `button` element has a [child][] `span` element. Because the `span` element has a `tabindex` attribute with value of `0`, it is included in [sequential focus navigation][].
 
 ```html
 <button>

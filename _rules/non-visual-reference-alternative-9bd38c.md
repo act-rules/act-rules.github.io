@@ -42,7 +42,7 @@ This rule applies to any [text node][] that is either [visible][] or [included i
 For each test target, either it contains none of the [visual reference words][], or it does not identify any [web content][] through the use of any [visual reference words][], or it does identify some [web content][] and at least one of the following is true:
 
 - **non-visual reference**: the test target is on the same [web page][] as a [textual][text] instruction that also identifies that [web content][] without any [visual reference word][]; or
-- **non-sensory meaning**: at least one of the [visual reference words][] that identifies the [web content][] is used with a non-sensory meaning.
+- **non-sensory meaning**: at least one of the [visual reference words][] that identifies the [web content][] is used with a non-sensory meaning; or
 - **visible words**: each [visual reference word][] in the test target is included in the [visible text content][] of the identified content; or
 - **accessible words**: each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
 - **no instruction**: the test target does not give instructions about it through the use of any of the [visual reference words][].

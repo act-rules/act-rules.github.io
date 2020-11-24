@@ -169,7 +169,7 @@ This text is not [visible][] because it is positioned off-screen.
 
 #### Inapplicable Example 4
 
-This `p` element does not have a `style` attribute specified. Even though the value of `letter-spacing` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element does not have a `style` attribute specified. Even though the [computed][] value of `letter-spacing` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>
@@ -185,7 +185,7 @@ This `p` element does not have a `style` attribute specified. Even though the va
 
 #### Inapplicable Example 5
 
-The `style` attribute of this `p` element does not [declare][declared] the `letter-spacing` property. Even though the value of `letter-spacing` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+The `style` attribute of this `p` element does not [declare][declared] the `letter-spacing` property. Even though the [computed][] value of `letter-spacing` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>

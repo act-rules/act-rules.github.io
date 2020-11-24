@@ -83,7 +83,7 @@ This `p` element has a [computed][] `line-height` of `30px` specified via the st
 
 #### Passed Example 3
 
-This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) which is above the recommended metric, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) which is above the recommended minimum, thus it matches the **above minimum** condition.
 
 ```html
 <style>
@@ -99,7 +99,7 @@ This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) w
 
 #### Passed Example 4
 
-This `p` element has a [computed][] `line-height` of `1.6` which is above the recommended metric, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `1.6` which is above the recommended minimum, thus it matches the **above minimum** condition.
 
 ```html
 <p style="line-height: 1.6 !important">
@@ -185,6 +185,48 @@ This `p` element has a `line-height` of `1em !important` which is below the reco
 
 ```html
 <p style="line-height: 1em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 2
+
+This `p` element has a [computed][] `line-height` of `20px` specified via the style attribute, which is below the recommended minimum given the specified font size is 20 pixels.
+
+```html
+<style>
+	p {
+		font-size: 20px;
+	}
+</style>
+
+<p style="line-height: 20px !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 3
+
+This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) which is below the recommended minimum.
+
+```html
+<style>
+	p {
+		font-size: 16px;
+	}
+</style>
+
+<p style="line-height: 120% !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 4
+
+This `p` element has a [computed][] `line-height` of `1.2` which is below the recommended minimum.
+
+```html
+<p style="line-height: 1.2 !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

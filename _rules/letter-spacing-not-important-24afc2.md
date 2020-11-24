@@ -71,7 +71,7 @@ This `p` element has a `letter-spacing` of `0.15em` which is above the recommend
 
 #### Passed Example 2
 
-This `p` element has a [letter-spacing][] of `3px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 24 pixels, thus it matches the **above minimum** condition.
+This `p` element has a [letter-spacing][] of `3px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 25 pixels, thus it matches the **above minimum** condition.
 
 ```html
 <style>

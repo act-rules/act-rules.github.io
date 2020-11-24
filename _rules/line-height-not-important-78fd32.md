@@ -35,7 +35,7 @@ For each test target, one of the following is true:
 
 - There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
 
-- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a used value below 1.5. [CSS recommendation][line-height normal] is to have a used value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text spacing][sc1412].
+- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a [used][] value below 1.5. [CSS recommendation][line-height normal] is to have a [used][] value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text spacing][sc1412].
 
 ## Accessibility Support
 
@@ -153,6 +153,18 @@ This `p` element has two [declared][] values for its `line-height` property (in 
 </p>
 ```
 
+#### Passed Example 9
+
+This `span` element matches the **cascade** condition.
+
+```html
+<p style="line-height: 1.2em">
+	<span style="line-height: inherit !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -230,7 +242,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
 [cascaded]: https://www.w3.org/TR/css-cascade-4/#cascaded 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascaded Values'
-[computed]: https://www.w3.org/TR/css-cascade-4/#computed-value 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
+[computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [declared]: https://www.w3.org/TR/css-cascade-4/#declared 'CSS Cascading and Inheritance Level 4 (Working draft) - Declared Values'
 [font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
@@ -238,6 +250,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [line-height normal]: https://drafts.csswg.org/css2/#valdef-line-height-normal "CSS 2.2 (Editor's draft) - normal line-height"
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
+[used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'

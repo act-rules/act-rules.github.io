@@ -49,7 +49,7 @@ While some assistive technologies are able to set [user origin][] styles, others
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `32px` (equals `2em` ) which is above the recommended metric, given the specified font size is `1em`.
+This `p` element has a `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`.
 
 ```html
 <html>

@@ -192,7 +192,7 @@ There is no HTML element.
 This `p` element is not [visible][] because of `display: none`.
 
 ```html
-<p style="display: none; line-height: 1em">
+<p style="display: none; line-height: 1em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
@@ -202,22 +202,16 @@ This `p` element is not [visible][] because of `display: none`.
 This text is not [visible][] because it is positioned off-screen.
 
 ```html
-<p style="position: absolute; top: -999em; line-height: 1em">
+<p style="position: absolute; top: -999em; line-height: 1em !important;">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
 
 #### Inapplicable Example 4
 
-This `p` element does not have a `style` attribute specified. Even though the [computed][] value of `line-height` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element does not have a `style` attribute specified.
 
 ```html
-<style>
-	p {
-		line-height: 1em;
-	}
-</style>
-
 <p>
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -225,15 +219,9 @@ This `p` element does not have a `style` attribute specified. Even though the [c
 
 #### Inapplicable Example 5
 
-The `style` attribute of this `p` element does not [declare][declared] the `line-height` property. Even though the [computed][] value of `line-height` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+The `style` attribute of this `p` element does not [declare][declared] the `line-height` property.
 
 ```html
-<style>
-	p {
-		line-height: 1em;
-	}
-</style>
-
 <p style="width: 60%">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>

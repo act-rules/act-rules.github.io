@@ -20,15 +20,15 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][], for which the `style` attribute [declares][declared] the [word-spacing][] CSS property.
+This rule applies to any HTML element that is [visible][] and for which the `style` attribute [declares][declared] the [word-spacing][] CSS property.
 
 ## Expectation
 
-For the [word-spacing][] property of each test target, one of the following is true:
+For each test target, one of the following is true:
 
-- **above minimum**: its [computed][] value is at least `0.16` times its [computed][] [font-size][].
-- **not `!important`**: its [cascaded][] value does not have the [important flag][]; or
-- **cascade**: its [cascaded][] value is not the value [declared][] in the `style` attribute; or
+- **above minimum**: the [computed][] value of its [word-spacing][] property is at least `0.16` times the [computed][] value of its [font-size][] property.
+- **not `!important`**: the [cascaded][] value of its [word-spacing][] property does not have the [important flag][]; or
+- **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute; or
 
 ## Assumptions
 

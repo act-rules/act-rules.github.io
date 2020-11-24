@@ -27,9 +27,9 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 For the [letter-spacing][] property of each test target, one of the following is true:
 
-- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
-- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
 - **above minimum** its [computed][] value is at least `0.12` times its [computed][] [font-size][].
+- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
+- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
 
 ## Assumptions
 

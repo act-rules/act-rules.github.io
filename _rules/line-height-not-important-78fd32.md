@@ -3,7 +3,7 @@ id: 78fd32
 name: Line height in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that the `style` attribute is not used to prevent adjusting `line-height` by using `!important`, except if it's at least `1.5` times the font size.
+  This rule checks that the `style` attribute is not used to prevent adjusting `line-height` by using `!important`, except if it's at least 1.5 times the font size.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true
@@ -26,15 +26,15 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 For each test target, one of the following is true:
 
-- **above minimum**: the [computed][] value of its [line-height][] property is at least `1.5` times the [computed][] value of its [font-size][] property.
+- **above minimum**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property.
 - **not `!important`**: the [cascaded][] value of its [line-height][] property does not have the [important flag][]; or
 - **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute; or
 
-NORMAL ?!?
-
 ## Assumptions
 
-There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+- There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+
+- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a used value below 1.5. [CSS recommendation][line-height normal] is to have a used value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text spacing][sc1412].
 
 ## Accessibility Support
 
@@ -56,7 +56,7 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule.
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`, thus it matches the **above minimum** condition.
 
 ```html
 <style>
@@ -72,7 +72,7 @@ This `p` element has a `line-height` of `2em` which is above the recommended met
 
 #### Passed Example 2
 
-This `p` element has a [line-height][] of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels, thus it matches the **above minimum** condition.
 
 ```html
 <style>
@@ -88,6 +88,38 @@ This `p` element has a [line-height][] of `24px` specified via the style attribu
 
 #### Passed Example 3
 
+This `p` element has a [computed][] `line-height` of `1.6em` (160% of `1em`) which is above the recommended metric, thus it matches the **above minimum** condition.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="line-height: 1.6 !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 4
+
+This `p` element has a [computed][] `line-height` of `1.6` which is above the recommended metric, thus it matches the **above minimum** condition.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="line-height: 1.6 !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 5
+
 This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
 
 ```html
@@ -102,7 +134,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 </p>
 ```
 
-#### Passed Example 4
+#### Passed Example 6
 
 This `p` element has two [declared][] values for its `line-height` property. The one with the [important flag][] wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
 
@@ -118,7 +150,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 </p>
 ```
 
-#### Passed Example 5
+#### Passed Example 7
 
 This `p` element has a `line-height` declared via the `style` attribute without the [important flag][] set, thus it matches the **not `!important`** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
@@ -134,7 +166,7 @@ This `p` element has a `line-height` declared via the `style` attribute without 
 </p>
 ```
 
-#### Passed Example 6
+#### Passed Example 8
 
 This `p` element has two [declared][] values for its `line-height` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] due to the [important flag][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is 1.2 times the font size), nor the **not `!important** (because the [cascaded][] value comes from the style sheet and has the [important flag][] set) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
@@ -253,6 +285,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
 [line-height]: https://drafts.csswg.org/css2/visudet.html#propdef-line-height 'CSS Visual formatting model details - line-height property'
+[line-height normal]: https://drafts.csswg.org/css2/#valdef-line-height-normal "CSS 2.2 (Editor's draft) - normal line-height"
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'

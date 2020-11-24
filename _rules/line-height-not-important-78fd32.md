@@ -211,12 +211,13 @@ This text is not [visible][] because it is positioned off-screen.
 
 #### Inapplicable Example 4
 
-This `p` element does not have a `style` attribute specified.
+This `p` element does not have a `style` attribute specified. Even though the value of `line-height` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>
 	p {
-		line-height: 3em;
+		font-size: 1em;
+		line-height: 1em;
 	}
 </style>
 
@@ -227,12 +228,13 @@ This `p` element does not have a `style` attribute specified.
 
 #### Inapplicable Example 5
 
-The `style` attribute of this `p` element does not [declare][declared] the `line-height` property.
+The `style` attribute of this `p` element does not [declare][declared] the `line-height` property. Even though the value of `line-height` is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>
 	p {
-		line-height: 3em;
+		font-size: 1em;
+		line-height: 1em;
 	}
 </style>
 

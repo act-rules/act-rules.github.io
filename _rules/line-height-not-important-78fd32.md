@@ -44,6 +44,8 @@ While some assistive technologies are able to set [user origin][] styles, others
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
+Some examples use a fix font size to demonstrate specific aspects of the rule. This is in general not a very good practice and should be avoided.
+
 ## Test Cases
 
 ### Passed

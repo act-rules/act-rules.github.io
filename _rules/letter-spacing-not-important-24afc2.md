@@ -45,6 +45,8 @@ While some assistive technologies are able to set [user origin][] styles, others
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
+Some examples use a fix font size to demonstrate specific aspects of the rule. This is in general not a very good practice and should be avoided.
+
 ## Test Cases
 
 ### Passed
@@ -71,7 +73,7 @@ This `div` element has a `letter-spacing` of `0.12em` which is equal to the reco
 
 #### Passed Example 2
 
-This `p` element has a `letter-spacing` of `24px` specified via the style attribute, which is above to the recommended minimum given the specified font size is 16 pixels.
+This `p` element has a `letter-spacing` of `2px` specified via the style attribute, which is above to the recommended minimum given the specified font size is 16 pixels.
 
 ```html
 <html>
@@ -82,7 +84,7 @@ This `p` element has a `letter-spacing` of `24px` specified via the style attrib
 	</style>
 
 	<body>
-		<p style="letter-spacing: 24px;">
+		<p style="letter-spacing: 2px;">
 			The toy brought back fond memories of being lost in the rain forest.
 		</p>
 	</body>

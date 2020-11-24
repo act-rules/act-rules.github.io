@@ -417,6 +417,7 @@ This text is in a [disabled][] widget.
 ```
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM specification of Ancestor'
+[assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies 'WCAG definition of Assistive Technologies'
 [background colors]: #background-colors-of-text 'Definition of Background Color of Text'
 [disabled]: #disabled-element 'Definition of Disabled'
 [explicit role]: #explicit-role 'Definition of Explicit Semantic Role'

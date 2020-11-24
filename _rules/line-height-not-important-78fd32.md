@@ -26,9 +26,9 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 For the [line-height][] property of each test target, one of the following is true:
 
-- **above minimum** its [computed][] value is at least `1.5` times its [computed][] [font-size][].
-- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
-- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
+- **above minimum**: its [computed][] value is at least `1.5` times its [computed][] [font-size][].
+- **not `!important`**: its [cascaded][] value does not have the [important flag][]; or
+- **cascade**: its [cascaded][] value is not the value [declared][] in the `style` attribute; or
 
 ## Assumptions
 
@@ -54,42 +54,99 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule.
 
 #### Passed Example 1
 
-This `p` element has a `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`.
+This `p` element has a `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`, thus it matches the **above minimum** condition.
 
 ```html
-<html>
-	<style>
-		body {
-			font-size: 1em;
-		}
-	</style>
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
 
-	<body>
-		<p style="line-height: 2em; !important">
-			The toy brought back fond memories of being lost in the rain forest.
-		</p>
-	</body>
-</html>
+<p style="line-height: 2em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
 ```
 
 #### Passed Example 2
 
-This `p` element has a [line-height][] of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels.
+This `p` element has a [line-height][] of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels, thus it matches the **above minimum** condition.
 
 ```html
-<html>
-	<style>
-		body {
-			font-size: 16px;
-		}
-	</style>
+<style>
+	p {
+		font-size: 16px;
+	}
+</style>
 
-	<body>
-		<p style="line-height: 24px;">
-			The toy brought back fond memories of being lost in the rain forest.
-		</p>
-	</body>
-</html>
+<p style="line-height: 24px !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 3
+
+This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="line-height: 1em !important; 2em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 4
+
+This `p` element has two [declared][] values for its `line-height` property. The one with the [important flag][] wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="line-height: 2em !important; 1em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 5
+
+This `p` element has a `line-height` declared via the `style` attribute without the [important flag][] set, thus it matches the **not `!important`** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="line-height: 1.2em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 6
+
+This `p` element has two [declared][] values for its `line-height` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] due to the [important flag][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is 1.2 times the font size), nor the **not `!important** (because the [cascaded][] value comes from the style sheet and has the [important flag][] set) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+
+```html
+<style>
+	p {
+		font-size: 1em;
+		line-height: 1.2em !important;
+	}
+</style>
+
+<p style="line-height: 2em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
 ```
 
 ### Failed
@@ -99,59 +156,89 @@ This `p` element has a [line-height][] of `24px` specified via the style attribu
 This `p` element has a `line-height` of `0.625em !important` which is below the recommended minimum, given the specified font size of the body is `1em`.
 
 ```html
-<html>
-	<style>
-		body {
-			font-size: 1em;
-		}
-	</style>
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
 
-	<body>
-		<p style="line-height: 0.625em !important">
-			The toy brought back fond memories of being lost in the rain forest.
-		</p>
-	</body>
-</html>
+<p style="line-height: 0.625em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-This `p` element is not [visible][] because of `display: none`.
+There is no HTML element.
 
-```html
-<p style="display: none">
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
+```svg
+<svg xmlns="http://www.w3.org/2000/svg"></svg>
 ```
 
 #### Inapplicable Example 2
 
-This text is not [visible][] because it is positioned off screen.
+This `p` element is not [visible][] because of `display: none`.
 
 ```html
-<p style="position: absolute; top: -999em">
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
+
+<p style="display: none; line-height: 1em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
 
 #### Inapplicable Example 3
 
-This `body` element does not have a `style` attribute specified.
+This text is not [visible][] because it is positioned off-screen.
 
 ```html
-<html>
-	<style>
-		body {
-			line-height: 30em;
-		}
-	</style>
+<style>
+	p {
+		font-size: 1em;
+	}
+</style>
 
-	<body>
-		The toy brought back fond memories of being lost in the rain forest.
-	</body>
-</html>
+<p style="position: absolute; top: -999em; line-height: 1em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Inapplicable Example 4
+
+This `p` element does not have a `style` attribute specified.
+
+```html
+<style>
+	p {
+		line-height: 3em;
+	}
+</style>
+
+<p>
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Inapplicable Example 5
+
+The `style` attribute of this `p` element does not [declare][declared] the `line-height` property.
+
+```html
+<style>
+	p {
+		line-height: 3em;
+	}
+</style>
+
+<p style="width: 60%">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
 ```
 
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
@@ -162,6 +249,7 @@ This `body` element does not have a `style` attribute specified.
 [font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
 [important flag]: https://www.w3.org/TR/cssom/#css-declaration-important-flag 'CSS Object Model (CSSOM) - important flag'
 [line-height]: https://drafts.csswg.org/css2/visudet.html#propdef-line-height 'CSS Visual formatting model details - line-height property'
+[sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'

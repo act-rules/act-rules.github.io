@@ -57,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [HTML `<ul>` element][] has a non-empty [descendant][] of type [HTML `<li>` element][].
+This [HTML `<ul>` element][] has a [descendant][] of type [HTML `<li>` element][].
 
 ```html
 <ul>
@@ -79,7 +79,7 @@ This [HTML `<dl>` element][] contains at least one name-value group as [descenda
 
 #### Passed Example 3
 
-TODO
+This [HTML `<menu>` element][] has a [descendant][] of type [HTML `<li>` element][].
 
 ```html
 <menu>
@@ -100,7 +100,7 @@ This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML 
 
 #### Passed Example 5
 
-TODO
+This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][] and contains a [HTML `<template>` element][] which follows the [content model][].
 
 ```html
 <ol>
@@ -114,7 +114,7 @@ TODO
 
 #### Passed Example 6
 
-TODO
+This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. That fact that it is placed in a div still follows the [content model][].
 
 ```html
 <dl>
@@ -127,7 +127,7 @@ TODO
 
 #### Passed Example 7
 
-TODO
+This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][].
 
 ```html
 <ol>
@@ -137,7 +137,7 @@ TODO
 
 #### Passed Example 8
 
-TODO
+This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. The dive elements both have an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][].
 
 ```html
 <dl>
@@ -150,7 +150,7 @@ TODO
 
 #### Failed Example 1
 
-This [HTML `<ul>` element][] contains [HTML `<li>` element][] that is [hidden][].
+This [HTML `<ul>` element][] doesn't contain at least one child element.
 
 ```html
 <ul></ul>
@@ -158,7 +158,7 @@ This [HTML `<ul>` element][] contains [HTML `<li>` element][] that is [hidden][]
 
 #### Failed Example 2
 
-TODO
+This [HTML `<ol>` element][] doesn't contain at least one child element. The text itself isn't an element.
 
 ```html
 <ol>
@@ -167,6 +167,8 @@ TODO
 ```
 
 #### Failed Example 3
+
+This [HTML `<ul>` element][] only contains elements with an [explicit role][] that doesn't follow the [content model][]. Menuitems are not valid children of an unordered list.
 
 ```html
 <ul>
@@ -177,7 +179,7 @@ TODO
 
 #### Failed Example 4
 
-TODO
+This [HTML `<ol>` element][] only contains elements that doesn't follow the [content model][]. Name-value groups are not valid children of an ordered list.
 
 ```html
 <ol>
@@ -188,7 +190,7 @@ TODO
 
 #### Failed Example 5
 
-TODO
+This [HTML `<dl>` element][] only contains elements that doesn't follow the [content model][]. List items are not valid children of a definition list.
 
 ```html
 <dl>
@@ -201,7 +203,7 @@ TODO
 
 #### Inapplicable Example 1
 
-TODO
+This rules is not applicable to `ul` elements that are not [included in the accessibility tree][].
 
 ```html
 <ul hidden>
@@ -211,7 +213,7 @@ TODO
 
 #### Inapplicable Example 2
 
-This rule is not applicable to `ul` element where the [semantic role][] is not the same as the [implicit semantic role][].
+This rule is not applicable to `ul` elements where the [semantic role][] is not the same as the [implicit semantic role][].
 
 ```html
 <ul role="menu">

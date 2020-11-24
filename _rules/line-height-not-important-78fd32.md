@@ -15,6 +15,7 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Jean-Yves Moyen
     - Jey Nandakumar
 ---
 
@@ -48,7 +49,7 @@ When a style from [author origin][] is [declared][] in the `style` attribute wit
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-Some examples use a fixed font size to demonstrate specific aspects of the rule. This is in general not a very good practice and should be avoided.
+Some examples use a fixed font size to demonstrate specific aspects of the rule (notably in order to provide a [computed][] value for the property). This is in general not a very good practice and should be avoided.
 
 ## Test Cases
 
@@ -56,15 +57,9 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule.
 
 #### Passed Example 1
 
-This `p` element has a [computed][] `line-height` of `2em` which is above the recommended metric, given the specified font size is `1em`, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `32px` (assuming a default `medium` font size of `16px`) which is above the recommended metric, thus it matches the **above minimum** condition.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 2em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -72,28 +67,28 @@ This `p` element has a [computed][] `line-height` of `2em` which is above the re
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `line-height` of `24px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 16 pixels, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `30px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 20 pixels, thus it matches the **above minimum** condition.
 
 ```html
 <style>
 	p {
-		font-size: 16px;
+		font-size: 20px;
 	}
 </style>
 
-<p style="line-height: 24px !important">
+<p style="line-height: 30px !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
 
 #### Passed Example 3
 
-This `p` element has a [computed][] `line-height` of `1.6em` (160% of `1em`) which is above the recommended metric, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) which is above the recommended metric, thus it matches the **above minimum** condition.
 
 ```html
 <style>
 	p {
-		font-size: 1em;
+		font-size: 16px;
 	}
 </style>
 
@@ -107,12 +102,6 @@ This `p` element has a [computed][] `line-height` of `1.6em` (160% of `1em`) whi
 This `p` element has a [computed][] `line-height` of `1.6` which is above the recommended metric, thus it matches the **above minimum** condition.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 1.6 !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -123,12 +112,6 @@ This `p` element has a [computed][] `line-height` of `1.6` which is above the re
 This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 1em !important; line-height: 2em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -139,12 +122,6 @@ This `p` element has two [declared][] values for its `line-height` property. The
 This `p` element has two [declared][] values for its `line-height` property. The one with the [important flag][] wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 2em !important; line-height: 1em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -155,12 +132,6 @@ This `p` element has two [declared][] values for its `line-height` property. The
 This `p` element has a `line-height` declared via the `style` attribute without the [important flag][] set, thus it matches the **not `!important`** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 1.2em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -173,7 +144,6 @@ This `p` element has two [declared][] values for its `line-height` property (in 
 ```html
 <style>
 	p {
-		font-size: 1em;
 		line-height: 1.2em !important;
 	}
 </style>
@@ -187,15 +157,9 @@ This `p` element has two [declared][] values for its `line-height` property (in 
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `1em !important` which is below the recommended minimum, given the specified font size of the body is `1em`.
+This `p` element has a `line-height` of `1em !important` which is below the recommended minimum.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="line-height: 1em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -216,12 +180,6 @@ There is no HTML element.
 This `p` element is not [visible][] because of `display: none`.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="display: none; line-height: 1em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -232,12 +190,6 @@ This `p` element is not [visible][] because of `display: none`.
 This text is not [visible][] because it is positioned off-screen.
 
 ```html
-<style>
-	p {
-		font-size: 1em;
-	}
-</style>
-
 <p style="position: absolute; top: -999em; line-height: 1em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
@@ -250,7 +202,6 @@ This `p` element does not have a `style` attribute specified. Even though the va
 ```html
 <style>
 	p {
-		font-size: 1em;
 		line-height: 1em;
 	}
 </style>
@@ -267,7 +218,6 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 ```html
 <style>
 	p {
-		font-size: 1em;
 		line-height: 1em;
 	}
 </style>

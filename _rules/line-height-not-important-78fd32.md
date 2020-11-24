@@ -27,9 +27,9 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 For each test target, one of the following is true:
 
-- **above minimum**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property.
-- **not `!important`**: the [cascaded][] value of its [line-height][] property is not [important][]; or
-- **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute; or
+- **above minimum**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property; or
+- **not `!important`**: the [computed][] value of its [line-height][] property is not [important][]; or
+- **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
 
@@ -119,7 +119,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `line-height` property. The one with the [important flag][] wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
+This `p` element has two [declared][] values for its `line-height` property. The one which is [important][] wins the [cascade sort][]. It has a value of `2em`, more than 1.5 times the font size and therefore matches the **above minimum** condition.
 
 ```html
 <p style="line-height: 2em !important; line-height: 1em">
@@ -129,7 +129,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 7
 
-This `p` element has a `line-height` declared via the `style` attribute without the [important flag][] set, thus it matches the **not `!important`** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has a non-[important][] [computed][] `line-height`, thus it matches the **not `!important`** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <p style="line-height: 1.2em">
@@ -139,7 +139,7 @@ This `p` element has a `line-height` declared via the `style` attribute without 
 
 #### Passed Example 8
 
-This `p` element has two [declared][] values for its `line-height` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] due to the [important flag][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is 1.2 times the font size), nor the **not `!important** (because the [cascaded][] value comes from the style sheet and has the [important flag][] set) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has two [declared][] values for its `line-height` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 1.2 times the font size), nor the **not `!important** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>

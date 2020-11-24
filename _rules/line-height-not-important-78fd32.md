@@ -3,7 +3,7 @@ id: 78fd32
 name: Line height in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-	This rule checks that the `style` attribute is not used to prevent adjusting `line-height` by using `!important`, except if it's at least `1.5` times the font size.
+  This rule checks that the `style` attribute is not used to prevent adjusting `line-height` by using `!important`, except if it's at least `1.5` times the font size.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
     forConformance: true

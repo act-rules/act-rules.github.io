@@ -24,10 +24,11 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 ## Expectation
 
-For the test target, one of the following is true:
+For the [line-height][] property of each test target, one of the following is true:
 
-- the [cascaded][] value of its [line-height][] property, specified via the `style` attribute, does not have the [important flag][]; or
-- the [computed][] value of its [line-height][] property is at least `1.5` times its [computed][] [font-size][].
+- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
+- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
+- **above minimum** its [computed][] value is at least `1.5` times its [computed][] [font-size][].
 
 ## Assumptions
 

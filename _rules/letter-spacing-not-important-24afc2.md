@@ -15,6 +15,7 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Jean-Yves Moyen
     - Jey Nandakumar
 ---
 
@@ -24,10 +25,11 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 ## Expectation
 
-For the test target, one of the following is true:
+For the [letter-spacing][] property of each test target, one of the following is true:
 
-- the [cascaded][] value of its [letter-spacing][] property, specified via the `style` attribute, does not have the [important flag][]; or
-- the [computed][] value of its [letter-spacing][] property is at least `0.12` times its [computed][] [font-size][].
+- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
+- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
+- **above minimum** its [computed][] value is at least `0.12` times its [computed][] [font-size][].
 
 ## Assumptions
 

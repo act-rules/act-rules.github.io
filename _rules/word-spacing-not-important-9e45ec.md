@@ -26,8 +26,9 @@ This rule applies to any HTML element that is [visible][], for which the `style`
 
 For the test target, one of the following is true:
 
-- the [cascaded][] value of its [word-spacing][] property, specified via the `style` attribute, does not have the [important flag][]; or
-- the [computed][] value of its [word-spacing][] property is at least `0.16` times its [computed][] [font-size][].
+- **cascade** its [cascaded][] value is not the value [declared][] in the `style` attribute; or
+- **not `!important`** its [cascaded][] value does not have the [important flag][]; or
+- **above minimum** its [computed][] value is at least `0.16` times its [computed][] [font-size][].
 
 ## Assumptions
 

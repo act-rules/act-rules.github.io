@@ -95,7 +95,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 	}
 </style>
 
-<p style="line-height: 1em !important; 2em !important">
+<p style="line-height: 1em !important; line-height: 2em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
@@ -111,7 +111,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 	}
 </style>
 
-<p style="line-height: 2em !important; 1em">
+<p style="line-height: 2em !important; line-height: 1em">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
@@ -153,7 +153,7 @@ This `p` element has two [declared][] values for its `line-height` property (in 
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `0.625em !important` which is below the recommended minimum, given the specified font size of the body is `1em`.
+This `p` element has a `line-height` of `1em !important` which is below the recommended minimum, given the specified font size of the body is `1em`.
 
 ```html
 <style>
@@ -162,7 +162,7 @@ This `p` element has a `line-height` of `0.625em !important` which is below the 
 	}
 </style>
 
-<p style="line-height: 0.625em !important">
+<p style="line-height: 1em !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

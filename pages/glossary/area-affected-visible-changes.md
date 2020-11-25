@@ -15,4 +15,4 @@ The _area affected_ by [visible changes in content][] of a web page is determine
 - (**bottom**:) the highest value of the y coordinate of any pixel affected by the [visible changes in content][]; and
 - (**right**:) the highest value of the x coordinate of any pixel affected by the [visible changes in content][].
 
-[visible changes in content]: #visible-changes-in-content 'Definition of visible changes in content'
+[visible changes in content]: #visible-changes-in-presentation-or-content 'Definition of visible changes in presentation or content'

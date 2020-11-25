@@ -1,5 +1,4 @@
-    ---
-
+---
 id: 24afc2
 name: Letter spacing in `style` attributes is not `!important`
 rule_type: atomic
@@ -12,12 +11,12 @@ failed: not satisfied
 passed: further testing needed
 inapplicable: further testing needed
 input_aspects:
-
-- DOM Tree
-- CSS Styling
-  acknowledgments:
-  authors: - Jean-Yves Moyen - Jey Nandakumar
-
+  - DOM Tree
+  - CSS Styling
+acknowledgments:
+  authors: 
+    - Jean-Yves Moyen 
+    - Jey Nandakumar
 ---
 
 ## Applicability

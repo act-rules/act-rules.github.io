@@ -157,10 +157,46 @@ Both this `p` and `span` elements match the **normal** condition. For the `span`
 
 #### Failed Example 1
 
-This `p` element has a `word-spacing` of `0.1em !important` which is below the recommended minimum.
+This `p` element has a [computed][] `word-spacing` of `1.6px` (assuming a default `medium` font size of `16px`) which is below the recommended minimum.
 
 ```html
 <p style="word-spacing: 0.1em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 2
+
+This `p` element has a [computed][] `word-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
+
+```html
+<style>
+	p {
+		font-size: 20px;
+	}
+</style>
+
+<p style="word-spacing: 2px !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 3
+
+This `p` element has a [computed][] `word-spacing` of 0.
+
+```html
+<p style="word-spacing: normal !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 4
+
+This `p` element has a [computed][] `word-spacing` of 0.
+
+```html
+<p style="word-spacing: initial !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

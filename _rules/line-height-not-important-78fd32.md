@@ -33,17 +33,19 @@ For each test target, one of the following is true:
 
 ## Assumptions
 
-- There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [Success Criterion 1.4.12 Text spacing][sc1412] is not satisfied.
+- There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
-- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a [used][] value below 1.5. [CSS recommendation][line-height normal] is to have a [used][] value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text spacing][sc1412].
+- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a [used][] value below 1.5. [CSS recommendation][line-height normal] is to have a [used][] value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text Spacing][sc1412].
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [line-height][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [line-height][] through [author origin][], this rule should not be used.
 
 ## Background
 
 When a style from [author origin][] is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already above the minimum recommended threshold. Styles (with an [important][] declaration) that are declared with the [user origin][] or [user agent origin][] can win the [cascade sort][] over styles with the [author origin][]. Therefore, if the assistive technology can produce these styles, the rule is not needed.
+
+Note that the **normal** condition refers to the declaration being [normal][] (as opposed to [important][]) while the **above minimum** condition refers to the value of the property being the literal keyword `normal`. The two have nothing in common despite being the same word.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
@@ -92,7 +94,7 @@ This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) w
 	}
 </style>
 
-<p style="line-height: 1.6 !important">
+<p style="line-height: 160% !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
@@ -155,7 +157,7 @@ This `p` element has two [declared][] values for its `line-height` property (in 
 
 #### Passed Example 9
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Note that neither the **above minimum** (because the [computed][] value is only 1.2 times the font size), nor the **cascade** (because the [cascaded][] value comes from the `style` attribute) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <p style="line-height: 1.2em">
@@ -273,7 +275,7 @@ This `p` element is not [visible][] because of `display: none`.
 
 #### Inapplicable Example 3
 
-This text is not [visible][] because it is positioned off-screen.
+This `p` element is not [visible][] because it is positioned off-screen.
 
 ```html
 <p style="position: absolute; top: -999em; line-height: 1em !important;">

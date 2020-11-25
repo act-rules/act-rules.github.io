@@ -27,21 +27,21 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 For each test target, one of the following is true:
 
-- **above minimum**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property.
+- **above minimum**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
 - **normal**: the [computed][] value of its [word-spacing][] property is [normal][]; or
-- **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute; or
+- **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
 
-- There is no mechanism available on the page to adjust word spacing. If there is such a mechanism, failing this rule might not mean [Success Criterion 1.4.12 Text Spacing][sc1412] is not satisfied.
+- There is no mechanism available on the page to adjust [word-spacing][]. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
 - This rule assumes that WCAG's meaning for the "Word spacing style property" is literally the value of the CSS `word-spacing` property rather than the actual space between words. The value of the CSS property is _added_ to whichever spacing already exist (for example, the size of the space character). Thus, the actual space between words is larger than the value of the `word-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between words, then this rule may fail (with the `word-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
 
-- This rule assumes text inside the target is not justified. The actual space between words may be further adjusted to justify text. This results in the space being sometimes larger and sometimes smaller. On lines where inter-words space is _added_, this rule may fail while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied (because the added space tip it over the limit); on lines where inter-letters space is _removed_, failing this rule will fail [Success Criterion 1.4.12 Text Spacing][sc1412]. For elements rendered on multiple lines, it is safe to assume that justification will not always add space. For single line elements (for example, a `span` inside a justified `p`), it may end up in a line with added space. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148]
+- This rule assumes that text inside the target is not justified. The actual space between words may be further adjusted to justify text. This results in the space being sometimes larger and sometimes smaller. On lines where inter-words space is _added_, this rule may fail while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied (because the added space tip it over the limit); on lines where inter-letters space is _removed_, failing this rule will fail [Success Criterion 1.4.12 Text Spacing][sc1412]. For elements rendered on multiple lines, it is safe to assume that justification will not always add space. For single line elements (for example, a `span` inside a justified `p`), it may end up in a line with added space. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148]
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set style with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [word-spacing][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [word-spacing][] through [author origin][], this rule should not be used.
 
 ## Background
 
@@ -131,7 +131,7 @@ This `p` element has two [declared][] values for its `word-spacing` property (in
 
 #### Passed Example 7
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **cascade** (because the [cascaded][] value comes from the `style` attribute) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -223,7 +223,7 @@ This `p` element is not [visible][] because of `display: none`.
 
 #### Inapplicable Example 3
 
-This text is not [visible][] because it is positioned off-screen.
+This `p` element is not [visible][] because it is positioned off-screen.
 
 ```html
 <p style="position: absolute; top: -999em; word-spacing: 0.1em !important;">

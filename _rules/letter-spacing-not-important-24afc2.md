@@ -3,19 +3,19 @@ id: 24afc2
 name: Letter spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
+  This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
 accessibility_requirements:
-wcag21:1.4.12: # Text Spacing (AA)
-forConformance: true
-failed: not satisfied
-passed: further testing needed
-inapplicable: further testing needed
+  wcag21:1.4.12: # Text Spacing (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
 acknowledgments:
-  authors: 
-    - Jean-Yves Moyen 
+  authors:
+    - Jean-Yves Moyen
     - Jey Nandakumar
 ---
 

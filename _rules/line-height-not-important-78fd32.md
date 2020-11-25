@@ -181,7 +181,7 @@ Both this `p` and `span` elements match the **normal** condition. For the `span`
 
 #### Failed Example 1
 
-This `p` element has a `line-height` of `1em !important` which is below the recommended minimum.
+This `p` element has a [computed][] `line-height` of `16px` (assuming a default `medium` font size of `16px`) which is below the recommended minimum.
 
 ```html
 <p style="line-height: 1em !important">

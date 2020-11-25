@@ -33,7 +33,7 @@ For each test target, one of the following is true:
 
 ## Assumptions
 
-- There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+- There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, failing this rule might not mean [Success Criterion 1.4.12 Text spacing][sc1412] is not satisfied.
 
 - This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a [used][] value below 1.5. [CSS recommendation][line-height normal] is to have a [used][] value between 1.0 and 1.2, thus too small to satisfy [Success Criterion 1.4.12 Text spacing][sc1412].
 
@@ -205,7 +205,7 @@ This `p` element has a [computed][] `line-height` of `20px` specified via the st
 </p>
 ```
 
-#### Passed Example 3
+#### Failed Example 3
 
 This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) which is below the recommended minimum.
 
@@ -221,12 +221,32 @@ This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) w
 </p>
 ```
 
-#### Passed Example 4
+#### Failed Example 4
 
 This `p` element has a [computed][] `line-height` of `1.2` which is below the recommended minimum.
 
 ```html
 <p style="line-height: 1.2 !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 5
+
+This `p` element has a [computed][] `line-height` of `normal` which is below the recommended minimum ([used][] value is generally around 1.2).
+
+```html
+<p style="line-height: normal !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 6
+
+This `p` element has a [computed][] `line-height` of `normal` which is below the recommended minimum ([used][] value is generally around 1.2).
+
+```html
+<p style="line-height: initial !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

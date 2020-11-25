@@ -33,7 +33,11 @@ For each test target, one of the following is true:
 
 ## Assumptions
 
-There is no mechanism available on the page to adjust [word-spacing][]. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+- There is no mechanism available on the page to adjust word spacing. If there is such a mechanism, failing this rule might not mean [Success Criterion 1.4.12 Text Spacing][sc1412] is not satisfied.
+
+- This rule assumes that WCAG's meaning for the "Word spacing style property" is literally the value of the CCS `word-spacing` property rather than the actual space between words. The value of the CSS property is _added_ to whichever spacing already exist (for example, the size of the space character). Thus, the actual space between words is larger than the value of the `word-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between words, then this rule may fail (with the `word-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
+
+- This rule assumes text inside the target is not justified. The actual space between words may be further adjusted to justify text. This results in the space being sometimes larger and sometimes smaller. On lines where inter-words space is _added_, this rule may fail while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied (because the added space tip it over the limit); on lines where inter-letters space is _removed_, failing this rule will fail [Success Criterion 1.4.12 Text Spacing][sc1412]. For elements rendered on multiple lines, it is safe to assume that justification will not always add space. For single line elements (for example, a `span` inside a justified `p`), it may end up in a line with added space. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148]
 
 ## Accessibility Support
 
@@ -65,7 +69,7 @@ This `p` element has a [computed][] `word-spacing` of `3.2px` (assuming a defaul
 
 #### Passed Example 2
 
-This `p` element has a [computed][] [word-spacing][] of `4px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 25 pixels, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `word-spacing` of `4px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 25 pixels, thus it matches the **above minimum** condition.
 
 ```html
 <style>
@@ -196,6 +200,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `word
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
+[sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'

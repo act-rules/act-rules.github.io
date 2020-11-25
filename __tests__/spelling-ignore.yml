@@ -79,6 +79,7 @@
 - getModifierState
 - accesskey
 - Accesskeys
+- kerning
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

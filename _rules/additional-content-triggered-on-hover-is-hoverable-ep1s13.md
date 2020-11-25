@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [visible changes in content][] and for the [area affected by the visible changes][area affected by visible changes], determined after 5 seconds of [hovering][hovering] the element, all the following are true:
+The rule applies to any element that when [hovered][] causes [visible changes in content][] and for the [area affected by the visible changes][area affected by visible changes], determined after 5 seconds of [hovering][hovered] the element, all the following are true:
 
 - the area is [adjacent][adjacent areas] or [overlaps][overlapping areas] the [bounding box][] of the target element; and
 - the area is not [contained][] inside the [bounding box][] of the target element; and

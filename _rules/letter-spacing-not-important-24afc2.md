@@ -28,7 +28,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, one of the following is true:
 
 - **above minimum**: the [computed][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property.
-- **normal**: the [cascaded][] value of its [letter-spacing][] property [normal][]; or
+- **normal**: the [computed][] value of its [letter-spacing][] propertyis [normal][]; or
 - **cascade**: the [cascaded][] value of its [letter-spacing][] property is not a value [declared][] in its `style` attribute; or
 
 ## Assumptions
@@ -55,7 +55,7 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule 
 
 #### Passed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of `2.4px` (assuming a default `medium` font size of `16px`) which is above the recommended metric, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] `letter-spacing` of `2.4px` (assuming a default `medium` font size of `16px`) which is above the recommended minimum, thus it matches the **above minimum** condition.
 
 ```html
 <p style="letter-spacing: 0.15em !important">
@@ -122,6 +122,30 @@ This `p` element has two [declared][] values for its `letter-spacing` property (
 
 <p style="letter-spacing: 0.15em">
 	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 7 TODO
+
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+
+```html
+<p style="line-height: 1.2em">
+	<span style="line-height: inherit !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
+#### Passed Example 8 TODO
+
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+
+```html
+<p style="line-height: 1.2em">
+	<span style="line-height: unset !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
 </p>
 ```
 

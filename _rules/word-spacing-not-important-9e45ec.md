@@ -28,7 +28,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, one of the following is true:
 
 - **above minimum**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property.
-- **normal**: the [cascaded][] value of its [word-spacing][] property [normal][]; or
+- **normal**: the [computed][] value of its [word-spacing][] property is [normal][]; or
 - **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute; or
 
 ## Assumptions

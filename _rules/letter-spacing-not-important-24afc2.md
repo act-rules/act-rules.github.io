@@ -1,22 +1,23 @@
----
+    ---
+
 id: 24afc2
 name: Letter spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
-  This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
+This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
 accessibility_requirements:
-  wcag21:1.4.12: # Text Spacing (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+wcag21:1.4.12: # Text Spacing (AA)
+forConformance: true
+failed: not satisfied
+passed: further testing needed
+inapplicable: further testing needed
 input_aspects:
-  - DOM Tree
-  - CSS Styling
-acknowledgments:
-  authors:
-    - Jean-Yves Moyen
-    - Jey Nandakumar
+
+- DOM Tree
+- CSS Styling
+  acknowledgments:
+  authors: - Jean-Yves Moyen - Jey Nandakumar
+
 ---
 
 ## Applicability
@@ -28,12 +29,16 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, one of the following is true:
 
 - **above minimum**: the [computed][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property.
-- **normal**: the [computed][] value of its [letter-spacing][] propertyis [normal][]; or
+- **normal**: the [computed][] value of its [letter-spacing][] property is [normal][]; or
 - **cascade**: the [cascaded][] value of its [letter-spacing][] property is not a value [declared][] in its `style` attribute; or
 
 ## Assumptions
 
-There is no mechanism available on the page to adjust letter spacing. If there is such a mechanism, failing this rule might not mean [success criterion 1.4.12 Text spacing](https://www.w3.org/TR/WCAG21/#text-spacing) is not satisfied.
+- There is no mechanism available on the page to adjust letter spacing. If there is such a mechanism, failing this rule might not mean [Success Criterion 1.4.12 Text Spacing][sc1412] is not satisfied.
+
+- This rule assumes that WCAG's meaning for the "Letter spacing style property" is literally the value of the CCS `letter-spacing` property rather than the actual space between letters. The value of the CSS property is _added_ to whichever spacing already exist (for example, due to kerning). Thus, the actual space between letters is larger than the value of the `letter-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between letters, then this rule may fail (with the `letter-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
+
+- This rule assumes text inside the target is not justified. The actual space between letters may be further adjusted to justify text. This results in the space being sometimes larger and sometimes smaller. On lines where inter-letters space is _added_, this rule may fail while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied (because the added space tip it over the limit); on lines where inter-letters space is _removed_, failing this rule will fail [Success Criterion 1.4.12 Text Spacing][sc1412]. For elements rendered on multiple lines, it is safe to assume that justification will not always add space. For line elements (for example, a `span` inside a justified `p`), it may end up in a line with added space. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148]
 
 ## Accessibility Support
 
@@ -101,7 +106,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 
 #### Passed Example 5
 
-This `p` element has a [normal][] [computed][] `letter-spacing`, thus it matches the **normal** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has a [normal][] [computed][] `letter-spacing`, thus it matches the **normal** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -111,7 +116,7 @@ This `p` element has a [normal][] [computed][] `letter-spacing`, thus it matches
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `letter-spacing` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **normal** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has two [declared][] values for its `letter-spacing` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **normal** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <style>
@@ -125,25 +130,25 @@ This `p` element has two [declared][] values for its `letter-spacing` property (
 </p>
 ```
 
-#### Passed Example 7 TODO
+#### Passed Example 7
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
-<p style="line-height: 1.2em">
-	<span style="line-height: inherit !important;">
+<p style="letter-spacing: 0.1em">
+	<span style="letter-spacing: inherit !important;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
 </p>
 ```
 
-#### Passed Example 8 TODO
+#### Passed Example 8
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][̏]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
-<p style="line-height: 1.2em">
-	<span style="line-height: unset !important;">
+<p style="letter-spacing: 0.1em">
+	<span style="letter-spacing: unset !important;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
 </p>
@@ -157,6 +162,42 @@ This `p` element has a `letter-spacing` of `0.1em !important` which is below the
 
 ```html
 <p style="letter-spacing: 0.1em !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 2
+
+This `p` element has a `letter-spacing` of `2px !important` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
+
+```html
+<style>
+	p {
+		font-size: 20px;
+	}
+</style>
+
+<p style="letter-spacing: 2px !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 3
+
+This `p` element has a [computed][] `letter-spacing` of 0.
+
+```html
+<p style="letter-spacing: normal !important">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Failed Example 3
+
+This `p` element has a [computed][] `letter-spacing` of 0.
+
+```html
+<p style="letter-spacing: initial !important">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```
@@ -221,6 +262,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 [letter-spacing]: https://www.w3.org/TR/css-text-3/#propdef-letter-spacing 'CSS Text Module Level 3 - Tracking: the letter-spacing property'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
+[sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'

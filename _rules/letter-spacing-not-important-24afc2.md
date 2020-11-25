@@ -158,7 +158,7 @@ Both this `p` and `span` elements match the **normal** condition. For the `span`
 
 #### Failed Example 1
 
-This `p` element has a `letter-spacing` of `0.1em !important` which is below the recommended minimum.
+This `p` element has a [computed][] `letter-spacing` of `1.6px` (assuming a default `medium` font size of `16px`) which is below the recommended minimum.
 
 ```html
 <p style="letter-spacing: 0.1em !important">
@@ -168,7 +168,7 @@ This `p` element has a `letter-spacing` of `0.1em !important` which is below the
 
 #### Failed Example 2
 
-This `p` element has a `letter-spacing` of `2px !important` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
+This `p` element has a [computed][] `letter-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
 
 ```html
 <style>
@@ -192,7 +192,7 @@ This `p` element has a [computed][] `letter-spacing` of 0.
 </p>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 This `p` element has a [computed][] `letter-spacing` of 0.
 

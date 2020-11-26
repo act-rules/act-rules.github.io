@@ -48,8 +48,6 @@ Authors SHOULD not use more than one element with a [semantic role][] of `main`.
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use bold text instead of heading (to avoid also passing rule [_Document has heading for main section of content_][document has heading for main]). This is bad practice and should be avoided. In addition, this often create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
-
 ## Test Cases
 
 ### Passed
@@ -65,7 +63,6 @@ In this [document][], the `main` element has a [semantic role][] of `main` and i
 	</head>
 	<body>
 		<main>
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -86,7 +83,6 @@ In this [document][] the `div` element has a [semantic role][] of `main` and is 
 	</head>
 	<body>
 		<div role="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -107,7 +103,6 @@ This [document][] has several elements with a role of `main`, at least one of th
 	</head>
 	<body>
 		<main aria-label="Translation by Charles Henry Brewitt-Taylor (1925)" aria-hidden="true">
-			<b>Three Heroes Swear Brotherhood in the Peach Garden</b>
 			<p>
 				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
 				divide.
@@ -115,12 +110,10 @@ This [document][] has several elements with a role of `main`, at least one of th
 		</main>
 
 		<main aria-label="Translation by Moss Roberts (1976)">
-			<b>Three Bold Spirits Plight Mutual Faith in the Peach Garden</b>
 			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
 		</main>
 
 		<main aria-label="Translation by Yu Sumei (2014)" aria-hidden="true">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -142,7 +135,6 @@ This [document][] has no element with a role of `main`.
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 		<p>
 			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
 			time.
@@ -162,7 +154,6 @@ This document has a `main` [landmark][], but it is not [included in the accessib
 	</head>
 	<body>
 		<main aria-hidden="true">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.

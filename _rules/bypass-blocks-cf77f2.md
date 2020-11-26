@@ -89,7 +89,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
   - [Technique H69: Providing heading elements at the beginning of each section of content][tech h69]
   - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In order to focus on single aspect of the rule at a time, and given the very nature of some of the input rules, most test cases use bold text instead of heading (to avoid also passing rule [_Document has heading for main section of content_][document has heading for main]) and a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These are bad practices and should be avoided. In addition, this often create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+In order to focus on single aspect of the rule at a time, and given the very nature of some of the input rules, most test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
 
 In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link to a page with similar [blocks of content][block of content]; and the `main` (or `<div id="main">`) element is the [main block of content][].
 
@@ -111,7 +111,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<a href="#" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
 
 		<nav id="chapters-navigation">
-			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
@@ -119,7 +118,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		</nav>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -175,7 +173,6 @@ This [HTML web page][] is passing rule [_Document has a main landmark_][document
 		</nav>
 
 		<main>
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -199,12 +196,10 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -231,16 +226,13 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		</nav>
 
 		<aside id="bio-translator">
-			<b>About the translator</b>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -263,17 +255,14 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 	<body>
 		<aside id="bio-translator">
 			<a href="#about-book">Skip to information about the book</a>
-			<b>About the translator</b>
 			<p>Yu Sumei is a professor of English at East China Normal University.</p>
 		</aside>
 		<aside id="about-book">
 			<a href="#main">Skip to main content</a>
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -295,7 +284,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 	</head>
 	<body>
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -305,7 +293,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 	</body>
@@ -325,12 +312,10 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<button onclick="location.assign('#main')">Skip to main content</button>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -360,23 +345,22 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		</nav>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b id="brewitt-taylor">
+			<p id="brewitt-taylor">
 				Three Heroes Swear Brotherhood in the Peach Garden (Translation by Charles Henry Brewitt-Taylor)
-			</b>
+			</p>
 			<p>
 				The world under heaven, after a long period of division, tends to unite; after a long period of union, tends to
 				divide.
 			</p>
 
-			<b id="roberts">Three Bold Spirits Plight Mutual Faith in the Peach Garden (Translation by Moss Roberts)</b>
+			<p id="roberts">Three Bold Spirits Plight Mutual Faith in the Peach Garden (Translation by Moss Roberts)</p>
 			<p>The empire, long divided, must unite; long united, must divide. Thus it has ever been.</p>
 
-			<b id="yu">Three Heroes Swear Brotherhood at a Feast in the Peach Garden (Translation by Yu Sumei)</b>
+			<p id="yu">Three Heroes Swear Brotherhood at a Feast in the Peach Garden (Translation by Yu Sumei)</p>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -403,12 +387,10 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		</nav>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -433,7 +415,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		<button onclick="hide('chapters-navigation')">Hide table of content</button>
 
 		<nav id="chapters-navigation">
-			<b>Content</b>
 			<ol>
 				<li><a>Chapter 1</a></li>
 				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
@@ -441,7 +422,6 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 		</nav>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -466,12 +446,10 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -497,12 +475,10 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
 		<div id="main">
-			<b>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</b>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -555,7 +531,6 @@ This [HTML web page][] does not pass any of the input rules.
 		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
-			<b>About the book</b>
 			The Romance of the Three Kingdoms is a 14th century historical novel.
 		</aside>
 

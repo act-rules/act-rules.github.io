@@ -52,7 +52,7 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided. In addition, this may create examples that do not satisfy [Success Criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided.
 
 Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `<div id="main">` element.
 

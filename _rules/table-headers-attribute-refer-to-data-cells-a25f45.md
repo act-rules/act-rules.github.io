@@ -147,7 +147,7 @@ This `table` has multiple elements with a role of `columnheader`. The `headers` 
 
 #### Passed Example 5
 
-The `headers` attribute on the second cell in each row refers to a `th` element with a role of `rowheader` within the same `table`.
+The `headers` attribute on the second data cell in each row refers to a `th` element with a role of `rowheader` within the same `table`.
 
 ```html
 <table>

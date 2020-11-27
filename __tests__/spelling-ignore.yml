@@ -48,6 +48,7 @@
 - DNS
 - BCP
 - bcp
+- X11
 - IDL
 - idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
@@ -203,6 +204,8 @@
 - scrollable
 - scrollbars
 - subconditions
+- burlywood
+- cornsilk
 - subtree
 - unicity
 

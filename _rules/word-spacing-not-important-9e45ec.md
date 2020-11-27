@@ -28,7 +28,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, one of the following is true:
 
 - **above minimum**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
-- **normal**: the [computed][] value of its [word-spacing][] property is [normal][]; or
+- **not important**: the [computed][] value of its [word-spacing][] property is not [important][]; or
 - **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
@@ -46,6 +46,8 @@ While some assistive technologies are able to set [user origin][] or [user agent
 ## Background
 
 When a style from [author origin][] is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already above the minimum recommended threshold. Styles (with an [important][] declaration) that are declared with the [user origin][] or [user agent origin][] can win the [cascade sort][] over styles with the [author origin][]. Therefore, if the assistive technology can produce these styles, the rule is not needed.
+
+CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to limit confusion.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
@@ -105,7 +107,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 5
 
-This `p` element has a [normal][] [computed][] `word-spacing`, thus it matches the **normal** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has a not [important][] [computed][] `word-spacing`, thus it matches the **not important** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -115,7 +117,7 @@ This `p` element has a [normal][] [computed][] `word-spacing`, thus it matches t
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `word-spacing` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **normal** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
+This `p` element has two [declared][] values for its `word-spacing` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **not important** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient height should be used.
 
 ```html
 <style>
@@ -131,7 +133,7 @@ This `p` element has two [declared][] values for its `word-spacing` property (in
 
 #### Passed Example 7
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **cascade** (because the [cascaded][] value comes from the `style` attribute) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **cascade** (because the [cascaded][] value comes from the `style` attribute) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -143,7 +145,7 @@ Both this `p` and `span` elements match the **normal** condition. For the `span`
 
 #### Passed Example 8
 
-Both this `p` and `span` elements match the **normal** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is [normal][]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="word-spacing: 0.1em">

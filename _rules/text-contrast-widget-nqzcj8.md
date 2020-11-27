@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element, character in a [text node][], and set of [widget pseudo-classes][] for which all the following are true:
+This rule applies to triplet of an HTML element, a character in a [text node][], and a set of [widget pseudo-classes][] for which all the following are true:
 
 - **widget**: the element has a [semantic role][] that inherit from `widget`; and
 - **ancestor**: the element is an [ancestor][] in the [flat tree][] of the text node, and is its closest [ancestor][] with a [semantic role][] that inherit from `widget`; and

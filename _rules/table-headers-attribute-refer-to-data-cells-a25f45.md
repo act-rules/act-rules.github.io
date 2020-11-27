@@ -102,7 +102,7 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 
 #### Passed Example 3
 
-The `headers` attribute on the cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
+The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
 
 ```html
 <table>

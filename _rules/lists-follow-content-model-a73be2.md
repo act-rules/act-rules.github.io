@@ -3,7 +3,7 @@ id: a73be2
 name: List elements follow content model
 rule_type: atomic
 description: |
-  This rule checks that list elements follow content model
+  This rule checks that list elements have child nodes allowed by the content model
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -24,19 +24,18 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any `ul`, `ol`, `dl`, and `menu` [HTML elements][] that is [included in the accessibility tree][] and has the same [semantic role][] as its [implicit semantic role][].
+The rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit semantic role][], and for which one of the following is true:
 
-## Expectation 1
+- **lists**: The element is a `ul`, `ol` or `menu`; or
+- **definition lists**: The element is a `dl`, or a `div` that is a [child][] of a `dl`.
+
+## Expectation
 
 For each [child][] in the [flat tree][] of each test target, one of the following is true:
 
-- the [child][] [element][] follows the [content model][]; or
-- the [child][] has an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][] for the test target; or
-- the [child][] is not included in the [accessibility tree][].
-
-## Expectation 2
-
-Each test target has one or more [child][] [elements][] in the [flat tree][] that is [included in the accessibility tree][].
+- **implicit role**: the [child][] has no [explicit role][] and follows the [content model][]; or
+- **explicit role**: the [child][] has an [explicit role][] which is the [implicit ARIA semantics][] for an HTML element included in the [content model][] for the test target; or
+- **hidden**: the [child][] is not included in the [accessibility tree][].
 
 ## Assumptions
 
@@ -48,6 +47,10 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+TODO: explain for each applicable element what is allowed by the content model.
+
+TODO: Mention that dl > div has no role and therefor must be a div with no explicit role.
+
 - [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [HTML Specification - Content model](https://html.spec.whatwg.org/#concept-element-content-model)
 
@@ -57,7 +60,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This [HTML `<ul>` element][] has a [descendant][] of type [HTML `<li>` element][].
+This `ul` element has `li` [children][child] which are allowed by its [content model][].
 
 ```html
 <ul>
@@ -68,7 +71,7 @@ This [HTML `<ul>` element][] has a [descendant][] of type [HTML `<li>` element][
 
 #### Passed Example 2
 
-This [HTML `<dl>` element][] contains at least one name-value group as [descendant][].
+This `dl` element has `dt` and `dd` [children][child] which are allowed by its [content model][].
 
 ```html
 <dl>
@@ -79,17 +82,28 @@ This [HTML `<dl>` element][] contains at least one name-value group as [descenda
 
 #### Passed Example 3
 
-This [HTML `<menu>` element][] has a [descendant][] of type [HTML `<li>` element][].
+This `ul` element has no [child][] [elements][element]. Its only [children][child] are a comment and an empty text node, neither of which are [included in the accessibility tree][].
 
 ```html
-<menu>
-	<li></li>
-</menu>
+<ul>
+	<!-- empty list -->
+</ul>
 ```
 
 #### Passed Example 4
 
-This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][].
+This `menu` element has `li` [children][child] which are allowed by its [content model][].
+
+```html
+<menu>
+	<li>New file</li>
+	<li>Save file</li>
+</menu>
+```
+
+#### Passed Example 5
+
+This `ol` element has `span` [children][child] with an [explicit semantic role][] or `listitem`. The [content model][] of `ol` allows `li` elements which have [implicit ARIA semantics][] of `listitem`.
 
 ```html
 <ol>
@@ -98,9 +112,9 @@ This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML 
 </ol>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
-This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][] and contains a [HTML `<template>` element][] which follows the [content model][].
+This `ul` element has `li` and `template` [children][child]. `li` is explicitly allowed by the `ul` [content model], `template` is a script-supported element, which is also allowed by the `ul` content model.
 
 ```html
 <ol>
@@ -112,9 +126,9 @@ This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML 
 </ol>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
-This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. That fact that it is placed in a div still follows the [content model][].
+This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` element has a `dt` [child][] followed by a `dd` element, which is allowed by the `div` [content model][].
 
 ```html
 <dl>
@@ -125,19 +139,9 @@ This [HTML `<dl>` element][] contains at least one name-value group as [descenda
 </dl>
 ```
 
-#### Passed Example 7
-
-This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML `<li>` element][].
-
-```html
-<ol>
-	<li></li>
-</ol>
-```
-
 #### Passed Example 8
 
-This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. The `div` elements both have an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][].
+This `dl` element has `div` [children][child] with an [explicit semantic role][] of `term` and `definition`. The [content model][] of `dl` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
 
 ```html
 <dl>
@@ -146,19 +150,34 @@ This [HTML `<dl>` element][] contains at least one name-value group as [descenda
 </dl>
 ```
 
+#### Passed Example 9
+
+This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` has `div` [children][child] with an [explicit semantic role][] of `term` and `definition`. The [content model][] of `div` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
+
+```html
+<dl>
+	<div>
+		<div role="term">Chemistry</div>
+		<div role="definition">7/10</div>
+	</div>
+</dl>
+```
+
+#### Passed Example 10
+
+This `ul` element has a `p` [child][] which is not [included in the accessibility tree][].
+
+```html
+<ul>
+	<p hidden>Empty list</p>
+</ul>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-This [HTML `<ul>` element][] doesn't contain at least one child element.
-
-```html
-<ul></ul>
-```
-
-#### Failed Example 2
-
-This [HTML `<ol>` element][] doesn't contain at least one child element. The text itself isn't an element.
+TODO
 
 ```html
 <ol>
@@ -166,9 +185,9 @@ This [HTML `<ol>` element][] doesn't contain at least one child element. The tex
 </ol>
 ```
 
-#### Failed Example 3
+#### Failed Example 2
 
-This [HTML `<ul>` element][] only contains elements with an [explicit role][] that doesn't follow the [content model][]. Menuitems are not valid children of an unordered list.
+TODO
 
 ```html
 <ul>
@@ -177,9 +196,9 @@ This [HTML `<ul>` element][] only contains elements with an [explicit role][] th
 </ul>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-This [HTML `<ol>` element][] only contains elements that doesn't follow the [content model][]. Name-value groups are not valid children of an ordered list.
+TODO
 
 ```html
 <ol>
@@ -188,9 +207,9 @@ This [HTML `<ol>` element][] only contains elements that doesn't follow the [con
 </ol>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
-This [HTML `<dl>` element][] only contains elements that doesn't follow the [content model][]. List items are not valid children of a definition list.
+TODO
 
 ```html
 <dl>
@@ -199,11 +218,22 @@ This [HTML `<dl>` element][] only contains elements that doesn't follow the [con
 </dl>
 ```
 
+#### Failed Example 5
+
+TODO
+
+```html
+<dl>
+	<dd>New file</dd>
+	<dd>Save file</dd>
+</dl>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-This rules is not applicable to `ul` elements that are not [included in the accessibility tree][].
+This rule is not applicable to ... TODO
 
 ```html
 <ul hidden>
@@ -213,7 +243,7 @@ This rules is not applicable to `ul` elements that are not [included in the acce
 
 #### Inapplicable Example 2
 
-This rule is not applicable to `ul` elements where the [semantic role][] is not the same as the [implicit semantic role][].
+This rule is not applicable to ... TODO
 
 ```html
 <ul role="menu">
@@ -223,7 +253,7 @@ This rule is not applicable to `ul` elements where the [semantic role][] is not 
 
 #### Inapplicable Example 3
 
-This rule is not applicable to [HTML elements][] with `list` or `listitem` ARIA roles, because the [semantic role][] is not the same as the [implicit semantic role][].
+This rule is not applicable to ... TODO
 
 ```html
 <div role="list">
@@ -240,9 +270,7 @@ This rule is not applicable to [HTML elements][] with `list` or `listitem` ARIA 
 [hidden]: https://html.spec.whatwg.org/#the-hidden-attribute 'HTML Specification - The hidden attribute'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [text]: https://html.spec.whatwg.org/multipage/dom.html#text-content
-[html `<ol>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
-[html `<ul>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
-[html `<li>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
-[html `<dl>` element]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML sequential, Definition of content model, 2020/11/27'
+[hidden state]: #hidden-state 'Definition of hidden state'

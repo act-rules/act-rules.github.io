@@ -19,6 +19,7 @@
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- aam # lowercase needed in reference list
 - ABNF
 - URI
 - UA/AT
@@ -47,6 +48,7 @@
 - DNS
 - BCP
 - bcp
+- X11
 - IDL
 - idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
@@ -201,7 +203,10 @@
 - scrollable
 - scrollbars
 - subconditions
+- burlywood
+- cornsilk
 - subtree
+- unicity
 
 # Parts of Unicode
 - 000A

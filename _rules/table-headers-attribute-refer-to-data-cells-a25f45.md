@@ -252,7 +252,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 
 #### Failed Example 3
 
-The `headers` attribute on the cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
+The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 
 ```html
 <table>

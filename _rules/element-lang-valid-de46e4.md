@@ -134,7 +134,7 @@ This `article` element has a `lang` [attribute value][] which is not a [valid la
 
 #### Failed Example 3
 
-This `article` element` has a `lang` [attribute value][] which consists of only [whitespace][] and thus is not a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus is not a [valid language tag][].
 
 ```html
 <html>

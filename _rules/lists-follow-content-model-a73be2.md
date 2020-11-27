@@ -16,15 +16,15 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-		- Brian Bors
-		- Wilco Fiers
+    - Brian Bors
+    - Wilco Fiers
   previous_authors:
     - Jey Nandakumar
 ---
 
 ## Applicability
 
-The rule applies to every `ul`, `ol`, `dl`, and `menu` [HTML elements][] that is [included in the accessibility tree][] and has the same [semantic role][] as its [implicit semantic role][].
+The rule applies to any `ul`, `ol`, `dl`, and `menu` [HTML elements][] that is [included in the accessibility tree][] and has the same [semantic role][] as its [implicit semantic role][].
 
 ## Expectation 1
 
@@ -137,7 +137,7 @@ This [HTML `<ol>` element][] contains at least one [descendant][] of type [HTML 
 
 #### Passed Example 8
 
-This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. The dive elements both have an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][].
+This [HTML `<dl>` element][] contains at least one name-value group as [descendant][]. The `div` elements both have an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][].
 
 ```html
 <dl>

@@ -28,7 +28,7 @@ The rule applies to any `ul`, `ol`, `dl`, and `menu` [HTML elements][] that is [
 
 ## Expectation 1
 
-Each test target only has [child][] [node][] in the [flat tree][] for which one of the following is true:
+For each [child][] in the [flat tree][] of each test target, one of the following is true:
 
 - the [child][] [element][] follows the [content model][]; or
 - the [child][] has an [explicit role][] which is the [Implicit ARIA semantics]() for an HTML element included in the [content model][] for the test target; or

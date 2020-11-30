@@ -26,7 +26,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][] if:
+This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][] for which all of the following are true:
 
 - **changed:** the `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
 - **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and

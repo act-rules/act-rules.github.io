@@ -23,11 +23,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any set of any two or more `iframe` elements which:
+This rule applies to any set of any two or more `iframe` elements for which all of the following are true:
 
-- are in the same [web page (HTML)][]; and
-- are [included in an accessibility tree][included in the accessibility tree]; and
-- that have [matching][] [accessible names][accessible name] that are not empty (`""`).
+- the elements are in the same [web page (HTML)][]; and
+- the elements are [included in an accessibility tree][included in the accessibility tree]; and
+- the elements have [matching][] [accessible names][accessible name] that are not empty (`""`).
 
 **Note:** The test target for this rule is the full set of `iframe` elements that share the same [matching](#matching-characters) [accessible name][].
 

@@ -25,11 +25,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that:
+This rule applies to any HTML element for which all of the following are true:
 
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
-- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element; and
-- has a `lang` attribute that is not empty ("").
+- the element has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- the element is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element; and
+- the element has a `lang` attribute that is not empty ("").
 
 ## Expectation
 

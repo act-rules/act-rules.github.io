@@ -22,7 +22,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [text node][] for which all of the following is true when in a [viewport size][] of 640 by 512:
+This rule applies to any [text node][] for which all of the following are true when in a [viewport size][] of 640 by 512:
 
 - The [text node][] is [visible][]; and
 - The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and

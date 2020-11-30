@@ -33,13 +33,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of two or more HTML or SVG elements which
+This rule applies to any set of two or more HTML or SVG elements for which all of the following are true:
 
-- have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
-- are in the same [web page (HTML)][]; and
-- are [included in the accessibility tree][included in the accessibility tree]; and
-- have [matching][] [accessible names][accessible name] that are not empty (`""`); and
-- have the same [programmatically determined link context][].
+- the elements have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
+- the elements are in the same [web page (HTML)][]; and
+- the elements are [included in the accessibility tree][included in the accessibility tree]; and
+- the elements have [matching][] [accessible names][accessible name] that are not empty (`""`); and
+- the elements have the same [programmatically determined link context][].
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].
 

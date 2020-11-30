@@ -29,11 +29,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element which
+This rule applies to any HTML or SVG element for which all of the following are true:
 
-- has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
-- is [included in the accessibility tree][]; and
-- has a non-empty ("") [accessible name][].
+- the element has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
+- the element is [included in the accessibility tree][]; and
+- the element has a non-empty ("") [accessible name][].
 
 ## Expectation
 

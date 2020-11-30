@@ -1,0 +1,153 @@
+---
+id: m6b1q3
+name: Menuitem has non-empty accessible name
+rule_type: atomic
+description: |
+  This rule checks that each element with a `menuitem` role has a non-empty accessible name.
+accessibility_requirements:
+  wcag20:4.1.2: # Name, Role, Value (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
+  - Accessibility Tree
+  - DOM Tree
+  - CSS Styling
+acknowledgments:
+  authors:
+    - Wilco Fiers
+---
+
+## Applicability
+
+This rule applies to HTML elements with a `menuitem` [semantic role][] that are [included in the accessibility tree][].
+
+## Expectation
+
+Each target element has an [accessible name][] that is not empty (`""`).
+
+## Assumptions
+
+The rule assumes that all menuitems are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). If an element has a role of `menuitem` that would not be perceived as a single control by users, [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) would not apply and so failing this rule would not result in a conformance issue.
+
+## Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+
+## Background
+
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
+- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
+
+## Test Cases
+
+### Passed
+
+#### Passed Example 1
+
+This element with the `menuitem` role has an [accessible name][] because of its text content.
+
+```html
+<ul role="menu">
+	<li role="menuitem">New file</li>
+</ul>
+```
+
+#### Passed Example 2
+
+This element with the `menuitem` role has an [accessible name][] because of its `aria-label` attribute.
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<ul role="menu">
+	<li role="menuitem" aria-label="New file">
+		<i class="fa fa-file"></i>
+	</li>
+</ul>
+```
+
+#### Passed Example 3
+
+This element with the `menuitem` role has an [accessible name][] because its `aria-labelledby` attribute references a `div` element with text content.
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<ul role="menu">
+	<li role="menuitem" aria-labelledby="newfile">
+		<i class="fa fa-file"></i>
+		<span id="newfile" hidden>New file</span>
+	</li>
+</ul>
+```
+
+#### Passed Example 4
+
+This element with the `menuitem` role has an [accessible name][] because of its `title` attribute.
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<ul role="menu">
+	<li role="menuitem" title="New file">
+		<i class="fa fa-file"></i>
+	</li>
+</ul>
+```
+
+### Failed
+
+#### Failed Example 1
+
+This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<ul role="menu">
+	<li role="menuitem">
+		<i class="fa fa-file"></i>
+	</li>
+</ul>
+```
+
+#### Failed Example 2
+
+This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
+
+```html
+<html lang="en">
+	<style>
+		.offscreen {
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+		}
+	</style>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<ul role="menu" class="offscreen">
+		<li role="menuitem">
+			<i class="fa fa-file"></i>
+		</li>
+	</ul>
+</html>
+```
+
+### Inapplicable
+
+#### Inapplicable Example 1
+
+This element with the `menuitem` role does not need an [accessible name][] because it is not [included in the accessibility tree][].
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<ul role="menu" hidden>
+	<li role="menuitem">
+		<i class="fa fa-file"></i>
+	</li>
+</ul>
+```
+
+[accessible name]: #accessible-name 'Definition of accessible name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[semantic role]: #semantic-role 'Definition of Semantic Role'

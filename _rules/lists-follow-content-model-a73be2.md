@@ -24,10 +24,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit semantic role][], and for which one of the following is true:
+This rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit role][], and for which one of the following is true:
 
 - **lists**: The element is a `ul`, `ol` or `menu`; or
-- **definition lists**: The element is a `dl`, or a `div` that is a [child][] of a `dl`.
+- **definition lists**: The element is a `dl`, or a `div` that is a [child][] in the [flat tree][] of a `dl`.
 
 ## Expectation
 
@@ -35,7 +35,7 @@ For each [child][] in the [flat tree][] of each test target, one of the followin
 
 - **implicit role**: the [child][] has no [explicit role][] and follows the [content model][]; or
 - **explicit role**: the [child][] has an [explicit role][] which is the [implicit ARIA semantics][] for an HTML element included in the [content model][] for the test target; or
-- **hidden**: the [child][] is not included in the [accessibility tree][].
+- **hidden**: the [child][] is not [included in the accessibility tree][].
 
 ## Assumptions
 
@@ -49,7 +49,7 @@ _There are no major accessibility support issues known for this rule._
 
 All children of `ul`, `ol`, and `menu` elements must be either an element with a [semantic role][] of `listitem`, or a node that is hidden, such as a `script` or `template` element, an HTML comment, of a text node that consists of only [ascii whitespace][].
 
-All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that is a `term`. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.
+All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that is a `term`. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.
 
 - [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [HTML Specification - Content model](https://html.spec.whatwg.org/#concept-element-content-model)
@@ -103,7 +103,7 @@ This `menu` element has `li` [children][child] which are allowed by its [content
 
 #### Passed Example 5
 
-This `ol` element has `span` [children][child] with an [explicit semantic role][] or `listitem`. The [content model][] of `ol` allows `li` elements which have [implicit ARIA semantics][] of `listitem`.
+This `ol` element has `span` [children][child] with an [explicit role][] or `listitem`. The [content model][] of `ol` allows `li` elements which have [implicit ARIA semantics][] of `listitem`.
 
 ```html
 <ol>
@@ -141,7 +141,7 @@ This `dl` element has `div` [child][child] which is allowed by its [content mode
 
 #### Passed Example 8
 
-This `dl` element has `div` [children][child] with an [explicit semantic role][] of `term` and `definition`. The [content model][] of `dl` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
+This `dl` element has `div` [children][child] with an [explicit role][] of `term` and `definition`. The [content model][] of `dl` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
 
 ```html
 <dl>
@@ -152,7 +152,7 @@ This `dl` element has `div` [children][child] with an [explicit semantic role][]
 
 #### Passed Example 9
 
-This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` has `div` [children][child] with an [explicit semantic role][] of `term` and `definition`. The [content model][] of `div` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
+This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` has `div` [children][child] with an [explicit role][] of `term` and `definition`. The [content model][] of `div` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
 
 ```html
 <dl>
@@ -266,12 +266,13 @@ This element with a `list` role is not a `ul`, `ol`, `dl`, or `menu` element.
 [html elements]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [explicit role]: #explicit-role 'Definition of explicit role'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'HTML Specification - Descendants'
-[hidden]: https://html.spec.whatwg.org/#the-hidden-attribute 'HTML Specification - The hidden attribute'
+[implicit role]: #implicit-role 'Definition of implicit role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[text]: https://html.spec.whatwg.org/multipage/dom.html#text-content
-[visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML sequential, Definition of content model, 2020/11/27'
 [hidden state]: #hidden-state 'Definition of hidden state'
+[child]: https://dom.spec.whatwg.org/#concept-tree-child
+[implicit aria semantics]: https://www.w3.org/TR/html-aria/#dfn-implicit-aria-semantics 'ARIA in HTML, Implicit ARIA semantics, draft 2020/11/30'
+[ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/11/30'
+[element]: https://dom.spec.whatwg.org/#element 'DOM element, 2020/11/30'
+

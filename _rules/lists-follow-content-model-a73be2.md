@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit semantic role][], and for which one of the following is true:
+This rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit semantic role][], and for which one of the following is true:
 
 - **lists**: The element is a `ul`, `ol` or `menu`; or
 - **definition lists**: The element is a `dl`, or a `div` that is a [child][] of a `dl`.
@@ -47,9 +47,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-TODO: explain for each applicable element what is allowed by the content model.
+All children of `ul`, `ol`, and `menu` elements must be either an element with a [semantic role][] of `listitem`, or a node that is hidden, such as a `script` or `template` element, an HTML comment, of a text node that consists of only [ascii whitespace][].
 
-TODO: Mention that dl > div has no role and therefor must be a div with no explicit role.
+All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that is a `term`. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.
 
 - [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [HTML Specification - Content model](https://html.spec.whatwg.org/#concept-element-content-model)
@@ -177,7 +177,7 @@ This `ul` element has a `p` [child][] which is not [included in the accessibilit
 
 #### Failed Example 1
 
-TODO
+This `ul` element had a text node as a child, which will be [included in the accessibility tree][].
 
 ```html
 <ol>
@@ -187,7 +187,7 @@ TODO
 
 #### Failed Example 2
 
-TODO
+This `ul` element has `li` [children][child] with a [semantic role][] of `menuitem`, which is not allowed by its [content model][].
 
 ```html
 <ul>
@@ -198,7 +198,7 @@ TODO
 
 #### Failed Example 3
 
-TODO
+This `ol` element has `dt` and `dd` [children][child] which are not allowed by its [content model][].
 
 ```html
 <ol>
@@ -209,7 +209,7 @@ TODO
 
 #### Failed Example 4
 
-TODO
+This `dl` element has `li` [children][child] which are not allowed by its [content model][].
 
 ```html
 <dl>
@@ -220,7 +220,7 @@ TODO
 
 #### Failed Example 5
 
-TODO
+This `dl` element has `dd` [children][child] which are not preceded by an element with a [semantic role][] of `term`. This is not allowed by its [content model][].
 
 ```html
 <dl>
@@ -233,7 +233,7 @@ TODO
 
 #### Inapplicable Example 1
 
-This rule is not applicable to ... TODO
+This `ul` element is not [included in the accessibility tree][].
 
 ```html
 <ul hidden>
@@ -243,7 +243,7 @@ This rule is not applicable to ... TODO
 
 #### Inapplicable Example 2
 
-This rule is not applicable to ... TODO
+This `ul` element is not [included in the accessibility tree][].
 
 ```html
 <ul role="menu">
@@ -253,7 +253,7 @@ This rule is not applicable to ... TODO
 
 #### Inapplicable Example 3
 
-This rule is not applicable to ... TODO
+This element with a `list` role is not a `ul`, `ol`, `dl`, or `menu` element.
 
 ```html
 <div role="list">
@@ -264,6 +264,7 @@ This rule is not applicable to ... TODO
 ```
 
 [html elements]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[explicit role]: #explicit-role 'Definition of explicit role'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'HTML Specification - Descendants'

@@ -27,8 +27,8 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 For each test target, one of the following is true:
 
-- **above minimum**: the [computed][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property; or
 - **not important**: the [computed][] value of its [letter-spacing][] property is not [important][]; or
+- **above minimum**: the [computed][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property; or
 - **cascade**: the [cascaded][] value of its [letter-spacing][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
@@ -61,7 +61,17 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule 
 
 #### Passed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of `2.4px` (assuming a default `medium` font size of `16px`) which is above the recommended minimum, thus it matches the **above minimum** condition.
+This `p` element has a **not [important][]** [computed][] `letter-spacing`, so styles with [author origin][] declared by assistive technologies may override it. This is nonetheless bad practice and sufficient spacing should be used.
+
+```html
+<p style="letter-spacing: 0.1em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Passed Example 2
+
+This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size, which is **above minimum**.
 
 ```html
 <p style="letter-spacing: 0.15em !important">
@@ -69,9 +79,9 @@ This `p` element has a [computed][] `letter-spacing` of `2.4px` (assuming a defa
 </p>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
-This `p` element has a [computed][] [letter-spacing][] of `3px` specified via the style attribute, which is equal to the recommended minimum given the specified font size is 25 pixels, thus it matches the **above minimum** condition.
+This `p` element has a [computed][] [letter-spacing][] of `3px`, which is **above minimum** (of `3px`).
 
 ```html
 <style>
@@ -85,9 +95,9 @@ This `p` element has a [computed][] [letter-spacing][] of `3px` specified via th
 </p>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, more than 0.12 times the font size and therefore matches the **above minimum** condition.
+This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, and is **above minimum**.
 
 ```html
 <p style="letter-spacing: 0.1em !important; letter-spacing: 0.15em !important">
@@ -95,9 +105,9 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 </p>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, more than 0.12 times the font size and therefore matches the **above minimum** condition.
+This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, and is **above minimum**.
 
 ```html
 <p style="letter-spacing: 0.15em !important; letter-spacing: 0.1em">
@@ -105,19 +115,9 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 </p>
 ```
 
-#### Passed Example 5
-
-This `p` element has a not [important][] [computed][] `letter-spacing`, thus it matches the **not important** condition. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
-
-```html
-<p style="letter-spacing: 0.1em">
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
-```
-
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `letter-spacing` property (in the style sheet and in the `style` attribute). The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **not important** (because the [computed][] value comes from the style sheet and is [important][]) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+This `p` element has two [declared][] values for its `letter-spacing` property. The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum**, nor the **not important** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <style>
@@ -133,7 +133,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property (
 
 #### Passed Example 7
 
-Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **above minimum** (because the [computed][] value is only 0.1 times the font size), nor the **cascade** (because the [cascaded][] value comes from the `style` attribute) conditions are matched. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **above minimum**, nor the **cascade** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -145,7 +145,7 @@ Both this `p` and `span` elements match the **not important** condition. For the
 
 #### Passed Example 8
 
-Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Even though the value is too small, styles with [author origin][] declared by assistive technologies may win the [cascade sort][] and override it, thus this may satisfy [Success Criterion 1.4.12 Text Spacing][sc1412] and does not fail this rule. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -159,7 +159,7 @@ Both this `p` and `span` elements match the **not important** condition. For the
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of `1.6px` (assuming a default `medium` font size of `16px`) which is below the recommended minimum.
+This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font size, which is below the recommended minimum.
 
 ```html
 <p style="letter-spacing: 0.1em !important">

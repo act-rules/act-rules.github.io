@@ -28,7 +28,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, one of the following is true:
 
 - **not important**: the [computed][] value of its [word-spacing][] property is not [important][]; or
-- **above minimum**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
+- **wide enough**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
 - **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
@@ -45,9 +45,9 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 ## Background
 
-When a style from [author origin][] is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already above the minimum recommended threshold. Styles (with an [important][] declaration) that are declared with the [user origin][] or [user agent origin][] can win the [cascade sort][] over styles with the [author origin][]. Therefore, if the assistive technology can produce these styles, the rule is not needed.
+When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum recommended threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
 
-CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to limit confusion.
+CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
@@ -61,7 +61,7 @@ Some examples use a fixed font size to demonstrate specific aspects of the rule 
 
 #### Passed Example 1
 
-This `p` element has a **not [important][]** [computed][] `word-spacing`, so styles with [author origin][] declared by assistive technologies may override it. This is nonetheless bad practice and sufficient spacing should be used.
+This `p` element has a **not [important][]** [computed][] `word-spacing`.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -71,7 +71,7 @@ This `p` element has a **not [important][]** [computed][] `word-spacing`, so sty
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, which is **above minimum**.
+This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, which is **wide enough**.
 
 ```html
 <p style="word-spacing: 0.2em !important">
@@ -81,7 +81,7 @@ This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, w
 
 #### Passed Example 3
 
-This `p` element has a [computed][] `word-spacing` of `4px`, which is **above minimum** (`4px`).
+This `p` element has a [computed][] `word-spacing` of `4px`, which is **wide enough** (the threshold is `4px`).
 
 ```html
 <style>
@@ -97,7 +97,7 @@ This `p` element has a [computed][] `word-spacing` of `4px`, which is **above mi
 
 #### Passed Example 4
 
-This `p` element has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is **above minimum**.
+This `p` element has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is **wide enough**.
 
 ```html
 <p style="word-spacing: 0.1em !important; word-spacing: 0.2em !important">
@@ -107,7 +107,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 5
 
-This `p` element has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is **above minimum**.
+This `p` element has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is **wide enough**.
 
 ```html
 <p style="word-spacing: 0.2em !important; word-spacing: 0.1em">
@@ -117,7 +117,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `word-spacing` property. The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **above minimum**, nor the **not important** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
+This `p` element has two [declared][] values for its `word-spacing` property. The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **wide enough**, nor the **not important** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <style>
@@ -133,7 +133,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 7
 
-Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **above minimum**, nor the **cascade** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
+Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **wide enough**, nor the **cascade** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
 
 ```html
 <p style="word-spacing: 0.1em">

@@ -17,6 +17,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  assets:
+    - The "file.svg" icon is part of the Feather Icons package, which uses the [MIT license](https://github.com/feathericons/feather/blob/master/LICENSE).
 ---
 
 ## Applicability
@@ -60,10 +62,9 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <ul role="menu">
 	<li role="menuitem" aria-label="New file">
-		<i class="fa fa-file"></i>
+		<img src="/test-assets/shared/file.svg" alt="" />
 	</li>
 </ul>
 ```
@@ -73,10 +74,9 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has an [accessible name][] because its `aria-labelledby` attribute references an element with text content.
 
 ```html
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <ul role="menu">
 	<li role="menuitem" aria-labelledby="newfile">
-		<i class="fa fa-file"></i>
+		<img src="/test-assets/shared/file.svg" alt="" />
 		<span id="newfile" hidden>New file</span>
 	</li>
 </ul>
@@ -87,10 +87,9 @@ This element with the `menuitem` role has an [accessible name][] because its `ar
 This element with the `menuitem` role has an [accessible name][] because of its `title` attribute.
 
 ```html
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <ul role="menu">
 	<li role="menuitem" title="New file">
-		<i class="fa fa-file"></i>
+		<img src="/test-assets/shared/file.svg" alt="" />
 	</li>
 </ul>
 ```
@@ -102,10 +101,9 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <ul role="menu">
 	<li role="menuitem">
-		<i class="fa fa-file"></i>
+		<img src="/test-assets/shared/file.svg" alt="" />
 	</li>
 </ul>
 ```
@@ -123,10 +121,9 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 			top: -9999px;
 		}
 	</style>
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<ul role="menu" class="offscreen">
 		<li role="menuitem">
-			<i class="fa fa-file"></i>
+			<img src="/test-assets/shared/file.svg" alt="" />
 		</li>
 	</ul>
 </html>
@@ -136,13 +133,24 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 
 #### Inapplicable Example 1
 
+The `li` element has a `listitem` [semantic role][], even as a child of a `menu` element.
+
+```html
+<menu>
+	<li>
+		<a href="#">New file</a>
+	</li>
+</menu>
+```
+
+#### Inapplicable Example 2
+
 This element with the `menuitem` role does not need an [accessible name][] because it is not [included in the accessibility tree][].
 
 ```html
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <ul role="menu" hidden>
 	<li role="menuitem">
-		<i class="fa fa-file"></i>
+		<img src="/test-assets/shared/file.svg" alt="" />
 	</li>
 </ul>
 ```

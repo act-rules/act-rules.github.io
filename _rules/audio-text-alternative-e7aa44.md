@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which all of the following are true:
+This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which one of the following are true:
 
 - the element is playing; or,
 - has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).

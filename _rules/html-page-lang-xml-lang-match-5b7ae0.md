@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which one of the following is true:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all of the following is true:
 
 - the [document element][] is in a [top-level browsing context][]; and
 - the [document element][] has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type][] of `text/html`; and

@@ -12,8 +12,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
-  - DOM Tree
   - CSS Styling
+  - DOM Tree
 acknowledgments:
   authors:
     - Wilco Fiers
@@ -29,7 +29,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-The rule assumes that all menuitems are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). If an element has a role of `menuitem` that would not be perceived as a single control by users, [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) would not apply and so failing this rule would not result in a conformance issue.
+This rule assumes that all menuitems are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). If an element has a role of `menuitem` that would not be perceived as a single control by users, [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) would not apply and so failing this rule would not result in a conformance issue.
 
 ## Accessibility Support
 
@@ -70,7 +70,7 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 
 #### Passed Example 3
 
-This element with the `menuitem` role has an [accessible name][] because its `aria-labelledby` attribute references a `div` element with text content.
+This element with the `menuitem` role has an [accessible name][] because its `aria-labelledby` attribute references an element with text content.
 
 ```html
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />

@@ -33,7 +33,7 @@ This rule applies to any [HTML elements][] with a [hidden state][] of "false", w
 
 For each [child][] in the [flat tree][] of each test target, one of the following is true:
 
-- **implicit role**: the [child][] has no [explicit role][] and follows the [content model][]; or
+- **implicit role**: the [child][] follows the [content model][] and has no [explicit role][]; or
 - **explicit role**: the [child][] has an [explicit role][] which is the [implicit ARIA semantics][] for an HTML element included in the [content model][] for the test target; or
 - **hidden**: the [child][] is not [included in the accessibility tree][].
 
@@ -47,9 +47,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-All children of `ul`, `ol`, and `menu` elements must be either an element with a [semantic role][] of `listitem`, or a node that is hidden, such as a `script` or `template` element, an HTML comment, of a text node that consists of only [ascii whitespace][].
+All children of `ul`, `ol`, and `menu` elements must be either an element with a [semantic role][] of `listitem`, or a node that is hidden, such as a `script` or `template` element, an HTML comment, or a text node that consists of only [ascii whitespace][].
 
-All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that is a `term`. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.
+All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that has a `term` role. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.
 
 - [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [HTML Specification - Content model](https://html.spec.whatwg.org/#concept-element-content-model)
@@ -114,7 +114,7 @@ This `ol` element has `span` [children][child] with an [explicit role][] or `lis
 
 #### Passed Example 6
 
-This `ul` element has `li` and `template` [children][child]. `li` is explicitly allowed by the `ul` [content model], `template` is a script-supported element, which is also allowed by the `ul` content model.
+This `ul` element has `li` and `template` [children][child]. `li` is explicitly allowed by the `ul` [content model][], `template` is a script-supported element, which is also allowed by the `ul` content model.
 
 ```html
 <ol>
@@ -152,7 +152,7 @@ This `dl` element has `div` [children][child] with an [explicit role][] of `term
 
 #### Passed Example 9
 
-This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` has `div` [children][child] with an [explicit role][] of `term` and `definition`. The [content model][] of `div` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
+This `dl` element has `div` [child][child] which is allowed by its [content model][]. The `div` element has `div` [children][child] with an [explicit role][] of `term` and `definition`. The [content model][] of `div` allows `dt` and `dd` elements which have [implicit ARIA semantics][] of `term` and `definition`.
 
 ```html
 <dl>
@@ -165,7 +165,7 @@ This `dl` element has `div` [child][child] which is allowed by its [content mode
 
 #### Passed Example 10
 
-This `ul` element has a `p` [child][] which is not [included in the accessibility tree][].
+This `ul` element has a `p` [child][] which is not [included in the accessibility tree][] because of the `hidden` attribute.
 
 ```html
 <ul>
@@ -177,7 +177,7 @@ This `ul` element has a `p` [child][] which is not [included in the accessibilit
 
 #### Failed Example 1
 
-This `ul` element had a text node as a child, which will be [included in the accessibility tree][].
+This `ul` element had a text node as a child, which will be [included in the accessibility tree][]. Except if they only have [ascii whitespace][], text nodes are not allowed by the [content model][] of `ul` elements.
 
 ```html
 <ol>
@@ -243,7 +243,7 @@ This `ul` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 2
 
-This `ul` element is not [included in the accessibility tree][].
+This `ul` has an [explicit role][] of menu. The `ul` content model does not need to be applied.
 
 ```html
 <ul role="menu">
@@ -275,4 +275,3 @@ This element with a `list` role is not a `ul`, `ol`, `dl`, or `menu` element.
 [implicit aria semantics]: https://www.w3.org/TR/html-aria/#dfn-implicit-aria-semantics 'ARIA in HTML, Implicit ARIA semantics, draft 2020/11/30'
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/11/30'
 [element]: https://dom.spec.whatwg.org/#element 'DOM element, 2020/11/30'
-

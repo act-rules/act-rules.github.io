@@ -3,7 +3,7 @@ id: 047fe0
 name: Document has heading for main section of content
 rule_type: atomic
 description: |
-  This rule checks that the main section of content starts with a heading
+  This rule checks that the non-repeated content starts with a heading
 accessibility_requirements:
   wcag-technique:H69: # Providing heading elements at the beginning of each section of content
     forConformance: false
@@ -28,7 +28,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-For each test target, all the following are true for the first non-[decorative][] node in it which is inside the [main block of content][] of this test target and has a non-empty [accessible name][]:
+For each test target, all the following are true for the first non-[decorative][] node in it which is not inside a [block of repeated content][] of this test target and has a non-empty [accessible name][]:
 
 - the node has a [semantic role][] of `heading`; and
 - the node is [visible][]; and
@@ -36,12 +36,12 @@ For each test target, all the following are true for the first non-[decorative][
 
 ## Assumptions
 
-- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
+- This rule assumes that the first non-repeated content is starting a new section of content. If this is not the case, it is possible to fail the rule while still passing [Technique H69: Providing heading elements at the beginning of each section of content][tech h69].
 
 ## Accessibility Support
 
-- Having a heading for the [main block of content][] is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for heading navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
+- Having a heading for the non-repeated content is sufficient to pass [Success Criterion 2.4.1: Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for headings navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 - When headings are rendered without sufficient visual cues, they are not perceived as headings by sighted users. In this case, passing this rule might still fail [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] and [Success Criterion 2.4.1: Bypass blocks][sc241]. Additionally, this is likely a failure of [Success Criterion 1.3.1: Info and Relationships][sc131].
 
 ## Background
@@ -54,7 +54,7 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 
 In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided.
 
-Unless otherwise specified, the [main block of content][] in the test cases corresponds to the `<div id="main">` element.
+Unless otherwise specified, the non-repeated content in the test cases corresponds to the `<div id="main">` element.
 
 ## Test Cases
 
@@ -62,7 +62,7 @@ Unless otherwise specified, the [main block of content][] in the test cases corr
 
 #### Passed Example 1
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content.
 
 ```html
 <html>
@@ -91,7 +91,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 2
 
-This [document][] has a `h2` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
+This [document][] has a `h2` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content.
 
 ```html
 <html>
@@ -122,7 +122,7 @@ This [document][] has a `h2` heading, which is [visible][] and [included in the 
 
 #### Passed Example 3
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content.
 
 **Note:** In this [document][], the [blocks of content][block of content] are identified by the level 1 heading at their start.
 
@@ -153,7 +153,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 4
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The heading is not the first element of the [main block of content][], but it is the first one which is non-[decorative][] and has a non-empty [accessible name][] (inherited from its content).
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. The heading is not the first element of the non-repeated content, but it is the first one which is non-[decorative][] and has a non-empty [accessible name][] (inherited from its content).
 
 ```html
 <html>
@@ -183,7 +183,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 5
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The image at the start of the [main block of content][] has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] in is the `h1` element
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. The image at the start of the non-repeated content has an empty [accessible name][]. Thus, the first node with a non-empty [accessible name][] in is the `h1` element
 
 ```html
 <html>
@@ -200,7 +200,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 		</nav>
 
 		<div id="main">
-			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" role="presentation" alt="" />
+			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
@@ -213,7 +213,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 6
 
-This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. Note that re-purposing an element instead of using native HTML is a violation of the [First Rule of ARIA Use](https://www.w3.org/TR/using-aria/#rule1) and should normally be avoided.
+This [document][] has a `div` element with a role of `heading`, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. Note that re-purposing an element instead of using native HTML is a violation of the [First Rule of ARIA Use](https://www.w3.org/TR/using-aria/#rule1) and should normally be avoided.
 
 ```html
 <html>
@@ -242,7 +242,7 @@ This [document][] has a `div` element with a role of `heading`, which is [visibl
 
 #### Passed Example 7
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The [accessible name][] of the image (given by the `alt` attribute) is also the [accessible name][] of the heading.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. The [accessible name][] of the image (given by its `alt` attribute) is also the [accessible name][] of the heading.
 
 ```html
 <html>
@@ -276,7 +276,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 8
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its [main block of content][]. The `span` before it is [decorative][] and thus ignored by this rule.
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. The `span` before it is [decorative][] and thus ignored by this rule.
 
 ```html
 <html>
@@ -308,7 +308,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Failed Example 1
 
-In this document, inside the [main block of content][], the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
+In this document, inside the non-repeated content, the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
 
 ```html
 <html>
@@ -336,7 +336,7 @@ In this document, inside the [main block of content][], the first node with a no
 
 #### Failed Example 2
 
-In this document, inside the [main block of content][], the first node with a non-empty [accessible name][] is the image, not the heading. The image is not [decorative][], thus users navigating by heading will skip some meaningful content and lose information.
+In this document, inside the non-repeated content, the first node with a non-empty [accessible name][] is the image, not the heading. The image is not [decorative][], thus users navigating by heading will skip some meaningful content and lose information.
 
 ```html
 <html>
@@ -366,7 +366,7 @@ In this document, inside the [main block of content][], the first node with a no
 
 #### Failed Example 3
 
-The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off screen).
+The non-repeated content of this [document][] starts with a `h1` heading, but it is not [visible][] (because it is off-screen).
 
 ```html
 <html>
@@ -395,7 +395,7 @@ The [main block of content][] of this [document][] starts with a `h1` heading, b
 
 #### Failed Example 4
 
-The [main block of content][] of this [document][] starts with a `h1` heading, but it is not [included in the accessibility tree][] (because of the `aria-hidden` attribute).
+The non-repeated content of this [document][] starts with a `h1` heading, but it is not [included in the accessibility tree][] (because of the `aria-hidden` attribute).
 
 ```html
 <html>
@@ -435,13 +435,13 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [block of content]: #block-of-content 'Definition of Block of Content'
+[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass Blocks'

@@ -3,7 +3,7 @@ id: ye5d6e
 name: Document has an instrument to move focus to main block of content
 rule_type: atomic
 description: |
-  This rule checks that there is an instrument to move focus to the main content of the page
+  This rule checks that there is an instrument to move focus to non-repeated content in the page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
     forConformance: false
@@ -38,7 +38,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each test target, all the following are true for the first [block of repeated content][] with [perceivable content][] [at its end][at the end] which is not part of any [block of repeated content][]:
+For each test target, all the following are true for the first [block of repeated content][] (in the [flat tree][]) with [perceivable content][] [at its end][at the end] which is not part of any [block of repeated content][]:
 
 - there exists at least one [keyboard actionable][] [instrument][] inside the test target to move focus [at the end][] of this [block of content][]; and
 - there exists at least one [instrument][] inside the test target to move focus [at the end][] of this [block of content][]; and this [instrument][] is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to non-repeated content.
@@ -64,8 +64,6 @@ In most practical cases, the same [instrument][] is used to fulfill both conditi
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
 
 In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
-
-Each test case contains a link to the second chapter of the book so that each `aside` element is a [block of repeated content][].
 
 Unless specified, the non-repeated content of each test case is defined by its `<div id="main">` element.
 
@@ -603,6 +601,7 @@ This [document][] is not an [HTML web page][].
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

@@ -1,6 +1,6 @@
 ---
 id: 047fe0
-name: Document has heading for main section of content
+name: Document has heading for the main area of content
 rule_type: atomic
 description: |
   This rule checks that the non-repeated content starts with a heading

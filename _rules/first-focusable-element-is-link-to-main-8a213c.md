@@ -1,6 +1,6 @@
 ---
 id: 8a213c
-name: First focusable element is link to main content
+name: First focusable element is link to main area of content
 rule_type: atomic
 description: |
   This rule checks that the first focusable element is a link to non-repeated content in the page
@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to main block of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of content_][bypass blocks].
+This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to main area of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of content_][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 

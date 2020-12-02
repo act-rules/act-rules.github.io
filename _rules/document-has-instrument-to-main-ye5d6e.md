@@ -1,6 +1,6 @@
 ---
 id: ye5d6e
-name: Document has an instrument to move focus to main area of content
+name: Document has an instrument to move focus to the main area of content
 rule_type: atomic
 description: |
   This rule checks that there is an instrument to move focus to non-repeated content in the page

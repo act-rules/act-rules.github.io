@@ -17,6 +17,8 @@ The _content that becomes visible_ is the [root][] element, if one exists, of th
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [root]: https://dom.spec.whatwg.org/#concept-tree-root 'Definition of root'
+[text nodes]: https://dom.spec.whatwg.org/#text 'Definition of DOM text'
 [tree]: https://dom.spec.whatwg.org/#concept-tree 'Definition of tree'
 [values]: https://dom.spec.whatwg.org/#concept-attribute-value 'Definition of attribute value'
+[visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page'

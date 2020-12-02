@@ -21,6 +21,6 @@ Several nodes may be at the start of a [block][], especially if there are severa
 Order ("first", "before", …) in this definition is [tree order][] in the [flat tree][].
 
 [block]: #block-of-content 'Definition of Block of Content'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[perceivable content]: #perceivable-content 'Definition of perceivable content'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
+[perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of Tree Order'

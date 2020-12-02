@@ -145,8 +145,10 @@ This element does not cause [content to become visible][content that becomes vis
 
 [adjacent]: #adjacent 'Definition of adjacent'
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
+[center]: #center 'Definition of center of a bounding box'
 [content that becomes invisible]: #content-that-becomes-invisible 'Definition of content that becomes invisible'
 [content that becomes visible]: #content-that-becomes-visible 'Definition of content that becomes visible'
 [hovered]: #hovered 'Definition of hovered'
 [overlaps]: #overlap 'Definition of overlap'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'
+[visible]: #visible 'Definition of visible'

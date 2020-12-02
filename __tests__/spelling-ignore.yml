@@ -80,6 +80,7 @@
 - getModifierState
 - accesskey
 - Accesskeys
+- getBoundingClientRect
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

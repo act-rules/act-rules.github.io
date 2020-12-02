@@ -21,4 +21,5 @@ The _content that becomes invisible_ is the [root][] element, if one exists, of 
 [tree]: https://dom.spec.whatwg.org/#concept-tree 'Definition of tree'
 [values]: https://dom.spec.whatwg.org/#concept-attribute-value 'Definition of attribute value'
 [visible]: #visible 'Definition of visible'
+[visible text content]: #visible-text-content 'Definition of visible text content'
 [web page]: #web-page-html 'Definition of web page'

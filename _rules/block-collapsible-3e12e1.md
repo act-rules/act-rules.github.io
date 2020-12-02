@@ -25,17 +25,15 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectation 1
+## Expectation
 
-For each [block of repeated content][] in the test target which is before the [main block of content][], there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][].
+For each [block of repeated content][] in each test target, which is before (in [flat tree][] order) at least one [perceivable content][] belonging to no [block of repeated content][], all the following are true:
 
-## Expectation 2
-
-For each [block of repeated content][] in the test target which is before the [main block of content][], there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
+- there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][]; and
+- there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 
-- This rule assumes that there is exactly one [main block of content][] inside each [HTML web page][].
 - This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires the that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
 
 ## Accessibility Support
@@ -44,9 +42,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both expectations for a given [block of repeated content][] since it would be wasted effort to duplicate the work.
+Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both conditions for a given [block of repeated content][].
 
-Note that if there is no [block of repeated content][] before the [main block of content][], then the rule automatically passes. It is possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the [main block of content][].
+Note that if there is no [block of repeated content][] before the non-repeated content, then the rule automatically passes. It is still possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the non-repeated content.
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive, hence this rule doesn't require it either. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
@@ -56,7 +54,7 @@ Note that if there is no [block of repeated content][] before the [main block of
 
 In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
 
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `<div id="main">` element is the [main block of content][].
+In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `<div id="main">` element is non-repeated content.
 
 ## Test Cases
 
@@ -456,13 +454,14 @@ This [document][] is not an [HTML web page][].
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
-[main block of content]: #main-block-of-content 'Definition of Main Block of Content'
+[perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'

@@ -37,7 +37,7 @@ Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
-- **line wrapping**: A [computed][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
+- **line wrapping**: An [actual line height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
 
 ## Assumptions
 
@@ -48,6 +48,8 @@ If any of the following assumptions is true, failing this rule may not result in
 - [Text nodes][text node] can not be [clipped by overflow][clipped] without loss of information, except for [text nodes][text node] with an [ancestor][] with `aria-hidden` set to `true`, or when specific styles have been applied to ensure text is clipped cleanly (text-overflow, line wrapping or hidden text).
 
 - While [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text) does not explicitly mention which viewport size has to be resized up to 200%, it is assumed that a [viewport size][] of 1280 by 1024 is applicable. A 1280 by 1024 [viewport size][] is explicitly mentioned under [success criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow).
+
+- This rule assumes that when the [computed][] value of the [line-height][] property is `normal`, user agents chose a [used][] value close to 1.2 times the font size. For fonts and user agents where this value is larger, this rule may fail while [Success Criterion 1.4.4 Resize Text](https://www.w3.org/TR/WCAG21/#resize-text) is still satisfied.
 
 ## Accessibility Support
 
@@ -111,6 +113,27 @@ This [text node][] is restricted to a single line, by setting a `line-height` th
 ```
 
 #### Passed Example 4
+
+This [text node][] is restricted to a single line, by setting an [actual line height][] that is the same as the `height`. A link to a full version of the poem is also provided.
+
+```html
+<style>
+	.wordClip {
+		overflow: hidden;
+		word-wrap: break-word;
+		height: 18px;
+		line-height: normal;
+		font-size: 15px;
+	}
+</style>
+<div class="wordClip">
+	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
+	lore. While I nodded, nearly napping, suddenly there came a tapping.
+</div>
+<a href="/test-assets/59br37/poem.html">Full text of the poem</a>
+```
+
+#### Passed Example 5
 
 This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [viewport size][] of 640 by 512.
 
@@ -231,6 +254,7 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 <a href="/"> Next<span class="mobile-hidden">: Web Content Accessibility Guidelines 2.1</span> </a>
 ```
 
+[actual line height]: #actual-line-height 'Definition of Actual Line Height'
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [clipped]: #clipped-by-overflow
 [visible]: #visible
@@ -246,3 +270,4 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [text-overflow]: https://www.w3.org/TR/css-ui-3/#text-overflow
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [content box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-content-box
+[used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'

@@ -35,7 +35,7 @@ For each [child][] in the [flat tree][] of each test target, one of the followin
 
 - **implicit role**: the [child][] follows the [content model][] and has no [explicit role][]; or
 - **explicit role**: the [child][] has an [explicit role][] which is the [implicit ARIA semantics][] for an HTML element included in the [content model][] for the test target; or
-- **hidden**: the [child][] is not [included in the accessibility tree][].
+- **not included**: the [child][] is not [included in the accessibility tree][].
 
 ## Assumptions
 

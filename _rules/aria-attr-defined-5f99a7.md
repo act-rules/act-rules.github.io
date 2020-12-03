@@ -14,7 +14,7 @@ acknowledgments:
 
 ## Applicability
 
-Any attribute that starts with `aria-`.
+This rule applies to any attribute that starts with `aria-`.
 
 ## Expectation
 

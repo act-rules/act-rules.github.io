@@ -43,7 +43,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role][] of `link` that is [included in the accessibility tree][].
+This rule applies to any HTML element with the [semantic role][] of `link` that is [included in the accessibility tree][].
 
 ## Expectation
 

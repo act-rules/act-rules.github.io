@@ -53,7 +53,7 @@ CSS specifications define each declaration as being either [important][] (if is 
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-Some examples use a fixed font size to demonstrate specific aspects of the rule (notably in order to provide a [computed][] value for the property). This is in general not a very good practice and should be avoided.
+Some examples use a fixed font size to demonstrate specific aspects of the rule (notably in order to provide a [computed][] value for the property). Some Passed Examples set the `word-spacing` property below the minimum, but do so in a way that can be overridden by styles with [author origin][]. These are however not very good practices and should be avoided.
 
 ## Test Cases
 
@@ -117,7 +117,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `word-spacing` property. The one from the style sheet wins the [cascade sort][] because it is [important][]. Since it is not [declared][] via the `style` attribute, it matches the **cascade** condition. Note that neither the **wide enough**, nor the **not important** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
+The [cascaded][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the **cascade** condition.
 
 ```html
 <style>
@@ -133,7 +133,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 7
 
-Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `inherit !important`, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Note that neither the **wide enough**, nor the **cascade** conditions are matched. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
+The [computed][] value of the `word-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -145,7 +145,7 @@ Both this `p` and `span` elements match the **not important** condition. For the
 
 #### Passed Example 8
 
-Both this `p` and `span` elements match the **not important** condition. For the `span`, the [cascaded][] value is `unset !important`, which is equivalent as `inherit` since it is an inherited property, thus the [computed][] value is the [inherited][] value, that is the [computed][] value of its parent, and it is not [important][]. Styles with [author origin][] declared by assistive technologies may override this style. This is nonetheless bad practice and sufficient spacing should be used.
+The [computed][] value of the `word-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -210,7 +210,9 @@ This `p` element has a [computed][] `word-spacing` of 0.
 There is no HTML element.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg"></svg>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <text y="20" style="word-spacing: 0.1em">ACT rules</text>
+</svg>
 ```
 
 #### Inapplicable Example 2
@@ -234,16 +236,6 @@ This `p` element is not [visible][] because it is positioned off-screen.
 ```
 
 #### Inapplicable Example 4
-
-This `p` element does not have a `style` attribute specified.
-
-```html
-<p>
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
-```
-
-#### Inapplicable Example 5
 
 The `style` attribute of this `p` element does not [declare][declared] the `word-spacing` property.
 

@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#start-tags) in an HTML or SVG document.
+This rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#start-tags) in an HTML or SVG document.
 
 **Note:** This rule cannot be tested on the DOM Tree because the browser removes duplicates of any attribute that is already present on an element.
 

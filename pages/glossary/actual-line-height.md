@@ -10,9 +10,9 @@ input_aspects:
 
 The _actual line height_ of an element is obtained from the [computed value][] of its `line-height` property as follows:
 
-- if the value is a length, then the actual line height is that length;
-- if the value is a number, then the actual line height is that number multiplied by the [computed value][] of the `font-size` property of the element;
-- if the value is the keyword `normal`, then the actual line height is 1.2 times the [computed value][] of the `font-size` property of the element.
+- if the value is a length, then the _actual line height_ is that length;
+- if the value is a number, then the _actual line height_ is that number multiplied by the [computed value][] of the `font-size` property of the element;
+- if the value is the keyword `normal`, then the _actual line height_ is 1.2 times the [computed value][] of the `font-size` property of the element.
 
 #### Background
 

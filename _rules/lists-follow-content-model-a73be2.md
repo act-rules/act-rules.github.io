@@ -47,6 +47,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+WHile the content model in HTML only includes native HTML elements, this rule allows authors to use ARIA roles that map to those native HTML elements as well. This can sometimes be useful with custom elements, and since these are predictable, it should not impact accessibility adversely.
+
 All children of `ul`, `ol`, and `menu` elements must be either an element with a [semantic role][] of `listitem`, or a node that is hidden, such as a `script` or `template` element, an HTML comment, or a text node that consists of only [ascii whitespace][].
 
 All children of a `dl` element must be an element with a [semantic role][] of `term` or `definition`, a `div` with no [explicit role][], or a node that is hidden. If the child has a `definition` role, it must have a previous sibling that has a `term` role. If the child is a `div` element with no [explicit role][] it is treated as a `term` and `definition` group. The children of the `div` have the same requirement as the `dl` element, except that it does not allow another `div`.

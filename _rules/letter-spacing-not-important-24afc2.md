@@ -53,8 +53,6 @@ CSS specifications define each declaration as being either [important][] (if is 
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-Some examples use a fixed font size to demonstrate specific aspects of the rule (notably in order to provide a [computed][] value for the property). Some Passed Examples set the `letter-spacing` property below the minimum, but do so in a way that can be overridden by styles with [author origin][]. These are however not very good practices and should be avoided.
-
 ## Test Cases
 
 ### Passed

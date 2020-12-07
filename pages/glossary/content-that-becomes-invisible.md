@@ -8,10 +8,10 @@ input_aspects:
   - DOM tree
 ---
 
-The _content that becomes invisible_ is the [root][] element, if one exists, of the [tree][] that contains all elements that, as result of an [event][] [firing][], meet any of the following:
+The _content that becomes invisible_ is the [root][] element of the [tree][], if a [tree][] exists, that contains all elements that, after half a second of an [event][] [firing][], meet any of the following:
 
-- the element has [visible text content][] and is removed from the [web page][] where the [event][] was [fired][firing]; or
-- the element [attributes][]' [values][] are modified in a way that cause some or all of its [text nodes][] to stop being [visible][].
+- the element is removed from the [web page][] where the [event][] was [fired][firing] and had [visible text content][]; or
+- the element has [attributes][] whose [values][] changed from what they were before the [event][] [firing][] and the change caused some or all of the element's [text nodes][] to stop being [visible][].
 
 [attributes]: https://dom.spec.whatwg.org/#concept-attribute 'Definition of attribute'
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'

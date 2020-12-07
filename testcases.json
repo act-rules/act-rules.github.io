@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 877,
+  "count": 901,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -4917,10 +4917,10 @@
       }
     },
     {
-      "testcaseId": "cf9de7d82f732973e3fddb430d85fa8789c48131",
+      "testcaseId": "52b44481e1067806d435c1020422dc401c9a23b4",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/de46e4/cf9de7d82f732973e3fddb430d85fa8789c48131.html",
-      "relativePath": "testcases/de46e4/cf9de7d82f732973e3fddb430d85fa8789c48131.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/52b44481e1067806d435c1020422dc401c9a23b4.html",
+      "relativePath": "testcases/de46e4/52b44481e1067806d435c1020422dc401c9a23b4.html",
       "expected": "passed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -4941,10 +4941,10 @@
       }
     },
     {
-      "testcaseId": "b92841001ea5d712b9b62589e4e48dff7e393f51",
+      "testcaseId": "883ce158e792551e72924b127e7e1673949ff4ef",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/de46e4/b92841001ea5d712b9b62589e4e48dff7e393f51.html",
-      "relativePath": "testcases/de46e4/b92841001ea5d712b9b62589e4e48dff7e393f51.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/883ce158e792551e72924b127e7e1673949ff4ef.html",
+      "relativePath": "testcases/de46e4/883ce158e792551e72924b127e7e1673949ff4ef.html",
       "expected": "passed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -4965,10 +4965,10 @@
       }
     },
     {
-      "testcaseId": "07b24ea5197c5ac348381651c9b71b43c5752b5b",
+      "testcaseId": "2c6ce29c2934936b9dd032e87695bffae9bc514e",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/de46e4/07b24ea5197c5ac348381651c9b71b43c5752b5b.html",
-      "relativePath": "testcases/de46e4/07b24ea5197c5ac348381651c9b71b43c5752b5b.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/2c6ce29c2934936b9dd032e87695bffae9bc514e.html",
+      "relativePath": "testcases/de46e4/2c6ce29c2934936b9dd032e87695bffae9bc514e.html",
       "expected": "passed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -4989,10 +4989,10 @@
       }
     },
     {
-      "testcaseId": "69ae4863a438c961dc871a3b8e2e90fef9548aa1",
+      "testcaseId": "ca2f0f03e0dddd80cef6554814b919fac1666c02",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/de46e4/69ae4863a438c961dc871a3b8e2e90fef9548aa1.html",
-      "relativePath": "testcases/de46e4/69ae4863a438c961dc871a3b8e2e90fef9548aa1.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/ca2f0f03e0dddd80cef6554814b919fac1666c02.html",
+      "relativePath": "testcases/de46e4/ca2f0f03e0dddd80cef6554814b919fac1666c02.html",
       "expected": "failed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -5013,10 +5013,10 @@
       }
     },
     {
-      "testcaseId": "829f78eec122ba83ecefd1426be1af5ae7b33e15",
+      "testcaseId": "6eeab3c1580d2ee40e3adb6912c1ec159d6fbb26",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/de46e4/829f78eec122ba83ecefd1426be1af5ae7b33e15.html",
-      "relativePath": "testcases/de46e4/829f78eec122ba83ecefd1426be1af5ae7b33e15.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/6eeab3c1580d2ee40e3adb6912c1ec159d6fbb26.html",
+      "relativePath": "testcases/de46e4/6eeab3c1580d2ee40e3adb6912c1ec159d6fbb26.html",
       "expected": "failed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -5037,10 +5037,10 @@
       }
     },
     {
-      "testcaseId": "e0a8e368d7aba4e94771903d5e994766f6548348",
+      "testcaseId": "e47a3d36d4f2a25286c2d0641968aa26f83dfbac",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
-      "relativePath": "testcases/de46e4/e0a8e368d7aba4e94771903d5e994766f6548348.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/e47a3d36d4f2a25286c2d0641968aa26f83dfbac.html",
+      "relativePath": "testcases/de46e4/e47a3d36d4f2a25286c2d0641968aa26f83dfbac.html",
       "expected": "failed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -5061,10 +5061,58 @@
       }
     },
     {
-      "testcaseId": "432c0b405c115c1bbf8819a8a9a7b58eeb62a289",
+      "testcaseId": "fd281d0b30ffe5442e38b6a109ab75c2a88ad21f",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/de46e4/fd281d0b30ffe5442e38b6a109ab75c2a88ad21f.html",
+      "relativePath": "testcases/de46e4/fd281d0b30ffe5442e38b6a109ab75c2a88ad21f.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Element with `lang` attribute has valid language tag",
+      "rulePage": "https://act-rules.github.io/rules/de46e4",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4c655a5da71710e6ca6245186af7f5963e89b332",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/de46e4/4c655a5da71710e6ca6245186af7f5963e89b332.html",
+      "relativePath": "testcases/de46e4/4c655a5da71710e6ca6245186af7f5963e89b332.html",
+      "expected": "failed",
+      "ruleId": "de46e4",
+      "ruleName": "Element with `lang` attribute has valid language tag",
+      "rulePage": "https://act-rules.github.io/rules/de46e4",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dbbbdb101cce4c8be156e489fe06648827fe02d3",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/de46e4/432c0b405c115c1bbf8819a8a9a7b58eeb62a289.html",
-      "relativePath": "testcases/de46e4/432c0b405c115c1bbf8819a8a9a7b58eeb62a289.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/dbbbdb101cce4c8be156e489fe06648827fe02d3.html",
+      "relativePath": "testcases/de46e4/dbbbdb101cce4c8be156e489fe06648827fe02d3.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -5085,10 +5133,34 @@
       }
     },
     {
-      "testcaseId": "cd3a730e7cee34f8be352285d57c9f0a588c2b8d",
+      "testcaseId": "ac287c65840c420b22eb9775f6b2db4f035ddc35",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/de46e4/cd3a730e7cee34f8be352285d57c9f0a588c2b8d.html",
-      "relativePath": "testcases/de46e4/cd3a730e7cee34f8be352285d57c9f0a588c2b8d.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/ac287c65840c420b22eb9775f6b2db4f035ddc35.html",
+      "relativePath": "testcases/de46e4/ac287c65840c420b22eb9775f6b2db4f035ddc35.html",
+      "expected": "inapplicable",
+      "ruleId": "de46e4",
+      "ruleName": "Element with `lang` attribute has valid language tag",
+      "rulePage": "https://act-rules.github.io/rules/de46e4",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d5fb36fa7363214287d80d93418c909746c92da4",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/de46e4/d5fb36fa7363214287d80d93418c909746c92da4.html",
+      "relativePath": "testcases/de46e4/d5fb36fa7363214287d80d93418c909746c92da4.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -14596,6 +14668,636 @@
       }
     },
     {
+      "testcaseId": "ecb60851cda1b083b609838da6b2a280705a3b97",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/9bd38c/ecb60851cda1b083b609838da6b2a280705a3b97.html",
+      "relativePath": "testcases/9bd38c/ecb60851cda1b083b609838da6b2a280705a3b97.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "460e5a74efac28633b479c2dc6486c73b1fe7733",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/9bd38c/460e5a74efac28633b479c2dc6486c73b1fe7733.html",
+      "relativePath": "testcases/9bd38c/460e5a74efac28633b479c2dc6486c73b1fe7733.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7d5883b89c1add59826f35a9c4a6df9655bf2f04",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/9bd38c/7d5883b89c1add59826f35a9c4a6df9655bf2f04.html",
+      "relativePath": "testcases/9bd38c/7d5883b89c1add59826f35a9c4a6df9655bf2f04.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8984d78d47db216933bfc40771064e1c6ced4272",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/9bd38c/8984d78d47db216933bfc40771064e1c6ced4272.html",
+      "relativePath": "testcases/9bd38c/8984d78d47db216933bfc40771064e1c6ced4272.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c69cc5cc70ccef9f00d45c86de9191b9ebfcb12b",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/9bd38c/c69cc5cc70ccef9f00d45c86de9191b9ebfcb12b.html",
+      "relativePath": "testcases/9bd38c/c69cc5cc70ccef9f00d45c86de9191b9ebfcb12b.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "26a339a9cfb88a9bc9000eb3c0b7760246c3757d",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/9bd38c/26a339a9cfb88a9bc9000eb3c0b7760246c3757d.html",
+      "relativePath": "testcases/9bd38c/26a339a9cfb88a9bc9000eb3c0b7760246c3757d.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c5d2d7390818f2ed6bac0b35168f13177cae96ea",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/9bd38c/c5d2d7390818f2ed6bac0b35168f13177cae96ea.html",
+      "relativePath": "testcases/9bd38c/c5d2d7390818f2ed6bac0b35168f13177cae96ea.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b5ed9cf394a83817c185f66718bb3cc0ad14aad6",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/9bd38c/b5ed9cf394a83817c185f66718bb3cc0ad14aad6.html",
+      "relativePath": "testcases/9bd38c/b5ed9cf394a83817c185f66718bb3cc0ad14aad6.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7e011f692bc27b5272ef49c07f2219e6259808d1",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/9bd38c/7e011f692bc27b5272ef49c07f2219e6259808d1.html",
+      "relativePath": "testcases/9bd38c/7e011f692bc27b5272ef49c07f2219e6259808d1.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7d7798b9f2429acc4f5d38cd028c62ded19af5fb",
+      "testcaseTitle": "Passed Example 10",
+      "url": "https://act-rules.github.io/testcases/9bd38c/7d7798b9f2429acc4f5d38cd028c62ded19af5fb.html",
+      "relativePath": "testcases/9bd38c/7d7798b9f2429acc4f5d38cd028c62ded19af5fb.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "127954e05b9d8dff755421eb077fa955a67a0e63",
+      "testcaseTitle": "Passed Example 11",
+      "url": "https://act-rules.github.io/testcases/9bd38c/127954e05b9d8dff755421eb077fa955a67a0e63.html",
+      "relativePath": "testcases/9bd38c/127954e05b9d8dff755421eb077fa955a67a0e63.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ce0b9e2381426b3463aceb9b238d6d25bbebb575",
+      "testcaseTitle": "Passed Example 12",
+      "url": "https://act-rules.github.io/testcases/9bd38c/ce0b9e2381426b3463aceb9b238d6d25bbebb575.html",
+      "relativePath": "testcases/9bd38c/ce0b9e2381426b3463aceb9b238d6d25bbebb575.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c534ea333db860a5f9b8f9d06e0c74e78f467fd9",
+      "testcaseTitle": "Passed Example 13",
+      "url": "https://act-rules.github.io/testcases/9bd38c/c534ea333db860a5f9b8f9d06e0c74e78f467fd9.html",
+      "relativePath": "testcases/9bd38c/c534ea333db860a5f9b8f9d06e0c74e78f467fd9.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "184261584de5feeeb6b8ad661565d43b91b5ab41",
+      "testcaseTitle": "Passed Example 14",
+      "url": "https://act-rules.github.io/testcases/9bd38c/184261584de5feeeb6b8ad661565d43b91b5ab41.html",
+      "relativePath": "testcases/9bd38c/184261584de5feeeb6b8ad661565d43b91b5ab41.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b9e0d13f43f21e7a36ec974e19011ac38f0c3cd0",
+      "testcaseTitle": "Passed Example 15",
+      "url": "https://act-rules.github.io/testcases/9bd38c/b9e0d13f43f21e7a36ec974e19011ac38f0c3cd0.html",
+      "relativePath": "testcases/9bd38c/b9e0d13f43f21e7a36ec974e19011ac38f0c3cd0.html",
+      "expected": "passed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "83f73f090ae68abbc9faac5ac7c508ba95f2c4a6",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/9bd38c/83f73f090ae68abbc9faac5ac7c508ba95f2c4a6.html",
+      "relativePath": "testcases/9bd38c/83f73f090ae68abbc9faac5ac7c508ba95f2c4a6.html",
+      "expected": "failed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3a388c3d81359c96ca34f4710ab6761213c2d895",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/9bd38c/3a388c3d81359c96ca34f4710ab6761213c2d895.html",
+      "relativePath": "testcases/9bd38c/3a388c3d81359c96ca34f4710ab6761213c2d895.html",
+      "expected": "failed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "61804dfd62d007104b82bfdbd1b3bec157768a2f",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/9bd38c/61804dfd62d007104b82bfdbd1b3bec157768a2f.html",
+      "relativePath": "testcases/9bd38c/61804dfd62d007104b82bfdbd1b3bec157768a2f.html",
+      "expected": "failed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9fa822053986f1c606a0ced853c11be7d15095f0",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/9bd38c/9fa822053986f1c606a0ced853c11be7d15095f0.html",
+      "relativePath": "testcases/9bd38c/9fa822053986f1c606a0ced853c11be7d15095f0.html",
+      "expected": "failed",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7f412cce90c8426ee3c85e3a63f6a098fd9498cf",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/9bd38c/7f412cce90c8426ee3c85e3a63f6a098fd9498cf.html",
+      "relativePath": "testcases/9bd38c/7f412cce90c8426ee3c85e3a63f6a098fd9498cf.html",
+      "expected": "inapplicable",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f827215fd1426008cb0ae575f5a99015812cfd58",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/9bd38c/f827215fd1426008cb0ae575f5a99015812cfd58.html",
+      "relativePath": "testcases/9bd38c/f827215fd1426008cb0ae575f5a99015812cfd58.html",
+      "expected": "inapplicable",
+      "ruleId": "9bd38c",
+      "ruleName": "Content has alternative for visual reference",
+      "rulePage": "https://act-rules.github.io/rules/9bd38c",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.3.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G96": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "d9669b826d3d100faad3df0c0087bd963df2b04b",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/8fc3b6/d9669b826d3d100faad3df0c0087bd963df2b04b.html",
@@ -16492,10 +17194,10 @@
       }
     },
     {
-      "testcaseId": "a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d",
+      "testcaseId": "9ca3347f9cc650826458c4a93ef4bb48fe05b924",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/a25f45/a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d.html",
-      "relativePath": "testcases/a25f45/a1a08dad5ad75bcd651d4a3b7b996fe72f115a1d.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/9ca3347f9cc650826458c4a93ef4bb48fe05b924.html",
+      "relativePath": "testcases/a25f45/9ca3347f9cc650826458c4a93ef4bb48fe05b924.html",
       "expected": "passed",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16540,10 +17242,10 @@
       }
     },
     {
-      "testcaseId": "9cdd965f187709288c389a2f3063f64689ea25a8",
+      "testcaseId": "d4180a079caba89d0b67fb0a6e3b5c786299c683",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/a25f45/9cdd965f187709288c389a2f3063f64689ea25a8.html",
-      "relativePath": "testcases/a25f45/9cdd965f187709288c389a2f3063f64689ea25a8.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/d4180a079caba89d0b67fb0a6e3b5c786299c683.html",
+      "relativePath": "testcases/a25f45/d4180a079caba89d0b67fb0a6e3b5c786299c683.html",
       "expected": "passed",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16588,10 +17290,10 @@
       }
     },
     {
-      "testcaseId": "dec322a713059aa4e1ad4f8c03bf2e3f43f9b474",
+      "testcaseId": "d8fb3e97f99c0f6661a5b7750e3f5a57835017dd",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/a25f45/dec322a713059aa4e1ad4f8c03bf2e3f43f9b474.html",
-      "relativePath": "testcases/a25f45/dec322a713059aa4e1ad4f8c03bf2e3f43f9b474.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/d8fb3e97f99c0f6661a5b7750e3f5a57835017dd.html",
+      "relativePath": "testcases/a25f45/d8fb3e97f99c0f6661a5b7750e3f5a57835017dd.html",
       "expected": "passed",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16684,10 +17386,10 @@
       }
     },
     {
-      "testcaseId": "8a42cd31f491f68b18e499b70d181e30e24485a3",
+      "testcaseId": "de7be114aef0050e7e9b0eb5cc114c2dead9a2ed",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/a25f45/8a42cd31f491f68b18e499b70d181e30e24485a3.html",
-      "relativePath": "testcases/a25f45/8a42cd31f491f68b18e499b70d181e30e24485a3.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/de7be114aef0050e7e9b0eb5cc114c2dead9a2ed.html",
+      "relativePath": "testcases/a25f45/de7be114aef0050e7e9b0eb5cc114c2dead9a2ed.html",
       "expected": "failed",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16732,10 +17434,10 @@
       }
     },
     {
-      "testcaseId": "15630361d51726629bdf84d3ec140a6cc154d06a",
+      "testcaseId": "48a474d8339827ca31a341e784a6ebbc2b52ab10",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/a25f45/15630361d51726629bdf84d3ec140a6cc154d06a.html",
-      "relativePath": "testcases/a25f45/15630361d51726629bdf84d3ec140a6cc154d06a.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/48a474d8339827ca31a341e784a6ebbc2b52ab10.html",
+      "relativePath": "testcases/a25f45/48a474d8339827ca31a341e784a6ebbc2b52ab10.html",
       "expected": "failed",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16780,10 +17482,10 @@
       }
     },
     {
-      "testcaseId": "3aba7777d893a814310a22dfc1399fd8d932e405",
+      "testcaseId": "d496254239c30419f2d57ea643dae036d1151832",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/a25f45/3aba7777d893a814310a22dfc1399fd8d932e405.html",
-      "relativePath": "testcases/a25f45/3aba7777d893a814310a22dfc1399fd8d932e405.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/d496254239c30419f2d57ea643dae036d1151832.html",
+      "relativePath": "testcases/a25f45/d496254239c30419f2d57ea643dae036d1151832.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16804,10 +17506,10 @@
       }
     },
     {
-      "testcaseId": "a94873974601333ff15523c51145f056d8e3af87",
+      "testcaseId": "c762c64d2fad555db40034d643e8f12cd5bcddc4",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/a25f45/a94873974601333ff15523c51145f056d8e3af87.html",
-      "relativePath": "testcases/a25f45/a94873974601333ff15523c51145f056d8e3af87.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/c762c64d2fad555db40034d643e8f12cd5bcddc4.html",
+      "relativePath": "testcases/a25f45/c762c64d2fad555db40034d643e8f12cd5bcddc4.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
@@ -16852,10 +17554,10 @@
       }
     },
     {
-      "testcaseId": "00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc",
+      "testcaseId": "3da68fb99173bb3e1f102d6da9a1f0e397694907",
       "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/a25f45/00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc.html",
-      "relativePath": "testcases/a25f45/00c2be516f12a2d3f5d17fc5e00ecdd96d5dffbc.html",
+      "url": "https://act-rules.github.io/testcases/a25f45/3da68fb99173bb3e1f102d6da9a1f0e397694907.html",
+      "relativePath": "testcases/a25f45/3da68fb99173bb3e1f102d6da9a1f0e397694907.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
       "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",

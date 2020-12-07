@@ -10,8 +10,8 @@ input_aspects:
 
 The _center_ of a [bounding box][] is the point given by the following coordinates:
 
-- The [x coordinate][] is equal to the [left coordinate][] of the [bounding box][] plus half of the [width][] of the [bounding box][] (rounded down); and
-- The [y coordinate][] is equal to the [top coordinate][] of the [bounding box][] plus half of the [height][] of the [bounding box][] (rounded down).
+- The [x coordinate][] is equal to the [left coordinate][] of the [bounding box][] plus half its [width][] (rounded down); and
+- The [y coordinate][] is equal to the [top coordinate][] of the [bounding box][] plus half its [height][] (rounded down).
 
 [bounding box]: https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect 'Definition of getBoundingClientRect'
 [height]: https://drafts.fxtf.org/geometry/#rectangle-height-dimension

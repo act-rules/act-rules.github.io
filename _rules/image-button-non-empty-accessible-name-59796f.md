@@ -137,7 +137,7 @@ The `button` element is not an image button. [Success Criterion 1.1.1 Non-text C
 
 #### Inapplicable Example 2
 
-The `input` element with type with a `type` [attribute value][] of `button` is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
+The `input` element with the `type` [attribute value][] of `button` is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
 
 ```html
 <input type="button" value="My button" />

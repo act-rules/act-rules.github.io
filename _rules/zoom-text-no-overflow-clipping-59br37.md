@@ -37,7 +37,7 @@ Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
-- **line wrapping**: A [used][] [line height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
+- **line wrapping**: A [used][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
 
 ## Assumptions
 
@@ -55,7 +55,7 @@ Some user agents treat the value of the `aria-hidden` attribute as case-sensitiv
 
 ## Background
 
-When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used value][] is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
+When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used][] value is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
 - [G42: Using a technology that has commonly-available user agents that support zoom](https://www.w3.org/WAI/WCAG21/Techniques/general/G142)
@@ -114,7 +114,7 @@ This [text node][] is restricted to a single line, by setting a `line-height` th
 
 #### Passed Example 4
 
-This [text node][] is restricted to a single line, by setting an [actual line height][] that is the same as the `height`. A link to a full version of the poem is also provided.
+Assuming a [used][] [line-height][] of 1.2 when `normal`, this [text node][] is restricted to a single line. A link to a full version of the poem is also provided.
 
 ```html
 <style>
@@ -254,7 +254,6 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 <a href="/"> Next<span class="mobile-hidden">: Web Content Accessibility Guidelines 2.1</span> </a>
 ```
 
-[actual line height]: #actual-line-height 'Definition of Actual Line Height'
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [clipped]: #clipped-by-overflow
 [visible]: #visible

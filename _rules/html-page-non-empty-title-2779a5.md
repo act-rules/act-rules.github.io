@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+This rule applies to the root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
 ## Expectation 1
 

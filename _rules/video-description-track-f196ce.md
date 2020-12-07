@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind` [attribute value][] of `descriptions`.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio and a `track` element with a `kind` [attribute value][] of `descriptions`.
 
 ## Expectation
 

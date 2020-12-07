@@ -20,7 +20,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any element which is [marked as decorative][].
+This rule applies to any element which is [marked as decorative][].
 
 ## Expectation
 

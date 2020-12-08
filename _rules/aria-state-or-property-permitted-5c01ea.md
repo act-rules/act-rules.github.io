@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-Any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 

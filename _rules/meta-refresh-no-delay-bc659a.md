@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
+This rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
 ## Expectation
 

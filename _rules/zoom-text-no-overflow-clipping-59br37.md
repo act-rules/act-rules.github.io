@@ -114,27 +114,6 @@ This [text node][] is restricted to a single line, by setting a `line-height` th
 
 #### Passed Example 4
 
-Assuming a [used][] [line-height][] of 1.2 when `normal`, this [text node][] is restricted to a single line. A link to a full version of the poem is also provided.
-
-```html
-<style>
-	.wordClip {
-		overflow: hidden;
-		word-wrap: break-word;
-		height: 18px;
-		line-height: normal;
-		font-size: 15px;
-	}
-</style>
-<div class="wordClip">
-	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
-	lore. While I nodded, nearly napping, suddenly there came a tapping.
-</div>
-<a href="/test-assets/59br37/poem.html">Full text of the poem</a>
-```
-
-#### Passed Example 5
-
 This [text node][] is not [clipped][] with `overflow: hidden` because it has a parent with `overflow: auto` at a [viewport size][] of 640 by 512.
 
 ```html

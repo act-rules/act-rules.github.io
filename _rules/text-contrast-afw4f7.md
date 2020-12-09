@@ -3,7 +3,7 @@ id: afw4f7
 name: Text has minimum contrast
 rule_type: atomic
 description: |
-  This rule checks that, for text out of widgets, the highest possible contrast of every text character with its background meets the minimal contrast requirement.
+  This rule checks that, for text which is not inside a widget, the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
     forConformance: true

@@ -1,6 +1,6 @@
 ---
 id: cf77f2
-name: Bypass Blocks of Content
+name: Bypass Blocks of Repeated Content
 rule_type: composite
 description: |
   This rule checks that each page has a mechanism to bypass repeated blocks of content.

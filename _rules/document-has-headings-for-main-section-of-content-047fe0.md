@@ -52,7 +52,7 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided.
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of repeated content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). These is bad practice and should be avoided.
 
 Unless otherwise specified, the non-repeated content in the test cases corresponds to the `<div id="main">` element.
 
@@ -436,7 +436,7 @@ This [document][] is not an [HTML web page][].
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
-[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'

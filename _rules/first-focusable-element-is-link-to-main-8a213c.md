@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of content_][bypass blocks].
+This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
@@ -667,7 +667,7 @@ This [document][] is not an [HTML web page][].
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
 [at the end]: #at-the-end 'Definition of At the End of a block'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
-[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to the Main Area of Content'

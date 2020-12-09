@@ -63,7 +63,7 @@ In most practical cases, the same [instrument][] is used to fulfill both conditi
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
+In order to focus on only on the part of the associated composite rule ([_Bypass blocks of repeated content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
 
 Unless specified, the non-repeated content of each test case is defined by its `<div id="main">` element.
 
@@ -598,7 +598,7 @@ This [document][] is not an [HTML web page][].
 [at the end]: #at-the-end 'Definition of At the End of a block'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
-[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Content'
+[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'

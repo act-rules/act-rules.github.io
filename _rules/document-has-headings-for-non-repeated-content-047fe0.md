@@ -309,7 +309,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Failed Example 1
 
-In this document, inside the non-repeated content, the first node with a non-empty [accessible name][] does not have a [semantic role][] of `heading`, even though it is styled to appear as one.
+In this document, there is no element with a [semantic role][] of `heading`, even though the `strong` element is styled to appear as one.
 
 ```html
 <html>
@@ -392,6 +392,34 @@ The non-repeated content of this [document][] starts with a `h1` heading, but it
 </html>
 ```
 
+#### Failed Example 4
+
+In this [document][], the only element with a role of `heading` is inside a [block of repeated content][] and therefore isn't [non-repeated content][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<nav id="chapters-navigation">
+			<h1>Content</h1>
+			<ol>
+				<li><a>Chapter 1</a></li>
+				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
+			</ol>
+		</nav>
+
+		<div id="main">
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</div>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -404,15 +432,13 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[accessible name]: #accessible-name 'Definition of Accessible Name'
-[block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
-[decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass Blocks'

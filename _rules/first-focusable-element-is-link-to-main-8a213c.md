@@ -35,11 +35,11 @@ Each test target has a non-empty [sequential focus navigation order][sequential 
 
 For each test target, all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
 
-- the focusable element is [keyboard actionable][]; and
-- the focusable element is [included in the accessibility tree][]; and
-- the focusable element is a [semantic link][]; and
-- when the focusable element is [activated][], focus moves [at the end][] of the first [block of repeated content][] (in the [flat tree][]) with [perceivable content][] [at its end][at the end] which is not part of any [block of repeated content][]; and
-- the focusable element has an [accessible name][] that communicates that it skips non-repeated content.
+- the element is [keyboard actionable][]; and
+- the element is [included in the accessibility tree][]; and
+- the element is a [semantic link][]; and
+- when the element is [activated][], focus moves [just before][] a node of [non-repeated content][]; and
+- the element has an [accessible name][] that communicates that it skips non-repeated content.
 
 ## Assumptions
 
@@ -55,11 +55,13 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+The intention of this rule is that focus is move to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional condition on this destination were considered and rejected when writing the rule since it can be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document.
+
 This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
+In order to focus on only on the the technique which this rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
 
 Unless specified otherwise, the non-repeated content of each test case is its `<div id="main">` element.
 

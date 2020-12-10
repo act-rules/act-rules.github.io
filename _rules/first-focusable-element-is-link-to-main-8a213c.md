@@ -39,7 +39,7 @@ For each test target, all the following are true for the first element in its [s
 - the element is [included in the accessibility tree][]; and
 - the element is a [semantic link][]; and
 - when the element is [activated][], focus moves [just before][] a node of [non-repeated content][]; and
-- the element has an [accessible name][] that communicates that it skips non-repeated content.
+- the element has an [accessible name][] that communicates that it skips to non-repeated content.
 
 ## Assumptions
 
@@ -55,15 +55,13 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-The intention of this rule is that focus is move to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional condition on this destination were considered and rejected when writing the rule since it can be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document.
+The intention of this rule is that focus is move to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional condition on this destination were considered and rejected when writing the rule since it can be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document. Therefore, it is possible to pass this rule but still fail [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 
 This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
-In order to focus on only on the the technique which this rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
-
-Unless specified otherwise, the non-repeated content of each test case is its `<div id="main">` element.
+Unless specified otherwise, the non-repeated content of each test case is its `main` element.
 
 ## Test Cases
 
@@ -85,13 +83,13 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -113,13 +111,13 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -141,13 +139,13 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -168,13 +166,13 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -195,13 +193,13 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 		<a href="#main">Skip to main content</a>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -225,20 +223,20 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
 
 #### Passed Example 7
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside it, it is still [at the end][] of the [block of repeated content][] because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside a [block of repeated content][], it is nonetheless [just before][] the [non-repeated content][] `p` element because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -246,27 +244,27 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#at-the-start-of-main">Skip to main content</a>
+		<a href="#just-before-main">Skip to main content</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-			<span id="at-the-end-of-repeated"></span>
+			<span id="just-before-main"></span>
 		</aside>
 
-		<div id="main">
+		<main>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
 
 #### Passed Example 8
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element out of it, it is still [at the end][] of the [block of repeated content][] because it is before any [perceivable content][] outside the [block of repeated content][]. Thus, following the link does not skip any non-repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element out of the [block of repeated content][], it is still [just before][] the first [non-repeated content][] `p` element because it is before any [perceivable content][] outside the [block of repeated content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">
@@ -274,21 +272,21 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#at-the-start-of-main">Skip to main content</a>
+		<a href="#just-before-main">Skip to main content</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main>
 			<hr />
-			<span id="at-the-end-of-repeated"></span>
+			<span id="just-before-main"></span>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -309,13 +307,13 @@ This document has no link to skip to the non-repeated content.
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -336,13 +334,13 @@ In this [document][], the link to skip to the non-repeated content does not refe
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -366,13 +364,13 @@ In this [document][], the link to skip to the non-repeated content is not the fi
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -396,13 +394,13 @@ In this [document][], the first [focusable][] element is the link to ACT rules. 
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -424,13 +422,13 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -452,13 +450,13 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -479,13 +477,13 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -506,13 +504,13 @@ In this [document][], the link to skip to the non-repeated content is not [inclu
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -533,13 +531,13 @@ In this [document][], the element to skip to the non-repeated content does not h
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -560,13 +558,13 @@ In this [document][], the link to skip to the non-repeated content does not have
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -587,20 +585,20 @@ In this [document][], the link to skip to the non-repeated content has a [whites
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main id="main">
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
 
 #### Failed Example 12
 
-In this [document][], the first [focusable][] element does not move focus [at the end][] of the [block of repeated content][]. The focus is moved before the end, on [perceivable content][] which is inside the [block of repeated content][]. Thus, following the link does not skip all the repeated content.
+In this [document][], the first [focusable][] element does not move focus [just before][] a node of [non-repeated content][]. The focus is moved to a node of [perceivable content][] inside a [block of repeated content][]. Thus, following the link does not skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -614,41 +612,13 @@ In this [document][], the first [focusable][] element does not move focus [at th
 			<p id="before-main">The Romance of the Three Kingdoms is a 14th century historical novel.</p>
 		</aside>
 
-		<div id="main">
+		<main>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
 			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 13
-
-In this [document][], the first [focusable][] element does not move focus [at the end][] of the [block of repeated content][]. The focus is moved after the end, on [perceivable content][] which is not the first outside the [block of repeated content][]. Thus, following the link does skip part of the non-repeated content and users will miss some important information.
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#inside-main">Skip to main content</a>
-
-		<aside id="about-book">
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<div id="main">
-			<p>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</p>
-			<p id="inside-main">
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-		</div>
+		</main>
 	</body>
 </html>
 ```
@@ -667,18 +637,18 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
-[at the end]: #at-the-end 'Definition of At the End of a block'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to the Main Area of Content'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[just before]: #just-before 'Definition of Just Before a Node'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
+[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic link]: #semantic-link 'Definition of Semantic Link'

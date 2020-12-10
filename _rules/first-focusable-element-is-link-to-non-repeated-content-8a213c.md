@@ -1,6 +1,6 @@
 ---
 id: 8a213c
-name: First focusable element is link to main area of content
+name: First focusable element is link to non-repeated content
 rule_type: atomic
 description: |
   This rule checks that the first focusable element is a link to non-repeated content in the page

@@ -27,10 +27,10 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each node of [perceivable content][] in each [block of repeated content][] in each test target, which is before (in the [flat tree][]) at least one node of [perceivable content][] belonging to no [block of repeated content][], all the following are true:
+For each [block of repeated content][] in each test target, which is before (in the [flat tree][]) at least one node of [perceivable content][] belonging to no [block of repeated content][], all the following are true:
 
-- there exists a [keyboard actionable][] [instrument][] to make this node not [visible][]; and
-- there exists an [instrument][], which is [included in the accessibility tree][], to remove this node from the [accessibility tree][included in the accessibility tree].
+- there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][]; and
+- there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 
@@ -42,9 +42,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-Most of the times, there is not one [instrument][] per node to remove, but rather one [instrument][] per [block of repeated content][], or even one for all of them. However, there are many ways to slice the [block of repeated content][], so the rule checks at node level instead of assuming some sort of grouping. Similarly,in most practical cases, the same [instrument][] is used to fulfill both conditions for a given [block of repeated content][].
+Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both conditions for a given [block of repeated content][].
 
-Note that if there is no [perceivable content][] before the non-repeated content, then the rule automatically passes. It is still possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the non-repeated content.
+Note that if there is no [block of repeated content][] before the non-repeated content, then the rule automatically passes. It is still possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the non-repeated content.
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive, hence this rule doesn't require it either. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
@@ -161,7 +161,7 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 
 #### Passed Example 4
 
-In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document. Note that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
+In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document. Note that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and must thus be avoided.
 
 ```html
 <html>

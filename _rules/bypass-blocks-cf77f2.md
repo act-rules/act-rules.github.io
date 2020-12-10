@@ -58,7 +58,7 @@ This rule applies to any [HTML web page][].
 For each test target, the outcome of at least one of the following rules is passed:
 
 - [_Block of repeated content is collapsible_][block collapsible]; or
-- [_Document has heading for the main area of content_][document has heading for main]; or
+- [_Document has heading for non-repeated content_][document has heading for main]; or
 - [_Document has a main landmark_][document has main]; or
 - [_Document has an instrument to move focus to the main area of content_][document has instrument to main].
 
@@ -128,7 +128,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 
 #### Passed Example 2
 
-This [HTML web page][] is passing rule [_Document has heading for the main area of content_][document has heading for main].
+This [HTML web page][] is passing rule [_Document has heading for non-repeated content_][document has heading for main].
 
 ```html
 <html>
@@ -489,7 +489,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 14
 
-This [HTML web page][] is passing rule [_Document has heading for the main area of content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
+This [HTML web page][] is passing rule [_Document has heading for non-repeated content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 
 ```html
 <html>
@@ -564,7 +564,7 @@ This [document][] is not an [HTML web page][].
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to the Main Area of Content'
-[document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for the Main Area of Content'
+[document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

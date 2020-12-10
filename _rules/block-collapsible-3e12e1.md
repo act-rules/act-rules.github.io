@@ -27,7 +27,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each [block of repeated content][] in each test target, which is before (in the [flat tree][]) at least one node of [perceivable content][] belonging to no [block of repeated content][], all the following are true:
+For each [block of repeated content][] in each test target, which is before (in the [flat tree][]) at least one node of [non-repeated content][], all the following are true:
 
 - there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][]; and
 - there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
@@ -461,6 +461,7 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
+[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'

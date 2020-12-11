@@ -60,7 +60,7 @@ For each test target, the outcome of at least one of the following rules is pass
 - [_Block of repeated content is collapsible_][block collapsible]; or
 - [_Document has heading for non-repeated content_][document has heading for main]; or
 - [_Document has a main landmark_][document has main]; or
-- [_Document has an instrument to move focus to the main area of content_][document has instrument to main].
+- [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
 ## Assumptions
 
@@ -183,7 +183,7 @@ This [HTML web page][] is passing rule [_Document has a main landmark_][document
 
 #### Passed Example 4
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -210,7 +210,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 5
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -244,7 +244,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 6
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main].
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
 ```html
 <html lang="en">
@@ -300,7 +300,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 
 #### Passed Example 8
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the button is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] nor [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] because the [instrument][] is a button, not a link.
 
 ```html
 <html lang="en">
@@ -327,7 +327,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [at the end][] of the [block of repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the non-repeated content is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [at the end][] of the [block of repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the non-repeated content is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -372,7 +372,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 10
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the both the `nav` and `aside` elements are arguably different "areas of the content", and the technique requires exactly one link per such area.
 
 ```html
 <html lang="en">
@@ -432,7 +432,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 
 #### Passed Example 12
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the second link is such an instrument. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the skip link is not the first [focusable][] element on the page.
 
 ```html
 <html lang="en">
@@ -460,7 +460,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 13
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to the main area of content_][document has instrument to main] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
 
 ```html
 <html lang="en">
@@ -563,7 +563,7 @@ This [document][] is not an [HTML web page][].
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
-[document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to the Main Area of Content'
+[document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
 [document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

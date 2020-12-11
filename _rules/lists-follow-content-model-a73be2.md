@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is the same as the [implicit role][], and for which one of the following is true:
+This rule applies to any [HTML elements][] with a [hidden state][] of "false", where the [semantic role][] is not changed by an [explicit role][], and for which one of the following is true:
 
 - **lists**: The element is a `ul`, `ol` or `menu`; or
 - **definition lists**: The element is a `dl`, or a `div` that is a [child][] in the [flat tree][] of a `dl`.
@@ -116,7 +116,7 @@ This `ol` element has `span` [children][child] with an [explicit role][] or `lis
 
 #### Passed Example 6
 
-This `ul` element has `li` and `template` [children][child]. `li` is explicitly allowed by the `ul` [content model][], `template` is a script-supported element, which is also allowed by the `ul` content model.
+This `ol` element has `li` and `template` [children][child]. `li` is explicitly allowed by the `ol` [content model][], `template` is a script-supported element, which is also allowed by the `ol` content model.
 
 ```html
 <ol>
@@ -268,7 +268,6 @@ This element with a `list` role is not a `ul`, `ol`, `dl`, or `menu` element.
 [html elements]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [explicit role]: #explicit-role 'Definition of explicit role'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[implicit role]: #implicit-role 'Definition of implicit role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML sequential, Definition of content model, 2020/11/27'

@@ -36,12 +36,13 @@ acknowledgments:
 
 This rule applies to any [HTML web page][].
 
-## Expectation
+## Expectation 1
 
-For each test target, all the following are true for the first [block of repeated content][] (in the [flat tree][]) with [perceivable content][] [at its end][at the end] which is not part of any [block of repeated content][]:
+For each test target, there exists at least one [instrument][] inside it to move focus [just before][] a node of [non-repeated content][], and this [instrument][] is [keyboard actionable][].
 
-- there exists at least one [keyboard actionable][] [instrument][] inside the test target to move focus [at the end][] of this [block of content][]; and
-- there exists at least one [instrument][] inside the test target to move focus [at the end][] of this [block of content][]; and this [instrument][] is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to non-repeated content.
+## Expectation 2
+
+For each test target, there exists at least one [instrument][] inside it to move focus [just before][] a node of [non-repeated content][], and this [instrument][] is [included in the accessibility tree][] and has an [accessible name][] that communicates that it skips to non-repeated content.
 
 ## Assumptions
 
@@ -55,7 +56,9 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass this rule and still fail [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
+The intention of this rule is that focus is moved to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional conditions on this destination were considered and rejected when writing the rule since it might be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document. Therefore, it is possible to pass this rule but still fail the related techniques and violate [Success Criterion 2.4.1 Bypass blocks][sc241].
+
+While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
 
 In most practical cases, the same [instrument][] is used to fulfill both conditions.
 
@@ -226,7 +229,7 @@ In this [document][], the first `div` element is [visible][], is a [keyboard act
 
 #### Passed Example 6
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the non-repeated content, is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside the [block of repeated content][], it is still [at its end][at the end] because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the non-repeated content, is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside a [block of repeated content][], it is still [just before][] some [non-repeated content][] because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -234,11 +237,11 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#at-the-start-of-main">Skip to main content</a>
+		<a href="#just-before-main">Skip to main content</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-			<span id="at-the-end-of-repeated"></span>
+			<span id="just-before-main"></span>
 		</aside>
 
 		<div id="main">
@@ -254,7 +257,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 #### Passed Example 7
 
-In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the non-repeated content, is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element after it, it is still [at the end][] of the [block of repeated content][] because it is before any [perceivable content][] outside it. Thus, following the link does not skip any non-repeated content.
+In this [document][], the first `a` element is [visible][], is a [keyboard actionable][] [instrument][] to move the focus to the non-repeated content, is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element after it, it is still [just before][] the first [non-repeated content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">
@@ -262,7 +265,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="#at-the-start-of-main">Skip to main content</a>
+		<a href="#just-before-main">Skip to main content</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -270,7 +273,7 @@ In this [document][], the first `a` element is [visible][], is a [keyboard actio
 
 		<div id="main">
 			<hr />
-			<span id="at-the-end-of-repeated"></span>
+			<span id="just-before-main"></span>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
@@ -474,7 +477,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 
 #### Failed Example 7
 
-In this [document][], the skip link does not move focus [at the end][] of the [block of repeated content][]. The focus is moved before the end, on [perceivable content][] which is inside the [block of repeated content][]. Thus, following the link does not skip all the repeated content.
+In this [document][], the skip link does not move focus [just before][] some [non-repeated content][]. The focus is moved on [perceivable content][] which is inside the [block of repeated content][]. Thus, following the link does not skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -501,34 +504,6 @@ In this [document][], the skip link does not move focus [at the end][] of the [b
 
 #### Failed Example 8
 
-In this [document][], the first [focusable][] element does not move focus [at the end][] of the [block of repeated content][]. The focus is moved after the end, on [perceivable content][] which is not the first outside the [block of repeated content][]. Thus, following the link does skip part of the non-repeated content and users will miss some important information.
-
-```html
-<html lang="en">
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#inside-main">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
-
-		<aside id="about-book">
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<div id="main">
-			<p>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</p>
-			<p id="inside-main">
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 9
-
 In this [document][], the link to skip to the non-repeated content does not have an [accessible name][] that communicates its intent.
 
 ```html
@@ -554,7 +529,7 @@ In this [document][], the link to skip to the non-repeated content does not have
 </html>
 ```
 
-#### Failed Example 10
+#### Failed Example 9
 
 In this [document][], the link to skip to the non-repeated content has a [whitespace][] only, hence non-descriptive, [accessible name][].
 
@@ -595,21 +570,19 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
-[at the end]: #at-the-end 'Definition of At the End of a block'
-[block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
-[focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[just before]: #just-before 'Definition of Just Before'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [navigate]: https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate 'HTML specification of navigate'
 [navigation landmark]: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_navigation 'WAI-ARIA authoring practices, Navigation Landmark'
+[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'

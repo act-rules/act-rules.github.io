@@ -327,7 +327,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [at the end][] of the [block of repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the non-repeated content is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [just before][] some [non-repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the non-repeated content is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -557,7 +557,6 @@ This [document][] is not an [HTML web page][].
 ```
 
 [activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
-[at the end]: #at-the-end 'Definition of At the End of a block'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
@@ -569,8 +568,10 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[just before]: #just-before 'Definition of Just Before'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
+[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'

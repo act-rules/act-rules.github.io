@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any `input` element with a `type` [attribute value][] of `image`, and that is [included in the accessibility tree][].
+This rule applies to any `input` element with a `type` [attribute value][] of `image`, and that is [included in the accessibility tree][].
 
 ## Expectation
 

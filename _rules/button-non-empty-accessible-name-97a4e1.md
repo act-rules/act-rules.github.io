@@ -22,7 +22,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements with a `type` [attribute value] of `image`.
+This rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements with a `type` [attribute value] of `image`.
 
 ## Expectation
 

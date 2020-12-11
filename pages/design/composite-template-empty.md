@@ -38,7 +38,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any (??) element ...
+This rule applies to any (??) element ...
 
 ## Expectation (1)
 

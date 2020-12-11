@@ -26,7 +26,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
+This rule applies to an [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
 ## Expectation
 

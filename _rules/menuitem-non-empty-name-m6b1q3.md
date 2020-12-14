@@ -35,6 +35,8 @@ This rule assumes that all menuitems are [user interface components as defined b
 
 ## Accessibility Support
 
+In some assistive technologies, the `menuitem` role will only be announced in browsing mode. When they receive focus this role is not announced. Additionally, the `title` attribute is not in all circumstance a reliable way to provide an accessible name. Use `aria-label` instead.
+
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
@@ -52,9 +54,9 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 This element with the `menuitem` role has an [accessible name][] because of its text content.
 
 ```html
-<ul role="menu">
-	<li role="menuitem">New file</li>
-</ul>
+<div role="menu">
+	<button role="menuitem">New file</button>
+</div>
 ```
 
 #### Passed Example 2
@@ -62,11 +64,11 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
-<ul role="menu">
-	<li role="menuitem" aria-label="New file">
+<div role="menu">
+	<button role="menuitem" aria-label="New file">
 		<img src="/test-assets/shared/file.svg" alt="" />
-	</li>
-</ul>
+	</button>
+</div>
 ```
 
 #### Passed Example 3
@@ -74,12 +76,12 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has an [accessible name][] because its `aria-labelledby` attribute references an element with text content.
 
 ```html
-<ul role="menu">
-	<li role="menuitem" aria-labelledby="newfile">
+<div role="menu">
+	<button role="menuitem" aria-labelledby="newfile">
 		<img src="/test-assets/shared/file.svg" alt="" />
 		<span id="newfile" hidden>New file</span>
-	</li>
-</ul>
+	</button>
+</div>
 ```
 
 #### Passed Example 4
@@ -87,11 +89,11 @@ This element with the `menuitem` role has an [accessible name][] because its `ar
 This element with the `menuitem` role has an [accessible name][] because of its `title` attribute.
 
 ```html
-<ul role="menu">
-	<li role="menuitem" title="New file">
+<div role="menu">
+	<button role="menuitem" title="New file">
 		<img src="/test-assets/shared/file.svg" alt="" />
-	</li>
-</ul>
+	</button>
+</div>
 ```
 
 ### Failed
@@ -101,11 +103,11 @@ This element with the `menuitem` role has an [accessible name][] because of its 
 This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
-<ul role="menu">
-	<li role="menuitem">
+<div role="menu">
+	<button role="menuitem">
 		<img src="/test-assets/shared/file.svg" alt="" />
-	</li>
-</ul>
+	</button>
+</div>
 ```
 
 #### Failed Example 2
@@ -121,11 +123,11 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 			top: -9999px;
 		}
 	</style>
-	<ul role="menu" class="offscreen">
-		<li role="menuitem">
+	<div role="menu" class="offscreen">
+		<button role="menuitem">
 			<img src="/test-assets/shared/file.svg" alt="" />
-		</li>
-	</ul>
+		</button>
+	</div>
 </html>
 ```
 
@@ -148,11 +150,11 @@ The `li` element has a `listitem` [semantic role][], even as a child of a `menu`
 This element with the `menuitem` role does not need an [accessible name][] because it is not [included in the accessibility tree][].
 
 ```html
-<ul role="menu" hidden>
-	<li role="menuitem">
+<div role="menu" hidden>
+	<button role="menuitem">
 		<img src="/test-assets/shared/file.svg" alt="" />
-	</li>
-</ul>
+	</button>
+</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

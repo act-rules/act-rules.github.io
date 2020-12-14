@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to each HTML element that has one of the following [semantic roles][semantic role]:
+This rule applies to each HTML element that has one of the following [semantic roles][semantic role]:
 
 - `checkbox`,
 - `combobox`,

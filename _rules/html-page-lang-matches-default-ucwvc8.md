@@ -33,7 +33,7 @@ htmlHintIgnore:
 
 This rule applies to any [document element][] if it is an `html` element for which all of the following are true:
 
-- The [document element][] has a `lang` attribute with a value that is a [valid language tag][]; and
+- The [document element][] has a `lang` [attribute value][] which is a [valid language tag][]; and
 - The [document element][] is in a [top-level browsing context][]; and
 - The [document element][] has a [content type][] of `text/html`; and
 - The [document element][] has a defined [default page language][].

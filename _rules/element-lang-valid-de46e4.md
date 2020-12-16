@@ -194,7 +194,7 @@ There is no element with a lang attribute value which is a descendant of a body 
 
 #### Inapplicable Example 2
 
-There is no element with a non-empty `lang` [attribute value][].
+There is no element which is a descendant of a `body` element and has a non-empty `lang` [attribute value][].
 
 ```html
 <html lang="en">

@@ -16,7 +16,7 @@ The _most common language_ is determined by counting the number of _words_ in th
 
 The _candidates elements_ are all the elements for which all the following are true:
 
-- the element is a [descendant][] of E in the [flat tree][]; and
+- the element is an [inclusive descendant][] of E in the [flat tree][]; and
 - the element has no [inclusive ancestor][] in the [flat tree][] which is a descendant of E and has a non-empty (`""`) `lang` attribute (that is, no `lang` attribute "between" them).
 
 The _words_ used in the following texts should be counted for the _most common language_:
@@ -31,12 +31,12 @@ For more details, see [examples of default language](/pages/examples/default-ele
 
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/06/05'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'DOM definition of Inclusive Ancestor'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, as of 2020/06/05'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'

@@ -285,7 +285,7 @@ This page has an undefined [default language][default page language] because it 
 		<title>Paul put dire comment on tape</title>
 	</head>
 	<body>
-		<p>Paul put dire comment on tape</p>
+		<p>Paul put dire comment on tape.</p>
 	</body>
 </html>
 ```

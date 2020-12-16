@@ -27,9 +27,9 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
+This rule applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
-- the element is a [descendant][] in the [flat tree][] of a `body` element; and
+- the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element has a [node document][] with a [content type][] of `text/html`; and
 - the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
 
@@ -226,6 +226,7 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [included in the accessibility tree]: #included-in-the-accessibility-tree

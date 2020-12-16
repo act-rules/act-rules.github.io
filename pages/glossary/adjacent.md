@@ -19,4 +19,5 @@ The horizontal distance between two points is given by the absolute value of the
 [bounding boxes]: https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect 'Definition of getBoundingClientRect'
 [CSS pixel]: https://drafts.csswg.org/css-values-3/#visual-angle-unit
 [left coordinate]: https://drafts.fxtf.org/geometry/#dom-domrectreadonly-left
+[overlap]: #overlap 'Definition of overlap'
 [top coordinate]: https://drafts.fxtf.org/geometry/#dom-domrectreadonly-top

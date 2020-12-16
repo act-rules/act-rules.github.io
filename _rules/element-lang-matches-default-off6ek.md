@@ -31,28 +31,27 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any [document element][] if it is an `html` element for which all of the following are true:
+This rule applies to any HTML element for which all the following are true:
 
-- The [document element][] has a `lang` attribute with a value that is a [valid language tag][]; and
-- The [document element][] is in a [top-level browsing context][]; and
-- The [document element][] has a [content type][] of `text/html`; and
-- The [document element][] has a defined [default page language][].
+- the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- The element has a `lang` [attribute value][] which is a [valid language tag][]; and
+- The element is in a [top-level browsing context][]; and
+- The element is in a [document][] with a [content type][] of `text/html`; and
+- The element has a defined [default element language][].
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] matches the [default page language][] of the test target.
+For each test target, the [primary language][] of the [valid language tag][] matches its [default element language][].
 
 ## Assumptions
 
-- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page) is still satisfied.
+- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.2 Language of Parts][sc312] is still satisfied.
 
-- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.2 Language of Parts][sc312].
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
-
-- This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
+- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags][].
 
 ## Accessibility Support
 
@@ -60,12 +59,18 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
-- [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
-- [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
-- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
+This rule ignores elements that are nested inside `iframe`. `iframe` are intended to provide a layer of isolation, and it is not clear how language is inherited in nested browsing contexts. Incorrect `lang` attribute inside `iframe` are still likely to cause accessibility issues even though this rule won't flag them.
+
+- Related rule:
+  - [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
+- [Understanding Success Criterion 3.1.2: Language of Page][usc312]
+- [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
+
+In all examples, the `html` element has itself a `lang` attribute in order to make sure that the examples do not fail [Success Criterion 3.1.1 Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page). These `html` elements are, however, never applicable because they are not descendants of a `body` element, and the example descriptions do not mention them further.
+
+Similarly, all example contain a short text in the page language without any `lang` attribute in order to make the `lang` attribute on other elements useful. Especially, a change of language is needed to pass Technique [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58).
 
 ## Test Cases
 
@@ -73,20 +78,17 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This page has a `lang` [attribute value][] of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all words are English.
+This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [default language][]. The default language is Dutch because all words are in Dutch.
 
 ```html
 <html lang="en">
 	<head>
-		<title>ACT Rules Format 1.0 - Abstract</title>
+		<title>Dutch idioms</title>
 	</head>
 	<body>
 		<p>
-			The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test
-			rules. These test rules can be used for developing automated testing tools and manual testing methodologies. It
-			provides a common format that allows any party involved in accessibility testing to document and share their
-			testing procedures in a robust and understandable manner. This enables transparency and harmonization of testing
-			methods, including methods implemented by accessibility test tools.
+			The Dutch phrase <span lang="nl">"Hij ging met de kippen op stok"</span> literally translates into "He went to
+			roost with the chickens", but it means that he went to bed early.
 		</p>
 	</body>
 </html>
@@ -94,22 +96,7 @@ This page has a `lang` [attribute value][] of `en` (English), which matches the 
 
 #### Passed Example 2
 
-This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
-
-```html
-<html lang="en">
-	<head>
-		<title>Gelukkig</title>
-	</head>
-	<body>
-		<p>The Dutch word "gelukkig" has no equivalent in English.</p>
-	</body>
-</html>
-```
-
-#### Passed Example 3
-
-This page has `lang` attribute value of `nl` (Dutch), which matches the [default language of the page][default page language]. The default language is Dutch because all English words are in a `p` element with a `lang` attribute value of `en`.
+The second `p` element has a `lang` [attribute value][] of `en` (English), which matches its [default language][]. The default language is English because all but a few words are in English.
 
 ```html
 <html lang="nl">
@@ -121,8 +108,29 @@ This page has `lang` attribute value of `nl` (Dutch), which matches the [default
 			<p>"Hij ging met de kippen op stok"</p>
 		</blockquote>
 		<p lang="en">
-			This Dutch phrase literally translates into "He went to roost with the chickens", but it means that he went to bed
-			early.
+			The Dutch phrase "Hij ging met de kippen op stok" literally translates into "He went to roost with the chickens",
+			but it means that he went to bed early.
+		</p>
+	</body>
+</html>
+```
+
+#### Passed Example 3
+
+The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [default language][]. The default language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`.
+
+```html
+<html lang="en">
+	<head>
+		<title>Dutch idioms</title>
+	</head>
+	<body>
+		<p>Dutch idioms and their English meaning.</p>
+		<p lang="nl">
+			<span lang="en">The Dutch phrase</span> "Hij ging met de kippen op stok"
+			<span lang="en"
+				>literally translates into "He went to roost with the chickens", but it means that he went to bed early.</span
+			>
 		</p>
 	</body>
 </html>
@@ -130,17 +138,22 @@ This page has `lang` attribute value of `nl` (Dutch), which matches the [default
 
 #### Passed Example 4
 
-This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
+This `div` element has a `lang` attribute value of `en` (English), which matches its [default language][]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `fr`.
 
 ```html
-<html lang="en">
+<html lang="fr">
 	<head>
-		<title>Fireworks over Paris</title>
+		<title>Feu d'artifice du nouvel an</title>
 	</head>
 	<body>
-		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-		<p lang="nl">
-			Gelukkig nieuwjaar!
+		<div lang="en">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+			<p lang="fr">
+				Bonne année !
+			</p>
+		</div>
+		<p>
+			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
 		</p>
 	</body>
 </html>
@@ -150,20 +163,17 @@ This page has a `lang` attribute value of `en` (English), which matches the [def
 
 #### Failed Example 1
 
-This page has `lang` attribute value of `da` (Danish), which does not matches the [default language of the page][default page language]. The default language is English because all words are English.
+This `span` element has `lang` attribute value of `fr` (French), which does not matches its [default language][]. The default language is Dutch because all words are Dutch.
 
 ```html
-<html lang="da">
+<html lang="en">
 	<head>
-		<title>ACT Rules Format 1.0 - Abstract</title>
+		<title>Dutch idioms</title>
 	</head>
 	<body>
 		<p>
-			The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test
-			rules. These test rules can be used for developing automated testing tools and manual testing methodologies. It
-			provides a common format that allows any party involved in accessibility testing to document and share their
-			testing procedures in a robust and understandable manner. This enables transparency and harmonization of testing
-			methods, including methods implemented by accessibility test tools.
+			The Dutch phrase <span lang="fr">"Hij ging met de kippen op stok"</span> literally translates into "He went to
+			roost with the chickens", but it means that he went to bed early.
 		</p>
 	</body>
 </html>
@@ -171,25 +181,31 @@ This page has `lang` attribute value of `da` (Danish), which does not matches th
 
 #### Failed Example 2
 
-This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because all but a few words are English.
+The second `p` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because all but a few words are English.
 
 ```html
 <html lang="nl">
 	<head>
-		<title>Gelukkig</title>
+		<title>Met de kippen op stok</title>
 	</head>
 	<body>
-		<p>The Dutch word "gelukkig" has no equivalent in English.</p>
+		<blockquote>
+			<p>"Hij ging met de kippen op stok"</p>
+		</blockquote>
+		<p lang="fr">
+			The Dutch phrase "Hij ging met de kippen op stok" literally translates into "He went to roost with the chickens",
+			but it means that he went to bed early.
+		</p>
 	</body>
 </html>
 ```
 
 #### Failed Example 3
 
-This page has `lang` attribute value of `en` (English), which does not matches the [default language of the page][default page language]. The default language is Dutch because all English words are in a `p` element with a `lang` attribute value of `en`.
+The second `p` element has `lang` attribute value of `en` (English), which does not matches its [default language][]. The default language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`.
 
 ```html
-<html lang="en">
+<html lang="nl">
 	<head>
 		<title>Met de kippen op stok</title>
 	</head>
@@ -198,8 +214,10 @@ This page has `lang` attribute value of `en` (English), which does not matches t
 			<p>"Hij ging met de kippen op stok"</p>
 		</blockquote>
 		<p lang="en">
-			This Dutch phrase literally translates into "He went to roost with the chickens", but it means that he went to bed
-			early.
+			<span lang="en">The Dutch phrase</span> "Hij ging met de kippen op stok"
+			<span lang="en"
+				>literally translates into "He went to roost with the chickens", but it means that he went to bed early.</span
+			>
 		</p>
 	</body>
 </html>
@@ -207,17 +225,22 @@ This page has `lang` attribute value of `en` (English), which does not matches t
 
 #### Failed Example 4
 
-This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`.
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `fr`.
 
 ```html
-<html lang="nl">
+<html lang="fr">
 	<head>
-		<title>Fireworks over Paris</title>
+		<title>Feu d'artifice du nouvel an</title>
 	</head>
 	<body>
-		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-		<p lang="nl">
-			Gelukkig nieuwjaar!
+		<div lang="fr">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+			<p lang="fr">
+				Bonne année !
+			</p>
+		</div>
+		<p>
+			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
 		</p>
 	</body>
 </html>
@@ -225,17 +248,22 @@ This page has a `lang` attribute value of `nl` (Dutch), which does not match the
 
 #### Failed Example 5
 
-This page has a `lang` attribute value of `nl` (Dutch), which does not match the [default language of the page][default page language]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored.
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored.
 
 ```html
-<html lang="nl">
+<html lang="fr">
 	<head>
-		<title>Paris</title>
+		<title>Feu d'artifice du nouvel an</title>
 	</head>
 	<body>
-		<img src="/test-assets/shared/fireworks.jpg" aria-labelledby="caption" />
-		<p lang="en" id="caption" hidden>
-			Fireworks over Paris!
+		<div lang="fr">
+			<img src="/test-assets/shared/fireworks.jpg" aria-labelledby="caption" />
+			<p lang="en" id="caption" hidden>
+				Fireworks over Paris
+			</p>
+		</div>
+		<p>
+			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
 		</p>
 	</body>
 </html>
@@ -245,58 +273,52 @@ This page has a `lang` attribute value of `nl` (Dutch), which does not match the
 
 #### Inapplicable Example 1
 
-This is an SVG [document][document element], not an HTML document.
+There is no HTML elements in this document.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
+<svg xmlns="http://www.w3.org/2000/svg" lang="en">
+    <text x="0" y="0">I love ACT rules!</text>
+</svg>
 ```
 
 #### Inapplicable Example 2
 
-This page has an undefined [default language][default page language] because it has no content or [document title][].
+The first `p` element has an undefined [default language][] because it has no content.
 
 ```html
-<html></html>
+<html lang="en">
+	<body>
+		<p lang="fr"></p>
+		<p>I love ACT rules!</p>
+	</body>
+</html>
 ```
 
 #### Inapplicable Example 3
 
-This page has an undefined [default language][default page language] because it has no [document title][] and all its content is wrapped in an element with a `lang` attribute.
+The second `p` element has an undefined [default language][] because it can be either English or French.
 
 ```html
-<html>
-	<p lang="en">
-		The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test rules.
-		These test rules can be used for developing automated testing tools and manual testing methodologies. It provides a
-		common format that allows any party involved in accessibility testing to document and share their testing procedures
-		in a robust and understandable manner. This enables transparency and harmonization of testing methods, including
-		methods implemented by accessibility test tools.
-	</p>
-</html>
-```
-
-#### Inapplicable Example 4
-
-This page has an undefined [default language][default page language] because it can either be English or French.
-
-```html
-<html lang="fr">
-	<head>
-		<title>Paul put dire comment on tape</title>
-	</head>
+<html lang="en">
 	<body>
-		<p>Paul put dire comment on tape</p>
+		<p>Some sentences can have meaning in different languages.</p>
+		<p lang="fr">Paul put dire comment on tape.</p>
 	</body>
 </html>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
-[content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of content type, as of 2020/06/05'
+[content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
+[default language]: #default-element-language 'Definition of Default Element Language'
 [default element language]: #default-element-language 'Definition of Default Element Language'
-[document element]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
-[document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
+[document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
-[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'
+[sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
+[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
+[usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
+[valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

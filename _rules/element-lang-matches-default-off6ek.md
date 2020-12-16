@@ -323,7 +323,6 @@ The first `p` element has an undefined [default language][] because it has no co
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
 [default language]: #default-element-language 'Definition of Default Element Language'
 [default element language]: #default-element-language 'Definition of Default Element Language'
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'DOM definition of Descendant'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
@@ -331,7 +330,6 @@ The first `p` element has an undefined [default language][] because it has no co
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
-[text node]: https://dom.spec.whatwg.org/#text 'DOM definition of Text Node'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'

@@ -312,7 +312,7 @@ The first `p` element has an undefined [default language][] because it has no co
 ```html
 <html lang="en">
 	<body>
-		<p lang="en">I love ACT rules!</p>
+		<p lang="en" hidden>I love ACT rules!</p>
 		<p>I love ACT rules!</p>
 	</body>
 </html>

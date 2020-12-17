@@ -34,7 +34,7 @@ For each [block of repeated content][] in each test target, which is before (in 
 
 ## Assumptions
 
-- This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires the that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
+- This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
 
 ## Accessibility Support
 
@@ -52,7 +52,7 @@ Note that if there is no [block of repeated content][] before the non-repeated c
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In order to focus on only on the part of the associated composite rule ([_Bypass blocks of repeated content_][bypass blocks]) which this atomic rule illustrate, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
+In order to focus only on the part of the associated composite rule ([_Bypass blocks of repeated content_][bypass blocks]) which this atomic rule illustrates, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
 
 In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `<div id="main">` element is non-repeated content.
 

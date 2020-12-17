@@ -37,7 +37,7 @@ Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 
-- **line wrapping**: A [computed][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
+- **line wrapping**: A [used][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow][] of `clip`, its [content box][].
 
 ## Assumptions
 
@@ -54,6 +54,8 @@ If any of the following assumptions is true, failing this rule may not result in
 Some user agents treat the value of the `aria-hidden` attribute as case-sensitive.
 
 ## Background
+
+When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used][] value is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
 - [G42: Using a technology that has commonly-available user agents that support zoom](https://www.w3.org/WAI/WCAG21/Techniques/general/G142)
@@ -242,7 +244,9 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/02/14'
 [overflow]: https://www.w3.org/TR/CSS22/visufx.html#overflow
 [line-height]: https://www.w3.org/TR/CSS22/visudet.html#propdef-line-height
+[line-height normal]: https://drafts.csswg.org/css2/#valdef-line-height-normal "CSS 2.2 (Editor's draft) - normal line-height"
 [white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
 [text-overflow]: https://www.w3.org/TR/css-ui-3/#text-overflow
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [content box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-content-box
+[used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'

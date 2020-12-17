@@ -10,7 +10,6 @@ input_aspects:
 
 An HTML element's _hidden state_ is "true" if at least one of the following is true for itself or any of its [ancestors][] in the [flat tree][]:
 
-- has a `hidden` attribute; or
 - has a [computed][] CSS property `display` of `none`; or
 - has a [computed][] CSS property `visibility` of `hidden`; or
 - has an `aria-hidden` attribute set to `true`

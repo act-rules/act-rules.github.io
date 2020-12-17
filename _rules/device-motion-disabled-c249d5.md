@@ -33,7 +33,7 @@ This rule applies to an [HTML document][] with an associated [Window object][] t
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
 - **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 1 minute time span of the [event firing][event firing]; or
-- **disabled:** There is at least one [set of clearly labelled instruments][] to [block the event][blocked event][] for at least 1 minute.
+- **disabled:** There is at least one [set of clearly labeled instruments][] to [block the event][blocked event][] for at least 1 minute.
 
 ## Assumptions
 

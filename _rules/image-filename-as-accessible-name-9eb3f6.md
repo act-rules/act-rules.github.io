@@ -41,7 +41,7 @@ assets:
 
 ## Applicability
 
-The rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
+This rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
 
 - **img**: the element is an `img` with an [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; or
 - **input image**: the element is an `input` element in the [Image Button][] state with an [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
@@ -52,8 +52,6 @@ When comparing [accessible name][] and [filename][], difference in letter casing
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][]. If there are several [image sources][], then the [accessible name][] must accurately describe all of them.
 
-**Note:** It is fairly common for CMS or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoints cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
-
 ## Assumptions
 
 This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content).
@@ -63,6 +61,8 @@ This rule assumes that the language of each test target can be correctly determi
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+It is fairly common for content management systems (CMS) or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoint cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
@@ -124,8 +124,8 @@ This `img` element has 3 [image sources][] for [device-pixel-ratio][]-based sele
 	<img
 		src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg"
 		srcset="
-			test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
-			test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
+			/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn 1.5x,
+			/test-assets/image-filename-as-accessible-name-9eb3f6/paris  2x
 		"
 		alt="Nyhavn"
 	/>
@@ -139,8 +139,8 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
+		<source media="(min-width: 1000px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 320px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/paris" />
 		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>
@@ -198,8 +198,8 @@ This `img` element has 3 [image sources][] for [Art direction][]-based selection
 ```html
 <html lang="en">
 	<picture>
-		<source media="(min-width: 45em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
-		<source media="(min-width: 32em)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
+		<source media="(min-width: 1000px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn" />
+		<source media="(min-width: 320px)" srcset="/test-assets/image-filename-as-accessible-name-9eb3f6/pain" />
 		<img src="/test-assets/image-filename-as-accessible-name-9eb3f6/nyhavn.jpeg" alt="Nyhavn" />
 	</picture>
 </html>

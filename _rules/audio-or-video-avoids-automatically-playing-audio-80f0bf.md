@@ -10,12 +10,23 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-text:cc5: # Non-interference due to mapping to 1.4.2
+    title: WCAG Non-Interference
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G60: # Playing a sound that turns off automatically within three seconds
     forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
   wcag-technique:G170: # Providing a control near the beginning of the Web page that turns off sounds that play automatically
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:G171: # Playing sounds only on user request
     forConformance: false
     failed: not satisfied
     passed: further testing needed
@@ -35,25 +46,25 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any `audio` or `video` element that has:
+This rule applies to any `audio` or `video` element for which all the following are true:
 
-- an `autoplay` [attribute value][] of `true`, and
-- a `muted` [attribute value][] of `false`, and
-- a `paused` attribute whose value is false, and
-- either a `src` attribute or a child `source` element that references content with a duration of more than 3 seconds that contains audio.
-
-**Note**: [`autoplay`](https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay) and [`muted`](https://html.spec.whatwg.org/multipage/media.html#attr-media-muted) are both HTML attributes set on elements. On the other hand, [`paused`](https://html.spec.whatwg.org/multipage/media.html#dom-media-paused) is a DOM attribute which is not specified in HTML.
+- (**autoplay**) the element has an `autoplay` [attribute value][] of `true`; and
+- (**not muted**) the element has a `muted` [attribute value][] of `false`; and
+- (**not paused**) the element has a `paused` [attribute value][] of `false`; and
+- (**duration**) the element has a [media resource][] lasting more than 3 seconds and that contains audio.
 
 ## Expectation
 
-For each test target, the outcome of at least one of the following rules is passed:
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
-- [Audio Or Video That Plays Automatically Does Not Exceed 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
 
 ## Assumptions
 
-_There are currently no assumptions_
+- This rule assumes that it is not possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142] if the total length of the automatically playing audio is more than 3 seconds, even if there are pauses in the sound and no more than 3 seconds in a row with actual sound.
+- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be located in the same [web page][]. Note that mechanisms that are provided by user agents, assistive technologies, or operating systems are hardly testable as they depend on the user. Note that mechanisms that are located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
+- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
 ## Accessibility Support
 
@@ -70,7 +81,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 #### Passed Example 1
 
-This `audio` element has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -89,7 +100,7 @@ This `video` element does not play for longer than 3 seconds.
 
 #### Passed Example 3
 
-This `video` element autoplays and has a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element autoplays and has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <head>
@@ -126,7 +137,7 @@ This `video` element autoplays and has a [mechanism](https://www.w3.org/TR/WCAG2
 
 #### Failed Example 1
 
-This `audio` element autoplays, lasts for more than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `audio` element autoplays, lasts for more than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -134,7 +145,7 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element audio autoplays for longer than 3 seconds, and does not have a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to pause, stop, or turn the audio volume off.
+This `video` element audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay>
@@ -176,3 +187,7 @@ This `audio` element does not play automatically.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
+[media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'
+[sc142]: https://www.w3.org/TR/WCAG21/#audio-control 'Success Criterion 1.4.2 Audio Control'
+[web page]: #web-page-html 'Definition of HTML web page'

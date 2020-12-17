@@ -19,8 +19,9 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Annika Nietzio
     - Jey Nandakumar
+  previous_authors:
+    - Annika Nietzio
 ---
 
 ## Applicability
@@ -51,6 +52,8 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
+- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
+- [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)

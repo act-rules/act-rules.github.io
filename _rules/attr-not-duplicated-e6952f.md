@@ -19,8 +19,8 @@ input_aspects:
   - Source code
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Emma Pratt Richens
+    - Wilco Fiers
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -29,7 +29,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#start-tags) in an HTML or SVG document.
+This rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#start-tags) in an HTML or SVG document.
 
 **Note:** This rule cannot be tested on the DOM Tree because the browser removes duplicates of any attribute that is already present on an element.
 
@@ -58,7 +58,7 @@ _There are no major accessibility support issues known for this rule._
 No attributes are duplicated.
 
 ```html
-<img src="image.jpg" alt="" />
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Passed Example 2
@@ -93,7 +93,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 ```html
 <script>
-	var foo = '<img src="image.jpg" alt="" alt="image" />'
+	var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />'
 </script>
 ```
 
@@ -104,7 +104,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 At least one attribute is duplicated.
 
 ```html
-<img src="image.jpg" alt="" alt="image" />
+<img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />
 ```
 
 #### Failed Example 2
@@ -145,5 +145,5 @@ Code is XML, and not HTML or SVG.
 Code is JavaScript, and not HTML or SVG.
 
 ```js
-var foo = '<img src="image.jpg" alt="" alt="image" />'
+var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />'
 ```

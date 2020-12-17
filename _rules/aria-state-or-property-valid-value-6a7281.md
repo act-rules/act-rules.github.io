@@ -16,13 +16,13 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Anne Thyme Nørregaard
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-Any [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is not empty (""), and that is specified on an HTML or SVG element.
+This rule applies to any [WAI-ARIA 1.1 state or property](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) that is not empty (""), and that is specified on an HTML or SVG element.
 
 ## Expectation
 
@@ -47,6 +47,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 ## Background
 
+- [ARIA state or property is permitted](https://act-rules.github.io/rules/5c01ea)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)

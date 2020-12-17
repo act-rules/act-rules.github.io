@@ -1,6 +1,6 @@
 ---
 id: d0f69e
-name: All table header cells have assigned data cells
+name: Table header cell has assigned data cells
 rule_type: atomic
 description: |
   This rule checks that each table header has assigned data cells in a table element.
@@ -17,17 +17,17 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
-  - CSS styling
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
-    - Jey Nandakumar
     - Audrey Maniez
+    - Jey Nandakumar
 ---
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
 
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][]; and

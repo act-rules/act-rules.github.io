@@ -31,7 +31,7 @@ acknowledgments:
 
 This rule applies to any HTML or SVG element which
 
-- has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
+- has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
 - is [included in the accessibility tree][]; and
 - has a non-empty ("") [accessible name][].
 
@@ -50,6 +50,9 @@ The [accessible name][] of each target element together with its [programmatical
 
 ## Background
 
+This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
+
+- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
 - [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
@@ -302,7 +305,7 @@ The [accessible name][] (from the link's text) does not describe the purpose of 
 An `a` element with its [semantic role][] changed from `link` to another role.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
+<a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
 
 #### Inapplicable Example 2
@@ -310,7 +313,7 @@ An `a` element with its [semantic role][] changed from `link` to another role.
 The `link` element is not [included in the accessibility tree][].
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"
+<a href="https://www.w3.org/WAI" style="display: none;"
 	><img src="/test-assets/5effbb/cart.svg" alt="Checkout" />Checkout</a
 >
 ```
@@ -329,3 +332,5 @@ An `a` element without the [semantic role][] `link`.
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'

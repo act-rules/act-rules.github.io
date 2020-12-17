@@ -6,7 +6,7 @@ description: |
   This rule checks that elements marked as decorative either are not included in the accessibility tree, or have a presentational role.
 accessibility_requirements:
 input_aspects:
-  - Accessiblity tree
+  - Accessibility tree
   - CSS styling
   - DOM tree
 acknowledgments:
@@ -20,7 +20,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any element which is [marked as decorative][].
+This rule applies to any element which is [marked as decorative][].
 
 ## Expectation
 

@@ -16,8 +16,8 @@ input_aspects:
   - Accessibility tree
 acknowledgments:
   authors:
-    - João Vicente
     - Carlos Duarte
+    - João Vicente
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -26,7 +26,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
+This rule applies to any [HTML document][] with an associated [Window object][] that has an [event listener list][] with one or more [event listeners][event listener] for [device orientation events][device orientation] or [device motion events][device motion].
 
 ## Expectation
 

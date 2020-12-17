@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-text:cc5: # Non-interference due to mapping to 2.1.2
+    title: WCAG Non-Interference
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G21: # Ensuring that users are not trapped in content
     forConformance: false
     failed: not satisfied
@@ -20,14 +26,14 @@ input_rules:
   - ebe86a
 acknowledgments:
   authors:
-    - Geir Sindre Fossøy
-    - Dagfinn Rømen
     - Anne Thyme Nørregaard
+    - Dagfinn Rømen
+    - Geir Sindre Fossøy
 ---
 
 ## Applicability
 
-The rule only applies to any HTML or SVG element that is [focusable][].
+This rule only applies to any HTML or SVG element that is [focusable][].
 
 **Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 

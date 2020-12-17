@@ -3,7 +3,7 @@ id: 23a2a8
 name: Image has non-empty accessible name
 rule_type: atomic
 description: |
-  This rule checks that each image either has a non-empty accessible name or is marked up as decorative
+  This rule checks that each image either has a non-empty accessible name or is marked up as decorative.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content
     forConformance: true
@@ -26,6 +26,8 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Wilco Fiers
+  previous_authors:
     - Anne Thyme Nørregaard
     - Stein Erik Skotkjerra
 htmlHintIgnore:
@@ -36,7 +38,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except for elements that are not [included in the accessibility tree][].
+This rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except if the element has a [hidden state][] of "true".
 
 ## Expectation
 
@@ -138,7 +140,7 @@ This `img` element has an [explicit role][] of `none` because of the value of th
 
 #### Passed Example 8
 
-This `img` element inside a `div` positioned off screen has an [implicit role][] of `img` because of the empty `alt` attribute.
+This off screen `img` element has an [implicit role][] of `presentation` because of the empty `alt` attribute.
 
 ```html
 <div style="margin-left:-9999px;">
@@ -150,7 +152,7 @@ This `img` element inside a `div` positioned off screen has an [implicit role][]
 
 #### Failed Example 1
 
-This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
+This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an `alt` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" />
@@ -202,7 +204,7 @@ This `svg` element has an [implicit role][] of `graphics-document`.
 
 #### Inapplicable Example 2
 
-This element has a [semantic role][] of `img`, but is not [included in the accessibility tree][].
+This element with a [semantic role][] of `img` is hidden with `aria-hidden` set to "true".
 
 ```html
 <div
@@ -214,7 +216,7 @@ This element has a [semantic role][] of `img`, but is not [included in the acces
 
 #### Inapplicable Example 3
 
-This `img` element is not [included in the accessibility tree][].
+This `img` element is hidden with `aria-hidden` set to "true".
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" aria-hidden="true" />
@@ -222,16 +224,28 @@ This `img` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 4
 
-This element is neither an `img` element nor has a role of `img`.
+This `img` element is hidden because its parent has `display: none`.
 
 ```html
-<div aria-label="W3C logo"></div>
+<div style="display: none">
+	<img src="/test-assets/shared/w3c-logo.png" />
+</div>
+```
+
+#### Inapplicable Example 5
+
+This `img` element is hidden with `visibility: hidden`.
+
+```html
+<div style="visibility: hidden">
+	<img src="/test-assets/shared/w3c-logo.png" />
+</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [implicit role]: #implicit-role 'Definition of implicit role'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[hidden state]: #hidden-state 'Definition of hidden state'
 [semantic role]: #semantic-role 'Definition of semantic role'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

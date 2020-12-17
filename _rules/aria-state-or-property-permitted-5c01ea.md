@@ -18,7 +18,7 @@ accessibility_requirements:
     inapplicable: satisfied
 input_aspects:
   - Accessibility Tree
-  - CSS styling
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-Any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -46,6 +46,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+- [ARIA state or property has valid value](https://act-rules.github.io/rules/6a7281)
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
@@ -132,18 +133,10 @@ The `aria-label` [state][] is [global][] and thus [inherited][] for all [semanti
 
 #### Passed Example 10
 
-This `aside` element has an [explicit role][] of `none`. However, the [global][] [property][] `aria-label` is specified. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [inherited][] for the `complementary` role.
+This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
 
 ```html
-<aside role="none" aria-label="About ACT rules" aria-expanded="true">ACT rules are cool!</aside>
-```
-
-#### Passed Example 11
-
-This `aside` element has an [explicit role][] of `none`. However, it is [focusable][] due to the `tabindex` attribute. Thus it has a [semantic role][] of `complementary` due to [Presentational Roles Conflict Resolution][]. The `aria-expanded` [state][] is [supported][] for the `complementary` role.
-
-```html
-<aside role="none" tabindex="0" aria-expanded="true">ACT rules are cool!</aside>
+<button role="none" aria-pressed="false">ACT rules are cool!</button>
 ```
 
 ### Failed

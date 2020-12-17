@@ -1,9 +1,9 @@
 ---
 id: 2779a5
-name: HTML page has title
+name: HTML page has non-empty title
 rule_type: atomic
 description: |
-  This rule checks that a non-embedded HTML page has a title.
+  This rule checks that a non-embedded HTML page has a non-empty title.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -24,11 +24,11 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Wilco Fiers
-    - Stein Erik Skotkjerra
-    - Bryn Anderson
     - Anne Thyme Nørregaard
+    - Bryn Anderson
     - Jey Nandakumar
+    - Stein Erik Skotkjerra
+    - Wilco Fiers
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+This rule applies to the root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
 ## Expectation 1
 
@@ -59,6 +59,7 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
+- [HTML page title is descriptive](https://act-rules.github.io/rules/c4a8a4)
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
@@ -155,7 +156,7 @@ This page has a `title` element that is empty.
 
 #### Failed Example 3
 
-This page does not have a `title` element for the whole page.
+This page does not have a `title` element. The `title` element in the content of the `iframe` does not function as the title for the entire page.
 
 ```html
 <html>

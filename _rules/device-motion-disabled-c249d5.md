@@ -32,7 +32,7 @@ This rule applies to an [HTML document][] with an associated [Window object][] t
 
 For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
 
-- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 1 minutes time span of the [event firing][event firing]; or
+- **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 1 minute time span of the [event firing][event firing]; or
 - **disabled:** There is at least one [set of clearly labelled instruments][] to [block the event][blocked event][] for at least 1 minute.
 
 ## Assumptions
@@ -207,8 +207,8 @@ This [HTML document][] is not operable by device motion.
 ```
 
 [accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[blocked event]: #blocked-event 'Definition of blocked event'
 [changes in content]: #changes-in-content 'Definition of changes in content'
-[clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
@@ -218,7 +218,7 @@ This [HTML document][] is not operable by device motion.
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [html document]: https://dom.spec.whatwg.org/#concept-document
-[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
+[set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

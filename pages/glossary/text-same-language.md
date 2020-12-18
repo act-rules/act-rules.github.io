@@ -20,8 +20,6 @@ The _text with the same programmatic language_ as an element E is composed of al
 - **accessible text**: the [accessible name][] and [accessible description][] of any element with the same programmatic language as E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
 
-For more details, see [examples of default language](/pages/examples/default-element-language/).
-
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'

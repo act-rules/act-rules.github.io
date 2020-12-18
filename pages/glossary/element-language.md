@@ -16,7 +16,9 @@ The _most common language_ is determined by counting the number of _words_ in th
 
 When the element is a [document][], its default language is also called the _default page language_.
 
-An element as a _unique language_ if all _words_ in the [text with the same programmatic language][] as an element are part of the same language, except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text. Words can be part of other languages as long as they are also part of the unique language.
+An element as a _unique language_ if all _words_ in the [text with the same programmatic language][] as an element are part of the same language from the [language subtag registry][], except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text. Words can be part of other languages as long as they are also part of the unique language. In the rare case where all words are part of several languages, an element may hav several _unique languages_…
+
+For more details, see [examples of default language](/pages/examples/default-element-language/).
 
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry 'Language Subtag Registry'

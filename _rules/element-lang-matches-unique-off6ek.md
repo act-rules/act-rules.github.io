@@ -1,9 +1,9 @@
 ---
 id: off6ek
-name: HTML element language subtag matches default language
+name: HTML element language subtag matches language
 rule_type: atomic
 description: |
-  This rule checks that the primary language subtag of an element matches its default language
+  This rule checks that the primary language subtag of an element matches its language
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -37,15 +37,13 @@ This rule applies to any HTML element for which all the following are true:
 - The element is in a [top-level browsing context][]; and
 - The element is in a [document][] with a [content type][] of `text/html`; and
 - The element has a `lang` [attribute value][] which is a [valid language tag][]; and
-- The element has a defined [default element language][].
+- The element has some non-empty [text with the same programmatic language][].
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] matches its [default element language][].
+For each test target, the [primary language][] of the [valid language tag][] is a [unique element language][].
 
 ## Assumptions
-
-- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.2 Language of Parts][sc312] is still satisfied.
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [BCP 47][] syntax.
 
@@ -68,15 +66,13 @@ This rule ignores elements that are nested inside `iframe`. `iframe` are intende
 
 In all examples, the `html` element has itself a `lang` attribute in order to make sure that the examples do not fail [Success Criterion 3.1.1 Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page). These `html` elements are, however, never applicable because they are not descendants of a `body` element, and the example descriptions do not mention them further.
 
-Similarly, all examples contain a short text in the page language without any `lang` attribute in order to make the `lang` attribute on other elements useful. Especially, Technique [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58) is about changes of language.
-
 ## Test Cases
 
 ### Passed
 
 #### Passed Example 1
 
-This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [default language][]. The default language is Dutch because all words are in Dutch.
+This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [unique language][]. The unique language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -92,30 +88,9 @@ This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matc
 </html>
 ```
 
-#### Passed Example 2
-
-The second `p` element has a `lang` [attribute value][] of `en` (English), which matches its [default language][]. The default language is English because all but a few words are in English.
-
-```html
-<html lang="nl">
-	<head>
-		<title>Met de kippen op stok</title>
-	</head>
-	<body>
-		<blockquote>
-			<p>"Hij ging met de kippen op stok"</p>
-		</blockquote>
-		<p lang="en">
-			The Dutch phrase "Hij ging met de kippen op stok" literally translates into "He went to roost with the chickens",
-			but it means that he went to bed early.
-		</p>
-	</body>
-</html>
-```
-
 #### Passed Example 3
 
-The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [default language][]. The default language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their default language.
+The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [unique language][]. The unique language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their unique language.
 
 ```html
 <html lang="en">
@@ -136,7 +111,7 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 
 #### Passed Example 4
 
-This `div` element has a `lang` attribute value of `en` (English), which matches its [default language][]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
+This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [unique language][]. The unique language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
 ```html
 <html lang="fr">
@@ -150,9 +125,19 @@ This `div` element has a `lang` attribute value of `en` (English), which matches
 				Bonne année !
 			</p>
 		</div>
-		<p>
-			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
-		</p>
+	</body>
+</html>
+```
+
+#### Passed Example 5
+
+These `p` element both have a `lang` [attribute value][] that match one of their [unique language][]. Even though it is the same sentence, each of its words can be either English or French. The sentence does have meaning in both languages.
+
+```html
+<html lang="en">
+	<body>
+		<p lang="en">Paul put dire comment on tape.</p>
+		<p lang="fr">Paul put dire comment on tape.</p>
 	</body>
 </html>
 ```
@@ -161,7 +146,7 @@ This `div` element has a `lang` attribute value of `en` (English), which matches
 
 #### Failed Example 1
 
-This `span` element has `lang` attribute value of `fr` (French), which does not matches its [default language][]. The default language is Dutch because all words are Dutch.
+This `span` element has `lang` attribute value of `fr` (French), which does not matches its [unique language][]. The unique language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -179,7 +164,7 @@ This `span` element has `lang` attribute value of `fr` (French), which does not 
 
 #### Failed Example 2
 
-The second `p` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because all but a few words are English.
+The second `p` element has a `lang` [attribute value][] of `en` (English), which does not match its [unique language][]. The element has no unique language because it mixes words from Dutch and English.
 
 ```html
 <html lang="nl">
@@ -190,7 +175,7 @@ The second `p` element has a `lang` attribute value of `fr` (French), which does
 		<blockquote>
 			<p>"Hij ging met de kippen op stok"</p>
 		</blockquote>
-		<p lang="fr">
+		<p lang="en">
 			The Dutch phrase "Hij ging met de kippen op stok" literally translates into "He went to roost with the chickens",
 			but it means that he went to bed early.
 		</p>
@@ -200,7 +185,7 @@ The second `p` element has a `lang` attribute value of `fr` (French), which does
 
 #### Failed Example 3
 
-The second `p` element has `lang` attribute value of `en` (English), which does not matches its [default language][]. The default language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
+The second `p` element has `lang` attribute value of `en` (English), which does not matches its [unique language][]. The unique language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
 
 ```html
 <html lang="nl">
@@ -223,7 +208,7 @@ The second `p` element has `lang` attribute value of `en` (English), which does 
 
 #### Failed Example 4
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `fr`. The first `p` element also has an incorrect `lang` attribute.
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [unique language][]. The unique language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`, which also doesn't match its unique language.
 
 ```html
 <html lang="fr">
@@ -237,16 +222,13 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 				Bonne année !
 			</p>
 		</div>
-		<p>
-			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
-		</p>
 	</body>
 </html>
 ```
 
 #### Failed Example 5
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [default language][]. The default language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The first `p` element is not applicable because it has no [default language][] since its content is neither [visible][] nor [included in the accessibility tree][].
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [unique language][]. The unique language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <html lang="fr">
@@ -260,9 +242,6 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 				Fireworks over Paris
 			</p>
 		</div>
-		<p>
-			Un feu d'artifice sera tiré depuis les jardins du Trocadéro.
-		</p>
 	</body>
 </html>
 ```
@@ -281,7 +260,45 @@ There is no HTML elements in this document.
 
 #### Inapplicable Example 2
 
-The first `p` element has an undefined [default language][] because it has no content.
+There is no descendant of a `body` element with a `lang` attribute.
+
+```html
+<html lang=en">
+<body>
+<p>I love ACT rules!</p>
+</body>
+</html>
+```
+
+#### Inapplicable Example 3
+
+This `p` element is not in a [top-level browsing context][].
+
+```html
+<html lang="en">
+	<body>
+		<iframe srcdoc='<p lang="en">I love ACT rules!</p>' />
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+This `p` element has an invalid language tag.
+
+```html
+<html lang="en">
+	<body>
+		<p lang="français">
+			I love ACT rules!
+		</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 5
+
+The first `p` element has a no [text with the same programmatic language][] because it has no content.
 
 ```html
 <html lang="en">
@@ -292,28 +309,14 @@ The first `p` element has an undefined [default language][] because it has no co
 </html>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 6
 
-The second `p` element has an undefined [default language][] because it can be either English or French.
-
-```html
-<html lang="en">
-	<body>
-		<p>Some sentences can have meaning in different languages.</p>
-		<p lang="fr">Paul put dire comment on tape.</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
-The first `p` element has an undefined [default language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
+This `p` element has a no [text with the same programmatic content][] because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">
 	<body>
-		<p lang="en" hidden>I love ACT rules!</p>
-		<p>I love ACT rules!</p>
+		<p lang="fr" hidden>I love ACT rules!</p>
 	</body>
 </html>
 ```
@@ -321,8 +324,6 @@ The first `p` element has an undefined [default language][] because it has no co
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
-[default language]: #element-language 'Definition of Default Element Language'
-[default element language]: #element-language 'Definition of Default Element Language'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
@@ -330,7 +331,10 @@ The first `p` element has an undefined [default language][] because it has no co
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
+[text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
+[unique language]: #element-language 'Definition of Default Element Language'
+[unique element language]: #element-language 'Definition of Default Element Language'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

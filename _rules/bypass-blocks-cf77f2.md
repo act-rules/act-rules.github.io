@@ -64,7 +64,6 @@ For each test target, the outcome of at least one of the following rules is pass
 
 ## Assumptions
 
-- This rule assumes that if a "skip link" or similar instrument is provided to jump to the non-repeated content, it must be possible to [activate][activation] it by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
 - This rule assumes that completely removing [blocks of repeated content][block of repeated content] is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, providing an [instrument][] to remove them without providing one to show them again is likely going to create other unrelated issues.
 - This rule assumes that [Success Criterion 2.4.1 Bypass blocks][sc241] only requires a way to skip repeated content located before the primary content of the page. If repeated content after the primary content, or non-repeated content before the primary content needs to be skipped, this rule may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [_Block of repeated content is collapsible_][block collapsible] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
@@ -75,6 +74,8 @@ For each test target, the outcome of at least one of the following rules is pass
 ## Accessibility Support
 
 Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1 Bypass blocks][sc241]. They are, however, only beneficial for users who have ways of navigating with this information. For example, adding headings to a document will only help users who can "jump" from heading to heading (such a possibility can be provided by browsers, browsers plugins, screen readers, or other assistive technologies). Techniques and solutions based on links will benefit all users (for example, sighted keyboard users with no other assistive technology) and are therefore recommended.
+
+If the [instruments][instrument] used to pass some of the atomic rules are not keyboard accessible, or not [included in the accessibility tree][], passing this rule can still leave many users without a way to bypass blocks of repeated content. WCAG's definition of [mechanism][] has a note saying that it "needs to meet all success criteria for the conformance level claimed". This includes [Success Criterion 2.1.1 Keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible) and [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) which are both at level A.
 
 ## Background
 
@@ -327,7 +328,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [just before][] some [non-repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the non-repeated content is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [just before][] some [non-repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the `<div id="main">` element is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -460,35 +461,6 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 13
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the first two links are respectively a [keyboard actionable][] [instrument][] and an [instrument][] [included in the accessibility tree][] for that purpose. Note that it does not pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] because the technique requires a unique skip link. Note also that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and should thus be avoided.
-
-```html
-<html lang="en">
-	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#main" aria-hidden="true">Skip to main content</a>
-		<a href="#main" class="off-screen">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
-
-		<aside id="about-book">
-			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
-		</aside>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Passed Example 14
-
 This [HTML web page][] is passing rule [_Document has heading for non-repeated content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
 
 ```html
@@ -556,7 +528,6 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[activation]: https://html.spec.whatwg.org/#activation 'HTML Definition of Activation'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
@@ -569,12 +540,11 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [just before]: #just-before 'Definition of Just Before'
-[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
+[mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism 'WCAG definition of Mechanism'
 [non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
 [tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
@@ -582,4 +552,3 @@ This [document][] is not an [HTML web page][].
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing Heading Elements at the Beginning of each Section of Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
 [usc241]: https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html 'Understanding Success Criterion 2.4.1: Bypass Blocks'
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'

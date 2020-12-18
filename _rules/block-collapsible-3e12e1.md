@@ -29,12 +29,12 @@ This rule applies to any [HTML web page][].
 
 For each [block of repeated content][] in each test target, which is before (in the [flat tree][]) at least one node of [non-repeated content][], all the following are true:
 
-- there exists a [keyboard actionable][] [instrument][] to make all nodes in this [block][] not [visible][]; and
-- there exists an [instrument][], which is [included in the accessibility tree][], to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
+- there exists an [instrument][] to make all nodes in this [block][] not [visible][]; and
+- there exists an [instrument][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 
-- This rule assumes that that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] requires that the [instrument][] can be activated by use of keyboard (in order to be useful for keyboard users).
+_No assumptions._
 
 ## Accessibility Support
 
@@ -45,8 +45,6 @@ _There are no major accessibility support issues known for this rule._
 Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both conditions for a given [block of repeated content][].
 
 Note that if there is no [block of repeated content][] before the non-repeated content, then the rule automatically passes. It is still possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the non-repeated content.
-
-[Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not require the [accessible name][] of the [user interface component][] ([instrument][]) to be descriptive, hence this rule doesn't require it either. However, having a non-descriptive [accessible name][] is likely a failure of [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value).
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not have any requirements concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
 
@@ -312,128 +310,6 @@ This document has an instrument to toggle [inclusion on the accessibility tree][
 </html>
 ```
 
-#### Failed Example 4
-
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it is not in [sequential focus navigation][] order.
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" tabindex="-1" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
-
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 5
-
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it is never [visible][].
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" class="off-screen" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
-
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 6
-
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [keyboard actionable][] because it cannot be [activated][] by use of keyboard.
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<span onclick="toggleHidden('chapters-navigation')">Toggle table of content</span>
-
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Failed Example 7
-
-This document has an [instrument][] to toggle the navigational [block of repeated content][], but it is not [included in the accessibility tree][].
-
-```html
-<html>
-	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" aria-hidden="true" onclick="toggleHidden('chapters-navigation')">Toggle table of content</a>
-
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -446,8 +322,6 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
-[accessible name]: #accessible-name 'Definition of Accessible Name'
-[activated]: https://html.spec.whatwg.org/#activation 'HTML definition of Activation'
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
@@ -460,9 +334,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
-[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
 [non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
 [tech scr28]: https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR28 'Technique SCR28: Using an Expandable and Collapsible Menu to Bypass Block of Content'
-[sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components 'WCAG definition of User Interface Component'
 [visible]: #visible 'Definition of Visible'

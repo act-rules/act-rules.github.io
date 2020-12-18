@@ -8,18 +8,14 @@ input_aspects:
   - DOM tree
 ---
 
-The _content that becomes visible_ is the [root][] element of the [tree][], if a [tree][] exists, that contains all elements that, after half a second of an [event][] [firing][], meet any of the following:
+The _content that becomes visible_ after an [event][] [firing][] is any element for which all of the following is true:
 
-- the element did not exist on the [web page][] prior to the [event][] [firing][] and has [visible text content][]; or
-- the element has [attributes][] whose [values][] changed from what they were before the [event][] [firing][] and the change caused some or all of the element's [text nodes][] to become [visible][].
+- 500 milliseconds after the [event][] [firing][] the element has [visible text content][]; and
+- a tick before the [event][] [firing][] there was no element with the same [descendant text content][] that the element has after the [event][] [firing][]; and
+- the element has no [descendants][] for which the above two conditions are true.
 
-[attributes]: https://dom.spec.whatwg.org/#concept-attribute 'Definition of attribute'
+[descendants]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[descendant text content]: https://dom.spec.whatwg.org/#concept-descendant-text-content 'Definition of descendant text content'
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
-[root]: https://dom.spec.whatwg.org/#concept-tree-root 'Definition of root'
-[text nodes]: https://dom.spec.whatwg.org/#text 'Definition of DOM text'
-[tree]: https://dom.spec.whatwg.org/#concept-tree 'Definition of tree'
-[values]: https://dom.spec.whatwg.org/#concept-attribute-value 'Definition of attribute value'
-[visible]: #visible 'Definition of visible'
 [visible text content]: #visible-text-content 'Definition of visible text content'
-[web page]: #web-page-html 'Definition of web page'

@@ -5133,10 +5133,10 @@
       }
     },
     {
-      "testcaseId": "ac287c65840c420b22eb9775f6b2db4f035ddc35",
+      "testcaseId": "949f41987201e52f8404c1246d1229eec06dea08",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/de46e4/ac287c65840c420b22eb9775f6b2db4f035ddc35.html",
-      "relativePath": "testcases/de46e4/ac287c65840c420b22eb9775f6b2db4f035ddc35.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/949f41987201e52f8404c1246d1229eec06dea08.html",
+      "relativePath": "testcases/de46e4/949f41987201e52f8404c1246d1229eec06dea08.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -5157,10 +5157,10 @@
       }
     },
     {
-      "testcaseId": "d5fb36fa7363214287d80d93418c909746c92da4",
+      "testcaseId": "e38b5ef2c56c19d88da636f6138d9ceadba0669e",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/de46e4/d5fb36fa7363214287d80d93418c909746c92da4.html",
-      "relativePath": "testcases/de46e4/d5fb36fa7363214287d80d93418c909746c92da4.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/e38b5ef2c56c19d88da636f6138d9ceadba0669e.html",
+      "relativePath": "testcases/de46e4/e38b5ef2c56c19d88da636f6138d9ceadba0669e.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",

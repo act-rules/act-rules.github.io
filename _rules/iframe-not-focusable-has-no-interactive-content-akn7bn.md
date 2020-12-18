@@ -30,7 +30,7 @@ This rule applies to any `iframe` element that has a negative number as a `tabin
 
 ## Expectation
 
-None of the test target's [nested browsing context][] includes elements that are [visible][] and part of the [sequential focus navigation][].
+None of the test target's [nested browsing context][] includes elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Assumptions
 
@@ -96,7 +96,9 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
-[visible]: #visible 'Definition of visible'
-[nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/04'
-[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/04'
+[container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
+[nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
+[owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
+[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
+[visible]: #visible 'Definition of visible'

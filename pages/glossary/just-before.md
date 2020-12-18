@@ -16,8 +16,6 @@ A node N is _just before_ a node of [perceivable content][] P if one of the foll
 
 Several nodes may be just before a given node, especially if there are several non-[perceivable content][] nodes next to each other.
 
-Order ("first", "before", …) in this definition is [tree order][] in the [flat tree][].
-
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [tree order]: https://dom.spec.whatwg.org/#concept-tree-order 'DOM specification of Tree Order'

@@ -194,10 +194,10 @@ There is no element with a lang attribute value which is a descendant of a body 
 
 #### Inapplicable Example 2
 
-There is no element with a non-empty `lang` [attribute value][].
+There is no element which is a descendant of a `body` element and has a non-empty `lang` [attribute value][].
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<article lang="">
 			They wandered into a strange Tiki bar on the edge of the small beach town.
@@ -211,7 +211,7 @@ There is no element with a non-empty `lang` [attribute value][].
 There is no element with a [text node][] as a [descendant][] in the [flat tree][] that is either [visible][] or [included in the accessibility tree][].
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<p lang="hidden">
 			<span style="display: none;">

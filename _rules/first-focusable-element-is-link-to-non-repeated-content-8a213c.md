@@ -39,7 +39,7 @@ For each test target, all the following are true for the first element in its [s
 - the element is [included in the accessibility tree][]; and
 - the element is a [semantic link][]; and
 - when the element is [activated][], focus moves [just before][] a node of [non-repeated content][]; and
-- the element has an [accessible name][] that communicates that it skips to non-repeated content.
+- the element has an [accessible name][] that communicates that it skips to the main content area.
 
 ## Assumptions
 

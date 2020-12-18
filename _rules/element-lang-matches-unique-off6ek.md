@@ -88,7 +88,7 @@ This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matc
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
 The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [unique language][]. The unique language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their unique language.
 
@@ -109,7 +109,7 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [unique language][]. The unique language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
@@ -129,7 +129,7 @@ This `div` element has a `lang` [attribute value][] of `en` (English), which mat
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 These `p` element both have a `lang` [attribute value][] that match one of their [unique language][]. Even though it is the same sentence, each of its words can be either English or French. The sentence does have meaning in both languages.
 
@@ -263,10 +263,10 @@ There is no HTML elements in this document.
 There is no descendant of a `body` element with a `lang` attribute.
 
 ```html
-<html lang=en">
-<body>
-<p>I love ACT rules!</p>
-</body>
+<html lang="en">
+	<body>
+		<p>I love ACT rules!</p>
+	</body>
 </html>
 ```
 
@@ -277,7 +277,7 @@ This `p` element is not in a [top-level browsing context][].
 ```html
 <html lang="en">
 	<body>
-		<iframe srcdoc='<p lang="en">I love ACT rules!</p>' />
+		<iframe srcdoc="<p lang='en'>I love ACT rules!</p>" />
 	</body>
 </html>
 ```
@@ -311,7 +311,7 @@ The first `p` element has a no [text with the same programmatic language][] beca
 
 #### Inapplicable Example 6
 
-This `p` element has a no [text with the same programmatic content][] because it has no content that is either [visible][] or [included in the accessibility tree][].
+This `p` element has a no [text with the same programmatic language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -330,7 +330,6 @@ This `p` element has a no [text with the same programmatic content][] because it
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
-[sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
 [unique language]: #element-language 'Definition of Default Element Language'

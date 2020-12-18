@@ -15,7 +15,7 @@ An HTML element is _keyboard actionable_ if all the following are true:
 - the element is [visible][] when [focused][]; and
 - the element can be [activated][] by use of keyboard.
 
-When it is not [focused][], an actionable element might be visible or not, this is not important as long at the element is [visible][] when it is [focused][]. Similarly, it doesn't matter whether or not the element can be [activated][] by mouse or other input device as long as it can be [activated][] by keyboard.
+When it is not [focused][], an actionable element might be visible or not, this is not important as long as the element is [visible][] when it is [focused][]. Similarly, it doesn't matter whether or not the element can be [activated][] by mouse or other input device as long as it can be [activated][] by keyboard.
 
 [activated]: https://html.spec.whatwg.org/#activation 'HTML definition of Activation'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

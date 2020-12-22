@@ -17,9 +17,7 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Carlos Duarte
-    - Marie Trudelle
-    - Ramit Garg
+    - Jean-Yves Moyen
 ---
 
 ## Applicability
@@ -38,6 +36,7 @@ Each test target has an [accessible name][] which describes its purpose.
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

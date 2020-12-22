@@ -41,7 +41,7 @@ This rule applies to any HTML element for which all the following are true:
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] is a [unique element language][].
+For each test target, the [primary language][] of the [valid language tag][] is a [common element language][].
 
 ## Assumptions
 
@@ -72,7 +72,7 @@ In all examples, the `html` element has itself a `lang` attribute in order to ma
 
 #### Passed Example 1
 
-This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [unique language][]. The unique language is Dutch because all words are Dutch.
+This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [common language][]. The common language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -90,7 +90,7 @@ This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matc
 
 #### Passed Example 2
 
-The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [unique language][]. The unique language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their unique language.
+The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their common language.
 
 ```html
 <html lang="en">
@@ -111,7 +111,7 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 
 #### Passed Example 3
 
-This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [unique language][]. The unique language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
+This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [common language][]. The common language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
 ```html
 <html lang="fr">
@@ -131,7 +131,7 @@ This `div` element has a `lang` [attribute value][] of `en` (English), which mat
 
 #### Passed Example 4
 
-These `p` element both have a `lang` [attribute value][] that match one of their [unique language][]. Even though it is the same sentence, each of its words can be either English or French. The sentence does have meaning in both languages.
+These `p` element both have a `lang` [attribute value][] that match one of their [common language][]. Even though it is the same sentence, each of its words can be either English or French. The sentence does have meaning in both languages.
 
 ```html
 <html lang="en">
@@ -146,7 +146,7 @@ These `p` element both have a `lang` [attribute value][] that match one of their
 
 #### Failed Example 1
 
-This `span` element has `lang` attribute value of `fr` (French), which does not matches its [unique language][]. The unique language is Dutch because all words are Dutch.
+This `span` element has `lang` attribute value of `fr` (French), which does not matches its [common language][]. The common language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -164,7 +164,7 @@ This `span` element has `lang` attribute value of `fr` (French), which does not 
 
 #### Failed Example 2
 
-The second `p` element has a `lang` [attribute value][] of `en` (English), which does not match its [unique language][]. The element has no unique language because it mixes words from Dutch and English.
+The second `p` element has a `lang` [attribute value][] of `en` (English), which does not match its [common language][]. The element has no common language because it mixes words from Dutch and English.
 
 ```html
 <html lang="nl">
@@ -185,7 +185,7 @@ The second `p` element has a `lang` [attribute value][] of `en` (English), which
 
 #### Failed Example 3
 
-The second `p` element has `lang` attribute value of `en` (English), which does not matches its [unique language][]. The unique language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
+The second `p` element has `lang` attribute value of `en` (English), which does not matches its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
 
 ```html
 <html lang="nl">
@@ -208,7 +208,7 @@ The second `p` element has `lang` attribute value of `en` (English), which does 
 
 #### Failed Example 4
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [unique language][]. The unique language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`, which also doesn't match its unique language.
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`, which also doesn't match its common language.
 
 ```html
 <html lang="fr">
@@ -228,7 +228,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Failed Example 5
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [unique language][]. The unique language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <html lang="fr">
@@ -332,8 +332,8 @@ This `p` element has a no [text with the same programmatic language][] because i
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
-[unique language]: #element-language 'Definition of Default Element Language'
-[unique element language]: #element-language 'Definition of Default Element Language'
+[common language]: #element-language 'Definition of Common Element Language'
+[common element language]: #element-language 'Definition of Common Element Language'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

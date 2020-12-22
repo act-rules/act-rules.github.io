@@ -37,7 +37,7 @@ This rule applies to any HTML or SVG element for which all the following is true
 
 ## Expectation
 
-The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
+The [accessible name][] of each target element together with its [programmatically determined link context][] describes the purpose of the link.
 
 ## Assumptions
 

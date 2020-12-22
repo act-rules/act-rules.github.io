@@ -250,7 +250,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Inapplicable Example 1
 
-There is no HTML elements in this document.
+There are no HTML elements in this document.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en">

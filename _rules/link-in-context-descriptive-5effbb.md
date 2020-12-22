@@ -3,7 +3,7 @@ id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible name of a link together with its context describe its purpose.
+  This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
@@ -29,11 +29,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element which
+This rule applies to any HTML or SVG element for which all the following is true:
 
-- has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
-- is [included in the accessibility tree][]; and
-- has a non-empty ("") [accessible name][].
+- the element is a [semantic link][]; and
+- the element is [included in the accessibility tree][]; and
+- the element has a non-empty ("") [accessible name][].
 
 ## Expectation
 
@@ -331,6 +331,7 @@ An `a` element without the [semantic role][] `link`.
 [link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
+[semantic link]: #semantic-link 'Definition of Semantic Link'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'

@@ -328,7 +328,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 
 #### Passed Example 9
 
-This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [just before][] some [non-repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the `<div id="main">` element is arguably a single "area of the content", and the technique requires only one link per such area.
+This [HTML web page][] is passing rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main] because the link with target `#brewitt-taylor` moves focus [just before][] some [non-repeated content after repeated content][]. Note that it does not necessarily pass Technique [G124: Adding links at the top of the page to each area of the content][tech g124] because the `<div id="main">` element is arguably a single "area of the content", and the technique requires only one link per such area.
 
 ```html
 <html>
@@ -542,7 +542,7 @@ This [document][] is not an [HTML web page][].
 [just before]: #just-before 'Definition of Just Before'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism 'WCAG definition of Mechanism'
-[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
+[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after repeated content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [tech aria11]: https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11 'Technique ARIA11: Using ARIA Landmarks to Identify Regions of a Page'

@@ -1,5 +1,5 @@
 ---
-title: Non-repeated content
+title: Non-repeated content after repeated content
 key: non-repeated-content
 unambiguous: true
 objective: true
@@ -9,7 +9,7 @@ input_aspects:
   - DOM tree
 ---
 
-A node is _non-repeated content_ if all the following are true:
+A node is _non-repeated content after repeated content_ if all the following are true:
 
 - the node is [perceivable content][]; and
 - the node is not part of any [block of repeated content][]; and

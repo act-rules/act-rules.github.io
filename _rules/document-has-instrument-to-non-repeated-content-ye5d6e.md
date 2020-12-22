@@ -38,7 +38,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each test target, there exists at least one [instrument][] inside it to move focus [just before][] a node of [non-repeated content][].
+For each test target, there exists at least one [instrument][] inside it to move focus [just before][] a node of [non-repeated content after repeated content][].
 
 ## Assumptions
 
@@ -249,7 +249,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 
 #### Passed Example 7
 
-In this [document][], the first `a` element is an [instrument][] to move the focus to the non-repeated content. Even though its target is inside a [block of repeated content][], it is still [just before][] some [non-repeated content][] because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
+In this [document][], the first `a` element is an [instrument][] to move the focus to the non-repeated content. Even though its target is inside a [block of repeated content][], it is still [just before][] some [non-repeated content after repeated content][] because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -277,7 +277,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 
 #### Passed Example 8
 
-In this [document][], the first `a` element is an [instrument][] to move the focus to the non-repeated content. Even though its target is not the first element after it, it is still [just before][] the first [non-repeated content][]. Thus, following the link does not skip any non-repeated content.
+In this [document][], the first `a` element is an [instrument][] to move the focus to the non-repeated content. Even though its target is not the first element after it, it is still [just before][] the first [non-repeated content after repeated content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">
@@ -361,7 +361,7 @@ In this [document][], the link to skip to the non-repeated content does not refe
 
 #### Failed Example 3
 
-In this [document][], the skip link does not move focus [just before][] some [non-repeated content][]. The focus is moved on [perceivable content][] which is inside the [block of repeated content][]. Thus, following the link does not skip all the repeated content.
+In this [document][], the skip link does not move focus [just before][] some [non-repeated content after repeated content][]. The focus is moved on [perceivable content][] which is inside the [block of repeated content][]. Thus, following the link does not skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -409,7 +409,7 @@ This [document][] is not an [HTML web page][].
 [just before]: #just-before 'Definition of Just Before'
 [navigate]: https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate 'HTML specification of navigate'
 [navigation landmark]: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_navigation 'WAI-ARIA authoring practices, Navigation Landmark'
-[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
+[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'

@@ -28,7 +28,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-In each test target, there exists an element containing [non-repeated content][] for which all the following are true:
+In each test target, there exists an element containing [non-repeated content after repeated content][] for which all the following are true:
 
 - the element has a [semantic role][] of `heading`; and
 - the element is [visible][]; and
@@ -155,7 +155,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 
 #### Passed Example 4
 
-This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. Here, the heading is the first [non-repeated content][].
+This [document][] has a `h1` heading, which is [visible][] and [included in the accessibility tree][], at the beginning of its non-repeated content. Here, the heading is the first [non-repeated content after repeated content][].
 
 ```html
 <html>
@@ -395,7 +395,7 @@ The non-repeated content of this [document][] starts with a `h1` heading, but it
 
 #### Failed Example 4
 
-In this [document][], the only element with a role of `heading` is inside a [block of repeated content][] and therefore isn't [non-repeated content][].
+In this [document][], the only element with a role of `heading` is inside a [block of repeated content][] and therefore isn't [non-repeated content after repeated content][].
 
 ```html
 <html>
@@ -439,7 +439,7 @@ This [document][] is not an [HTML web page][].
 [document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
+[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass Blocks'

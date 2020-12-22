@@ -38,7 +38,7 @@ For each test target, all the following are true for the first element in its [s
 - the element is [keyboard actionable][]; and
 - the element is [included in the accessibility tree][]; and
 - the element is a [semantic link][]; and
-- when the element is [activated][], focus moves [just before][] a node of [non-repeated content][]; and
+- when the element is [activated][], focus moves [just before][] a node of [non-repeated content after repeated content][]; and
 - the element has an [accessible name][] that communicates that it skips to the main content area.
 
 ## Assumptions
@@ -236,7 +236,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 7
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside a [block of repeated content][], it is nonetheless [just before][] the [non-repeated content][] `p` element because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside a [block of repeated content][], it is nonetheless [just before][] the [non-repeated content after repeated content][] `p` element because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Passed Example 8
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element out of the [block of repeated content][], it is still [just before][] the first [non-repeated content][] `p` element because it is before any [perceivable content][] outside the [block of repeated content][]. Thus, following the link does not skip any non-repeated content.
+In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element out of the [block of repeated content][], it is still [just before][] the first [non-repeated content after repeated content][] `p` element because it is before any [perceivable content][] outside the [block of repeated content][]. Thus, following the link does not skip any non-repeated content.
 
 ```html
 <html lang="en">
@@ -598,7 +598,7 @@ In this [document][], the link to skip to the non-repeated content has a [whites
 
 #### Failed Example 12
 
-In this [document][], the first [focusable][] element does not move focus [just before][] a node of [non-repeated content][]. The focus is moved to a node of [perceivable content][] inside a [block of repeated content][]. Thus, following the link does not skip all the repeated content.
+In this [document][], the first [focusable][] element does not move focus [just before][] a node of [non-repeated content after repeated content][]. The focus is moved to a node of [perceivable content][] inside a [block of repeated content][]. Thus, following the link does not skip all the repeated content.
 
 ```html
 <html lang="en">
@@ -647,7 +647,7 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [just before]: #just-before 'Definition of Just Before a Node'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
-[non-repeated content]: #non-repeated-content 'Definition of Non-Repeated Content'
+[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [semantic link]: #semantic-link 'Definition of Semantic Link'

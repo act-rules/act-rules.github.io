@@ -47,7 +47,7 @@ Each test target has an [accessible name][] which describes its purpose.
 
 - Related rule:
   - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
-- [Understanding Succes Criterion 2.4.9: Link Purpose (Link Only)][usc249]
+- [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
 - [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24)
@@ -219,6 +219,5 @@ There is no [semantic link][] in this document (`a` element without an `href` at
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic link]: #semantic-link 'Definition of Semantic Link'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
-[usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Succes Criterion 2.4.9: Link Purpose (Link Only)'
+[usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'

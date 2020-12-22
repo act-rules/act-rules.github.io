@@ -1,15 +1,10 @@
 ---
-id: 5effbb
-name: Link in context is descriptive
+id: aizyf1
+name: Link is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible name of a link together with its context describe its purpose.
+  This rule checks that the accessible name of a link describes its purpose.
 accessibility_requirements:
-  wcag20:2.4.4: # Link Purpose (In Context)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only)
     forConformance: true
     failed: not satisfied
@@ -29,19 +24,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element which
+This rule applies to any HTML or SVG element for which all the following is true:
 
-- has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
-- is [included in the accessibility tree][]; and
-- has a non-empty ("") [accessible name][].
+- the element is a [semantic link][]; and
+- the element is [included in the accessibility tree][]; and
+- the element has a non-empty (`""`) [accessible name][].
 
 ## Expectation
 
-The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
+Each test target has an [accessible name][] which describes its purpose.
 
 ## Assumptions
 
-- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
+- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
 
 ## Accessibility Support
@@ -50,21 +45,14 @@ The [accessible name][] of each target element together with its [programmatical
 
 ## Background
 
-This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
-
-- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
-- [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
-- [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
+- Related rule:
+  - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+- [Understanding Succes Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
 - [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24)
-- [G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G53)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
-- [H77: Identifying the purpose of a link using link text combined with its enclosing list item](https://www.w3.org/WAI/WCAG21/Techniques/html/H77)
-- [H78: Identifying the purpose of a link using link text combined with its enclosing paragraph](https://www.w3.org/WAI/WCAG21/Techniques/html/H78)
-- [H79: Identifying the purpose of a link in a data table using the link text combined with its enclosing table cell and associated table header cells](https://www.w3.org/WAI/WCAG21/Techniques/html/H79)
-- [H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested](https://www.w3.org/WAI/WCAG21/Techniques/html/H81)
 
 ## Test Cases
 
@@ -72,7 +60,7 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 #### Passed Example 1
 
-The [accessible name][] (from the link's text) describes the purpose of the link.
+This link has an [accessible name][] (from its text) describing its purpose.
 
 ```html
 <a href="#desc">See the description of this product.</a>
@@ -82,7 +70,7 @@ The [accessible name][] (from the link's text) describes the purpose of the link
 
 #### Passed Example 2
 
-The [accessible name][] describes the purpose of the link.
+This link has an [accessible name][] (from the `alt` attribute on the image) describing its purpose.
 
 ```html
 <a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content"/></a>
@@ -94,17 +82,7 @@ The [accessible name][] describes the purpose of the link.
 
 #### Passed Example 3
 
-The [accessible name][] (from the link's text), together with its [programmatically determined link context][] (available from the text in the closest `p` ancestor), describes the purpose of the link.
-
-```html
-<p>See the description of <a href="#desc">this product</a>.</p>
-
-<p id="desc">This product consists of several web pages.</p>
-```
-
-#### Passed Example 4
-
-The [accessible name][] (from the link's text) describes the purpose of the link.
+This link has an [accessible name][] (from its text) describing its purpose.
 
 ```html
 <span role="link" tabindex="0" onclick="document.location+='#desc'">See description of the product.</span>
@@ -112,51 +90,9 @@ The [accessible name][] (from the link's text) describes the purpose of the link
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-The [programmatically determined link context][] (provided by the ancestor with a role of `listitem` and text "Ulysses") and the [accessible name][] (from the link's text) describe the purpose of the links.
-
-```html
-<ul>
-	<li>
-		Ulysses
-		<ul>
-			<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm"> HTML </a></li>
-			<li>
-				<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">
-					EPUB
-				</a>
-			</li>
-			<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt"> Plain text </a></li>
-		</ul>
-	</li>
-</ul>
-```
-
-#### Passed Example 6
-
-The [programmatically determined link context][] (provided by the table header [assigned](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells) to the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
-
-```html
-<table>
-	<tr>
-		<th colspan="3">Ulysses</th>
-	</tr>
-	<tr>
-		<td><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a></td>
-		<td>
-			<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
-				>EPUB</a
-			>
-		</td>
-		<td><a href="https://www.gutenberg.org/files/4300/4300-0.txt">Plain text</a></td>
-	</tr>
-</table>
-```
-
-#### Passed Example 7
-
-The [accessible name][] describes the purpose of the link.
+This link has an [accessible name][] (from its `aria-labelledby` attribute) describing its purpose.
 
 ```html
 <p id="instructions">Click on the arrow to go to the main content.</p>
@@ -176,44 +112,11 @@ The [accessible name][] describes the purpose of the link.
 </main>
 ```
 
-#### Passed Example 8
-
-The [programmatically determined link context][] (provided by the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
-
-```html
-<table>
-	<tr>
-		<td>
-			Download Ulysses in
-			<a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">HTML</a>
-		</td>
-		<td>
-			Download Ulysses in
-			<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73"
-				>EPUB</a
-			>
-		</td>
-	</tr>
-</table>
-```
-
-#### Passed Example 9
-
-The [programmatically determined link context][] (provided by the element referenced by the `aria-describedby` attribute) and the [accessible name][] (from the link's text) describe the purpose of the links.
-
-```html
-<h2 id="rule">Button has accessible name</h2>
-<ul>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#applicability" aria-describedby="rule">Applicability</a></li>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#expectation" aria-describedby="rule">Expectation</a></li>
-</ul>
-```
-
 ### Failed
 
 #### Failed Example 1
 
-The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+This link has an [accessible name][] which does not describe its purpose.
 
 ```html
 <a href="#desc">More</a>
@@ -223,7 +126,7 @@ The [accessible name][] (from the link's text), together with the absence of [pr
 
 #### Failed Example 2
 
-The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+This link has an [accessible name][] which does not describe its purpose.
 
 ```html
 <div role="link" tabindex="0" onclick="document.location+='#main'">More</div>
@@ -235,7 +138,7 @@ The [accessible name][] (from the link's text), together with the absence of [pr
 
 #### Failed Example 3
 
-The [accessible name][] (from the link's text), together with the absence of [programmatically determined link context][], does not describe the purpose of the link.
+This link has an [accessible name][] which does not describe its purpose.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
@@ -253,56 +156,40 @@ The [accessible name][] (from the link's text), together with the absence of [pr
 
 #### Failed Example 4
 
-The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is in a different `p` element.
+This link has an [accessible name][] which, alone, does not describe its purpose.
 
 ```html
-<p>
-	The W3C held a workshop on June 9-10, 2005 at DERI Innsbruck (Austria), to gather information about potential
-	standardization work on Semantics in Web Services.
-</p>
+<p>See the description of <a href="#desc">this product</a>.</p>
 
-<p><a href="https://www.w3.org/2005/04/FSWS/workshop-report.html">Workshop</a></p>
+<p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Failed Example 5
+#### Passed Example 5
 
-The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it is outside the list where the links are.
+These links have [accessible name][] which, alone, do not describe their purpose.
 
 ```html
-<p style="font-weight: bold">Ulysses</p>
 <ul>
-	<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm"> HTML </a></li>
 	<li>
-		<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">
-			EPUB
-		</a>
+		Ulysses
+		<ul>
+			<li><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm"> HTML </a></li>
+			<li>
+				<a href="https://www.gutenberg.org/ebooks/4300.epub.images?session_id=04cd710372888de8d8d322215cdfe8ce5b0f8d73">
+					EPUB
+				</a>
+			</li>
+			<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt"> Plain text </a></li>
+		</ul>
 	</li>
-	<li><a href="https://www.gutenberg.org/files/4300/4300-0.txt"> Plain text </a></li>
 </ul>
-```
-
-#### Failed Example 6
-
-The [accessible name][] (from the link's text) does not describe the purpose of the link. The other information available on the page is not [programmatically determined link context][] because it not available on the same cell of the link or in a header cell for that cell.
-
-```html
-<table>
-	<tr>
-		<th colspan="3">Books</th>
-	</tr>
-	<tr>
-		<td>Ulysses</td>
-		<td><a href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm">Download</a></td>
-		<td>1.61MB</td>
-	</tr>
-</table>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
 
-An `a` element with its [semantic role][] changed from `link` to another role.
+There is no [semantic link][] in this document.
 
 ```html
 <a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
@@ -310,7 +197,7 @@ An `a` element with its [semantic role][] changed from `link` to another role.
 
 #### Inapplicable Example 2
 
-The `link` element is not [included in the accessibility tree][].
+This link is not [included in the accessibility tree][].
 
 ```html
 <a href="https://www.w3.org/WAI" style="display: none;"
@@ -320,7 +207,7 @@ The `link` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-An `a` element without the [semantic role][] `link`.
+There is no [semantic link][] in this document (`a` element without an `href` attribute do not have a role of `link`).
 
 ```html
 <a>placeholder</a>
@@ -330,7 +217,8 @@ An `a` element without the [semantic role][] `link`.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
+[semantic link]: #semantic-link 'Definition of Semantic Link'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
+[usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Succes Criterion 2.4.9: Link Purpose (Link Only)'

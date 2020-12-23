@@ -23,11 +23,14 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `img` element that is [visible][] except if the `src` [attribute value][] references an SVG document.
+This rule applies to any HTML element that is [visible][] for which one of the following is true:
+
+- the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
+- the element is an `input` element in the [Image Button][] state and its `src` [attribute value][] does not reference an SVG document.
 
 ## Expectation
 
-The image resource referenced by the `src` [attribute value][] of each target element either does not contain text expressing anything in a [human language][] or it is [essential][] that the text is rendered with that specific presentation.
+For each test target, the image resources referenced by its [image sources][] that do not reference an SVG document either do not contain text expressing anything in a [human language][] or it is [essential][] that the text is rendered with that specific presentation.
 
 ## Assumptions
 
@@ -77,6 +80,14 @@ This `img` element references an image resource that contains text and the way t
 />
 ```
 
+#### Failed Example 2
+
+This `input` element in the [Image Button][] references an image resource that contains text and the way the text is presented is not relevant.
+
+```html
+<input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -112,5 +123,8 @@ There is no `img` element.
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'
+[image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
+[image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html
+[source set]: https://html.spec.whatwg.org/multipage/images.html#source-set
 [visible]: #visible 'Definition of visible'

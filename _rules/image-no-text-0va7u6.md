@@ -39,6 +39,8 @@ _No accessibility support issues known._
 
 ## Background
 
+This rule does not consider SVG documents in its applicability because graphically inserted text using the SVG `text` element allows a user to set font family, size and color and the background color of the text, which is what [SC 1.4.5][sc1.4.5] requires.
+
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
 
 ## Test Cases

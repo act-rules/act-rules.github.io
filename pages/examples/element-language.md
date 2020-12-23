@@ -80,7 +80,7 @@ This `div` element has no default language because it has no words in it. The on
 
 ## Ambiguous Words
 
-This `p` element has no default language because its words (and the sentence) are both English and French, thus no language is the _most common language_. The sentence has meaning both in English and French… This element has two unique languages, English and French, because all its words are part of both languages.a
+This `p` element has no default language because its words (and the sentence) are both English and French, thus no language is the _most common language_. The sentence has meaning both in English and French…
 
 ```html
 <p>Paul put dire comment on tape</p>

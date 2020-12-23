@@ -41,7 +41,7 @@ This rule applies to any HTML element for which all the following are true:
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] is a [common element language][].
+For each test target, the [primary language][] of the [valid language tag][] is a [common language][] of the test target.
 
 ## Assumptions
 
@@ -131,7 +131,7 @@ This `div` element has a `lang` [attribute value][] of `en` (English), which mat
 
 #### Passed Example 4
 
-These `p` element both have a `lang` [attribute value][] that match one of their [common language][]. Even though it is the same sentence, each of its words can be either English or French. The sentence does have meaning in both languages.
+These `p` element both have a `lang` [attribute value][] that match one of their [common language][]. Even though it is the same sentence, each of its words can be either English or French and thus both languages are a common language of the element. The sentence does have meaning in both languages.
 
 ```html
 <html lang="en">
@@ -332,8 +332,7 @@ This `p` element has a no [text with the same programmatic language][] because i
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
-[common language]: #element-language 'Definition of Common Element Language'
-[common element language]: #element-language 'Definition of Common Element Language'
+[common language]: #common-element-language 'Definition of Common Language of an Element'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

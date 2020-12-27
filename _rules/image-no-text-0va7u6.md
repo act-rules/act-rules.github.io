@@ -26,7 +26,8 @@ acknowledgments:
 This rule applies to any HTML element that is [visible][] for which one of the following is true:
 
 - the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
-- the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document.
+- the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document; or
+- the element has a [`background-image`][background-image] CSS property with at least one [`image`][css-image] that does not reference an SVG document.
 
 ## Expectation
 
@@ -88,6 +89,14 @@ This `input` element in the [Image Button][] references an image resource that c
 <input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
 ```
 
+#### Failed Example 3
+
+This `div` element has a `background-image` property that references an image resource that contains text and the way the text is presented is not relevant.
+
+```html
+<div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -121,6 +130,8 @@ There is no `img` element.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[background-image]: https://drafts.csswg.org/css-backgrounds-3/#typedef-bg-image
+[css-image]: https://www.w3.org/TR/css-images-3/#typedef-image
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)

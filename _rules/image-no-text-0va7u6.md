@@ -121,7 +121,7 @@ This `img` element references an SVG document.
 
 #### Inapplicable Example 3
 
-There is no `img` element.
+There is no `img` element, no `input` element and no element with a `background-image` CSS property.
 
 ```html
 <p>

@@ -26,7 +26,7 @@ acknowledgments:
 This rule applies to any HTML element that is [visible][] for which one of the following is true:
 
 - the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
-- the element is an `input` element in the [Image Button][] state and its `src` [attribute value][] does not reference an SVG document.
+- the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document.
 
 ## Expectation
 

@@ -30,7 +30,7 @@ This rule applies to any HTML element that is [visible][] for which one of the f
 
 ## Expectation
 
-For each test target, the image resources referenced by its [image sources][] that do not reference an SVG document either do not contain text expressing anything in a [human language][] or it is [essential][] that the text is rendered with that specific presentation.
+For each test target, each of the image resources referenced by its [image sources][] that do not reference an SVG document either does not contain text expressing anything in a [human language][] or it is [essential][] that the text is rendered with that specific presentation.
 
 ## Assumptions
 

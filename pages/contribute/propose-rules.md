@@ -16,7 +16,7 @@ For rule contributors with less GitHub experience, it is often easiest to start 
 
 ## Submit a draft for a rule
 
-If you have a ready rule draft, you can submit it as a [pull request](https://github.com/act-rules/act-rules.github.io/pulls) to go into the [review process](/pages/design/process/).
+If you have a ready rule draft, you can submit it as a [pull request](https://github.com/act-rules/act-rules.github.io/pulls) to go into the [review process](/pages/design/process/). Be sure to use the [rule template](https://act-rules.github.io/pages/design/rule-template/) when submitting new rules.
 
 Before contributing a new rule, we recommend you check its validity with several experienced accessibility auditors first. This helps you identify potential stumbling blocks early in the rule design.
 

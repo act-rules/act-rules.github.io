@@ -4,11 +4,11 @@ title: Give feedback on rules
 
 Feedback is encouraged on our open [GitHub repository](https://github.com/act-rules/act-rules.github.io), so while you will need a GitHub account, you don't have to be a member of the Community Group to contribute in this way.
 
-If you "watch" the repository, you will get notifications when changes are happening.
+If you "watch" the repository, you will get notifications when changes are happening. See more information on GitHub in the page [propose rules](https://act-rules.github.io/pages/contribute/propose-rules/).
 
 ## Feedback for ideas and early drafts (Issues on GitHub)
 
-Rule ideas and definitions (shared terms across rules) that are currently GitHub issues can be anything from just a title to an almost finished rule draft. These Issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm".
+Rule ideas and definitions (shared terms across rules) that are currently GitHub issues can be anything from just a title to an almost finished rule draft. These Issues will be prefixed with either "Rule:" or possibly "New Rule:".
 
 The top comment on such an issue should hold the most up to date version of the rule idea or algorithm, and underneath there will be a thread of related comments and a history of actions.
 

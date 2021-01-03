@@ -8,7 +8,7 @@ If you "watch" the repository, you will get notifications when changes are happe
 
 ## Feedback for ideas and early drafts (Issues on GitHub)
 
-Rules and Definitions (shared terms across rules) that are GitHub Issues can be everything from just a title to a quite finished rule. The issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm".
+Rule ideas and definitions (shared terms across rules) that are currently GitHub issues can be anything from just a title to an almost finished rule draft. These Issues will be prefixed with either "Rule:" (or possibly "New Rule:") or "Algorithm".
 
 The top comment on such an issue should hold the most up to date version of the rule idea or algorithm, and underneath there will be a thread of related comments and a history of actions.
 

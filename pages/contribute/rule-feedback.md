@@ -33,7 +33,7 @@ If you for some reason are not so confident, you can always leave a comment for 
 
 To start giving feedback and doing reviews for draft rules:
 
-- See the [draft rules, algorithms and more that need more reviewers](https://github.com/act-rules/act-rules.github.io/pulls?q=is%3Aopen+is%3Apr+label%3A%22reviewers+wanted%22)
+- See the [draft rules and other issues that need reviews](https://github.com/act-rules/act-rules.github.io/pulls?q=is%3Aopen+is%3Apr+label%3A%22reviewers+wanted%22)
 - Use the [Definition of "Done"](../design/definition-of-done) to guide your review
 - Learn more about [reviewing and commenting on pull requests](#) (TBD)
 

@@ -6,7 +6,7 @@ The best way to stay informed about the activities of ACT-Rules Community is to 
 
 ## Mailing list keeps you up to date
 
-By becoming a member you will be added to the mailing list, and you will receive all the latest updates, meeting invites, etc. You will receive "final call" e-mails. These are announcements of changes that have been approved in a GitHub pull request, and will be merged if there is no unresolved feedback.
+By becoming a member you will be added to the mailing list, which does not have much traffic (approximately 2-3 emails per week). You will receive the latest updates and meeting invites etc. You will also receive "final call" e-mails. These are announcements of changes (new rules, correction to existing ones, etc.) that have been approved by other members, and will be published if there is no unresolved feedback.
 
 ## Join us on Slack
 

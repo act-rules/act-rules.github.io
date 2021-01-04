@@ -76,9 +76,11 @@
 - presentational
 - sc
 - dropdown
+- hoverable
 - getModifierState
 - accesskey
 - Accesskeys
+- getBoundingClientRect
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -207,6 +209,7 @@
 - cornsilk
 - subtree
 - unicity
+- submenu
 
 # Parts of Unicode
 - 000A

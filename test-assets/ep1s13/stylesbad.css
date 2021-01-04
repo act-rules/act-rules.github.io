@@ -1,0 +1,30 @@
+:root {
+    --tooltip-thingy-width: 0.5em;
+  }
+  
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  [role="tooltip"] {
+    position: absolute;
+    top: 0%;
+    left: 200%;
+    transform: translateY(-60%) translateX(2%);
+    padding: 0.5em 0.5em;
+    color: white;
+    background: black;
+    min-width: max-content;
+  }
+  
+  [role="tooltip"]::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(50%) translateX(-99%);
+    border: var(--tooltip-thingy-width) solid transparent;
+    border-right-color: black;
+    content: "";
+  }
+  

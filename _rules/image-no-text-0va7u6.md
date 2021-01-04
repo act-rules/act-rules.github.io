@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] for which one of the following is true:
+This rule applies to any HTML element that is [visible][] and not [marked as decorative][] for which one of the following is true:
 
 - the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
 - the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document; or
@@ -113,13 +113,21 @@ This `img` element is not [visible][].
 
 #### Inapplicable Example 2
 
+This `img` element is [marked as decorative][].
+
+```html
+<img src="/test-assets/0va7u6/textimage.jpg" alt="" />
+```
+
+#### Inapplicable Example 3
+
 This `img` element references an SVG document.
 
 ```html
 <img src="/test-assets/shared/eu-logo.svg" alt="European Union flag" />
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
 There is no `img` element, no `input` element and no element with a `background-image` CSS property.
 
@@ -136,6 +144,7 @@ There is no `img` element, no `input` element and no element with a `background-
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
+[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set
 [url-reference]: https://www.w3.org/TR/css-images-3/#url-notation

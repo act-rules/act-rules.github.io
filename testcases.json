@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 909,
+  "count": 961,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -12142,6 +12142,654 @@
       }
     },
     {
+      "testcaseId": "f1bc9f0a78a93c36c8ab530475196fb9be950e31",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/24afc2/f1bc9f0a78a93c36c8ab530475196fb9be950e31.html",
+      "relativePath": "testcases/24afc2/f1bc9f0a78a93c36c8ab530475196fb9be950e31.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7dbbf1b7ca89a68e26df31548b072ca4471d0e59",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/24afc2/7dbbf1b7ca89a68e26df31548b072ca4471d0e59.html",
+      "relativePath": "testcases/24afc2/7dbbf1b7ca89a68e26df31548b072ca4471d0e59.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a927b072f52658854981ff868f27599dfb9ca813",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/24afc2/a927b072f52658854981ff868f27599dfb9ca813.html",
+      "relativePath": "testcases/24afc2/a927b072f52658854981ff868f27599dfb9ca813.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8c396602966f757064baa7f17a24964ecea206c8",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/24afc2/8c396602966f757064baa7f17a24964ecea206c8.html",
+      "relativePath": "testcases/24afc2/8c396602966f757064baa7f17a24964ecea206c8.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "74d8b65bddd2568319787ffcf1e80635ddcfaa58",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/24afc2/74d8b65bddd2568319787ffcf1e80635ddcfaa58.html",
+      "relativePath": "testcases/24afc2/74d8b65bddd2568319787ffcf1e80635ddcfaa58.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e2160771b10bf00b8496f110b8480c61ef93309e",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/24afc2/e2160771b10bf00b8496f110b8480c61ef93309e.html",
+      "relativePath": "testcases/24afc2/e2160771b10bf00b8496f110b8480c61ef93309e.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "51e49f03a39411b94fb59f598c930cdbd07ca192",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/24afc2/51e49f03a39411b94fb59f598c930cdbd07ca192.html",
+      "relativePath": "testcases/24afc2/51e49f03a39411b94fb59f598c930cdbd07ca192.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b12ef87ab75089650743ba88802762e3e031abb8",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/24afc2/b12ef87ab75089650743ba88802762e3e031abb8.html",
+      "relativePath": "testcases/24afc2/b12ef87ab75089650743ba88802762e3e031abb8.html",
+      "expected": "passed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "28968762b325cd842efc4d838620af4045b16361",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/24afc2/28968762b325cd842efc4d838620af4045b16361.html",
+      "relativePath": "testcases/24afc2/28968762b325cd842efc4d838620af4045b16361.html",
+      "expected": "failed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "619f6afb037b508d7dbf3c0e1fdbbf8929e87b94",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/24afc2/619f6afb037b508d7dbf3c0e1fdbbf8929e87b94.html",
+      "relativePath": "testcases/24afc2/619f6afb037b508d7dbf3c0e1fdbbf8929e87b94.html",
+      "expected": "failed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0d7c8aa0f0ee6b251990bc5a607fd1b9e1c16031",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/24afc2/0d7c8aa0f0ee6b251990bc5a607fd1b9e1c16031.html",
+      "relativePath": "testcases/24afc2/0d7c8aa0f0ee6b251990bc5a607fd1b9e1c16031.html",
+      "expected": "failed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ae15b8f04bcd0bdc4f3fa3c9bc14ba66e630f17a",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/24afc2/ae15b8f04bcd0bdc4f3fa3c9bc14ba66e630f17a.html",
+      "relativePath": "testcases/24afc2/ae15b8f04bcd0bdc4f3fa3c9bc14ba66e630f17a.html",
+      "expected": "failed",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2dff643fccfc0775691bab6045c1122169a37f65",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/24afc2/2dff643fccfc0775691bab6045c1122169a37f65.svg",
+      "relativePath": "testcases/24afc2/2dff643fccfc0775691bab6045c1122169a37f65.svg",
+      "expected": "inapplicable",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9128e5dea722f5618ed9e55ca45d6fd3f24ba39e",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/24afc2/9128e5dea722f5618ed9e55ca45d6fd3f24ba39e.html",
+      "relativePath": "testcases/24afc2/9128e5dea722f5618ed9e55ca45d6fd3f24ba39e.html",
+      "expected": "inapplicable",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f57bef417a8dca35f6c08c6f031652d89fa9deb2",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/24afc2/f57bef417a8dca35f6c08c6f031652d89fa9deb2.html",
+      "relativePath": "testcases/24afc2/f57bef417a8dca35f6c08c6f031652d89fa9deb2.html",
+      "expected": "inapplicable",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d2796b1a8198f9f872a46e88686d2eb5569428b4",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/24afc2/d2796b1a8198f9f872a46e88686d2eb5569428b4.html",
+      "relativePath": "testcases/24afc2/d2796b1a8198f9f872a46e88686d2eb5569428b4.html",
+      "expected": "inapplicable",
+      "ruleId": "24afc2",
+      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/24afc2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "81206ee36822e5d9f511fc22bce11ede3f322247",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/78fd32/81206ee36822e5d9f511fc22bce11ede3f322247.html",
+      "relativePath": "testcases/78fd32/81206ee36822e5d9f511fc22bce11ede3f322247.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "876792eb82b1e6fe8cbcec23f79248cefc39ac96",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/78fd32/876792eb82b1e6fe8cbcec23f79248cefc39ac96.html",
+      "relativePath": "testcases/78fd32/876792eb82b1e6fe8cbcec23f79248cefc39ac96.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a516d406d117e04739a446076264e9d5fd9d752a",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/78fd32/a516d406d117e04739a446076264e9d5fd9d752a.html",
+      "relativePath": "testcases/78fd32/a516d406d117e04739a446076264e9d5fd9d752a.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/78fd32/cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6.html",
+      "relativePath": "testcases/78fd32/cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e2f9138260ce14245ebc17e59b42f8f64cd08bc5",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/78fd32/e2f9138260ce14245ebc17e59b42f8f64cd08bc5.html",
+      "relativePath": "testcases/78fd32/e2f9138260ce14245ebc17e59b42f8f64cd08bc5.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1fc0772272b34710f88019a71536bf9007322fc3",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/78fd32/1fc0772272b34710f88019a71536bf9007322fc3.html",
+      "relativePath": "testcases/78fd32/1fc0772272b34710f88019a71536bf9007322fc3.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "825f436c2e3df2f568929d195ad59616e8d1446a",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/78fd32/825f436c2e3df2f568929d195ad59616e8d1446a.html",
+      "relativePath": "testcases/78fd32/825f436c2e3df2f568929d195ad59616e8d1446a.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b9c937432afbb36e65d62ad247346b8b8042e1de",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/78fd32/b9c937432afbb36e65d62ad247346b8b8042e1de.html",
+      "relativePath": "testcases/78fd32/b9c937432afbb36e65d62ad247346b8b8042e1de.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4165b375730e27289a7df5a8523704247ec8ca29",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/78fd32/4165b375730e27289a7df5a8523704247ec8ca29.html",
+      "relativePath": "testcases/78fd32/4165b375730e27289a7df5a8523704247ec8ca29.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "31a591256b9b60b5b1c96845f356cb577aa4ffd7",
+      "testcaseTitle": "Passed Example 10",
+      "url": "https://act-rules.github.io/testcases/78fd32/31a591256b9b60b5b1c96845f356cb577aa4ffd7.html",
+      "relativePath": "testcases/78fd32/31a591256b9b60b5b1c96845f356cb577aa4ffd7.html",
+      "expected": "passed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7a170dbec6d36996b0625fa59f7648ece3be0541",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/78fd32/7a170dbec6d36996b0625fa59f7648ece3be0541.html",
+      "relativePath": "testcases/78fd32/7a170dbec6d36996b0625fa59f7648ece3be0541.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "933d408f6bc140fbd41ffd742453a2bf3474f3c6",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/78fd32/933d408f6bc140fbd41ffd742453a2bf3474f3c6.html",
+      "relativePath": "testcases/78fd32/933d408f6bc140fbd41ffd742453a2bf3474f3c6.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "e27524b0a6c228b9c7b351e24e09c84dd28fd0f4",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/78fd32/e27524b0a6c228b9c7b351e24e09c84dd28fd0f4.html",
+      "relativePath": "testcases/78fd32/e27524b0a6c228b9c7b351e24e09c84dd28fd0f4.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bf114456b0c5d14e7746d81d2142c3b6d9aaf74e",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/78fd32/bf114456b0c5d14e7746d81d2142c3b6d9aaf74e.html",
+      "relativePath": "testcases/78fd32/bf114456b0c5d14e7746d81d2142c3b6d9aaf74e.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7377bc6d68efb0c88d33e49fb96b8009ceb754c8",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/78fd32/7377bc6d68efb0c88d33e49fb96b8009ceb754c8.html",
+      "relativePath": "testcases/78fd32/7377bc6d68efb0c88d33e49fb96b8009ceb754c8.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "62f66da20c77a684f5c1d2d411ddf819bedf61e5",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/78fd32/62f66da20c77a684f5c1d2d411ddf819bedf61e5.html",
+      "relativePath": "testcases/78fd32/62f66da20c77a684f5c1d2d411ddf819bedf61e5.html",
+      "expected": "failed",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ab6e2015292591ce45e0cd39c38f2003a79949f8",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/78fd32/ab6e2015292591ce45e0cd39c38f2003a79949f8.svg",
+      "relativePath": "testcases/78fd32/ab6e2015292591ce45e0cd39c38f2003a79949f8.svg",
+      "expected": "inapplicable",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a9522ba39546fd729b1750b1555aa275ea639839",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/78fd32/a9522ba39546fd729b1750b1555aa275ea639839.html",
+      "relativePath": "testcases/78fd32/a9522ba39546fd729b1750b1555aa275ea639839.html",
+      "expected": "inapplicable",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1ab916c4ce46f566e1ccadcbfac9820e30f009f9",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/78fd32/1ab916c4ce46f566e1ccadcbfac9820e30f009f9.html",
+      "relativePath": "testcases/78fd32/1ab916c4ce46f566e1ccadcbfac9820e30f009f9.html",
+      "expected": "inapplicable",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fd21a8d262dc9d5a6109fab863bfaa98ee3d7329",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/78fd32/fd21a8d262dc9d5a6109fab863bfaa98ee3d7329.html",
+      "relativePath": "testcases/78fd32/fd21a8d262dc9d5a6109fab863bfaa98ee3d7329.html",
+      "expected": "inapplicable",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "34c82462f976ebaaa5f68fc0f3f519832614e182",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/c487ae/34c82462f976ebaaa5f68fc0f3f519832614e182.html",
@@ -21451,6 +22099,294 @@
         },
         "wcag-technique:G208": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dbe4bfd976d642eca79deec7dd3b969620b352f2",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/9e45ec/dbe4bfd976d642eca79deec7dd3b969620b352f2.html",
+      "relativePath": "testcases/9e45ec/dbe4bfd976d642eca79deec7dd3b969620b352f2.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "94bb0d8d836327ea9aaeba9a44699b675d5623c6",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/9e45ec/94bb0d8d836327ea9aaeba9a44699b675d5623c6.html",
+      "relativePath": "testcases/9e45ec/94bb0d8d836327ea9aaeba9a44699b675d5623c6.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "77a441eea7f4809aa9c0e9fa77caf26adf27321c",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/9e45ec/77a441eea7f4809aa9c0e9fa77caf26adf27321c.html",
+      "relativePath": "testcases/9e45ec/77a441eea7f4809aa9c0e9fa77caf26adf27321c.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "80e73cbd0f07dc169c5d990e29208d0871ab3fd6",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/9e45ec/80e73cbd0f07dc169c5d990e29208d0871ab3fd6.html",
+      "relativePath": "testcases/9e45ec/80e73cbd0f07dc169c5d990e29208d0871ab3fd6.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "78d27317c72323bac1200e0f3f5a6353f46ac37b",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/9e45ec/78d27317c72323bac1200e0f3f5a6353f46ac37b.html",
+      "relativePath": "testcases/9e45ec/78d27317c72323bac1200e0f3f5a6353f46ac37b.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "47e1c13e6e0075cde0b804600f89a6e14a50830a",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/9e45ec/47e1c13e6e0075cde0b804600f89a6e14a50830a.html",
+      "relativePath": "testcases/9e45ec/47e1c13e6e0075cde0b804600f89a6e14a50830a.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a9cb9f8f6776401d48a151d1d09993ef0b98150d",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/9e45ec/a9cb9f8f6776401d48a151d1d09993ef0b98150d.html",
+      "relativePath": "testcases/9e45ec/a9cb9f8f6776401d48a151d1d09993ef0b98150d.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "60800c7446eb25324d08b976b6b3f41c15d2f19b",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/9e45ec/60800c7446eb25324d08b976b6b3f41c15d2f19b.html",
+      "relativePath": "testcases/9e45ec/60800c7446eb25324d08b976b6b3f41c15d2f19b.html",
+      "expected": "passed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f9c23e95b02c67512a832612c1a4445538a3e23e",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/9e45ec/f9c23e95b02c67512a832612c1a4445538a3e23e.html",
+      "relativePath": "testcases/9e45ec/f9c23e95b02c67512a832612c1a4445538a3e23e.html",
+      "expected": "failed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b636ef6c236adfc218417389e5958fd1d816ae30",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/9e45ec/b636ef6c236adfc218417389e5958fd1d816ae30.html",
+      "relativePath": "testcases/9e45ec/b636ef6c236adfc218417389e5958fd1d816ae30.html",
+      "expected": "failed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "673f852759f47787bb3992c6377843ecbb0aa3ad",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/9e45ec/673f852759f47787bb3992c6377843ecbb0aa3ad.html",
+      "relativePath": "testcases/9e45ec/673f852759f47787bb3992c6377843ecbb0aa3ad.html",
+      "expected": "failed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4d7879908d3865d39ea13a630ffd70ecd688d687",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/9e45ec/4d7879908d3865d39ea13a630ffd70ecd688d687.html",
+      "relativePath": "testcases/9e45ec/4d7879908d3865d39ea13a630ffd70ecd688d687.html",
+      "expected": "failed",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c13bcb844ef653ecdbca35a0dfb727e307fee6af",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/9e45ec/c13bcb844ef653ecdbca35a0dfb727e307fee6af.svg",
+      "relativePath": "testcases/9e45ec/c13bcb844ef653ecdbca35a0dfb727e307fee6af.svg",
+      "expected": "inapplicable",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f73a12b13cbc7deec3554434c4c395646a91a0fc",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/9e45ec/f73a12b13cbc7deec3554434c4c395646a91a0fc.html",
+      "relativePath": "testcases/9e45ec/f73a12b13cbc7deec3554434c4c395646a91a0fc.html",
+      "expected": "inapplicable",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4b55d76e967a90922608f69a52073548b57f9322",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/9e45ec/4b55d76e967a90922608f69a52073548b57f9322.html",
+      "relativePath": "testcases/9e45ec/4b55d76e967a90922608f69a52073548b57f9322.html",
+      "expected": "inapplicable",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "86286f7c2330ca8c9c65dbbbd9dee54b154416f0",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/9e45ec/86286f7c2330ca8c9c65dbbbd9dee54b154416f0.html",
+      "relativePath": "testcases/9e45ec/86286f7c2330ca8c9c65dbbbd9dee54b154416f0.html",
+      "expected": "inapplicable",
+      "ruleId": "9e45ec",
+      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/9e45ec",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

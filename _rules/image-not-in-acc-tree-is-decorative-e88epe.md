@@ -30,7 +30,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
+This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
 
 - **excluded**: The element is not [included in the accessibility tree][]; or
 - **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or

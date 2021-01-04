@@ -44,7 +44,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video does not contain audio.
+This rule applies to any [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video does not contain audio.
 
 ## Expectation
 

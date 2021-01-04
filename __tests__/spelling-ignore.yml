@@ -79,6 +79,7 @@
 - getModifierState
 - accesskey
 - Accesskeys
+- kerning
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -216,7 +217,7 @@
 - 000C
 - 000D
 
-# JSON attributes/ metadata
+# JSON attributes/ metadata/ methods
 - testcases
 - ruleId
 - ruleName
@@ -225,6 +226,20 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+- getComputedPriority
+
+# sizes
+- 1em
+- 2em
+- 2px
+- 3px
+- 4px
+- 16px
+- 20px
+- 24px
+- 25px
+- 30px
+- 32px
 
 # Language codes
 - da

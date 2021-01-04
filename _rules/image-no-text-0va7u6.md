@@ -10,6 +10,11 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.9: # Images of Text (No Exception) (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -45,7 +50,10 @@ _No accessibility support issues known._
 
 This rule does not consider SVG documents in its applicability because graphically inserted text using the SVG `text` element allows a user to set font family, size and color and the background color of the text, which is what [SC 1.4.5][sc1.4.5] requires.
 
+This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5], which allows images of text as long as the images are in technology that allows the user to customize its presentation. [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] does not even allow this exception. Given that this rule considers this exception by leaving SVG based images out of the applicability, it is possible that this rule will consider some images inapplicable that are in fact applicable for [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
+
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
+- [Understanding Success Criterion 1.4.9: Images of Text (No Exception)][sc1.4.9]
 
 ## Test Cases
 
@@ -146,7 +154,8 @@ There is no `img` element, no `input` element and no element with a `background-
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
 [marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
-[sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html
+[sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
+[sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set
 [url-reference]: https://www.w3.org/TR/css-images-3/#url-notation
 [visible]: #visible 'Definition of visible'

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 961,
+  "count": 969,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -14504,6 +14504,150 @@
           "inapplicable": "further testing needed"
         },
         "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1019f9dd54885516123cd10b1bed082627fcb60c",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/1019f9dd54885516123cd10b1bed082627fcb60c.html",
+      "relativePath": "testcases/m6b1q3/1019f9dd54885516123cd10b1bed082627fcb60c.html",
+      "expected": "passed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b3babac41daab1dc5a132ac511f4a4e4a0079370",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/b3babac41daab1dc5a132ac511f4a4e4a0079370.html",
+      "relativePath": "testcases/m6b1q3/b3babac41daab1dc5a132ac511f4a4e4a0079370.html",
+      "expected": "passed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1dc4b6a2c8fc35f7a27d8bba22005ae862bda3d8",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/1dc4b6a2c8fc35f7a27d8bba22005ae862bda3d8.html",
+      "relativePath": "testcases/m6b1q3/1dc4b6a2c8fc35f7a27d8bba22005ae862bda3d8.html",
+      "expected": "passed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1eb0256fec37704b756934d31982271c5c8e8e93",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/1eb0256fec37704b756934d31982271c5c8e8e93.html",
+      "relativePath": "testcases/m6b1q3/1eb0256fec37704b756934d31982271c5c8e8e93.html",
+      "expected": "passed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "548c732a168369abdd8f84381574c7793ea0c2ce",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/548c732a168369abdd8f84381574c7793ea0c2ce.html",
+      "relativePath": "testcases/m6b1q3/548c732a168369abdd8f84381574c7793ea0c2ce.html",
+      "expected": "failed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "db756694b52d219959b3ed1cccd714ee0debc36a",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/db756694b52d219959b3ed1cccd714ee0debc36a.html",
+      "relativePath": "testcases/m6b1q3/db756694b52d219959b3ed1cccd714ee0debc36a.html",
+      "expected": "failed",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9577e85e42ad8fef4e6163ee23a4756eade89b8c",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/9577e85e42ad8fef4e6163ee23a4756eade89b8c.html",
+      "relativePath": "testcases/m6b1q3/9577e85e42ad8fef4e6163ee23a4756eade89b8c.html",
+      "expected": "inapplicable",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bdabf4de54a41a25f6dc9f2749430c20bc06565f",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/m6b1q3/bdabf4de54a41a25f6dc9f2749430c20bc06565f.html",
+      "relativePath": "testcases/m6b1q3/bdabf4de54a41a25f6dc9f2749430c20bc06565f.html",
+      "expected": "inapplicable",
+      "ruleId": "m6b1q3",
+      "ruleName": "Menuitem has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/m6b1q3",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

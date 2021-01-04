@@ -27,7 +27,7 @@ This rule applies to any HTML element that is [visible][] and not [marked as dec
 
 - the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
 - the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document; or
-- the element has a [`background-image`][background-image] CSS property with at least one [`image`][css-image] that is a [url reference][url-reference] that does not reference an SVG document.
+- the element has a [computed][] [`background-image`][background-image] CSS property with at least one [`image`][css-image] that is a [url reference][url-reference] that does not reference an SVG document.
 
 ## Expectation
 
@@ -138,7 +138,8 @@ There is no `img` element, no `input` element and no element with a `background-
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
-[background-image]: https://drafts.csswg.org/css-backgrounds-3/#typedef-bg-image
+[background-image]: https://drafts.csswg.org/css-backgrounds-3/#background-image
+[computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [css-image]: https://www.w3.org/TR/css-images-3/#typedef-image
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'

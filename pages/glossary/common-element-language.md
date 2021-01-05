@@ -2,7 +2,7 @@
 title: Common Language of an Element
 key: common-element-language
 unambiguous: true
-objective: true
+objective: false
 input_aspects:
   - DOM tree
   - Accessibility tree

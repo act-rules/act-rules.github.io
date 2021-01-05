@@ -9,16 +9,16 @@ input_aspects:
   - CSS Styling
 ---
 
-The _elements with the same programmatic language_ as an element E are all the elements for which all the following are true:
-
-- the element is an [inclusive descendant][] of E in the [flat tree][]; and
-- the element has no [inclusive ancestor][] in the [flat tree][] which is a descendant of E and has a non-empty (`""`) `lang` attribute (that is, no `lang` attribute "between" them).
-
 The _text with the same programmatic language_ as an element E is composed of all the following texts:
 
 - **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element with the same programmatic language as E;
 - **accessible text**: the [accessible name][] and [accessible description][] of any element with the same programmatic language as E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
+
+The _elements with the same programmatic language_ as an element E are all the elements for which all the following are true:
+
+- the element is an [inclusive descendant][] of E in the [flat tree][]; and
+- the element has no [inclusive ancestor][] in the [flat tree][] which is a descendant of E and has a non-empty (`""`) `lang` attribute (that is, no `lang` attribute "between" them).
 
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'
 [accessible name]: #accessible-name 'Definition of Accessible Name'

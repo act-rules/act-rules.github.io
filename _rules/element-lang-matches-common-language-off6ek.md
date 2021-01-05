@@ -41,7 +41,7 @@ This rule applies to any HTML element for which all the following are true:
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] is a [common language][] of the test target.
+For each test target, the [primary language][] of its `lang` [attribute value][] is a [common language][] of the test target.
 
 ## Assumptions
 

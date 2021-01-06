@@ -50,7 +50,7 @@ _No accessibility support issues known._
 
 This rule does not consider SVG documents in its applicability because graphically inserted text using the SVG `text` element allows a user to set font family, size and color and the background color of the text, which is what [SC 1.4.5][sc1.4.5] requires.
 
-This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5], which allows images of text as long as the images are in technology that allows the user to customize its presentation. [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] does not even allow this exception, it is possible that this rule will consider some images inapplicable that are in fact applicable for [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
+This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which includes exceptions to the images it applies to. [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] does not consider any exceptions. Therefore, some images that are inapplicable for this rule can be applicable to [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
 
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
 - [Understanding Success Criterion 1.4.9: Images of Text (No Exception)][sc1.4.9]

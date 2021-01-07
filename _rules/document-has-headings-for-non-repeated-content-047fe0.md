@@ -307,7 +307,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 </html>
 ```
 
-#### Passed Example 1
+#### Passed Example 9
 
 This [document][] has no [non-repeated content after repeated content][].
 

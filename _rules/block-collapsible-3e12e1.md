@@ -50,7 +50,7 @@ Note that if there is no [block of repeated content][] before the non-repeated c
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-To avoid using landmarks, which would satisfy success criterion [2.4.1 Bypass Block][], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
+To avoid using landmarks for the non-repeated content, which would satisfy success criterion [2.4.1 Bypass Block][], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 ## Test Cases
 

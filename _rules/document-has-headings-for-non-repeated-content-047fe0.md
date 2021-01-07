@@ -317,12 +317,10 @@ This [document][] has no [non-repeated content after repeated content][].
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
+		<p>
+			Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span of
+			time.
+		</p>
 	</body>
 </html>
 ```

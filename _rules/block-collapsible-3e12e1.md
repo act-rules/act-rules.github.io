@@ -325,7 +325,6 @@ This [document][] is not an [HTML web page][].
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

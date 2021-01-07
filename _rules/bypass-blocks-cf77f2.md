@@ -59,7 +59,7 @@ For each test target, the outcome of at least one of the following rules is pass
 
 - [_Block of repeated content is collapsible_][block collapsible]; or
 - [_Document has heading for non-repeated content_][document has heading for main]; or
-- [_Document has a main landmark_][document has main]; or
+- [_Document has a landmark with non-repeated content_][document has landmark]; or
 - [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
 ## Assumptions
@@ -69,7 +69,6 @@ For each test target, the outcome of at least one of the following rules is pass
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [_Block of repeated content is collapsible_][block collapsible] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-- This rule assumes that the `main` [landmark][] is correctly used to identify the main area of content of the page. If this is not the case, rule [_Document has a main landmark_][document has main], and this rule, may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
 
 ## Accessibility Support
 
@@ -89,9 +88,7 @@ If the [instruments][instrument] used to pass some of the atomic rules are not k
   - [Technique H69: Providing heading elements at the beginning of each section of content][tech h69]
   - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In order to focus on single aspect of the rule at a time, and given the very nature of some of the input rules, most test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
-
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link to a page with similar [blocks of content][block of content]; and the `main` (or `<div id="main">`) element is the non-repeated content.
+To avoid using landmarks for the non-repeated content, which would satisfy success criterion [2.4.1 Bypass Block][], this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 ## Test Cases
 
@@ -157,7 +154,7 @@ This [HTML web page][] is passing rule [_Document has heading for non-repeated c
 
 #### Passed Example 3
 
-This [HTML web page][] is passing rule [_Document has a main landmark_][document has main].
+This [HTML web page][] is passing rule [_Document has a landmark with non-repeated content_][document has landmark].
 
 ```html
 <html>
@@ -532,7 +529,7 @@ This [document][] is not an [HTML web page][].
 [block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has main]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Main Landmark'
+[document has landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Landmark with nonN-Repeated Content'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
 [document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'

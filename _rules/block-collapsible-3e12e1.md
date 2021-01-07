@@ -42,17 +42,15 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-Note that the same [instrument][] may be used to remove both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a given [block of repeated content][], and that the same [instrument][] may be used for several of the [blocks of repeated content][block of repeated content]. In most practical cases, the same [instrument][] is used to fulfill both conditions for a given [block of repeated content][].
+Usually the same [instrument][] removes both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a [block of repeated content][]. That [instrument][] may remove all [blocks of repeated content][block of repeated content].
 
-Note that if there is no [block of repeated content][] before the non-repeated content, then the rule automatically passes. It is still possible, however, that [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] fails if there are [blocks of repeated content][block of repeated content] after the non-repeated content.
+Note that if there is no [block of repeated content][] before the non-repeated content the rule passes.
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not have any requirements concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-In order to focus only on the part of the associated composite rule ([_Bypass blocks of repeated content_][bypass blocks]) which this atomic rule illustrates, and given the very nature of some of the other input rules, test cases use a `<div id="main">` instead of a `main` element (to avoid also passing rule [_Document has a main landmark_][document has main]). This is bad practice and should be avoided.
-
-In the test cases, the `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content]; and the `<div id="main">` element is non-repeated content.
+To avoid using landmarks, which would satisfy success criterion [2.4.1 Bypass Block][], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 ## Test Cases
 

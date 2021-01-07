@@ -1,6 +1,6 @@
 ---
 id: b40fd1
-name: Document has a landmark for non-repeated content
+name: Document has a landmark with non-repeated content
 rule_type: atomic
 description: |
   This rule checks that each page has an element with a semantic role of landmark starting with non-repeated content

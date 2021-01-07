@@ -28,8 +28,9 @@ This rule applies to any [HTML web page][].
 
 ## Expectations
 
-In each test target, either there is no [non-repeated content after repeated content][] or there exists an element included in [non-repeated content after repeated content][] for which all the following are true:
+In each test target, either there is no [non-repeated content after repeated content][] or there exists an element for which all the following are true:
 
+- the element is [non-repeated content after repeated content][]; and
 - the element has a [semantic role][] of `heading`; and
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][].

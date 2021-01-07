@@ -307,6 +307,26 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 </html>
 ```
 
+#### Passed Example 1
+
+This [document][] has no [non-repeated content after repeated content][].
+
+```html
+<html>
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<div id="main">
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</div>
+	</body>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1

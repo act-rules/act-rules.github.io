@@ -88,7 +88,7 @@ If the [instruments][instrument] used to pass some of the atomic rules are not k
   - [Technique H69: Providing heading elements at the beginning of each section of content][tech h69]
   - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-To avoid using landmarks for the non-repeated content, which would satisfy success criterion [2.4.1 Bypass Block][], this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
+To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 ## Test Cases
 
@@ -529,7 +529,7 @@ This [document][] is not an [HTML web page][].
 [block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Landmark with nonN-Repeated Content'
+[document has landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Landmark with Non-Repeated Content'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
 [document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
@@ -537,7 +537,6 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [just before]: #just-before 'Definition of Just Before'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [mechanism]: https://www.w3.org/TR/WCAG21/#dfn-mechanism 'WCAG definition of Mechanism'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after repeated content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'

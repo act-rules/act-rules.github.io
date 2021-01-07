@@ -55,7 +55,7 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - [H69: Providing heading elements at the beginning of each section of content][tech h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-To avoid using landmarks for the non-repeated content, which would satisfy success criterion [2.4.1 Bypass Block][], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
+To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
 
 ## Test Cases
 
@@ -450,8 +450,8 @@ This [document][] is not an [HTML web page][].
 </svg>
 ```
 
+[block of content]: #block-of-repeated-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
-[bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

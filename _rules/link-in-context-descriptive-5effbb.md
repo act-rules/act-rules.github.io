@@ -36,13 +36,15 @@ This rule applies to any [semantic link][] for which all the following is true:
 
 ## Expectation
 
-The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
+The [accessible name][] of each target element together with its [programmatically determined link context][] describes the purpose of the link.
 
 ## Assumptions
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 
 - This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail success criterion [2.4.4 Link Purpose (In Context)][sc244].
+
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element which
+This rule applies to any [semantic link][] which
 
 - has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
 - is [included in the accessibility tree][]; and
@@ -326,11 +326,12 @@ An `a` element without the [semantic role][] `link`.
 <a>placeholder</a>
 ```
 
-[accessible name]: #accessible-name 'Definition of accessible name'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[accessible name]: #accessible-name 'Definition of Accessible Name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
-[semantic role]: #semantic-role 'Definition of semantic role'
-[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
-[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
+[programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'
+[semantic link]: #semantic-link 'Definition of Semantic Link'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4 Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9 Link Purpose (Link Only)'

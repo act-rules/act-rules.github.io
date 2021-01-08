@@ -33,8 +33,8 @@ Each test target has an [accessible name][] which describes its purpose.
 
 ## Assumptions
 
-- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
-- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
+- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
+- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249].
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
@@ -162,9 +162,9 @@ This link has an [accessible name][] which, alone, does not describe its purpose
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 5
+#### Failed Example 5
 
-These links have [accessible name][] which, alone, do not describe their purpose.
+These links have [accessible names][accessible name] which, alone, do not describe their purpose.
 
 ```html
 <ul>

@@ -194,9 +194,6 @@ This `svg` element does not have `image` element descendants.
 		.heavy {
 			font: bold 30px sans-serif;
 		}
-
-		/* Note that the color of the text is set with the    *
-     * fill property, the color property is for HTML only */
 		.Rrrrr {
 			font: italic 40px serif;
 			fill: red;

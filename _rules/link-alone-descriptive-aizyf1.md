@@ -22,11 +22,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element for which all the following is true:
+This rule applies to any [semantic link][] for which all the following is true:
 
-- the element is a [semantic link][]; and
-- the element is [included in the accessibility tree][]; and
-- the element has a non-empty (`""`) [accessible name][].
+- the link is [included in the accessibility tree][]; and
+- the link has a non-empty (`""`) [accessible name][].
 
 ## Expectation
 

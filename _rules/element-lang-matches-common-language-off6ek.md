@@ -269,18 +269,6 @@ There is no descendant of a `body` element with a `lang` attribute.
 
 #### Inapplicable Example 3
 
-This `p` element is not in a [top-level browsing context][].
-
-```html
-<html lang="en">
-	<body>
-		<iframe srcdoc="<p lang='en'>I love ACT rules!</p>" />
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
 This `p` element has an invalid language tag.
 
 ```html
@@ -293,7 +281,7 @@ This `p` element has an invalid language tag.
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 The first `p` element has a no [text with the same programmatic language][] because it has no content.
 
@@ -306,7 +294,7 @@ The first `p` element has a no [text with the same programmatic language][] beca
 </html>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This `p` element has a no [text with the same programmatic language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
 

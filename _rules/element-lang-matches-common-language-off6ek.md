@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-This rule ignores elements that are nested inside `iframe`. `iframe` are intended to provide a layer of isolation, and it is not clear how language is inherited in nested browsing contexts. Incorrect `lang` attribute inside `iframe` are still likely to cause accessibility issues even though this rule won't flag them.
+This rule ignores elements that are nested inside `iframe`. `iframe` are intended to provide a layer of isolation, and it is not clear how language is inherited in nested browsing contexts. Incorrect `lang` attributes inside `iframe` are still likely to cause accessibility issues even though this rule won't flag them.
 
 - Related rule:
   - [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
@@ -146,7 +146,7 @@ These `p` element both have a `lang` [attribute value][] that match one of their
 
 #### Failed Example 1
 
-This `span` element has `lang` attribute value of `fr` (French), which does not matches its [common language][]. The common language is Dutch because all words are Dutch.
+This `span` element has `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -185,7 +185,7 @@ The second `p` element has a `lang` [attribute value][] of `en` (English), which
 
 #### Failed Example 3
 
-The second `p` element has `lang` attribute value of `en` (English), which does not matches its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
+The second `p` element has `lang` attribute value of `en` (English), which does not match its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
 
 ```html
 <html lang="nl">

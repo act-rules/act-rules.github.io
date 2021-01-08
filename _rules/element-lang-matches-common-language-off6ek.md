@@ -316,7 +316,6 @@ This `p` element has a no [text with the same programmatic language][] because i
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
-[top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML definition of Top-Level Browsing Context'
 [common language]: #common-element-language 'Definition of Common Language of an Element'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'

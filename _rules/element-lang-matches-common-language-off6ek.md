@@ -34,7 +34,6 @@ htmlHintIgnore:
 This rule applies to any HTML element for which all the following are true:
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- The element is in a [top-level browsing context][]; and
 - The element is in a [document][] with a [content type][] of `text/html`; and
 - The element has a `lang` [attribute value][] which is a [valid language tag][]; and
 - The element has some non-empty [text with the same programmatic language][].
@@ -54,8 +53,6 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 _There are no major accessibility support issues known for this rule._
 
 ## Background
-
-This rule ignores elements that are nested inside `iframe`. `iframe` are intended to provide a layer of isolation, and it is not clear how language is inherited in nested browsing contexts. Incorrect `lang` attributes inside `iframe` are still likely to cause accessibility issues even though this rule won't flag them.
 
 - Related rule:
   - [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)

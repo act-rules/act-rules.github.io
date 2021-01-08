@@ -24,31 +24,30 @@ acknowledgments:
     - Carlos Duarte
   images:
     - Letter posted from Dulverton (Somerset, England) to Bristol (England) in 1894. Released into the public domain by Adrian Pingstone.
+    - Times Square image released into the public domain by (WT-shared) Ypsilonatshared at wts wikivoyage.
 ---
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and not [marked as decorative][] for which one of the following is true:
-
-- the element is an `img` element where at least one of the [image sources][] in its [source set][] does not reference an SVG document; or
-- the element is an `input` element with a `type` [attribute value][] of `image` and its `src` [attribute value][] does not reference an SVG document; or
-- the element has a [computed][] [`background-image`][background-image] CSS property with at least one [`image`][css-image] that is a [url reference][url-reference] that does not reference an SVG document.
+This rule applies to any [visible][] [embedded image][] that is not [marked as decorative][].
 
 ## Expectation
 
-For each test target, each of the image resources referenced by its [image sources][] that do not reference an SVG document either does not contain text expressing anything in a [human language][] or it is [essential][] that the text is rendered with that specific presentation.
+For each of the image resources referenced by the [image sources][] of the test target, any of the following is true:
+
+- the image resource does not contain text expressing anything in a [human language][]; or
+- the text in the image resource is not the most significant visual content; or
+- it is [essential][] that the text in the image resource is rendered with that specific presentation.
 
 ## Assumptions
 
-The text is the most significant content in the image. If there is text in the image, but it is not the most significant content, this rule might fail but the success criterion might still be satisfied.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
 _No accessibility support issues known._
 
 ## Background
-
-This rule does not consider SVG documents in its applicability because graphically inserted text using the SVG `text` element allows a user to set font family, size and color and the background color of the text, which is what [SC 1.4.5][sc1.4.5] requires.
 
 This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which includes exceptions to the images it applies to. [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] does not consider any exceptions. Therefore, some images that are inapplicable for this rule can be applicable to [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
 
@@ -67,13 +66,72 @@ This `img` element references an image resource that does not contain text.
 <img src="/test-assets/shared/fireworks.jpg" alt="fireworks going off behind the Eiffel tower at night" />
 ```
 
-#### Passed Example 2
+### Passed Example 2
+
+This `input` element references an image resource that does not contain text.
+
+```html
+<input type="image" src="test-assets/shared/file.svg" alt="New file" />
+```
+
+#### Passed Example 3
+
+This `svg` element displays an image resource that does not contain text.
+
+```html
+<svg width="2in" height="3in" xmlns="http://www.w3.org/2000/svg">
+	<image x="20" y="20" width="200px" height="100px" href="/test-assets/shared/fireworks.jpg">
+		<tile>Fireworks in Paris</tile>
+	</image>
+</svg>
+```
+
+#### Passed Example 4
+
+This `object` element references an image resource where text is not the most significant content.
+
+```html
+<object data="/test-assets/0va7u6/times_square.jpg"></object>
+```
+
+#### Passed Example 5
 
 This `img` element references an image resource that contains text but where the presentation of the text is essential to convey the information.
 
 ```html
 <p>The following image illustrates the use of cursive writing in the late nineteenth century.</p>
-<img src="/test-assets/0va7u6/letter.jpg" alt="A letter written in 1894 showing the use of cursive writing" />
+
+<canvas id="canvas"> Your browser does not support the HTML5 canvas element. </canvas>
+
+<script>
+	var img = new Image()
+	img.src = '/test-assets/0va7u6/letter.jpg'
+	img.onload = function () {
+		fill_canvas(img)
+	}
+	function fill_canvas(img) {
+		var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		canvas.width = img.width
+		canvas.height = img.height
+		ctx.drawImage(img, 0, 0)
+	}
+</script>
+```
+
+### Passed Example 6
+
+This `div` element has a background image with a logo with text. Logotypes are considered an essential exception.
+
+```html
+<div
+	style="
+    width: 100px;
+    height: 100px;
+    background-image: url(test-assets/shared/w3c-logo.png);
+    background-repeat: no-repeat;
+  "
+></div>
 ```
 
 ### Failed
@@ -109,14 +167,10 @@ This `div` element has a `background-image` property that references an image re
 
 #### Inapplicable Example 1
 
-This `img` element is not [visible][].
+This `object` element is not [visible][].
 
 ```html
-<img
-	src="/test-assets/0va7u6/textimage.jpg"
-	alt="The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test rules."
-	style="display: none"
-/>
+<object date="/test-assets/0va7u6/textimage.jpg" style="display: none"></object>
 ```
 
 #### Inapplicable Example 2
@@ -129,26 +183,34 @@ This `img` element is [marked as decorative][].
 
 #### Inapplicable Example 3
 
-This `img` element references an SVG document.
+This `svg` element does not have `image` element descendants.
 
 ```html
-<img src="/test-assets/shared/eu-logo.svg" alt="European Union flag" />
+<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		.small {
+			font: italic 13px sans-serif;
+		}
+		.heavy {
+			font: bold 30px sans-serif;
+		}
+
+		/* Note that the color of the text is set with the    *
+     * fill property, the color property is for HTML only */
+		.Rrrrr {
+			font: italic 40px serif;
+			fill: red;
+		}
+	</style>
+
+	<text x="20" y="35" class="small">My</text>
+	<text x="40" y="35" class="heavy">cat</text>
+	<text x="55" y="55" class="small">is</text>
+	<text x="65" y="55" class="Rrrrr">Grumpy!</text>
+</svg>
 ```
 
-#### Inapplicable Example 4
-
-There is no `img` element, no `input` element and no element with a `background-image` CSS property.
-
-```html
-<p>
-	The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test rules.
-</p>
-```
-
-[attribute value]: #attribute-value 'Definition of Attribute Value'
-[background-image]: https://drafts.csswg.org/css-backgrounds-3/#background-image
-[computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
-[css-image]: https://www.w3.org/TR/css-images-3/#typedef-image
+[embedded image]: #embedded-image 'Definition of Embedded Image'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
@@ -156,6 +218,4 @@ There is no `img` element, no `input` element and no element with a `background-
 [marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
-[source set]: https://html.spec.whatwg.org/multipage/images.html#source-set
-[url-reference]: https://www.w3.org/TR/css-images-3/#url-notation
 [visible]: #visible 'Definition of visible'

@@ -3,7 +3,7 @@ id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible name of a link together with its context describe its purpose.
+  This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
@@ -29,11 +29,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic link][] which
+This rule applies to any [semantic link][] for which all the following is true:
 
-- has the [semantic role][] of [`link`][link] or a [semantic role][] that inherits from the [`link`][link] role; and
-- is [included in the accessibility tree][]; and
-- has a non-empty ("") [accessible name][].
+- the link is [included in the accessibility tree][]; and
+- the link has a non-empty ("") [accessible name][].
 
 ## Expectation
 
@@ -41,8 +40,9 @@ The [accessible name][] of each target element together with its [programmatical
 
 ## Assumptions
 
-- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
-- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
+- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
+
+- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail success criterion [2.4.4 Link Purpose (In Context)][sc244].
 
 ## Accessibility Support
 
@@ -52,7 +52,9 @@ The [accessible name][] of each target element together with its [programmatical
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
-- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+- Related rules:
+  - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+  - [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
 - [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)

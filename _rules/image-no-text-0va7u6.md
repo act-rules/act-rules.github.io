@@ -66,7 +66,7 @@ This `img` element references an image resource that does not contain text.
 <img src="/test-assets/shared/fireworks.jpg" alt="fireworks going off behind the Eiffel tower at night" />
 ```
 
-### Passed Example 2
+#### Passed Example 2
 
 This `input` element references an image resource that does not contain text.
 
@@ -119,7 +119,7 @@ This `img` element references an image resource that contains text but where the
 </script>
 ```
 
-### Passed Example 6
+#### Passed Example 6
 
 This `div` element has a background image with a logo with text. Logotypes are considered an essential exception.
 

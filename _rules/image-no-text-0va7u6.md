@@ -36,12 +36,12 @@ This rule applies to any [visible][] [embedded image][] that is not [marked as d
 For each of the image resources referenced by the [image sources][] of the test target, at least one of the following is true:
 
 - the image resource does not contain text expressing anything in a [human language][]; or
-- the text in the image resource is not the most significant visual content; or
-- it is [essential][] that the text in the image resource is rendered with that specific presentation.
+- the image resource contains text and the text is not the most significant visual content in the image; or
+- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation.
 
 ## Assumptions
 
-_There are currently no assumptions_
+The text in the image resource is visible and not hidden by other resources rendered on the web page. If the text is not visible, even though parts of the image are, this rule may fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might by satisfied.
 
 ## Accessibility Support
 

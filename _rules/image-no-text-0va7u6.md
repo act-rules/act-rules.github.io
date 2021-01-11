@@ -33,7 +33,7 @@ This rule applies to any [visible][] [embedded image][] that is not [marked as d
 
 ## Expectation
 
-For each of the image resources referenced by the [image sources][] of the test target, any of the following is true:
+For each of the image resources referenced by the [image sources][] of the test target, at least one of the following is true:
 
 - the image resource does not contain text expressing anything in a [human language][]; or
 - the text in the image resource is not the most significant visual content; or

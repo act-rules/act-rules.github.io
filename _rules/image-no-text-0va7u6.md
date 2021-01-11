@@ -81,7 +81,7 @@ This `svg` element displays an image resource that does not contain text.
 ```html
 <svg width="2in" height="3in" xmlns="http://www.w3.org/2000/svg">
 	<image x="20" y="20" width="200px" height="100px" href="/test-assets/shared/fireworks.jpg">
-		<tile>Fireworks in Paris</tile>
+		<title>Fireworks in Paris</title>
 	</image>
 </svg>
 ```

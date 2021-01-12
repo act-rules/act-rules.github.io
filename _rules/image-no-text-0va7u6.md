@@ -41,7 +41,9 @@ For each of the image resources referenced by the [image sources][] of the test 
 
 ## Assumptions
 
-The text in the image resource is visible and not hidden by other resources rendered on the web page. If the text is not visible, even though parts of the image are, this rule may fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might by satisfied.
+- The text in the image resource is visible and not hidden by other resources rendered on the web page. If the text is not visible, even though parts of the image are, this rule may fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might by satisfied.
+- The page does not provide a mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might by satisfied.
+- The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might by satisfied.
 
 ## Accessibility Support
 

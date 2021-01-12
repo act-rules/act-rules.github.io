@@ -61,7 +61,7 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
-When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues cause by specifying the text color but not the background or vise versa, must be tested separately from this rule.
+When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
 - [G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G17)
@@ -117,7 +117,7 @@ This 18pt large black text has a contrast ratio of 4.6:1 on the gray background.
 
 #### Passed Example 5
 
-This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
+This 14pt bold black text has a contrast ratio of 4.6:1 on the gray background.
 
 ```html
 <p style="color: #000; font-size:14pt; font-weight:700; background: #777;">
@@ -263,7 +263,7 @@ This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on 
 
 #### Failed Example 10
 
-The first `p` element has a contrast ratio of 12.6:1. The second `p` element contains an example of the Helvetica font, which has a contrast ratio of 6.4:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
+The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
 
 ```html
 <p style="color: #333; background: #FFF;">

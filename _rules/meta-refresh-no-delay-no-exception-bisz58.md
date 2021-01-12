@@ -38,13 +38,14 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
+This rule applies to the first `meta` element in a document for which all the following are true:
+
+- the element has an `http-equiv` [attribute value][] of `"refresh"`; and
+- the element has a [valid][valid content] `content` [attribute value][].
 
 ## Expectation
 
-The `time` of the `content` attribute is 0.
-
-See the definition of the [Refresh state (`http-equiv="refresh"`)](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) for a precise description on how to determine the `time`.
+For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ being either 0 or greater than 72000 (20 hours).
 
 ## Assumptions
 
@@ -56,6 +57,9 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
+- [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
+- [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)
+- [Understanding Success Criterion 3.2.5: Change on Request](https://www.w3.org/WAI/WCAG21/Understanding/change-on-request.html)
 - [G110: Using an instant client-side redirect](https://www.w3.org/WAI/WCAG21/Techniques/general/G110)
 - [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
 - [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
@@ -210,3 +214,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 	<meta http-equiv="refresh" content="foo; URL='https://w3c.org'" />
 </head>
 ```
+
+[attribute value]: #attribute-value 'Definition of Attribute Value'
+[shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'
+[valid content]: https://html.spec.whatwg.org/#pragma-directives:attr-meta-content-9 'HTML specification of the content attribute'

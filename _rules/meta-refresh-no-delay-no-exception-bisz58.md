@@ -81,8 +81,8 @@ The first valid `meta` element redirects immediately.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0; http://w3c.org" />
-	<meta http-equiv="refresh" content="5; http://w3c.org" />
+	<meta http-equiv="refresh" content="0; https://w3c.org" />
+	<meta http-equiv="refresh" content="5; https://w3c.org" />
 </head>
 ```
 
@@ -114,8 +114,8 @@ The first `meta` element is not valid (because of the colon instead of a semi-co
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0: http://w3c.org" />
-	<meta http-equiv="refresh" content="5; http://w3c.org" />
+	<meta http-equiv="refresh" content="0: https://w3c.org" />
+	<meta http-equiv="refresh" content="5; https://w3c.org" />
 </head>
 ```
 

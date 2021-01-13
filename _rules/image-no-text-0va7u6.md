@@ -33,11 +33,11 @@ This rule applies to any [visible][] [embedded image][].
 
 ## Expectation
 
-For each of the image resources referenced by the [image sources][] of the test target, at least one of the following is true:
+For each test target, at least one of the following is true:
 
+- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
 - the image resource does not contain text expressing anything in a [human language][]; or
 - the image resource contains text and the text is not a significant part of the visual content in the image; or
-- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
 - the test target is [purely decorative][].
 
 ## Assumptions
@@ -202,7 +202,6 @@ This `svg` element does not have `image` element descendants.
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
-[image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception

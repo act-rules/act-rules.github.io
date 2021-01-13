@@ -30,7 +30,7 @@ This rule applies to any `iframe` element that has a negative number as a `tabin
 
 ## Expectation
 
-None of the test target's [nested browsing context][] includes elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+For each test target, the [nested browsing context][] does not include elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. 
 
 ## Assumptions
 

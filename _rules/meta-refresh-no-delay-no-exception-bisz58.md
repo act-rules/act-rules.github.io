@@ -45,7 +45,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ being either 0 or greater than 72000 (20 hours).
+For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ is 0.
 
 ## Assumptions
 

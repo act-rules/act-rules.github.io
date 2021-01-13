@@ -68,7 +68,7 @@ This `a` element has an [accessible name][] from its text that describes its pur
 
 #### Passed Example 2
 
-This `a element has an [accessible name][] from the`alt`attribute on its`img` element that describes its purpose.
+This `a` element has an [accessible name][] from the `alt` attribute on its `img` element that describes its purpose.
 
 ```html
 <a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content"/></a>

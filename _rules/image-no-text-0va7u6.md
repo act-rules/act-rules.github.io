@@ -177,7 +177,7 @@ This `div` element has a `background-image` property that references an image re
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 This `img` element provides redundant information, but it still is information, therefore it is not [purely decorative][].
 

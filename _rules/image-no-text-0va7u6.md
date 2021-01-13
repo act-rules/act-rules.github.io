@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] [embedded image][] that is not [marked as decorative][].
+This rule applies to any [visible][] [embedded image][].
 
 ## Expectation
 
@@ -37,7 +37,8 @@ For each of the image resources referenced by the [image sources][] of the test 
 
 - the image resource does not contain text expressing anything in a [human language][]; or
 - the image resource contains text and the text is not a significant part of the visual content in the image; or
-- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation.
+- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
+- the test target is [purely decorative][].
 
 ## Assumptions
 
@@ -136,6 +137,15 @@ This `div` element has a background image with a logo with text. Logotypes are c
 ></div>
 ```
 
+#### Passed Example 7
+
+This `img` element is [purely decorative][].
+
+```html
+<img src="/test-assets/0va7u6/welcome.png" alt="" />
+<p>Welcome to our website</p>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -177,14 +187,6 @@ This `object` element is not [visible][].
 
 #### Inapplicable Example 2
 
-This `img` element is [marked as decorative][].
-
-```html
-<img src="/test-assets/0va7u6/textimage.jpg" alt="" />
-```
-
-#### Inapplicable Example 3
-
 This `svg` element does not have `image` element descendants.
 
 ```html
@@ -197,11 +199,11 @@ This `svg` element does not have `image` element descendants.
 ```
 
 [embedded image]: #embedded-image 'Definition of Embedded Image'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'Definition of essential'
-[human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'Definition of human language'
+[essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
+[human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source
-[marked as decorative]: #marked-as-decorative 'Definition of marked as decorative'
+[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'

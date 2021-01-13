@@ -94,7 +94,7 @@ This `svg` element displays an image resource that does not contain text.
 This `object` element references an image resource where text is not the most significant content.
 
 ```html
-<object data="/test-assets/0va7u6/times_square.jpg"></object>
+<object data="/test-assets/0va7u6/times_square.jpg" title="Picture of Times Square, New York"></object>
 ```
 
 #### Passed Example 5
@@ -128,6 +128,8 @@ This `div` element has a background image with a logo with text. Logotypes are c
 
 ```html
 <div
+	role="img"
+	aria-label="W3C logo"
 	style="
     width: 100px;
     height: 100px;

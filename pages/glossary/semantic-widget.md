@@ -8,9 +8,8 @@ input_aspects:
   - DOM tree
 ---
 
-A _semantic widget_ is any element whose [semantic role][] is one of the [widget roles][], that is a non-[abstract role][] that inherits from the [`widget`][widget] role.
+A _semantic widget_ is any element whose [semantic role][] is one of the [widget roles][]. Both the standalone user interface widget roles and the composite user interface widget roles are semantic widgets.
 
-[abstract role]: https://www.w3.org/TR/wai-aria-1.1/#abstract_roles 'ARIA list of Abstract Roles'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [widget]: https://www.w3.org/TR/wai-aria-1.1/#widget 'ARIA Definition of the widget Role'
 [widget roles]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'ARIA list of Widget Roles'

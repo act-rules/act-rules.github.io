@@ -58,7 +58,7 @@ Each test target has an [accessible name][] which describes its purpose.
 
 #### Passed Example 1
 
-This link has an [accessible name][] (from its text) describing its purpose.
+This `a` element has an [accessible name][] from its text that describes its purpose.
 
 ```html
 <a href="#desc">See the description of this product.</a>
@@ -68,7 +68,7 @@ This link has an [accessible name][] (from its text) describing its purpose.
 
 #### Passed Example 2
 
-This link has an [accessible name][] (from the `alt` attribute on the image) describing its purpose.
+This `a element has an [accessible name][] from the `alt` attribute on its `img` element that describes its purpose.
 
 ```html
 <a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content"/></a>
@@ -80,7 +80,7 @@ This link has an [accessible name][] (from the `alt` attribute on the image) des
 
 #### Passed Example 3
 
-This link has an [accessible name][] (from its text) describing its purpose.
+This `span` element has an [explicit role][] of `link` and an [accessible name][] from its text that describes its purpose.
 
 ```html
 <span role="link" tabindex="0" onclick="document.location+='#desc'">See description of the product.</span>
@@ -90,7 +90,7 @@ This link has an [accessible name][] (from its text) describing its purpose.
 
 #### Passed Example 4
 
-This link has an [accessible name][] (from its `aria-labelledby` attribute) describing its purpose.
+This `a` element has an [accessible name][] from its `aria-labelledby` attribute that describes its purpose.
 
 ```html
 <p id="instructions">Click on the arrow to go to the main content.</p>

@@ -142,7 +142,7 @@ This `div` element has a background image with a logo with text. Logotypes are c
 This `img` element is [purely decorative][].
 
 ```html
-<img src="/test-assets/0va7u6/welcome.png" alt="" />
+<img src="/test-assets/0va7u6/wordcloud.png" alt="Word cloud of random words" />
 <p>Welcome to our website</p>
 ```
 
@@ -173,6 +173,15 @@ This `div` element has a `background-image` property that references an image re
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
+```
+
+#### Failed Example 3
+
+This `img` element provides redundant information, but it still is information, therefore it is not [purely decorative][].
+
+```html
+<img src="/test-assets/0va7u6/welcome.png" alt="" />
+<p>Welcome to our website</p>
 ```
 
 ### Inapplicable

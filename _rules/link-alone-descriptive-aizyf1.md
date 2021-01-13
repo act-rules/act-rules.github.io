@@ -68,7 +68,7 @@ This `a` element has an [accessible name][] from its text that describes its pur
 
 #### Passed Example 2
 
-This `a element has an [accessible name][] from the `alt` attribute on its `img` element that describes its purpose.
+This `a element has an [accessible name][] from the`alt`attribute on its`img` element that describes its purpose.
 
 ```html
 <a href="#main"><img src="/test-assets/5effbb/main.png" alt="Go to the main content"/></a>
@@ -211,11 +211,12 @@ There is no [semantic link][] in this document (`a` element without an `href` at
 <a>placeholder</a>
 ```
 
-[accessible name]: #accessible-name 'Definition of accessible name'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[accessible name]: #accessible-name 'Definition of Accessible Name'
+[explicit role]: #explicit-role 'Definition of Explicit Role'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic link]: #semantic-link 'Definition of Semantic Link'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'

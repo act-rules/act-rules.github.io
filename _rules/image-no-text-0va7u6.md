@@ -141,7 +141,7 @@ This `div` element has a background image with a logo with text. Logotypes are c
 
 #### Passed Example 7
 
-This `img` element is [purely decorative][].
+This `img` element is an image of text, but the text does not provide information (i.e., it could be rearranged and the meaning wouldn't change), therefore it is [purely decorative][].
 
 ```html
 <img src="/test-assets/0va7u6/wordcloud.png" alt="Word cloud of random words" />

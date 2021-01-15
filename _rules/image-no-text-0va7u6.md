@@ -209,6 +209,25 @@ This `svg` element does not have `image` element descendants.
 </svg>
 ```
 
+#### Inapplicable Example 3
+
+This `canvas` element does not use [drawImage][] to render an image.
+
+```html
+<canvas id="canvas"> Your browser does not support the HTML5 canvas element. </canvas>
+
+<script>
+	const canvas = document.getElementById('canvas')
+	canvas.width = 400
+	canvas.height = 400
+	const ctx = canvas.getContext('2d')
+	ctx.font = 'bold 32pt Times'
+	ctx.fillStyle = '#c2c'
+	ctx.fillText('Welcome!', 100, 100)
+</script>
+```
+
+[drawImage]: https://html.spec.whatwg.org/#dom-context-2d-drawimage
 [embedded image]: #embedded-image 'Definition of Embedded Image'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'

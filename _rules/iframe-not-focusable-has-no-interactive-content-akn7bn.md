@@ -34,7 +34,7 @@ For each test target, the [nested browsing context][] does not include elements 
 
 ## Assumptions
 
-This rule assumes that interactive content inside `iframe` elements are used to provide functionality. If the interactive content does not provide functionality, for example a button that does nothing when clicked, [success criterion 2.1.1][sc211] may be satisfied, even if the rule is failed.
+This rule assumes that interactive content inside `iframe` elements is used to provide functionality. If the interactive content does not provide functionality, for example a button that does nothing when clicked, [success criterion 2.1.1][sc211] may be satisfied, even if the rule is failed.
 
 ## Accessibility Support
 

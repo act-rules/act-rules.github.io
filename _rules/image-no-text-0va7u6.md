@@ -222,13 +222,13 @@ This `canvas` element does not use [drawImage][] to render an image.
 	canvas.width = 400
 	canvas.height = 400
 	const ctx = canvas.getContext('2d')
-	ctx.font = 'bold 32pt Times'
+	ctx.arc(200, 200, 100, 0, Math.PI * 2, true)
 	ctx.fillStyle = '#c2c'
-	ctx.fillText('Welcome!', 100, 100)
+	ctx.fill()
 </script>
 ```
 
-[drawImage]: https://html.spec.whatwg.org/#dom-context-2d-drawimage
+[drawimage]: https://html.spec.whatwg.org/#dom-context-2d-drawimage
 [embedded image]: #embedded-image 'Definition of Embedded Image'
 [essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'

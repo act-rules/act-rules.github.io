@@ -31,7 +31,10 @@ This rule applies to any [semantic link][] for which all the following is true:
 
 ## Expectation 1
 
-For each test target, there exists at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
+For each test target there exists at least one element with a [distinguishable style][] from each **non-link line text** elements for which one of the following is true:
+
+- the element is a [visible][] [inclusive descendant][] of the test target; or
+- the element is [ancestor][] of the test target that is not simultaneously an [ancestor][] of the **non-link line text** elements.
 
 ## Expectation 2
 

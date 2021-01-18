@@ -3,7 +3,7 @@ id: b40fd1
 name: Document has a landmark with non-repeated content
 rule_type: atomic
 description: |
-  This rule checks that each page has an element with a semantic role of landmark starting with non-repeated content
+  This rule checks that each page has an element with a landmark semantic role starting with non-repeated content
 accessibility_requirements:
 input_aspects:
   - Accessibility Tree
@@ -40,7 +40,7 @@ Marking content with landmarks is sufficient to pass [Success Criterion 2.4.1 By
 
 ## Background
 
-Most of the time, this rule pass by enclosing the primary content of the page in a `main` landmark.
+Most of the time, this rule passes by enclosing the primary content of the page in a `main` landmark.
 
 [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] only checks that landmarks are correctly used, but does not check whether landmarks could have been used and were omitted. Therefore, failing this rule (not having enough landmarks) does not necessarily fail that technique, and it is not listed as an accessibility mapping.
 

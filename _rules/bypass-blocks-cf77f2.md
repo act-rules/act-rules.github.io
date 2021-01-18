@@ -76,7 +76,7 @@ Techniques and solutions that identify blocks of content are sufficient ways of 
 
 If the [instruments][instrument] used to pass some of the atomic rules are not keyboard accessible, or not [included in the accessibility tree][], passing this rule can still leave many users without a way to bypass blocks of repeated content. WCAG's definition of [mechanism][] has a note saying that it "needs to meet all success criteria for the conformance level claimed". This includes [Success Criterion 2.1.1 Keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible) and [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) which are both at level A.
 
-This rule, only check if there is a way to bypass at least one section of repeated content. On pages with several interleaved repeated and non-repeated content, this is not sufficient to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. Checking for more sections to bypass was considered but rejected due to both the added complexity it would create and the risk of having false positives in some cases.
+This rule, only checks if there is a way to bypass at least one section of repeated content. On pages with several interleaved repeated and non-repeated content, this is not sufficient to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. Checking for more sections to bypass was considered but rejected due to both the added complexity it would create and the risk of having false positives in some cases.
 
 ## Background
 

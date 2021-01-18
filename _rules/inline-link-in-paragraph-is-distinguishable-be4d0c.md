@@ -227,50 +227,6 @@ This link, with a **different hue** from the other text in the same line, has a 
 
 #### Passed Example 8
 
-This link, with a **different hue** from the other text in the same line, has a distinguishable font-style when it is focused.
-
-```html
-<style>
-	p {
-		color: hsl(0, 50%, 25%);
-		background-color: white;
-	}
-	a {
-		color: hsl(232, 50%, 25%);
-		background-color: white;
-		text-decoration: none;
-	}
-	a:focus {
-		font-style: italic;
-	}
-</style>
-<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
-```
-
-#### Passed Example 9
-
-This link has a descendant element with a **different hue** from the other text in the same line and has a distinguishable bottom border when it is hovered or focused.
-
-```html
-<style>
-	a {
-		text-decoration: none;
-	}
-
-	a:hover span,
-	a:focus span {
-		border-bottom: 2px solid currentColor;
-	}
-</style>
-
-<p>
-	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI website</span></a
-	>.
-</p>
-```
-
-#### Passed Example 10
-
 This link has a **different hue** from the other text in the same line in both link history states. The link has distinguishing color and background color. The color and background color are different when in the visited state, but these are also distinguishing colors.
 
 ```html
@@ -336,6 +292,50 @@ This link, with a **different hue** from the other text in the same line, has a 
 <p>Read about WAI on the <a href="https://www.w3.org/WAI/">WAI website</a>.</p>
 ```
 
+#### Failed Example 3
+
+This link, with a **different hue** from the other text in the same line, only has a distinguishable font-style when it is focused.
+
+```html
+<style>
+	p {
+		color: hsl(0, 50%, 25%);
+		background-color: white;
+	}
+	a {
+		color: hsl(232, 50%, 25%);
+		background-color: white;
+		text-decoration: none;
+	}
+	a:focus {
+		font-style: italic;
+	}
+</style>
+<p>Read about WAI on the <a href="http://w3.org/WAI">WAI website</a>.</p>
+```
+
+#### Failed Example 4
+
+This link has a descendant element with a **different hue** from the other text in the same line, but it only has a distinguishable bottom border when it is hovered or focused.
+
+```html
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	a:hover span,
+	a:focus span {
+		border-bottom: 2px solid currentColor;
+	}
+</style>
+
+<p>
+	Read about WAI on the <a href="http://w3.org/WAI"><span>WAI website</span></a
+	>.
+</p>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -361,7 +361,7 @@ This link with no text nodes has no **link text**.
 ```html
 <p>
 	Read about WAI on the
-	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI"></a>
+	<a href="http://w3.org/WAI"><img src="test-assets/shared/w3c-logo.png" alt="WAI" /></a>
 	website.
 </p>
 ```

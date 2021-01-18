@@ -36,14 +36,13 @@ This rule applies to any [visible][] [embedded image][].
 
 For the rendered image resource of the [image sources][] of each test target, at least one of the following is true:
 
-- the rendered image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
-- the rendered image resource does not contain text expressing anything in a [human language][]; or
-- the rendered image resource contains text and the text is not a significant part of the visual content in the image; or
+- the [visible pixels][visible] of the rendered image resource contain text and it is [essential][] that the text is rendered with that specific presentation; or
+- the [visible pixels][visible] of the rendered image resource do not contain text expressing anything in a [human language][]; or
+- the [visible pixels][visible] of the rendered image resource contain text and the text is not a significant part of the visual content in the image; or
 - the test target is [purely decorative][].
 
 ## Assumptions
 
-- The text in the image resource is visible and not obscured by other resources rendered on the web page. If the text is not visible, even though parts of the image are, this rule may fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
 - There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
 - The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
 

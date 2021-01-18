@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic link][], for which all the following is true:
+This rule applies to any [semantic link][] for which all the following is true:
 
 - **link text**: the [semantic link][] element has [visible][] [text nodes][text node] as [descendants][descendant] in the [flat tree][]; and
 - **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
@@ -31,11 +31,15 @@ This rule applies to any [semantic link][], for which all the following is true:
 
 ## Expectation 1
 
-For each test target, there exists at least one [inspection state][] that is not [focused][] and [hovered][] at the same time and at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
+For each test target, there exists at least one [visible][] [inclusive descendant][] or [ancestor][] element that is not an [ancestor][] of the **non-link line text**, such that the [visible][] [inclusive descendant][] or the [ancestor][] element has a [distinguishable style][] from each element containing **non-link line text**.
 
 ## Expectation 2
 
 Either the test target does not match the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), or Expectation 1 holds for each [link history state][] with a **different hue**.
+
+## Expectation 3
+
+Expectation 1 holds irrespectively of the test target being [focused][] or [hovered][].
 
 ## Assumptions
 
@@ -414,7 +418,6 @@ This link is not distinguishable by color (hue) from the other text rendered in 
 [foreground color]: #foreground-colors-of-element 'Definition of foreground colors of element'
 [hovered]: #hovered 'Definition of hovered'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
-[inspection state]: #inspection-states 'Definition of inspection states'
 [link history state]: https://drafts.csswg.org/selectors-4/#link 'Definition of Link History pseudo-classes'
 [rendered on a line]: #rendered-on-a-line 'Definition of rendered on a line'
 [semantic link]: #semantic-link 'Definition of semantic link'

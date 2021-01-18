@@ -41,7 +41,7 @@ htmlHintIgnore:
 This rule applies to the first `meta` element in a document for which all the following are true:
 
 - the element has an `http-equiv` [attribute value][] of `"refresh"`; and
-- the element has a [valid][valid content] `content` [attribute value][].
+- the element has a valid `content` [attribute value][], as described in the [meta refresh][] pragma directive.
 
 ## Expectation
 
@@ -216,5 +216,5 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'
-[valid content]: https://html.spec.whatwg.org/#pragma-directives:attr-meta-content-9 'HTML specification of the content attribute'

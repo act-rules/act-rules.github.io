@@ -33,7 +33,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
 
 ## Expectation
 

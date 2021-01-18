@@ -41,7 +41,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and has a non-empty [accessible name][], except if one of the following is true:
+This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and has a non-empty [accessible name][], except if one of the following is true:
 
 - The element has an [ancestor][] in the [flat tree][] that is [named from author][]; or
 - The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].

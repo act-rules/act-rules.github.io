@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to any `input` element where the [state of the `type` attribute](https://html.spec.whatwg.org/multipage/input.html#states-of-the-type-attribute) is `image`, and that is [included in the accessibility tree][].
+This rule applies to any `input` element with a `type` [attribute value][] of `image`, and that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -137,7 +137,7 @@ The `button` element is not an image button. [Success Criterion 1.1.1 Non-text C
 
 #### Inapplicable Example 2
 
-The `input` element with type with a `type` attribute in the `Button` state is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
+The `input` element with the `type` [attribute value][] of `button` is not an image button. [Success Criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) can not fail text buttons. Only non-text content is applicable.
 
 ```html
 <input type="button" value="My button" />
@@ -167,5 +167,6 @@ The image button is ignored by assistive technologies because it is not [include
 <input type="image" src="/test-assets/shared/search-icon.svg" style="display: none;" />
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[accessible name]: #accessible-name 'Definition of accessible name'
+[accessible name]: #accessible-name 'Definition of Accessible Name'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

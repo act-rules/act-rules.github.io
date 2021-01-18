@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
 
 - **widget**: the ancestor has a [semantic role][] that inherits from `widget`; or
 - **disabled label**: the ancestor is used in the [accessible name][] of a `widget` that is [disabled][]; or
@@ -45,6 +45,8 @@ For each test target, the [highest possible contrast][] between the [foreground 
 - [Success criterion 1.4.3: Contrast (Minimum)][sc143] also has an exception for logos and brand names. Since logos and brand names are usually displayed through images to ensure correct rendering, this rule does not take logos or brand names into consideration. If a logo or brand name is included using [text nodes][text node], the text node could fail while the success criterion could still be satisfied.
 
 - Text that has the same foreground and background color (a contrast ratio of 1:1) is not considered to be "visual presentation of text", making it inapplicable to the success criterion. Text hidden in this way can still cause accessibility issues under other success criteria, depending on the content.
+
+- The definition of [disabled element][disabled] assumes that when the `aria-disabled` attribute is specified on an element, this element has also been disabled for users that do not rely on [assistive technology][]. If this is not the case, that definition may produce incorrect results and in consequence this rule might be Inapplicable to some text nodes that still require a good contrast ratio.
 
 ## Accessibility Support
 
@@ -380,6 +382,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
+[assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies 'WCAG definition of Assistive Technologies'
 [background colors]: #background-colors-of-text 'Definition of Background color of text'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child 'DOM, child, 2020/07/23'
 [disabled]: #disabled-element 'Definition of Disabled'

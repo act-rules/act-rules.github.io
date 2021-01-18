@@ -30,20 +30,20 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation 1
 
-Each target attribute is [a set of space separated IDs][], each of which is the ID of an element, that is a [`cell`][] of the same [`table`][].
+Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
 
 **Note:** `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Expectation 2
 
-Each target attribute is [a set of space separated IDs][], none of which is the ID of the element on which the test target is specified.
+Each target's [attribute value][] is a [set of space separated tokens][], and none of these tokens is the `id` of the element on which the test target is specified.
 
 **Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Assumptions
 
 - This rule assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for scripts, this rule may not be accurate.
-- This rule assumes that the `headers` attribute is required to express the relationship between data and header cells in the `table`. If the browser [computes an adequate fallback header][], this rule may produce incorrect results.
+- This rule assumes that the `headers` attribute is required to express the relationship between data and table header cells in the same `table`. If the browser [computes an adequate fallback header][] for cells that have the `headers` [attribute value][] that does not correspond to the `id` of any one cell in the same `table`, success Criterion [1.3.1 Info and Relationships][sc131] may be satisfied even if this rule failed.
 
 ## Accessibility Support
 
@@ -61,18 +61,20 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-The `headers` attribute on the cell refers to a `th` element within the same `table`.
+The `headers` attribute on the data cells refers to a `th` element within the same `table`.
 
 ```html
 <table>
 	<thead>
 		<tr>
 			<th id="header1">Projects</th>
+			<th id="header2">Objective</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td headers="header1">15%</td>
+			<td headers="header2">10%</td>
 		</tr>
 	</tbody>
 </table>
@@ -100,18 +102,20 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 
 #### Passed Example 3
 
-The `headers` attribute on the second cell refers to a `td` element with a role of `columnheader` within the same `table`.
+The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
 
 ```html
 <table>
 	<thead>
 		<tr>
 			<td role="columnheader" id="header1">Projects</td>
+			<td role="columnheader" id="header2">Objective</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td headers="header1">15%</td>
+			<td headers="header2">10%</td>
 		</tr>
 	</tbody>
 </table>
@@ -143,7 +147,7 @@ This `table` has multiple elements with a role of `columnheader`. The `headers` 
 
 #### Passed Example 5
 
-The `headers` attribute on the cell refers to a `th` element with a role of `rowheader` within the same `table`.
+The `headers` attribute on the second data cell in each row refers to a `th` element with a role of `rowheader` within the same `table`.
 
 ```html
 <table>
@@ -151,6 +155,10 @@ The `headers` attribute on the cell refers to a `th` element with a role of `row
 		<tr>
 			<th role="rowheader" id="headerAge">Age</th>
 			<td headers="headerAge">65</td>
+		</tr>
+		<tr>
+			<th role="rowheader" id="headerObjective">Objective</th>
+			<td headers="headerObjective">40%</td>
 		</tr>
 	</tbody>
 </table>
@@ -210,15 +218,17 @@ The `headers` attribute on the cell refers to `th` element which is not the same
 
 #### Failed Example 1
 
-The `td` element has a `headers` attribute referring to an ID that does not exist within the same `table`. Here the referenced ID is incorrect.
+The `td` elements have a `headers` attribute referring to an ID that does not exist within the same `table`. Here the referenced ID is incorrect.
 
 ```html
 <table>
 	<tr>
-		<th id="headerOfColumn">Projects</th>
+		<th id="headerOfColumn1">Projects</th>
+		<th id="headerOfColumn2">Objective</th>
 	</tr>
 	<tr>
-		<td headers="headOfColumn">15%</td>
+		<td headers="headOfColumn1">15%</td>
+		<td headers="headOfColumn2">10%</td>
 	</tr>
 </table>
 ```
@@ -242,7 +252,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 
 #### Failed Example 3
 
-The `headers` attribute on the cell refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
+The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 
 ```html
 <table>
@@ -250,10 +260,16 @@ The `headers` attribute on the cell refers to an element inside the same `table`
 		<td>
 			<span id="headerProject">Projects</span>
 		</td>
+		<td>
+			<span id="headerObjective">Objective</span>
+		</td>
 	</tr>
 	<tr>
 		<td headers="headerProject">
 			15%
+		</td>
+		<td headers="headerObjective">
+			10%
 		</td>
 	</tr>
 </table>
@@ -286,9 +302,11 @@ The `table` has a `role="presentation"` and thus is not [included in the accessi
 <table role="presentation">
 	<tr>
 		<td id="header1">Project Status</td>
+		<td id="header2">Objective</td>
 	</tr>
 	<tr>
 		<td headers="header1">15%</td>
+		<td headers="header2">10%</td>
 	</tr>
 </table>
 ```
@@ -308,10 +326,12 @@ The `table` is not [visible][] in page.
 	</style>
 	<table class="notInPage">
 		<tr>
-			<td id="header1">Project Status</td>
+			<th id="header1">Project Status</th>
+			<th id="header2">Objective</th>
 		</tr>
 		<tr>
 			<td headers="header1">15%</td>
+			<td headers="header2">10%</td>
 		</tr>
 	</table>
 </html>
@@ -342,16 +362,19 @@ The `table` is not [included in the accessibility tree][].
 <table style="display:none;">
 	<tr>
 		<td id="header1">Project Status</td>
+		<td id="header2">Objective</td>
 	</tr>
 	<tr>
 		<td headers="header1">15%</td>
+		<td headers="header2">10%</td>
 	</tr>
 </table>
 ```
-
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
 [`cell`]: https://html.spec.whatwg.org/#concept-cell 'Definition of cell'
-[a set of space separated ids]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
+[set of space separated tokens]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'WCAG 2.1 success criterion 1.3.1 Info and Relationships'

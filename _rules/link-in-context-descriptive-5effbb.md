@@ -54,9 +54,8 @@ The [accessible name][] of each target element together with its [programmatical
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
-- Related rules:
-  - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
-  - [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
+- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+- [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
 - [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
@@ -163,7 +162,7 @@ The [programmatically determined link context][] (provided by the table header [
 The [accessible name][] describes the purpose of the link.
 
 ```html
-<p id="instructions">Click on the arrow to go to the main content.</p>
+<p id="instructions">Go to the main content.</p>
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
 	<a href="#main" aria-labelledby="instructions">
 		<path

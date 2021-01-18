@@ -410,6 +410,6 @@ This [document][] is not an [HTML web page][].
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
-[tech g123]: (https://www.w3.org/WAI/WCAG21/Techniques/general/G123) 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
+[tech g123]: https://www.w3.org/WAI/WCAG21/Techniques/general/G123 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
 [tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [visible]: #visible 'Definition of Visible'

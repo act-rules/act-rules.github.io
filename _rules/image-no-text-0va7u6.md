@@ -36,9 +36,9 @@ This rule applies to any [visible][] [embedded image][].
 
 For the rendered image resource of the [image sources][] of each test target, at least one of the following is true:
 
-- the image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
-- the image resource does not contain text expressing anything in a [human language][]; or
-- the image resource contains text and the text is not a significant part of the visual content in the image; or
+- the rendered image resource contains text and it is [essential][] that the text is rendered with that specific presentation; or
+- the rendered image resource does not contain text expressing anything in a [human language][]; or
+- the rendered image resource contains text and the text is not a significant part of the visual content in the image; or
 - the test target is [purely decorative][].
 
 ## Assumptions

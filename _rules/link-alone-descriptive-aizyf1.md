@@ -93,7 +93,7 @@ This `span` element has an [explicit role][] of `link` and an [accessible name][
 This `a` element has an [accessible name][] from its `aria-labelledby` attribute that describes its purpose.
 
 ```html
-<p id="instructions">Click on the arrow to go to the main content.</p>
+<p id="instructions">Go to the main content.</p>
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
 	<a href="#main" aria-labelledby="instructions">
 		<path

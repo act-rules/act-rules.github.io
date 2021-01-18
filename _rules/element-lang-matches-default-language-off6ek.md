@@ -3,7 +3,7 @@ id: off6ek
 name: HTML element language subtag matches language
 rule_type: atomic
 description: |
-  This rule checks that the primary language subtag of an element matches its language
+  This rule checks that the primary language subtag of an element matches its default language
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true

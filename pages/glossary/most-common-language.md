@@ -14,6 +14,5 @@ The _most common language of an element_ is determined by counting the number of
 
 For more details, see [examples of most common language](/pages/examples/element-language/).
 
-[document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry 'Language Subtag Registry'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'

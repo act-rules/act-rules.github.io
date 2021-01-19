@@ -15,7 +15,5 @@ The _default language of a [web page][]_ is the [most common language][] of its 
 For more details, see [examples of default language](/pages/examples/element-language/).
 
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
-[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry 'Language Subtag Registry'
 [most common language]: #most-common-element-language 'Definition of Most Common Language of an Element'
-[text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
 [web page]: #web-page-html 'Definition of Web Page (HTML)'

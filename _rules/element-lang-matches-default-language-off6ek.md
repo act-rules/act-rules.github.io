@@ -31,11 +31,11 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element for which all the following are true:
+This rule applies to any HTML element with a `lang` attribute for which all the following are true:
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - The element is in a [document][] with a [content type][] of `text/html`; and
-- The element has a `lang` [attribute value][] which is a [valid language tag][]; and
+- The element's `lang` [attribute value][] is a [valid language tag][]; and
 - The element has some non-empty [text with the same programmatic language][].
 
 ## Expectation
@@ -54,8 +54,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-- Related rule:
-  - [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
+- [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
 - [Understanding Success Criterion 3.1.2: Language of Page][usc312]
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
 - [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)

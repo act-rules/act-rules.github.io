@@ -155,38 +155,6 @@ In this document, the [visibility][visible] and [inclusion in the accessibility 
 
 #### Passed Example 4
 
-In this document, the [visibility][visible] of the navigational [block of repeated content][] can be toggled on and off by the [visible][] link at the start of the document. Its [inclusion in the accessibility tree][included in the accessibility tree] can be toggled on and off by the button at the start of the document. Note that having a [focusable][] [user interface component][] with `aria-hidden` is a violation of both [Success Criterion 1.3.1 Info And Relationships](https://www.w3.org/tr/wcag21/#info-and-relationships) and [4.1.2 Name, Role, Value](https://www.w3.org/tr/wcag21/#name-role-value) and must thus be avoided.
-
-```html
-<html>
-	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<a href="#" onclick="toggleVisibility('chapters-navigation')" aria-hidden="true">Toggle table of content</a>
-		<button onclick="toggleAriaHidden('chapters-navigation')" class="off-screen">Toggle table of content</button>
-
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
-#### Passed Example 5
-
 In this document, the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the navigational [block of repeated content][] can be toggled on and off by the button at the start of the document. In this case, the [instrument][] is only [visible][] when [focused][].
 
 ```html

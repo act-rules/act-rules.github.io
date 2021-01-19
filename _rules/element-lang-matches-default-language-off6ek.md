@@ -70,7 +70,7 @@ In all examples, the `html` element has itself a `lang` attribute in order to ma
 
 #### Passed Example 1
 
-This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [common language][]. The common language is Dutch because all words are Dutch.
+This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matches its [most common language][]. The most common language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -88,7 +88,7 @@ This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matc
 
 #### Passed Example 2
 
-The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their common language.
+The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [most common language][]. The most common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their common language.
 
 ```html
 <html lang="en">
@@ -109,7 +109,7 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 
 #### Passed Example 3
 
-This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [common language][]. The common language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
+This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [most common language][]. The most common language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
 ```html
 <html lang="fr">
@@ -129,14 +129,27 @@ This `div` element has a `lang` [attribute value][] of `en` (English), which mat
 
 #### Passed Example 4
 
-These `p` element both have a `lang` [attribute value][] that match one of their [common language][]. Even though it is the same sentence, each of its words can be either English or French and thus both languages are a common language of the element. The sentence does have meaning in both languages.
+This `span` element has a `lang` [attribute value][] of `fr` (French), which matches one of its [most common languages][most common language]. The most common languages are both English and French because all the words belong to both languages.
 
 ```html
 <html lang="en">
-	<body>
-		<p lang="en">Paul put dire comment on tape.</p>
-		<p lang="fr">Paul put dire comment on tape.</p>
-	</body>
+	<p>
+		Even though all its words are English and it has meaning in English, the sentence
+		<span lang="fr">Paul put dire comment on tape</span> is also a French sentence.
+	</p>
+</html>
+```
+
+#### Passed Example 5
+
+This `span` element has a `lang` [attribute value][] of `en` (English), which matches one of its [most common languages][most common language]. The most common languages are both English and French because all the words belong to both languages.
+
+```html
+<html lang="fr">
+	<p>
+		Bien que tous les ses mots soient français et qu'elle ait un sens en français, la phrase
+		<span lang="en">Paul put dire comment on tape</span> est aussi une phrase anglaise.
+	</p>
 </html>
 ```
 
@@ -144,7 +157,7 @@ These `p` element both have a `lang` [attribute value][] that match one of their
 
 #### Failed Example 1
 
-This `span` element has `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is Dutch because all words are Dutch.
+This `span` element has `lang` attribute value of `fr` (French), which does not match its [most common language][]. The most common language is Dutch because all words are Dutch.
 
 ```html
 <html lang="en">
@@ -162,28 +175,7 @@ This `span` element has `lang` attribute value of `fr` (French), which does not 
 
 #### Failed Example 2
 
-The second `p` element has a `lang` [attribute value][] of `en` (English), which does not match its [common language][]. The element has no common language because it mixes words from Dutch and English.
-
-```html
-<html lang="nl">
-	<head>
-		<title>Met de kippen op stok</title>
-	</head>
-	<body>
-		<blockquote>
-			<p>"Hij ging met de kippen op stok"</p>
-		</blockquote>
-		<p lang="en">
-			The Dutch phrase "Hij ging met de kippen op stok" literally translates into "He went to roost with the chickens",
-			but it means that he went to bed early.
-		</p>
-	</body>
-</html>
-```
-
-#### Failed Example 3
-
-The second `p` element has `lang` attribute value of `en` (English), which does not match its [common language][]. The common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
+The second `p` element has `lang` attribute value of `en` (English), which does not match its [most common language][]. The most common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `fr`. Both `span` elements also have an incorrect `lang` attribute in order to make sure that all targets in this example fail the rule.
 
 ```html
 <html lang="nl">
@@ -204,9 +196,9 @@ The second `p` element has `lang` attribute value of `en` (English), which does 
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`, which also doesn't match its common language.
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [most common language][]. The most common language is English because the accessible texts are English, and all other text is in a `p` element with a `lang` attribute value of `nl`, which also doesn't match its common language.
 
 ```html
 <html lang="fr">
@@ -224,9 +216,9 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [common language][]. The common language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [most common language][]. The most common language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <html lang="fr">

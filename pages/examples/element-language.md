@@ -2,11 +2,11 @@
 title: Examples of Common and Default Language of an Element
 ---
 
-These are examples of the definitions for [common language][] and [default language][] of an element. The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
+These are examples of the definitions for [most common language][] of an element and [default language][] of a page. The examples presented here are non-normative and not testable. They serve to illustrate some common pitfalls about the definition and to help implementers of ACT rules understand it.
 
 ## One Language
 
-This `p` element has a common and default language of English because all words in it are English words.
+This `p` element has a most common language of English because all words in it are English words.
 
 ```html
 <p>
@@ -16,7 +16,7 @@ This `p` element has a common and default language of English because all words 
 
 ## Two Languages
 
-This `p` element has a default language of English because English is the _most common language_ of the words (only one word is not English). This element has no common language because one of the word is not English.
+This `p` element has a most common language of English because only one word is not English.
 
 ```html
 <p>The Dutch word "gelukkig" has no equivalent in English.</p>
@@ -24,7 +24,7 @@ This `p` element has a default language of English because English is the _most 
 
 ## Ignored Ancestors
 
-This `span` element has a common and default language of Dutch because the text in the parent `p` element is not part of its [text with the same programmatic language][].
+This `span` element has a most common language of Dutch because the text in the parent `p` element is not part of its [text with the same programmatic language][].
 
 ```html
 <p>The Dutch word "<span>gelukkig</span>" has no equivalent in English.</p>
@@ -32,7 +32,7 @@ This `span` element has a common and default language of Dutch because the text 
 
 ## Ignored Descendants
 
-This `div` element has a common and default language of Dutch because the second `p` element is not one of the [elements with the same programmatic language][] due to its own `lang` attribute. Hence the English words are ignored when looking for the language of the `div` element.
+This `div` element has a most common language of Dutch because the second `p` element is not one of the [elements with the same programmatic language][] due to its own `lang` attribute. Hence the English words are ignored when looking for the language of the `div` element.
 
 ```html
 <div>
@@ -46,7 +46,7 @@ This `div` element has a common and default language of Dutch because the second
 
 ## Title
 
-This `html` element has a common and default language of English. Since it is a [document element][], its `title` attribute is taken into account.
+This `html` element has a most common language of English. Since it is a [document element][], its `title` attribute is taken into account. Therefore, this page also has a default language of English.
 
 ```html
 <html title="I love ACT rules"></html>
@@ -54,7 +54,7 @@ This `html` element has a common and default language of English. Since it is a 
 
 ## Referenced Elements
 
-This `div` element has a common and default language of English. The only [element with the same programmatic language][] is the `img` (because the `p` element has a `lang` attribute of its own), but the full accessible name of it is taken into account. Assistive Technologies usually ignore `lang` attributes on elements that are used to compute accessible name.
+This `div` element has a most common language of English. The only [element with the same programmatic language][] is the `img` (because the `p` element has a `lang` attribute of its own), but the full accessible name of it is taken into account. Assistive Technologies usually ignore `lang` attributes on elements that are used to compute accessible name.
 
 ```html
 <div>
@@ -67,7 +67,7 @@ This `div` element has a common and default language of English. The only [eleme
 
 ## No Words
 
-This `div` element has neither common nor default language because it has no words in it. The only [element with the same programmatic language][] is the `img` which has no text node children and no accessible name.
+This `div` element has no most common language because it has no words in it. The only [element with the same programmatic language][] is the `img` which has no text node children and no accessible name.
 
 ```html
 <div>
@@ -80,14 +80,16 @@ This `div` element has neither common nor default language because it has no wor
 
 ## Ambiguous Words
 
-This `p` element has no default language because its words (and the sentence) are both English and French, thus no language is the _most common language_. It has two common languages, both English and French, since each word belongs to both. The sentence has meaning both in English and French…
+This `p` element has two most common languages because its words (and the sentence) are both English and French. Therefore, this page has no default language since there is no unique most common language.
 
 ```html
-<p>Paul put dire comment on tape</p>
+<html>
+	<p>Paul put dire comment on tape</p>
+</html>
 ```
 
-[common language]: /glossary/#common-element-language 'Definition of Common Language of an Element'
-[default language]: /glossary/#default-element-language 'Definition of Default Language of an Element'
+[most common language]: /glossary/#most-common-element-language 'Definition of Common Language of an Element'
+[default language]: /glossary/#default-page-language 'Definition of Default Page Language'
 [document element]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
 [element with the same programmatic language]: /glossary/#text-same-language 'Definition of Elements With the Same Programmatic Language'
 [elements with the same programmatic language]: /glossary/#text-same-language 'Definition of Elements With the Same Programmatic Language'

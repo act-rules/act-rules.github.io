@@ -40,7 +40,7 @@ This rule applies to any HTML element with a `lang` attribute for which all the 
 
 ## Expectation
 
-For each test target, the [primary language][] of its `lang` [attribute value][] is a [common language][] of the test target.
+For each test target, the [primary language][] of its `lang` [attribute value][] is a [most common language][] of the test target.
 
 ## Assumptions
 
@@ -315,7 +315,7 @@ This `p` element has a no [text with the same programmatic language][] because i
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
-[common language]: #common-element-language 'Definition of Common Language of an Element'
+[most common language]: #most-common-element-language 'Definition of Common Language of an Element'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

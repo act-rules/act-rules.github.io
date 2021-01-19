@@ -291,7 +291,7 @@ This page has an undefined [default language][default page language] because it 
 ```
 
 [valid language tag]: #valid-language-tag
-[default page language]: #default-element-language
+[default page language]: #default-page-language
 [attribute value]: #attribute-value
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8

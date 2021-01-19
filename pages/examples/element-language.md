@@ -88,6 +88,18 @@ This `p` element has two most common languages because its words (and the senten
 </html>
 ```
 
+## Nested Browsing Contexts
+
+This `div` element has a most common language of English. The content of the `iframe` element is taken into account because the `iframe` will be rendered as if it's part of the same page. Note that `iframe` are intented to provide a layer of isolation (for privacy and security reasons), so it is not clear whether the outer `lang` attribute is inherited inside it or not. It is clear, however, that the `span` element will not inherit it and therefore it is not considered when figuring out the most common language of the `div` element.
+
+```html
+<div lang="en">
+	<iframe srcdoc="
+	<p>This is an English paragraph. <span lang="fr">Il contient une phrase française.</span></p>
+	"
+</div>
+```
+
 [most common language]: /glossary/#most-common-element-language 'Definition of Common Language of an Element'
 [default language]: /glossary/#default-page-language 'Definition of Default Page Language'
 [document element]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'

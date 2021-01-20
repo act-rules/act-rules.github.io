@@ -103,8 +103,14 @@ This `object` element references an image resource where text is not the most si
 This `img` element references an image resource that contains text but where the presentation of the text is essential to convey the information.
 
 ```html
-<p>The following image is a close up of the cover of a Classic Comics book titled "Ivanhoe" illustrating a font that looks like an old Gothic style font.</p>
-<img src="/test-assets/0va7u6/ivanhoe.jpg" alt="The word Ivanhoe written in a style that resembles old medieval letters. The letter I is colored to resemble copper. The remaining letters are black. The background is yellow." />
+<p>
+	The following image is a close up of the cover of a Classic Comics book titled "Ivanhoe" illustrating a font that
+	looks like an old Gothic style font.
+</p>
+<img
+	src="/test-assets/0va7u6/ivanhoe.jpg"
+	alt="The word Ivanhoe written in a style that resembles old medieval letters. The letter I is colored to resemble copper. The remaining letters are black. The background is yellow."
+/>
 ```
 
 #### Passed Example 6
@@ -131,6 +137,29 @@ This `img` element is an image of text (the book covers), but it is just meant t
 ```html
 <img src="/test-assets/0va7u6/books.jpg" alt="" />
 <p>Welcome to my book store</p>
+```
+
+#### Passed Example 8
+
+These `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
+
+```html
+<input
+	type="image"
+	src="/test-assets/0va7u6/smallA.png"
+	style="border: 1px solid black;"
+	width="50px"
+	height="50px"
+	alt="Decrease text size"
+/>
+<input
+	type="image"
+	src="/test-assets/0va7u6/bigA.png"
+	style="border: 1px solid black;"
+	width="50px"
+	height="50px"
+	alt="Increase text size"
+/>
 ```
 
 ### Failed

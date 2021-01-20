@@ -5,24 +5,11 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
-  aria11:role_definitions:
-    title: ARIA 1.1, 5.4 Definition of Roles
+  wcag20:1.3.1: # Info and Relationship (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
-    inapplicable: satisfied
-  graphics-aria:role_definitions:
-    title: ARIA Graphics module 1.0, 4.1 Definition of Roles
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: satisfied
-  dpub-aria:role_definitions:
-    title: ARIA Digital Publishing module 1.0, 4.1 Definition of Roles
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: satisfied
+    inapplicable: further testing needed
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false
     failed: not satisfied
@@ -54,7 +41,9 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-_There are currently no assumptions_
+- This rule assumes that the `role` attribute is used to provide an ARIA [semantic role][] to the elements. If it is used for other purposes, this rule shouldn't be used.
+- This rule assumes that elements with a `role` attribute have their intended structure and relationship conveyed through some sort of presentation. If it is not the case, it is possible to fail this rule while still satisfying [Succes Criterion 1.3.1 Info and Relationship][sc131].
+- This rule assumes that the intended role of the element is not its [implicit role][]. If no token is valid, User Agents will default to the [implicit role][] for the element; if that role is the intended one, it is possible to fail this rule but still satisfy [Succes Criterion 1.3.1 Info and Relationship][sc131].
 
 ## Accessibility Support
 
@@ -66,7 +55,9 @@ The `role` attribute is a set of [space separated tokens][]. Having a [whitespac
 
 Further reading:
 
-- [List of WAI-ARIA Roles][wai-aria role] and [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
+- [List of WAI-ARIA Roles][wai-aria role]
+- [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
+- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.0/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
@@ -88,7 +79,18 @@ This `role` attribute contains one token, and this token is a valid [WAI-ARIA ro
 This `role` attribute contains two tokens, and these tokens are both valid [WAI-ARIA roles][wai-aria role].
 
 ```html
-<span role="button link" onclick="location.href='https://act-rules.github.io/'">ACT rules</span>
+<style>
+	.button {
+		border: 0.1em solid black;
+	}
+	.button:hover {
+		background-color: black;
+		color: white;
+	}
+</style>
+<span class="button" tabindex="0" role="button link" onclick="location.href='https://act-rules.github.io/'"
+	>ACT rules</span
+>
 ```
 
 #### Passed Example 3
@@ -106,7 +108,7 @@ This `role` attribute contains two tokens, and one of these tokens (`img`) is a 
 This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<img role="lnik" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" onclick="location.href='https://www.w3.org/'" />
+<input type="text" role="serchbox" />
 ```
 
 #### Failed Example 2
@@ -114,12 +116,18 @@ This `role` attribute contains one token, but this token is not a valid role in 
 This `role` attribute contains two tokens, but none of these tokens is a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<img
-	role="lnik buton"
-	src="/test-assets/shared/w3c-logo.png"
-	alt="W3C logo"
-	onclick="location.href='https://www.w3.org/'"
-/>
+<style>
+	.button {
+		border: 0.1em solid black;
+	}
+	.button:hover {
+		background-color: black;
+		color: white;
+	}
+</style>
+<span class="button" tabindex="0" role="buton lnik" onclick="location.href='https://act-rules.github.io/'"
+	>ACT rules</span
+>
 ```
 
 ### Inapplicable
@@ -165,8 +173,11 @@ This `role` attribute is specified on an element which is not [included in the a
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
+[implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

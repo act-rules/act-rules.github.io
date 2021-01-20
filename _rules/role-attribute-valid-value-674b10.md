@@ -71,7 +71,7 @@ If an incorrect `role` attribute is specified on an element which is not [visibl
 This `role` attribute contains one token, and this token is a valid [WAI-ARIA role][].
 
 ```html
-<input type="text" role="textbox" />
+<input type="text" role="searchbox" />
 ```
 
 #### Passed Example 2
@@ -95,10 +95,10 @@ This `role` attribute contains two tokens, and these tokens are both valid [WAI-
 
 #### Passed Example 3
 
-This `role` attribute contains two tokens, and one of these tokens (`img`) is a valid [WAI-ARIA role][].
+This `role` attribute contains two tokens, and one of these tokens (`searchbox`) is a valid [WAI-ARIA role][].
 
 ```html
-<img role="image img" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+<input type="text" role="searchfield searchbox" />
 ```
 
 ### Failed
@@ -108,7 +108,7 @@ This `role` attribute contains two tokens, and one of these tokens (`img`) is a 
 This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<input type="text" role="serchbox" />
+<input type="text" role="searchfield" />
 ```
 
 #### Failed Example 2

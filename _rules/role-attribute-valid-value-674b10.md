@@ -33,7 +33,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
+- the attribute is specified on an HTML or SVG element that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
 
@@ -42,8 +42,8 @@ Each test target has at least one token which is a valid value corresponding to 
 ## Assumptions
 
 - This rule assumes that the `role` attribute is used to provide an ARIA [semantic role][] to the elements. If it is used for other purposes, this rule shouldn't be used.
-- This rule assumes that elements with a `role` attribute have their intended structure and relationship conveyed through some sort of presentation. If it is not the case, it is possible to fail this rule while still satisfying [Succes Criterion 1.3.1 Info and Relationship][sc131].
-- This rule assumes that the intended role of the element is not its [implicit role][]. If no token is valid, User Agents will default to the [implicit role][] for the element; if that role is the intended one, it is possible to fail this rule but still satisfy [Succes Criterion 1.3.1 Info and Relationship][sc131].
+- This rule assumes that elements with a `role` attribute have their intended structure and relationship conveyed through some sort of presentation. If it is not the case, it is possible to fail this rule while still satisfying [Success Criterion 1.3.1 Info and Relationship][sc131].
+- This rule assumes that the intended role of the element is not its [implicit role][]. If no token is valid, User Agents will default to the [implicit role][] for the element; if that role is the intended one, it is possible to fail this rule but still satisfy [Success Criterion 1.3.1 Info and Relationship][sc131].
 
 ## Accessibility Support
 
@@ -53,7 +53,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
 
-Further reading:
+If an incorrect `role` attribute is specified on an element which is not [visible][], this is still likely to cause accessibility issues. However, this is not relevant to [Success Criterion 1.3.1 Info and Relationship][sc131] since nothing is conveyed through the presentation of that element.
 
 - [List of WAI-ARIA Roles][wai-aria role]
 - [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
@@ -166,6 +166,14 @@ This `role` attribute is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
+This `role` attribute is specified on an element which is not [visible][].
+
+```html
+<div style="position: absolute; left: -9999px" role="banner">Some content</div>
+```
+
+#### Inapplicable Example 6
+
 This `role` attribute is specified on an element which is not [included in the accessibility tree][].
 
 ```html
@@ -179,5 +187,6 @@ This `role` attribute is specified on an element which is not [included in the a
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
+[visible]: #visible 'Definition of visible'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

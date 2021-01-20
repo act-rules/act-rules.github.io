@@ -33,7 +33,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an HTML or SVG element that is [visible][] and [included in the accessibility tree][].
+- the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -52,8 +52,6 @@ Older browsers do not support more than one token in the value for a role attrib
 ## Background
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
-
-If an incorrect `role` attribute is specified on an element which is not [visible][], this is still likely to cause accessibility issues. However, this is not relevant to [Success Criterion 1.3.1 Info and Relationship][sc131] since nothing is conveyed through the presentation of that element.
 
 - [List of WAI-ARIA Roles][wai-aria role]
 - [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
@@ -165,14 +163,6 @@ This `role` attribute is only [ASCII whitespace][].
 ```
 
 #### Inapplicable Example 5
-
-This `role` attribute is specified on an element which is not [visible][].
-
-```html
-<div style="position: absolute; left: -9999px" role="banner">Some content</div>
-```
-
-#### Inapplicable Example 6
 
 This `role` attribute is specified on an element which is not [included in the accessibility tree][].
 

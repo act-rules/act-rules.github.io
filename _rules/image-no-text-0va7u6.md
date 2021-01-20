@@ -107,7 +107,7 @@ This `img` element references an image resource that contains text but where the
 	looks like an old Gothic style font.
 </p>
 <img
-	src="/test-assets/0va7u6/ivanhoe.jpg"
+	src="/test-assets/0va7u6/ivanhoe.png"
 	alt="The word Ivanhoe written in a style that resembles old medieval letters. The letter I is colored to resemble copper. The remaining letters are black. The background is yellow."
 />
 ```

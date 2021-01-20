@@ -26,6 +26,7 @@ acknowledgments:
     - Letter posted from Dulverton (Somerset, England) to Bristol (England) in 1894. Released into the public domain by Adrian Pingstone.
     - Times Square image released into the public domain by (WT-shared) Ypsilonatshared at wts wikivoyage.
     - Book shelf image by Alexandre Boue, licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en) license.
+    - "Ivanhoe" Classic Comics released into the public domain by Malcolm Kildale under the [Creative Commons Attribution-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license
 ---
 
 ## Applicability
@@ -102,8 +103,8 @@ This `object` element references an image resource where text is not the most si
 This `img` element references an image resource that contains text but where the presentation of the text is essential to convey the information.
 
 ```html
-<p>The following image illustrates the use of cursive writing in the late nineteenth century.</p>
-<img src="/test-assets/0va7u6/letter.jpg" alt="Nineteenth century handwritten letter" />
+<p>The following image is a close up of the cover of a Classic Comics book titled "Ivanhoe" illustrating a font that looks like an old Gothic style font.</p>
+<img src="/test-assets/0va7u6/ivanhoe.jpg" alt="The word Ivanhoe written in a style that resembles old medieval letters. The letter I is colored to resemble copper. The remaining letters are black. The background is yellow." />
 ```
 
 #### Passed Example 6

@@ -18,7 +18,7 @@ The _text with the same programmatic language_ as an element E is composed of al
 An element F has the _same programmatic language_ as an element E if one of the following conditions is true (recursively):
 
 - F is E itself (an element always has the same programmatic language as itself); or
-- F does not have a non-empty `lang` attribute, and it the child in the [flat tree][] of an element with the same programmatic language as E; or
+- F does not have a non-empty `lang` attribute, and is the child in the [flat tree][] of an element with the same programmatic language as E; or
 - F is a [fully active][] [document][] element, has no non-empty `lang` attribute, and has a [browsing context container][] with the same programmatic language as E.
 
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'

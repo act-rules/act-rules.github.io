@@ -34,9 +34,9 @@ htmlHintIgnore:
 This rule applies to any HTML element with a `lang` attribute for which all the following are true:
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- The element is in a [document][] with a [content type][] of `text/html`; and
-- The element's `lang` [attribute value][] is a [valid language tag][]; and
-- The element has some non-empty [text with the same programmatic language][].
+- the element is in a [document][] with a [content type][] of `text/html`; and
+- the element's `lang` [attribute value][] is a [valid language tag][]; and
+- The element has non-empty [text with the same programmatic language][].
 
 ## Expectation
 
@@ -88,7 +88,7 @@ This `span` element has a `lang` [attribute value][] of `nl` (Dutch), which matc
 
 #### Passed Example 2
 
-The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [most common language][]. The most common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their common language.
+The second `p` element has `lang` attribute value of `nl` (Dutch), which matches its [most common language][]. The most common language is Dutch because all English words are in `span` elements with a `lang` attribute value of `en`. Both `span` elements also have a `lang` attribute matching their most common language.
 
 ```html
 <html lang="en">
@@ -276,7 +276,7 @@ This `p` element has an invalid language tag.
 
 #### Inapplicable Example 4
 
-The first `p` element has a no [text with the same programmatic language][] because it has no content.
+The first `p` element has no [text with the same programmatic language][] because it has no content.
 
 ```html
 <html lang="en">
@@ -289,7 +289,7 @@ The first `p` element has a no [text with the same programmatic language][] beca
 
 #### Inapplicable Example 5
 
-This `p` element has a no [text with the same programmatic language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
+This `p` element has no [text with the same programmatic language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">

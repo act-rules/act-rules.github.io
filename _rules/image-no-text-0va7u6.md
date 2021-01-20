@@ -38,7 +38,7 @@ For the rendered image resource of the [image sources][] of each test target, at
 
 - the [visible pixels][visible] of the rendered image resource contain text and it is [essential][] that the text is rendered with that specific presentation; or
 - the [visible pixels][visible] of the rendered image resource do not contain text expressing anything in a [human language][]; or
-- the [visible pixels][visible] of the rendered image resource contain text and the text is not a significant part of the visual content in the image; or
+- the [visible pixels][visible] of the rendered image resource contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
 - the test target is [purely decorative][].
 
 ## Assumptions

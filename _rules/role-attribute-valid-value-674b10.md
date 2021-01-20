@@ -71,7 +71,7 @@ If an incorrect `role` attribute is specified on an element which is not [visibl
 This `role` attribute contains one token, and this token is a valid [WAI-ARIA role][].
 
 ```html
-<input type="text" role="searchbox" />
+<label>Search: <input type="text" role="searchbox" placeholder="Enter 3 or more characters"/></label>
 ```
 
 #### Passed Example 2
@@ -98,7 +98,7 @@ This `role` attribute contains two tokens, and these tokens are both valid [WAI-
 This `role` attribute contains two tokens, and one of these tokens (`searchbox`) is a valid [WAI-ARIA role][].
 
 ```html
-<input type="text" role="searchfield searchbox" />
+<label>Search: <input type="text" role="searchfield searchbox" placeholder="Enter 3 or more characters"/></label>
 ```
 
 ### Failed
@@ -108,7 +108,7 @@ This `role` attribute contains two tokens, and one of these tokens (`searchbox`)
 This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<input type="text" role="searchfield" />
+<label>Search: <input type="text" role="searchfield" placeholder="Enter 3 or more characters"/></label>
 ```
 
 #### Failed Example 2

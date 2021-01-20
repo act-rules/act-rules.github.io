@@ -36,7 +36,7 @@ This rule applies to any HTML element with a `lang` attribute for which all the 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element is in a [document][] with a [content type][] of `text/html`; and
 - the element's `lang` [attribute value][] is a [valid language tag][]; and
-- The element has non-empty [text with the same programmatic language][].
+- the element has non-empty [text with the same programmatic language][].
 
 ## Expectation
 

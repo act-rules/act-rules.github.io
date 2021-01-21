@@ -38,11 +38,16 @@ For each test target there exists at least one element with a [distinguishable s
 
 ## Expectation 2
 
-Either the test target does not match the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), or Expectation 1 holds for each [link history state][] with a **different hue**.
+Expectation 1 holds irrespectively of the test target being [focused][].
 
 ## Expectation 3
 
-Expectation 1 holds irrespectively of the test target being [focused][] or [hovered][].
+Expectation 1 holds irrespectively of the test target being [hovered][].
+
+## Expectation 4
+
+Either the test target does not match the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), or Expectations 2 and 3 hold for each [link history state][] with a **different hue**.
+
 
 ## Assumptions
 

@@ -1,6 +1,6 @@
 ---
-title: Text with the same Programmatic Language
-key: text-same-language
+title: Text Inheriting its Programmatic Language from an Element
+key: text-inheriting-language
 unambiguous: true
 objective: true
 input_aspects:
@@ -9,17 +9,17 @@ input_aspects:
   - CSS Styling
 ---
 
-The _text with the same programmatic language_ as an element E is composed of all the following texts:
+The _text inheriting its programmatic language_ from an element E is composed of all the following texts:
 
 - **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element with the same programmatic language as E;
 - **accessible text**: the [accessible name][] and [accessible description][] of any element with the same programmatic language as E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
 
-An element F has the _same programmatic language_ as an element E if one of the following conditions is true (recursively):
+An element F is an _element inheriting its programmatic language_ from an element E if one of the following conditions is true (recursively):
 
-- F is E itself (an element always has the same programmatic language as itself); or
+- F is E itself (an element always inherits its programmatic language from itself); or
 - F does not have a non-empty `lang` attribute, and is the child in the [flat tree][] of an element with the same programmatic language as E; or
-- F is a [fully active][] [document][] element, has no non-empty `lang` attribute, and has a [browsing context container][] with the same programmatic language as E.
+- F is a [fully active][] [document][] element, has no non-empty `lang` attribute, and its [browsing context container][] is an element inheriting its programmatic language from E.
 
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'
 [accessible name]: #accessible-name 'Definition of Accessible Name'

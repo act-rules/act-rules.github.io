@@ -24,7 +24,7 @@ This `p` element has a most common language of English because only one word is 
 
 ## Ignored Ancestors
 
-This `span` element has a most common language of Dutch because the text in the parent `p` element is not part of its [text with the same programmatic language][].
+This `span` element has a most common language of Dutch because the text in the parent `p` element is not part of the [text inheriting its programmatic language][] from it.
 
 ```html
 <p>The Dutch word "<span>gelukkig</span>" has no equivalent in English.</p>
@@ -32,7 +32,7 @@ This `span` element has a most common language of Dutch because the text in the 
 
 ## Ignored Descendants
 
-This `div` element has a most common language of Dutch because the second `p` element is not one of the [elements with the same programmatic language][] due to its own `lang` attribute. Hence the English words are ignored when looking for the language of the `div` element.
+This `div` element has a most common language of Dutch because the second `p` element is not one of the [elements inheriting their programmatic language][] from it due to its own `lang` attribute. Hence the English words are ignored when looking for the language of the `div` element.
 
 ```html
 <div>
@@ -54,7 +54,7 @@ This `html` element has a most common language of English. Since it is a [docume
 
 ## Referenced Elements
 
-This `div` element has a most common language of English. The only [element with the same programmatic language][] is the `img` (because the `p` element has a `lang` attribute of its own), but the full accessible name of it is taken into account. Assistive Technologies usually ignore `lang` attributes on elements that are used to compute accessible name.
+This `div` element has a most common language of English. The only [element inheriting its programmatic language][] from it is the `img` (because the `p` element has a `lang` attribute of its own), but the full accessible name of it is taken into account. Assistive Technologies usually ignore `lang` attributes on elements that are used to compute accessible names.
 
 ```html
 <div>
@@ -67,7 +67,7 @@ This `div` element has a most common language of English. The only [element with
 
 ## No Words
 
-This `div` element has no most common language because it has no words in it. The only [element with the same programmatic language][] is the `img` which has no text node children and no accessible name.
+This `div` element has no most common language because it has no words in it. The only [element inheriting its programmatic language][] from it is the `img` which has no text node children and no accessible name.
 
 ```html
 <div>
@@ -103,6 +103,6 @@ This `div` element has a most common language of English. The content of the `if
 [most common language]: /glossary/#most-common-element-language 'Definition of Common Language of an Element'
 [default language]: /glossary/#default-page-language 'Definition of Default Page Language'
 [document element]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
-[element with the same programmatic language]: /glossary/#text-same-language 'Definition of Elements With the Same Programmatic Language'
-[elements with the same programmatic language]: /glossary/#text-same-language 'Definition of Elements With the Same Programmatic Language'
-[text with the same programmatic language]: /glossary/#text-same-language 'Definition of Text With the Same Programmatic Language'
+[element inheriting its programmatic language]: /glossary/#text-inheriting-language 'Definition of Element Inheriting its Programmatic Language From an Element'
+[elements inheriting their programmatic language]: /glossary/#text-inheriting-language 'Definition of Elements Inheriting their Programmatic Language from an Element'
+[text inheriting its programmatic language]: /glossary/#text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'

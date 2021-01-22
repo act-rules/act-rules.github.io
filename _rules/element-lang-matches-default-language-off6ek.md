@@ -36,7 +36,7 @@ This rule applies to any HTML element with a `lang` attribute for which all the 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element is in a [document][] with a [content type][] of `text/html`; and
 - the element's `lang` [attribute value][] is a [valid language tag][]; and
-- the element has non-empty [text with the same programmatic language][].
+- there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 
@@ -218,7 +218,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Failed Example 4
 
-This `div` element has a `lang` attribute value of `fr` (French), which does not match its [most common language][]. The most common language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because it has no [text with the same programmatic language][] since its content is neither [visible][] nor [included in the accessibility tree][].
+This `div` element has a `lang` attribute value of `fr` (French), which does not match its [most common language][]. The most common language is English because the accessible name of the `img` element is English. The `lang` attribute on the `p` element is effectively ignored. The `p` element is not applicable because there is no [text inheriting its programmatic language][] from it since its content is neither [visible][] nor [included in the accessibility tree][].
 
 ```html
 <html lang="fr">
@@ -276,7 +276,7 @@ This `p` element has an invalid language tag.
 
 #### Inapplicable Example 4
 
-The first `p` element has no [text with the same programmatic language][] because it has no content.
+There is no [text inheriting its programmatic language][] from the first `p` element because it has no content.
 
 ```html
 <html lang="en">
@@ -289,7 +289,7 @@ The first `p` element has no [text with the same programmatic language][] becaus
 
 #### Inapplicable Example 5
 
-This `p` element has no [text with the same programmatic language][] because it has no content that is either [visible][] or [included in the accessibility tree][].
+There is no [text inheriting its programmatic language][] from this `p` element because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -308,7 +308,7 @@ This `p` element has no [text with the same programmatic language][] because it 
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
-[text with the same programmatic language]: #text-same-language 'Definition of Text With the Same Programmatic Language'
+[text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [most common language]: #most-common-element-language 'Definition of Common Language of an Element'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'

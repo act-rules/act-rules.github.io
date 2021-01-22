@@ -96,7 +96,8 @@
 - fieldsets
 - ascii # lowercase needed in reference list
 - CMS
-- dropdown
+- clientRects
+- getClientRects
 
 # Parts of url
 - http
@@ -210,6 +211,7 @@
 - unicity
 - Menuitem
 - menuitems
+- irrespectively
 
 # Parts of Unicode
 - 000A

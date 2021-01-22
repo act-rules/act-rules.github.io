@@ -24,7 +24,7 @@ acknowledgments:
 This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
 
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
-- **disabled**: the element has the `disabled` attribute or the `aria-disabled` [attribute value][] of `true`; or
+- **disabled**: the test target is the [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
 - **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
@@ -84,11 +84,12 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 ```html
 <form autocomplete="off">
-	<label for="bday">Birthday month</label>
-	<select id="bday" autocomplete="bday-month">
-		<option>January</option>
-		<option>...</option>
-	</select>
+	<label>Birthday month
+        <select id="bday" autocomplete="bday-month">
+            <option>January</option>
+            <option>...</option>
+        </select>
+    </label>
 </form>
 ```
 
@@ -97,7 +98,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<label for="sAddress">Street address</label> <textarea id="sAdress" autocomplete="Street-Address"></textarea>
+<label> Street address<textarea id="sAddress" autocomplete="Street-Address"></textarea></label> 
 ```
 
 #### Passed Example 4
@@ -244,6 +245,7 @@ This `autocomplete` attribute is ignored because it is on an element with a [sem
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [appropriate field for the form control]: #appropriate-field-for-the-form-control 'Definition of Appropriate field for the form control'
 [correct autocomplete field]: #correct-autocomplete-field 'Definition of Correct autocomplete field'
+[disabled element]: #disabled-element 'Definition of Disabled Element'
 [html specification for autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens 'HTML Autofill Detail, 2020/08/12'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

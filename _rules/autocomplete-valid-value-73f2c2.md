@@ -85,7 +85,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 ```html
 <form autocomplete="off">
 	<label>Birthday month
-        <select id="bday" autocomplete="bday-month">
+        <select autocomplete="bday-month">
             <option>January</option>
             <option>...</option>
         </select>

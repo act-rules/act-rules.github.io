@@ -23,7 +23,7 @@ To start giving such feedback:
 
 ## Feedback and reviews for draft rules (Pull Requests on GitHub)
 
-Pull requests are rule drafts that are ready for peer review. You can assign yourself as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label "Reviewer wanted", we need more people to review it. However, even if three people are already reviewing it, we can always use more eyes on things.
+Pull requests are rule drafts that are ready for peer review. You can add yourself as a reviewer and follow the rule through iterations. A rule needs three approvals, and if a rule has the label "Reviewer wanted", we need more people to review it. However, even if three people are already reviewing it, we can always use more perspectives on things.
 
 You can add single comments to a pull request and/or do a full review.
 

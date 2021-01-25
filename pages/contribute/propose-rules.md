@@ -24,4 +24,4 @@ Before contributing a new rule, we recommend you check its validity with several
 
 GitHub has excellent documentation. If you are new to GitHub, please see their documentation on how to [sign up](https://help.github.com/en/github/getting-started-with-github/signing-up-for-github), [navigate](https://help.github.com/en/github/managing-files-in-a-repository/navigating-code-on-github), [edit files](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository) and [review pull requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests). In addition to official GitHub documentation, there are a lot of excellent articles and videos on how to use GitHub.
 
-For details details, see the [GitHub Guidelines for ACT-Rules](https://github.com/act-rules/act-rules.github.io/blob/develop/github-guidelines.md).
+For details, see the [GitHub Guidelines for ACT-Rules](https://github.com/act-rules/act-rules.github.io/blob/develop/github-guidelines.md).

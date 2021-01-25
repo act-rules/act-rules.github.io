@@ -78,17 +78,14 @@ This `role` attribute contains two tokens, and these tokens are both valid [WAI-
 
 ```html
 <style>
-	.button {
-		border: 0.1em solid black;
-	}
-	.button:hover {
-		background-color: black;
-		color: white;
+	.ref {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
 	}
 </style>
-<span class="button" tabindex="0" role="button link" onclick="location.href='https://act-rules.github.io/'"
-	>ACT rules</span
->
+See [<span class="ref" onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref link">ACT rules</span
+>].
 ```
 
 #### Passed Example 3
@@ -115,17 +112,15 @@ This `role` attribute contains two tokens, but none of these tokens is a valid r
 
 ```html
 <style>
-	.button {
-		border: 0.1em solid black;
-	}
-	.button:hover {
-		background-color: black;
-		color: white;
+	.ref {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
 	}
 </style>
-<span class="button" tabindex="0" role="buton lnik" onclick="location.href='https://act-rules.github.io/'"
+See [<span class="ref" onclick="location.href='https://act-rules.github.io/'" role="bibliographic-reference lnik"
 	>ACT rules</span
->
+>].
 ```
 
 ### Inapplicable

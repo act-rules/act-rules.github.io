@@ -98,7 +98,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<label> Street address<textarea id="sAddress" autocomplete="Street-Address"></textarea></label> 
+<label> Street address<textarea autocomplete="Street-Address"></textarea></label> 
 ```
 
 #### Passed Example 4

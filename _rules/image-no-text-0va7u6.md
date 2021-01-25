@@ -30,16 +30,16 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] [embedded image][].
+The rules applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 
-For the rendered image resource of the [image sources][] of each test target, at least one of the following is true:
+For each test target, at least one of the following is true:
 
-- the [visible pixels][visible] of the rendered image resource contain text and it is [essential][] that the text is rendered with that specific presentation; or
-- the [visible pixels][visible] of the rendered image resource do not contain text expressing anything in a [human language][]; or
-- the [visible pixels][visible] of the rendered image resource contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
-- the test target is [purely decorative][].
+- the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
+- the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
+- the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
+- the [embedded image][] the test target belongs to is [purely decorative][].
 
 ## Assumptions
 
@@ -231,3 +231,4 @@ This `svg` element does not have `image` element descendants.
 [sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of web page (HTML)'

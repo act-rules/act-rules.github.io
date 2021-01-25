@@ -45,6 +45,8 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+
 The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable) and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
@@ -60,7 +62,7 @@ The `aria-disabled` state is used on `input` elements which are not part of [seq
 
 The intent of this rule is to ensure that the `autocomplete` attribute can be used to support personalization. Many users may find it easier to fill out forms if those can be styled or laid out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
 
-The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable. 
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)
@@ -173,6 +175,14 @@ This `autocomplete` [attribute value][] is not appropriate for the field. The fo
 
 ```html
 <label>Quantity<input type="number" autocomplete="email"/></label>
+```
+
+#### Failed Example 6
+
+The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
+
+ ```html
+ <label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
 ```
 
 ### Inapplicable

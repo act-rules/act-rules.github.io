@@ -5,11 +5,24 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+  aria11:role_definitions:
+    title: ARIA 1.1, 5.4 Definition of Roles
     forConformance: true
     failed: not satisfied
     passed: further testing needed
-    inapplicable: further testing needed
+    inapplicable: satisfied
+  graphics-aria:role_definitions:
+    title: ARIA Graphics module 1.0, 4.1 Definition of Roles
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: satisfied
+  dpub-aria:role_definitions:
+    title: ARIA Digital Publishing module 1.0, 4.1 Definition of Roles
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: satisfied
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false
     failed: not satisfied
@@ -30,7 +43,7 @@ acknowledgments:
 
 ## Applicability
 
-Any `role` attribute for which all the following are true:
+This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
 - the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
@@ -41,7 +54,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-This rule assumes that the [implicit role][] of elements is not enough to satisfy [Success Criterion 4.1.2 Name, Role, Value][sc412]. In case of invalid `role` attribute, the [semantic role][] defaults to the [implicit role]. If this is the correct role for the element, the rule will fail but [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied. For example, the element `<img role="image" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />` will fail this rule (because `image` is not a valid role) but satisfies [Success Criterion 4.1.2 Name, Role, Value][sc412] because the element defaults to its [implicit role][] of `img`.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
@@ -55,7 +68,6 @@ Further reading:
 
 - [List of WAI-ARIA Roles][wai-aria role] and [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
 
@@ -117,7 +129,7 @@ This `role` attribute contains two tokens, but none of these tokens is a valid r
 There is no `role` attribute.
 
 ```html
-<div>Some Content</div>
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Inapplicable Example 2
@@ -153,11 +165,8 @@ This `role` attribute is specified on an element which is not [included in the a
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
-[implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
-[semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

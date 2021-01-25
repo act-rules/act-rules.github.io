@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: All table header cells have assigned data cells
+name: Table header cell has assigned cells
 rule_type: atomic
 description: |
-  This rule checks that each table header has assigned data cells in a table element.
+  This rule checks that each table header has assigned cells in a table element.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
 
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][]; and
@@ -36,7 +36,7 @@ The rule applies to any HTML element with the [semantic role][] of [rowheader][]
 
 ## Expectation
 
-Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or [gridcell][].
+Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or inheriting from [cell][].
 
 ## Assumptions
 
@@ -48,6 +48,8 @@ This rule assumes that table header cells have a relationship conveyed through p
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
@@ -157,6 +159,33 @@ Each of the 2 `th` elements has an assigned `td` element because the `headers` a
 	</tr>
 	<tr>
 		<td headers="col2">1</td>
+	</tr>
+</table>
+```
+
+#### Passed Example 6
+
+Each of the 5 `th` elements in this table has assigned cells, whether data or header.
+
+```html
+<table>
+	<caption>
+		Opening hours
+	</caption>
+	<tr>
+		<th>Day</th>
+		<th>Morning</th>
+		<th>Afternoon</th>
+	</tr>
+	<tr>
+		<th>Mon-Fri</th>
+		<td>8-12</td>
+		<td>14-17</td>
+	</tr>
+	<tr>
+		<th>Sat-Sun</th>
+		<td>10-14</td>
+		<td>Closed</td>
 	</tr>
 </table>
 ```
@@ -318,7 +347,6 @@ This `th` element is part of a table which is not [included in the accessibility
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
-[gridcell]: https://www.w3.org/TR/wai-aria-1.1/#gridcell 'ARIA gridcell role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'

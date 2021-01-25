@@ -29,15 +29,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `id` attribute whose value is not an empty string (`""`), specified on a HTML or SVG element.
+This rule applies to any `id` attribute whose value is not an empty string (`""`), specified on a HTML or SVG element.
 
 **Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 
 ## Expectation
 
 The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
-
-**Note:** Passing this rule is not enough to pass [Success Criterion 4.1.1: Parsing](https://www.w3.org/TR/WCAG21/#parsing), given that, for example, start and end tags can be incomplete without failing this rule.
 
 ## Assumptions
 

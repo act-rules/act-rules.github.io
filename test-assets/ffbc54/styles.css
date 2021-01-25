@@ -1,0 +1,10 @@
+#overlay {
+	display: none;
+	position: fixed;
+	top: 2em;
+	left: 10em;
+	background-color: #505050;
+	color: white;
+	padding: 1em;
+	padding-top: 0em;
+}

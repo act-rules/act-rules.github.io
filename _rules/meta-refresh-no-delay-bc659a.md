@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
+This rule applies to the first [valid](https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh) `<meta http-equiv="refresh">` element with a `content` attribute in a document.
 
 ## Expectation
 
@@ -57,6 +57,8 @@ The `time` of the `content` attribute is 0 or greater than 72000 (20 hours).
 Not all major web browsers parse the value of the `content` attribute in the same way. This can cause redirects to happen in some browsers, but not in others. This can cause some pages to pass this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
+
+This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325].
 
 - [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
 - [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
@@ -221,3 +223,7 @@ No `http-equiv="refresh"` attribute.
 	<meta http-equiv="refresh" content="foo; URL='https://github.com'" />
 </head>
 ```
+
+[sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable 'WCAG 2.1 Success Criterion 2.2.1 Timing Adjustable'
+[sc223]: https://www.w3.org/TR/WCAG21/#no-timing 'WCAG 2.1 Success Criterion 2.2.3 No Timing'
+[sc325]: https://www.w3.org/TR/WCAG21/#change-on-request 'WCAG 2.1 Success Criterion 3.2.5 Change on Request'

@@ -38,7 +38,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-The rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except if the element has a [hidden state][] of "true".
+This rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except if the element has a [hidden state][] of "true".
 
 ## Expectation
 
@@ -152,7 +152,7 @@ This off screen `img` element has an [implicit role][] of `presentation` because
 
 #### Failed Example 1
 
-This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an empty `alt` attribute.
+This `img` element has an empty [accessible name][] and an [implicit role][] of `img` because it is missing an `alt` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" />

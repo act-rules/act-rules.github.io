@@ -75,7 +75,7 @@ A set of two HTML `a` elements have the same [accessible name][] and link to the
 
 #### Passed Example 2
 
-A set of two HTML `a` elements that both resolve to [same resource][] after instant redirect.
+These two HTML `a` elements resolve to the [same resource][] after instant redirect. The redirect means that the URLs look different but load the same page.
 
 ```html
 <html lang="en">
@@ -86,7 +86,7 @@ A set of two HTML `a` elements that both resolve to [same resource][] after inst
 
 #### Passed Example 3
 
-These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, thus serving the same purpose.
+These two links resolve to resources that are not the same (different URLs), but the resources are completely identical, in this case the contact details being the same in two locations, thus serving the same purpose.
 
 ```html
 <html lang="en">
@@ -97,7 +97,7 @@ These two links resolve to resources that are not the same (different URLs), but
 
 #### Passed Example 4
 
-These two links go to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy.
+These two links go to pages where the content section is the same, but where the navigation options (bread crumbs and local sub menus) differ due to different placement in navigation hierarchy. In the example, the contact details are the same format but in different locations.
 
 ```html
 <html lang="en">
@@ -108,7 +108,7 @@ These two links go to pages where the content section is the same, but where the
 
 #### Passed Example 5
 
-These two HTML `a` elements link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent.
+These two HTML `a` elements link to URLs that differ due to trailing slashes, but resolve to the [same resource][] after redirects caused by user agent. The redirect means the URLs look different but load the same page.
 
 ```html
 <html lang="en">
@@ -119,7 +119,7 @@ These two HTML `a` elements link to URLs that differ due to trailing slashes, bu
 
 #### Passed Example 6
 
-These two links go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link.
+These two links go to pages that contain different amounts of information and/or differently worded information, but fulfill the same purpose in relation to the link. In the example, the phone number is in the same format but in different locations.
 
 ```html
 <html lang="en">
@@ -130,7 +130,7 @@ These two links go to pages that contain different amounts of information and/or
 
 #### Passed Example 7
 
-These two links go to pages that have the same advertised key content but use different layouts.
+These two links go to pages that have the same advertised key content but use different layouts. In the example, the contact details are the same format but in different locations.
 
 ```html
 <html lang="en">
@@ -141,7 +141,7 @@ These two links go to pages that have the same advertised key content but use di
 
 #### Passed Example 8
 
-These two HTML `span` element have an [explicit role][] of link, and lead to the [same resource][].
+These two HTML `span` element have an [explicit role][] of link, and lead to the [same resource][]. This example is showing ARIA markup for a link compared to the other HTML examples.
 
 ```html
 <html lang="en">
@@ -165,18 +165,18 @@ These two HTML `span` element have an [explicit role][] of link, and lead to the
 
 #### Passed Example 9
 
-A set of two SVG `a` elements have the same [accessible name][] and link to the [same resource][].
+These two SVG `a` elements have the same [accessible name][] and link to the [same resource][]. The example is one SVG area but with 2 formats of links. One uses an image and the other uses text.
 
 ```html
 <html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<a href="http://facebook.com" aria-label="Follow us">
+		<a href="https://act-rules.github.io/" aria-label="ACT rules">
 			<circle cx="50" cy="40" r="35" />
 		</a>
 
-		<a href="http://facebook.com">
+		<a href="https://act-rules.github.io/">
 			<text x="50" y="90" text-anchor="middle">
-				Follow us
+				ACT rules
 			</text>
 		</a>
 	</svg>
@@ -188,10 +188,10 @@ A set of two SVG `a` elements have the same [accessible name][] and link to the 
 A set of one SVG `a` element and one HTML `a` element that have the same [accessible name][] and link to the [same resource][].
 
 ```html
-<a href="http://facebook.com">Follow us</a>
+<a href="https://act-rules.github.io/">ACT rules</a>
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<a href="http://facebook.com" aria-label="Follow us">
+	<a href="https://act-rules.github.io/" aria-label="ACT rules">
 		<circle cx="50" cy="40" r="35" />
 	</a>
 </svg>
@@ -199,7 +199,7 @@ A set of one SVG `a` element and one HTML `a` element that have the same [access
 
 #### Passed Example 11
 
-All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][]. Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
+All three links have the same [accessible name][]. The second link ("from the light") is only part of the [light tree][]. When the [shadow tree][] is attached to `host` and flattened, this link is overwritten and therefore not part of the [flat tree][] (and thus not rendered). Hence, only the first and third link are considered by this rule and they both point to the [same resource][].
 
 ```html
 <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact us</a>
@@ -240,18 +240,18 @@ from the top level.
 
 #### Failed Example 1
 
-Both links have the same [accessible name][] but go to different resources.
+These two links have the same [accessible name][] but go to different resources. They open completely different pages.
 
 ```html
 <html lang="en">
-	<a href="http://facebook.com">Follow us</a>
-	<a href="http://twitter.com">Follow us</a>
+	<a href="https://act-rules.github.io/">ACT rules</a>
+	<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 </html>
 ```
 
 #### Failed Example 2
 
-The same [accessible name][] is used for two links going to web pages that are similar, but have different information in their content.
+The same [accessible name][] is used for two links going to web pages that are similar, but have different information in their content. The example given contains different contact details for each page. They have a similar purpose but do not match.
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ The same [accessible name][] is used for two links going to web pages that are s
 
 #### Failed Example 3
 
-These two HTML `span` elements have an [explicit role][] of link, but lead to resources that offer different content.
+These two HTML `span` elements have an [explicit role][] of link, but lead to resources that offer different content. The example given contains different contact details for each page. They have a similar purpose but do not match.
 
 ```html
 <html lang="en">
@@ -288,29 +288,29 @@ These two HTML `span` elements have an [explicit role][] of link, but lead to re
 
 #### Failed Example 4
 
-The same [accessible name][] is used for image links going to different resources.
+The same [accessible name][] is used for image links going to different resources. They open completely different pages.
 
 ```html
 <html lang="en">
-	<a href="http://facebook.com"><img src="facebook.jpg" alt="Follow us"/></a>
-	<a href="http://twitter.com"><img src="twitter.jpg" alt="Follow us"/></a>
+	<a href="https://act-rules.github.io/"><img src="/test-assets/shared/act-logo.png" alt="ACT rules"/></a>
+	<a href="https://www.w3.org/community/act-r/"><img src="/test-assets/shared/act-logo.png" alt="ACT rules"/></a>
 </html>
 ```
 
 #### Failed Example 5
 
-A set of two SVG `a` elements that have the same [accessible name][] but link to different resources.
+These two SVG `a` elements have the same [accessible name][] but link to different resources. They open completely different pages.
 
 ```html
 <html lang="en">
 	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<a href="http://facebook.com" aria-label="Follow us">
+		<a href="https://act-rules.github.io/" aria-label="ACT rules">
 			<circle cx="50" cy="40" r="35" />
 		</a>
 
-		<a href="http://twitter.com">
+		<a href="https://www.w3.org/community/act-r/">
 			<text x="50" y="90" text-anchor="middle">
-				Follow us
+				ACT rules
 			</text>
 		</a>
 	</svg>
@@ -319,7 +319,7 @@ A set of two SVG `a` elements that have the same [accessible name][] but link to
 
 #### Failed Example 6
 
-Both links resolve to [same resource][] after redirect, but the redirect is not instant.
+These two links resolve to [same resource][] after redirect, but the redirect is not instant. The user will notice the redirect due to a pause.
 
 ```html
 <html lang="en">
@@ -332,7 +332,7 @@ Both links resolve to [same resource][] after redirect, but the redirect is not 
 
 #### Inapplicable Example 1
 
-These `a` and `area` elements have no `href` attribute.
+These `a` and `area` elements have no `href` attribute. Thus they are not links and do not have a role of `link`.
 
 ```html
 <html lang="en">
@@ -356,7 +356,7 @@ These links have different [accessible names][accessible name]. The rule only ap
 
 #### Inapplicable Example 3
 
-These `span` elements do not have a [semantic role][] of link.
+These `span` elements do not have a [semantic role][] of `link`. They are not valid links.
 
 ```html
 <html lang="en">
@@ -368,22 +368,6 @@ These `span` elements do not have a [semantic role][] of link.
 		Contact Us
 	</span>
 </html>
-```
-
-#### Inapplicable Example 4
-
-These links have empty [accessible names][accessible name].
-
-```html
-<a href="http://facebook.com"></a> <a href="http://twitter.com"></a>
-```
-
-#### Inapplicable Example 5
-
-These image links have empty [accessible names][accessible name].
-
-```html
-<a href="http://facebook.com"><img src="facebook.jpg"/></a> <a href="http://twitter.com"><img src="twitter.jpg"/></a>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

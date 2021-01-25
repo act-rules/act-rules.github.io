@@ -63,7 +63,7 @@ This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which 
 
 #### Passed Example 1
 
-This `img` element references an image resource that does not contain text.
+This image resource referenced by the `img` element does not contain text.
 
 ```html
 <img src="/test-assets/shared/fireworks.jpg" alt="fireworks going off behind the Eiffel tower at night" />
@@ -71,7 +71,7 @@ This `img` element references an image resource that does not contain text.
 
 #### Passed Example 2
 
-This `input` element references an image resource that does not contain text.
+This image resource referenced by the `input` element does not contain text.
 
 ```html
 <input type="image" src="test-assets/shared/file.svg" alt="New file" />
@@ -79,7 +79,7 @@ This `input` element references an image resource that does not contain text.
 
 #### Passed Example 3
 
-This `svg` element displays an image resource that does not contain text.
+This image resource displayed by the `svg` element does not contain text.
 
 ```html
 <svg width="2in" height="3in" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@ This `svg` element displays an image resource that does not contain text.
 
 #### Passed Example 4
 
-This `object` element references an image resource where text is not the most significant content.
+This image resource referenced by the `object` element contains text, but it is not the most significant content.
 
 ```html
 <object data="/test-assets/0va7u6/times_square.jpg" title="Picture of Times Square, New York"></object>
@@ -99,7 +99,7 @@ This `object` element references an image resource where text is not the most si
 
 #### Passed Example 5
 
-This `img` element references an image resource that contains text but where the presentation of the text is essential to convey the information.
+This image resource referenced by the `img` element contains text, but its presentation is essential to convey the information.
 
 ```html
 <p>
@@ -114,7 +114,7 @@ This `img` element references an image resource that contains text but where the
 
 #### Passed Example 6
 
-This `div` element has a background image with a logo with text. Logotypes are considered an essential exception.
+This image resource referenced by the `background-image` property of the `div` element contains a logo with text. Logotypes are considered an essential exception.
 
 ```html
 <div
@@ -131,7 +131,7 @@ This `div` element has a background image with a logo with text. Logotypes are c
 
 #### Passed Example 7
 
-This `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [purely decorative][].
+This image resource referenced by the `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [purely decorative][].
 
 ```html
 <img src="/test-assets/0va7u6/books.jpg" alt="" />
@@ -140,7 +140,7 @@ This `img` element is an image of text (the book covers), but it is just meant t
 
 #### Passed Example 8
 
-These `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
+These images resources referenced by the `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
 
 ```html
 <input
@@ -165,7 +165,7 @@ These `input` elements are images of text (the letter "A"), but they are not exp
 
 #### Failed Example 1
 
-This `img` element references an image resource that contains text and the way the text is presented is not relevant.
+This image resource referenced by the `img` element contains text and the way the text is presented is not relevant.
 
 ```html
 <img
@@ -176,7 +176,7 @@ This `img` element references an image resource that contains text and the way t
 
 #### Failed Example 2
 
-This `input` element in the [Image Button][] references an image resource that contains text and the way the text is presented is not relevant.
+This image resource referenced by the `input` element in the [Image Button][] contains text and the way the text is presented is not relevant.
 
 ```html
 <input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
@@ -184,7 +184,7 @@ This `input` element in the [Image Button][] references an image resource that c
 
 #### Failed Example 3
 
-This `div` element has a `background-image` property that references an image resource that contains text and the way the text is presented is not relevant.
+This image resource referenced by the `background-image` property of the `div` element contains text and the way the text is presented is not relevant.
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
@@ -192,7 +192,7 @@ This `div` element has a `background-image` property that references an image re
 
 #### Failed Example 4
 
-This `img` element provides redundant information, but it still is information, therefore it is not [purely decorative][].
+This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [purely decorative][].
 
 ```html
 <img src="/test-assets/0va7u6/welcome.png" alt="" />
@@ -203,7 +203,7 @@ This `img` element provides redundant information, but it still is information, 
 
 #### Inapplicable Example 1
 
-This `object` element is not [visible][].
+The resource referenced by the `object` element does not have [visible pixels][visible].
 
 ```html
 <object date="/test-assets/0va7u6/textimage.jpg" style="display: none"></object>

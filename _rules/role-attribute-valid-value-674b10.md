@@ -103,7 +103,14 @@ This `role` attribute contains two tokens, and one of these tokens (`searchbox`)
 This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<label>Search: <input type="text" role="searchfield" placeholder="Enter 3 or more characters"/></label>
+<style>
+	.link {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+</style>
+I love <span class="link" onclick="location.href='https://act-rules.github.io/'" role="lnik">ACT rules</span>.
 ```
 
 #### Failed Example 2

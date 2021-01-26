@@ -79,7 +79,7 @@ This image resource referenced by the `input` element does not contain text.
 
 #### Passed Example 3
 
-This image resource displayed by the `svg` element does not contain text.
+This image resource referenced by the `svg` element does not contain text.
 
 ```html
 <svg width="2in" height="3in" xmlns="http://www.w3.org/2000/svg">

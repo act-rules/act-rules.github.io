@@ -3441,10 +3441,10 @@
       }
     },
     {
-      "testcaseId": "72a8ee690bc4a026dc343461b0799767720b2dec",
+      "testcaseId": "4c964f038f3006fb1937270c2d2a92fa977f8312",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/73f2c2/72a8ee690bc4a026dc343461b0799767720b2dec.html",
-      "relativePath": "testcases/73f2c2/72a8ee690bc4a026dc343461b0799767720b2dec.html",
+      "url": "https://act-rules.github.io/testcases/73f2c2/4c964f038f3006fb1937270c2d2a92fa977f8312.html",
+      "relativePath": "testcases/73f2c2/4c964f038f3006fb1937270c2d2a92fa977f8312.html",
       "expected": "passed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3459,10 +3459,10 @@
       }
     },
     {
-      "testcaseId": "7c1fb95fbb6b6e251704787a96290e48aea337d7",
+      "testcaseId": "66da8770dec02a107d406407c4fab3ed5830464f",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/73f2c2/7c1fb95fbb6b6e251704787a96290e48aea337d7.html",
-      "relativePath": "testcases/73f2c2/7c1fb95fbb6b6e251704787a96290e48aea337d7.html",
+      "url": "https://act-rules.github.io/testcases/73f2c2/66da8770dec02a107d406407c4fab3ed5830464f.html",
+      "relativePath": "testcases/73f2c2/66da8770dec02a107d406407c4fab3ed5830464f.html",
       "expected": "passed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3495,10 +3495,10 @@
       }
     },
     {
-      "testcaseId": "21624884bdaded3a3bbf8b2be08afed4179bdd84",
+      "testcaseId": "d53ee32f2da8a07291143a39a7c832844487d0fa",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/73f2c2/21624884bdaded3a3bbf8b2be08afed4179bdd84.html",
-      "relativePath": "testcases/73f2c2/21624884bdaded3a3bbf8b2be08afed4179bdd84.html",
+      "url": "https://act-rules.github.io/testcases/73f2c2/d53ee32f2da8a07291143a39a7c832844487d0fa.html",
+      "relativePath": "testcases/73f2c2/d53ee32f2da8a07291143a39a7c832844487d0fa.html",
       "expected": "passed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3513,10 +3513,10 @@
       }
     },
     {
-      "testcaseId": "e7e5c718ff91745bd3fa9276aaf16bb5583a2dcf",
+      "testcaseId": "a88c99fe37073b324d2b84386b93cf3d1499a008",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/73f2c2/e7e5c718ff91745bd3fa9276aaf16bb5583a2dcf.html",
-      "relativePath": "testcases/73f2c2/e7e5c718ff91745bd3fa9276aaf16bb5583a2dcf.html",
+      "url": "https://act-rules.github.io/testcases/73f2c2/a88c99fe37073b324d2b84386b93cf3d1499a008.html",
+      "relativePath": "testcases/73f2c2/a88c99fe37073b324d2b84386b93cf3d1499a008.html",
       "expected": "passed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3531,28 +3531,10 @@
       }
     },
     {
-      "testcaseId": "f775d46d78470a3321d5be2c2429a649d9e92b2c",
+      "testcaseId": "d26599a293a2bfc9eb4420e97162f2a3339027ce",
       "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/73f2c2/f775d46d78470a3321d5be2c2429a649d9e92b2c.html",
-      "relativePath": "testcases/73f2c2/f775d46d78470a3321d5be2c2429a649d9e92b2c.html",
-      "expected": "passed",
-      "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
-      "rulePage": "https://act-rules.github.io/rules/73f2c2",
-      "ruleAccessibilityRequirements": {
-        "wcag21:1.3.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "c8ee4a425e3fe352ccd1858a1cea3f064e7f6d16",
-      "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/73f2c2/c8ee4a425e3fe352ccd1858a1cea3f064e7f6d16.html",
-      "relativePath": "testcases/73f2c2/c8ee4a425e3fe352ccd1858a1cea3f064e7f6d16.html",
+      "url": "https://act-rules.github.io/testcases/73f2c2/d26599a293a2bfc9eb4420e97162f2a3339027ce.html",
+      "relativePath": "testcases/73f2c2/d26599a293a2bfc9eb4420e97162f2a3339027ce.html",
       "expected": "passed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",
@@ -3643,6 +3625,24 @@
       "testcaseTitle": "Failed Example 5",
       "url": "https://act-rules.github.io/testcases/73f2c2/4cbe6d439d042a349eccd0b62751a0c62d23e9db.html",
       "relativePath": "testcases/73f2c2/4cbe6d439d042a349eccd0b62751a0c62d23e9db.html",
+      "expected": "failed",
+      "ruleId": "73f2c2",
+      "ruleName": "`autocomplete` attribute has valid value",
+      "rulePage": "https://act-rules.github.io/rules/73f2c2",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.3.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "559b03ee843956cf02c96172002b5750f075183f",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/73f2c2/559b03ee843956cf02c96172002b5750f075183f.html",
+      "relativePath": "testcases/73f2c2/559b03ee843956cf02c96172002b5750f075183f.html",
       "expected": "failed",
       "ruleId": "73f2c2",
       "ruleName": "`autocomplete` attribute has valid value",

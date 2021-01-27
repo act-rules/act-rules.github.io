@@ -4287,438 +4287,6 @@
       }
     },
     {
-      "testcaseId": "6fc68d363695e29f480d6a99bbcc7be08f68d1bc",
-      "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/5effbb/6fc68d363695e29f480d6a99bbcc7be08f68d1bc.html",
-      "relativePath": "testcases/5effbb/6fc68d363695e29f480d6a99bbcc7be08f68d1bc.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "d876314b6053a53e45138b7a1aabc4dbdb431bdd",
-      "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/5effbb/d876314b6053a53e45138b7a1aabc4dbdb431bdd.html",
-      "relativePath": "testcases/5effbb/d876314b6053a53e45138b7a1aabc4dbdb431bdd.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "5e67cab9c6586318a6186eeca1ac536542e5e437",
-      "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/5effbb/5e67cab9c6586318a6186eeca1ac536542e5e437.html",
-      "relativePath": "testcases/5effbb/5e67cab9c6586318a6186eeca1ac536542e5e437.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "bd4aaff1b51fa2fbf5c0f326266aa83844602967",
-      "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/5effbb/bd4aaff1b51fa2fbf5c0f326266aa83844602967.html",
-      "relativePath": "testcases/5effbb/bd4aaff1b51fa2fbf5c0f326266aa83844602967.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "6566c139dc811b5a566a8e58c85d1f7f3c550d04",
-      "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/5effbb/6566c139dc811b5a566a8e58c85d1f7f3c550d04.html",
-      "relativePath": "testcases/5effbb/6566c139dc811b5a566a8e58c85d1f7f3c550d04.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "970cf7f07cc3acd3d99ac57f73f5e622df0fe19b",
-      "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/5effbb/970cf7f07cc3acd3d99ac57f73f5e622df0fe19b.html",
-      "relativePath": "testcases/5effbb/970cf7f07cc3acd3d99ac57f73f5e622df0fe19b.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "e2a1557e3be8695f326cf0d9676c527148a900be",
-      "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/5effbb/e2a1557e3be8695f326cf0d9676c527148a900be.html",
-      "relativePath": "testcases/5effbb/e2a1557e3be8695f326cf0d9676c527148a900be.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "95f35d6374bc2e0fb1852882923fad9601ecd810",
-      "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/5effbb/95f35d6374bc2e0fb1852882923fad9601ecd810.html",
-      "relativePath": "testcases/5effbb/95f35d6374bc2e0fb1852882923fad9601ecd810.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "b476205199c222e357cdfd5930562da3c31b6ec3",
-      "testcaseTitle": "Passed Example 9",
-      "url": "https://act-rules.github.io/testcases/5effbb/b476205199c222e357cdfd5930562da3c31b6ec3.html",
-      "relativePath": "testcases/5effbb/b476205199c222e357cdfd5930562da3c31b6ec3.html",
-      "expected": "passed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "760ba6c011ab590d5d50a186fd237f025c317292",
-      "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/5effbb/760ba6c011ab590d5d50a186fd237f025c317292.html",
-      "relativePath": "testcases/5effbb/760ba6c011ab590d5d50a186fd237f025c317292.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "75db8879bf7db22dcb4455dd0ebc7e244fdde2ae",
-      "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/5effbb/75db8879bf7db22dcb4455dd0ebc7e244fdde2ae.html",
-      "relativePath": "testcases/5effbb/75db8879bf7db22dcb4455dd0ebc7e244fdde2ae.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "f29d1450d6a5f9dbe127b65ce545b2090f25a7e6",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/5effbb/f29d1450d6a5f9dbe127b65ce545b2090f25a7e6.html",
-      "relativePath": "testcases/5effbb/f29d1450d6a5f9dbe127b65ce545b2090f25a7e6.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "3bb1986371e1ad785428f87c89a1dd7071604ee0",
-      "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/5effbb/3bb1986371e1ad785428f87c89a1dd7071604ee0.html",
-      "relativePath": "testcases/5effbb/3bb1986371e1ad785428f87c89a1dd7071604ee0.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "0f20115dd3962dc390c9de33df2793a71ef40845",
-      "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/5effbb/0f20115dd3962dc390c9de33df2793a71ef40845.html",
-      "relativePath": "testcases/5effbb/0f20115dd3962dc390c9de33df2793a71ef40845.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "064d2d8664a3c53a268fc24f5ba33ea4bb777e48",
-      "testcaseTitle": "Failed Example 6",
-      "url": "https://act-rules.github.io/testcases/5effbb/064d2d8664a3c53a268fc24f5ba33ea4bb777e48.html",
-      "relativePath": "testcases/5effbb/064d2d8664a3c53a268fc24f5ba33ea4bb777e48.html",
-      "expected": "failed",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "5cff3cf904230fb6a7c42e445f6eaab0d8617b22",
-      "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/5effbb/5cff3cf904230fb6a7c42e445f6eaab0d8617b22.html",
-      "relativePath": "testcases/5effbb/5cff3cf904230fb6a7c42e445f6eaab0d8617b22.html",
-      "expected": "inapplicable",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "83b9261f8108d23bc52874f813bad980b90fe633",
-      "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/5effbb/83b9261f8108d23bc52874f813bad980b90fe633.html",
-      "relativePath": "testcases/5effbb/83b9261f8108d23bc52874f813bad980b90fe633.html",
-      "expected": "inapplicable",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "7f42ab0208e02db9814cc4432e6b6d453d5d768a",
-      "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/5effbb/7f42ab0208e02db9814cc4432e6b6d453d5d768a.html",
-      "relativePath": "testcases/5effbb/7f42ab0208e02db9814cc4432e6b6d453d5d768a.html",
-      "expected": "inapplicable",
-      "ruleId": "5effbb",
-      "ruleName": "Link in context is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/5effbb",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.4": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.9": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "562a50f7c09f0abee7d731a9db8b920484fcf89c",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/c249d5/562a50f7c09f0abee7d731a9db8b920484fcf89c.html",
@@ -12782,6 +12350,438 @@
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6fc68d363695e29f480d6a99bbcc7be08f68d1bc",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/5effbb/6fc68d363695e29f480d6a99bbcc7be08f68d1bc.html",
+      "relativePath": "testcases/5effbb/6fc68d363695e29f480d6a99bbcc7be08f68d1bc.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d876314b6053a53e45138b7a1aabc4dbdb431bdd",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/5effbb/d876314b6053a53e45138b7a1aabc4dbdb431bdd.html",
+      "relativePath": "testcases/5effbb/d876314b6053a53e45138b7a1aabc4dbdb431bdd.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "5e67cab9c6586318a6186eeca1ac536542e5e437",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/5effbb/5e67cab9c6586318a6186eeca1ac536542e5e437.html",
+      "relativePath": "testcases/5effbb/5e67cab9c6586318a6186eeca1ac536542e5e437.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bd4aaff1b51fa2fbf5c0f326266aa83844602967",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/5effbb/bd4aaff1b51fa2fbf5c0f326266aa83844602967.html",
+      "relativePath": "testcases/5effbb/bd4aaff1b51fa2fbf5c0f326266aa83844602967.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6566c139dc811b5a566a8e58c85d1f7f3c550d04",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/5effbb/6566c139dc811b5a566a8e58c85d1f7f3c550d04.html",
+      "relativePath": "testcases/5effbb/6566c139dc811b5a566a8e58c85d1f7f3c550d04.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "970cf7f07cc3acd3d99ac57f73f5e622df0fe19b",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/5effbb/970cf7f07cc3acd3d99ac57f73f5e622df0fe19b.html",
+      "relativePath": "testcases/5effbb/970cf7f07cc3acd3d99ac57f73f5e622df0fe19b.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1ba642803c6137b0206c7bc909f3dbb8cfb4a654",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/5effbb/1ba642803c6137b0206c7bc909f3dbb8cfb4a654.html",
+      "relativePath": "testcases/5effbb/1ba642803c6137b0206c7bc909f3dbb8cfb4a654.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "95f35d6374bc2e0fb1852882923fad9601ecd810",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/5effbb/95f35d6374bc2e0fb1852882923fad9601ecd810.html",
+      "relativePath": "testcases/5effbb/95f35d6374bc2e0fb1852882923fad9601ecd810.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b476205199c222e357cdfd5930562da3c31b6ec3",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/5effbb/b476205199c222e357cdfd5930562da3c31b6ec3.html",
+      "relativePath": "testcases/5effbb/b476205199c222e357cdfd5930562da3c31b6ec3.html",
+      "expected": "passed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "760ba6c011ab590d5d50a186fd237f025c317292",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/5effbb/760ba6c011ab590d5d50a186fd237f025c317292.html",
+      "relativePath": "testcases/5effbb/760ba6c011ab590d5d50a186fd237f025c317292.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "75db8879bf7db22dcb4455dd0ebc7e244fdde2ae",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/5effbb/75db8879bf7db22dcb4455dd0ebc7e244fdde2ae.html",
+      "relativePath": "testcases/5effbb/75db8879bf7db22dcb4455dd0ebc7e244fdde2ae.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f29d1450d6a5f9dbe127b65ce545b2090f25a7e6",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/5effbb/f29d1450d6a5f9dbe127b65ce545b2090f25a7e6.html",
+      "relativePath": "testcases/5effbb/f29d1450d6a5f9dbe127b65ce545b2090f25a7e6.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3bb1986371e1ad785428f87c89a1dd7071604ee0",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/5effbb/3bb1986371e1ad785428f87c89a1dd7071604ee0.html",
+      "relativePath": "testcases/5effbb/3bb1986371e1ad785428f87c89a1dd7071604ee0.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0f20115dd3962dc390c9de33df2793a71ef40845",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/5effbb/0f20115dd3962dc390c9de33df2793a71ef40845.html",
+      "relativePath": "testcases/5effbb/0f20115dd3962dc390c9de33df2793a71ef40845.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "064d2d8664a3c53a268fc24f5ba33ea4bb777e48",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/5effbb/064d2d8664a3c53a268fc24f5ba33ea4bb777e48.html",
+      "relativePath": "testcases/5effbb/064d2d8664a3c53a268fc24f5ba33ea4bb777e48.html",
+      "expected": "failed",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "5cff3cf904230fb6a7c42e445f6eaab0d8617b22",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/5effbb/5cff3cf904230fb6a7c42e445f6eaab0d8617b22.html",
+      "relativePath": "testcases/5effbb/5cff3cf904230fb6a7c42e445f6eaab0d8617b22.html",
+      "expected": "inapplicable",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "83b9261f8108d23bc52874f813bad980b90fe633",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/5effbb/83b9261f8108d23bc52874f813bad980b90fe633.html",
+      "relativePath": "testcases/5effbb/83b9261f8108d23bc52874f813bad980b90fe633.html",
+      "expected": "inapplicable",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7f42ab0208e02db9814cc4432e6b6d453d5d768a",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/5effbb/7f42ab0208e02db9814cc4432e6b6d453d5d768a.html",
+      "relativePath": "testcases/5effbb/7f42ab0208e02db9814cc4432e6b6d453d5d768a.html",
+      "expected": "inapplicable",
+      "ruleId": "5effbb",
+      "ruleName": "Link in context is descriptive",
+      "rulePage": "https://act-rules.github.io/rules/5effbb",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

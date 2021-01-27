@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
+This rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -101,7 +101,7 @@ This `svg` element has an [explicit role][] of `graphics-document` and an [acces
 
 #### Failed Example 1
 
-This `svg` element has an [explicit role][] of `img` but has no [accessible name][].
+This `svg` element has an [explicit role][] of `img` but has an empty (`""`) [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
@@ -112,7 +112,7 @@ This `svg` element has an [explicit role][] of `img` but has no [accessible name
 
 #### Failed Example 2
 
-This `svg` element has an [explicit role][] of `img`, is included in the accessibility tree, but it has no [accessible name][] because the `title` element is empty.
+This `svg` element has an [explicit role][] of `img`, is included in the accessibility tree, but it has an empty (`""`) [accessible name][] because the `title` element is empty.
 
 ```html
 <p>How many circles are there?</p>
@@ -124,12 +124,26 @@ This `svg` element has an [explicit role][] of `img`, is included in the accessi
 
 #### Failed Example 3
 
-This `circle` element has an [explicit role][] of `graphics-symbol` but has no [accessible name][].
+This `circle` element has an [explicit role][] of `graphics-symbol` but has an empty (`""`) [accessible name][].
 
 ```html
 <p>How many circles are there?</p>
 <svg xmlns="http://www.w3.org/2000/svg">
 	<circle role="graphics-symbol" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
+```
+
+#### Failed Example 4
+
+This `svg` element with an [explicit role][] of `img` has an empty (`""`) [accessible name][]. The SVG `text` element is not used in computing the accessible name.
+
+```html
+<p>How many circles are there?</p>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="100" height="100">
+	<circle cx="50" cy="50" r="40" fill="yellow"></circle>
+	<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+		1 circle
+	</text>
 </svg>
 ```
 

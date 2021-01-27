@@ -24,9 +24,8 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if
+This rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if one of the following is true:
 
-- the element has an [implicit semantic role][] that is identical to its [explicit semantic role][]; or
 - the element has a [semantic role][] of `combobox`; or
 - the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this [attribute value][].
 
@@ -34,11 +33,7 @@ The rule applies to any HTML or SVG element that is [included in the accessibili
 
 Each test target only [owns][] elements with a [semantic role][] from the [required owned element][] list for the test target's [semantic role]().
 
-**Note:** Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `list` has `group → listitem` as one of its [required owned elements][], meaning that elements with a role of `list` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `listitem`.
-
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). See more in the [owned by][] definition.
-
-**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
 
 ## Assumptions
 
@@ -53,15 +48,17 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 
 ## Background
 
+Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
+
+The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][wai-aria 1.1] roles. The [WAI-ARIA Graphics Module][] does not include any [required owned elements][]. The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] only has three roles with [required owned elements][] (`doc-bibliography`, `doc-endnotes` and `doc-glossary`); they have issues with their use of role inheritance, and all of them have no [required owned elements][] in the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] editor's draft.
+
+The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
+
+**Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
+
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
-
-HTML elements with an [implicit semantic role][] corresponding with [explicit semantic role][] are not tested in this rule because some of these elements have additional requirements. For example, an element that has an implicit semantic role that is identical to its explicit semantic role is a `ul` element that has `role="list"`. However, there is no native HTML element to "group" `li` elements in a `ul` element.
-
-The unresolved issues with how [Digital Publishing WAI-ARIA Module][] (DPUB ARIA 1.1) uses role inheritance to define the [required owned element][] limit the scope of this rule to [WAI-ARIA 1.1][] roles only. The [WAI-ARIA Graphics Module][] does not include any [required owned element][].
-
-The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
 
 ## Test Cases
 
@@ -230,23 +227,13 @@ This `ul` element does not have an [explicit semantic role][].
 
 #### Inapplicable Example 3
 
-This `ul` element has the same [explicit semantic role][] as its [implicit semantic role][].
-
-```html
-<ul role="list">
-	<li>Item 1</li>
-</ul>
-```
-
-#### Inapplicable Example 4
-
 This element with the `progressbar` role does not need [required owned elements][].
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
 
@@ -256,7 +243,7 @@ This element with the `menu` role has attribute an `aria-busy` attribute set to 
 </ul>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 5
 
 This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
 
@@ -265,15 +252,15 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
 [required owned element]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [required owned elements]: https://www.w3.org/TR/wai-aria-1.1/#mustContain 'Define Required owned element'
 [owns]: #owned-by
 [owned by]: #owned-by
 [explicit semantic role]: #explicit-role
-[implicit semantic role]: #implicit-role
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
-[digital publishing wai-aria module]: https://www.w3.org/TR/dpub-aria-1.0/
-[wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/
+[dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/
+[wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'

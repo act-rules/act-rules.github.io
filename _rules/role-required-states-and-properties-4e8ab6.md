@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-Any HTML or SVG element that has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
 
 ## Expectation
 
@@ -119,7 +119,7 @@ This `checkbox` has an [implicit semantic role](#implicit-role) that is identica
 
 #### Inapplicable Example 3
 
-This `combobox` is hidden.
+This `combobox` is not [included in the accessibility tree][] due to its styling, hiding it from everybody.
 
 ```html
 <div role="combobox" style="display:none;"></div>
@@ -127,6 +127,7 @@ This `combobox` is hidden.
 
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in The Accessibility Tree'
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
 [wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/

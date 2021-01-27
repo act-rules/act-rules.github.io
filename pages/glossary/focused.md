@@ -3,6 +3,8 @@ title: Focused
 key: focused
 unambiguous: true
 objective: true
+input_aspects:
+  - CSS styling
 ---
 
 An element is said to be _focused_ when the element matches the [`:focus` pseudo-class](https://drafts.csswg.org/selectors-4/#focus-pseudo) uninterruptedly for a period of 5 seconds after a user interacted with the page.

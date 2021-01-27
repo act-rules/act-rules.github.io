@@ -16,6 +16,8 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
+  - Accessibility Tree
+  - CSS Styling
   - DOM Tree
 acknowledgments:
   authors:
@@ -25,22 +27,23 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element that:
+This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
-- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) of a `body` element; and
-- has a `lang` attribute that is not empty ("").
+- the element is a [descendant][] in the [flat tree][] of a `body` element; and
+- the element has a [node document][] with a [content type][] of `text/html`; and
+- the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
 
 ## Expectation
 
-For each test target, the value of the `lang` attribute is a [valid language tag][].
+For each test target, the `lang` [attribute value][] is a [valid language tag][].
 
 ## Assumptions
 
-- The `lang` attribute is assumed to be used to indicate the language of a section of the content. If the `lang` attribute is used for something else (for example to indicate a `code` element contains CSS), the content may still conform to WCAG despite failing this rule.
+- This rule assumes that the `lang` [attribute value][] is used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate the programming language of a `code` element), the content may still conform to WCAG despite failing this rule.
+
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
+
 - This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
-- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
 ## Accessibility Support
 
@@ -59,36 +62,42 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-The `lang` attribute has a value that is not empty ("") and has a valid language tag.
+This `article` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][].
 
 ```html
 <html>
 	<body>
-		<article lang="en"></article>
+		<article lang="en">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</article>
 	</body>
 </html>
 ```
 
 #### Passed Example 2
 
-The `lang` attribute has a value that is not empty ("") and has a valid language tag. The region section in the value is ignored by the rule.
+This `blockquote` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][]. The region section in the value is ignored by the rule (and the definition of [valid language tag][]).
 
 ```html
 <html>
 	<body>
-		<blockquote lang="fr-CH"></blockquote>
+		<blockquote lang="fr-CH">
+			Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
+		</blockquote>
 	</body>
 </html>
 ```
 
 #### Passed Example 3
 
-The `lang` attribute value has a valid language tag, but a syntactically invalid region subtag.
+This `p` element has a `lang` [attribute value][] which has a [valid language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
 <html>
 	<body>
-		<p lang="en-US-GB"></p>
+		<p lang="en-US-GB">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</p>
 	</body>
 </html>
 ```
@@ -97,37 +106,73 @@ The `lang` attribute value has a valid language tag, but a syntactically invalid
 
 #### Failed Example 1
 
-The `lang` attribute value is not a primary language subtag.
+This `article` element has a `lang` [attribute value][] which does not have a [valid language tag][] because its primary language subtag does not exist in the registry.
 
 ```html
 <html>
 	<body>
-		<article lang="dutch"></article>
+		<article lang="dutch">
+			Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
+		</article>
 	</body>
 </html>
 ```
 
 #### Failed Example 2
 
-The `lang` attribute value is not empty ("") and is not a primary language subtag.
+This `article` element has a `lang` [attribute value][] which is not a [valid language tag][].
 
 ```html
 <html>
 	<body>
-		<article lang="#!"></article>
+		<article lang="#!">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</article>
 	</body>
 </html>
 ```
 
 #### Failed Example 3
 
-The `lang` attribute value consists of only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace) and is not a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus is not a [valid language tag][].
 
 ```html
 <html>
 	<body>
-		<article lang=" ">
-			The quick brown fox jumped over the lazy dog
+		<article lang="  ">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</article>
+	</body>
+</html>
+```
+
+#### Failed Example 4
+
+The `lang` [attribute value][] does not have a valid language tag. The `lang` attribute must be valid because the content is [visible][].
+
+```html
+<html>
+	<body>
+		<article lang="english">
+			<p aria-hidden="true">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</p>
+		</article>
+	</body>
+</html>
+```
+
+#### Failed Example 5
+
+The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
+
+```html
+<html>
+	<body>
+		<article lang="English">
+			<p style="position: absolute; top: -9999px">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</p>
 		</article>
 	</body>
 </html>
@@ -137,26 +182,55 @@ The `lang` attribute value consists of only [ASCII whitespace](https://infra.spe
 
 #### Inapplicable Example 1
 
-The rule applies to elements within the `body` of a webpage. `html` elements are ignored by the rule.
+There is no element with a lang attribute value which is a descendant of a body element".
 
 ```html
 <html lang="en">
-	<body></body>
+	<body>
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</body>
 </html>
 ```
 
 #### Inapplicable Example 2
 
-An empty value for the `lang` attribute is ignored, as the rule only applies to `lang` attributes that are not empty ("").
+There is no element which is a descendant of a `body` element and has a non-empty `lang` [attribute value][].
 
 ```html
-<html>
+<html lang="en">
 	<body>
-		<article lang=""></article>
+		<article lang="">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</article>
 	</body>
 </html>
 ```
 
-[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+#### Inapplicable Example 3
+
+There is no element with a [text node][] as a [descendant][] in the [flat tree][] that is either [visible][] or [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<body>
+		<p lang="hidden">
+			<span style="display: none;">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</span>
+		</p>
+	</body>
+</html>
+```
+
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
+[content type]: https://dom.spec.whatwg.org/#concept-document-content-type
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
+[grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
+[included in the accessibility tree]: #included-in-the-accessibility-tree
+[node document]: https://dom.spec.whatwg.org/#concept-node-document
+[text node]: https://dom.spec.whatwg.org/#text
 [valid language tag]: #valid-language-tag
+[visible]: #visible 'Definition of visible'
+[whitespace]: #whitespace 'Definition of Whitespace'

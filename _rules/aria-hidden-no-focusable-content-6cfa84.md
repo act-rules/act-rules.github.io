@@ -31,7 +31,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
+This rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
 ## Expectation
 

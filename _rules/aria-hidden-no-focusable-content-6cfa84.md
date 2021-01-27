@@ -33,8 +33,6 @@ acknowledgments:
 
 The rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
-**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
-
 ## Expectation
 
 None of the target elements can be [focused][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that can be [focused][].
@@ -49,6 +47,8 @@ _There are currently no assumptions_
 Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 
 ## Background
+
+Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
 
 By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 

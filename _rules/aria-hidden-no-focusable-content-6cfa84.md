@@ -37,10 +37,9 @@ The rule applies to any element with an `aria-hidden` [attribute value][] of `tr
 
 None of the target elements can be [focused][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that can be [focused][].
 
-
 ## Assumptions
 
-_There are currently no assumptions_
+Interacting with the page to [focus][focused] an element does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog would make previously hidden and not [focusable][] elements to become [focusable][].
 
 ## Accessibility Support
 

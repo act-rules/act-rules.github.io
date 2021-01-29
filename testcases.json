@@ -14683,6 +14683,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -14692,10 +14698,10 @@
       }
     },
     {
-      "testcaseId": "4e240e644f898d98b844fc6a8b9eabb8a127c916",
+      "testcaseId": "fb1a553b5ce749ceaf06b74ec8681eff188ad4af",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/bc659a/4e240e644f898d98b844fc6a8b9eabb8a127c916.html",
-      "relativePath": "testcases/bc659a/4e240e644f898d98b844fc6a8b9eabb8a127c916.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/fb1a553b5ce749ceaf06b74ec8681eff188ad4af.html",
+      "relativePath": "testcases/bc659a/fb1a553b5ce749ceaf06b74ec8681eff188ad4af.html",
       "expected": "passed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -14715,6 +14721,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14728,10 +14740,10 @@
       }
     },
     {
-      "testcaseId": "4ad3e60c2ecfae0f52e50595cd85ccf7acf67718",
+      "testcaseId": "521cee2dce2c9889b49903d930e0bc8d005dcb72",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/4ad3e60c2ecfae0f52e50595cd85ccf7acf67718.html",
-      "relativePath": "testcases/bc659a/4ad3e60c2ecfae0f52e50595cd85ccf7acf67718.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/521cee2dce2c9889b49903d930e0bc8d005dcb72.html",
+      "relativePath": "testcases/bc659a/521cee2dce2c9889b49903d930e0bc8d005dcb72.html",
       "expected": "passed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -14751,6 +14763,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14791,6 +14809,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -14800,10 +14824,10 @@
       }
     },
     {
-      "testcaseId": "cefc9954aea295c834eeb8065b7e054afac559e3",
+      "testcaseId": "3708381f22cd3b0f9ac05869ae017686911b48f0",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/bc659a/cefc9954aea295c834eeb8065b7e054afac559e3.html",
-      "relativePath": "testcases/bc659a/cefc9954aea295c834eeb8065b7e054afac559e3.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/3708381f22cd3b0f9ac05869ae017686911b48f0.html",
+      "relativePath": "testcases/bc659a/3708381f22cd3b0f9ac05869ae017686911b48f0.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -14827,6 +14851,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -14836,10 +14866,10 @@
       }
     },
     {
-      "testcaseId": "3346a1e6380ac1208bd977e40405efda431e593b",
+      "testcaseId": "04bdb5cac43d5eeefc71729375e14d02167eb0ba",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/3346a1e6380ac1208bd977e40405efda431e593b.html",
-      "relativePath": "testcases/bc659a/3346a1e6380ac1208bd977e40405efda431e593b.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/04bdb5cac43d5eeefc71729375e14d02167eb0ba.html",
+      "relativePath": "testcases/bc659a/04bdb5cac43d5eeefc71729375e14d02167eb0ba.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -14859,6 +14889,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14872,10 +14908,10 @@
       }
     },
     {
-      "testcaseId": "a7bfb33106602cf9db3fba2dec2dd0547045bf1d",
+      "testcaseId": "4b6e44854c950756eea0530ef349ba0ff9e757fb",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/bc659a/a7bfb33106602cf9db3fba2dec2dd0547045bf1d.html",
-      "relativePath": "testcases/bc659a/a7bfb33106602cf9db3fba2dec2dd0547045bf1d.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/4b6e44854c950756eea0530ef349ba0ff9e757fb.html",
+      "relativePath": "testcases/bc659a/4b6e44854c950756eea0530ef349ba0ff9e757fb.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -14895,6 +14931,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -14935,6 +14977,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -14971,6 +15019,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -14980,10 +15034,10 @@
       }
     },
     {
-      "testcaseId": "628163884471a7f78162b88467bb760d2f9df625",
+      "testcaseId": "3b589370a3860cb6ac8570cb27a30a91e24d55ba",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/628163884471a7f78162b88467bb760d2f9df625.html",
-      "relativePath": "testcases/bc659a/628163884471a7f78162b88467bb760d2f9df625.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/3b589370a3860cb6ac8570cb27a30a91e24d55ba.html",
+      "relativePath": "testcases/bc659a/3b589370a3860cb6ac8570cb27a30a91e24d55ba.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15003,6 +15057,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -15043,6 +15103,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -15075,6 +15141,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -15115,6 +15187,12 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
         "wcag-technique:H76": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -15124,10 +15202,10 @@
       }
     },
     {
-      "testcaseId": "497149cc71c91862653f8e379134f8c05b2bd8a1",
+      "testcaseId": "bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1",
       "testcaseTitle": "Inapplicable Example 7",
-      "url": "https://act-rules.github.io/testcases/bc659a/497149cc71c91862653f8e379134f8c05b2bd8a1.html",
-      "relativePath": "testcases/bc659a/497149cc71c91862653f8e379134f8c05b2bd8a1.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1.html",
+      "relativePath": "testcases/bc659a/bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15147,6 +15225,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -15160,10 +15244,10 @@
       }
     },
     {
-      "testcaseId": "45e9561106965ddc43f915ede35e4f4b50db0743",
+      "testcaseId": "131c061ef0d235a5b8f1ed61fc39df06587af6ae",
       "testcaseTitle": "Inapplicable Example 8",
-      "url": "https://act-rules.github.io/testcases/bc659a/45e9561106965ddc43f915ede35e4f4b50db0743.html",
-      "relativePath": "testcases/bc659a/45e9561106965ddc43f915ede35e4f4b50db0743.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/131c061ef0d235a5b8f1ed61fc39df06587af6ae.html",
+      "relativePath": "testcases/bc659a/131c061ef0d235a5b8f1ed61fc39df06587af6ae.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15183,6 +15267,12 @@
         },
         "wcag20:3.2.5": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

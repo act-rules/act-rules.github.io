@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 981,
+  "count": 995,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -15475,6 +15475,510 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "599267633dc8bf0bbe4d1b2a6e22737c95b7da92",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/bisz58/599267633dc8bf0bbe4d1b2a6e22737c95b7da92.html",
+      "relativePath": "testcases/bisz58/599267633dc8bf0bbe4d1b2a6e22737c95b7da92.html",
+      "expected": "passed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8506906c2bb87a444fbabc1a2c3558abd18fbe3d",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/bisz58/8506906c2bb87a444fbabc1a2c3558abd18fbe3d.html",
+      "relativePath": "testcases/bisz58/8506906c2bb87a444fbabc1a2c3558abd18fbe3d.html",
+      "expected": "passed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "293add8170d86d1f418c0620470920105003da42",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/bisz58/293add8170d86d1f418c0620470920105003da42.html",
+      "relativePath": "testcases/bisz58/293add8170d86d1f418c0620470920105003da42.html",
+      "expected": "failed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "93ffbc16542363e34b1c8013cc70a613884699d8",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/bisz58/93ffbc16542363e34b1c8013cc70a613884699d8.html",
+      "relativePath": "testcases/bisz58/93ffbc16542363e34b1c8013cc70a613884699d8.html",
+      "expected": "failed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b1c3b8c8c80277e35f1fb20d620ae07f85882c09",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/bisz58/b1c3b8c8c80277e35f1fb20d620ae07f85882c09.html",
+      "relativePath": "testcases/bisz58/b1c3b8c8c80277e35f1fb20d620ae07f85882c09.html",
+      "expected": "failed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4f9bb0a8ab7bd76505483c47da831440b864fe50",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/bisz58/4f9bb0a8ab7bd76505483c47da831440b864fe50.html",
+      "relativePath": "testcases/bisz58/4f9bb0a8ab7bd76505483c47da831440b864fe50.html",
+      "expected": "failed",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "329cba6f6b7fa215ae1e8006de9263570b91c11d",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/bisz58/329cba6f6b7fa215ae1e8006de9263570b91c11d.html",
+      "relativePath": "testcases/bisz58/329cba6f6b7fa215ae1e8006de9263570b91c11d.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1d1c596243bc75f495b61d89bc2a6396ea29442a",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/bisz58/1d1c596243bc75f495b61d89bc2a6396ea29442a.html",
+      "relativePath": "testcases/bisz58/1d1c596243bc75f495b61d89bc2a6396ea29442a.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1812017f58925ef5061af2f60c68afa671281c91",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/bisz58/1812017f58925ef5061af2f60c68afa671281c91.html",
+      "relativePath": "testcases/bisz58/1812017f58925ef5061af2f60c68afa671281c91.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0ae68e88f61e1bc6cc56f7a4ae1bcf852d68cde2",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/bisz58/0ae68e88f61e1bc6cc56f7a4ae1bcf852d68cde2.html",
+      "relativePath": "testcases/bisz58/0ae68e88f61e1bc6cc56f7a4ae1bcf852d68cde2.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a1a1550e2be737918ba96c4cc7237060515ef8cb",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/bisz58/a1a1550e2be737918ba96c4cc7237060515ef8cb.html",
+      "relativePath": "testcases/bisz58/a1a1550e2be737918ba96c4cc7237060515ef8cb.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "371137ff8848c11ce6db9252bfe8e4bd3b2690d9",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/bisz58/371137ff8848c11ce6db9252bfe8e4bd3b2690d9.html",
+      "relativePath": "testcases/bisz58/371137ff8848c11ce6db9252bfe8e4bd3b2690d9.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4b31e7f8b19377e2c463e1b702f9a077b5cd723b",
+      "testcaseTitle": "Inapplicable Example 7",
+      "url": "https://act-rules.github.io/testcases/bisz58/4b31e7f8b19377e2c463e1b702f9a077b5cd723b.html",
+      "relativePath": "testcases/bisz58/4b31e7f8b19377e2c463e1b702f9a077b5cd723b.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.2.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:3.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G110": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H76": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "398c872063708b2fa897dcd4f9c851685ea206b7",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/bisz58/398c872063708b2fa897dcd4f9c851685ea206b7.html",
+      "relativePath": "testcases/bisz58/398c872063708b2fa897dcd4f9c851685ea206b7.html",
+      "expected": "inapplicable",
+      "ruleId": "bisz58",
+      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "rulePage": "https://act-rules.github.io/rules/bisz58",
+      "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
           "forConformance": true,
           "failed": "not satisfied",

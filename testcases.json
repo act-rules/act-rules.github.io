@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 995,
+  "count": 1024,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -19887,6 +19887,876 @@
         },
         "wcag20:1.4.6": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "591c450fa3cfaf03aefb5d4c0578b2b87ee3eb8d",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/09o5cg/591c450fa3cfaf03aefb5d4c0578b2b87ee3eb8d.html",
+      "relativePath": "testcases/09o5cg/591c450fa3cfaf03aefb5d4c0578b2b87ee3eb8d.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "64c3822fe1dbe2456c7d771c1c7934d15616f813",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/09o5cg/64c3822fe1dbe2456c7d771c1c7934d15616f813.html",
+      "relativePath": "testcases/09o5cg/64c3822fe1dbe2456c7d771c1c7934d15616f813.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d30f6df3a88791b737df63d470ad7eb2661179e7",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/09o5cg/d30f6df3a88791b737df63d470ad7eb2661179e7.html",
+      "relativePath": "testcases/09o5cg/d30f6df3a88791b737df63d470ad7eb2661179e7.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "47081a30a5be904eb851e6c3f6883166fb4a5fe6",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/09o5cg/47081a30a5be904eb851e6c3f6883166fb4a5fe6.html",
+      "relativePath": "testcases/09o5cg/47081a30a5be904eb851e6c3f6883166fb4a5fe6.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f086a8df666fc0e96d6ce2c6c6a726d7fd5fe637",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/09o5cg/f086a8df666fc0e96d6ce2c6c6a726d7fd5fe637.html",
+      "relativePath": "testcases/09o5cg/f086a8df666fc0e96d6ce2c6c6a726d7fd5fe637.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c83b77f091ebb1e77cedecc20a1bc826702114e2",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/09o5cg/c83b77f091ebb1e77cedecc20a1bc826702114e2.html",
+      "relativePath": "testcases/09o5cg/c83b77f091ebb1e77cedecc20a1bc826702114e2.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "36e7493ad6e79b017a3a2b029672d42f9e7d508b",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/09o5cg/36e7493ad6e79b017a3a2b029672d42f9e7d508b.html",
+      "relativePath": "testcases/09o5cg/36e7493ad6e79b017a3a2b029672d42f9e7d508b.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd21ba82effa1d349cd9ed76f8d5c3f16cbada19",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/09o5cg/cd21ba82effa1d349cd9ed76f8d5c3f16cbada19.html",
+      "relativePath": "testcases/09o5cg/cd21ba82effa1d349cd9ed76f8d5c3f16cbada19.html",
+      "expected": "passed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "498558ee0959690c23b5cf4895bb76abd2eec92d",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/09o5cg/498558ee0959690c23b5cf4895bb76abd2eec92d.html",
+      "relativePath": "testcases/09o5cg/498558ee0959690c23b5cf4895bb76abd2eec92d.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "96a63532b27f1f45457a135f7840698fb3e37872",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/09o5cg/96a63532b27f1f45457a135f7840698fb3e37872.html",
+      "relativePath": "testcases/09o5cg/96a63532b27f1f45457a135f7840698fb3e37872.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4f98f90ee05f652f8a0b51400a24b86e0122407f",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/09o5cg/4f98f90ee05f652f8a0b51400a24b86e0122407f.html",
+      "relativePath": "testcases/09o5cg/4f98f90ee05f652f8a0b51400a24b86e0122407f.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f24f1db097a67eb2189755ab7569ade6e5f03056",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/09o5cg/f24f1db097a67eb2189755ab7569ade6e5f03056.html",
+      "relativePath": "testcases/09o5cg/f24f1db097a67eb2189755ab7569ade6e5f03056.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "051137940ea6c5091641e53063b2a9207221ac3d",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/09o5cg/051137940ea6c5091641e53063b2a9207221ac3d.html",
+      "relativePath": "testcases/09o5cg/051137940ea6c5091641e53063b2a9207221ac3d.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "790cb87d1a8b4756237b56f6d8c3325e9fc0f919",
+      "testcaseTitle": "Failed Example 6",
+      "url": "https://act-rules.github.io/testcases/09o5cg/790cb87d1a8b4756237b56f6d8c3325e9fc0f919.html",
+      "relativePath": "testcases/09o5cg/790cb87d1a8b4756237b56f6d8c3325e9fc0f919.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4ba7e75934fbd313f05a9c9cfffbd08a2949f8a8",
+      "testcaseTitle": "Failed Example 7",
+      "url": "https://act-rules.github.io/testcases/09o5cg/4ba7e75934fbd313f05a9c9cfffbd08a2949f8a8.html",
+      "relativePath": "testcases/09o5cg/4ba7e75934fbd313f05a9c9cfffbd08a2949f8a8.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c2dcc599d1d0b741106f0ba63b0de8c77f3ebe54",
+      "testcaseTitle": "Failed Example 8",
+      "url": "https://act-rules.github.io/testcases/09o5cg/c2dcc599d1d0b741106f0ba63b0de8c77f3ebe54.html",
+      "relativePath": "testcases/09o5cg/c2dcc599d1d0b741106f0ba63b0de8c77f3ebe54.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "26db50757b442f0c257840671a8e7c7297711e9d",
+      "testcaseTitle": "Failed Example 9",
+      "url": "https://act-rules.github.io/testcases/09o5cg/26db50757b442f0c257840671a8e7c7297711e9d.html",
+      "relativePath": "testcases/09o5cg/26db50757b442f0c257840671a8e7c7297711e9d.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "2879461ef904f7d6da88e5b3b6a2c38866f32a58",
+      "testcaseTitle": "Failed Example 10",
+      "url": "https://act-rules.github.io/testcases/09o5cg/2879461ef904f7d6da88e5b3b6a2c38866f32a58.html",
+      "relativePath": "testcases/09o5cg/2879461ef904f7d6da88e5b3b6a2c38866f32a58.html",
+      "expected": "failed",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a7a2d7170453c107ddbeebf7eb26f520c30eefcf",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/09o5cg/a7a2d7170453c107ddbeebf7eb26f520c30eefcf.html",
+      "relativePath": "testcases/09o5cg/a7a2d7170453c107ddbeebf7eb26f520c30eefcf.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bcbeab7bf10ebc6255f268f9547f0abc7d48f96e",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/09o5cg/bcbeab7bf10ebc6255f268f9547f0abc7d48f96e.html",
+      "relativePath": "testcases/09o5cg/bcbeab7bf10ebc6255f268f9547f0abc7d48f96e.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd74f2cc4a81a7517cbc3d6ce7ff3ca0216ba395",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/09o5cg/cd74f2cc4a81a7517cbc3d6ce7ff3ca0216ba395.html",
+      "relativePath": "testcases/09o5cg/cd74f2cc4a81a7517cbc3d6ce7ff3ca0216ba395.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ae81496dcb2168af282f3a721bc75ca5124c334c",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/09o5cg/ae81496dcb2168af282f3a721bc75ca5124c334c.html",
+      "relativePath": "testcases/09o5cg/ae81496dcb2168af282f3a721bc75ca5124c334c.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0118096da6d98ebcd634acba31344bd125fccff9",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/09o5cg/0118096da6d98ebcd634acba31344bd125fccff9.html",
+      "relativePath": "testcases/09o5cg/0118096da6d98ebcd634acba31344bd125fccff9.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7acf59add8c6fd0cb580a1f6e72c200731acebc0",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/09o5cg/7acf59add8c6fd0cb580a1f6e72c200731acebc0.html",
+      "relativePath": "testcases/09o5cg/7acf59add8c6fd0cb580a1f6e72c200731acebc0.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "239b4c6cb6a24144823891ca13426de354d8fe42",
+      "testcaseTitle": "Inapplicable Example 7",
+      "url": "https://act-rules.github.io/testcases/09o5cg/239b4c6cb6a24144823891ca13426de354d8fe42.html",
+      "relativePath": "testcases/09o5cg/239b4c6cb6a24144823891ca13426de354d8fe42.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3ad86578203df7f91ef9ca8d4eaedcf7ae0a3868",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/09o5cg/3ad86578203df7f91ef9ca8d4eaedcf7ae0a3868.html",
+      "relativePath": "testcases/09o5cg/3ad86578203df7f91ef9ca8d4eaedcf7ae0a3868.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7fec538e6e839366e15d7250123502c6fa6185b9",
+      "testcaseTitle": "Inapplicable Example 9",
+      "url": "https://act-rules.github.io/testcases/09o5cg/7fec538e6e839366e15d7250123502c6fa6185b9.html",
+      "relativePath": "testcases/09o5cg/7fec538e6e839366e15d7250123502c6fa6185b9.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "260cbaacc7a6f3aa54c729e8ac713a52d77e2d0b",
+      "testcaseTitle": "Inapplicable Example 10",
+      "url": "https://act-rules.github.io/testcases/09o5cg/260cbaacc7a6f3aa54c729e8ac713a52d77e2d0b.html",
+      "relativePath": "testcases/09o5cg/260cbaacc7a6f3aa54c729e8ac713a52d77e2d0b.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fa58fa237773e232476d3676d4ef2d89c58c3bd8",
+      "testcaseTitle": "Inapplicable Example 11",
+      "url": "https://act-rules.github.io/testcases/09o5cg/fa58fa237773e232476d3676d4ef2d89c58c3bd8.html",
+      "relativePath": "testcases/09o5cg/fa58fa237773e232476d3676d4ef2d89c58c3bd8.html",
+      "expected": "inapplicable",
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "rulePage": "https://act-rules.github.io/rules/09o5cg",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.6": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G17": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G18": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

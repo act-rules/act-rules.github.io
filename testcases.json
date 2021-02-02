@@ -15034,10 +15034,10 @@
       }
     },
     {
-      "testcaseId": "fb1a553b5ce749ceaf06b74ec8681eff188ad4af",
+      "testcaseId": "beeaf6f49d37ef2d771effd40bcb3bfc9655fbf4",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/bc659a/fb1a553b5ce749ceaf06b74ec8681eff188ad4af.html",
-      "relativePath": "testcases/bc659a/fb1a553b5ce749ceaf06b74ec8681eff188ad4af.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/beeaf6f49d37ef2d771effd40bcb3bfc9655fbf4.html",
+      "relativePath": "testcases/bc659a/beeaf6f49d37ef2d771effd40bcb3bfc9655fbf4.html",
       "expected": "passed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15076,10 +15076,10 @@
       }
     },
     {
-      "testcaseId": "521cee2dce2c9889b49903d930e0bc8d005dcb72",
+      "testcaseId": "4a37117137ddae558eb09d671f605fa2ad8d5367",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/521cee2dce2c9889b49903d930e0bc8d005dcb72.html",
-      "relativePath": "testcases/bc659a/521cee2dce2c9889b49903d930e0bc8d005dcb72.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/4a37117137ddae558eb09d671f605fa2ad8d5367.html",
+      "relativePath": "testcases/bc659a/4a37117137ddae558eb09d671f605fa2ad8d5367.html",
       "expected": "passed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15160,10 +15160,10 @@
       }
     },
     {
-      "testcaseId": "3708381f22cd3b0f9ac05869ae017686911b48f0",
+      "testcaseId": "bcf969320f87281ac6e996b1725e5633f1255863",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/bc659a/3708381f22cd3b0f9ac05869ae017686911b48f0.html",
-      "relativePath": "testcases/bc659a/3708381f22cd3b0f9ac05869ae017686911b48f0.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/bcf969320f87281ac6e996b1725e5633f1255863.html",
+      "relativePath": "testcases/bc659a/bcf969320f87281ac6e996b1725e5633f1255863.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15202,10 +15202,10 @@
       }
     },
     {
-      "testcaseId": "04bdb5cac43d5eeefc71729375e14d02167eb0ba",
+      "testcaseId": "f2a48cafddd30c8b9a918fe0fe664c44db253b0d",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/04bdb5cac43d5eeefc71729375e14d02167eb0ba.html",
-      "relativePath": "testcases/bc659a/04bdb5cac43d5eeefc71729375e14d02167eb0ba.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/f2a48cafddd30c8b9a918fe0fe664c44db253b0d.html",
+      "relativePath": "testcases/bc659a/f2a48cafddd30c8b9a918fe0fe664c44db253b0d.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15244,10 +15244,10 @@
       }
     },
     {
-      "testcaseId": "4b6e44854c950756eea0530ef349ba0ff9e757fb",
+      "testcaseId": "af2a6e7b7e607d0cfeff0f70a1f9ab6330ba50a4",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/bc659a/4b6e44854c950756eea0530ef349ba0ff9e757fb.html",
-      "relativePath": "testcases/bc659a/4b6e44854c950756eea0530ef349ba0ff9e757fb.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/af2a6e7b7e607d0cfeff0f70a1f9ab6330ba50a4.html",
+      "relativePath": "testcases/bc659a/af2a6e7b7e607d0cfeff0f70a1f9ab6330ba50a4.html",
       "expected": "failed",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15370,10 +15370,10 @@
       }
     },
     {
-      "testcaseId": "3b589370a3860cb6ac8570cb27a30a91e24d55ba",
+      "testcaseId": "84b7a46e7e9cb736cc9327bce10240e943801ba6",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/bc659a/3b589370a3860cb6ac8570cb27a30a91e24d55ba.html",
-      "relativePath": "testcases/bc659a/3b589370a3860cb6ac8570cb27a30a91e24d55ba.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/84b7a46e7e9cb736cc9327bce10240e943801ba6.html",
+      "relativePath": "testcases/bc659a/84b7a46e7e9cb736cc9327bce10240e943801ba6.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15538,10 +15538,10 @@
       }
     },
     {
-      "testcaseId": "bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1",
+      "testcaseId": "2cf5502b5807593934392d51f7500b0637a83d81",
       "testcaseTitle": "Inapplicable Example 7",
-      "url": "https://act-rules.github.io/testcases/bc659a/bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1.html",
-      "relativePath": "testcases/bc659a/bd0dd20bc2a007ca56e08c41cf430ae14caf2ea1.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/2cf5502b5807593934392d51f7500b0637a83d81.html",
+      "relativePath": "testcases/bc659a/2cf5502b5807593934392d51f7500b0637a83d81.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15580,10 +15580,10 @@
       }
     },
     {
-      "testcaseId": "131c061ef0d235a5b8f1ed61fc39df06587af6ae",
+      "testcaseId": "c8ed0642698f8e519b0939501cb37fabcd7c253f",
       "testcaseTitle": "Inapplicable Example 8",
-      "url": "https://act-rules.github.io/testcases/bc659a/131c061ef0d235a5b8f1ed61fc39df06587af6ae.html",
-      "relativePath": "testcases/bc659a/131c061ef0d235a5b8f1ed61fc39df06587af6ae.html",
+      "url": "https://act-rules.github.io/testcases/bc659a/c8ed0642698f8e519b0939501cb37fabcd7c253f.html",
+      "relativePath": "testcases/bc659a/c8ed0642698f8e519b0939501cb37fabcd7c253f.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
       "ruleName": "`meta` element has no refresh delay",
@@ -15622,10 +15622,10 @@
       }
     },
     {
-      "testcaseId": "599267633dc8bf0bbe4d1b2a6e22737c95b7da92",
+      "testcaseId": "d1bbcc895f6e11010b033578d073138e7c4fc57e",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/bisz58/599267633dc8bf0bbe4d1b2a6e22737c95b7da92.html",
-      "relativePath": "testcases/bisz58/599267633dc8bf0bbe4d1b2a6e22737c95b7da92.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/d1bbcc895f6e11010b033578d073138e7c4fc57e.html",
+      "relativePath": "testcases/bisz58/d1bbcc895f6e11010b033578d073138e7c4fc57e.html",
       "expected": "passed",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",
@@ -15658,10 +15658,10 @@
       }
     },
     {
-      "testcaseId": "8506906c2bb87a444fbabc1a2c3558abd18fbe3d",
+      "testcaseId": "d789ff3d0c087c77117a02527e71a646a343d4a3",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/bisz58/8506906c2bb87a444fbabc1a2c3558abd18fbe3d.html",
-      "relativePath": "testcases/bisz58/8506906c2bb87a444fbabc1a2c3558abd18fbe3d.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/d789ff3d0c087c77117a02527e71a646a343d4a3.html",
+      "relativePath": "testcases/bisz58/d789ff3d0c087c77117a02527e71a646a343d4a3.html",
       "expected": "passed",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",
@@ -15730,10 +15730,10 @@
       }
     },
     {
-      "testcaseId": "93ffbc16542363e34b1c8013cc70a613884699d8",
+      "testcaseId": "0c9b0abdee645fa6145f02913a76e809a244708d",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/bisz58/93ffbc16542363e34b1c8013cc70a613884699d8.html",
-      "relativePath": "testcases/bisz58/93ffbc16542363e34b1c8013cc70a613884699d8.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/0c9b0abdee645fa6145f02913a76e809a244708d.html",
+      "relativePath": "testcases/bisz58/0c9b0abdee645fa6145f02913a76e809a244708d.html",
       "expected": "failed",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",
@@ -15766,10 +15766,10 @@
       }
     },
     {
-      "testcaseId": "b1c3b8c8c80277e35f1fb20d620ae07f85882c09",
+      "testcaseId": "459353149c69b2ee77944c5641cbff66396829e0",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/bisz58/b1c3b8c8c80277e35f1fb20d620ae07f85882c09.html",
-      "relativePath": "testcases/bisz58/b1c3b8c8c80277e35f1fb20d620ae07f85882c09.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/459353149c69b2ee77944c5641cbff66396829e0.html",
+      "relativePath": "testcases/bisz58/459353149c69b2ee77944c5641cbff66396829e0.html",
       "expected": "failed",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",
@@ -16054,10 +16054,10 @@
       }
     },
     {
-      "testcaseId": "4b31e7f8b19377e2c463e1b702f9a077b5cd723b",
+      "testcaseId": "ffa9d5785ba84df4dfacbafc5fdb8b82a365f5b4",
       "testcaseTitle": "Inapplicable Example 7",
-      "url": "https://act-rules.github.io/testcases/bisz58/4b31e7f8b19377e2c463e1b702f9a077b5cd723b.html",
-      "relativePath": "testcases/bisz58/4b31e7f8b19377e2c463e1b702f9a077b5cd723b.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/ffa9d5785ba84df4dfacbafc5fdb8b82a365f5b4.html",
+      "relativePath": "testcases/bisz58/ffa9d5785ba84df4dfacbafc5fdb8b82a365f5b4.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",
@@ -16090,10 +16090,10 @@
       }
     },
     {
-      "testcaseId": "398c872063708b2fa897dcd4f9c851685ea206b7",
+      "testcaseId": "1ecaa280edc88898e1023c0470fd71eb105f6cf9",
       "testcaseTitle": "Inapplicable Example 8",
-      "url": "https://act-rules.github.io/testcases/bisz58/398c872063708b2fa897dcd4f9c851685ea206b7.html",
-      "relativePath": "testcases/bisz58/398c872063708b2fa897dcd4f9c851685ea206b7.html",
+      "url": "https://act-rules.github.io/testcases/bisz58/1ecaa280edc88898e1023c0470fd71eb105f6cf9.html",
+      "relativePath": "testcases/bisz58/1ecaa280edc88898e1023c0470fd71eb105f6cf9.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
       "ruleName": "`meta` element has no refresh delay (no exception)",

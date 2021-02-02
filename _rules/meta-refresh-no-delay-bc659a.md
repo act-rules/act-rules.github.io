@@ -95,8 +95,8 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0; https://w3c.org" />
-	<meta http-equiv="refresh" content="5; https://w3c.org" />
+	<meta http-equiv="refresh" content="0; https://w3.org" />
+	<meta http-equiv="refresh" content="5; https://w3.org" />
 </head>
 ```
 
@@ -106,7 +106,7 @@ Redirects after more than 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="72001; https://w3c.org" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -128,7 +128,7 @@ Redirects after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://w3c.org'" />
+	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
 </head>
 ```
 
@@ -138,8 +138,8 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0: https://w3c.org" />
-	<meta http-equiv="refresh" content="5; https://w3c.org" />
+	<meta http-equiv="refresh" content="0: https://w3.org" />
+	<meta http-equiv="refresh" content="5; https://w3.org" />
 </head>
 ```
 
@@ -149,7 +149,7 @@ Redirects after exactly 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="72000; https://w3c.org" />
+	<meta http-equiv="refresh" content="72000; https://w3.org" />
 </head>
 ```
 
@@ -181,7 +181,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0: https://w3c.org" />
+	<meta http-equiv="refresh" content="0: https://w3.org" />
 </head>
 ```
 
@@ -221,7 +221,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="+5; https://w3c.org" />
+	<meta http-equiv="refresh" content="+5; https://w3.org" />
 </head>
 ```
 
@@ -231,7 +231,7 @@ No `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="foo; URL='https://w3c.org'" />
+	<meta http-equiv="refresh" content="foo; URL='https://w3.org'" />
 </head>
 ```
 

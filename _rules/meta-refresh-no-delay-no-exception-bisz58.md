@@ -75,7 +75,7 @@ This `meta` element redirects the user immediately. Users won't notice the chang
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0; URL='https://w3c.org'" />
+	<meta http-equiv="refresh" content="0; URL='https://w3.org'" />
 </head>
 ```
 
@@ -85,8 +85,8 @@ The first valid `meta` element redirects immediately.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0; https://w3c.org" />
-	<meta http-equiv="refresh" content="5; https://w3c.org" />
+	<meta http-equiv="refresh" content="0; https://w3.org" />
+	<meta http-equiv="refresh" content="5; https://w3.org" />
 </head>
 ```
 
@@ -108,7 +108,7 @@ This `meta` element redirects the user after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://w3c.org'" />
+	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
 </head>
 ```
 
@@ -118,8 +118,8 @@ The first `meta` element is not valid (because of the colon instead of a semi-co
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="0: https://w3c.org" />
-	<meta http-equiv="refresh" content="5; https://w3c.org" />
+	<meta http-equiv="refresh" content="0: https://w3.org" />
+	<meta http-equiv="refresh" content="5; https://w3.org" />
 </head>
 ```
 
@@ -201,7 +201,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="+5; http://w3c.org" />
+	<meta http-equiv="refresh" content="+5; http://w3.org" />
 </head>
 ```
 
@@ -211,7 +211,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="foo; URL='https://w3c.org'" />
+	<meta http-equiv="refresh" content="foo; URL='https://w3.org'" />
 </head>
 ```
 

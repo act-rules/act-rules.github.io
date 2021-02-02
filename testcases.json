@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1024,
+  "count": 1029,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -9279,6 +9279,126 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9f51cc873f37c786f03e13d96f00a44b77d965ae",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/akn7bn/9f51cc873f37c786f03e13d96f00a44b77d965ae.html",
+      "relativePath": "testcases/akn7bn/9f51cc873f37c786f03e13d96f00a44b77d965ae.html",
+      "expected": "passed",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4cee29f54888120f0b99fb7a1a4646556a0d10a0",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/akn7bn/4cee29f54888120f0b99fb7a1a4646556a0d10a0.html",
+      "relativePath": "testcases/akn7bn/4cee29f54888120f0b99fb7a1a4646556a0d10a0.html",
+      "expected": "passed",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "1dca03a88ba0738f5a15e7636f534b826af870dc",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/akn7bn/1dca03a88ba0738f5a15e7636f534b826af870dc.html",
+      "relativePath": "testcases/akn7bn/1dca03a88ba0738f5a15e7636f534b826af870dc.html",
+      "expected": "passed",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "346253fff2e5fa725402c99e97dba9f3a2cbbf65",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/akn7bn/346253fff2e5fa725402c99e97dba9f3a2cbbf65.html",
+      "relativePath": "testcases/akn7bn/346253fff2e5fa725402c99e97dba9f3a2cbbf65.html",
+      "expected": "failed",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "04a4eca0f7fe8fb25d070e83cee67a44eca7ae19",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/akn7bn/04a4eca0f7fe8fb25d070e83cee67a44eca7ae19.html",
+      "relativePath": "testcases/akn7bn/04a4eca0f7fe8fb25d070e83cee67a44eca7ae19.html",
+      "expected": "inapplicable",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

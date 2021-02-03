@@ -10324,7 +10324,7 @@
       "relativePath": "testcases/9eb3f6/cfd1636ab41c1418d1ad510eb9802c31fb2c5c5e.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10354,7 +10354,7 @@
       "relativePath": "testcases/9eb3f6/499be2117059dba5f38526df06b711d0125eccd7.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10384,7 +10384,7 @@
       "relativePath": "testcases/9eb3f6/39d3fd00e8e9060969e064eaf1c8fe52aac7c326.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10414,7 +10414,7 @@
       "relativePath": "testcases/9eb3f6/607ad4964aa69e78a663cf993a28cedd6a1dc39e.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10444,7 +10444,7 @@
       "relativePath": "testcases/9eb3f6/1ff696703e7e7393a5d05cdcd3229cb050594998.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10474,7 +10474,7 @@
       "relativePath": "testcases/9eb3f6/28d908a951edb6fe7768d69b10460c7cfff251b1.html",
       "expected": "passed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10504,7 +10504,7 @@
       "relativePath": "testcases/9eb3f6/f7406b89f8e6769c01da5c305e3e6c921fd7c1e4.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10534,7 +10534,7 @@
       "relativePath": "testcases/9eb3f6/a2333ec76e676624212dcd616ed11ae576ab775e.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10564,7 +10564,7 @@
       "relativePath": "testcases/9eb3f6/556be1533c3f4388dc6c8dd1c8bce9c0e9c4f06c.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10594,7 +10594,7 @@
       "relativePath": "testcases/9eb3f6/9ffb088dc361047bc8b7998e41fec07665ce596e.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10624,7 +10624,7 @@
       "relativePath": "testcases/9eb3f6/f636f815cba63087a142086b3b9791fe464300cc.html",
       "expected": "failed",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10654,7 +10654,7 @@
       "relativePath": "testcases/9eb3f6/3e3d7cf41d149cde4d9ef0e1962aecdae662abfc.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10684,7 +10684,7 @@
       "relativePath": "testcases/9eb3f6/0ebe39fb92e5ed6bd21e5aa79610169033afdaa9.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10714,7 +10714,7 @@
       "relativePath": "testcases/9eb3f6/57d68f3bdb9e16e08d8059a3e57c6f5adb52bce8.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -10744,7 +10744,7 @@
       "relativePath": "testcases/9eb3f6/c9d1b69ad4f38c469516c19842b478fc16bc3d12.html",
       "expected": "inapplicable",
       "ruleId": "9eb3f6",
-      "ruleName": "Image filename is accessible name for image",
+      "ruleName": "DEPRECATED — Image filename is accessible name for image",
       "rulePage": "https://act-rules.github.io/rules/9eb3f6",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {

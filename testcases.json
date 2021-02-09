@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1029,
+  "count": 1086,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -3801,6 +3801,150 @@
       }
     },
     {
+      "testcaseId": "c61f1a9a5203b298b91d3991177bd6e0231d15a3",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/3e12e1/c61f1a9a5203b298b91d3991177bd6e0231d15a3.html",
+      "relativePath": "testcases/3e12e1/c61f1a9a5203b298b91d3991177bd6e0231d15a3.html",
+      "expected": "passed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/3e12e1/64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e.html",
+      "relativePath": "testcases/3e12e1/64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e.html",
+      "expected": "passed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fc574b9ed076f08c3d27c1e5ca4c3520f882fc73",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/3e12e1/fc574b9ed076f08c3d27c1e5ca4c3520f882fc73.html",
+      "relativePath": "testcases/3e12e1/fc574b9ed076f08c3d27c1e5ca4c3520f882fc73.html",
+      "expected": "passed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "86631db23480da80302fd8f2ea06c5da8a177ae7",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/3e12e1/86631db23480da80302fd8f2ea06c5da8a177ae7.html",
+      "relativePath": "testcases/3e12e1/86631db23480da80302fd8f2ea06c5da8a177ae7.html",
+      "expected": "passed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "fa0ef2570eac41c1445ec855df92fe79cbea6068",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/3e12e1/fa0ef2570eac41c1445ec855df92fe79cbea6068.html",
+      "relativePath": "testcases/3e12e1/fa0ef2570eac41c1445ec855df92fe79cbea6068.html",
+      "expected": "failed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "769e9156962341875b2971466a7ccd845cf3b154",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/3e12e1/769e9156962341875b2971466a7ccd845cf3b154.html",
+      "relativePath": "testcases/3e12e1/769e9156962341875b2971466a7ccd845cf3b154.html",
+      "expected": "failed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/3e12e1/f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738.html",
+      "relativePath": "testcases/3e12e1/f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738.html",
+      "expected": "failed",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3f429e9cd51b6d5d654bb1a48d34dc662f41fc9e",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/3e12e1/3f429e9cd51b6d5d654bb1a48d34dc662f41fc9e.svg",
+      "relativePath": "testcases/3e12e1/3f429e9cd51b6d5d654bb1a48d34dc662f41fc9e.svg",
+      "expected": "inapplicable",
+      "ruleId": "3e12e1",
+      "ruleName": "Block of repeated content is collapsible",
+      "rulePage": "https://act-rules.github.io/rules/3e12e1",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "95935dc40a7a9d307aa385102365364fc866845f",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/97a4e1/95935dc40a7a9d307aa385102365364fc866845f.html",
@@ -4100,6 +4244,726 @@
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
           "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c75d332bf0687af7c2eed103000d0a1fc4060709",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/cf77f2/c75d332bf0687af7c2eed103000d0a1fc4060709.html",
+      "relativePath": "testcases/cf77f2/c75d332bf0687af7c2eed103000d0a1fc4060709.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6b1b6c8fa1b1d65d75df7574fea91393c4bc5830",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
+      "relativePath": "testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "40bf908032f3db98607826fb667f25e4e69b0a56",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/cf77f2/40bf908032f3db98607826fb667f25e4e69b0a56.html",
+      "relativePath": "testcases/cf77f2/40bf908032f3db98607826fb667f25e4e69b0a56.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8f6775a2efc04e176c05d249a22a260d94ba2bf2",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/cf77f2/8f6775a2efc04e176c05d249a22a260d94ba2bf2.html",
+      "relativePath": "testcases/cf77f2/8f6775a2efc04e176c05d249a22a260d94ba2bf2.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ebbefc185d3a53e9b7a6b7cc5134bbe46aac32bd",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/cf77f2/ebbefc185d3a53e9b7a6b7cc5134bbe46aac32bd.html",
+      "relativePath": "testcases/cf77f2/ebbefc185d3a53e9b7a6b7cc5134bbe46aac32bd.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6a8a9e6b0167fc03736dc322e3f3f9183533a9ee",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/cf77f2/6a8a9e6b0167fc03736dc322e3f3f9183533a9ee.html",
+      "relativePath": "testcases/cf77f2/6a8a9e6b0167fc03736dc322e3f3f9183533a9ee.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a5ecb8739a71752e8971912357d9bb4b176404b8",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/cf77f2/a5ecb8739a71752e8971912357d9bb4b176404b8.html",
+      "relativePath": "testcases/cf77f2/a5ecb8739a71752e8971912357d9bb4b176404b8.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "c4ee0f61bd31002a6cd0cbe860661e1d893e8e61",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/cf77f2/c4ee0f61bd31002a6cd0cbe860661e1d893e8e61.html",
+      "relativePath": "testcases/cf77f2/c4ee0f61bd31002a6cd0cbe860661e1d893e8e61.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "b2df327c874af303bb27157ae531caa8ff2b9130",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/cf77f2/b2df327c874af303bb27157ae531caa8ff2b9130.html",
+      "relativePath": "testcases/cf77f2/b2df327c874af303bb27157ae531caa8ff2b9130.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "266822f5460ffbe7ea1832fd2fea42ed27680301",
+      "testcaseTitle": "Passed Example 10",
+      "url": "https://act-rules.github.io/testcases/cf77f2/266822f5460ffbe7ea1832fd2fea42ed27680301.html",
+      "relativePath": "testcases/cf77f2/266822f5460ffbe7ea1832fd2fea42ed27680301.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d",
+      "testcaseTitle": "Passed Example 11",
+      "url": "https://act-rules.github.io/testcases/cf77f2/a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d.html",
+      "relativePath": "testcases/cf77f2/a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "156ec33e8c22060bc0381e854a2fc1da29520b89",
+      "testcaseTitle": "Passed Example 12",
+      "url": "https://act-rules.github.io/testcases/cf77f2/156ec33e8c22060bc0381e854a2fc1da29520b89.html",
+      "relativePath": "testcases/cf77f2/156ec33e8c22060bc0381e854a2fc1da29520b89.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6b1b6c8fa1b1d65d75df7574fea91393c4bc5830",
+      "testcaseTitle": "Passed Example 13",
+      "url": "https://act-rules.github.io/testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
+      "relativePath": "testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
+      "expected": "passed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6ba1c44dcaeca3d9380aaf3406cbe26ac17f2dcf",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/cf77f2/6ba1c44dcaeca3d9380aaf3406cbe26ac17f2dcf.html",
+      "relativePath": "testcases/cf77f2/6ba1c44dcaeca3d9380aaf3406cbe26ac17f2dcf.html",
+      "expected": "failed",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "dcbcf5ec6abec70fff5879f6bb485488a5aa4224",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/cf77f2/dcbcf5ec6abec70fff5879f6bb485488a5aa4224.svg",
+      "relativePath": "testcases/cf77f2/dcbcf5ec6abec70fff5879f6bb485488a5aa4224.svg",
+      "expected": "inapplicable",
+      "ruleId": "cf77f2",
+      "ruleName": "Bypass Blocks of Repeated Content",
+      "rulePage": "https://act-rules.github.io/rules/cf77f2",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:SCR28": {
+          "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
@@ -4483,6 +5347,706 @@
           "inapplicable": "further testing needed"
         }
       }
+    },
+    {
+      "testcaseId": "6e293a369799976039f9b7d6d0c11aeaf228e0a6",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/047fe0/6e293a369799976039f9b7d6d0c11aeaf228e0a6.html",
+      "relativePath": "testcases/047fe0/6e293a369799976039f9b7d6d0c11aeaf228e0a6.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "59e72286a1a9b9ecd6cec2700d296fd3b6d863e3",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/047fe0/59e72286a1a9b9ecd6cec2700d296fd3b6d863e3.html",
+      "relativePath": "testcases/047fe0/59e72286a1a9b9ecd6cec2700d296fd3b6d863e3.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3f673cea2c9fca7e330c6dba452fddd79e56e1c8",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/047fe0/3f673cea2c9fca7e330c6dba452fddd79e56e1c8.html",
+      "relativePath": "testcases/047fe0/3f673cea2c9fca7e330c6dba452fddd79e56e1c8.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d56bc7480b632e380e89b36a1b0243758c081c89",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/047fe0/d56bc7480b632e380e89b36a1b0243758c081c89.html",
+      "relativePath": "testcases/047fe0/d56bc7480b632e380e89b36a1b0243758c081c89.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "226159ca924b6071002215b3d82a7f9fa589f03a",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/047fe0/226159ca924b6071002215b3d82a7f9fa589f03a.html",
+      "relativePath": "testcases/047fe0/226159ca924b6071002215b3d82a7f9fa589f03a.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "103d3f5c0a930977011763e0741dd8132b138c5c",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/047fe0/103d3f5c0a930977011763e0741dd8132b138c5c.html",
+      "relativePath": "testcases/047fe0/103d3f5c0a930977011763e0741dd8132b138c5c.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "155814aaf73a36bf2967dbf4e5657052c3f8ec8c",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/047fe0/155814aaf73a36bf2967dbf4e5657052c3f8ec8c.html",
+      "relativePath": "testcases/047fe0/155814aaf73a36bf2967dbf4e5657052c3f8ec8c.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "76c2c43f5b770d8cace71816a84d797679a5955a",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/047fe0/76c2c43f5b770d8cace71816a84d797679a5955a.html",
+      "relativePath": "testcases/047fe0/76c2c43f5b770d8cace71816a84d797679a5955a.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "4b727ca27a1ac10048014485728d95515f4e94ed",
+      "testcaseTitle": "Passed Example 9",
+      "url": "https://act-rules.github.io/testcases/047fe0/4b727ca27a1ac10048014485728d95515f4e94ed.html",
+      "relativePath": "testcases/047fe0/4b727ca27a1ac10048014485728d95515f4e94ed.html",
+      "expected": "passed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "be8c0168ce81275fd3767b4428f676353a615231",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/047fe0/be8c0168ce81275fd3767b4428f676353a615231.html",
+      "relativePath": "testcases/047fe0/be8c0168ce81275fd3767b4428f676353a615231.html",
+      "expected": "failed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ae2a944ff0c66ba9a6e645a67052552e139b81e2",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/047fe0/ae2a944ff0c66ba9a6e645a67052552e139b81e2.html",
+      "relativePath": "testcases/047fe0/ae2a944ff0c66ba9a6e645a67052552e139b81e2.html",
+      "expected": "failed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "65a1027198141af1495c991e57e9df696c00746e",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/047fe0/65a1027198141af1495c991e57e9df696c00746e.html",
+      "relativePath": "testcases/047fe0/65a1027198141af1495c991e57e9df696c00746e.html",
+      "expected": "failed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "17fbbc3490e4050597b3c36e5ec6386924b607b5",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/047fe0/17fbbc3490e4050597b3c36e5ec6386924b607b5.html",
+      "relativePath": "testcases/047fe0/17fbbc3490e4050597b3c36e5ec6386924b607b5.html",
+      "expected": "failed",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "485fca745a9ff4e8a427cd1ebc178d88b879bc4e",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/047fe0/485fca745a9ff4e8a427cd1ebc178d88b879bc4e.svg",
+      "relativePath": "testcases/047fe0/485fca745a9ff4e8a427cd1ebc178d88b879bc4e.svg",
+      "expected": "inapplicable",
+      "ruleId": "047fe0",
+      "ruleName": "Document has heading for non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/047fe0",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:H69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "5992ca49bbaffa4303c725ab90b9facb1c667eb1",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/5992ca49bbaffa4303c725ab90b9facb1c667eb1.html",
+      "relativePath": "testcases/ye5d6e/5992ca49bbaffa4303c725ab90b9facb1c667eb1.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "35a4b3bb4c57da42d4a6ac5750acd9166f543c35",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/35a4b3bb4c57da42d4a6ac5750acd9166f543c35.html",
+      "relativePath": "testcases/ye5d6e/35a4b3bb4c57da42d4a6ac5750acd9166f543c35.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6d24e830079aa072b3fc3b33e839fff620722d34",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/6d24e830079aa072b3fc3b33e839fff620722d34.html",
+      "relativePath": "testcases/ye5d6e/6d24e830079aa072b3fc3b33e839fff620722d34.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8bbbdda6f63371fc14d4f1607d056708a34e8e09",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/8bbbdda6f63371fc14d4f1607d056708a34e8e09.html",
+      "relativePath": "testcases/ye5d6e/8bbbdda6f63371fc14d4f1607d056708a34e8e09.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cd9fadc1d77d3d3ae5c54781280f28a1102282ba",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/cd9fadc1d77d3d3ae5c54781280f28a1102282ba.html",
+      "relativePath": "testcases/ye5d6e/cd9fadc1d77d3d3ae5c54781280f28a1102282ba.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "cb079760ccc28fd4bb2c574cdab51a4fa8ccafc1",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/cb079760ccc28fd4bb2c574cdab51a4fa8ccafc1.html",
+      "relativePath": "testcases/ye5d6e/cb079760ccc28fd4bb2c574cdab51a4fa8ccafc1.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7da2a011e7dfb7c1ed50461b84ccd63bce2c2ef6",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/7da2a011e7dfb7c1ed50461b84ccd63bce2c2ef6.html",
+      "relativePath": "testcases/ye5d6e/7da2a011e7dfb7c1ed50461b84ccd63bce2c2ef6.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f83720035a82283779f768a101c4b861fc745d58",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/f83720035a82283779f768a101c4b861fc745d58.html",
+      "relativePath": "testcases/ye5d6e/f83720035a82283779f768a101c4b861fc745d58.html",
+      "expected": "passed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7b7d82429f583ddf84b965b60737f3523cda3e7e",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/7b7d82429f583ddf84b965b60737f3523cda3e7e.html",
+      "relativePath": "testcases/ye5d6e/7b7d82429f583ddf84b965b60737f3523cda3e7e.html",
+      "expected": "failed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3ea5cbb45a2c7f3910c3197c84c8354cfa48c88f",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/3ea5cbb45a2c7f3910c3197c84c8354cfa48c88f.html",
+      "relativePath": "testcases/ye5d6e/3ea5cbb45a2c7f3910c3197c84c8354cfa48c88f.html",
+      "expected": "failed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "7cb84e365fd178a380f30e33a07e2736c7c48402",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/7cb84e365fd178a380f30e33a07e2736c7c48402.html",
+      "relativePath": "testcases/ye5d6e/7cb84e365fd178a380f30e33a07e2736c7c48402.html",
+      "expected": "failed",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "ffa1d2eef43242e335f68220bd1ab737989922b4",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/ffa1d2eef43242e335f68220bd1ab737989922b4.svg",
+      "relativePath": "testcases/ye5d6e/ffa1d2eef43242e335f68220bd1ab737989922b4.svg",
+      "expected": "inapplicable",
+      "ruleId": "ye5d6e",
+      "ruleName": "Document has an instrument to move focus to non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/ye5d6e",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:G1": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G123": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G124": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "923ded1559deb2016c3419b218dba00539c605b8",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/b40fd1/923ded1559deb2016c3419b218dba00539c605b8.html",
+      "relativePath": "testcases/b40fd1/923ded1559deb2016c3419b218dba00539c605b8.html",
+      "expected": "passed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "4138f613540c7e271afb72330cdaacc525c8a72b",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/b40fd1/4138f613540c7e271afb72330cdaacc525c8a72b.html",
+      "relativePath": "testcases/b40fd1/4138f613540c7e271afb72330cdaacc525c8a72b.html",
+      "expected": "passed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "ab7815bf66997d62f0ae2e2d291efc92697325c9",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/b40fd1/ab7815bf66997d62f0ae2e2d291efc92697325c9.html",
+      "relativePath": "testcases/b40fd1/ab7815bf66997d62f0ae2e2d291efc92697325c9.html",
+      "expected": "passed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "520c87adbcf264e58c8ff61b3a69dc6d3c207773",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/b40fd1/520c87adbcf264e58c8ff61b3a69dc6d3c207773.html",
+      "relativePath": "testcases/b40fd1/520c87adbcf264e58c8ff61b3a69dc6d3c207773.html",
+      "expected": "passed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "264074a97f3844f1c90b88997a5cacf38f5ba6c2",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/b40fd1/264074a97f3844f1c90b88997a5cacf38f5ba6c2.html",
+      "relativePath": "testcases/b40fd1/264074a97f3844f1c90b88997a5cacf38f5ba6c2.html",
+      "expected": "failed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "3d998f21a9619333a475d5a7449873a76e547292",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/b40fd1/3d998f21a9619333a475d5a7449873a76e547292.html",
+      "relativePath": "testcases/b40fd1/3d998f21a9619333a475d5a7449873a76e547292.html",
+      "expected": "failed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "b889767b4d1f2fe358acea887c9ad39c6974cd2f",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/b40fd1/b889767b4d1f2fe358acea887c9ad39c6974cd2f.html",
+      "relativePath": "testcases/b40fd1/b889767b4d1f2fe358acea887c9ad39c6974cd2f.html",
+      "expected": "failed",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "576946fac86c33615d473f3cbaa89b1be409a277",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/b40fd1/576946fac86c33615d473f3cbaa89b1be409a277.svg",
+      "relativePath": "testcases/b40fd1/576946fac86c33615d473f3cbaa89b1be409a277.svg",
+      "expected": "inapplicable",
+      "ruleId": "b40fd1",
+      "ruleName": "Document has a landmark with non-repeated content",
+      "rulePage": "https://act-rules.github.io/rules/b40fd1",
+      "ruleAccessibilityRequirements": null
     },
     {
       "testcaseId": "52b44481e1067806d435c1020422dc401c9a23b4",

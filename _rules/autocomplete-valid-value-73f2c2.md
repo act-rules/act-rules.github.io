@@ -24,7 +24,7 @@ acknowledgments:
 This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
 
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
-- **disabled**: the element has an `aria-disabled` [attribute value][] of `true`; or
+- **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
 - **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
@@ -45,7 +45,7 @@ Each test target's `autocomplete` [attribute value][] has a [correct autocomplet
 
 The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
-If the `autocomplete` field is used to describe "custom" taxonomy, rather than that described in the list of `input` purposes, or the form fields do not collect information about the user, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
 
@@ -86,10 +86,13 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 ```html
 <form autocomplete="off">
-	<select autocomplete="bday-month">
-		<option>January</option>
-		<option>...</option>
-	</select>
+	<label
+		>Birthday month
+		<select autocomplete="bday-month">
+			<option>January</option>
+			<option>...</option>
+		</select>
+	</label>
 </form>
 ```
 
@@ -98,7 +101,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<textarea autocomplete="Street-Address"></textarea>
+<label> Street address<textarea autocomplete="Street-Address"></textarea></label>
 ```
 
 #### Passed Example 4
@@ -114,7 +117,7 @@ This `autocomplete` [attribute value][] list includes a `work` token, allowed be
 This `autocomplete` [attribute value][] list includes a `section-` token, which can preface any [correct autocomplete field][]. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
-<label>Email<input autocomplete="section-partner email"/></label>
+<label>Partner's email address<input autocomplete="section-partner email"/></label>
 ```
 
 #### Passed Example 6
@@ -122,7 +125,7 @@ This `autocomplete` [attribute value][] list includes a `section-` token, which 
 This `autocomplete` [attribute value][] list includes `section-` and `billing` tokens. These tokens can preface any [correct autocomplete field][].
 
 ```html
-<label>Address<input type="text" autocomplete="section-primary billing address-line1"/></label>
+<label>Billing address- first line<input type="text" autocomplete="section-primary billing address-line1"/></label>
 ```
 
 #### Passed Example 7
@@ -130,15 +133,7 @@ This `autocomplete` [attribute value][] list includes `section-` and `billing` t
 This `autocomplete` [attribute value][] list includes all allowed types of tokens in the correct order. The `email` token is allowed on `input` elements with a `type` [attribute value][] of `text`.
 
 ```html
-<label>Email<input type="text" autocomplete="section-primary shipping work email"/></label>
-```
-
-#### Passed Example 8
-
-The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
-
-```html
-<label>Username<input role="banner" tabindex="0" autocomplete="username"/></label>
+<label>Office email<input type="text" autocomplete="section-primary shipping work email"/></label>
 ```
 
 ### Failed
@@ -181,6 +176,14 @@ This `autocomplete` [attribute value][] is not appropriate for the field. The fo
 
 ```html
 <label>Quantity<input type="number" autocomplete="email"/></label>
+```
+
+#### Failed Example 6
+
+The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
+
+```html
+<label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
 ```
 
 ### Inapplicable
@@ -253,6 +256,7 @@ This `autocomplete` attribute is ignored because it is on an element with a [sem
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [appropriate field for the form control]: #appropriate-field-for-the-form-control 'Definition of Appropriate field for the form control'
 [correct autocomplete field]: #correct-autocomplete-field 'Definition of Correct autocomplete field'
+[disabled element]: #disabled-element 'Definition of Disabled Element'
 [html specification for autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens 'HTML Autofill Detail, 2020/08/12'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

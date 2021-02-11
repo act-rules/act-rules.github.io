@@ -110,9 +110,9 @@ This `div` element has a valid `lang` [attribute value][]. There is no [text inh
 <html>
 	<body>
 		<article lang="invalid">
-          <div lang="en"></div>
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-          </div>
+			<div lang="en">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</div>
 		</article>
 	</body>
 </html>
@@ -216,9 +216,9 @@ This `div` element has an invalid `lang` [attribute value][]. There is no [text 
 <html>
 	<body>
 		<article lang="en">
-          <div lang="invalid"></div>
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-          </div>
+			<div lang="invalid">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</div>
 		</article>
 	</body>
 </html>
@@ -296,6 +296,7 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 </html>
 ```
 
+[accessible name]: #accessible-name 'Definition of Accessible Name'
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type

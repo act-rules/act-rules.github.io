@@ -11,8 +11,8 @@ input_aspects:
 
 The _text inheriting its programmatic language_ from an element E is composed of all the following texts:
 
-- **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element with the same programmatic language as E;
-- **accessible text**: the [accessible name][] and [accessible description][] of any element with the same programmatic language as E, and [included in the accessibility tree][];
+- **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element inheriting its programmatic language from E;
+- **accessible text**: the [accessible name][] and [accessible description][] of any element inheriting its programmatic language from E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
 
 An element F is an _element inheriting its programmatic language_ from an element E if one of the following conditions is true (recursively):

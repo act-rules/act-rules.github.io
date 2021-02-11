@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1086,
+  "count": 1100,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6047,6 +6047,342 @@
       "ruleName": "Document has a landmark with non-repeated content",
       "rulePage": "https://act-rules.github.io/rules/b40fd1",
       "ruleAccessibilityRequirements": null
+    },
+    {
+      "testcaseId": "b45615c6247f428fc7d73c0501f91021a57f0e94",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/off6ek/b45615c6247f428fc7d73c0501f91021a57f0e94.html",
+      "relativePath": "testcases/off6ek/b45615c6247f428fc7d73c0501f91021a57f0e94.html",
+      "expected": "passed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "17622fba62bbebac40601448593be2e4d54dc104",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/off6ek/17622fba62bbebac40601448593be2e4d54dc104.html",
+      "relativePath": "testcases/off6ek/17622fba62bbebac40601448593be2e4d54dc104.html",
+      "expected": "passed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "5173d391c6023c70c855a97043536bff25f36947",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/off6ek/5173d391c6023c70c855a97043536bff25f36947.html",
+      "relativePath": "testcases/off6ek/5173d391c6023c70c855a97043536bff25f36947.html",
+      "expected": "passed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "c3427f0cb02de3150dd1a3ad8e10fa5a61194655",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/off6ek/c3427f0cb02de3150dd1a3ad8e10fa5a61194655.html",
+      "relativePath": "testcases/off6ek/c3427f0cb02de3150dd1a3ad8e10fa5a61194655.html",
+      "expected": "passed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "642f44db6d5d4b8e64c821b8e2e3422e45a0ff8f",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/off6ek/642f44db6d5d4b8e64c821b8e2e3422e45a0ff8f.html",
+      "relativePath": "testcases/off6ek/642f44db6d5d4b8e64c821b8e2e3422e45a0ff8f.html",
+      "expected": "passed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "0010173c5c52316b06fef820691785ed98483b7d",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/off6ek/0010173c5c52316b06fef820691785ed98483b7d.html",
+      "relativePath": "testcases/off6ek/0010173c5c52316b06fef820691785ed98483b7d.html",
+      "expected": "failed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "30c95a1f1592ff0e75bb1f0b5b4e6fa0e6361b83",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/off6ek/30c95a1f1592ff0e75bb1f0b5b4e6fa0e6361b83.html",
+      "relativePath": "testcases/off6ek/30c95a1f1592ff0e75bb1f0b5b4e6fa0e6361b83.html",
+      "expected": "failed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "a4c3ac2a998eddc2912109f9d41f56574ac194a0",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/off6ek/a4c3ac2a998eddc2912109f9d41f56574ac194a0.html",
+      "relativePath": "testcases/off6ek/a4c3ac2a998eddc2912109f9d41f56574ac194a0.html",
+      "expected": "failed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "1f5b59313700fb26ac0260e5fb25bd69d805bc82",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/off6ek/1f5b59313700fb26ac0260e5fb25bd69d805bc82.html",
+      "relativePath": "testcases/off6ek/1f5b59313700fb26ac0260e5fb25bd69d805bc82.html",
+      "expected": "failed",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "a694775060f9898b905bd24114ac3aa2b7eed6ca",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/off6ek/a694775060f9898b905bd24114ac3aa2b7eed6ca.svg",
+      "relativePath": "testcases/off6ek/a694775060f9898b905bd24114ac3aa2b7eed6ca.svg",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "7f994c4d5afcc4d087a26b807e5f3046b3233f04",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/off6ek/7f994c4d5afcc4d087a26b807e5f3046b3233f04.html",
+      "relativePath": "testcases/off6ek/7f994c4d5afcc4d087a26b807e5f3046b3233f04.html",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "f3dbf1535a816d98a2667463ef9446150ec8b61c",
+      "testcaseTitle": "Inapplicable Example 3",
+      "url": "https://act-rules.github.io/testcases/off6ek/f3dbf1535a816d98a2667463ef9446150ec8b61c.html",
+      "relativePath": "testcases/off6ek/f3dbf1535a816d98a2667463ef9446150ec8b61c.html",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "c6c72ae5204c89e03335e53d03ad51d6dc5f1ff9",
+      "testcaseTitle": "Inapplicable Example 4",
+      "url": "https://act-rules.github.io/testcases/off6ek/c6c72ae5204c89e03335e53d03ad51d6dc5f1ff9.html",
+      "relativePath": "testcases/off6ek/c6c72ae5204c89e03335e53d03ad51d6dc5f1ff9.html",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "2661fa687a091cfc7ff617d9e30be6601982e702",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/off6ek/2661fa687a091cfc7ff617d9e30be6601982e702.html",
+      "relativePath": "testcases/off6ek/2661fa687a091cfc7ff617d9e30be6601982e702.html",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
     },
     {
       "testcaseId": "52b44481e1067806d435c1020422dc401c9a23b4",

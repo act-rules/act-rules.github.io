@@ -86,12 +86,13 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 ```html
 <form autocomplete="off">
-	<label>Birthday month
-        <select autocomplete="bday-month">
-            <option>January</option>
-            <option>...</option>
-        </select>
-    </label>
+	<label
+		>Birthday month
+		<select autocomplete="bday-month">
+			<option>January</option>
+			<option>...</option>
+		</select>
+	</label>
 </form>
 ```
 
@@ -100,7 +101,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 This `autocomplete` [attribute value][] only has the required token, and is valid for a `textarea` element. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<label> Street address<textarea autocomplete="Street-Address"></textarea></label> 
+<label> Street address<textarea autocomplete="Street-Address"></textarea></label>
 ```
 
 #### Passed Example 4
@@ -181,8 +182,8 @@ This `autocomplete` [attribute value][] is not appropriate for the field. The fo
 
 The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
 
- ```html
- <label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
+```html
+<label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
 ```
 
 ### Inapplicable

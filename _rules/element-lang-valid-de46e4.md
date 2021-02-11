@@ -3,7 +3,7 @@ id: de46e4
 name: Element with `lang` attribute has valid language tag
 rule_type: atomic
 description: |
-  This rule checks that a non-empty `lang` attribute of an element in the page body has a language tag with a known primary language subtag.
+  This rule checks that a non-empty `lang` attribute of an element in the page has a language tag with a known primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -29,7 +29,7 @@ acknowledgments:
 
 This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
-- the element is a [descendant][] in the [flat tree][] of a `body` element; and
+- the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element has a [node document][] with a [content type][] of `text/html`; and
 - the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
 
@@ -229,6 +229,7 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [included in the accessibility tree]: #included-in-the-accessibility-tree
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [node document]: https://dom.spec.whatwg.org/#concept-node-document
 [text node]: https://dom.spec.whatwg.org/#text
 [valid language tag]: #valid-language-tag

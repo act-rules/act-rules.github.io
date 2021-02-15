@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1100,
+  "count": 1114,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -12661,6 +12661,342 @@
         },
         "wcag-technique:G95": {
           "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "bd472eb44b2853b4bf7eaf7f88ffeb5f6e8e7f8f",
+      "testcaseTitle": "Passed Example 1",
+      "url": "https://act-rules.github.io/testcases/0va7u6/bd472eb44b2853b4bf7eaf7f88ffeb5f6e8e7f8f.html",
+      "relativePath": "testcases/0va7u6/bd472eb44b2853b4bf7eaf7f88ffeb5f6e8e7f8f.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "de703dec892ee672899ed6cd8767a87364dac693",
+      "testcaseTitle": "Passed Example 2",
+      "url": "https://act-rules.github.io/testcases/0va7u6/de703dec892ee672899ed6cd8767a87364dac693.html",
+      "relativePath": "testcases/0va7u6/de703dec892ee672899ed6cd8767a87364dac693.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "09f2e26101fbedec4be3556213ad302236ab13f2",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/0va7u6/09f2e26101fbedec4be3556213ad302236ab13f2.html",
+      "relativePath": "testcases/0va7u6/09f2e26101fbedec4be3556213ad302236ab13f2.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "3fb4eeff95cbc01eb7e9dec5460486b4a3cd1db9",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/0va7u6/3fb4eeff95cbc01eb7e9dec5460486b4a3cd1db9.html",
+      "relativePath": "testcases/0va7u6/3fb4eeff95cbc01eb7e9dec5460486b4a3cd1db9.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "6685213ba1e67946fad8971aa0029d4bfbd62e69",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/0va7u6/6685213ba1e67946fad8971aa0029d4bfbd62e69.html",
+      "relativePath": "testcases/0va7u6/6685213ba1e67946fad8971aa0029d4bfbd62e69.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "29e927247fbf494f715d63b447032dfbc35ecaee",
+      "testcaseTitle": "Passed Example 6",
+      "url": "https://act-rules.github.io/testcases/0va7u6/29e927247fbf494f715d63b447032dfbc35ecaee.html",
+      "relativePath": "testcases/0va7u6/29e927247fbf494f715d63b447032dfbc35ecaee.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "30562e91bfa69774976ad8eb5b99c8b9f79a0033",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/0va7u6/30562e91bfa69774976ad8eb5b99c8b9f79a0033.html",
+      "relativePath": "testcases/0va7u6/30562e91bfa69774976ad8eb5b99c8b9f79a0033.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "d90d6256fb0742b3bdad088c1dfdf37b34af1668",
+      "testcaseTitle": "Passed Example 8",
+      "url": "https://act-rules.github.io/testcases/0va7u6/d90d6256fb0742b3bdad088c1dfdf37b34af1668.html",
+      "relativePath": "testcases/0va7u6/d90d6256fb0742b3bdad088c1dfdf37b34af1668.html",
+      "expected": "passed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "67b27814b7da90341ba474265af9ec0bc9198238",
+      "testcaseTitle": "Failed Example 1",
+      "url": "https://act-rules.github.io/testcases/0va7u6/67b27814b7da90341ba474265af9ec0bc9198238.html",
+      "relativePath": "testcases/0va7u6/67b27814b7da90341ba474265af9ec0bc9198238.html",
+      "expected": "failed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "942866fcc4781a2e2d442a29e7d841058796eac8",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/0va7u6/942866fcc4781a2e2d442a29e7d841058796eac8.html",
+      "relativePath": "testcases/0va7u6/942866fcc4781a2e2d442a29e7d841058796eac8.html",
+      "expected": "failed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f70991c23997820c3b3f61c0a6c5beb56c8a4e14",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/0va7u6/f70991c23997820c3b3f61c0a6c5beb56c8a4e14.html",
+      "relativePath": "testcases/0va7u6/f70991c23997820c3b3f61c0a6c5beb56c8a4e14.html",
+      "expected": "failed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9e1a5c362cd64bcf97744e48b407b6fe60caa1e9",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/0va7u6/9e1a5c362cd64bcf97744e48b407b6fe60caa1e9.html",
+      "relativePath": "testcases/0va7u6/9e1a5c362cd64bcf97744e48b407b6fe60caa1e9.html",
+      "expected": "failed",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "16fe8037b7b217310433b24eaab4ca0bc315afae",
+      "testcaseTitle": "Inapplicable Example 1",
+      "url": "https://act-rules.github.io/testcases/0va7u6/16fe8037b7b217310433b24eaab4ca0bc315afae.html",
+      "relativePath": "testcases/0va7u6/16fe8037b7b217310433b24eaab4ca0bc315afae.html",
+      "expected": "inapplicable",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0b64fa851ffa99c820affa46009eb96b49c86488",
+      "testcaseTitle": "Inapplicable Example 2",
+      "url": "https://act-rules.github.io/testcases/0va7u6/0b64fa851ffa99c820affa46009eb96b49c86488.html",
+      "relativePath": "testcases/0va7u6/0b64fa851ffa99c820affa46009eb96b49c86488.html",
+      "expected": "inapplicable",
+      "ruleId": "0va7u6",
+      "ruleName": "HTML graphics contain no text",
+      "rulePage": "https://act-rules.github.io/rules/0va7u6",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.4.9": {
+          "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"

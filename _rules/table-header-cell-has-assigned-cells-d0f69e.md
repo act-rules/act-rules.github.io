@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: Table header cell has assigned cells
+name: Table header cell has assigned data cells
 rule_type: atomic
 description: |
-  This rule checks that each table header has assigned cells in a table element.
+  This rule checks that each table header has assigned data cells in a table element.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -27,20 +27,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] within a [table][] or [grid][] element, where the [table][] or [grid][] element is [visible][].
 
-- the element is [visible][]; and
-- the element is [included in the accessibility tree][]; and
-- the element has at least one ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][]; and
-- the element's closest ancestor in the [flat tree][] with a [semantic role][] of either [table][] or [grid][] is [included in the accessibility tree][].
+## Expectation 1
 
-## Expectation
+Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][]. The test target and the [cell][] are within an element with the [semantic role][] of [table][] or [grid][].
 
-Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][] or inheriting from [cell][].
+## Expectation 2
+
+Each target element is [assigned][] to at least one element with a [semantic role][] of [gridcell][]. The test target and the [gridcell][] are within an element with the [semantic role][] of [grid][].
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
+This rule assumes that table header cells have a relationship conveyed through presentation with data cells within the same table. This excludes edge cases, where there are multiple headers and no data cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
 
 ## Accessibility Support
 
@@ -146,19 +145,22 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 
 #### Passed Example 5
 
-Each of the 2 `th` elements has an assigned `td` element because the `headers` attribute assigns the `th` with `id` equal to "col2" to the `td` element.
+Each of the 4 `th` elements has an assigned `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attributes on the `th` elements.
 
 ```html
 <table>
 	<tr>
-		<th id="col1">Cities</th>
-		<th id="col2">Count</th>
+		<th id="projects" rowspan="2">Projects</th>
+		<th id="objective" colspan="2">Objective</th>
 	</tr>
 	<tr>
-		<td>Paris</td>
+		<th id="1" headers="objective">1</th>
+		<th id="2" headers="objective">2</th>
 	</tr>
 	<tr>
-		<td headers="col2">1</td>
+		<td headers="projects">40%</td>
+		<td headers="objective 1">20%</td>
+		<td headers="objective 2">25%</td>
 	</tr>
 </table>
 ```
@@ -194,19 +196,24 @@ Each of the 5 `th` elements in this table has assigned cells, whether data or he
 
 #### Failed Example 1
 
-The `th` element with text "Value" does not have an assigned cell within the same `table` element.
+The `th` elements do not have assigned data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` attribute is in the auto state and there is a non-empty table data slot in the same line.
 
 ```html
 <table>
 	<thead>
 		<tr>
-			<th>Rate</th>
-			<th>Value</th>
+			<td>N/A</td>
+			<th>Breakfast</th>
+			<th>Lunch</th>
+			<th>Dinner</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>15%</td>
+			<th>Day 1</th>
+			<td>8:00</td>
+			<td>13:00</td>
+			<td>18:00</td>
 		</tr>
 	</tbody>
 </table>
@@ -231,7 +238,7 @@ This `th` element with `id` equal to "col2" does not have an assigned cell withi
 
 #### Failed Example 3
 
-This `div` with role of `columnheader` and text equal to "Occupant" does not have an assigned cell within the same `table` element.
+This `div` with role of `columnheader` and text equal to "Occupant" does not have an assigned cell within the same element with the semantic role of `grid`.
 
 ```html
 <div role="grid">
@@ -347,7 +354,7 @@ This `th` element is part of a table which is not [included in the accessibility
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[gridcell]: https://www.w3.org/TR/wai-aria-1.2/#gridcell 'ARIA gridcell role'
 [table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'

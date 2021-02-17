@@ -247,10 +247,10 @@ This `div` with role of `columnheader` and text equal to "Occupant" does not hav
 		<div role="columnheader">Occupant</div>
 	</div>
 	<div role="row">
-		<div role="gridcell">1A</div>
+		<div role="gridcell"><button>1A</button></div>
 	</div>
 	<div role="row">
-		<div role="gridcell">2A</div>
+		<div role="gridcell"><button>2A</button></div>
 	</div>
 </div>
 ```
@@ -324,7 +324,7 @@ This `th` element is not [included in the accessibility tree][] and there are no
 
 #### Inapplicable Example 6
 
-This `th` element is not a descendant in the [flat tree][] of an element with a [semantic role][] of either `table` or `grid`.
+This `th` element is not within an element with a [semantic role][] of either `table` or `grid`.
 
 ```html
 <div>
@@ -332,21 +332,6 @@ This `th` element is not a descendant in the [flat tree][] of an element with a 
 		<th>Column A</th>
 	</tr>
 </div>
-```
-
-#### Inapplicable Example 7
-
-This `th` element is part of a table which is not [included in the accessibility tree][].
-
-```html
-<table role="presentation">
-	<tr>
-		<th>Time</th>
-	</tr>
-	<tr>
-		<td>12:00</td>
-	</tr>
-</table>
 ```
 
 [semantic role]: #semantic-role 'Definition of semantic role'

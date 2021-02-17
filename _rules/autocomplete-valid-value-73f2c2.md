@@ -26,7 +26,8 @@ This rule applies to any HTML `input`, `select` and `textarea` element with an `
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
 - **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
-- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
+- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][]
+- the `autocomplete` attribute wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
 
 ## Expectation 1
 
@@ -39,15 +40,20 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 ## Expectation 2
 
-Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is [appropriate][appropriate field for the form control] for that test target.
+Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][] that is [appropriate][appropriate field for the form control] for that its control group. It means that, for example, an `input` element with `autocomplete="new-password"` must have the `type` attribute with one of the following values:
+
+- `hidden` (in this case the test target is inapplicable),
+- `text`,
+- `search`,
+- `password`.
 
 ## Assumptions
 
 The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
-If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+Controls with the `autocomplete` attribute that wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle) (e.g. `<input autocomplete="off" />`) are assumed not to collect information about the user or do not correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes); therefore, they are inapplicable.
 
-The `type` attribute is used correctly according to the intended purpose of `input` elements. If an incorrect `type` attribute is used for `input` elements, this rule may fail elements that satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. For example if an `input` element has a `type` of `number`, but is expecting an e-mail address.
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable) and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
@@ -148,7 +154,7 @@ This `autocomplete` [attribute value][] has an unknown term that is not a [corre
 
 #### Failed Example 2
 
-This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however `work` can not be used with `photo`.
+This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however, `work` can not be used with `photo`.
 
 ```html
 <label>Photo<input autocomplete="work photo"/></label>
@@ -250,6 +256,14 @@ This `autocomplete` attribute is ignored because it is on an element with a [sem
 
 ```html
 <label>Username<input type="text" role="none" disabled autocomplete="username"/></label>
+```
+
+#### Inapplicable Example 9
+
+This `autocomplete` attribute does not collect information about the user
+
+```html
+<label>Friend's first name<input type="text" autocomplete="off"/></label>
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/08/12'

@@ -20,7 +20,7 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any [keyboard event][] for which all of the following is true:
+This rule applies to any [keyboard event][] for which all of the following is true:
 
 - the event's attribute `key` is a [printable character][] key; and
 - the event's method `getModifierState` returns `false` for each of the [valid modifier keys][]; and

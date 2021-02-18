@@ -26,8 +26,8 @@ This rule applies to any HTML `input`, `select` and `textarea` element with an `
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
 - **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
-- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][]
-- the `autocomplete` attribute wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
+- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][]; or
+- **autofill expectation** the `autocomplete` attribute wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
 
 ## Expectation 1
 

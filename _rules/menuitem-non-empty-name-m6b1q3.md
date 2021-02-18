@@ -37,7 +37,7 @@ This rule assumes that all menuitems are [user interface components as defined b
 
 In some assistive technologies, the `menuitem` role will only be announced in browsing mode. When they receive focus this role is not announced. Additionally, the `title` attribute is not a reliable way to provide an accessible name. Use `aria-label` instead.
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `menuitem` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

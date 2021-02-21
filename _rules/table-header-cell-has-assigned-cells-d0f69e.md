@@ -298,7 +298,7 @@ There are no elements with a [semantic role][] of `header` within the `table` el
 
 #### Inapplicable Example 2
 
-There are no elements with a [semantic role][] of `header` within the `table` element.
+There are no elements with a [semantic role][] of either `columnheader` or `rowheader`.
 
 ```html
 <table></table>
@@ -321,7 +321,7 @@ This `th` element has an [explicit role][] of `cell` and there are no more eleme
 
 #### Inapplicable Example 4
 
-This `th` element is neither [visible][] nor it has a [semantic role][] of either `columnheader` or`rowheader`.
+This `th` element is neither [visible][] nor it has a [semantic role][] of either `columnheader` or `rowheader`.
 
 ```html
 <table>

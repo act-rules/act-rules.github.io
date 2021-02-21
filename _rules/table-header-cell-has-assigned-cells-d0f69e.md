@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: Table header cell has assigned data cells
+name: Table header cell has assigned cell
 rule_type: atomic
 description: |
-  This rule checks that each table header has assigned data cells in a table element.
+  This rule checks that each table header has assigned at least one non-empty cell.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -11,6 +11,11 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag-technique:H43: # Using id and headers attributes to associate data cells with header cells in data tables
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag-technique:H63: # Using the scope attribute to associate header cells and data cells in data tables
     forConformance: false
     failed: not satisfied
     passed: further testing needed
@@ -27,19 +32,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] within a [table][] or [grid][] element, where the [table][] or [grid][] element is [visible][].
+This rule applies to any HTML element with the [semantic role][] of [`rowheader`][] or [`columnheader`][] that is within an element with the [semantic role][] of either [`table`][] or [`grid`][]. The [`table`][] or [`grid`][] is [visible][].
 
 ## Expectation 1
 
-Each target element is [assigned][] to at least one element with a [semantic role][] of [cell][]. The test target and the [cell][] are within an element with the [semantic role][] of [table][] or [grid][].
+Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either [`cell`][], or inheriting from [`cell`][]. The test target and the assigned element are within the same element with the [semantic role][] of either [`table`][] or [grid][].
 
 ## Expectation 2
 
-Each target element is [assigned][] to at least one element with a [semantic role][] of [gridcell][]. The test target and the [gridcell][] are within an element with the [semantic role][] of [grid][].
+When the target element is [assigned][] to at least one element with a [semantic role][] of [`gridcell`][], both the test target and the [`gridcell`][] are within the same element with the [semantic role][] of [grid][].
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through presentation with data cells within the same table. This excludes edge cases, where there are multiple headers and no data cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
+This rule assumes that table header cells have a relationship conveyed through the presentation with other cells within the same table. It excludes edge cases such as a table definition with only one header cell or a table definition with multiple headers and no other cells that would correspond to them. The rule fails in such scenarios, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
 
 ## Accessibility Support
 
@@ -52,6 +57,7 @@ The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
+- [H63: Using the scope attribute to associate header cells and data cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H63)
 - [Forming relationships between data cells and header cells][assigned]
 
 ## Test Cases
@@ -145,7 +151,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 
 #### Passed Example 5
 
-Each of the 4 `th` elements has an assigned `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attributes on the `th` elements.
+Each of the 4 `th` elements has an assigned `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attribute on the `th` elements.
 
 ```html
 <table>
@@ -190,6 +196,27 @@ Each of the 5 `th` elements in this table has assigned cells, whether data or he
 		<td>Closed</td>
 	</tr>
 </table>
+```
+
+#### Passed example 7
+
+Each of the 2 `div` elements has an assigned `gridcell` within the same `div` element having a [semantic role][] of `grid`.
+
+```html
+<div role="grid">
+	<div role="row">
+		<div role="columnheader">Room</div>
+		<div role="columnheader">Occupants</div>
+	</div>
+	<div role="row">
+		<div role="gridcell"><button>1A</button></div>
+		<div role="gridcell"><input type="number" /></div>
+	</div>
+	<div role="row">
+		<div role="gridcell"><button>2A</button></div>
+		<div role="gridcell"><input type="number" /></div>
+	</div>
+</div>
 ```
 
 ### Failed
@@ -244,13 +271,13 @@ This `div` with role of `columnheader` and text equal to "Occupant" does not hav
 <div role="grid">
 	<div role="row">
 		<div role="columnheader">Room</div>
-		<div role="columnheader">Occupant</div>
+		<div role="columnheader">Occupants</div>
 	</div>
 	<div role="row">
-		<div role="gridcell"><button>1A</button></div>
+		<div role="gridcell">1A</div>
 	</div>
 	<div role="row">
-		<div role="gridcell"><button>2A</button></div>
+		<div role="gridcell">2A</div>
 	</div>
 </div>
 ```
@@ -279,7 +306,7 @@ There are no elements with a [semantic role][] of `header` within the `table` el
 
 #### Inapplicable Example 3
 
-This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of either `columnheader` or `rowheader`.
 
 ```html
 <table>
@@ -294,7 +321,7 @@ This `th` element has an [explicit role][] of `cell` and there are no more eleme
 
 #### Inapplicable Example 4
 
-This `th` element is neither [visible][] nor [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `th` element is neither [visible][] nor it has a [semantic role][] of either `columnheader` or`rowheader`.
 
 ```html
 <table>
@@ -309,7 +336,7 @@ This `th` element is neither [visible][] nor [included in the accessibility tree
 
 #### Inapplicable Example 5
 
-This `th` element is not [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `th` element does not have a [semantic role][] of either `columnheader` or `rowheader`.
 
 ```html
 <table>
@@ -334,9 +361,23 @@ This `th` element is not within an element with a [semantic role][] of either `t
 </div>
 ```
 
+#### Inapplicable Example 7
+
+The `th` and the `td` elements are not within an element with a [semantic role][] of either `table` or `grid`.
+
+```html
+<table role="presentation">
+	<tr>
+		<th>Time</th>
+	</tr>
+	<tr>
+		<td>12:00</td>
+	</tr>
+</table>
+```
+
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
 [gridcell]: https://www.w3.org/TR/wai-aria-1.2/#gridcell 'ARIA gridcell role'

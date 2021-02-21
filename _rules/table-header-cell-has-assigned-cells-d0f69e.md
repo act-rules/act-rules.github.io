@@ -198,7 +198,7 @@ Each of the 5 `th` elements in this table has assigned cells, whether data or he
 </table>
 ```
 
-#### Passed example 7
+#### Passed Example 7
 
 Each of the 2 `div` elements has an assigned `gridcell` within the same `div` element having a [semantic role][] of `grid`.
 

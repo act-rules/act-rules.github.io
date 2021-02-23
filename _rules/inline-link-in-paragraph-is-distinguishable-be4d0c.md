@@ -29,24 +29,40 @@ This rule applies to any [semantic link][] for which all the following is true:
 - **non-link line text**: the [semantic link][] element is [rendered on a line][] containing [visible][] [text nodes][text node] that are not [descendants][descendant] in the [flat tree][] of a [semantic link][]; and
 - **different hue**: the [foreground colors][foreground color] of the [semantic link][] and the [foreground color][] of the **non-link line text** elements have a [different hue][], or the [background colors][background color] of the [semantic link][] and the [background color][] of the **non-link line text** elements have a [different hue][].
 
-## Expectation 1
+### Applicable states
+
+This rule applies if the above conditions hold when the [semantic link][] is in at least one of the following states:
+
+- any state with the [`:focus` pseudo-class](https://drafts.csswg.org/selectors-4/#focus-pseudo)
+- any state without the [`:focus` pseudo-class](https://drafts.csswg.org/selectors-4/#focus-pseudo)
+- any state with the [`:hover` pseudo-class](https://drafts.csswg.org/selectors-4/#hover-pseudo)
+- any state without the [`:hover` pseudo-class](https://drafts.csswg.org/selectors-4/#hover-pseudo)
+- any state with the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo) and [`:link` pseudo-class](https://drafts.csswg.org/selectors-4/#link-pseudo)
+- any state with the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo) and [`:visited` pseudo-class](https://drafts.csswg.org/selectors-4/#visited-pseudo)
+
+Comments for reviewers:
+- Shall we keep this extensive list? Requesting e.g. focus or not focus seems a waste of words... but how to ensure that testers look at both sets of states? Writing this as "any state" might mean that testers don't consider all states they need to consider.
+- Do we need to change anything in the test cases?
+
+
+## Expectation
 
 For each test target there exists at least one element with a [distinguishable style][] from each **non-link line text** elements for which one of the following is true:
 
 - the element is a [visible][] [inclusive descendant][] of the test target; or
 - the element is an [ancestor][] of the test target that is not simultaneously an [ancestor][] of the **non-link line text** elements.
 
-## Expectation 2
+### Expected states
 
-Expectation 1 holds irrespectively of the test target being [focused][].
+The expectation must hold when the test target is in any of the following states:
 
-## Expectation 3
+- any state with the [`:focus` pseudo-class](https://drafts.csswg.org/selectors-4/#focus-pseudo)
+- any state without the [`:focus` pseudo-class](https://drafts.csswg.org/selectors-4/#focus-pseudo)
+- any state with the [`:hover` pseudo-class](https://drafts.csswg.org/selectors-4/#hover-pseudo)
+- any state without the [`:hover` pseudo-class](https://drafts.csswg.org/selectors-4/#hover-pseudo)
+- any state with the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo) and [`:link` pseudo-class](https://drafts.csswg.org/selectors-4/#link-pseudo)
+- any state with the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo) and [`:visited` pseudo-class](https://drafts.csswg.org/selectors-4/#visited-pseudo)
 
-Expectation 1 holds irrespectively of the test target being [hovered][].
-
-## Expectation 4
-
-Either the test target does not match the [`:any-link` pseudo-class](https://drafts.csswg.org/selectors-4/#any-link-pseudo), or Expectations 2 and 3 hold for each [link history state][] with a **different hue**.
 
 
 ## Assumptions

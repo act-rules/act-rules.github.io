@@ -21,15 +21,31 @@ acknowledgments:
 
 ## Applicability
 
-The rule applies to any element that when [hovered][] causes [content to become visible][content that becomes visible] and when it stops being [hovered][] causes the same [content to become invisible][content that becomes invisible].
+The rule applies to any element in a [web page][] with [content that becomes visible][].
+
+### Applicable states (transitions?)
+
+This rule applies if all of the following is true:
+
+- the [content becomes visible][content that becomes visible] after the test target transitions from the not [hovered][] state to the [hovered][] state; and 
+- the [content becomes invisible][content that becomes invisible] after the test target transitions from the [hovered][] state to the not [hovered][] state, except if the content itself is in the [hovered][] state.
 
 ## Expectation 1
 
-The target element's [bounding box][] is [adjacent][] or [overlaps][] the [bounding box][] of the [content that becomes visible][] when the target element is [hovered][].
+The target element's [bounding box][] is [adjacent][] or [overlaps][] the [bounding box][] of the [content that becomes visible][].
 
 ## Expectation 2
 
-The [content that becomes visible][] remains [visible][] while the pointer is in the [center][] of the [bounding box][] of that content for at least 1 minute.
+The [content that becomes visible][] remains [visible][].
+
+Comments for reviewers: how to test this in practice? A tester will never know for sure if in the next second the content won't vanish. The previous version of the rule required this for only 1 minute (the assumption is still below).
+
+### Expected state (transitions?)
+
+The above expectations must hold while any of the following are true:
+
+- the test target is in the [hovered][] state; or
+- the [content that became visible][content that becomes visible] is in the [hovered][] state.
 
 ## Assumptions
 
@@ -152,3 +168,4 @@ This element does not cause [content to become visible][content that becomes vis
 [overlaps]: #overlap 'Definition of overlap'
 [sc1.4.13]: https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html 'Understanding Success Criterion 1.4.13: Content on Hover or Focus, July 24, 2020'
 [visible]: #visible 'Definition of visible'
+[web page]: #web-page-html 'Definition of HTML web page'

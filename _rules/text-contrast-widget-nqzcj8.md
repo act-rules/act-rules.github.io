@@ -85,7 +85,7 @@ Due to the various [widget pseudo-classes][] that a given element can match, eac
 
 #### Passed Example 1
 
-With default browser styling, the text in this `a` element with an [implicit role][] of `link` has a white background and is blue (`#0000EE`) when matching `:link` and purple (`#551A8B`) when matching `:visited`; whether it matches or not `:focus` doesn't change its color. These colors have a respective contrast ratios of 9.4:1 and 11:1 with the white background.
+With default browser styling, the text in this `a` element with an [implicit role][] of `link` has a white background and is blue (`#0000EE`) thus it has a contrast ratio of 9.4:1.
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a>
@@ -109,6 +109,71 @@ With default browser styling, the text in this `button` element has a light gray
 
 #### Passed Example 4
 
+With default browser styling, the text in this focused `a` element with an [implicit role][] of `link` has a white background and is blue (`#0000EE`), thus it has a contrast ratio of 9.4:1.
+
+```html
+<html>
+	<script>
+		function focus(id) {
+			document.getElementById(id).focus()
+		}
+	</script>
+	<body onload="focus('link')">
+		<a id="link" href="https://act-rules.github.io/">ACT rules</a>
+	</body>
+</html>
+```
+
+#### Passed Example 5
+
+With default browser styling, the text in this visited `a` element with an [implicit role][] of `link` has a white background and is purple (`#551A8B`), thus it has a contrast ratio of 11:1.
+
+```html
+<html>
+	<script>
+		// Mark an URL as visited without actually altering history.
+		function visit(url) {
+			current_url = window.location.href
+			current_state = history.state
+			history.replaceState({}, '', url)
+			history.replaceState(current_state, '', current_url)
+		}
+	</script>
+	<body onload="visit('../../rules')">
+		<a href="../../rules">ACT rules</a>
+	</body>
+</html>
+```
+
+#### Passed Example 6
+
+With default browser styling, the text in this visited and focused `a` element with an [implicit role][] of `link` has a white background and is purple (`#551A8B`), thus it has a contrast ratio 11:1.
+
+```html
+<html>
+	<script>
+		// Mark an URL as visited without actually altering history.
+		function visit(url) {
+			current_url = window.location.href
+			current_state = history.state
+			history.replaceState({}, '', url)
+			history.replaceState(current_state, '', current_url)
+		}
+
+		function focus(id) {
+			document.getElementById(id).focus()
+		}
+	</script>
+	<body onload="visit('../../rules'); focus('link')">
+		<a id="link" href="../../rules">ACT rules</a>
+	</body>
+</html>
+```
+
+#### Passed Example 7
+
+TODO: split into 4 examples as 1/4/5/6?
+
 The text in this link, on default white background, has color contrast ratios of 8.6:1, 10:1, 5.1:1, and 5.2:1 in the 4 states listed in the `style` element.
 
 ```html
@@ -129,7 +194,7 @@ The text in this link, on default white background, has color contrast ratios of
 <a href="https://act-rules.github.io/">ACT rules</a>
 ```
 
-#### Passed Example 5
+#### Passed Example 8
 
 The text in this `input` element, on default white background, has color contrast ratios of 5.1:1, and 8.6:1 when it's focused or not. Note that in modern browsers, the text itself is included in a shadow tree inside the `input` element.
 

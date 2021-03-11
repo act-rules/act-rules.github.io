@@ -103,7 +103,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<script src="/test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -407,7 +407,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 ```html
 <html>
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
+		<script src="/test-assets/bypass-blocks-cf77f2/toggle-display.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>

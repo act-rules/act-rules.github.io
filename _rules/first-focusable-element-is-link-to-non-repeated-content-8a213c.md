@@ -101,7 +101,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 ```html
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="/test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -129,7 +129,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 ```html
 <html lang="en">
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
+		<script src="/test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">
@@ -412,7 +412,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 ```html
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="/test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -440,7 +440,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 ```html
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="/test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>

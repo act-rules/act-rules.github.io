@@ -3801,10 +3801,10 @@
       }
     },
     {
-      "testcaseId": "c61f1a9a5203b298b91d3991177bd6e0231d15a3",
+      "testcaseId": "b3baae9367094c28b587d529fa7b59f765e10384",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/3e12e1/c61f1a9a5203b298b91d3991177bd6e0231d15a3.html",
-      "relativePath": "testcases/3e12e1/c61f1a9a5203b298b91d3991177bd6e0231d15a3.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/b3baae9367094c28b587d529fa7b59f765e10384.html",
+      "relativePath": "testcases/3e12e1/b3baae9367094c28b587d529fa7b59f765e10384.html",
       "expected": "passed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -3819,10 +3819,10 @@
       }
     },
     {
-      "testcaseId": "64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e",
+      "testcaseId": "575a65a8bba5c2fbfda61409974a2f4882739a47",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/3e12e1/64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e.html",
-      "relativePath": "testcases/3e12e1/64dbc58fa621ac7b31854d88cfbbe3a9a5b03e2e.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/575a65a8bba5c2fbfda61409974a2f4882739a47.html",
+      "relativePath": "testcases/3e12e1/575a65a8bba5c2fbfda61409974a2f4882739a47.html",
       "expected": "passed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -3837,10 +3837,10 @@
       }
     },
     {
-      "testcaseId": "fc574b9ed076f08c3d27c1e5ca4c3520f882fc73",
+      "testcaseId": "28fa7ad2644868f8df07b0bca089880955b15ddf",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/3e12e1/fc574b9ed076f08c3d27c1e5ca4c3520f882fc73.html",
-      "relativePath": "testcases/3e12e1/fc574b9ed076f08c3d27c1e5ca4c3520f882fc73.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/28fa7ad2644868f8df07b0bca089880955b15ddf.html",
+      "relativePath": "testcases/3e12e1/28fa7ad2644868f8df07b0bca089880955b15ddf.html",
       "expected": "passed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -3855,10 +3855,10 @@
       }
     },
     {
-      "testcaseId": "86631db23480da80302fd8f2ea06c5da8a177ae7",
+      "testcaseId": "af9d8ce404bbbbbd681e99b8ffbb41d4ad5d5ab8",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/3e12e1/86631db23480da80302fd8f2ea06c5da8a177ae7.html",
-      "relativePath": "testcases/3e12e1/86631db23480da80302fd8f2ea06c5da8a177ae7.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/af9d8ce404bbbbbd681e99b8ffbb41d4ad5d5ab8.html",
+      "relativePath": "testcases/3e12e1/af9d8ce404bbbbbd681e99b8ffbb41d4ad5d5ab8.html",
       "expected": "passed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -3891,10 +3891,10 @@
       }
     },
     {
-      "testcaseId": "769e9156962341875b2971466a7ccd845cf3b154",
+      "testcaseId": "4397f2db80c30823dca34cccd7cd431feef53e47",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/3e12e1/769e9156962341875b2971466a7ccd845cf3b154.html",
-      "relativePath": "testcases/3e12e1/769e9156962341875b2971466a7ccd845cf3b154.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/4397f2db80c30823dca34cccd7cd431feef53e47.html",
+      "relativePath": "testcases/3e12e1/4397f2db80c30823dca34cccd7cd431feef53e47.html",
       "expected": "failed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -3909,10 +3909,10 @@
       }
     },
     {
-      "testcaseId": "f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738",
+      "testcaseId": "a85dd7f1da49986db837d594b99a31b6d0c23e27",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/3e12e1/f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738.html",
-      "relativePath": "testcases/3e12e1/f1eacd983cf2042bcf8de3ac6e81e0e2ba94c738.html",
+      "url": "https://act-rules.github.io/testcases/3e12e1/a85dd7f1da49986db837d594b99a31b6d0c23e27.html",
+      "relativePath": "testcases/3e12e1/a85dd7f1da49986db837d594b99a31b6d0c23e27.html",
       "expected": "failed",
       "ruleId": "3e12e1",
       "ruleName": "Block of repeated content is collapsible",
@@ -4251,10 +4251,10 @@
       }
     },
     {
-      "testcaseId": "c75d332bf0687af7c2eed103000d0a1fc4060709",
+      "testcaseId": "8e277e6e6ac3bf67d39209f4803e5dfbe9c6676d",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/cf77f2/c75d332bf0687af7c2eed103000d0a1fc4060709.html",
-      "relativePath": "testcases/cf77f2/c75d332bf0687af7c2eed103000d0a1fc4060709.html",
+      "url": "https://act-rules.github.io/testcases/cf77f2/8e277e6e6ac3bf67d39209f4803e5dfbe9c6676d.html",
+      "relativePath": "testcases/cf77f2/8e277e6e6ac3bf67d39209f4803e5dfbe9c6676d.html",
       "expected": "passed",
       "ruleId": "cf77f2",
       "ruleName": "Bypass Blocks of Repeated Content",
@@ -4731,10 +4731,10 @@
       }
     },
     {
-      "testcaseId": "a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d",
+      "testcaseId": "89851e69dbc45b06a62deac922eeaa47eb814570",
       "testcaseTitle": "Passed Example 11",
-      "url": "https://act-rules.github.io/testcases/cf77f2/a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d.html",
-      "relativePath": "testcases/cf77f2/a2acaa4b6abfb639e62eb23d5dd2d7d1bf30804d.html",
+      "url": "https://act-rules.github.io/testcases/cf77f2/89851e69dbc45b06a62deac922eeaa47eb814570.html",
+      "relativePath": "testcases/cf77f2/89851e69dbc45b06a62deac922eeaa47eb814570.html",
       "expected": "passed",
       "ruleId": "cf77f2",
       "ruleName": "Bypass Blocks of Repeated Content",
@@ -5421,10 +5421,10 @@
       }
     },
     {
-      "testcaseId": "226159ca924b6071002215b3d82a7f9fa589f03a",
+      "testcaseId": "3bb1189ca7ea7e307ab2f9a7855cd57ba3b28d84",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/047fe0/226159ca924b6071002215b3d82a7f9fa589f03a.html",
-      "relativePath": "testcases/047fe0/226159ca924b6071002215b3d82a7f9fa589f03a.html",
+      "url": "https://act-rules.github.io/testcases/047fe0/3bb1189ca7ea7e307ab2f9a7855cd57ba3b28d84.html",
+      "relativePath": "testcases/047fe0/3bb1189ca7ea7e307ab2f9a7855cd57ba3b28d84.html",
       "expected": "passed",
       "ruleId": "047fe0",
       "ruleName": "Document has heading for non-repeated content",
@@ -5457,10 +5457,10 @@
       }
     },
     {
-      "testcaseId": "155814aaf73a36bf2967dbf4e5657052c3f8ec8c",
+      "testcaseId": "5ffd7f71a735f966f1e59343d16005a16a2173f5",
       "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/047fe0/155814aaf73a36bf2967dbf4e5657052c3f8ec8c.html",
-      "relativePath": "testcases/047fe0/155814aaf73a36bf2967dbf4e5657052c3f8ec8c.html",
+      "url": "https://act-rules.github.io/testcases/047fe0/5ffd7f71a735f966f1e59343d16005a16a2173f5.html",
+      "relativePath": "testcases/047fe0/5ffd7f71a735f966f1e59343d16005a16a2173f5.html",
       "expected": "passed",
       "ruleId": "047fe0",
       "ruleName": "Document has heading for non-repeated content",
@@ -5529,10 +5529,10 @@
       }
     },
     {
-      "testcaseId": "ae2a944ff0c66ba9a6e645a67052552e139b81e2",
+      "testcaseId": "dab01c63f6168297f59cd45c4eeaef3c566ad53e",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/047fe0/ae2a944ff0c66ba9a6e645a67052552e139b81e2.html",
-      "relativePath": "testcases/047fe0/ae2a944ff0c66ba9a6e645a67052552e139b81e2.html",
+      "url": "https://act-rules.github.io/testcases/047fe0/dab01c63f6168297f59cd45c4eeaef3c566ad53e.html",
+      "relativePath": "testcases/047fe0/dab01c63f6168297f59cd45c4eeaef3c566ad53e.html",
       "expected": "failed",
       "ruleId": "047fe0",
       "ruleName": "Document has heading for non-repeated content",
@@ -5691,10 +5691,10 @@
       }
     },
     {
-      "testcaseId": "8bbbdda6f63371fc14d4f1607d056708a34e8e09",
+      "testcaseId": "af00bbf52cb59b6e39b19101cdd6af64d2ccd90f",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/ye5d6e/8bbbdda6f63371fc14d4f1607d056708a34e8e09.html",
-      "relativePath": "testcases/ye5d6e/8bbbdda6f63371fc14d4f1607d056708a34e8e09.html",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/af00bbf52cb59b6e39b19101cdd6af64d2ccd90f.html",
+      "relativePath": "testcases/ye5d6e/af00bbf52cb59b6e39b19101cdd6af64d2ccd90f.html",
       "expected": "passed",
       "ruleId": "ye5d6e",
       "ruleName": "Document has an instrument to move focus to non-repeated content",
@@ -5721,10 +5721,10 @@
       }
     },
     {
-      "testcaseId": "cd9fadc1d77d3d3ae5c54781280f28a1102282ba",
+      "testcaseId": "9bcf521f9401811c74fd7ccd09299d31d7a6ca6e",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/ye5d6e/cd9fadc1d77d3d3ae5c54781280f28a1102282ba.html",
-      "relativePath": "testcases/ye5d6e/cd9fadc1d77d3d3ae5c54781280f28a1102282ba.html",
+      "url": "https://act-rules.github.io/testcases/ye5d6e/9bcf521f9401811c74fd7ccd09299d31d7a6ca6e.html",
+      "relativePath": "testcases/ye5d6e/9bcf521f9401811c74fd7ccd09299d31d7a6ca6e.html",
       "expected": "passed",
       "ruleId": "ye5d6e",
       "ruleName": "Document has an instrument to move focus to non-repeated content",

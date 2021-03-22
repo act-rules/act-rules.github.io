@@ -80,6 +80,7 @@
 - accesskey
 - Accesskeys
 - kerning
+- drawImage
 - pragma
 
 # spell checker checks against strict casing & hence some repeated words here
@@ -128,10 +129,14 @@
 - GitHub
 
 # Test case anamolies
+- brewitt-taylor
 - level2-frame1
 - level1-frame2
 - level1-frame1
 - XYZ
+- Yu
+- Sumei
+- Tuttle
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -197,6 +202,7 @@
 - programmatically
 - personalization
 - autofill
+- dismissible
 - implementers
 - presentational
 - backtick

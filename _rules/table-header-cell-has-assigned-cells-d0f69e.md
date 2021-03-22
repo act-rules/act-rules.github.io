@@ -32,15 +32,15 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of `[rowheader][]` or `[columnheader][]` that is within an element with the [semantic role][] of either `[table][]` or `[grid][]`. The `[table][]` or `[grid][]` is [visible][] and has at least one non-empty element with a [semantic role][] of either `[cell][]`, or inheriting from `[cell][]`.
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] that is within an element with the [semantic role][] of either [table][] or [grid][]. The [table][] or [grid][] is [visible][] and has at least one non-empty element with a [semantic role][] of either [cell][], or inheriting from [cell][].
 
 ## Expectation 1
 
-Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either `[cell][]`, or inheriting from `[cell][]`. The test target and the assigned element are within the same element with the [semantic role][] of either `[table][]` or `[grid][]`.
+Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either [cell][], or inheriting from [cell][]. The test target and the assigned element are within the same element with the [semantic role][] of either [table][] or [grid][].
 
 ## Expectation 2
 
-When the target element is [assigned][] to at least one element with a [semantic role][] of `[gridcell][]`, both the test target and the `[gridcell][]` are within the same element with the [semantic role][] of `[grid][]`.
+When the target element is [assigned][] to at least one element with a [semantic role][] of [gridcell][], both the test target and the [gridcell][] are within the same element with the [semantic role][] of [grid][].
 
 ## Assumptions
 
@@ -376,6 +376,7 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 </table>
 ```
 
+[attribute value]: #attribute-value 'Definition of attribute value'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'

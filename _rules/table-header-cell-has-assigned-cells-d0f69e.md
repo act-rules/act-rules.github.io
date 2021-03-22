@@ -223,7 +223,7 @@ Each of the 2 `div` elements has an assigned `gridcell` within the same `div` el
 
 #### Failed Example 1
 
-The `th` elements do not have assigned data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` attribute is in the auto state and there is a non-empty table data slot in the same line.
+The `th` elements do not have assigned data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is `auto` state and there is a non-empty table data slot in the same column or row.
 
 ```html
 <table>

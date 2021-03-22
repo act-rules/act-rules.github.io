@@ -3,7 +3,7 @@ id: d0f69e
 name: Table header cell has assigned cell
 rule_type: atomic
 description: |
-  This rule checks that each table header has assigned at least one non-empty cell.
+  This rule checks that each table header is assigned to at least one non-empty cell.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true

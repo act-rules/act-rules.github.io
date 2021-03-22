@@ -32,15 +32,15 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of [`rowheader`][] or [`columnheader`][] that is within an element with the [semantic role][] of either [`table`][] or [`grid`][]. The [`table`][] or [`grid`][] is [visible][].
+This rule applies to any HTML element with the [semantic role][] of `[rowheader][]` or `[columnheader][]` that is within an element with the [semantic role][] of either `[table][]` or `[grid][]`. The `[table][]` or `[grid][]` is [visible][] and has at least one non-empty element with a [semantic role][] of either `[cell][]`, or inheriting from `[cell][]`.
 
 ## Expectation 1
 
-Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either [`cell`][], or inheriting from [`cell`][]. The test target and the assigned element are within the same element with the [semantic role][] of either [`table`][] or [grid][].
+Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either `[cell][]`, or inheriting from `[cell][]`. The test target and the assigned element are within the same element with the [semantic role][] of either `[table][]` or `[grid][]`.
 
 ## Expectation 2
 
-When the target element is [assigned][] to at least one element with a [semantic role][] of [`gridcell`][], both the test target and the [`gridcell`][] are within the same element with the [semantic role][] of [grid][].
+When the target element is [assigned][] to at least one element with a [semantic role][] of `[gridcell][]`, both the test target and the `[gridcell][]` are within the same element with the [semantic role][] of `[grid][]`.
 
 ## Assumptions
 
@@ -66,7 +66,7 @@ The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`
 
 #### Passed Example 1
 
-This `th` element has an assigned `td` element.
+This `th` element has an assigned a non-empty `td` element.
 
 ```html
 <table>
@@ -81,7 +81,7 @@ This `th` element has an assigned `td` element.
 
 #### Passed Example 2
 
-Each of the 2 `span` elements with role of `columnheader` has assigned `span` elements with a role of `cell`.
+Each of the 2 `span` elements with role of `columnheader` has assigned a non-empty `span` elements with a role of `cell`.
 
 ```html
 <div role="table">
@@ -106,7 +106,7 @@ Each of the 2 `span` elements with role of `columnheader` has assigned `span` el
 
 #### Passed Example 3
 
-Each of the 2 `th` elements has an assigned `td` element because this `td` element spans 2 columns.
+Each of the 2 `th` elements has an assigned a non-empty `td` element because this `td` element spans 2 columns.
 
 ```html
 <table>
@@ -126,7 +126,7 @@ Each of the 2 `th` elements has an assigned `td` element because this `td` eleme
 
 #### Passed Example 4
 
-Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
+Each of the 4 `th` elements has an assigned a non-empty `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
 ```html
 <table role="grid">
@@ -151,7 +151,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 
 #### Passed Example 5
 
-Each of the 4 `th` elements has an assigned `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attribute on the `th` elements.
+Each of the 4 `th` elements has an assigned non-empty `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attribute on the `th` elements.
 
 ```html
 <table>
@@ -173,7 +173,7 @@ Each of the 4 `th` elements has an assigned `td` element because the value of th
 
 #### Passed Example 6
 
-Each of the 5 `th` elements in this table has assigned cells, whether data or header.
+Each of the 5 `th` elements in this table has assigned a non-empty element with the [semantic role][] of `cell`, or inheriting from `cell`.
 
 ```html
 <table>
@@ -200,7 +200,7 @@ Each of the 5 `th` elements in this table has assigned cells, whether data or he
 
 #### Passed Example 7
 
-Each of the 2 `div` elements has an assigned `gridcell` within the same `div` element having a [semantic role][] of `grid`.
+Each of the 2 `div` elements has an assigned a non-empty `gridcell` within the same `div` element having a [semantic role][] of `grid`.
 
 ```html
 <div role="grid">
@@ -223,7 +223,7 @@ Each of the 2 `div` elements has an assigned `gridcell` within the same `div` el
 
 #### Failed Example 1
 
-The `th` elements do not have assigned data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is `auto` state and there is a non-empty table data slot in the same column or row.
+The `th` elements do not have assigned non-empty data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is `auto` state and there is a non-empty table data slot in the same column or row.
 
 ```html
 <table>
@@ -248,7 +248,7 @@ The `th` elements do not have assigned data cells as per the [internal algorithm
 
 #### Failed Example 2
 
-This `th` element with `id` equal to "col2" does not have an assigned cell within the same `table` element because the `headers` attribute removes the cell association from its column.
+This `th` element with `id` equal to "col2" does not have an assigned non-empty cell within the same `table` element because the `headers` attribute removes the cell association from its column.
 
 ```html
 <table>
@@ -265,7 +265,7 @@ This `th` element with `id` equal to "col2" does not have an assigned cell withi
 
 #### Failed Example 3
 
-This `div` with role of `columnheader` and text equal to "Occupant" does not have an assigned cell within the same element with the semantic role of `grid`.
+This `div` with role of `columnheader` and text equal to "Occupants" does not have an assigned non-empty cell within the same element with the semantic role of `grid`.
 
 ```html
 <div role="grid">
@@ -286,7 +286,7 @@ This `div` with role of `columnheader` and text equal to "Occupant" does not hav
 
 #### Inapplicable Example 1
 
-There are no elements with a [semantic role][] of `header` within the `table` element.
+There are no elements with a [semantic role][] of `columnheader` or `rowheader` within the `table` element.
 
 ```html
 <table>
@@ -321,7 +321,7 @@ This `th` element has an [explicit role][] of `cell` and there are no more eleme
 
 #### Inapplicable Example 4
 
-This `th` element is neither [visible][] nor it has a [semantic role][] of either `columnheader` or `rowheader`.
+This `th` element is neither [visible][] nor it has a [semantic role][] of either `columnheader` or `rowheader` because of the `display: none` property.
 
 ```html
 <table>
@@ -336,7 +336,7 @@ This `th` element is neither [visible][] nor it has a [semantic role][] of eithe
 
 #### Inapplicable Example 5
 
-This `th` element does not have a [semantic role][] of either `columnheader` or `rowheader`.
+This `th` element does not have a [semantic role][] of either `columnheader` or `rowheader` because of `aria-hidden="true"`.
 
 ```html
 <table>

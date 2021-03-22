@@ -23,11 +23,11 @@ acknowledgments:
 
 This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
 
+- **autofill expectation**: the `autocomplete` attribute consists of a single token that is [ASCII case-insensitive][] match for string `off` or string `on`; or
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
 - **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of either `hidden`, `button`, `submit` or `reset`; or
-- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][]; or
-- **autofill expectation**: the `autocomplete` attribute consists of a single token that is [ASCII case-insensitive][] match for string `off` or string `on`.
+- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
 ## Expectation 1
 
@@ -40,7 +40,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 ## Expectation 2
 
-Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][]. The autocomplete field is [appropriate][appropriate field for the form control], meaning that it can be used with the control's `type` attribute. 
+Each test target's `autocomplete` [attribute value][] has a [correct autocomplete field][]. The autocomplete field is [appropriate][appropriate field for the form control], meaning that it can be used with the control's `type` attribute.
 
 ## Assumptions
 

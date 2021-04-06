@@ -83,7 +83,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [state][] and thus [inherited][] for all [semantic role][].
+The `aria-label` [property][] is a [global][] [property][] and thus [inherited][] for all [semantic role][].
 
 ```html
 <div role="button" aria-label="OK">✓</div>

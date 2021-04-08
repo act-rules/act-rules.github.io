@@ -201,7 +201,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 		</nav>
 
 		<div id="main">
-			<img src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" alt="" />
+			<img src="/test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg" alt="" />
 			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
 			<p>
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
@@ -262,7 +262,7 @@ This [document][] has a `h1` heading, which is [visible][] and [included in the 
 		<div id="main">
 			<h1>
 				<img
-					src="../test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
+					src="/test-assets/bypass-blocks-cf77f2/peach-garden-oath.jpg"
 					alt="Three Heroes Swear Brotherhood at a Feast in the Peach Garden"
 				/>
 			</h1>
@@ -360,7 +360,7 @@ The non-repeated content of this [document][] starts with a `h1` heading, but it
 ```html
 <html>
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="/test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>

@@ -86,7 +86,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 3
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not direct DOM children of it. The presentational nodes are not [included in the accessibility tree][], hence the two innermost `div` are children of the outermost in the [accessibility tree][] (but not in the DOM tree).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its direct children in DOM. The presentational node is not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -99,7 +99,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 4
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -109,7 +109,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 5
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not direct DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its direct DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2">

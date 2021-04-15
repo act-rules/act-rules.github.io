@@ -3,7 +3,7 @@ id: afw4f7
 name: Text has minimum contrast
 rule_type: atomic
 description: |
-  This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement.
+  This rule checks that, for text which is not inside a widget, the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
   wcag20:1.4.3: # Contrast (Minimum)
     forConformance: true
@@ -61,6 +61,7 @@ This rule is designed specifically for [1.4.3 Contrast (Minimum)][sc143], which 
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
+- [Text inside widget has minimum contrast](https://act-rules.github.io/rules/nqzcj8)
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
 - [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G18)

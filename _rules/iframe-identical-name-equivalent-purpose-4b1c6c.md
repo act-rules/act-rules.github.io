@@ -44,7 +44,7 @@ This rule assumes that assistive technologies are exposing all `iframe` elements
 
 ## Background
 
-When determining if target elements embed the same resource, resolving the embedded resource may include any redirects that are instant.
+When determining if target elements embed the same resource, resolving the embedded resource includes any redirects that are instant.
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)

@@ -15,7 +15,6 @@ An element presents an _embedded image_ when any of the following is true:
 - the element is an `svg` element having one or more `image` [descendants][] with a non-empty `href` [attribute value][]; or
 - the element has a [computed][] [`background-image`][background-image] CSS property with at least one [`image`][css-image] that is a [url reference][url-reference].
 
-
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [background-image]: https://drafts.csswg.org/css-backgrounds-3/#background-image
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'

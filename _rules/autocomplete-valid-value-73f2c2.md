@@ -46,7 +46,7 @@ If the `autocomplete` attribute is used to describe "custom" taxonomy, for examp
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
-Mainstream user agents tend to provide autofill suggestions for `input` elements with or without an [appropriate field name for the form control][]. As such, the assistive technologies should be able recognise the purpose of a control even when the `autocomplete` [attribute value][] is inappropriate for the control's `type` [attribute value].
+Mainstream user agents tend to provide autofill suggestions for `input` elements with or without an [appropriate field name for the form control][]. As such, the assistive technologies should be able recognize the purpose of a control even when the `autocomplete` [attribute value][] is inappropriate for the control's `type` [attribute value].
 
 ## Accessibility Support  
 

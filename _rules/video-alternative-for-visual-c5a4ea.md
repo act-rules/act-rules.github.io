@@ -155,7 +155,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 1
 
-A video element with an incorrect audio description.
+This `video` element has an incorrect audio description.
 
 ```html
 <html lang="en">

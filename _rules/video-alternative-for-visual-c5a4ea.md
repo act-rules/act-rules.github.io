@@ -97,7 +97,7 @@ This rule is designed specifically for [1.2.3 Audio Description or Media Alterna
 
 #### Passed Example 1
 
-A video element with a voiceover that describes the visual information.
+This `video` element has an audio description because it has voiceover that describes the visual information.
 
 ```html
 <html lang="en">

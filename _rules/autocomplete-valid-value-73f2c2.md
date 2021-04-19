@@ -48,7 +48,7 @@ The `aria-disabled` state is used on `input` elements which are not part of [seq
 
 Mainstream user agents tend to provide autofill suggestions for `input` elements with or without an [appropriate field name for the form control][]. As such, the assistive technologies should be able recognize the purpose of a control even when the `autocomplete` [attribute value][] is inappropriate for the control's `type` [attribute value].
 
-## Accessibility Support  
+## Accessibility Support
 
 - While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.

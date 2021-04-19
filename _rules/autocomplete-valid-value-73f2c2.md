@@ -46,7 +46,7 @@ If the `autocomplete` attribute is used to describe "custom" taxonomy, for examp
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135].
 
-Mainstream user agents tend to provide autofill suggestions for `input` elements with or without an [appropriate field name for the form control][]. As such, the assistive technologies should be able recognize the purpose of a control even when the `autocomplete` [attribute value][] is inappropriate for the control's `type` [attribute value].
+Mainstream user agents tend to provide autofill suggestions for `input` elements with or without an [appropriate field name for the form control][]. As such, the assistive technologies should be able recognize the purpose of a control even when the `autocomplete` [attribute value][] is inappropriate for the control's `type` [attribute value][].
 
 ## Accessibility Support
 
@@ -71,7 +71,7 @@ The auto-completing feature of the `autocomplete` attribute benefits many users,
 
 #### Passed Example 1
 
-This `autocomplete` [attribute value][] only has the required token, and is valid for an `input` element which has a default type of `text`.
+This `autocomplete` [attribute value][] only has the required token "username".
 
 ```html
 <label>Username<input autocomplete="username"/></label>
@@ -79,7 +79,7 @@ This `autocomplete` [attribute value][] only has the required token, and is vali
 
 #### Passed Example 2
 
-The `autocomplete` [attribute value][] only of the `select` element has the required token. Even though the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) has `autocomplete="off"`, thus preventing the user agent from completing it, it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+The `autocomplete` [attribute value][] only of the `select` element has the required token "bday-month". Even though the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) has `autocomplete="off"`, thus preventing the user agent from completing it, it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
 ```html
 <form autocomplete="off">
@@ -95,7 +95,7 @@ The `autocomplete` [attribute value][] only of the `select` element has the requ
 
 #### Passed Example 3
 
-This `autocomplete` [attribute value][] only has the required token. Mixing upper and lower case letters is allowed for `autocomplete` attributes.
+This `autocomplete` [attribute value][] only has the required token "street-address". Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
 <label> Street address<textarea autocomplete="Street-Address"></textarea></label>
@@ -133,6 +133,14 @@ This `autocomplete` [attribute value][] list includes all allowed types of token
 <label>Office email<input type="text" autocomplete="section-primary shipping work email"/></label>
 ```
 
+#### Passed Example 8
+
+This `autocomplete` [attribute value][] only has the required token "bday-day". It remains programmatically identifiable even though it is inappropriate for the control's `type` [attribute value][] "tel".
+
+```html
+<label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -145,7 +153,7 @@ This `autocomplete` [attribute value][] has an unknown term that is not a [corre
 
 #### Failed Example 2
 
-This `autocomplete` [attribute value][] has the `work` token on a [correct autocomplete field][], however, `work` can not be used with `photo`.
+This `autocomplete` [attribute value][] has the `work` token which is a [correct autocomplete field][]. However, `work` can not be used with `photo`.
 
 ```html
 <label>Photo<input autocomplete="work photo"/></label>

@@ -33,7 +33,7 @@ Each test target is [owned by][] an element that has a [semantic role][] that is
 
 ## Assumptions
 
-This rule assumes that the `role` attribute is used to give a [semantic role][] to the element according to ARIA specifications. If it is used for other purposes, and relationships between elements are already programmatically determinable by other means, it is possible to fail this rule but still satisfy [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+The rule assumes that the [explicit role][] of the applicable elements is appropriate for their element. I.e. A heading incorrectly marked up with `role="cell"` does not fail [success criterion 1.3.1 Info and Relationships][sc131] for not being in the context of a `row`. If the explicit role is both inappropriate and having that role does not cause other issues related to success criterion 1.3.1, the criterion can be satisfied even if this rule is `failed`.
 
 ## Accessibility Support
 
@@ -245,6 +245,7 @@ There is no element with an [explicit role][] different from its [implicit role]
 [owned by]: #owned-by 'Definition of Owned by'
 [required context role]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
 [required context roles]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc411]: https://www.w3.org/TR/WCAG21/#parsing 'Success Criterion 4.1.1 Parsing'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [subclass role]: https://www.w3.org/TR/wai-aria-1.1/#subclassroles 'ARIA Specification of Subclass Role'

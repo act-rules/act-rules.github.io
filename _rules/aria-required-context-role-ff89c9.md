@@ -86,7 +86,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 3
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its direct children in DOM. The presentational node is not [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its children in DOM. The presentational node is not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -109,7 +109,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 5
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its direct DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2">
@@ -146,7 +146,7 @@ This element with an [explicit role][] of `listitem` is not a child in the [acce
 
 #### Failed Example 2
 
-These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][], but of the `tabpanel`.
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][], but of an element with the `tabpanel` role.
 
 ```html
 <div role="list">

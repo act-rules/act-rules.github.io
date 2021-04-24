@@ -167,7 +167,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 ```html
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="../test-assets/bypass-blocks-cf77f2/styles.css" />
+		<link rel="stylesheet" href="/test-assets/bypass-blocks-cf77f2/styles.css" />
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
@@ -197,7 +197,7 @@ In this [document][], the first `div` element is an [instrument][] to move the f
 ```html
 <html lang="en">
 	<head>
-		<script src="../test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
+		<script src="/test-assets/bypass-blocks-cf77f2/click-on-enter.js"></script>
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body onload="ClickOnEnter('skip-link')">

@@ -31,7 +31,7 @@ This rules applies to any HTML element with a `lang` [attribute value][] that is
 
 - **descendant**: the element is a [descendant][] in the [flat tree][] of a `body` element; and
 - **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
-- **visible or included in the accessibility tree**: the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
+- **available**: the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
 
 ## Expectation
 

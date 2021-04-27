@@ -120,7 +120,7 @@ This document has a button at the start of the document to toggle the [visibilit
 
 #### Passed Example 3
 
-This document has two dedicated [instruments][] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the complementary and the navigational [blocks of repeated content][block of repeated content] respectively.
+This document has two dedicated [instruments][instrument] to toggle the [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of the complementary and the navigational [blocks of repeated content][block of repeated content] respectively.
 
 ```html
 <html>

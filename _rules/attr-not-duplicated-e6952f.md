@@ -55,7 +55,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-This `img` tag contains no duplicated attributes.
+This `img` element contains no duplicated attributes.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
@@ -63,7 +63,7 @@ This `img` tag contains no duplicated attributes.
 
 #### Passed Example 2
 
-This `br` tag contains no attributes, therefore there is no duplicated attribute.
+This `br` element contains no attributes, so there is no duplicated attribute.
 
 ```html
 <br />
@@ -71,7 +71,7 @@ This `br` tag contains no attributes, therefore there is no duplicated attribute
 
 #### Passed Example 3
 
-This `input type="checkbox"` tag contains empty attributes, therefore no attributes are duplicated.
+This `input` element with a `type` attribute value of `checkbox` contains two different empty attributes.
 
 ```html
 <input type="checkbox" disabled readonly />
@@ -79,7 +79,7 @@ This `input type="checkbox"` tag contains empty attributes, therefore no attribu
 
 #### Passed Example 4
 
-This `SVG` element contains no duplicated attributes.
+This `SVG` element contains no attributes.
 
 ```html
 <svg>
@@ -89,7 +89,7 @@ This `SVG` element contains no duplicated attributes.
 
 #### Passed Example 5
 
-This `script` tag contains duplicated attributes, but they are ignored because they are placed within the `script` tag.
+This `script` element contains duplicated attributes, but they are ignored because they are placed within the `script` tag.
 
 ```html
 <script>
@@ -101,7 +101,7 @@ This `script` tag contains duplicated attributes, but they are ignored because t
 
 #### Failed Example 1
 
-This `img` tag contains one duplicated attribute.
+This `img` element contains a duplicated `alt` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />
@@ -109,7 +109,7 @@ This `img` tag contains one duplicated attribute.
 
 #### Failed Example 2
 
-This `input type="checkbox"` tag contains one duplicated attribute.
+This `input` element with a `type` attribute value of `checkbox` contains a duplicate `disabled` attribute.
 
 ```html
 <input type="checkbox" disabled="disabled" disabled readonly />
@@ -117,7 +117,7 @@ This `input type="checkbox"` tag contains one duplicated attribute.
 
 #### Failed Example 3
 
-This `SVG` element contains two duplicated attributes.
+This `line` element contains duplicate `x1` and duplicate `y1 ` attributes.
 
 ```html
 <svg>
@@ -145,5 +145,5 @@ This code is XML, not HTML or SVG.
 This code is JavaScript, not HTML or SVG.
 
 ```js
-var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />'
+var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />'
 ```

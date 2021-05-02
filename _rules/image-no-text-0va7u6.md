@@ -30,16 +30,16 @@ acknowledgments:
 
 ## Applicability
 
-The rules applies to any [rendered image resources][] in a [web page][].
+This rules applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 
 For each test target, at least one of the following is true:
 
-- the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
-- the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
-- the [embedded image][] the test target belongs to is [purely decorative][].
+- **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
+- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
+- **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
+- **decoration**: the [embedded image][] the test target belongs to is [purely decorative][].
 
 ## Assumptions
 
@@ -74,7 +74,7 @@ This image resource referenced by the `img` element does not contain text.
 This image resource referenced by the `input` element does not contain text.
 
 ```html
-<input type="image" src="test-assets/shared/file.svg" alt="New file" />
+<input type="image" src="/test-assets/shared/file.svg" alt="New file" />
 ```
 
 #### Passed Example 3
@@ -123,7 +123,7 @@ This image resource referenced by the `background-image` property of the `div` e
 	style="
     width: 100px;
     height: 100px;
-    background-image: url(test-assets/shared/w3c-logo.png);
+    background-image: url(/test-assets/shared/w3c-logo.png);
     background-repeat: no-repeat;
   "
 ></div>
@@ -140,7 +140,7 @@ This image resource referenced by the `img` element is an image of text (the boo
 
 #### Passed Example 8
 
-These images resources referenced by the `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
+Those image resources referenced by the `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
 
 ```html
 <input
@@ -165,7 +165,7 @@ These images resources referenced by the `input` elements are images of text (th
 
 #### Failed Example 1
 
-This image resource referenced by the `img` element contains text and the way the text is presented is not relevant.
+This image resource referenced by the `img` element contains text for which the particular presentation is not essential.
 
 ```html
 <img
@@ -176,7 +176,7 @@ This image resource referenced by the `img` element contains text and the way th
 
 #### Failed Example 2
 
-This image resource referenced by the `input` element in the [Image Button][] contains text and the way the text is presented is not relevant.
+This image resource referenced by the `input` element in the [Image Button][] contains text for which the particular presentation is not essential.
 
 ```html
 <input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
@@ -184,7 +184,7 @@ This image resource referenced by the `input` element in the [Image Button][] co
 
 #### Failed Example 3
 
-This image resource referenced by the `background-image` property of the `div` element contains text and the way the text is presented is not relevant.
+This image resource referenced by the `background-image` property of the `div` element contains text for which the particular presentation is not essential.
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />

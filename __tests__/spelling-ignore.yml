@@ -80,6 +80,7 @@
 - accesskey
 - Accesskeys
 - kerning
+- drawImage
 - pragma
 
 # spell checker checks against strict casing & hence some repeated words here

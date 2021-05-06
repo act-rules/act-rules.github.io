@@ -18,7 +18,7 @@ The _text inheriting its programmatic language_ from an element E is composed of
 An element F is an _element inheriting its programmatic language_ from an element E if one of the following conditions is true (recursively):
 
 - F is E itself (an element always inherits its programmatic language from itself); or
-- F does not have a non-empty `lang` attribute, and is the child in the [flat tree][] of an element with the same programmatic language as E; or
+- F does not have a non-empty `lang` attribute, and is the child in the [flat tree][] of an element inheriting its programmatic language from E; or
 - F is a [fully active][] [document][] element, has no non-empty `lang` attribute, and its [browsing context container][] is an element inheriting its programmatic language from E.
 
 [accessible description]: https://www.w3.org/TR/accname-1.1/#dfn-accessible-description 'Definition of Accessible description'

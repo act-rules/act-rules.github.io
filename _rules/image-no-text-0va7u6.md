@@ -30,7 +30,7 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any [rendered image resources][] in a [web page][].
+This rule applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 

@@ -140,7 +140,7 @@ This image resource referenced by the `img` element is an image of text (the boo
 
 #### Passed Example 8
 
-Those image resources referenced by the `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
+These image resources referenced by the `input` elements are images of text (the letter "A"), but they are not expressing anything in a [human language][]. The image is only used to indicate how the font size can be controlled.
 
 ```html
 <input

@@ -10,12 +10,17 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag-technique:ARIA19: # Using ARIA role=alert or Live Regions to Identify Errors
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:ARIA22: # Using role=status to present status messages
     forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:ARIA19: # Using ARIA role=alert or Live Regions to Identify Errors
+  wcag-technique:ARIA23: # Using role=log to identify sequential information updates
     forConformance: false
     failed: not satisfied
     passed: further testing needed
@@ -45,7 +50,7 @@ Each test target has an implicit or explicit `aria-live` property value that is 
 
 The text changes meet the definition of [status message][]. If this is not the case, success criterion 4.1.3 Status Messages may be satisfied even if this rule failed.
 
-This rule assumes that the [explicit role][] of the elements does not need to be appropriate to satisfy success criterion 4.1.3 Status Messages. For example, a status message can be programmatically determined when it's' using `role="alert"` on elements with score updates even though the `role="status"` appears to be more appropriate.
+This rule assumes that the [explicit role][] of the elements does not need to be appropriate to satisfy success criterion 4.1.3 Status Messages. For example, a status message can be programmatically determined when it's using `role="alert"` on elements with score updates even though the `role="status"` appears to be more appropriate.
 
 ## Accessibility Support
 

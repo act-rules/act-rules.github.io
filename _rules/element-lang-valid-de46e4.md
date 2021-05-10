@@ -29,9 +29,9 @@ acknowledgments:
 
 This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
-- **descendant** the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- **content type** the element has an associated [node document][] with a [content type][] of `text/html`; and
-- **text** there is some non-empty [text inheriting its programmatic language][] from the element.
+- **descendant**: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
+- **text**: there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 

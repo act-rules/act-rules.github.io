@@ -106,7 +106,7 @@ This `video` element has a custom [instrument][] to pause or stop or turn the au
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
-			<button type="button" id="play-pause" class="play">Play</button>
+			<button type="button" id="play-pause" class="play">Pause</button>
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>
@@ -163,7 +163,7 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 		</video>
 		<!-- Video Controls -->
 		<div id="video-controls">
-			<button type="button" id="play-pause" class="play">Play</button>
+			<button type="button" id="play-pause" class="play">Pause</button>
 			<button type="button" id="mute">Mute</button>
 		</div>
 	</div>

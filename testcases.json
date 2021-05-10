@@ -12692,10 +12692,10 @@
       }
     },
     {
-      "testcaseId": "de703dec892ee672899ed6cd8767a87364dac693",
+      "testcaseId": "58c4edcf154896a265b73314180db6bd37efc6d1",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/0va7u6/de703dec892ee672899ed6cd8767a87364dac693.html",
-      "relativePath": "testcases/0va7u6/de703dec892ee672899ed6cd8767a87364dac693.html",
+      "url": "https://act-rules.github.io/testcases/0va7u6/58c4edcf154896a265b73314180db6bd37efc6d1.html",
+      "relativePath": "testcases/0va7u6/58c4edcf154896a265b73314180db6bd37efc6d1.html",
       "expected": "passed",
       "ruleId": "0va7u6",
       "ruleName": "HTML graphics contain no text",
@@ -12788,10 +12788,10 @@
       }
     },
     {
-      "testcaseId": "29e927247fbf494f715d63b447032dfbc35ecaee",
+      "testcaseId": "fa340d3fa83fbc9819edd7d31cdfebd465056644",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/0va7u6/29e927247fbf494f715d63b447032dfbc35ecaee.html",
-      "relativePath": "testcases/0va7u6/29e927247fbf494f715d63b447032dfbc35ecaee.html",
+      "url": "https://act-rules.github.io/testcases/0va7u6/fa340d3fa83fbc9819edd7d31cdfebd465056644.html",
+      "relativePath": "testcases/0va7u6/fa340d3fa83fbc9819edd7d31cdfebd465056644.html",
       "expected": "passed",
       "ruleId": "0va7u6",
       "ruleName": "HTML graphics contain no text",

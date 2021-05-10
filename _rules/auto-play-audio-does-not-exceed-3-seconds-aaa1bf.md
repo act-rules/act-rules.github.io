@@ -28,7 +28,7 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
 - **not muted**: the element has a `muted` [attribute value][] of `false`; and
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **duration**: the element has a [media resource][] that contains audio lasting more than 3 seconds.
+- **duration**: the element has a [media resource][] lasting more than 3 seconds that contains audio.
 
 ## Expectation
 

@@ -2986,10 +2986,10 @@
       }
     },
     {
-      "testcaseId": "eb487295d702179812c026c102f025945ea448b9",
+      "testcaseId": "cf4bc23e70caa9b42a6f82739a8492cb51393dbc",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/4c31df/eb487295d702179812c026c102f025945ea448b9.html",
-      "relativePath": "testcases/4c31df/eb487295d702179812c026c102f025945ea448b9.html",
+      "url": "https://act-rules.github.io/testcases/4c31df/cf4bc23e70caa9b42a6f82739a8492cb51393dbc.html",
+      "relativePath": "testcases/4c31df/cf4bc23e70caa9b42a6f82739a8492cb51393dbc.html",
       "expected": "passed",
       "ruleId": "4c31df",
       "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
@@ -3040,10 +3040,10 @@
       }
     },
     {
-      "testcaseId": "55bb99a2a77e7c1c924e73c4cac24cd193e9a2a1",
+      "testcaseId": "06e3bcbe22a1fb452df499d522ab74305ab95b06",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/4c31df/55bb99a2a77e7c1c924e73c4cac24cd193e9a2a1.html",
-      "relativePath": "testcases/4c31df/55bb99a2a77e7c1c924e73c4cac24cd193e9a2a1.html",
+      "url": "https://act-rules.github.io/testcases/4c31df/06e3bcbe22a1fb452df499d522ab74305ab95b06.html",
+      "relativePath": "testcases/4c31df/06e3bcbe22a1fb452df499d522ab74305ab95b06.html",
       "expected": "failed",
       "ruleId": "4c31df",
       "ruleName": "`audio` or `video` that plays automatically has a control mechanism",

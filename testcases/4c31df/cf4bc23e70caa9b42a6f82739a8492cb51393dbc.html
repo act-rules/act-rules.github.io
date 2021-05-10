@@ -1,0 +1,28 @@
+<!DOCTYPE html> <head>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="video-container">
+		<!-- Video -->
+		<video id="video" autoplay>
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls">
+			<button type="button" id="play-pause" class="play">Pause</button>
+			<button type="button" id="mute">Mute</button>
+		</div>
+	</div>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
+</body>

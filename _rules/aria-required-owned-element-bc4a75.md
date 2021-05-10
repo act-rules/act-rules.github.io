@@ -235,7 +235,7 @@ This element with the `progressbar` role does not need [required owned elements]
 
 #### Inapplicable Example 4
 
-This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
+This element with the `menu` role has an `aria-busy` attribute set to `true`.
 
 ```html
 <ul role="menu" aria-busy="true">

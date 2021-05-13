@@ -85,7 +85,7 @@ This `a` element has an [accessible name][] from its content.
 This `div` element has an [explicit semantic role](#explicit-role) of `link` and an [accessible name][] from its content.
 
 ```html
-<div role="link" onclick="window.location.href='https://www.w3.org/WAI/'">Web Accessibility Initiative (WAI)</div>
+<div role="link" onclick="window.location.href='https://www.w3.org/WAI/'" tabindex="0">Web Accessibility Initiative (WAI)</div>
 ```
 
 #### Passed Example 3

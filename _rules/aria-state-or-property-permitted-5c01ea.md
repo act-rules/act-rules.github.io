@@ -195,7 +195,6 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
-[role]: https://www.w3.org/TR/core-aam/#dfn-role
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'

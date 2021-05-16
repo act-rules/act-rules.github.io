@@ -32,9 +32,7 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 ## Expectation
 
-Each test target is either an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the attribute is specified. If the element has no [semantic role][], the attribute must be a [global state or property][global].
-
-**Note:** Assessing the value of the attribute is out of scope for this rule.
+Each test target is either an [inherited][], [supported][], or [required][] [state][] or [property][] for the element's [semantic role][] or the [WAI-ARIA state or property][] may be used on the language feature. If the element has no [semantic role][], the attribute must be a [global state or property][global].
 
 ## Assumptions
 
@@ -46,12 +44,17 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML Editor's Draft](https://w3c.github.io/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.1/#usage_intro). For example, `audio` has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.1/#application).
+
+Assessing the value of the attribute is out of scope for this rule.
+
 - [ARIA state or property has valid value](https://act-rules.github.io/rules/6a7281)
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
+- [Document conformance requirements for use of ARIA attributes in HTML](https://w3c.github.io/html-aria/#docconformance)
 
 ## Test Cases
 
@@ -139,6 +142,14 @@ This `button` element has an [explicit role][] of `none`. However, it is [focusa
 <button role="none" aria-pressed="false">ACT rules are cool!</button>
 ```
 
+#### Passed Example 11
+
+This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used on such language feature.
+
+```html
+<label>Password<input type="password" aria-required="true" /></label>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -147,6 +158,14 @@ The `aria-sort` [property][] is neither [inherited][], [supported][], nor [requi
 
 ```html
 <button aria-sort="">Sort by year</button>
+```
+
+#### Failed Example 2
+
+The `aria-orientation` property may not be used on `audio` element, nor it can be used on `application` (the [semantic role][] for which [inherited][], [supported][], or [required][] [states][state] or [properties][property] are also applicable to `audio` element).
+
+```html
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal" ></audio>
 ```
 
 ### Inapplicable
@@ -176,6 +195,7 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
+[role]: https://www.w3.org/TR/core-aam/#dfn-role
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'

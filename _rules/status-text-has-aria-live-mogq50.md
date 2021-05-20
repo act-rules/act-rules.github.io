@@ -40,11 +40,15 @@ acknowledgments:
 This rule applies to any [HTML element][] that has a [text node][] as a [descendant][] in the [flat tree][] if all of the following are true:
 
 - **available**: the element is [included in the accessibility tree][]; and
-- **change**: the element or its [text node][] value is an [event originated change in the content][].
+- **change**: the element or its [descendant][] [text node][] value is an [event originated change in the content][].
 
-## Expectation
+## Expectation 1
 
 There exists at least one test target with an implicit or explicit `aria-live` value of "assertive" or "polite" for [event originated changes in the content][event originated change in the content] that communicate the same message.
+
+## Expectation 2
+
+The [HTML element][] with an implicit or explicit `aria-live` value of "assertive" or "polite" is an [ancestor][] in the [flat tree][] of the [HTML element][] or [text node][] that [changes][event originated change in the content].
 
 ## Assumptions
 
@@ -508,6 +512,7 @@ This `p` element is not included in the accessibility tree through the `display:
 <p style="display:none;" role="status">10 results out of 20</p>
 ```
 
+[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
 [event originated change in the content]: https://act-rules.github.io/glossary/#changes-in-content 'Definition of changes in content'
 [explicit role]: https://act-rules.github.io/glossary/#explicit-role 'Definition of explicit semantic role'
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant

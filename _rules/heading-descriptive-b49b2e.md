@@ -27,8 +27,6 @@ acknowledgments:
 
 This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
 
-**Note:** This rule only applies to elements with the [semantic role][] of heading. Thus, it is a partial check for WCAG 2.0 success criterion 2.4.6, which applies to all headings. "Heading" is used in its general sense and includes headlines and other ways to add a heading to different types of content. This includes elements that are not marked up as headings in the code, but still act visually as headings, e.g. by larger and/or bolder text.
-
 ## Expectation 1
 
 Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].

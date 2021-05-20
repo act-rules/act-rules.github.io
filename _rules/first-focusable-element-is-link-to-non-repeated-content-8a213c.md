@@ -25,15 +25,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML web page][].
+This rule applies to any [HTML web page][] with a non-empty [sequential focus navigation order][sequential focus navigation].
 
-## Expectation 1
+## Expectation
 
-Each test target has a non-empty [sequential focus navigation order][sequential focus navigation].
-
-## Expectation 2
-
-For each test target, all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
+For each test target, either it contains no [block of repeated content][], or all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
 
 - the element is [keyboard actionable][]; and
 - the element is [included in the accessibility tree][]; and

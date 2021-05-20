@@ -23,17 +23,24 @@ acknowledgments:
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
+NEED TO SPLIT. Rule 1: no repeated content. Rule 2: this :-/
+
 ## Applicability
 
-This rule applies to any [HTML web page][] with a non-empty [sequential focus navigation order][sequential focus navigation].
+This rule applies to any [HTML web page][].
 
-## Expectation
+## Expectation 1
+
+Each test target has a non-empty [sequential focus navigation order][sequential focus navigation].
+
+## Expectation 2
 
 For each test target, either it contains no [block of repeated content][], or all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
 
 - the element is [keyboard actionable][]; and
 - the element is [included in the accessibility tree][]; and
 - the element is a [semantic link][]; and
+- the element is [visible][] when it is [focused][]; and
 - when the element is [activated][], focus moves [just before][] a node of [non-repeated content after repeated content][]; and
 - the element has an [accessible name][] that communicates that it skips to the main content area.
 
@@ -54,6 +61,8 @@ _There are no major accessibility support issues known for this rule._
 The intention of this rule is that focus is moved to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional conditions on this destination were considered and rejected when writing the rule since it might be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document. Therefore, it is possible to pass this rule but still fail [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 
 This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
+
+The link may be [visible][] or not when it is not [focused][]. This rule (and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]) requires it to be [visible][] when [focused][] but doesn't put any constraint on [visibility][visible] when not [focused][].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 

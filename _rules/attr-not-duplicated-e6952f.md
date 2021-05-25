@@ -71,7 +71,7 @@ This `br` element contains no attributes, so there is no duplicated attribute.
 
 #### Passed Example 3
 
-This `input` element with a `type` attribute value of `checkbox` contains two different empty attributes.
+This `input` element contains three different attributes, two of them being empty.
 
 ```html
 <input type="checkbox" disabled readonly />
@@ -109,7 +109,7 @@ This `img` element contains a duplicated `alt` attribute.
 
 #### Failed Example 2
 
-This `input` element with a `type` attribute value of `checkbox` contains a duplicate `disabled` attribute.
+This `input` element contains a duplicate `disabled` attribute.
 
 ```html
 <input type="checkbox" disabled="disabled" disabled readonly />

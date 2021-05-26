@@ -59,7 +59,7 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
-The arbitrary 10 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
+The 10 minute time span in the applicability is arbitrary. It is selected so that testing this rule would not become impractical. This 10 minute constraint is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
 
 - [Understanding Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]
 - [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][g186]

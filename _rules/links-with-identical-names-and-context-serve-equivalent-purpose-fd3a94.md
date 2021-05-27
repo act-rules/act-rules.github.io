@@ -79,9 +79,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+			>About us</a
 		>) and get in touch (
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>)
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a>)
 	</p>
 </html>
 ```
@@ -94,9 +94,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+			>About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>
@@ -110,10 +110,10 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+			>About us</a
 		>) and get in touch (<a
 			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>

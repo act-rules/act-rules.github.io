@@ -80,6 +80,8 @@ This rule only checks if there is a way to bypass at least one section of repeat
 
 ## Background
 
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.4.1 Bypass Block][sc241]. These extra requirements are left out of this rule, and of the definition of [instrument][], for the sake of simplicity.
+
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - Creating links to skip blocks of content:
   - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]

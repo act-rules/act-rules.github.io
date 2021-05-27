@@ -1,20 +1,18 @@
 ---
-id: 8a213c
-name: First focusable element is link to non-repeated content
-rule_type: atomic
+id: kh5ids
+name: Document has no repeated content, or a skip link as its first focusable element
+rule_type: composite
 description: |
-  This rule checks that the first focusable element is a link to non-repeated content in the page
+  This rule checks that if a document has repeated content, then the first focusable element is a link to non-repeated content in the page
 accessibility_requirements:
   wcag-technique:G1: # Adding a link at the top of each page that goes directly to the main content area
     forConformance: false
     failed: not satisfied
     passed: satisfied
     inapplicable: further testing needed
-input_aspects:
-  - Accessibility Tree
-  - CSS styling
-  - DOM Tree
-  - Language
+input_rules:
+  - r18umj
+  - 8a213c
 acknowledgments:
   authors:
     - Jean-Yves Moyen
@@ -22,26 +20,16 @@ acknowledgments:
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
-NEED TO SPLIT. Rule 1: no repeated content. Rule 2: this :-/
-
 ## Applicability
 
 This rule applies to any [HTML web page][].
 
-## Expectation 1
+## Expectation
 
-Each test target has a non-empty [sequential focus navigation order][sequential focus navigation].
+For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-## Expectation 2
-
-For each test target, all the following are true for the first element in its [sequential focus navigation order][sequential focus navigation]:
-
-- the element is [keyboard actionable][]; and
-- the element is [included in the accessibility tree][]; and
-- the element is a [semantic link][]; and
-- the element is [visible][] when it is [focused][]; and
-- when the element is [activated][], focus moves [just before][] a node of [non-repeated content after repeated content][]; and
-- the element has an [accessible name][] that communicates that it skips to the main content area.
+- [Document Has no Repeated Content][no repeated content]
+- [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link]
 
 ## Assumptions
 
@@ -59,9 +47,7 @@ _There are no major accessibility support issues known for this rule._
 
 The intention of this rule is that focus is moved to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional conditions on this destination were considered and rejected when writing the rule since it might be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document. Therefore, it is possible to pass this rule but still fail [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 
-This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Moreover, any document passing this rule will also pass rule [_Document has an instrument to move focus to non-repeated content_][document has instrument to main], therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
-
-The link may be [visible][] or not when it is not [focused][]. This rule (and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]) requires it to be [visible][] when [focused][] but doesn't put any constraint on [visibility][visible] when not [focused][].
+This rule and [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] are best practices to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. It is possible to satisfy it by other means. Therefore, this rule is not needed to pass rule [_Bypass blocks of repeated content_][bypass blocks].
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 
@@ -73,7 +59,27 @@ Unless specified otherwise, the non-repeated content of each test case is its `m
 
 #### Passed Example 1
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] link, [included in the accessibility tree][], and when [activated][] moves the focus to the non-repeated content. Its [accessible name][] (coming from content) communicates that it skips to the main content.
+This [document][] passes rule [Document Has no Repeated Content][no repeated content].
+
+```html
+<html lang="en">
+	<head>
+		<title>The Three Kingdoms, Chapter 1</title>
+	</head>
+	<body>
+		<main id="main">
+			<p>
+				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
+				of time.
+			</p>
+		</main>
+	</body>
+</html>
+```
+
+#### Passed Example 2
+
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -98,9 +104,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the link is normally hidden but is [visible][] when [focused][].
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -126,9 +132,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the [activation][activated] behavior, and the possibility to [activate][activated] the element with keyboard, is done by scripting and by having a `tabindex` attribute with a value of 0.
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -154,9 +160,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, the link is rendered as non-text content and has an [accessible name][] given by its `aria-label` attribute.
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -181,9 +187,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, it is the first [focusable][] element, even though it is located after the `aside` element in tree order. Note that such a link is not very useful for users who read sequentially (as there is nothing more to skip once the link is reached) and is only useful for users who can pull a list of links and follow them independently of reading order (such a functionality is often present in assistive technologies).
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -208,9 +214,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. In this case, it is the first [focusable][] element, even though it is the second link in tree order, but the focus order has been changed by the `tabindex` attributes.
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -238,9 +244,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is inside a [block of repeated content][], it is nonetheless [just before][] the [non-repeated content after repeated content][] `p` element because there is no [perceivable content][] between the link target and the non-repeated content. Thus, following the link does skip all the repeated content.
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -266,9 +272,9 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 </html>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
-In this [document][], the first [focusable][] element is a [keyboard actionable][] skip link; it is [included in the accessibility tree][] and has a descriptive [accessible name][]. Even though its target is not the first element out of the [block of repeated content][], it is still [just before][] the first [non-repeated content after repeated content][] `p` element because it is before any [perceivable content][] outside the [block of repeated content][]. Thus, following the link does not skip any non-repeated content.
+This [document][] passes rule [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -299,7 +305,7 @@ In this [document][], the first [focusable][] element is a [keyboard actionable]
 
 #### Failed Example 1
 
-This document has no link to skip to the non-repeated content.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -324,7 +330,7 @@ This document has no link to skip to the non-repeated content.
 
 #### Failed Example 2
 
-In this [document][], the link to skip to the non-repeated content does not reference a valid `id` attribute and thus when [activated][] will not move focus to the non-repeated content.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -351,7 +357,7 @@ In this [document][], the link to skip to the non-repeated content does not refe
 
 #### Failed Example 3
 
-In this [document][], the link to skip to the non-repeated content is not the first [focusable][] element within the page.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -381,7 +387,7 @@ In this [document][], the link to skip to the non-repeated content is not the fi
 
 #### Failed Example 4
 
-In this [document][], the first [focusable][] element is the link to ACT rules. The link to the non-repeated content is located before in tree order but after in focus order due to the `tabindex` attributes.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -411,7 +417,7 @@ In this [document][], the first [focusable][] element is the link to ACT rules. 
 
 #### Failed Example 5
 
-In this [document][], the link to skip to the non-repeated content is not [keyboard actionable][] because it is not in [sequential focus navigation][] order.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -439,7 +445,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 
 #### Failed Example 6
 
-In this [document][], the link to skip to the non-repeated content is not [keyboard actionable][] because it is not [visible][], even when focused.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -467,7 +473,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 
 #### Failed Example 7
 
-In this [document][], the link to skip to the non-repeated content is not [keyboard actionable][] because it cannot be [activated][] by using the keyboard.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -494,7 +500,7 @@ In this [document][], the link to skip to the non-repeated content is not [keybo
 
 #### Failed Example 8
 
-In this [document][], the link to skip to the non-repeated content is not [included in the accessibility tree][].
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -521,7 +527,7 @@ In this [document][], the link to skip to the non-repeated content is not [inclu
 
 #### Failed Example 9
 
-In this [document][], the element to skip to the non-repeated content does not have a [semantic role][] of `link` (it has a role of `button`).
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -548,7 +554,7 @@ In this [document][], the element to skip to the non-repeated content does not h
 
 #### Failed Example 10
 
-In this [document][], the link to skip to the non-repeated content does not have an [accessible name][] that communicates its intent.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -575,7 +581,7 @@ In this [document][], the link to skip to the non-repeated content does not have
 
 #### Failed Example 11
 
-In this [document][], the link to skip to the non-repeated content has a [whitespace][] only, hence non-descriptive, [accessible name][].
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -602,7 +608,7 @@ In this [document][], the link to skip to the non-repeated content has a [whites
 
 #### Failed Example 12
 
-In this [document][], the first [focusable][] element does not move focus [just before][] a node of [non-repeated content after repeated content][]. The focus is moved to a node of [perceivable content][] inside a [block of repeated content][]. Thus, following the link does not skip all the repeated content.
+This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -645,12 +651,14 @@ This [document][] is not an [HTML web page][].
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
+[first focusable is skip link]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element is Link to Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [just before]: #just-before 'Definition of Just Before a Node'
 [keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
+[no repeated content]: https://act-rules.github.io/rules/r18umj 'Rule Document Has no Repeated Content'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'

@@ -28,14 +28,14 @@ This rule applies to any [HTML web page][].
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Document Has no Repeated Content][no repeated content]
+- [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content]
 - [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link]
 
 ## Assumptions
 
-- This rule assumes that the first non-repeated content after some repeated content is the primary content of the page. If this is not the case, it is possible to fail this rule while still passing [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
+- This rule assumes that the primary content of the page is [non-repeated content after repeated content][]. If this is not the case, it is possible to fail this rule while still passing [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 - This rule assumes that the description of the link is provided through its [accessible name][].
-- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
+- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users). The technique uses the term "activating the link" without being clear whether this is by mouse, keyboard, or other means; given the emphasize put on keyboard usage in the description, the rule assume that "activating" includes "activating by keyboard".
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). If such a banner is taken into account, the rule may fail incorrectly.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
@@ -59,7 +59,7 @@ Unless specified otherwise, the non-repeated content of each test case is its `m
 
 #### Passed Example 1
 
-This [document][] passes rule [Document Has no Repeated Content][no repeated content].
+This [document][] passes rule [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content].
 
 ```html
 <html lang="en">
@@ -305,7 +305,7 @@ This [document][] passes rule [First Focusable Element is Link to Non-Repeated C
 
 #### Failed Example 1
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -330,7 +330,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 2
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -357,7 +357,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 3
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -387,7 +387,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 4
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -417,7 +417,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 5
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -445,7 +445,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 6
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -473,7 +473,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 7
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -500,7 +500,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 8
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -527,7 +527,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 9
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -554,7 +554,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 10
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -581,7 +581,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 11
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -608,7 +608,7 @@ This [document][] fails both [Document Has no Repeated Content][no repeated cont
 
 #### Failed Example 12
 
-This [document][] fails both [Document Has no Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
+This [document][] fails both [Document Has no Repeated Content Followed by Non-Repeated Content][no repeated content] and [First Focusable Element is Link to Non-Repeated Content][first focusable is skip link].
 
 ```html
 <html lang="en">
@@ -647,24 +647,12 @@ This [document][] is not an [HTML web page][].
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [activated]: https://html.spec.whatwg.org/#activation 'Definition of Activation'
-[block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [bypass blocks]: https://act-rules.github.io/rules/cf77f2 'Rule Bypass Blocks of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
 [first focusable is skip link]: https://act-rules.github.io/rules/8a213c 'Rule First Focusable Element is Link to Non-Repeated Content'
-[focusable]: #focusable 'Definition of Focusable'
-[focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[just before]: #just-before 'Definition of Just Before a Node'
-[keyboard actionable]: #keyboard-actionable-element 'Definition of Keyboard Actionable Element'
-[no repeated content]: https://act-rules.github.io/rules/r18umj 'Rule Document Has no Repeated Content'
-[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
-[perceivable content]: #perceivable-content 'Definition of Perceivable Content'
+[no repeated content]: https://act-rules.github.io/rules/r18umj 'Rule Document Has no Repeated Content Followed by Non-Repeated Content'
+[non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content After Repeated Content'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[semantic link]: #semantic-link 'Definition of Semantic Link'
-[semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML definition of Sequential Focus Navigation'
 [tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
-[visible]: #visible 'Definition of Visible'
-[whitespace]: #whitespace 'Definition of whitespace'

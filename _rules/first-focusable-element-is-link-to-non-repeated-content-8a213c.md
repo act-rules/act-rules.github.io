@@ -22,8 +22,6 @@ acknowledgments:
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
 
-NEED TO SPLIT. Rule 1: no repeated content. Rule 2: this :-/
-
 ## Applicability
 
 This rule applies to any [HTML web page][].
@@ -45,9 +43,9 @@ For each test target, all the following are true for the first element in its [s
 
 ## Assumptions
 
-- This rule assumes that the first non-repeated content after some repeated content is the primary content of the page. If this is not the case, it is possible to fail this rule while still passing [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
+- This rule assumes that the primary content of the page is [non-repeated content after repeated content][]. If this is not the case, it is possible to fail this rule while still passing [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1].
 - This rule assumes that the description of the link is provided through its [accessible name][].
-- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users).
+- This rule assumes that [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] requires that the link can be [activated][] by use of keyboard, including being part of [sequential focus navigation][] (in order to be useful for keyboard users). The technique uses the term "activating the link" without being clear whether this is by mouse, keyboard, or other means; given the emphasize put on keyboard usage in the description, the rule assume that "activating" includes "activating by keyboard".
 - This rule assumes that any global dismissible information that only appears once per site has already been acknowledged and is not displayed anymore. Many sites display a cookies policy banner which might be stealing focus until dismissed (usually by viewing and accepting cookies policy). If such a banner is taken into account, the rule may fail incorrectly.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 

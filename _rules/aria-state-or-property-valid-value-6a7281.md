@@ -88,6 +88,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 ```html
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
+<div id="my-error">My error message</div>
 ```
 
 #### Passed Example 5

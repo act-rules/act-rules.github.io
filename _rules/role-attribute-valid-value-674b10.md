@@ -33,7 +33,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
+- the attribute is specified on an [HTML or SVG element][] that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -181,3 +181,4 @@ This `role` attribute is specified on an element which is not [included in the a
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
+[html or svg element]: #namespaced-element

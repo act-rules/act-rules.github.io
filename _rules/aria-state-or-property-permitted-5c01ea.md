@@ -32,7 +32,11 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 ## Expectation
 
-Each test target is either an [inherited][], [supported][], or [required][] [state][] or [property][] for the element's [semantic role][] or the [WAI-ARIA state or property][] may be used on the language feature. If the element has no [semantic role][], the attribute must be a [global state or property][global].
+One of the following is true for each test target:
+
+- **Global**: the test target is a [global state or property][global]; or
+- **Semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
+- **language feature**: for an HTML element, the test target is allowed on the element on which it is specified. Which ARIA state or property may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
 ## Assumptions
 

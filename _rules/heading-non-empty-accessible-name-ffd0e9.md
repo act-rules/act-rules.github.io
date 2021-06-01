@@ -10,11 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.6: # Headings and Labels (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag-technique:H42: # Using h1-h6 to identify headings
     forConformance: false
     failed: not satisfied

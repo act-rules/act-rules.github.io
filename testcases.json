@@ -23156,10 +23156,10 @@
       }
     },
     {
-      "testcaseId": "65f90eb26bee4323089eecbc3dda58bd9340a461",
+      "testcaseId": "00586dd2d086f7ffbd603ab6e1066e86635dbc8f",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/eac66b/65f90eb26bee4323089eecbc3dda58bd9340a461.html",
-      "relativePath": "testcases/eac66b/65f90eb26bee4323089eecbc3dda58bd9340a461.html",
+      "url": "https://act-rules.github.io/testcases/eac66b/00586dd2d086f7ffbd603ab6e1066e86635dbc8f.html",
+      "relativePath": "testcases/eac66b/00586dd2d086f7ffbd603ab6e1066e86635dbc8f.html",
       "expected": "passed",
       "ruleId": "eac66b",
       "ruleName": "`video` element auditory content has accessible alternative",

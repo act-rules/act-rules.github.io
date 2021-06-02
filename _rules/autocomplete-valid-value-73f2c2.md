@@ -23,7 +23,7 @@ acknowledgments:
 
 This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
 
-- **toggle**: the `autocomplete` attribute consists of a single token that is [ASCII case-insensitive][] match for string `off` or string `on`; or
+- **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
 - **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of `hidden`, `button`, `submit` or `reset`; or
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or

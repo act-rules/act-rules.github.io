@@ -148,7 +148,7 @@ This `button` element has an [explicit role][] of `none`. However, it is [focusa
 
 #### Passed Example 11
 
-This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used on such language feature.
+This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used `input` element with a `type` [attribute value][] of `password`.
 
 ```html
 <label>Password<input type="password" aria-required="true" /></label>

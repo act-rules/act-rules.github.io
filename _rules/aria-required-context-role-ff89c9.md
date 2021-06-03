@@ -33,7 +33,7 @@ Each test target is [owned by][] an element that has a [semantic role][] that is
 
 ## Assumptions
 
-The rule assumes that the [explicit role][] of the applicable elements is appropriate for their element. I.e. A heading incorrectly marked up with `role="cell"` does not fail [success criterion 1.3.1 Info and Relationships][sc131] for not being in the context of a `row`. If the explicit role is both inappropriate and having that role does not cause other issues related to success criterion 1.3.1, the criterion can be satisfied even if this rule is `failed`.
+The rule assumes that the [explicit role][] of the applicable elements is appropriate for their element. I.e. A heading incorrectly marked up with `role="cell"` does not fail [success criterion 1.3.1 Info and Relationships][sc131] for not being in the context of a `row`. Having an inappropriate role is itself an issue under 1.3.1 Info and Relationships, so in either scenario a failure of this rule means this success criterion is not satisfied.
 
 ## Accessibility Support
 

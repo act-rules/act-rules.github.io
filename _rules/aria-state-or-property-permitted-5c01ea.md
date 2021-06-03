@@ -34,8 +34,8 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 For each test target, one of the following is true:
 
-- **Global**: the test target is a [global state or property][global]; or
-- **Semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
+- **global**: the test target is a [global state or property][global]; or
+- **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an HTML element and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
 ## Assumptions
@@ -48,7 +48,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
-In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML Editor's Draft](https://w3c.github.io/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.1/#usage_intro). For example, `audio` has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.1/#application).
+In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML Editor's Draft](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.1/#usage_intro). For example, `audio` has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.1/#application).
 
 Assessing the value of the attribute is out of scope for this rule.
 
@@ -58,7 +58,7 @@ Assessing the value of the attribute is out of scope for this rule.
 - [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
 - [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
-- [Document conformance requirements for use of ARIA attributes in HTML](https://w3c.github.io/html-aria/#docconformance)
+- [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 
 ## Test Cases
 
@@ -148,7 +148,7 @@ This `button` element has an [explicit role][] of `none`. However, it is [focusa
 
 #### Passed Example 11
 
-This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used `input` element with a `type` [attribute value][] of `password`.
+This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used on an `input` element with a `type` [attribute value][] of `password`.
 
 ```html
 <label>Password<input type="password" aria-required="true" /></label>

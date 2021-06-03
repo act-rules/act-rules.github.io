@@ -32,7 +32,7 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 ## Expectation
 
-One of the following is true for each test target:
+For each test target, one of the following is true:
 
 - **Global**: the test target is a [global state or property][global]; or
 - **Semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or

@@ -193,5 +193,4 @@ This `h1` element is not [included in the accessibility tree][].
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
-[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding Success Criterion 2.4.6: Headings and Labels'
 [visible]: #visible 'Definition of visible'

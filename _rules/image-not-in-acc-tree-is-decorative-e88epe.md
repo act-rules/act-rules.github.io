@@ -3,7 +3,7 @@ id: e88epe
 name: Image not in the accessibility tree is decorative
 rule_type: atomic
 description: |
-  This rule checks that visible img, svg and canvas elements that are ignored by assistive technologies are decorative
+  This rule checks that visible `img`, `svg` and `canvas` elements that are ignored by assistive technologies are decorative.
 accessibility_requirements:
   wcag20:1.1.1: # Non-text content (A)
     forConformance: true

@@ -233,7 +233,7 @@ There is no viewport `meta` element.
 <html>
 	<head>
 		<title>Redirect to W3C</title>
-		<meta http-equiv="refresh" content="0; URL='https://w3.org/'" />
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<p>

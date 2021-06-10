@@ -25200,10 +25200,10 @@
       }
     },
     {
-      "testcaseId": "12ecb3fb2d4c8eee005512bcac58df3a8966a256",
+      "testcaseId": "82c346e4ac0f1d92078c008f60f510fd36a1a9d1",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/ee13b5/12ecb3fb2d4c8eee005512bcac58df3a8966a256.html",
-      "relativePath": "testcases/ee13b5/12ecb3fb2d4c8eee005512bcac58df3a8966a256.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/82c346e4ac0f1d92078c008f60f510fd36a1a9d1.html",
+      "relativePath": "testcases/ee13b5/82c346e4ac0f1d92078c008f60f510fd36a1a9d1.html",
       "expected": "passed",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
@@ -25236,10 +25236,10 @@
       }
     },
     {
-      "testcaseId": "3313d72b310a009046cdad668452fb10977b4c35",
+      "testcaseId": "256292a7480138b52f6b2e1f09cf3c1ad94cd4bb",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/ee13b5/3313d72b310a009046cdad668452fb10977b4c35.html",
-      "relativePath": "testcases/ee13b5/3313d72b310a009046cdad668452fb10977b4c35.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/256292a7480138b52f6b2e1f09cf3c1ad94cd4bb.html",
+      "relativePath": "testcases/ee13b5/256292a7480138b52f6b2e1f09cf3c1ad94cd4bb.html",
       "expected": "failed",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
@@ -25272,10 +25272,10 @@
       }
     },
     {
-      "testcaseId": "ae653367aba4e4b5262b5cc9cfdb637f500aa1c2",
+      "testcaseId": "4581865d7490c677523761448180199acd177a64",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/ee13b5/ae653367aba4e4b5262b5cc9cfdb637f500aa1c2.html",
-      "relativePath": "testcases/ee13b5/ae653367aba4e4b5262b5cc9cfdb637f500aa1c2.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/4581865d7490c677523761448180199acd177a64.html",
+      "relativePath": "testcases/ee13b5/4581865d7490c677523761448180199acd177a64.html",
       "expected": "failed",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",
@@ -25290,10 +25290,10 @@
       }
     },
     {
-      "testcaseId": "a03d9dc076c9918b42a9056ffb77227b973571fb",
+      "testcaseId": "cc93463a901f16916b340ee39a0e706dd86ba4dd",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/ee13b5/a03d9dc076c9918b42a9056ffb77227b973571fb.html",
-      "relativePath": "testcases/ee13b5/a03d9dc076c9918b42a9056ffb77227b973571fb.html",
+      "url": "https://act-rules.github.io/testcases/ee13b5/cc93463a901f16916b340ee39a0e706dd86ba4dd.html",
+      "relativePath": "testcases/ee13b5/cc93463a901f16916b340ee39a0e706dd86ba4dd.html",
       "expected": "failed",
       "ruleId": "ee13b5",
       "ruleName": "`video` element visual-only content has transcript",

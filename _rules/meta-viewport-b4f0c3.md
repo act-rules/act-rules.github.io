@@ -232,7 +232,7 @@ There is no viewport `meta` element.
 ```html
 <html>
 	<head>
-		<title>Redirect to W3C</title>
+		<title>Lorem ipsum</title>
 		<meta charset="UTF-8">
 	</head>
 	<body>

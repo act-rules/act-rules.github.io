@@ -3,7 +3,7 @@ id: mogq50
 name: 'Status text update has `aria-live` property'
 rule_type: atomic
 description: |
-  This rule checks that any text update that meets the definition of a status message has either "polite" or "assertive" `aria-live` property.
+  This rule checks that any status message update has either "polite" or "assertive" `aria-live` property.
 accessibility_requirements:
   wcag21:4.1.3: # Status Messages (AA)
     forConformance: true
@@ -37,18 +37,18 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has a [text node][] as a [descendant][] in the [flat tree][] if all of the following are true:
+This rule applies to any [text node][] that is a [descendant][] of the [HTML element][] in the [flat tree][] if the [text node][] is [included in the accessibility tree][] and at least one of the following is true:
 
-- **available**: the element is [included in the accessibility tree][]; and
-- **change**: the element or its [descendant][] [text node][] value is an [event originated change in the content][].
+- **change**: the [text node][]'s [ancestor][]'s `innerText` property is changing; or
+- **create**: the [text node][]'s [ancestor][] is either [appended](https://dom.spec.whatwg.org/#concept-node-append) or [inserted](https://dom.spec.whatwg.org/#concept-node-insert); or
+- **replaced**: the [text node][]'s [ancestor][] was [replaced](https://dom.spec.whatwg.org/#concept-node-replace).
 
-## Expectation 1
+## Expectation
 
-There exists at least one test target with an implicit or explicit `aria-live` value of "assertive" or "polite" for [event originated changes in the content][event originated change in the content] that communicate the same message.
+For each test target at least one of the following is true:
 
-## Expectation 2
-
-The [HTML element][] with an implicit or explicit `aria-live` value of "assertive" or "polite" is an [ancestor][] in the [flat tree][] of the [HTML element][] or [text node][] that [changes][event originated change in the content].
+- the test target has an accessible object as an ancestor in the accessibility tree with an implicit or explicit `aria-live` value of "assertive" or "polite"; or
+- there is a text node with an equivalent message that has an accessible object as an ancestor in the accessibility tree with an implicit or explicit `aria-live` value of "assertive" or "polite".
 
 ## Assumptions
 
@@ -513,9 +513,9 @@ This `p` element is not included in the accessibility tree through the `display:
 ```
 
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [event originated change in the content]: https://act-rules.github.io/glossary/#changes-in-content 'Definition of changes in content'
 [explicit role]: https://act-rules.github.io/glossary/#explicit-role 'Definition of explicit semantic role'
-[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

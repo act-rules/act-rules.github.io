@@ -64,7 +64,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
@@ -96,7 +96,7 @@ This `video` element, which has no audio, has an incorrect text transcript avail
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
@@ -126,7 +126,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
@@ -142,7 +142,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```

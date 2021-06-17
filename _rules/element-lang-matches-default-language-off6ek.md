@@ -46,8 +46,7 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are used; this notably excludes
-  [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 
@@ -312,6 +311,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [most common language]: #most-common-element-language 'Definition of Common Language of an Element'
+[sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'

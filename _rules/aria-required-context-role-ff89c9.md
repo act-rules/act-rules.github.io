@@ -29,7 +29,7 @@ This rule applies to any HTML or SVG element that is [included in the accessibil
 
 ## Expectation
 
-Each test target is [owned by][] an element that has a [semantic role][] that is one of the [required context roles][] of the target element.
+Each test target is the child in the [accessibility tree][] of an element that has a [semantic role][] that is one of the [required context roles][] of the target element.
 
 ## Assumptions
 
@@ -37,7 +37,7 @@ This rule assumes that the `role` attribute is used to give a [semantic role][] 
 
 ## Accessibility Support
 
-- User agents do not all have the same accessibility tree. Particularly the method of deriving which element [owns][owned by] which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
+- User agents do not all have the same accessibility tree. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 - There exist some combination of popular browsers and assistive technologies who do not announce correctly relationships based on a mix of [implicit][implicit role] and [explicit][explicit role] roles.
 
@@ -47,7 +47,9 @@ The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][a
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-The definition of [owned by][] used in this rule is different from the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). In this rule "owned by" includes only direct children of the owner element, whereas an "owned element" is any descendant of the owner.
+Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). A child in the [accessibility tree][] can thus correspond to a descendant in the DOM tree. Additionally, the use of `aria-owns` attribute can change the tree structure to something which is not a subtree of the DOM tree.
+
+This rule is restricted to direct parent-child relation in the [accessibility tree][] which is more strict than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). This rule mimics, on the roles level, the [content model](https://html.spec.whatwg.org/#concept-element-content-model) of HTML.
 
 [Subclass roles][subclass role] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.1/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.1/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.1/#list) role.
 
@@ -62,7 +64,7 @@ Some user agents try to correct missing [required context roles][] or incorrect 
 
 #### Passed Example 1
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][], `list`, expressed as an [explicit role][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [explicit role][].
 
 ```html
 <div role="list">
@@ -73,7 +75,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Passed Example 2
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][], `list`, expressed as an [implicit role][] of `ul`. Note that this test case does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [implicit role][] of `ul`. Note that this test case does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>
@@ -84,7 +86,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Passed Example 3
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not direct DOM children of it. ARIA [ownership][owned by] "skips" through presentational nodes because they are not [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its children in DOM. The presentational node is not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -97,7 +99,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Passed Example 4
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -107,7 +109,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Passed Example 5
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][] even though they are not direct DOM descendants of it. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.1/#scope).
 
 ```html
 <div role="list" aria-owns="item1 item2">
@@ -120,7 +122,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Passed Example 6
 
-These elements with an [explicit role][] of `listitem` are [owned by][] an element with their [required context role][] because implicit [ownership][owned by] (inherited from DOM tree structure) crosses shadow boundaries.
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] because the [accessibility tree][] mimics the DOM tree across shadow boundaries.
 
 ```html
 <div id="host" role="list"></div>
@@ -136,7 +138,7 @@ These elements with an [explicit role][] of `listitem` are [owned by][] an eleme
 
 #### Failed Example 1
 
-This element with an [explicit role][] of `listitem` is not [owned by][] an element with its [required context role][].
+This element with an [explicit role][] of `listitem` is not a child in the [accessibility tree][] of an element with its [required context role][].
 
 ```html
 <div role="listitem">List item 1</div>
@@ -144,7 +146,7 @@ This element with an [explicit role][] of `listitem` is not [owned by][] an elem
 
 #### Failed Example 2
 
-These elements with an [explicit role][] of `listitem` are not [owned by][] an element with their [required context role][]. They are [owned by][] the `tabpanel` element, because it is the closest ancestor.
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][], but of an element with the `tabpanel` role.
 
 ```html
 <div role="list">
@@ -157,7 +159,7 @@ These elements with an [explicit role][] of `listitem` are not [owned by][] an e
 
 #### Failed Example 3
 
-These elements with an [explicit role][] of `listitem` are not [owned by][] an element with their [required context role][]. They are instead [owned by][] the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][]. They are instead children in the [accessibility tree][] of the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -170,7 +172,7 @@ These elements with an [explicit role][] of `listitem` are not [owned by][] an e
 
 #### Failed Example 4
 
-These elements with an [explicit role][] of `listitem` are not [owned by][] an element with their [required context role][] because explicit [ownership][owned by] (set by `aria-owns`) does not cross shadow boundaries.
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -233,6 +235,7 @@ There is no element with an [explicit role][] different from its [implicit role]
 </ul>
 ```
 
+[accessibility tree]: https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility 'Definition of accessibility tree'
 [aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI ARIA 1.1 specifications'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/ 'Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0'
@@ -242,7 +245,6 @@ There is no element with an [explicit role][] different from its [implicit role]
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[owned by]: #owned-by 'Definition of Owned by'
 [required context role]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
 [required context roles]: https://www.w3.org/TR/wai-aria-1.1/#scope 'WAI ARIA definition of Required Context Role'
 [sc411]: https://www.w3.org/TR/WCAG21/#parsing 'Success Criterion 4.1.1 Parsing'

@@ -43,11 +43,12 @@ This rule applies to any `input` element with a `type` [attribute value][] of `i
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`).
+Each target element has an [accessible name][] that is neither empty (`""`), nor the default name for this element (localized version of "Submit Query").
 
 ## Assumptions
 
 - This rule assumes that all image buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+- This rule assumes that the default name for image buttons ("Submit Query") is not descriptive.
 
 ## Accessibility Support
 
@@ -59,6 +60,7 @@ There is a known combination of a popular browser and assistive technology that 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG21/Techniques/html/H36)
+- [HTML Accessibility API Mappings for computing the accessible name of image buttons](https://www.w3.org/TR/html-aam-1.0/#input-type-image)
 
 ## Test Cases
 

@@ -44,7 +44,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 
 ## Background
 
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]. These extra requirements are left out of this rule, and of the definition of [instrument][], for the sake of simplicity.
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]. These extra requirements are left out of this rule, and should be tested separately.
 
 - [Understanding Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]
 - [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)

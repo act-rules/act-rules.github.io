@@ -33,7 +33,7 @@ For each target element, either it is not [visible][], or it describes the topic
 
 ## Expectation 2
 
-For each target element, either it is not [included in the accessibility tree][], or it describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
+For each target element, either it is not [included in the accessibility tree][], or it describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after it in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

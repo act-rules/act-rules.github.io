@@ -29,11 +29,11 @@ This rule applies to any element with the [semantic role][] of heading that is e
 
 ## Expectation 1
 
-Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].
+For each target element, either it is not [visible][], or it describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after it in tree order in the [flat tree][].
 
 ## Expectation 2
 
-Each target element which is [included in the accessibility tree][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
+For each target element, either it is not [included in the accessibility tree][], or it describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

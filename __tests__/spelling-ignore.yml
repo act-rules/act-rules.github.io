@@ -82,6 +82,7 @@
 - kerning
 - drawImage
 - pragma
+- iso # lowercase needed in reference list
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

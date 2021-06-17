@@ -46,7 +46,8 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags][].
+- This rule assumes that only [valid language tags][valid language tag] are used; this notably excludes
+  [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 
@@ -306,6 +307,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
+[iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [primary language]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'

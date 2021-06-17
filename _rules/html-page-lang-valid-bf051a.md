@@ -42,7 +42,8 @@ For each test target, the `lang` attribute has a [valid language tag][].
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
+- This rule assumes that only [valid language tags][valid language tag] are used; this notably excludes
+  [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 
@@ -107,6 +108,7 @@ This rule does not apply to `svg` elements.
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
 ```
 
+[iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
 [primary language subtag]: https://tools.ietf.org/html/bcp47#section-2.2.1 'Definition of primary language subtag'
 [region subtag]: https://tools.ietf.org/html/bcp47#section-2.2.4 'Definition of region subtag'
 [valid language tag]: #valid-language-tag 'Definition of valid language tag'

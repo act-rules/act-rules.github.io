@@ -50,7 +50,8 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that [grandfathered tags][] are not used as these will not be recognized as [valid language tags](#valid-language-tag).
+- This rule assumes that only [valid language tags][valid language tag] are used; this notably excludes
+  [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 
@@ -300,3 +301,4 @@ This page has an undefined [default language][default page language] because it 
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM content type, as of 2020/06/05'
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML document title, as of 2020/06/05'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'
+[iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'

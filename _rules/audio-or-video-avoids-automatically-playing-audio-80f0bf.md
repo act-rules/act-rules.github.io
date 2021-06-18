@@ -51,20 +51,21 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
 - **not muted**: the element has a `muted` [attribute value][] of `false`; and
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **duration**: the element has a [media resource][] lasting more than 3 seconds and that contains audio.
+- **audio duration**: the element has a [media resource][] for which the audio output lasts more than 3 seconds.
 
-## Expectation
+## Expectation 1
 
-For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
+For each test target, there is at least one [instrument][] in the same [web page][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
 
-- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
-- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
+## Expectation 2
+
+The [instrument][] to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Assumptions
 
-- This rule assumes that it is not possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142] if the total length of the automatically playing audio is more than 3 seconds, even if there are pauses in the sound and no more than 3 seconds in a row with actual sound.
-- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be located in the same [web page][]. Mechanisms located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
-- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
+This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be located in the same [web page][]. Mechanisms located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
+
+This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
 ## Accessibility Support
 
@@ -74,6 +75,8 @@ The native `video` and `audio` controls in several browser and assistive technol
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [Accessible Multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia)
+- [Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG21/Techniques/failures/F93)
+- [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](https://www.w3.org/WAI/WCAG21/Techniques/general/G170)
 
 ## Test Cases
 
@@ -89,12 +92,12 @@ This `audio` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Passed Example 2
 
-This `video` element does not play for longer than 3 seconds.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
-<video autoplay>
-	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
+<video autoplay controls>
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
 
@@ -145,13 +148,118 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio
+This `video` element's audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio
 
 ```html
 <video autoplay>
 	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
+```
+#### Failed Example 3
+
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not visible.
+
+```html
+<head>
+	<style>
+		button {
+			color: #000;
+			display: none;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="video-container">
+		<!-- Video -->
+		<video id="video" autoplay>
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls">
+			<button type="button" id="play-pause" class="play">Pause</button>
+			<button type="button" id="mute">Mute</button>
+		</div>
+	</div>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
+</body>
+```
+
+#### Failed Example 4
+
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
+
+```html
+<head>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="video-container">
+		<!-- Video -->
+		<video id="video" autoplay>
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls">
+			<button type="button" id="play-pause" class="play"></button>
+			<button type="button" id="mute"></button>
+		</div>
+	</div>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
+</body>
+```
+
+#### Failed Example 5
+
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not included in the accessibility tree.
+
+```html
+<head>
+	<style>
+		button {
+			color: #000;
+		}
+		button:hover {
+			cursor: pointer;
+			cursor: pointer;
+			background-color: grey;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="video-container">
+		<!-- Video -->
+		<video id="video" autoplay>
+			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls" aria-hidden="true">
+			<button type="button" id="play-pause" class="play">Play</button>
+			<button type="button" id="mute">Mute</button>
+		</div>
+	</div>
+	<script src="/test-assets/80f0bf/no-autoplay.js"></script>
+</body>
 ```
 
 ### Inapplicable
@@ -184,6 +292,17 @@ This `audio` element does not play automatically.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+```
+
+#### Inapplicable Example 4
+
+This `video` element does not play for longer than 3 seconds.
+
+```html
+<video autoplay>
+	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
+</video>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

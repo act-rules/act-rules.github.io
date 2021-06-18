@@ -58,7 +58,7 @@ The "Turn off" and "Remap" requirements from [Success Criterion 2.1.4][sc2.1.4] 
 
 #### Passed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists an [instrument][] to **disable** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`; therefore, meeting the **remap** expectation.
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists an [instrument][] to disable the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`, therefore meeting the **disable/remap** expectation.
 
 ```html
 <html>

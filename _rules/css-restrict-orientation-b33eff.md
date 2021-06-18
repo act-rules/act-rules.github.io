@@ -46,6 +46,8 @@ This rule does not consider and may produce incorrect results for:
 - Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 - The existence of any control on the page that can change the orientation on demand.
 
+No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._

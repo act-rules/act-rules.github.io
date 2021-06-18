@@ -45,6 +45,8 @@ For each test target, audio information that is not conveyed visually in the vid
 
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
+No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+
 ## Accessibility Support
 
 There are no major accessibility support issues known for this rule.

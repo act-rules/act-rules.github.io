@@ -72,7 +72,7 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-_There are currently no assumptions._
+No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
 
 ## Accessibility Support
 

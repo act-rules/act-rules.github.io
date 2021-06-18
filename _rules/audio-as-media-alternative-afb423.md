@@ -43,6 +43,8 @@ The label (from expectation 2) is [visible][] and [included in the accessibility
 
 This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
+No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+
 ## Accessibility Support
 
 There are no major accessibility support issues known for this rule.

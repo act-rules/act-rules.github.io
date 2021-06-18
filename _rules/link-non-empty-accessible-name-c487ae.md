@@ -53,6 +53,8 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used on elements that do not behave as links, failing this rule might not mean that the success criteria are failed.
 
+No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+
 ## Accessibility Support
 
 - There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.

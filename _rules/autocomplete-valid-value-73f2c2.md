@@ -179,14 +179,6 @@ This `autocomplete` [attribute value][] is comma separated instead of space usin
 
 #### Failed Example 5
 
-This `autocomplete` [attribute value][] is not appropriate for the field. The form field's implied purpose is to input a quantity (a number) which cannot be a e-mail.
-
-```html
-<label>Quantity<input type="number" autocomplete="email"/></label>
-```
-
-#### Failed Example 6
-
 The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
 
 ```html

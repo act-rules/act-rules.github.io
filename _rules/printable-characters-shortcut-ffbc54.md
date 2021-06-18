@@ -253,7 +253,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Failed Example 1
 
-This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There is no [instrument][] to **disable** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There is no [instrument][] to **disable** or **remap** the [keyboard event][] and the [keyboard events][keyboard event] are not [blocked][blocked event] when no `widget` has [focus][].
 
 ```html
 <html>

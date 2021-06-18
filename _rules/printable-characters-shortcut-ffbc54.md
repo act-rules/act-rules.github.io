@@ -30,7 +30,7 @@ This rule applies to any [keyboard event][] for which all of the following is tr
 
 For each test target at least one of the following is true:
 
-- **disable/ remap**: there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for each of the [valid modifier keys][]; or
+- **disable/remap**: there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for each of the [valid modifier keys][]; or
 - **focus**: the [event target][] has a [semantic role][] that inherits from the [abstract role](https://www.w3.org/TR/wai-aria/#abstract_roles) of `widget`.
 
 ## Assumptions

@@ -212,7 +212,7 @@ This [HTML document][] is listening to [keyboard events][keyboard event] for whi
 
 #### Passed Example 6
 
-This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists a [set of clearly labeled instruments][] to **disable** the [keyboard event][] or to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
+This [HTML document][] is listening to [keyboard events][keyboard event] for which the attribute `key` is a [printable character][] and the method `getModifierState` returns `false`, and which cause [changes in content][]. There exists a [set of clearly labeled instruments][] to **disable** or to **remap** the [keyboard event][] so that [same key][same key events] events are [blocked][blocked event] unless `getModifierState("Control")` returns `true`.
 
 ```html
 <html>

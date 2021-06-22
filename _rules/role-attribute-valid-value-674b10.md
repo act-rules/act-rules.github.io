@@ -33,7 +33,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an [HTML or SVG element][] that is [included in the accessibility tree][].
+- the attribute is specified on an [HTML or SVG element][] whose [hidden state][] is "false".
 
 ## Expectation
 
@@ -166,15 +166,15 @@ This `role` attribute is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
-This `role` attribute is specified on an element which is not [included in the accessibility tree][].
+This `role` attribute is specified on an element whose [hidden state][] is "true".
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
+[hidden state]: #hidden-state 'Definition of Hidden State'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

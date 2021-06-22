@@ -163,6 +163,8 @@
 - innerText
 - isTrusted
 - isComposing
+- x1
+- y1
 
 # DOM Events
 - auxclick

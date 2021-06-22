@@ -18698,10 +18698,10 @@
       }
     },
     {
-      "testcaseId": "46541a38e426f103ae93c357267f8247197fa4a9",
+      "testcaseId": "a6168c69ccbd4aa12f7411633e8bd74420a01d43",
       "testcaseTitle": "Inapplicable Example 1",
-      "url": "https://act-rules.github.io/testcases/b4f0c3/46541a38e426f103ae93c357267f8247197fa4a9.html",
-      "relativePath": "testcases/b4f0c3/46541a38e426f103ae93c357267f8247197fa4a9.html",
+      "url": "https://act-rules.github.io/testcases/b4f0c3/a6168c69ccbd4aa12f7411633e8bd74420a01d43.html",
+      "relativePath": "testcases/b4f0c3/a6168c69ccbd4aa12f7411633e8bd74420a01d43.html",
       "expected": "inapplicable",
       "ruleId": "b4f0c3",
       "ruleName": "`meta` `viewport` allows for zoom",

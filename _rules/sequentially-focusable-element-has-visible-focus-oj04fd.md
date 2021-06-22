@@ -57,7 +57,7 @@ Due to the Applicability of this rule, test cases must have at least two element
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has different `hsl` value compared to the `hsl` value of the background pixels on which the outline appears (the exact values depend on the type of browser being used).
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button>Dummy button</button>
@@ -65,7 +65,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has different `hsl` value compared to the `hsl` value of the background pixels on which the outline appears (the exact values depend on the type of browser being used).
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
 <span tabindex="0">Act rules</span> <button>Dummy button</button>

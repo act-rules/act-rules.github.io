@@ -236,7 +236,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -266,7 +266,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -289,7 +289,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 			</p>
 		</div>
 
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			The Romance of the Three Kingdoms is a 14th century historical novel.
@@ -319,7 +319,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -364,7 +364,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -394,7 +394,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>

@@ -30,7 +30,7 @@ This rule applies to any [HTML document][] with an associated [Window object][] 
 
 ## Expectation
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target at least one of the following is true:
 
 - **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
 - **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], causing the same [changes in content][] as the event.

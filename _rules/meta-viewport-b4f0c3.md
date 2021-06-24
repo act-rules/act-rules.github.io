@@ -232,8 +232,8 @@ There is no viewport `meta` element.
 ```html
 <html>
 	<head>
-		<title>Simple page showing random text</title>
-		<meta http-equiv="refresh" content="10; URL='https://github.com'" />
+		<title>Lorem ipsum</title>
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<p>

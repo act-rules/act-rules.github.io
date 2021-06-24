@@ -3,7 +3,7 @@ id: de46e4
 name: Element with `lang` attribute has valid language tag
 rule_type: atomic
 description: |
-  This rule checks that a non-empty `lang` attribute of an element in the page body has a language tag with a known primary language subtag.
+  This rule checks that a non-empty `lang` attribute of an element in the page has a language tag with a known primary language subtag.
 accessibility_requirements:
   wcag20:3.1.2: # Language of Parts (AA)
     forConformance: true
@@ -29,9 +29,9 @@ acknowledgments:
 
 This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
-- the element is a [descendant][] in the [flat tree][] of a `body` element; and
-- the element has a [node document][] with a [content type][] of `text/html`; and
-- the element has a [text node][] as a [descendant][] in the [flat tree][] that is [visible][] or [included in the accessibility tree][].
+- **descendant**: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
+- **text**: there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 
@@ -98,6 +98,36 @@ This `p` element has a `lang` [attribute value][] which has a [valid language ta
 		<p lang="en-US-GB">
 			They wandered into a strange Tiki bar on the edge of the small beach town.
 		</p>
+	</body>
+</html>
+```
+
+#### Passed Example 4
+
+This `div` element has a valid `lang` [attribute value][]. There is no [text inheriting its programmatic language][] from the `article` element, therefore its `lang` attribute is not considered by the rule.
+
+```html
+<html>
+	<body>
+		<article lang="invalid">
+			<div lang="en">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</div>
+		</article>
+	</body>
+</html>
+```
+
+#### Passed Example 5
+
+This `div` element has a valid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
+
+```html
+<html>
+	<body>
+		<div lang="en">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+		</div>
 	</body>
 </html>
 ```
@@ -178,6 +208,36 @@ The `lang` [attribute value][] does not have a valid language tag, and its [desc
 </html>
 ```
 
+#### Failed Example 6
+
+This `div` element has an invalid `lang` [attribute value][]. There is no [text inheriting its programmatic language][] from the `article` element, therefore its `lang` attribute is not considered by the rule.
+
+```html
+<html>
+	<body>
+		<article lang="en">
+			<div lang="invalid">
+				They wandered into a strange Tiki bar on the edge of the small beach town.
+			</div>
+		</article>
+	</body>
+</html>
+```
+
+#### Failed Example 7
+
+This `div` element has an invalid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
+
+```html
+<html>
+	<body>
+		<div lang="invalid">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+		</div>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -222,6 +282,21 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 </html>
 ```
 
+#### Inapplicable Example 4
+
+There is no [text inheriting its programmatic language][] from this `div` element.
+
+```html
+<html>
+	<body>
+		<div lang="invalid">
+			<img src="/test-assets/shared/fireworks.jpg" alt="" />
+		</div>
+	</body>
+</html>
+```
+
+[accessible name]: #accessible-name 'Definition of Accessible Name'
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [bcp 47]: https://tools.ietf.org/html/bcp47#section-2.1
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type
@@ -229,7 +304,9 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [grandfathered tags]: https://tools.ietf.org/html/bcp47#section-2.2.8
 [included in the accessibility tree]: #included-in-the-accessibility-tree
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [node document]: https://dom.spec.whatwg.org/#concept-node-document
+[text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [text node]: https://dom.spec.whatwg.org/#text
 [valid language tag]: #valid-language-tag
 [visible]: #visible 'Definition of visible'

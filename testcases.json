@@ -8743,12 +8743,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -8768,12 +8762,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -8803,12 +8791,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -8828,12 +8810,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -8863,12 +8839,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -8888,12 +8858,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -8923,12 +8887,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -8948,12 +8906,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -8983,12 +8935,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -9008,12 +8954,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -9043,12 +8983,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -9068,12 +9002,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -9103,12 +9031,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -9133,12 +9055,6 @@
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
         },
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag-technique:H42": {
           "forConformance": false,
           "failed": "not satisfied",
@@ -9158,12 +9074,6 @@
       "rulePage": "https://act-rules.github.io/rules/ffd0e9",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:2.4.6": {
           "forConformance": true,
           "failed": "not satisfied",
           "passed": "further testing needed",

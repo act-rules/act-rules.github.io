@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1119,
+  "count": 1121,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -1343,10 +1343,60 @@
       }
     },
     {
+      "testcaseId": "1268e399d9de5fe1dd344947d716648605af7ef1",
+      "testcaseTitle": "Passed Example 11",
+      "url": "https://act-rules.github.io/testcases/5c01ea/1268e399d9de5fe1dd344947d716648605af7ef1.html",
+      "relativePath": "testcases/5c01ea/1268e399d9de5fe1dd344947d716648605af7ef1.html",
+      "expected": "passed",
+      "ruleId": "5c01ea",
+      "ruleName": "ARIA state or property is permitted",
+      "rulePage": "https://act-rules.github.io/rules/5c01ea",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
       "testcaseId": "9fe60b403371e0e5d057f4f6c871dfed42f7ac4c",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/5c01ea/9fe60b403371e0e5d057f4f6c871dfed42f7ac4c.html",
       "relativePath": "testcases/5c01ea/9fe60b403371e0e5d057f4f6c871dfed42f7ac4c.html",
+      "expected": "failed",
+      "ruleId": "5c01ea",
+      "ruleName": "ARIA state or property is permitted",
+      "rulePage": "https://act-rules.github.io/rules/5c01ea",
+      "ruleAccessibilityRequirements": {
+        "wcag-technique:ARIA5": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "aria11:state_property_processing": {
+          "title": "ARIA 1.1, 7.6 State and Property Attribute Processing",
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
+      "testcaseId": "46a07f5e7ad1db02e255f3d6c7d7b0e1ecf3b1fd",
+      "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/5c01ea/46a07f5e7ad1db02e255f3d6c7d7b0e1ecf3b1fd.html",
+      "relativePath": "testcases/5c01ea/46a07f5e7ad1db02e255f3d6c7d7b0e1ecf3b1fd.html",
       "expected": "failed",
       "ruleId": "5c01ea",
       "ruleName": "ARIA state or property is permitted",

@@ -18,6 +18,7 @@ accessibility_requirements:
 input_rules:
   - 2eb176
   - afb423
+  - 213x3x
 acknowledgments:
   authors:
     - Brian Bors
@@ -28,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
+This rule applies to any `audio` element that is:
 
 - playing; or,
 - has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
@@ -41,6 +42,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 - [`Audio` Element Content Has Transcript](https://act-rules.github.io/rules/2eb176)
 - [`Audio` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/afb423)
+- [`Audio` Element Plays Live Content](https://act-rules.github.io/rules/213x3x)
 
 ## Assumptions
 

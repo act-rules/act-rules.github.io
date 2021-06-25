@@ -233,7 +233,7 @@ There is no viewport `meta` element.
 <html>
 	<head>
 		<title>Lorem ipsum</title>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 	</head>
 	<body>
 		<p>

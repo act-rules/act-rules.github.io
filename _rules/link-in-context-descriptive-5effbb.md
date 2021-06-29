@@ -3,7 +3,7 @@ id: 5effbb
 name: Link in context is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible name of a link together with its context describe its purpose.
+  This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context)
     forConformance: true
@@ -29,20 +29,22 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element which
+This rule applies to any [semantic link][] for which all the following is true:
 
-- has the [semantic role][] of ['link'][link] or a [semantic role][] that inherits from the ['link'][link] role; and
-- is [included in the accessibility tree][]; and
-- has a non-empty ("") [accessible name][].
+- the link is [included in the accessibility tree][]; and
+- the link has a non-empty ("") [accessible name][].
 
 ## Expectation
 
-The [accessible name][] of each target element together with its [programmatically determined link context][] describe the purpose of the link.
+The [accessible name][] of each target element together with its [programmatically determined link context][] describes the purpose of the link.
 
 ## Assumptions
 
-- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criterion [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html). If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context which makes it more of a general user experience concern than an accessibility issue.
-- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links.
+- This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
+
+- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
+
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -50,8 +52,12 @@ The [accessible name][] of each target element together with its [programmatical
 
 ## Background
 
-- [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
-- [2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
+This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
+
+- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+- [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
+- [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+- [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
 - [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24)
@@ -156,7 +162,7 @@ The [programmatically determined link context][] (provided by the table header [
 The [accessible name][] describes the purpose of the link.
 
 ```html
-<p id="instructions">Click on the arrow to go to the main content.</p>
+<p id="instructions">Go to the main content.</p>
 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
 	<a href="#main" aria-labelledby="instructions">
 		<path
@@ -302,7 +308,7 @@ The [accessible name][] (from the link's text) does not describe the purpose of 
 An `a` element with its [semantic role][] changed from `link` to another role.
 
 ```html
-<a href="http://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
+<a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
 ```
 
 #### Inapplicable Example 2
@@ -310,7 +316,7 @@ An `a` element with its [semantic role][] changed from `link` to another role.
 The `link` element is not [included in the accessibility tree][].
 
 ```html
-<a href="http://www.w3.org/WAI" style="display: none;"
+<a href="https://www.w3.org/WAI" style="display: none;"
 	><img src="/test-assets/5effbb/cart.svg" alt="Checkout" />Checkout</a
 >
 ```
@@ -323,9 +329,12 @@ An `a` element without the [semantic role][] `link`.
 <a>placeholder</a>
 ```
 
-[accessible name]: #accessible-name 'Definition of accessible name'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[accessible name]: #accessible-name 'Definition of Accessible Name'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
-[semantic role]: #semantic-role 'Definition of semantic role'
+[programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'
+[semantic link]: #semantic-link 'Definition of Semantic Link'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
+[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4 Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9 Link Purpose (Link Only)'

@@ -12,13 +12,13 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
+This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
 - has a "play button" that is [visible][] and [included in the accessibility tree][].

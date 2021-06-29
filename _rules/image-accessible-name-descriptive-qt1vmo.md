@@ -3,7 +3,7 @@ id: qt1vmo
 name: Image accessible name is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the accessible names of images serves an equivalent purpose to the image.
+  This rule checks that the accessible names of images serve an equivalent purpose to the image.
 accessibility_requirements:
   wcag20:1.1.1: # Non-Text Content (A)
     forConformance: true
@@ -41,7 +41,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and has a non-empty [accessible name][], except if one of the following is true:
+This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and has a non-empty [accessible name][], except if one of the following is true:
 
 - The element has an [ancestor][] in the [flat tree][] that is [named from author][]; or
 - The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].
@@ -253,7 +253,7 @@ This `img` element has no [accessible name][] because it is not [included in the
 This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
-<a href="//w3.org" aria-label="W3C Website">
+<a href="https://w3.org" aria-label="W3C Website">
 	<svg height="200" xmlns="http://www.w3.org/2000/svg" aria-label="star">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>

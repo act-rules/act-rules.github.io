@@ -3,7 +3,7 @@ id: e88epe
 name: Image not in the accessibility tree is decorative
 rule_type: atomic
 description: |
-  This rule checks that visible img, svg and canvas elements that are ignored by assistive technologies are decorative
+  This rule checks that visible `img`, `svg` and `canvas` elements that are ignored by assistive technologies are decorative.
 accessibility_requirements:
   wcag20:1.1.1: # Non-text content (A)
     forConformance: true
@@ -30,7 +30,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-Any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
+This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
 
 - **excluded**: The element is not [included in the accessibility tree][]; or
 - **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
@@ -222,7 +222,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
 
 ```html
-<a href="//example.org" aria-label="SVG star">
+<a href="https://example.org" aria-label="SVG star">
 	<svg height="200" xmlns="http://www.w3.org/2000/svg">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>

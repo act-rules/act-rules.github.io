@@ -12,13 +12,13 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
+This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
 - has a "play button" that is [visible][] and [included in the accessibility tree][].
@@ -31,11 +31,7 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labeled as an audio alternative for text on the page.
-
-## Expectation 3
-
-The label (from expectation 2) is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as an audio alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
 
 **Note:** The term label does not refer to the `label` element.
 

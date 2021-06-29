@@ -10,6 +10,16 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.2.5: # Audio Description (Prerecorded) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
   wcag-technique:G8: # Providing a movie with extended audio descriptions
     forConformance: false
     failed: not satisfied
@@ -42,15 +52,15 @@ input_rules:
   - ab4d13
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Test Procedure
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation
 
@@ -73,6 +83,8 @@ See [Video element description track: accessibility support](https://act-rules.g
 
 ## Background
 
+This rule is designed specifically for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which expects either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][sc125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adequately test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][sc125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
+
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
 - [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
@@ -85,7 +97,7 @@ See [Video element description track: accessibility support](https://act-rules.g
 
 #### Passed Example 1
 
-A video element with a voiceover that describes the visual information.
+This `video` element has an audio description because it has voiceover that describes the visual information.
 
 ```html
 <html lang="en">
@@ -143,7 +155,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 1
 
-A video element with an incorrect audio description.
+This `video` element has an incorrect audio description.
 
 ```html
 <html lang="en">
@@ -226,3 +238,6 @@ A video element that is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
+[sc123]: https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'
+[sc125]: https://www.w3.org/TR/WCAG21/#audio-description-prerecorded 'WCAG 2.1, Success Criterion 1.2.5 Audio Description (Prerecorded)'
+[sc128]: https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.8 Media Alternative (Prerecorded)'

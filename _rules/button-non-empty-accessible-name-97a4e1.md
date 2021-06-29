@@ -16,13 +16,13 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Stein Erik Skotkjerra
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements with a `type` [attribute value] of `image`.
+This rule applies to elements that are [included in the accessibility tree][] and have a [semantic role](#semantic-role) of `button`, except for `input` elements with a `type` [attribute value] of `image`.
 
 ## Expectation
 
@@ -40,6 +40,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Background
 
+- [Image button has non-empty accessible name](https://act-rules.github.io/rules/59796f)
 - [HTML Accessibility API Mappings 1.0 (working draft), 5.2 `input type="button"`, `input type="submit"` and `input type="reset"`](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)

@@ -19,6 +19,7 @@
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
+- aam # lowercase needed in reference list
 - ABNF
 - URI
 - UA/AT
@@ -26,6 +27,7 @@
 - WCAG2
 - WCAG21
 - CSS3
+- css # lowercase needed in reference list
 - UA
 - UI
 - api # lowercase needed in reference list
@@ -41,10 +43,14 @@
 - PDFs
 - DOCX
 - DPUB
+- dpub # lowercase needed in reference list
 - CSSOM
 - DNS
 - BCP
 - bcp
+- X11
+- IDL
+- idl # lowercase needed in reference list
 - Esc # esc key on a keyboard
 - url
 - voiceover
@@ -63,12 +69,19 @@
 - wai-aria-specifications
 - autoplay
 - autoplays
+- autoplaying
 - columnheader
 - rowheader
 - colspan
 - presentational
 - sc
 - dropdown
+- getModifierState
+- accesskey
+- Accesskeys
+- kerning
+- drawImage
+- pragma
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -116,10 +129,14 @@
 - GitHub
 
 # Test case anamolies
+- brewitt-taylor
 - level2-frame1
 - level1-frame2
 - level1-frame1
 - XYZ
+- Yu
+- Sumei
+- Tuttle
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -145,6 +162,9 @@
 - columnheader
 - innerText
 - isTrusted
+- isComposing
+- x1
+- y1
 
 # DOM Events
 - auxclick
@@ -154,6 +174,7 @@
 - dblclick
 - keydown
 - keyup
+- keypressed
 - mousedown
 - mouseenter
 - mouseleave
@@ -175,6 +196,7 @@
 - nowrap
 - javascript
 - Reflow
+- reflow
 - Viewport
 - dom-meta-content
 
@@ -182,6 +204,7 @@
 - programmatically
 - personalization
 - autofill
+- dismissible
 - implementers
 - presentational
 - backtick
@@ -190,6 +213,13 @@
 - scrollable
 - scrollbars
 - subconditions
+- burlywood
+- cornsilk
+- subtree
+- unicity
+- Menuitem
+- menuitems
+- testability
 
 # Parts of Unicode
 - 000A
@@ -197,7 +227,7 @@
 - 000C
 - 000D
 
-# JSON attributes/ metadata
+# JSON attributes/ metadata/ methods
 - testcases
 - ruleId
 - ruleName
@@ -206,3 +236,21 @@
 - cantTell
 - TestSubject
 - earl:cantTell
+- getComputedPriority
+
+# sizes
+- 1em
+- 2em
+- 2px
+- 3px
+- 4px
+- 16px
+- 20px
+- 24px
+- 25px
+- 30px
+- 32px
+
+# Language codes
+- da
+- nl

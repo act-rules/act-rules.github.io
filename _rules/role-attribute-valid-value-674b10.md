@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
-  wcag20:4.1.2: # Name, Role, Value (A)
+  wcag20:1.3.1: # Info and Relationship (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -30,10 +30,10 @@ acknowledgments:
 
 ## Applicability
 
-Any `role` attribute for which all the following are true:
+This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an HTML or SVG element that is [included in the accessibility tree][].
+- the attribute is specified on an HTML or SVG element whose [hidden state][] is "false".
 
 ## Expectation
 
@@ -41,7 +41,9 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-This rule assumes that the [implicit role][] of elements is not enough to satisfy [Success Criterion 4.1.2 Name, Role, Value][sc412]. In case of invalid `role` attribute, the [semantic role][] defaults to the [implicit role]. If this is the correct role for the element, the rule will fail but [Success Criterion 4.1.2 Name, Role, Value][sc412] is still satisfied. For example, the element `<img role="image" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />` will fail this rule (because `image` is not a valid role) but satisfies [Success Criterion 4.1.2 Name, Role, Value][sc412] because the element defaults to its [implicit role][] of `img`.
+- This rule assumes that the `role` attribute is used to provide an ARIA [semantic role][] to the elements. If it is used for other purposes, this rule shouldn't be used.
+- This rule assumes that elements with a `role` attribute have their intended structure and relationship conveyed through some sort of presentation. If it is not the case, it is possible to fail this rule while still satisfying [Success Criterion 1.3.1 Info and Relationship][sc131].
+- This rule assumes that the intended role of the element is not its [implicit role][]. If no token is valid, User Agents will default to the [implicit role][] for the element; if that role is the intended one, it is possible to fail this rule but still satisfy [Success Criterion 1.3.1 Info and Relationship][sc131].
 
 ## Accessibility Support
 
@@ -51,11 +53,10 @@ Older browsers do not support more than one token in the value for a role attrib
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
 
-Further reading:
-
-- [List of WAI-ARIA Roles][wai-aria role] and [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
+- [List of WAI-ARIA Roles][wai-aria role]
+- [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
+- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.0/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
 
@@ -68,7 +69,7 @@ Further reading:
 This `role` attribute contains one token, and this token is a valid [WAI-ARIA role][].
 
 ```html
-<input type="text" role="textbox" />
+<label>Search: <input type="text" role="searchbox" placeholder="Enter 3 or more characters"/></label>
 ```
 
 #### Passed Example 2
@@ -76,15 +77,23 @@ This `role` attribute contains one token, and this token is a valid [WAI-ARIA ro
 This `role` attribute contains two tokens, and these tokens are both valid [WAI-ARIA roles][wai-aria role].
 
 ```html
-<span role="button link" onclick="location.href='https://act-rules.github.io/'">ACT rules</span>
+<style>
+	.ref {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+</style>
+See [<span class="ref" onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref link">ACT rules</span
+>].
 ```
 
 #### Passed Example 3
 
-This `role` attribute contains two tokens, and one of these tokens (`img`) is a valid [WAI-ARIA role][].
+This `role` attribute contains two tokens, and one of these tokens (`searchbox`) is a valid [WAI-ARIA role][].
 
 ```html
-<img role="image img" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+<label>Search: <input type="text" role="searchfield searchbox" placeholder="Enter 3 or more characters"/></label>
 ```
 
 ### Failed
@@ -94,7 +103,14 @@ This `role` attribute contains two tokens, and one of these tokens (`img`) is a 
 This `role` attribute contains one token, but this token is not a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<img role="lnik" src="/test-assets/shared/w3c-logo.png" alt="W3C logo" onclick="location.href='https://www.w3.org/'" />
+<style>
+	.link {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+</style>
+I love <span class="link" onclick="location.href='https://act-rules.github.io/'" role="lnik">ACT rules</span>.
 ```
 
 #### Failed Example 2
@@ -102,12 +118,16 @@ This `role` attribute contains one token, but this token is not a valid role in 
 This `role` attribute contains two tokens, but none of these tokens is a valid role in any of the [WAI-ARIA specifications][].
 
 ```html
-<img
-	role="lnik buton"
-	src="/test-assets/shared/w3c-logo.png"
-	alt="W3C logo"
-	onclick="location.href='https://www.w3.org/'"
-/>
+<style>
+	.ref {
+		color: #0000ee;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+</style>
+See [<span class="ref" onclick="location.href='https://act-rules.github.io/'" role="bibliographic-reference lnik"
+	>ACT rules</span
+>].
 ```
 
 ### Inapplicable
@@ -117,7 +137,7 @@ This `role` attribute contains two tokens, but none of these tokens is a valid r
 There is no `role` attribute.
 
 ```html
-<div>Some Content</div>
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Inapplicable Example 2
@@ -146,17 +166,17 @@ This `role` attribute is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
-This `role` attribute is specified on an element which is not [included in the accessibility tree][].
+This `role` attribute is specified on an element whose [hidden state][] is "true".
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
 
-[ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
+[ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
+[hidden state]: #hidden-state 'Definition of Hidden State'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'

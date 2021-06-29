@@ -30,13 +30,13 @@ input_rules:
   - f51b46
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Brian Bors
+    - Wilco Fiers
 ---
 
 ## Applicability
 
-The rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
 
 ## Expectation
 
@@ -47,7 +47,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-- This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
+- This rule assumes that the video element is used to play synchronized media (video with audio), and that there is a mechanism to start the media.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
@@ -84,7 +84,7 @@ A video element that describes some of the text on the same page. The text on th
 ```html
 <html lang="en">
 	<p>
-		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
+		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
 		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
 		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
 	</p>
@@ -123,7 +123,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Inapplicable Example 1
 
-A video element without that is not [visible][].
+A video element that is not [visible][].
 
 ```html
 <html lang="en">

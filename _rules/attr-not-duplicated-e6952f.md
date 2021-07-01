@@ -117,7 +117,7 @@ This `input` element contains a duplicate `disabled` attribute.
 
 #### Failed Example 3
 
-This `line` element contains duplicate `x1` and duplicate `y1 ` attributes.
+This `line` element contains duplicate `x1` and duplicate `y1` attributes.
 
 ```html
 <svg>

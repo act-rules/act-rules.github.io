@@ -151,7 +151,7 @@ This `button` element has an [explicit role][] of `none`. However, it is [focusa
 This `input` element does not have an [explicit role][] of `textbox`, but the `aria-required` property may be used on an `input` element with a `type` [attribute value][] of `password`.
 
 ```html
-<label>Password<input type="password" aria-required="true" /></label>
+<label>Password<input type="password" aria-required="true"/></label>
 ```
 
 ### Failed
@@ -169,7 +169,7 @@ The `aria-sort` [property][] is neither [inherited][], [supported][], nor [requi
 The `aria-orientation` property may not be used on `audio` element, nor it can be used on `application` (the [semantic role][] for which [inherited][], [supported][], or [required][] [states][state] or [properties][property] are also applicable to `audio` element).
 
 ```html
-<audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal" ></audio>
+<audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
 ```
 
 ### Inapplicable

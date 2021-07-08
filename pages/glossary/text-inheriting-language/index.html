@@ -56,7 +56,7 @@
 <li><strong>accessible text</strong>: the <a href="#accessible-name" title="Definition of Accessible Name">accessible name</a> and <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-description" title="Definition of Accessible description">accessible description</a> of any element inheriting its programmatic language from E, and <a href="#included-in-the-accessibility-tree" title="Definition of Included in the Accessibility Tree">included in the accessibility tree</a>;</li>
 <li><strong>page title</strong>: the value of the <a href="https://html.spec.whatwg.org/multipage/dom.html#document.title" title="HTML document title, as of 2020/06/05">document title</a>, only if E is a <a href="https://dom.spec.whatwg.org/#document-element" title="DOM document element, as of 2020/06/05">document</a> in a <a href="https://html.spec.whatwg.org/#top-level-browsing-context" title="HTML top-level browsing context, as of 2020/06/05">top-level browsing context</a>.</li>
 </ul>
-<p>An element F is an <em>element inheriting its programmatic language</em> from an element E if one of the following conditions is true (recursively):</p>
+<p>An element F is an <em>element inheriting its programmatic language</em> from an element E if at least one of the following conditions is true (recursively):</p>
 <ul>
 <li>F is E itself (an element always inherits its programmatic language from itself); or</li>
 <li>F does not have a non-empty <code class="language-text">lang</code> attribute, and is the child in the <a href="https://drafts.csswg.org/css-scoping/#flat-tree" title="CSS draft, flat tree, 2020/06/05">flat tree</a> of an element inheriting its programmatic language from E; or</li>

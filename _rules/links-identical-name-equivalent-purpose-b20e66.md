@@ -28,7 +28,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of any two or more HTML or SVG elements which
+This rule applies to any set of any two or more [HTML or SVG elements][] which
 
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are in the same [web page (HTML)][]; and
@@ -384,3 +384,4 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
+[html or svg elements]: #namespaced-element

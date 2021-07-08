@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - `video` element visual content has transcript",
+      "title": "Report for ACT-R Rule - Audio and visuals of `video` element have transcript",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - `video` element visual content has transcript",
+          "siteName": "ACT-R Rule - Audio and visuals of `video` element have transcript",
           "siteScope": "https://act-rules.github.io/testcases/1a02b0/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"
@@ -1186,17 +1186,6 @@
             "description": "https://act-rules.github.io/testcases/1a02b0/4e354f735d074f1d351a2bcb93a77247512f5b56.html",
             "source": "https://act-rules.github.io/testcases/1a02b0/4e354f735d074f1d351a2bcb93a77247512f5b56.html",
             "title": "4e354f735d074f1d351a2bcb93a77247512f5b56",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_5",
-            "description": "https://act-rules.github.io/testcases/1a02b0/b0d21acae591149b3eb2ddcc3fa2453fa6aa8c99.html",
-            "source": "https://act-rules.github.io/testcases/1a02b0/b0d21acae591149b3eb2ddcc3fa2453fa6aa8c99.html",
-            "title": "b0d21acae591149b3eb2ddcc3fa2453fa6aa8c99",
             "tested": false
           }
         ]

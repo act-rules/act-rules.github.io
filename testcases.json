@@ -15478,10 +15478,10 @@
       }
     },
     {
-      "testcaseId": "ce6d7e6994f7f9a356d630e5a616d1066871f06c",
+      "testcaseId": "abce4c2053a6182bae072108d2a879caecc9c25f",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/c487ae/ce6d7e6994f7f9a356d630e5a616d1066871f06c.html",
-      "relativePath": "testcases/c487ae/ce6d7e6994f7f9a356d630e5a616d1066871f06c.html",
+      "url": "https://act-rules.github.io/testcases/c487ae/abce4c2053a6182bae072108d2a879caecc9c25f.html",
+      "relativePath": "testcases/c487ae/abce4c2053a6182bae072108d2a879caecc9c25f.html",
       "expected": "passed",
       "ruleId": "c487ae",
       "ruleName": "Link has non-empty accessible name",

@@ -10,11 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.6: # Headings and Labels (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag-technique:H42: # Using h1-h6 to identify headings
     forConformance: false
     failed: not satisfied
@@ -54,7 +49,6 @@ _There are currently no assumptions._
 Completely empty headings (e.g., `<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
-- [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Technique H42: Using h1-h6 to identify headings][tech h42]
 
 ## Test Cases
@@ -199,5 +193,4 @@ This `h1` element is not [included in the accessibility tree][].
 [semantic role]: #semantic-role 'Definition of semantic role'
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
-[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding Success Criterion 2.4.6: Headings and Labels'
 [visible]: #visible 'Definition of visible'

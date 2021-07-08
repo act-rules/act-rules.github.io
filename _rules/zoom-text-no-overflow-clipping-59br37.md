@@ -33,7 +33,7 @@ This rule applies to any [text node][] for which all of the following is true wh
 
 ## Expectation
 
-Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the [flat tree][] when in a [viewport size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has one of the following:
+Each test target is not [clipped by overflow][clipped] of an [ancestor][] in the [flat tree][] when in a [viewport size][] of 640 by 512, except if the [clipping][clipped] [ancestor][] has at least one of the following:
 
 - **text-overflow**: A [computed][] [white-space][] of `nowrap`, and a [computed][] [text-overflow][] that is not `clip`; or
 

@@ -25,7 +25,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 ## Expectation
 
-For each test target, one of the following is true:
+For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [word-spacing][] property is not [important][]; or
 - **wide enough**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or

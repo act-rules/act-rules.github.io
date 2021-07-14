@@ -135,20 +135,4 @@ A video element that is not [visible][].
 </html>
 ```
 
-<<<<<<< HEAD
-#### Inapplicable Example 2
-
-A video element without audio.
-
-```html
-<html lang="en">`
-<video controls>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
-</video>
-<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
-</html>
-```
-
-=======
->>>>>>> develop
 [visible]: #visible 'Definition of visible'

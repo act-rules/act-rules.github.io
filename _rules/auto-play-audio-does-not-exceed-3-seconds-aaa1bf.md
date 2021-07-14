@@ -69,7 +69,6 @@ This `video` element's audio output does not last longer than 3 seconds.
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
 </video>
 ```
@@ -90,7 +89,6 @@ This `video` element plays some audio automatically for more than 3 seconds.
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
@@ -103,7 +101,6 @@ This `video` element has audio that autoplays for longer than 3 seconds but is m
 
 ```html
 <video autoplay muted>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
@@ -114,7 +111,6 @@ This `video` element refers to a source file that has no audio output.
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```

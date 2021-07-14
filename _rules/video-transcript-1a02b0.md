@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: '`video` element visual content has transcript'
+name: 'Audio and visuals of `video` element have transcript'
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -33,7 +33,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][].
 
 ## Expectation
 
@@ -135,6 +135,7 @@ A video element that is not [visible][].
 </html>
 ```
 
+<<<<<<< HEAD
 #### Inapplicable Example 2
 
 A video element without audio.
@@ -148,4 +149,6 @@ A video element without audio.
 </html>
 ```
 
+=======
+>>>>>>> develop
 [visible]: #visible 'Definition of visible'

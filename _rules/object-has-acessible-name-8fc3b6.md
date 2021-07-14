@@ -60,7 +60,7 @@ This `object` element which embeds an audio resource has a non-empty [accessible
 This `object` element which embeds a video resource has a non-empty [accessible name][] through its `title` attribute.
 
 ```html
-<object title="Rabbit animated short" data="/test-assets/rabbit-video/silent.webm"></object>
+<object title="Rabbit animated short" data="/test-assets/rabbit-video/video.webm"></object>
 ```
 
 #### Passed Example 3
@@ -97,7 +97,7 @@ This `object` element placed off screen, which embeds an audio resource, has a n
 This `object` element which embeds a video resource has an empty [accessible name][] because the `title` attribute is empty.
 
 ```html
-<object title="" data="/test-assets/rabbit-video/silent.webm"></object>
+<object title="" data="/test-assets/rabbit-video/video.webm"></object>
 ```
 
 #### Failed Example 2
@@ -131,7 +131,7 @@ This `object` element which embeds an audio resource has an empty [accessible na
 This `object` element is not [included in the accessibility tree][] due to `display:none`.
 
 ```html
-<object data="/test-assets/rabbit-video/silent.webm" style="display: none;"></object>
+<object data="/test-assets/rabbit-video/video.webm" style="display: none;"></object>
 ```
 
 #### Inapplicable Example 2

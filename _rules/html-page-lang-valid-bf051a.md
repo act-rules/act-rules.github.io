@@ -97,6 +97,30 @@ This `html` element has a `lang` attribute whose value is not a [valid language 
 <html lang="#1"></html>
 ```
 
+#### Failed Example 3
+
+The `lang` attribute of this page is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+
+```html
+<html lang="eng">
+	<body>
+		<p lang="en">I love ACT rules!</p>
+	</body>
+</html>
+```
+
+#### Failed Example 4
+
+The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+
+```html
+<html lang="i-lux">
+	<body>
+		<p lang="lb">Lëtzebuerg ass e Land an Europa.</p>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

@@ -173,6 +173,22 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 <html lang="fr" xml:lang=""></html>
 ```
 
+#### Inapplicable Example 9
+
+The `lang` attribute of this page is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+
+```html
+<html lang="eng" xml:lang="en"></html>
+```
+
+#### Inapplicable Example 10
+
+The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+
+```html
+<html lang="i-lux" xml:lang="lb"></html>
+```
+
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'
 [extended language subtags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.2 'Definition of extended language subtag'
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8

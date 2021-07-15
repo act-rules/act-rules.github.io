@@ -238,6 +238,30 @@ This `div` element has an invalid `lang` [attribute value][]. The [accessible na
 </html>
 ```
 
+#### Failed Example 8
+
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+
+```html
+<html lang="en">
+	<body>
+		<p lang="eng">I love ACT rules!</p>
+	</body>
+</html>
+```
+
+#### Failed Example 9
+
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+
+```html
+<html lang="lb">
+	<body>
+		<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

@@ -290,6 +290,30 @@ This page has an undefined [default language][default page language] because it 
 </html>
 ```
 
+#### Inapplicable Example 5
+
+The `lang` [attribute value][] of this page is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+
+```html
+<html lang="eng">
+	<body>
+		<p lang="en">I love ACT rules!</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 6
+
+The `lang` [attribute value][] of this page is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+
+```html
+<html lang="i-lux">
+	<body>
+		<p lang="lb">Lëtzebuerg ass e Land an Europa.</p>
+	</body>
+</html>
+```
+
 [attribute value]: #attribute-value
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM content type, as of 2020/06/05'
 [default page language]: #default-page-language

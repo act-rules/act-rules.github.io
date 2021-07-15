@@ -299,6 +299,30 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 </html>
 ```
 
+#### Inapplicable Example 6
+
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+
+```html
+<html lang="en">
+	<body>
+		<p lang="eng">I love ACT rules!</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 7
+
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+
+```html
+<html lang="lb">
+	<body>
+		<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
+	</body>
+</html>
+```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'

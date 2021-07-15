@@ -50,7 +50,7 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 

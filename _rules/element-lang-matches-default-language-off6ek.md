@@ -46,7 +46,7 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 

@@ -38,7 +38,7 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [BCP 47][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] or [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - The rule assumes that having `lang` and `xml:lang` attributes with matching [primary language subtags][] but non-matching [language tags](https://tools.ietf.org/html/bcp47#section-2) overall, will not cause accessibility issues. This is not necessarily the case for all languages. One notable case is the [language tags](https://tools.ietf.org/html/bcp47#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues.
 

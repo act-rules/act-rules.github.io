@@ -34,7 +34,7 @@ This rule applies to any [HTML element][] that has a [visible][] [text node][] a
 
 ## Expectation
 
-For each test target there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve one of the following objectives:
+For each test target there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve at least one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -60,6 +60,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 The 10 minute time span in the applicability is arbitrary. It is selected so that testing this rule would not become impractical. This 10 minute constraint is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. These extra requirements are left out of this rule, and should be tested separately.
 
 - [Understanding Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]
 - [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][g186]

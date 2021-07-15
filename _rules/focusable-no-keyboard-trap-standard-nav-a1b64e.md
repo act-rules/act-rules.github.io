@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that is [focusable][].
+This rule applies to any [HTML or SVG element][] that is [focusable][].
 
 **Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
@@ -148,3 +148,4 @@ Hidden element using `visibility:hidden`.
 ```
 
 [focusable]: #focusable 'Definition of focusable'
+[html or svg element]: #namespaced-element

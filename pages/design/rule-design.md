@@ -163,7 +163,7 @@ Applicability and expectations, often have multiple conditions that need to be m
 
 This phrasing is designed to be easily readable, but may not work in every situation. In all cases prefer readability over prescriptive formatting. Additionally to this, keep the following in mind when listing conditions:
 
-- The phrasing "for which (all | one of) the following is" can be modified based on use, such as "to achieve one of the following objectives".
+- The phrasing "for which (all | at least one of) the following is" can be modified based on use, such as "to achieve at least one of the following objectives".
 - Labels are optional, not recommended for lists of 2, and recommended for lists of 4 or more conditions. Keep the labels short, 1 or 2 words. If the label does not help clarify the list, don't use them even for longer lists (for example when the condition is short and the label would just repeat it). If you use labels, all items in the list need to have a label.
 - The subject must be referenced in some way in each conditional. For example by starting with "the element has", or by using phrasing like "The innerText of the element has...". The subject must be a single word that is referenced in the phrase preceding the conditional list. Exception: When using element or attribute names, include what it is in the referenced, e.g. "`img` element".
 - Tend towards using a list if there are more than three conditions. Keep the most important condition(s) in the phrase, not in the list. For example, if something is about `img` elements, use "Each `img` element for which all the following is true, instead of putting "`img` element" in the condition list itself.

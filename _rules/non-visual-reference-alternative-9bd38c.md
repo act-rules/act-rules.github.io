@@ -288,7 +288,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 
 #### Passed Example 12
 
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
+This paragraph includes the [visual reference word][] "green". The content in the second column is identified with the word "green" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
 
 ```html
 <html lang="en">

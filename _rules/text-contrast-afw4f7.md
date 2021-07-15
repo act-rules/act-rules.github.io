@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
 - **widget**: the ancestor is a [semantic widget][]; or
 - **disabled label**: the ancestor is used in the [accessible name][] of a [semantic widget][] that is [disabled][]; or

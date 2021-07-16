@@ -28,9 +28,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] that is a child of an [accessible object][] with the [semantic role][] of [row][] and for which all of the following are true:
+This rule applies to any [HTML element][] with the [semantic role][] of [rowheader][] or [columnheader][] that is [included in the accessibility tree][] and for which all of the following are true:
 
-- **table** the element is an [owned element][] of an [accessible object][] with the [semantic role][] of either [table][] or [grid][] that is [visible][], and
+- **in a row** the element is a child of an [accessible object][] with the [semantic role][] of [row][]; and
+- **table** the element is an [owned element][] of an [accessible object][] with the [semantic role][] of either [table][] or [grid][] that is [visible][]; and
 - **minimum rows** the [table][] or [grid][] element contains at least two [accessible objects][accessible object] with the [semantic role][] of [row][].
 
 ## Expectation 1
@@ -465,6 +466,7 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 ```
 
 [accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object 'Definition of accessible object'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [attribute value]: #attribute-value 'Definition of attribute value'
 [child index]: #child-index 'Definition of child index'
 [semantic role]: #semantic-role 'Definition of semantic role'

@@ -54,7 +54,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
 
-The [HTML specification][https://html.spec.whatwg.org/] contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements should not have the semantic role of either [rowheader][] or [columnheader][] if they do not have the `scope` attribute in a state other than the "auto" state and there is a data cell in their row or column. However, some browsers give those `th` elements a table header role and this process is not standardised. One browser may evaluate such `th` elements as [rowheaders][rowheader] whereas other browsers may evaluate the same `th` elements as [columnheaders][columnheader]. This is likely not going to convey the relationship conveyed through presentation.
+The [HTML specification][https://html.spec.whatwg.org/] contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements should not have the semantic role of either [rowheader][] or [columnheader][] if they do not have the `scope` attribute in a state other than the "auto" state and there is a data cell in their row or column. However, some browsers give those `th` elements a table header role and this process is not standardized. One browser may evaluate such `th` elements as [rowheaders][rowheader] whereas other browsers may evaluate the same `th` elements as [columnheaders][columnheader]. This is likely not going to convey the relationship conveyed through presentation.
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
@@ -265,6 +265,7 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell` within th
     	</div>
     </div>
   </body>
+</html>
 ```
 
 ### Failed
@@ -466,6 +467,7 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 ```
 
 [accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object 'Definition of accessible object'
+[assigned]: #assigned-cell 'Definition of assigned to a cell'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [attribute value]: #attribute-value 'Definition of attribute value'
 [child index]: #child-index 'Definition of child index'

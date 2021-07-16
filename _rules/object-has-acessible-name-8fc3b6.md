@@ -33,8 +33,6 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 The `object` element is not rendered for presentational purposes. If the `object` is decorative and not [marked as decorative][] then the rule might fail but the success criterion might still be satisfied.
 
-No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
-
 ## Accessibility Support
 
 Non-supported media formats make screen readers render the text content of the element instead of other attributes.

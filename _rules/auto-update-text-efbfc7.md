@@ -52,8 +52,7 @@ For each test target there is at least one set of [instruments][instrument], whe
 - Available mechanisms for controlling the content changes rely on [activation][]. If there are other mechanisms that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
 - If there are other ways to control the automatically changing content that do not require the user to interact with the web page, failing this rule might not be a failure of the success criterion.
 - This rule does not check that the pausing instrument does not tie up the user focus. If that happens, then this rule might pass but the success criterion would not be satisfied.
-- No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
-  
+
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._

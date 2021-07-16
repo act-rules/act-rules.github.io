@@ -39,7 +39,6 @@ In each test target, either there is no [non-repeated content after repeated con
 
 - This rule assumes that headings used to pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] have to be [included in the accessibility tree][] in order to be beneficial to users of assistive technologies.
 - This rule assumes that the first non-repeated content is starting a new section of content. If this is not the case, it is possible to fail the rule while still passing [Technique H69: Providing heading elements at the beginning of each section of content][tech h69].
-- No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
 
 ## Accessibility Support
 

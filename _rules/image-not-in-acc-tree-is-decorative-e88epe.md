@@ -51,11 +51,9 @@ Each test target is [purely decorative][].
 
 ## Assumptions
 
-`svg` elements with a [semantic role][] of `graphics-document` and with an empty (`""`) [accessible name][] are ignored by assistive technologies tested for this rule. If some assistive technology does not ignore these elements, and that assistive technology is required for conformance, passing this rule does not ensure all decorative `svg` elements can be ignored, and the [success criterion 1.1.1 Non-text content][] may still not be satisfied. The same is true for `canvas` elements with no [semantic role][] and an empty (`""`) [accessible name][].
+- `svg` elements with a [semantic role][] of `graphics-document` and with an empty (`""`) [accessible name][] are ignored by assistive technologies tested for this rule. If some assistive technology does not ignore these elements, and that assistive technology is required for conformance, passing this rule does not ensure all decorative `svg` elements can be ignored, and the [success criterion 1.1.1 Non-text content][] may still not be satisfied. The same is true for `canvas` elements with no [semantic role][] and an empty (`""`) [accessible name][].
 
-A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere on the web page itself. For example if an equivalent text is adjacent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
-
-No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+- A web page with informative images without an [accessible name][] may conform to WCAG 2.1 Level A when the information provided by that image is available elsewhere on the web page itself. For example if an equivalent text is adjacent to the image, or if the text alternative is included in the [accessible name][] of a parent element.
 
 ## Accessibility Support
 

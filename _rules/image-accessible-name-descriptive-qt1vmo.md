@@ -54,8 +54,6 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 This rule assumes that the language of the [accessible name][] of each test target can be correctly determined (either programmatically or by analyzing the content).
 
-No [user stylesheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
-
 ## Accessibility Support
 
 _There are no major accessibility support issues known for this rule._

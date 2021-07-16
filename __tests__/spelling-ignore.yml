@@ -163,6 +163,8 @@
 - innerText
 - isTrusted
 - isComposing
+- x1
+- y1
 
 # DOM Events
 - auxclick
@@ -217,6 +219,10 @@
 - unicity
 - Menuitem
 - menuitems
+- namespaced-element
+- Namespaced
+- namespaceURI
+- testability
 
 # Parts of Unicode
 - 000A
@@ -251,3 +257,7 @@
 # Language codes
 - da
 - nl
+
+# Color values
+- HSL
+- hsl

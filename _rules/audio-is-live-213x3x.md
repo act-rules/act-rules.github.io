@@ -47,6 +47,8 @@ There are no major accessibility support issues known for this rule.
 
 Still looking for a solution to the problem of finding a live stream that we can use.
 
+The Media Working Group has a solution that could we might use, but requires a camera connected to the device where the rule is being tested. If we can't find anything else, we might add a note to the example stating this requirement. The example (does not work on Safari, works in Chrome) can be found here: https://github.com/w3c/webcodecs/tree/main/samples/webcam-in-worker
+
 This `audio` element plays a live media resource.
 
 ```html

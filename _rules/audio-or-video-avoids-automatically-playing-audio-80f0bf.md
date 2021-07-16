@@ -1,9 +1,9 @@
 ---
 id: 80f0bf
 name: '`audio` or `video` avoids automatically playing audio'
-rule_type: atomic
+rule_type: composite
 description: |
-  This rule checks that audio or video that plays automatically with audio that lasts for more than 3 seconds has an audio control mechanism to stop or mute it.
+  This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
     forConformance: true

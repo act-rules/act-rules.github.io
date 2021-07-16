@@ -1,6 +1,6 @@
 ---
 id: d0f69e
-name: Table header cell has assigned cell
+name: Table header cell is assigned to a cell
 rule_type: atomic
 description: |
   This rule checks that each table header is assigned to at least one non-empty cell.
@@ -15,11 +15,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:H63: # Using the scope attribute to associate header cells and data cells in data tables
-    forConformance: false
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
   - CSS styling
@@ -28,15 +23,19 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Aron Janecki
 ---
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] that is within an element with the [semantic role][] of either [table][] or [grid][]. The [table][] or [grid][] is [visible][] and has at least one non-empty element with a [semantic role][] of either [cell][], or inheriting from [cell][].
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] that is a child of an [accessible object][] with the [semantic role][] of [row][] and for which all of the following are true:
+
+- **table** the element is an [owned element][] of an [accessible object][] with the [semantic role][] of either [table][] or [grid][] that is [visible][], and
+- **minimum rows** the [table][] or [grid][] element contains at least two [accessible objects][accessible object] with the [semantic role][] of [row][].
 
 ## Expectation 1
 
-Each target element is [assigned][] to at least one non-empty element with a [semantic role][] of either [cell][], or inheriting from [cell][]. The test target and the assigned element are within the same element with the [semantic role][] of either [table][] or [grid][].
+Each target element is [assigned][] to an element with a semantic role of either [cell][] or inheriting from [cell][].
 
 ## Expectation 2
 
@@ -48,12 +47,13 @@ This rule assumes that table header cells have a relationship conveyed through t
 
 ## Accessibility Support
 
-- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
+
+The [HTML specification][https://html.spec.whatwg.org/] contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements should not have the semantic role of either [rowheader][] or [columnheader][] if they do not have the `scope` attribute in a state other than the "auto" state and there is a data cell in their row or column. However, some browsers give those `th` elements a table header role and this process is not standardised. One browser may evaluate such `th` elements as [rowheaders][rowheader] whereas other browsers may evaluate the same `th` elements as [columnheaders][columnheader]. This is likely not going to convey the relationship conveyed through presentation.
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
@@ -66,47 +66,74 @@ The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`
 
 #### Passed Example 1
 
-This `th` element has an assigned a non-empty `td` element.
+Each `th` element is [assigned][] to a non-empty `td` element.
 
 ```html
+<!DOCTYPE html>
 <table>
 	<tr>
 		<th>Time</th>
+		<th>Date</th>
 	</tr>
 	<tr>
 		<td>05:41</td>
+		<td>12/07/2021</td>
 	</tr>
 </table>
 ```
 
 #### Passed Example 2
 
-Each of the 2 `span` elements with role of `columnheader` has assigned a non-empty `span` elements with a role of `cell`.
+Each of the 2 `span` elements with role of `columnheader` is [assigned][] to a non-empty `span` element with a role of `cell`.
 
 ```html
-<div role="table">
-	<div role="rowgroup">
-		<div role="row">
-			<span role="columnheader">Month</span>
-			<span role="columnheader">Top Temperature</span>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Passed Example 2</title>
+		<style>
+			[role='table'] {
+				display: table;
+			}
+			[role='rowgroup'] {
+				display: table-row-group;
+			}
+			[role='row'] {
+				display: table-row;
+			}
+			[role='columnheader'],
+			[role='cell'] {
+				display: table-cell;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div role="table">
+			<div role="rowgroup">
+				<div role="row">
+					<span role="columnheader">Month</span>
+					<span role="columnheader">Top Temperature</span>
+				</div>
+			</div>
+			<div role="rowgroup">
+				<div role="row">
+					<span role="cell">July</span>
+					<span role="cell">40 C</span>
+				</div>
+				<div role="row">
+					<span role="cell">August</span>
+					<span role="cell">45 C</span>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div role="rowgroup">
-		<div role="row">
-			<span role="cell">July</span>
-			<span role="cell">40 C</span>
-		</div>
-		<div role="row">
-			<span role="cell">August</span>
-			<span role="cell">45 C</span>
-		</div>
-	</div>
-</div>
+	</body>
+</html>
 ```
 
 #### Passed Example 3
 
-Each of the 2 `th` elements has an assigned a non-empty `td` element because this `td` element spans 2 columns.
+Each of the 2 `th` elements is [assigned][] to a non-empty `td` element because this `td` element spans 2 columns.
 
 ```html
 <table>
@@ -126,7 +153,7 @@ Each of the 2 `th` elements has an assigned a non-empty `td` element because thi
 
 #### Passed Example 4
 
-Each of the 4 `th` elements has an assigned a non-empty `td` element, within the same `table` element having a [semantic role][] of `grid`.
+Each of the 4 `th` elements is [assigned][] to a non-empty `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
 ```html
 <table role="grid">
@@ -151,7 +178,7 @@ Each of the 4 `th` elements has an assigned a non-empty `td` element, within the
 
 #### Passed Example 5
 
-Each of the 4 `th` elements has an assigned non-empty `td` element because the value of the `headers` attribute on `td` elements references the value of the `id` attribute on the `th` elements.
+Each of the 4 `th` elements is [assigned][] to a non-empty `td` element because all of the `id` values for the `th` elements are referenced by the value of the `headers` attribute on `td` elements.
 
 ```html
 <table>
@@ -173,7 +200,7 @@ Each of the 4 `th` elements has an assigned non-empty `td` element because the v
 
 #### Passed Example 6
 
-Each of the 5 `th` elements in this table has assigned a non-empty element with the [semantic role][] of `cell`, or inheriting from `cell`.
+Each of the 5 `th` elements in this table is [assigned][] to a non-empty element with the [semantic role][] of `cell`, or inheriting from `cell`.
 
 ```html
 <table>
@@ -200,30 +227,50 @@ Each of the 5 `th` elements in this table has assigned a non-empty element with 
 
 #### Passed Example 7
 
-Each of the 2 `div` elements has an assigned a non-empty `gridcell` within the same `div` element having a [semantic role][] of `grid`.
+Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell` within the same `div` element having a [semantic role][] of `grid`.
 
 ```html
-<div role="grid">
-	<div role="row">
-		<div role="columnheader">Room</div>
-		<div role="columnheader">Occupants</div>
-	</div>
-	<div role="row">
-		<div role="gridcell"><button>1A</button></div>
-		<div role="gridcell"><input type="number" /></div>
-	</div>
-	<div role="row">
-		<div role="gridcell"><button>2A</button></div>
-		<div role="gridcell"><input type="number" /></div>
-	</div>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Passed Example 7</title>
+    <style>
+      [role="grid"] {
+         display: table;
+      }
+      [role="row"] {
+         display: table-row;
+      }
+      [role="columnheader"], [role="gridcell"] {
+         display: table-cell;
+      }
+    </style>
+  </head>
+
+  <body>
+    </html>
+    <div role="grid">
+    	<div role="row">
+    		<div role="columnheader">Room</div>
+    		<div role="columnheader">Occupants</div>
+    	</div>
+    	<div role="row">
+    		<div role="gridcell"><button>1A</button></div>
+    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+    	</div>
+    	<div role="row">
+    		<div role="gridcell"><button>2A</button></div>
+    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+    	</div>
+    </div>
+  </body>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The `th` elements do not have assigned non-empty data cells as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is `auto` state and there is a non-empty table data slot in the same column or row.
+The `th` elements should not be table headers as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is in the `auto` state and there is a non-empty table data cell in the same column or row. There are browsers that give the elements with the value "Breakfast", "Lunch", and "Dinner" the [semantic role][] of [rowheader][] which inappropriately represents the relationship between the cells.
 
 ```html
 <table>
@@ -280,6 +327,47 @@ This `div` with role of `columnheader` and text equal to "Occupants" does not ha
 		<div role="gridcell">2A</div>
 	</div>
 </div>
+```
+
+#### Failed Example 4
+
+Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the elements are not within an [accessible object] with a [semantic role][] of `grid`.
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Passed Example 7</title>
+    <style>
+      [role="table"] {
+         display: table;
+      }
+      [role="row"] {
+         display: table-row;
+      }
+      [role="columnheader"], [role="gridcell"] {
+         display: table-cell;
+      }
+    </style>
+  </head>
+
+  <body>
+    </html>
+    <div role="table">
+    	<div role="row">
+    		<div role="columnheader">Room</div>
+    		<div role="columnheader">Occupants</div>
+    	</div>
+    	<div role="row">
+    		<div role="gridcell"><button>1A</button></div>
+    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+    	</div>
+    	<div role="row">
+    		<div role="gridcell"><button>2A</button></div>
+    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+    	</div>
+    </div>
+  </body>
 ```
 
 ### Inapplicable
@@ -376,16 +464,19 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 </table>
 ```
 
+[accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object 'Definition of accessible object'
 [attribute value]: #attribute-value 'Definition of attribute value'
+[child index]: #child-index 'Definition of child index'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
-[assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
 [gridcell]: https://www.w3.org/TR/wai-aria-1.2/#gridcell 'ARIA gridcell role'
 [table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
+[row]: https://www.w3.org/TR/wai-aria-1.1/#row 'ARIA row role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[owned element]: https://www.w3.org/TR/core-aam-1.1/#dfn-owned-element 'Definition of owned element'

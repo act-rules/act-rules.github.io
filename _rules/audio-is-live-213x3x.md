@@ -19,13 +19,13 @@ acknowledgments:
 This rule applies to every `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible][] and [included in the accessibility tree][].
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 
 
-The target element's [media resource](https://html.spec.whatwg.org/multipage/media.html#media-resource) is being broadcasted in real time without being first recorded and stored on the origin server.
+For each test target one of the following is true:
+- it is not possible to [seek][] the end of the target element's [media resource][]; or 
+- after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
 
 ## Assumptions
 
@@ -44,6 +44,8 @@ There are no major accessibility support issues known for this rule.
 ### Passed
 
 #### Passed Example 1
+
+Still looking for a solution to the problem of finding a live stream that we can use.
 
 This `audio` element plays a live media resource.
 
@@ -87,5 +89,9 @@ This `audio` element does not have controls.
 </html>
 ```
 
+[current playback position]: https://html.spec.whatwg.org/multipage/media.html#current-playback-position
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource
+[play button]: #play-button
+[seek]: https://html.spec.whatwg.org/multipage/media.html#dom-media-seek
 [visible]: #visible 'Definition of visible'

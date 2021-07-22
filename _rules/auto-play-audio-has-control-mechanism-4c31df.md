@@ -74,7 +74,6 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 
 ```html
 <video autoplay controls>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
@@ -101,7 +100,6 @@ This `video` element has a custom [instrument][] to pause or stop or turn the au
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay>
-			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
@@ -130,7 +128,6 @@ This `video` element autoplays and does not have an [instrument][] to pause, sto
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
@@ -158,7 +155,6 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay>
-			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
@@ -193,7 +189,6 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay>
-			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
@@ -228,7 +223,6 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 	<div id="video-container">
 		<!-- Video -->
 		<video id="video" autoplay>
-			<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 			<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 		</video>
 		<!-- Video Controls -->
@@ -249,7 +243,6 @@ The audio of this `video` element autoplays for longer than 3 seconds but is `mu
 
 ```html
 <video autoplay muted>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
@@ -260,7 +253,6 @@ The `src` file of this `video` element has no audio output.
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
 	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
 </video>
 ```

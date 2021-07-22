@@ -54,7 +54,6 @@ This `video` element, which has no audio, has a separate audio track that descri
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
 
@@ -73,7 +72,6 @@ This `video` element, which has no audio, does not have an audio track describin
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
 </html>
@@ -86,7 +84,6 @@ This `video` element, which has no audio, has a separate audio track that incorr
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
 
@@ -105,7 +102,6 @@ This `video` element has audio.
 ```html
 <html lang="en">
 	<video controls>
-		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 	</video>
 </html>
@@ -118,7 +114,6 @@ This `video` element is not [visible][].
 ```html
 <html lang="en">
 	<video controls style="display: none;">
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
 		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 	</video>
 </html>

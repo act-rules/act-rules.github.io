@@ -60,7 +60,6 @@ This `video` element, which has no audio, has a text transcript available on the
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
@@ -76,7 +75,6 @@ This `video` element, which has no audio, has a transcript which conveys informa
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
@@ -92,7 +90,6 @@ This `video` element, which has no audio, has an incorrect text transcript avail
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
@@ -108,7 +105,6 @@ This `video` element, which has no audio, has an incorrect text transcript avail
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
@@ -122,7 +118,6 @@ This `video` element, which has no audio, has a text transcript available on the
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
@@ -138,7 +133,6 @@ This `video` element, which has no audio, has a text transcript available on the
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
@@ -156,7 +150,6 @@ This `video` element has audio.
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
@@ -170,7 +163,6 @@ This `video` element is not [visible][].
 ```html
 <html lang="en">
 <video controls style="display: none;">
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>

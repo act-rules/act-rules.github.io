@@ -114,7 +114,7 @@ This `input` element has an [accessible name][] because of its `placeholder` att
 
 #### Passed Example 6
 
-This element with a `combobox` [role][semantic role] has an [accessible name][] because of its `aria-label` attribute.
+This [semantic][semantic role] `combobox` element has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
 <div>Country</div>
@@ -161,7 +161,7 @@ This `select` element has an empty (`""`) [accessible name][] because the `div` 
 
 #### Failed Example 5
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form fields.
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
 <label>
@@ -172,7 +172,7 @@ This element with a `textbox` [role][semantic role] has an empty (`""`) [accessi
 
 #### Failed Example 6
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
 <label for="lastname">first name</label>

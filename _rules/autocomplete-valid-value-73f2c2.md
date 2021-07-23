@@ -150,7 +150,7 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 This `autocomplete` [attribute value][] has an unknown term that is not a [correct autocomplete field][].
 
 ```html
-<label>Username<input autocomplete="badterm"/></label>
+<label>Username<input autocomplete="user"/></label>
 ```
 
 #### Failed Example 2

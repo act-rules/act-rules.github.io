@@ -149,6 +149,8 @@ The description should:
 
 > _For example: "This page has a `title` element with content."_
 
+At times, the aplicability and the expectation of the rule may require analysing the before and after state of a web page. It happens when the rule applies to an element that changes some of its properties and the pass or failure condition can be evaluated only after the change of the state. 
+
 For a detailed description on what to write test cases for see [test case design](../test-cases). For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
 
 ## Listed conditions

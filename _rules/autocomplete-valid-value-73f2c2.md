@@ -17,6 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+    - Aron Janecki
 ---
 
 ## Applicability

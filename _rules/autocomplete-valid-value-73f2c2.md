@@ -232,7 +232,7 @@ This `autocomplete` attribute is on an `input` element that has the `aria-disabl
 This `autocomplete` attribute is ignored because it is on an element with a [semantic role][] of `none`. The `disabled` attribute is required to ensure [presentational roles conflict resolution][] does not cause the `none` role to be ignored.
 
 ```html
-<label>Username<input type="text" role="none" disabled autocomplete="username"/></label>
+<label>Username<input type="text" role="none" disabled autocomplete="badname"/></label>
 ```
 
 #### Inapplicable Example 7

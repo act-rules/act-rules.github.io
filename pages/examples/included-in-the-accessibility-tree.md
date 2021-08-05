@@ -22,7 +22,7 @@ This `h3` element is not included in the accessibility tree because it is hidden
 
 ## Removed with aria-hidden
 
-This `span` element is not included in the accessibility tree because it is explicitly removed by the `aria-hidden` attribute.
+This `h3` element is not included in the accessibility tree because it is explicitly removed by the `aria-hidden` attribute.
 
 ```html
 <h3 aria-hidden="true">ACT rules</h3>
@@ -38,21 +38,21 @@ This `h3` element is positioned off screen, hence is not [visible][], but is non
 
 ## Removed but not ignored
 
-Although the `h3` element with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name][] to the `span`, via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies. Removing an element from the accessibility tree is not enough to remove all accessibility concerns from it since it can still be indirectly exposed.
+Although this `h2` element with an `id` of "label" is not itself included in the accessibility tree, it still provides an [accessible name][] to the `h3` via the `aria-labelledby` attribute. Thus, it is still indirectly exposed to users of assistive technologies. Removing an element from the accessibility tree is not enough to remove all accessibility concerns from it since it can still be indirectly exposed.
 
 ```html
-<h3 id="label" style="display:none">ACT rules</h3>
-<span aria-labelledby="label">Accessibility Conformance Testing rules</span>
+<h2 id="label" style="display:none">ACT rules</h2>
+<h3 aria-labelledby="label">Accessibility Conformance Testing rules</h3>
 ```
 
-## Focusable elements
+## Removed but focusable
 
-Using `role="presentation"` or `aria-hidden="true"` on a focusable element (or its ancestor) will not remove the element from the accessibility tree and may result in confusion for users of assistive technology. The `input` is still [focusable][], hence users of assistive technologies can still interact with it by sequential keyboard navigation. This is in direct violation of [the fourth rule of ARIA (working draft)](https://www.w3.org/TR/using-aria/#fourth).
+Although this `input` element is not included in the accessibility tree, it is still [focusable][], hence users of assistive technologies can still interact with it by sequential keyboard navigation. This may result in confusing situations for such users (and is in direct violation of [the fourth rule of ARIA (working draft)](https://www.w3.org/TR/using-aria/#fourth)).
 
 ```html
-<div aria-hidden="true">
+<span aria-hidden="true">
 	<input type="text" name="fname" />
-</div>
+</span>
 ```
 
 [accessible name]: /glossary/#accessible-name

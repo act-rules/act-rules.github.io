@@ -28,7 +28,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
-- **large enough**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property; or
+- **large enough**: the [computed][] value of its [line-height][] property is not `normal`, and is at least 1.5 times the [computed][] value of its [font-size][] property; or
 - **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
@@ -181,7 +181,7 @@ The [computed][] value of the `line-height` property of this `p` element is **no
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `line-height` equal to the font size, which is below the recommended minimum.
+This `p` element has a [computed][] `line-height` equal to the font size, which is below the required minimum.
 
 ```html
 <p style="line-height: 1em !important">
@@ -191,7 +191,7 @@ This `p` element has a [computed][] `line-height` equal to the font size, which 
 
 #### Failed Example 2
 
-This `p` element has a [computed][] `line-height` of `20px`, which is below the recommended minimum given the specified font size is 20 pixels.
+This `p` element has a [computed][] `line-height` of `20px`, which is below the required minimum given the specified font size is 20 pixels.
 
 ```html
 <style>
@@ -207,7 +207,7 @@ This `p` element has a [computed][] `line-height` of `20px`, which is below the 
 
 #### Failed Example 3
 
-This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) which is below the recommended minimum.
+This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) which is below the required minimum.
 
 ```html
 <style>
@@ -223,7 +223,7 @@ This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) w
 
 #### Failed Example 4
 
-This `p` element has a [computed][] `line-height` of `1.2` which is below the recommended minimum.
+This `p` element has a [computed][] `line-height` of `1.2` which is below the required minimum.
 
 ```html
 <p style="line-height: 1.2 !important">
@@ -233,7 +233,7 @@ This `p` element has a [computed][] `line-height` of `1.2` which is below the re
 
 #### Failed Example 5
 
-This `p` element has a [computed][] `line-height` of `normal` which is below the recommended minimum ([used][] value is generally around 1.2).
+This `p` element has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value is generally around 1.2).
 
 ```html
 <p style="line-height: normal !important">
@@ -243,7 +243,7 @@ This `p` element has a [computed][] `line-height` of `normal` which is below the
 
 #### Failed Example 6
 
-This `p` element has a [computed][] `line-height` of `normal` which is below the recommended minimum ([used][] value is generally around 1.2).
+This `p` element has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value is generally around 1.2).
 
 ```html
 <p style="line-height: initial !important">

@@ -16,6 +16,7 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Aron Janecki
     - Wilco Fiers
 ---
 

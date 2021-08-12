@@ -50,7 +50,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-- A mechanism is available to start the video and the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- A mechanism is available to start the video and the video element is not simply used to display the [poster](https://html.spec.whatwg.org/multipage/media.html#attr-video-poster).
 - The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support

@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with is a [semantic][semantic role] [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any HTML element with a [semantic][semantic role] [rowheader][] or [columnheader][] for which all of the following is true:
 
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][]; and

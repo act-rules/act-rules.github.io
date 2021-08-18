@@ -36,7 +36,7 @@ This rule applies to any HTML element with is a [semantic][semantic role] [rowhe
 
 ## Expectation
 
-Each target element is [assigned][] to at least one element this is an [inheriting semantic][] [cell][].
+Each target element is [assigned][] to at least one element with an [inheriting semantic][] [cell][].
 
 ## Assumptions
 

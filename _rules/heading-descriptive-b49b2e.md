@@ -32,14 +32,14 @@ This rule applies to any element with the [semantic role][] of `heading` that is
 For each target element at least one of the following is true:
 
 - the target element is not [visible][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after it in tree order in the [flat tree][].
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target element in tree order in the [flat tree][].
 
 ## Expectation 2
 
 For each target element at least one of the following is true:
 
 - the target element is not [included in the accessibility tree][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after it in tree order in the [flat tree][].
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

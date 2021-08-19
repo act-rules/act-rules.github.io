@@ -16,12 +16,13 @@ input_aspects:
   - CSS Styling
 acknowledgments:
   authors:
+    - Aron Janecki
     - Wilco Fiers
 ---
 
 ## Applicability
 
-This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one of the following is true:
+This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
 
 - **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
 - **disabled**: the element is a [disabled element]; or
@@ -178,14 +179,6 @@ This `autocomplete` [attribute value][] is comma separated instead of space usin
 ```
 
 #### Failed Example 5
-
-This `autocomplete` [attribute value][] is not appropriate for the field. The form field's implied purpose is to input a quantity (a number) which cannot be a e-mail.
-
-```html
-<label>Quantity<input type="number" autocomplete="email"/></label>
-```
-
-#### Failed Example 6
 
 The `autocomplete` attribute value is on an `input` element that does not have a semantic role that is a widget role, but still participates in [sequential focus navigation][] because of the `tabindex` attribute.
 

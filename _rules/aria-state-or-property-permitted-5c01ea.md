@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [WAI-ARIA state or property][] that is specified on an HTML or SVG element that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][] that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -204,3 +204,4 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
+[html or svg element]: #namespaced-element

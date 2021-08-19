@@ -7,7 +7,7 @@ input_aspects:
   - DOM tree
 ---
 
-An element is _marked as decorative_ if one of the following conditions is true:
+An element is _marked as decorative_ if one or more of the following conditions is true:
 
 - it has an [explicit role][] of `none` or `presentation`; or
 - it is an `img` element with an `alt` attribute whose value is the empty string (`alt=""`), and with no [explicit role][].

@@ -33,7 +33,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of two or more HTML or SVG elements which
+This rule applies to any set of two or more [HTML or SVG elements][] which
 
 - have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
 - are in the same [web page (HTML)][]; and
@@ -78,10 +78,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>)
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a>)
 	</p>
 </html>
 ```
@@ -93,10 +92,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>
@@ -109,11 +107,10 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a
 			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>
@@ -381,3 +378,4 @@ These two `span` elements do not have a [semantic role][] of link.
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
+[html or svg elements]: #namespaced-element

@@ -66,10 +66,10 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual Content Has Audio Description](https://act-rules.github.io/rules/1ea59c)
-- [`Video` Element Visual Content Has Transcript](https://act-rules.github.io/rules/1a02b0)
-- [`Video` Element Visual Content Has Description Track](https://act-rules.github.io/rules/f196ce)
-- [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13)
+- [`Video` Element Visual Content Has Audio Description](https://act-rules.github.io/rules/1ea59c); or
+- [`Video` Element Visual Content Has Transcript](https://act-rules.github.io/rules/1a02b0); or
+- [`Video` Element Visual Content Has Description Track](https://act-rules.github.io/rules/f196ce); or
+- [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13).
 
 ## Assumptions
 
@@ -97,7 +97,7 @@ This rule is designed specifically for [1.2.3 Audio Description or Media Alterna
 
 #### Passed Example 1
 
-A video element with a voiceover that describes the visual information.
+This `video` element has an audio description because it has voiceover that describes the visual information.
 
 ```html
 <html lang="en">
@@ -155,7 +155,7 @@ A video element that describes some of the text on the same page. The text on th
 
 #### Failed Example 1
 
-A video element with an incorrect audio description.
+This `video` element has an incorrect audio description.
 
 ```html
 <html lang="en">

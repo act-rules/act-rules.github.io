@@ -301,7 +301,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code. This is not a [valid language tag][].
 
 ```html
 <html lang="en">
@@ -313,7 +313,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Inapplicable Example 7
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags]. This is not a [valid language tag][].
 
 ```html
 <html lang="lb">

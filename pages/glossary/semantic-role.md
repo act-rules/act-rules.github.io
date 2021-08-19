@@ -13,7 +13,7 @@ The _semantic role_ of an element is determined by the first of these cases that
 1. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
 1. **Implicit** The _semantic role_ of the element is its [implicit role][].
 
-This definition can be used in expressions such as "semantic `button`" meaning any element has a semantic role of `button`.
+This definition can be used in expressions such as "semantic `button`" meaning any element with a semantic role of `button`.
 
 #### Accessibility Support for Definition of Semantic Role
 

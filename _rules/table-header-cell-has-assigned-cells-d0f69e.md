@@ -10,11 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:H43: # Using id and headers attributes to associate data cells with header cells in data tables
-    forConformance: false
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
   - CSS styling

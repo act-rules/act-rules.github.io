@@ -219,6 +219,9 @@
 - unicity
 - Menuitem
 - menuitems
+- namespaced-element
+- Namespaced
+- namespaceURI
 - testability
 
 # Parts of Unicode
@@ -254,3 +257,7 @@
 # Language codes
 - da
 - nl
+
+# Color values
+- HSL
+- hsl

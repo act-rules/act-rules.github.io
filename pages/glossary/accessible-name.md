@@ -15,7 +15,7 @@ The accessible name is calculated using the [accessible name and description com
 
 For native markup languages, such as HTML and SVG, additional information on how to calculate the accessible name can be found in [HTML Accessibility API Mappings 1.0, Accessible Name and Description Computation (working draft)](https://www.w3.org/TR/html-aam/#accessible-name-and-description-computation) and [SVG Accessibility API Mappings, Name and Description (working draft)](https://www.w3.org/TR/svg-aam/#mapping_additional).
 
-For more details, see [examples of accessible name](/pages/examples/accessible-name/).
+For more details, see [examples of accessible name][].
 
 **Note:** As per the [accessible name and description computation][], each element always has an accessible name. When no accessible name is provided, the element will nonetheless be assigned an empty (`""`) one.
 
@@ -29,3 +29,4 @@ For more details, see [examples of accessible name](/pages/examples/accessible-n
 - The [accessible name and description computation][] suggest that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case.
 
 [accessible name and description computation]: https://www.w3.org/TR/accname 'Accessible Name and Description Computation'
+[examples of accessible name]: https://act-rules.github.io/pages/examples/accessible-name/

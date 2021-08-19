@@ -6,7 +6,7 @@ Closes issue(s):
 
 Need for Call for Review:
 << choose one of the following and remove the rest >>
-<< check https://act-rules.github.io/pages/design/process/#final-call-aka-call-for-consensus-cfc >>
+<< check [Process Document on Call for Review](https://act-rules.github.io/pages/design/process/#call-for-review) >>
 This can be merged with 1 approval << choose reason: editorial changes to website/test code, adding new contributor, other (explain). >>
 This will not require a Call for Review << choose reason(s): editorial changes (including to the applicability, expectation or examples section), changes to assumptions, background, accessibility support, change to website/test code (not rule), other (explain). >>
 This will require a 1 week Call for Review << small changes affecting a small number of test cases, if in doubt do not use this. >>

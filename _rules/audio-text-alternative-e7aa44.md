@@ -24,6 +24,8 @@ acknowledgments:
     - John Hicks
     - Rafal Charlampowicz
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -17,6 +17,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
   assets:
     - The "file.svg" icon is part of the Feather Icons package, which uses the [MIT license](https://github.com/feathericons/feather/blob/master/LICENSE).
 ---

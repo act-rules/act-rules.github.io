@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Aron Janecki
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

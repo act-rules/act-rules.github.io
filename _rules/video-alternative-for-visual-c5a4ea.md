@@ -54,6 +54,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Test Procedure

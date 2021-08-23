@@ -22,6 +22,8 @@ acknowledgments:
     - Jey Nandakumar
   previous_authors:
     - Annika Nietzio
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

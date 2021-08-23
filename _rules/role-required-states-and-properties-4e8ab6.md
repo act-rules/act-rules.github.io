@@ -20,6 +20,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

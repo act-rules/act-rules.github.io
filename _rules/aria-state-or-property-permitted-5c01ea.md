@@ -24,6 +24,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -16,6 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

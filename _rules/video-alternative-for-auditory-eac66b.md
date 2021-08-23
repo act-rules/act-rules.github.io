@@ -32,6 +32,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -84,9 +86,10 @@ A video element that describes some of the text on the same page. The text on th
 ```html
 <html lang="en">
 	<p>
-		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
-		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
-		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse
+		doesn't work, is frustrating. Many people use only the keyboard to navigate websites. Either through preference or
+		circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+		below to watch the same information again in video form.
 	</p>
 	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 </html>

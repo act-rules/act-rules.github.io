@@ -19,6 +19,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

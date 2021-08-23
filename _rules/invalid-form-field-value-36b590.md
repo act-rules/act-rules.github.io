@@ -19,6 +19,8 @@ acknowledgments:
     - Carlos Duarte
     - João Vicente
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -25,6 +25,8 @@ acknowledgments:
     - Carlos Duarte
     - Marie Trudelle
     - Ramit Garg
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

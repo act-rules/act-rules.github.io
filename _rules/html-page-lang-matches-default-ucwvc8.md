@@ -23,6 +23,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # using aria-labelledby instead

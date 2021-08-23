@@ -20,6 +20,8 @@ acknowledgments:
   previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

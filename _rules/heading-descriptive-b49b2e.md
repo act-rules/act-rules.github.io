@@ -21,6 +21,8 @@ acknowledgments:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

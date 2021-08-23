@@ -38,6 +38,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

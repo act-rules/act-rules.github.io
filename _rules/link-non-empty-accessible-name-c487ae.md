@@ -33,7 +33,9 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Wilco Fiers
-  image:
+  funding:
+    - WAI-Tools
+  assets:
     - Image used in passed example 10 and failed example 9 is courtesy of NASA/JPL-Caltech.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint

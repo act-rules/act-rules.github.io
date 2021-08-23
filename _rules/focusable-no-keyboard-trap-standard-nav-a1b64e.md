@@ -17,6 +17,8 @@ acknowledgments:
     - Malin Øvrebø
     - Shadi Abou-Zahra
     - Stein Erik Skotkjerra
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

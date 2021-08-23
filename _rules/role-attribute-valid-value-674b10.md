@@ -26,6 +26,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

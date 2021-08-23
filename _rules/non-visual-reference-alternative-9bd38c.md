@@ -31,6 +31,8 @@ acknowledgments:
     - Daniël Strik
     - Jean-Yves Moyen
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

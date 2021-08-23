@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Stein Erik Skotkjerra
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

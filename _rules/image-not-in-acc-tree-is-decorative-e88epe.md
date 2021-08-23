@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
   assets:
     - W3C
     - Wikimedia

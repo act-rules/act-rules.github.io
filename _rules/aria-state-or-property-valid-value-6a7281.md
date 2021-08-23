@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

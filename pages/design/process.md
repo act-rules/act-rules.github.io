@@ -147,7 +147,7 @@ This stage was formerly called Final Call or Call for Consensus (CFC)
 - Rule author considers the rule to be in its final form.
 - Rule is either a new rule or an already published rule where substantial changes have been made.
 
-#### Changes that does require a "Call for Review"
+#### Changes that do require a "Call for Review"
 
 Substantial changes, that require a "Call for Review", are in general changes that can affect the outcome of a rule.
 This includes, but might not be limited to changes that changes, extends or limits the scope of what is considered for these sections:
@@ -157,7 +157,7 @@ This includes, but might not be limited to changes that changes, extends or limi
 - Expectations
 - Test cases (Passed/Failed/Inapplicable)
 
-#### Changes that does not require a "Call for Review"
+#### Changes that do not require a "Call for Review"
 
 These changes are considered non-substantial and will not require a "Call for Review" before being published:
 
@@ -166,11 +166,11 @@ These changes are considered non-substantial and will not require a "Call for Re
 
 ### Passes this stage when:
 
-- No changes or only changes that _do not_ require a "Call for Review" is made to the rule after "Call for Review" is launched.
+- No changes or only changes that _do not_ require a "Call for Review" are made to the rule after "Call for Review" is launched.
 
 ### Fails this stage and moves back two stages to "In Progress" when:
 
-- Changes that do require a "Call for Review" is made to the rule after "Call for Review" is launched.
+- Changes that do require a "Call for Review" are made to the rule after "Call for Review" is launched.
 
 If this happens, a new "Call for Review" should be launched after the first one. It is recommended to let the first "Call for Review" expire first, before launching a new one, to get a broad range of reviewers on board already in the first round to hopefully avoid multiple rounds of Calls for Review for the same pull request.
 
@@ -180,13 +180,13 @@ If this happens, a new "Call for Review" should be launched after the first one.
 
 - Send email out to all of ACT Rules Community Group that rule is in "Call for Review" for the next 2 weeks.
 - Follow up on feedback during the "Call for Review", and handle requested changes, evaluating whether they are of a type that MUST spawn a new "Call for Review":
-  - For changes that _does not_ require a "Call for Review" (see above): Implement changes as soon as possible, and dismiss outdated reviews (to let all reviewers know that the pull request is review ready), and request a new review from that person.
-  - For changes that _does_ require a new "Call for Review": Evaluate whether "Call for Review" should be allowed to run out before changes are made, or if changes should be made right away, but with a note that a new "Call for Review" will be required.
+  - For changes that _do not_ require a "Call for Review" (see above): Implement changes as soon as possible, and dismiss outdated reviews (to let all reviewers know that the pull request is review ready), and request a new review from that person.
+  - For changes that _do_ require a new "Call for Review": Evaluate whether "Call for Review" should be allowed to run out before changes are made, or if changes should be made right away, but with a note that a new "Call for Review" will be required.
 
 #### Reviewer's job for this stage:
 
 - Thorough reviews, take time to dive into the rule.
-- When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a "Call for Review", or the ones the do not require a "Call for Review").
+- When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a "Call for Review", or the ones that do not require a "Call for Review").
 - For tool vendors and testing methodology owners: Implement rule in tools and methodologies
   - At this stage, the rule should be quite stable, minimizing the risk of doing a too-early implementation, that has to be re-done from scratch later due to changes in the rule.
   - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with test cases, ambiguities in applicability or expectations, missing definitions etc.

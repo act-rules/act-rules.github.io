@@ -1,6 +1,6 @@
 ---
-title: Hidden State
-key: hidden-state
+title: Programmatically Hidden
+key: programmatically-hidden
 unambiguous: true
 objective: true
 input_aspects:
@@ -8,13 +8,11 @@ input_aspects:
   - DOM tree
 ---
 
-An HTML element's _hidden state_ is "true" if either it has a [computed][] CSS property `visibility` whose value is not `visible`; or at least one of the following is true for any of its [inclusive ancestors][] in the [flat tree][]:
+An HTML element is _programmatically hidden_ if either it has a [computed][] CSS property `visibility` whose value is not `visible`; or at least one of the following is true for any of its [inclusive ancestors][] in the [flat tree][]:
 
 - has a `hidden` attribute; or
 - has a [computed][] CSS property `display` of `none`; or
 - has an `aria-hidden` attribute set to `true`
-
-In any other case, the element's _hidden state_ is "false".
 
 **Note**: Contrarily to the other conditions, the `visibility` CSS property may be reverted by descendants.
 

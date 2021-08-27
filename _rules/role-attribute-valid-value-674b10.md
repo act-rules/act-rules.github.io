@@ -33,7 +33,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an [HTML or SVG element][] which is [programmatically hidden][].
+- the attribute is specified on an [HTML or SVG element][] which is not [programmatically hidden][].
 
 ## Expectation
 

@@ -8,7 +8,7 @@ input_aspects:
   - DOM tree
 ---
 
-This definition of assigning header cells to data cells is different from the [internal algorithm for scanning and assigning header cells][https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells] in the [HTML specification][https://html.spec.whatwg.org/]. The algorithm provides guidance on how those elements should be mapped to accessibility APIs whereas this definition focuses solely on the outcome of the mapping. It takes into consideration the structure of the [table][] and [grid][] elements as they appear in the accessibility tree.
+This definition of assigning header cells to data cells is different from the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) in the [HTML specification](https://html.spec.whatwg.org/). The algorithm provides guidance on how those elements should be mapped to accessibility APIs whereas this definition focuses solely on the outcome of the mapping. It takes into consideration the structure of the [table][] and [grid][] elements as they appear in the accessibility tree.
 
 In order for an [accessible object][] with the [semantic role][] of [rowheader][] to be assigned to an [accessible object][] with the [semantic role][] of either [cell][], or inheriting from [cell][], at least one of the following is true:
 
@@ -19,7 +19,7 @@ In order for an [accessible object][] with the [semantic role][] of [rowheader][
 An [accessible object][] with the [semantic role][] of [columnheader][] is assigned to an element with a [semantic role][] of either [cell][], or inheriting from [cell][], if at least one of the following is true:
 
 - there is at least one non-empty [accessible object][] with a [semantic role][] of either [cell][], or inheriting from [cell][], that has the `headers` attribute with the value that matches the `id` [attribute value][] of the [columnheader][] that is being evaluated, and it is an [owned element][] of the same [table][] or [grid][] but it is not a child of the same [accessible object][] with the [semantic role][] of [row][] as the [columnheader][]; or
-- there is at least one non-empty [accessible object][] with a [semantic role][] of either [cell][], or inheriting from [cell][], that is a child of an [accessible object][] with the [semantic role][] of [row][], that is not the parent element of the [columnheader][] for which the assignment is evaluated; the [cell][]'s [row][] is an [owned element][] of the same [table][] or [grid][] to which the [columnheader][] belongs and has the same [index][] as the [columnheader][], or it has a `colspan` attribute which together with the [cell][]'s [index][] value spans over the [child index][] value of the [columnheader][].
+- there is at least one non-empty [accessible object][] with a [semantic role][] of either [cell][], or inheriting from [cell][], that is a child of an [accessible object][] with the [semantic role][] of [row][], that is not the parent element of the [columnheader][] for which the assignment is evaluated; the [cell][]'s [row][] is an [owned element][] of the same [table][] or [grid][] to which the [columnheader][] belongs and has the same [index][] as the [columnheader][], or it has a `colspan` attribute which together with the [cell][]'s [index][] value spans over the [index][] value of the [columnheader][].
 
 Whenever there is a [cell][] that spans the width of more than one column or a [cell][] that spans the height of more than one row, that [cell][]'s [index][] is the same for all spanned rows and columns. It means that the [indexes][index] of [cells][cell] that are owned by a [row][] that receives such spanned [cells][cell] are incremented by the value of either the `rowspan` or the `colspan` attribute.
 
@@ -42,13 +42,14 @@ In the following example, the index of the `td` element inside the last `tr` ele
 ```
 
 [accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object
-[html element]: https://html.spec.whatwg.org/#htmlelement
-[included in the accessibility tree]: #included-in-the-accessibility-tree
+[attribute value]: #attribute-value 'Definition of attribute value'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
-[gridcell]: https://www.w3.org/TR/wai-aria-1.2/#gridcell 'ARIA gridcell role'
 [table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
 [grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
+[row]: https://www.w3.org/TR/wai-aria-1.1/#row 'ARIA row role'
 [index]: https://dom.spec.whatwg.org/#concept-tree-index 'Definition of index'
 [position in the set]: https://www.w3.org/TR/wai-aria-1.1/#aria-posinset 'Definition of aria-posinset'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[owned element]: https://www.w3.org/TR/core-aam-1.1/#dfn-owned-element 'Definition of owned element'

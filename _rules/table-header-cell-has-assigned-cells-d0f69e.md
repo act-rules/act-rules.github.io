@@ -28,11 +28,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] with the [semantic role][] of [rowheader][] or [columnheader][] that is [included in the accessibility tree][] and for which all of the following are true:
+This rule applies to any HTML element with the [semantic role][] of [rowheader][] or [columnheader][] that is [included in the accessibility tree][] and for which all of the following are true:
 
-- **in a row** the element is a child of an [accessible object][] with the [semantic role][] of [row][]; and
-- **table** the element is an [owned element][] of an [accessible object][] with the [semantic role][] of either [table][] or [grid][] that is [visible][]; and
-- **minimum rows** the [table][] or [grid][] element has at least two [owned elements][owned element] with the [semantic role][] of [row][].
+- **in a row** the element is [owned by][] an element with the [semantic role][] of [row][]; and
+- **table** the element is an [inclusive descendant][] of an element with the [semantic role][] of either [table][] or [grid][] that is [visible][]; and
+- **minimum rows** the [table][] or [grid][] element has at least two [inclusive descendant][] elements with the [semantic role][] of [row][].
 
 ## Expectation 1
 
@@ -54,7 +54,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
 
-The [HTML specification][https://html.spec.whatwg.org/] contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements with a `scope` [attribute value][] of `auto`, and both a data cell in their row and one in their column are neither row header nor column header. However, some browsers give those `th` elements a table header role and this process is not standardized. One browser may evaluate such `th` elements as [rowheaders][rowheader] whereas other browsers may evaluate the same `th` elements as [columnheaders][columnheader]. This is likely not going to convey the relationship conveyed through presentation.
+The [HTML specification](https://html.spec.whatwg.org/) contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements with a `scope` [attribute value][] of `auto`, and both a data cell in their row and one in their column are neither row header nor column header. However, some browsers give those `th` elements a table header role and this process is not standardized. One browser may evaluate such `th` elements as [rowheader][] whereas other browsers may evaluate the same `th` elements as [columnheader][]. This is likely not going to convey the relationship conveyed through presentation.
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
@@ -70,7 +70,6 @@ The [HTML specification][https://html.spec.whatwg.org/] contains the [internal a
 Each `th` element is [assigned][] to a non-empty `td` element.
 
 ```html
-<!DOCTYPE html>
 <table>
 	<tr>
 		<th>Time</th>
@@ -395,6 +394,25 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the 
   </body>
 ```
 
+#### Failed Example 5
+
+Depending on the browser being used, either the `th` element with the value of "Lunch" or the `th` element with the value of "Dinner" does not have an associated cell.
+
+```html
+<table>
+	<tr>
+		<th>Breakfast</th>
+		<th>Lunch</th>
+		<th>Dinner</th>
+	</tr>
+	<tr>
+		<td>06:00</td>
+		<td aria-hidden="true">12:00</td>
+		<td>18:00</td>
+	</tr>
+</table>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -492,8 +510,8 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 [accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object 'Definition of accessible object'
 [assigned]: #assigned-cell 'Definition of assigned to a cell'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[child index]: #child-index 'Definition of child index'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
@@ -504,6 +522,7 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
 [row]: https://www.w3.org/TR/wai-aria-1.1/#row 'ARIA row role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
+[owned by]: #owned-by 'Definition of owned by'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [owned element]: https://www.w3.org/TR/core-aam-1.1/#dfn-owned-element 'Definition of owned element'

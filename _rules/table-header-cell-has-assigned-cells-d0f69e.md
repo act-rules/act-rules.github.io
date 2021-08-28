@@ -32,7 +32,7 @@ This rule applies to any [HTML element][] with the [semantic role][] of [rowhead
 
 - **in a row** the element is a child of an [accessible object][] with the [semantic role][] of [row][]; and
 - **table** the element is an [owned element][] of an [accessible object][] with the [semantic role][] of either [table][] or [grid][] that is [visible][]; and
-- **minimum rows** the [table][] or [grid][] element contains at least two [accessible objects][accessible object] with the [semantic role][] of [row][].
+- **minimum rows** the [table][] or [grid][] element has at least two [owned elements][owned element] with the [semantic role][] of [row][].
 
 ## Expectation 1
 
@@ -105,6 +105,9 @@ Each of the 2 `span` elements with role of `columnheader` is [assigned][] to a n
 			[role='columnheader'],
 			[role='cell'] {
 				display: table-cell;
+			}
+			[role='columnheader'] {
+				font-weight: 700;
 			}
 		</style>
 	</head>
@@ -192,7 +195,7 @@ Each of the 4 `th` elements is [assigned][] to a non-empty `td` element because 
 		<th id="2" headers="objective">2</th>
 	</tr>
 	<tr>
-		<td headers="projects">40%</td>
+		<td headers="projects">45%</td>
 		<td headers="objective 1">20%</td>
 		<td headers="objective 2">25%</td>
 	</tr>
@@ -266,6 +269,26 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell` within th
     </div>
   </body>
 </html>
+```
+
+#### Passed Example 8
+
+Each of the 3 `th` elements is [assigned][] to a non-empty `td` within the same `table` element. The index of the `td` element inside the last `tr` element is the same as the index of the `th` element with the value of "H3", that is 2.
+
+```html
+<table>
+	<tr>
+		<th>Project Expectation</th>
+		<th>Assignment Expectation</th>
+		<th>Exam</th>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">0</td>
+	</tr>
+	<tr>
+		<td>60%</td>
+	</tr>
+</table>
 ```
 
 ### Failed

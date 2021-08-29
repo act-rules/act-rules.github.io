@@ -40,6 +40,12 @@ Each target element is [assigned][] to an element with a semantic role of either
 
 ## Expectation 2
 
+For elements with the [semantic role][] of [rowheader][] that have either the `colspan` or the `rowspan` attribute with the value greater than or equal to 1, there is at least one element with the [semantic role][] of [cell][] or inheriting from [cell][] that is assigned to that [rownheader][].
+
+For elements with the [semantic role][] of [columnheader][] that have either the `colspan` or the `rowspan` attribute with the value greater than or equal to 1, there is at least one element with the [semantic role][] of [cell][] or inheriting from [cell][] that is assigned to that [columnheader][].
+
+## Expectation 3
+
 When the target element is [assigned][] to at least one element with a [semantic role][] of [gridcell][], both the test target and the [gridcell][] are within the same element with the [semantic role][] of [grid][].
 
 ## Assumptions
@@ -234,39 +240,39 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell` within th
 
 ```html
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Passed Example 7</title>
-    <style>
-      [role="grid"] {
-         display: table;
-      }
-      [role="row"] {
-         display: table-row;
-      }
-      [role="columnheader"], [role="gridcell"] {
-         display: table-cell;
-      }
-    </style>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<title>Passed Example 7</title>
+		<style>
+			[role='grid'] {
+				display: table;
+			}
+			[role='row'] {
+				display: table-row;
+			}
+			[role='columnheader'],
+			[role='gridcell'] {
+				display: table-cell;
+			}
+		</style>
+	</head>
 
-  <body>
-    </html>
-    <div role="grid">
-    	<div role="row">
-    		<div role="columnheader">Room</div>
-    		<div role="columnheader">Occupants</div>
-    	</div>
-    	<div role="row">
-    		<div role="gridcell"><button>1A</button></div>
-    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
-    	</div>
-    	<div role="row">
-    		<div role="gridcell"><button>2A</button></div>
-    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
-    	</div>
-    </div>
-  </body>
+	<body>
+		<div role="grid">
+			<div role="row">
+				<div role="columnheader">Room</div>
+				<div role="columnheader">Occupants</div>
+			</div>
+			<div role="row">
+				<div role="gridcell"><button>1A</button></div>
+				<div role="gridcell"><input type="number" aria-label="Number" /></div>
+			</div>
+			<div role="row">
+				<div role="gridcell"><button>2A</button></div>
+				<div role="gridcell"><input type="number" aria-label="Number" /></div>
+			</div>
+		</div>
+	</body>
 </html>
 ```
 
@@ -396,7 +402,7 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the 
 
 #### Failed Example 5
 
-Depending on the browser being used, either the `th` element with the value of "Lunch" or the `th` element with the value of "Dinner" does not have an associated cell.
+Depending on the browser, either the `th` element with the value of "Lunch" or the `th` element with the value of "Dinner" does not have an associated cell.
 
 ```html
 <table>
@@ -409,6 +415,22 @@ Depending on the browser being used, either the `th` element with the value of "
 		<td>06:00</td>
 		<td aria-hidden="true">12:00</td>
 		<td>18:00</td>
+	</tr>
+</table>
+```
+
+#### Failed Example 6
+
+Depending on the browser, either the `th` element with the value of "Project Expectation" or the `th` element with the value of "Assignment Expectation" does not have an associated cell.
+
+```html
+<table>
+	<tr>
+		<th rowspan="2">Project Expectation</th>
+		<th>Assignment Expectation</th>
+	</tr>
+	<tr>
+		<td>0</td>
 	</tr>
 </table>
 ```

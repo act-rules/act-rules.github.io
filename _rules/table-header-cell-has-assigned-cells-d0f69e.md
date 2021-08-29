@@ -365,39 +365,40 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the 
 
 ```html
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Passed Example 7</title>
-    <style>
-      [role="table"] {
-         display: table;
-      }
-      [role="row"] {
-         display: table-row;
-      }
-      [role="columnheader"], [role="gridcell"] {
-         display: table-cell;
-      }
-    </style>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<title>Passed Example 7</title>
+		<style>
+			[role='table'] {
+				display: table;
+			}
+			[role='row'] {
+				display: table-row;
+			}
+			[role='columnheader'],
+			[role='gridcell'] {
+				display: table-cell;
+			}
+		</style>
+	</head>
 
-  <body>
-    </html>
-    <div role="table">
-    	<div role="row">
-    		<div role="columnheader">Room</div>
-    		<div role="columnheader">Occupants</div>
-    	</div>
-    	<div role="row">
-    		<div role="gridcell"><button>1A</button></div>
-    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
-    	</div>
-    	<div role="row">
-    		<div role="gridcell"><button>2A</button></div>
-    		<div role="gridcell"><input type="number" aria-label="Number" /></div>
-    	</div>
-    </div>
-  </body>
+	<body>
+		<div role="table">
+			<div role="row">
+				<div role="columnheader">Room</div>
+				<div role="columnheader">Occupants</div>
+			</div>
+			<div role="row">
+				<div role="gridcell"><button>1A</button></div>
+				<div role="gridcell"><input type="number" aria-label="Number" /></div>
+			</div>
+			<div role="row">
+				<div role="gridcell"><button>2A</button></div>
+				<div role="gridcell"><input type="number" aria-label="Number" /></div>
+			</div>
+		</div>
+	</body>
+</html>
 ```
 
 #### Failed Example 5
@@ -524,6 +525,21 @@ The `th` and the `td` elements are not within an element with a [semantic role][
 		<th>Time</th>
 	</tr>
 	<tr>
+		<td>12:00</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 8
+
+Inappropriate [content model](https://html.spec.whatwg.org/multipage/dom.html#content-models) of this `table` element removes the `span` element with `role="columnheader"` as a child of the `tr` element with the `role="row"` attribute. Therefore, there are no more elements with a [semantic role][] of either `columnheader` or `rowheader`.
+
+```html
+<table role="grid">
+	<tr role="row">
+		<span role="columnheader">Time</span>
+	</tr>
+	<tr role="row">
 		<td>12:00</td>
 	</tr>
 </table>

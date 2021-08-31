@@ -49,7 +49,7 @@ An example of an element that has an [implicit semantic role][] that is identica
 
 Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). A child in the [accessibility tree][] can thus correspond to a descendant in the DOM tree. Additionally, the use of `aria-owns` attribute can change the tree structure to something which is not a subtree of the DOM tree.
 
-This rule is restricted to direct parent-child relation in the [accessibility tree][] which is more strict than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element). This rule mimics, on the roles level, the [content model](https://html.spec.whatwg.org/#concept-element-content-model) of HTML.
+This rule is restricted to direct parent-child relation in the [accessibility tree][] which is more strict than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element). This rule mimics, on the roles level, the [content model](https://html.spec.whatwg.org/#concept-element-content-model) of HTML.
 
 [Subclass roles][subclass role] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.2/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.2/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.2/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.2/#list) role.
 

@@ -27,6 +27,13 @@ acknowledgments:
 
 This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
 
+## Scope Expectation
+
+The applicability includes each block of text consisting of a single sentence, phrase or word, for which all of the following is true:
+
+- The text is visually presented in a way that can be understood as a heading; and
+- Expectation 1 or expecration 2 is true for the block of text.
+
 ## Expectation 1
 
 Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].

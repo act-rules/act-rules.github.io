@@ -40,9 +40,7 @@ Each target element is [assigned][] to an element with a semantic role of either
 
 ## Expectation 2
 
-For elements with the [semantic role][] of [rowheader][] that have either the `colspan` or the `rowspan` attribute with the value greater than or equal to 1, there is at least one element with the [semantic role][] of [cell][] or inheriting from [cell][] that is assigned to that [rownheader][].
-
-For elements with the [semantic role][] of [columnheader][] that have either the `colspan` or the `rowspan` attribute with the value greater than or equal to 1, there is at least one element with the [semantic role][] of [cell][] or inheriting from [cell][] that is assigned to that [columnheader][].
+For elements with the [semantic role][] of [rowheader][] or [columnheader][] that have either the `colspan` or the `rowspan` attribute with the value greater than 1, there is at least one element with the [semantic role][] of [cell][] or inheriting from [cell][] that is assigned to such an element.
 
 ## Expectation 3
 
@@ -55,6 +53,8 @@ This rule assumes that table header cells have a relationship conveyed through t
 ## Accessibility Support
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+
+Some popular combinations of browsers and assistive technologies disregard the `headers` attribute depending on the structure of the `table` element.
 
 ## Background
 
@@ -296,36 +296,38 @@ Each of the 3 `th` elements is [assigned][] to a non-empty `td` within the same 
 </table>
 ```
 
+#### Passed Example 9
+
+Each of the two `div` elements with `role="columnheader"` have an assigned element with `role="gridcell"` because the [accessibility tree](https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility) mimics the DOM tree across shadow boundaries.
+
+```html
+<div role="table">
+	<div role="row" id="shadowHost"></div>
+	<div role="row">
+		<div role="gridcell"><button>1A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+	<div role="row">
+		<div role="gridcell"><button>2A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+</div>
+
+<script>
+	const host = document.querySelector('#shadowHost')
+	console.log(host)
+	const root = host.attachShadow({ mode: 'open' })
+
+	root.innerHTML =
+		'<div role="columnheader" stye="display: table-cell; font-weight: 700;">Room</div> <div role="columnheader" style="display: table-cell; font-weight: 700;">Occupants</div>'
+</script>
+```
+
 ### Failed
 
 #### Failed Example 1
 
-The `th` elements should not be table headers as per the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells). Their `scope` [attribute value][] is in the `auto` state and there is a non-empty table data cell in the same column or row. There are browsers that give the elements with the value "Breakfast", "Lunch", and "Dinner" the [semantic role][] of [rowheader][] which inappropriately represents the relationship between the cells.
-
-```html
-<table>
-	<thead>
-		<tr>
-			<td>N/A</td>
-			<th>Breakfast</th>
-			<th>Lunch</th>
-			<th>Dinner</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>Day 1</th>
-			<td>8:00</td>
-			<td>13:00</td>
-			<td>18:00</td>
-		</tr>
-	</tbody>
-</table>
-```
-
-#### Failed Example 2
-
-This `th` element with `id` equal to "col2" does not have an assigned non-empty cell within the same `table` element because the `headers` attribute removes the cell association from its column.
+Depending on the browser, the `th` element with `id` equal to "col2" does not have an assigned non-empty cell within the same `table` element because the `headers` attribute removes the cell association from its column.
 
 ```html
 <table>
@@ -340,7 +342,7 @@ This `th` element with `id` equal to "col2" does not have an assigned non-empty 
 </table>
 ```
 
-#### Failed Example 3
+#### Failed Example 2
 
 This `div` with role of `columnheader` and text equal to "Occupants" does not have an assigned non-empty cell within the same element with the semantic role of `grid`.
 
@@ -351,15 +353,15 @@ This `div` with role of `columnheader` and text equal to "Occupants" does not ha
 		<div role="columnheader">Occupants</div>
 	</div>
 	<div role="row">
-		<div role="gridcell">1A</div>
+		<div role="gridcell"><button>1A</button></div>
 	</div>
 	<div role="row">
-		<div role="gridcell">2A</div>
+		<div role="gridcell"><button>2A</button></div>
 	</div>
 </div>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the elements are not within an [accessible object] with a [semantic role][] of `grid`.
 
@@ -401,7 +403,7 @@ Each of the 2 `div` elements is [assigned][] to a non-empty `gridcell`, but the 
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 Depending on the browser, either the `th` element with the value of "Lunch" or the `th` element with the value of "Dinner" does not have an associated cell.
 
@@ -420,20 +422,27 @@ Depending on the browser, either the `th` element with the value of "Lunch" or t
 </table>
 ```
 
-#### Failed Example 6
-
-Depending on the browser, either the `th` element with the value of "Project Expectation" or the `th` element with the value of "Assignment Expectation" does not have an associated cell.
+#### Failed Example 5
 
 ```html
-<table>
-	<tr>
-		<th rowspan="2">Project Expectation</th>
-		<th>Assignment Expectation</th>
-	</tr>
-	<tr>
-		<td>0</td>
-	</tr>
-</table>
+<div role="table">
+	<div id="shadowHost2" role="row"></div>
+	<div role="row">
+		<div role="gridcell" headers="item1 item3"><button>1A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+	<div role="row">
+		<div role="gridcell" headers="item1 item3"><button>2A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+</div>
+
+<script>
+	const host2 = document.querySelector('#shadowHost2')
+	const root2 = host2.attachShadow({ mode: 'open' })
+	root2.innerHTML =
+		'<div role="columnheader" style="display: table-cell; font-weight: 700;">Room</div> <div role="columnheader" style="display: table-cell; font-weight: 700;">Occupants</div> <div role="columnheader" style="display: table-cell; font-weight: 700;">Status</div>'
+</script>
 ```
 
 ### Inapplicable
@@ -505,7 +514,7 @@ This `th` element does not have a [semantic role][] of either `columnheader` or 
 
 #### Inapplicable Example 6
 
-This `th` element is not within an element with a [semantic role][] of either `table` or `grid`.
+This `th` element is [owned by][] an element with a [semantic role][] of [row][], but the `<tr>` itself is not an [inclusive descendant][] of an element with the [semantic role] of [table][].
 
 ```html
 <div>
@@ -517,7 +526,7 @@ This `th` element is not within an element with a [semantic role][] of either `t
 
 #### Inapplicable Example 7
 
-The `th` and the `td` elements are not within an element with a [semantic role][] of either `table` or `grid`.
+The `th` and the `td` elements are not [owned by][] an element with a [semantic role][] of [row][].
 
 ```html
 <table role="presentation">
@@ -545,6 +554,35 @@ Inappropriate [content model](https://html.spec.whatwg.org/multipage/dom.html#co
 </table>
 ```
 
+#### Inapplicable Example 9
+
+Each of the two `div` elements with `role="columnheader"` are not [owned by][] an element with a [semantic role][] of [row][] because the explicit parent-child relation in the [accessibility tree](https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility) (set by `aria-owns`) does not cross shadow boundaries.
+
+```html
+<div id="shadowHost"></div>
+
+<div role="table">
+	<div role="row" aria-owns="item1 item2"></div>
+	<div role="row">
+		<div role="gridcell"><button>1A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+	<div role="row">
+		<div role="gridcell"><button>2A</button></div>
+		<div role="gridcell"><input type="number" aria-label="Number" /></div>
+	</div>
+</div>
+
+<script>
+	const host = document.querySelector('#shadowHost')
+	console.log(host)
+	const root = host.attachShadow({ mode: 'open' })
+
+	root.innerHTML =
+		'<div id="item1" role="columnheader" stye="display: table-cell; font-weight: 700;">Room</div> <div id="item2" role="columnheader" style="display: table-cell; font-weight: 700;">Occupants</div>'
+</script>
+```
+
 [accessible object]: https://www.w3.org/TR/core-aam-1.1/#dfn-accessible-object 'Definition of accessible object'
 [assigned]: #assigned-cell 'Definition of assigned to a cell'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
@@ -563,4 +601,3 @@ Inappropriate [content model](https://html.spec.whatwg.org/multipage/dom.html#co
 [owned by]: #owned-by 'Definition of owned by'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
-[owned element]: https://www.w3.org/TR/core-aam-1.1/#dfn-owned-element 'Definition of owned element'

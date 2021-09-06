@@ -45,16 +45,42 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Still looking for a solution to the problem of finding a live stream that we can use.
+This `audio` element plays a live media resource by streaming the audio from the device's microphone.
 
-The Media Working Group has a solution that could we might use, but requires a camera connected to the device where the rule is being tested. If we can't find anything else, we might add a note to the example stating this requirement. The example (does not work on Safari, works in Chrome) can be found here: https://github.com/w3c/webcodecs/tree/main/samples/webcam-in-worker
-
-This `audio` element plays a live media resource.
+This example requires a browser supporting the experimental MediaStreamTrack API. The browser must be authorized to access a microphone. You can successfully test this example on Google Chrome with the flag --enable-blink-features=WebCodecs,MediaStreamInsertableStreams
 
 ```html
 <html lang="en">
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-</html>
+
+<p id="vLog"></p>
+<audio controls autoplay></audio>
+
+<script>
+  const log = document.querySelector('#vLog');
+
+  document.addEventListener('DOMContentLoaded', function(event) {
+    if (typeof MediaStreamTrackProcessor === 'undefined' ||
+      typeof MediaStreamTrackGenerator === 'undefined') {
+      log.innerHTML =
+        'Your browser does not support the experimental MediaStreamTrack API. ' +
+        'Please launch with the --enable-blink-features=WebCodecs,MediaStreamInsertableStreams flag';
+      return;
+    }
+
+    const constraints = {
+      audio: true,
+      video: false
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints).then(function(mediaStream) {
+
+      document.querySelector('audio').srcObject = mediaStream;
+
+    }).catch(function(err) {
+      log.innerHTML += err.name + ": " + err.message;
+    });
+  }, false);
+</script>
 ```
 
 ### Failed

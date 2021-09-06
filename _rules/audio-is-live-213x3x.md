@@ -23,9 +23,7 @@ This rule applies to every `audio` element that is:
 
 ## Expectation 
 
-For each test target one of the following is true:
-- it is not possible to [seek][] the end of the target element's [media resource][]; or 
-- after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
+For each test target, after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
 
 ## Assumptions
 

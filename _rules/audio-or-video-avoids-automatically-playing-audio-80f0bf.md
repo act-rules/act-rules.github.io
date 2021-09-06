@@ -55,9 +55,13 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
 - **audio duration**: the element has a [media resource][] for which the audio output lasts more than 3 seconds.
 
-## Expectation
+## Expectation 1
 
 For each test target, there is at least one [instrument][] in the same [web page][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
+
+## Expectation 2
+
+The [instrument][] to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Assumptions
 
@@ -72,8 +76,6 @@ No [user style sheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
 ## Background
-
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [Accessible Multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia)

@@ -51,8 +51,6 @@ Elements with a [semantic role][] that has [presentational children][] will not 
 
 ## Test Cases
 
-The test cases assume no [user style sheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are made. Otherwise the test cases might have different outcomes of the ones presented here. 
-
 ### Passed
 
 #### Passed Example 1

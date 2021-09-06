@@ -96,7 +96,7 @@ This `audio` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Passed Example 2
 
-This `video` element has (in its default controls) an [instrument][] to pause it, an [instrument][] to stop it, and an [instrument][] to turn its audio volume off.
+This `video` element has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <video autoplay controls>

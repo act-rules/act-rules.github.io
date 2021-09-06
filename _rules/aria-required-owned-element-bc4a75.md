@@ -226,14 +226,6 @@ This element with the `menu` role has an `aria-busy` attribute set to `true`.
 </ul>
 ```
 
-#### Inapplicable Example 5
-
-This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned elements.
-
-```html
-<label for="combo">My Combobox</label> <input role="combobox" aria-expanded="false" id="combo" />
-```
-
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
 [required owned elements]: https://www.w3.org/TR/wai-aria-1.2/#mustContain 'Define Required owned elements'

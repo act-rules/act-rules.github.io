@@ -43,7 +43,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
-If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example using the custom autocomplete value "banner" (`<input type="text" autocomplete="banner" />`), success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success criterion [1.3.5 Identify Input Purpose][sc135].
 
@@ -101,7 +101,7 @@ The `autocomplete` [attribute value][] of this `select` element has the required
 This `autocomplete` [attribute value][] only has the required token "street-address". Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<label> Street address<textarea autocomplete="Street-Address"></textarea></label>
+<label> Street address<textarea autocomplete="street-address"></textarea></label>
 ```
 
 #### Passed Example 4
@@ -109,7 +109,7 @@ This `autocomplete` [attribute value][] only has the required token "street-addr
 This `autocomplete` [attribute value][] list includes a `work` token, allowed because it is used before `email`.
 
 ```html
-<label>Work email<input autocomplete="Work Email"/></label>
+<label>Work email<input autocomplete="work email"/></label>
 ```
 
 #### Passed Example 5

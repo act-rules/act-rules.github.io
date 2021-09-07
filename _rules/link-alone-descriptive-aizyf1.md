@@ -22,7 +22,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic link][] for which all the following is true:
+This rule applies to any [inheriting semantic][] `link` for which all the following is true:
 
 - the link is [included in the accessibility tree][]; and
 - the link has a non-empty (`""`) [accessible name][].
@@ -186,7 +186,7 @@ These links have [accessible names][accessible name] which, alone, do not descri
 
 #### Inapplicable Example 1
 
-There is no [semantic link][] in this document.
+There is no [inheriting semantic][] `link` in this document.
 
 ```html
 <a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
@@ -204,7 +204,7 @@ This link is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-There is no [semantic link][] in this document (`a` element without an `href` attribute do not have a role of `link`).
+There is no [inheriting semantic][] `link` in this document (`a` element without an `href` attribute do not have a role of `link`).
 
 ```html
 <a>placeholder</a>
@@ -214,7 +214,7 @@ There is no [semantic link][] in this document (`a` element without an `href` at
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[semantic link]: #semantic-link 'Definition of Semantic Link'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'

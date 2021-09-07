@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic link][] for which all the following is true:
+This rule applies to any [inheriting semantic][] `link` for which all the following is true:
 
 - the link is [included in the accessibility tree][]; and
 - the link has a non-empty ("") [accessible name][].
@@ -333,7 +333,7 @@ This `a` element is not a [semantic][semantic role] `link`, because it has no `h
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'
-[semantic link]: #semantic-link 'Definition of Semantic Link'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4 Link Purpose (In Context)'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9 Link Purpose (Link Only)'

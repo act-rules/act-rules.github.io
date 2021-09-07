@@ -13,6 +13,8 @@ The _semantic role_ of an element is determined by the first of these cases that
 1. **Explicit** If the element has an [explicit role][], then its _semantic role_ is its [explicit role][].
 1. **Implicit** The _semantic role_ of the element is its [implicit role][].
 
+This definition can be used in expressions such as "semantic `button`" meaning any element with a semantic role of `button`.
+
 #### Accessibility Support for Definition of Semantic Role
 
 - There exist popular web browsers and assistive technologies which do not correctly implement [Presentational Roles Conflict Resolution][]. These technologies will not [include in the accessibility tree][included in the accessibility tree] elements that should be, according to Specifications. Thus, some elements that should have their _semantic role_ fixed by case **Conflict** above are instead falling into case **Explicit** and are hidden for users of assistive technologies.

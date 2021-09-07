@@ -82,7 +82,7 @@ This `img` element is [marked as decorative][] through its empty `alt` attribute
 
 #### Passed Example 5
 
-This `img` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none` because own attributes are not required to be exposed and thus do no trigger the [presentational roles conflict resolution][].
+This `img` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none` because own attributes are not required to be exposed and thus do not trigger the [presentational roles conflict resolution][].
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" />

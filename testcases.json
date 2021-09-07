@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1119,
+  "count": 1116,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -23352,12 +23352,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -23412,78 +23406,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "51991f17502dcc8a459e32e849af3211c7efe68a",
-      "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/c5a4ea/51991f17502dcc8a459e32e849af3211c7efe68a.html",
-      "relativePath": "testcases/c5a4ea/51991f17502dcc8a459e32e849af3211c7efe68a.html",
-      "expected": "passed",
-      "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/c5a4ea",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.3": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:1.2.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:1.2.8": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G8": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G69": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G78": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "26d6803551b1f3b247c4f4750d1291b8d99f5d22",
-      "testcaseTitle": "Passed Example 4",
+      "testcaseTitle": "Passed Example 3",
       "url": "https://act-rules.github.io/testcases/c5a4ea/26d6803551b1f3b247c4f4750d1291b8d99f5d22.html",
       "relativePath": "testcases/c5a4ea/26d6803551b1f3b247c4f4750d1291b8d99f5d22.html",
       "expected": "passed",
@@ -23528,12 +23456,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -23592,12 +23514,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -23652,78 +23568,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "9510a72dd0fa1dad4bb46d36ea997d6482ed37ed",
-      "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/c5a4ea/9510a72dd0fa1dad4bb46d36ea997d6482ed37ed.html",
-      "relativePath": "testcases/c5a4ea/9510a72dd0fa1dad4bb46d36ea997d6482ed37ed.html",
-      "expected": "failed",
-      "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/c5a4ea",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.3": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:1.2.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag20:1.2.8": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G8": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G69": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G78": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "3938988521b4347e0dd1d9624b79c92c8339a691",
-      "testcaseTitle": "Failed Example 4",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/c5a4ea/3938988521b4347e0dd1d9624b79c92c8339a691.html",
       "relativePath": "testcases/c5a4ea/3938988521b4347e0dd1d9624b79c92c8339a691.html",
       "expected": "failed",
@@ -23772,8 +23622,56 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "51991f17502dcc8a459e32e849af3211c7efe68a",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/c5a4ea/51991f17502dcc8a459e32e849af3211c7efe68a.html",
+      "relativePath": "testcases/c5a4ea/51991f17502dcc8a459e32e849af3211c7efe68a.html",
+      "expected": "failed",
+      "ruleId": "c5a4ea",
+      "ruleName": "`video` element visual content has accessible alternative",
+      "rulePage": "https://act-rules.github.io/rules/c5a4ea",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.3": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         },
-        "wcag-technique:H96": {
+        "wcag20:1.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:1.2.8": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G69": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -23832,12 +23730,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -23888,12 +23780,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -24549,10 +24435,10 @@
       }
     },
     {
-      "testcaseId": "17189684688eb0b0fb6cbb3109527bf1558756b3",
+      "testcaseId": "90b7864f21830a00f59c2a52b3d9a2359d2c2867",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
-      "relativePath": "testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
+      "url": "https://act-rules.github.io/testcases/c3232f/90b7864f21830a00f59c2a52b3d9a2359d2c2867.html",
+      "relativePath": "testcases/c3232f/90b7864f21830a00f59c2a52b3d9a2359d2c2867.html",
       "expected": "passed",
       "ruleId": "c3232f",
       "ruleName": "`video` element visual-only content has accessible alternative",
@@ -24571,48 +24457,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G166": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96",
-      "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/c3232f/6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96.html",
-      "relativePath": "testcases/c3232f/6a99cc94a6811aeb0e6d41f01ef93cefd2a8be96.html",
-      "expected": "passed",
-      "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/c3232f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G159": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G166": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -24622,7 +24466,7 @@
     },
     {
       "testcaseId": "85b0303b527a3d2836b4256a73cb438081bbc224",
-      "testcaseTitle": "Passed Example 3",
+      "testcaseTitle": "Passed Example 2",
       "url": "https://act-rules.github.io/testcases/c3232f/85b0303b527a3d2836b4256a73cb438081bbc224.html",
       "relativePath": "testcases/c3232f/85b0303b527a3d2836b4256a73cb438081bbc224.html",
       "expected": "passed",
@@ -24647,18 +24491,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "7d7a94d0ae749de98095b3af35f0adf65cb01bd1",
-      "testcaseTitle": "Passed Example 4",
+      "testcaseTitle": "Passed Example 3",
       "url": "https://act-rules.github.io/testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
       "relativePath": "testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
       "expected": "passed",
@@ -24683,54 +24521,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "26130992612441b49f6975a5fa48f5051e627e1e",
-      "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/c3232f/26130992612441b49f6975a5fa48f5051e627e1e.html",
-      "relativePath": "testcases/c3232f/26130992612441b49f6975a5fa48f5051e627e1e.html",
-      "expected": "failed",
-      "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/c3232f",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G159": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G166": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "28ec159184ae06f3854db2cce0dbb80f29d73f66",
-      "testcaseTitle": "Failed Example 2",
+      "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/c3232f/28ec159184ae06f3854db2cce0dbb80f29d73f66.html",
       "relativePath": "testcases/c3232f/28ec159184ae06f3854db2cce0dbb80f29d73f66.html",
       "expected": "failed",
@@ -24755,18 +24551,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "f600a7ad3e0d61dd5ef28703702918ae54226aea",
-      "testcaseTitle": "Failed Example 3",
+      "testcaseTitle": "Failed Example 2",
       "url": "https://act-rules.github.io/testcases/c3232f/f600a7ad3e0d61dd5ef28703702918ae54226aea.html",
       "relativePath": "testcases/c3232f/f600a7ad3e0d61dd5ef28703702918ae54226aea.html",
       "expected": "failed",
@@ -24791,18 +24581,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "f0a60f2924c927d3dc97676d02c83ab38025955f",
-      "testcaseTitle": "Failed Example 4",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
       "relativePath": "testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
       "expected": "failed",
@@ -24827,8 +24611,32 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "17189684688eb0b0fb6cbb3109527bf1558756b3",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
+      "relativePath": "testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
+      "expected": "failed",
+      "ruleId": "c3232f",
+      "ruleName": "`video` element visual-only content has accessible alternative",
+      "rulePage": "https://act-rules.github.io/rules/c3232f",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         },
-        "wcag-technique:H96": {
+        "wcag-technique:G159": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G166": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -24863,12 +24671,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -24895,12 +24697,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G166": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -25342,60 +25138,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "9164db309a6589b695bdcf93c31506c9c6f3fb59",
-      "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/1ec09b/9164db309a6589b695bdcf93c31506c9c6f3fb59.html",
-      "relativePath": "testcases/1ec09b/9164db309a6589b695bdcf93c31506c9c6f3fb59.html",
-      "expected": "passed",
-      "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/1ec09b",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G8": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G78": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "a2b46a07e183c60af65528dc7c2de446776ab694",
-      "testcaseTitle": "Passed Example 3",
+      "testcaseTitle": "Passed Example 2",
       "url": "https://act-rules.github.io/testcases/1ec09b/a2b46a07e183c60af65528dc7c2de446776ab694.html",
       "relativePath": "testcases/1ec09b/a2b46a07e183c60af65528dc7c2de446776ab694.html",
       "expected": "passed",
@@ -25422,12 +25170,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -25468,60 +25210,12 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "6576860a379624e6ee6784abd5a6ab748ef199fd",
-      "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/1ec09b/6576860a379624e6ee6784abd5a6ab748ef199fd.html",
-      "relativePath": "testcases/1ec09b/6576860a379624e6ee6784abd5a6ab748ef199fd.html",
-      "expected": "failed",
-      "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
-      "rulePage": "https://act-rules.github.io/rules/1ec09b",
-      "ruleAccessibilityRequirements": {
-        "wcag20:1.2.5": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G8": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G78": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
     {
       "testcaseId": "a6839ec6a83ef44c14587870afbabfafc13daac2",
-      "testcaseTitle": "Failed Example 3",
+      "testcaseTitle": "Failed Example 2",
       "url": "https://act-rules.github.io/testcases/1ec09b/a6839ec6a83ef44c14587870afbabfafc13daac2.html",
       "relativePath": "testcases/1ec09b/a6839ec6a83ef44c14587870afbabfafc13daac2.html",
       "expected": "failed",
@@ -25552,8 +25246,38 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "9164db309a6589b695bdcf93c31506c9c6f3fb59",
+      "testcaseTitle": "Failed Example 3",
+      "url": "https://act-rules.github.io/testcases/1ec09b/9164db309a6589b695bdcf93c31506c9c6f3fb59.html",
+      "relativePath": "testcases/1ec09b/9164db309a6589b695bdcf93c31506c9c6f3fb59.html",
+      "expected": "failed",
+      "ruleId": "1ec09b",
+      "ruleName": "`video` element visual content has strict accessible alternative",
+      "rulePage": "https://act-rules.github.io/rules/1ec09b",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.5": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
         },
-        "wcag-technique:H96": {
+        "wcag-technique:G8": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G78": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G173": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",
@@ -25594,12 +25318,6 @@
           "failed": "not satisfied",
           "passed": "further testing needed",
           "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
         }
       }
     },
@@ -25632,12 +25350,6 @@
           "inapplicable": "further testing needed"
         },
         "wcag-technique:G173": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H96": {
           "forConformance": false,
           "failed": "not satisfied",
           "passed": "further testing needed",

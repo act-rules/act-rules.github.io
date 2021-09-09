@@ -82,7 +82,7 @@ This `autocomplete` [attribute value][] only has the required token "username".
 
 #### Passed Example 2
 
-The `autocomplete` [attribute value][] of this `select` element has the required token "bday-month". Even though the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) has `autocomplete="off"`. This prevents the user agent from completing it, but does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+The `autocomplete` [attribute value][] of this `select` element has the required token "bday-month". The element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) has `autocomplete="off"`, which prevents the user agent from completing it. It does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
 ```html
 <form autocomplete="off">

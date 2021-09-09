@@ -25,7 +25,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is either [visible][] or [included in the accessibility tree][].
 
 ## Expectation 1
 
@@ -44,7 +44,7 @@ Each target element which is [included in the accessibility tree][] describes th
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

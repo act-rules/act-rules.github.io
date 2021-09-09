@@ -101,7 +101,7 @@ The `autocomplete` [attribute value][] of this `select` element has the required
 This `autocomplete` [attribute value][] only has the required token "street-address". Mixing upper and lower case letters is allowed for `autocomplete` attributes.
 
 ```html
-<label> Street address<textarea autocomplete="street-address"></textarea></label>
+<label> Street address<textarea autocomplete="Street-Address"></textarea></label>
 ```
 
 #### Passed Example 4

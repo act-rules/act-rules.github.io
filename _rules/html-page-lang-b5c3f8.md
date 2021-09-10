@@ -35,7 +35,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+Each test target has a `lang` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
@@ -117,3 +117,5 @@ This rule does not apply to `math` element.
 ```xml
 <math></math>
 ```
+
+[attribute value]: #attribute-value

@@ -12,6 +12,7 @@
 		"url": "dct:source",
 		"source": "dct:source",
 		"redirectedTo": "dct:source",
+		"title": "dct:title",
 		"assertions": {
 			"@reverse": "subject"
 		},
@@ -26,9 +27,6 @@
 		},
 		"pointer": {
 			"@type": "ptr:CSSSelectorPointer"
-		},
-		"title": {
-			"@type": "dct:title"
 		}
 	}
 }

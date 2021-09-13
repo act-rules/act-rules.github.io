@@ -163,7 +163,7 @@ These elements with an [explicit role][] of `listitem` are not children in the [
 
 ```html
 <div role="list">
-	<div aria-label="busy">
+	<div aria-busy="true">
 		<div role="listitem">List item 1</div>
 		<div role="listitem">List item 2</div>
 	</div>

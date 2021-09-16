@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Aron Janecki
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -151,7 +153,7 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 This `autocomplete` [attribute value][] has an unknown term that is not a [correct autocomplete field][].
 
 ```html
-<label>Username<input autocomplete="badterm"/></label>
+<label>Username<input autocomplete="badname"/></label>
 ```
 
 #### Failed Example 2
@@ -209,7 +211,7 @@ This `autocomplete` [attribute value][] contains only [ASCII whitespace][].
 This `autocomplete` [attribute value][] is on an element that is not [visible][] through `display:none`.
 
 ```html
-<label>Username<input autocomplete="username" style="display:none"/></label>
+<label>Username<input autocomplete="badname" style="display:none"/></label>
 ```
 
 #### Inapplicable Example 4
@@ -217,7 +219,7 @@ This `autocomplete` [attribute value][] is on an element that is not [visible][]
 This `autocomplete` attribute is on an `input` element that has the `disabled` attribute.
 
 ```html
-<label>Username<input autocomplete="username" disabled/></label>
+<label>Username<input autocomplete="badname" disabled/></label>
 ```
 
 #### Inapplicable Example 5
@@ -225,7 +227,7 @@ This `autocomplete` attribute is on an `input` element that has the `disabled` a
 This `autocomplete` attribute is on an `input` element that has the `aria-disabled` [attribute value][] of `true`.
 
 ```html
-<label>Username<input autocomplete="username" aria-disabled="true"/></label>
+<label>Username<input autocomplete="badname" aria-disabled="true"/></label>
 ```
 
 #### Inapplicable Example 6
@@ -233,7 +235,7 @@ This `autocomplete` attribute is on an `input` element that has the `aria-disabl
 This `autocomplete` attribute is ignored because it is on an element with a [semantic role][] of `none`. The `disabled` attribute is required to ensure [presentational roles conflict resolution][] does not cause the `none` role to be ignored.
 
 ```html
-<label>Username<input type="text" role="none" disabled autocomplete="username"/></label>
+<label>Username<input type="text" role="none" disabled autocomplete="badname"/></label>
 ```
 
 #### Inapplicable Example 7

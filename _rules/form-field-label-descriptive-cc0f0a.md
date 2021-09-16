@@ -27,6 +27,8 @@ acknowledgments:
   previous_authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

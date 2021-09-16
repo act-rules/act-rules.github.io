@@ -16,6 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

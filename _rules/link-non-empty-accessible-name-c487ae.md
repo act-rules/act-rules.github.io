@@ -45,7 +45,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of `link` that is [included in the accessibility tree][].
+This rule applies to any HTML element that is a [semantic][semantic role] `link` [included in the accessibility tree][].
 
 ## Expectation
 
@@ -59,7 +59,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 - There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 

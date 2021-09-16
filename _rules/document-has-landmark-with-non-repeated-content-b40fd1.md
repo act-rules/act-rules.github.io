@@ -28,7 +28,7 @@ This rule applies to any [HTML web page][].
 
 Within each test target, either there is no [non-repeated content after repeated content][] or there exists an element for which all the following are true:
 
-- the element has [semantic role][] inheriting from `landmark`; and
+- the element is an [inheriting semantic][] `landmark`; and
 - the first [perceivable content][] (in [tree order][] in the [flat tree][]) which is an [inclusive descendant][] of the element is [non-repeated content after repeated content][]; and
 - the element is [included in the accessibility tree][].
 
@@ -264,6 +264,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'

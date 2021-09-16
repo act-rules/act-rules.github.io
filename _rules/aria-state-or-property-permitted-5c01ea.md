@@ -68,7 +68,7 @@ Assessing the value of the attribute is out of scope for this rule.
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [implicit role][] for `button` elements.
+The `aria-pressed` [state][] is [supported][] for a [semantic][semantic role] `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
@@ -76,7 +76,7 @@ The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`
 
 #### Passed Example 2
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
+The `aria-pressed` [state][] is [supported][] for the [semantic][semantic role] `button`, which is the [explicit role][] of this `div` element.
 
 ```html
 <div role="button" aria-pressed="false">My button</div>
@@ -100,7 +100,7 @@ The `aria-label` [property][] is a [global][] [property][] and thus [inherited][
 
 #### Passed Example 5
 
-The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox`.
+The `aria-checked` [state][] is [required][] for the [semantic][semantic role] `checkbox`.
 
 ```html
 <div role="checkbox" aria-checked="false">My checkbox</div>
@@ -108,7 +108,7 @@ The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox
 
 #### Passed Example 6
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
 <div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
@@ -116,7 +116,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
@@ -124,7 +124,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
@@ -160,7 +160,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`, which is the [implicit role][] for the `button` element.
+The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic][semantic role] `button`, which is the [implicit role][] for the `button` element.
 
 ```html
 <button aria-sort="">Sort by year</button>

@@ -21,6 +21,8 @@ acknowledgments:
   authors:
     - Emma Pratt Richens
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

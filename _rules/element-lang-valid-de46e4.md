@@ -23,6 +23,8 @@ acknowledgments:
   authors:
     - Bryn Anderson
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

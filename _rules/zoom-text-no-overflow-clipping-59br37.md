@@ -16,7 +16,9 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
-  citations:
+  funding:
+    - WAI-Tools
+  assets:
     - The Raven, poem by Edgar Allan Poe
 ---
 

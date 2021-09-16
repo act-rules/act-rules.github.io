@@ -28,6 +28,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
   assets:
     - W3C; HTML and W3C logo
     - Wikimedia; Fireworks image

@@ -51,7 +51,7 @@ When these conflicts arise on [decorative][] [non-text content][], this is also 
 This `img` element is [marked as decorative][] through its `alt` attribute and is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" alt="" aria-hidden="true" />
+<img src="/test-assets/shared/w3c-logo.png" alt="" aria-hidden="true" />
 ```
 
 #### Passed Example 2
@@ -59,7 +59,7 @@ This `img` element is [marked as decorative][] through its `alt` attribute and i
 This `img` element is [marked as decorative][] through its `alt` attribute and is not [included in the accessibility tree][] because it is `hidden` to everyone.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" alt="" hidden />
+<img src="/test-assets/shared/w3c-logo.png" alt="" hidden />
 ```
 
 #### Passed Example 3
@@ -77,15 +77,15 @@ This `nav` element is [marked as decorative][] through its `role` attribute and 
 This `img` element is [marked as decorative][] through its empty `alt` attribute and has [semantic role][] of `none`.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" alt="" />
+<img src="/test-assets/shared/w3c-logo.png" alt="" />
 ```
 
 #### Passed Example 5
 
-This `img` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none` because own attributes are not required to be exposed and thus do no trigger the [presentational roles conflict resolution][].
+This `img` element is [marked as decorative][] through its `role` attribute and has a [semantic role][] of `none` because own attributes are not required to be exposed and thus do not trigger the [presentational roles conflict resolution][].
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" />
+<img src="/test-assets/shared/w3c-logo.png" role="none" alt="W3C logo" />
 ```
 
 #### Passed Example 6
@@ -115,7 +115,7 @@ This `nav` element is [marked as decorative][] through its `role` attribute but 
 This `img` element is [marked as decorative][] through its empty `alt` attribute but has a non-empty `aria-labelledby` attribute causing it to be [included in the accessibility tree][] with its [implicit role][] of `img`.
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" alt="" aria-labelledby="label" /> <span hidden id="label">W3C logo</span>
+<img src="/test-assets/shared/w3c-logo.png" alt="" aria-labelledby="label" /> <span hidden id="label">W3C logo</span>
 ```
 
 #### Failed Example 3
@@ -135,7 +135,7 @@ This `svg` element is [marked as decorative][] through its `role` attribute but 
 This `img` element is not [marked as decorative][].
 
 ```html
-<img src="test-assets/shared/w3c-logo.png" aria-label="W3C logo" />
+<img src="/test-assets/shared/w3c-logo.png" aria-label="W3C logo" />
 ```
 
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'

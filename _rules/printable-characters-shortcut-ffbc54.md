@@ -16,6 +16,8 @@ acknowledgments:
   authors:
     - Carlos Duarte
     - João Vicente
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

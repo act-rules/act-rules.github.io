@@ -19,6 +19,8 @@ acknowledgments:
     - Audrey Maniez
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

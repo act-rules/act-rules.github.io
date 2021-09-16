@@ -24,6 +24,8 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Bryn Anderson
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -40,7 +40,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to HTML `img` elements and HTML elements that are a [semantic][semantic role] `img`, except if the element has a [hidden state][] of "true".
+This rule applies to HTML `img` elements and HTML elements that are a [semantic][semantic role] `img`, except if the element is [programmatically hidden][].
 
 ## Expectation
 
@@ -248,6 +248,6 @@ This `img` element is hidden with `visibility: hidden`.
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [implicit role]: #implicit-role 'Definition of implicit role'
-[hidden state]: #hidden-state 'Definition of hidden state'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
+[semantic role]: #semantic-role 'Definition of semantic role'

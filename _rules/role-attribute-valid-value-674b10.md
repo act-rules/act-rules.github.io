@@ -26,6 +26,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -33,7 +35,7 @@ acknowledgments:
 This rule applies to any `role` attribute for which all the following are true:
 
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
-- the attribute is specified on an [HTML or SVG element][] whose [hidden state][] is "false".
+- the attribute is specified on an [HTML or SVG element][] which is not [programmatically hidden][].
 
 ## Expectation
 
@@ -51,7 +53,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 ## Background
 
-The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role](#semantic-role) of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
+The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
 
 - [List of WAI-ARIA Roles][wai-aria role]
 - [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
@@ -166,19 +168,19 @@ This `role` attribute is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
-This `role` attribute is specified on an element whose [hidden state][] is "true".
+This `role` attribute is specified on an element which is [programmatically hidden][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
-[hidden state]: #hidden-state 'Definition of Hidden State'
+[html or svg element]: #namespaced-element
 [implicit role]: #implicit-role 'Definition of Implicit Role'
+[programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
-[html or svg element]: #namespaced-element

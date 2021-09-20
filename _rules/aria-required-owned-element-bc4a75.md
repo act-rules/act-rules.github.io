@@ -176,7 +176,7 @@ This element with the `list` role owns an element with the `tab` role through th
 
 #### Failed Example 6
 
-This element with the `list` role owns elements with the `listitem` role and the `group` role, in which each element has the `listitem` role. The `listitem` role on its own is a [required owned element][required owned elements] for `list` but not the `group` role even when it contains elements with the `listitem` role.
+This element with the `list` role owns elements with the `listitem` role and the `group` role. The element with the `group` role contains elements with the `listitem` role. The `listitem` role on its own is the [required owned element][required owned elements] for `list` but not the `group` role even when it contains elements with the `listitem` role.
 
 ```html
 <div role="list">

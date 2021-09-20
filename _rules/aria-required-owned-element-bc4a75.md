@@ -122,7 +122,7 @@ This element with the `list` role only owns elements with the `listitem` role th
 
 #### Failed Example 1
 
-This element with the `list` role owns an element without any of its [required owned element][required owned elements] (`listitem`).
+This element with the `list` role owns an element without the [required owned element][required owned elements] (`listitem`).
 
 ```html
 <div role="list">

@@ -61,7 +61,7 @@ The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][w
 
 #### Passed Example 1
 
-This element with the `list` role only owns elements with the `listitem` role. The `listitem` role is the [required owned elements][required owned elements] for `list`.
+This element with the `list` role only owns elements with the `listitem` role. The `listitem` role is the [required owned element][required owned elements] for `list`.
 
 ```html
 <div role="list">

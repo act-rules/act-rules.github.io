@@ -72,7 +72,7 @@ This element with the `list` role only owns elements with the `listitem` role. T
 
 #### Passed Example 2
 
-This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is the [required owned element][required owned elements]] for `tablist`.
+This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is the [required owned element][required owned elements] for `tablist`.
 
 ```html
 <ul role="tablist">

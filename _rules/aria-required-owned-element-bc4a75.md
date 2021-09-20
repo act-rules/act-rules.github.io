@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [explicit semantic role][] with [required owned elements][], except if the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this [attribute value][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [explicit semantic role][] with [required owned elements][], except if the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with the `aria-busy` [attribute value][] of `true`.
 
 ## Expectation
 

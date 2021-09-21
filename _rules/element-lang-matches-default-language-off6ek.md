@@ -33,7 +33,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element with a `lang` attribute for which all the following are true:
+This rule applies to any [HTML element][] with a `lang` attribute for which all the following are true:
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element is in a [document][] with a [content type][] of `text/html`; and
@@ -316,3 +316,4 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
 [valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'
 [visible]: #visible 'Definition of Visible'
+[html element]: #namespaced-element

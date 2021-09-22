@@ -201,7 +201,7 @@ This `input` element is not [included in the accessibility tree][] because of it
 
 #### Inapplicable Example 3
 
-This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "presentation".
+This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "none".
 
 ```html
 <select role="none" disabled>

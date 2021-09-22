@@ -163,4 +163,4 @@ This element with the `menuitem` role does not need an [accessible name][] becau
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[html element]: #namespaced-element
+[html elements]: #namespaced-element

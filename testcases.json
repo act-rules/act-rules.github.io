@@ -22486,10 +22486,10 @@
       }
     },
     {
-      "testcaseId": "96a63532b27f1f45457a135f7840698fb3e37872",
+      "testcaseId": "bb8261f0e50d0cb4eb52b11b653c2088ddb97a55",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/09o5cg/96a63532b27f1f45457a135f7840698fb3e37872.html",
-      "relativePath": "testcases/09o5cg/96a63532b27f1f45457a135f7840698fb3e37872.html",
+      "url": "https://act-rules.github.io/testcases/09o5cg/bb8261f0e50d0cb4eb52b11b653c2088ddb97a55.html",
+      "relativePath": "testcases/09o5cg/bb8261f0e50d0cb4eb52b11b653c2088ddb97a55.html",
       "expected": "failed",
       "ruleId": "09o5cg",
       "ruleName": "Text has enhanced contrast",

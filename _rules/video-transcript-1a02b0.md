@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: '`video` element visual content has transcript'
+name: 'Audio and visuals of `video` element have transcript'
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -25,6 +25,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -33,7 +35,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains audio.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][].
 
 ## Expectation
 
@@ -135,20 +137,6 @@ A video element that is not [visible][].
 <video controls style="display: none;">
   <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
-</video>
-<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
-</html>
-```
-
-#### Inapplicable Example 2
-
-A video element without audio.
-
-```html
-<html lang="en">`
-<video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 </html>

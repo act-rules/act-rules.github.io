@@ -33,7 +33,6 @@
 - api # lowercase needed in reference list
 - APIs
 - MDN
-- BCP
 - HTML5
 - HTML
 - JSON
@@ -46,8 +45,6 @@
 - dpub # lowercase needed in reference list
 - CSSOM
 - DNS
-- BCP
-- bcp
 - X11
 - IDL
 - idl # lowercase needed in reference list
@@ -82,6 +79,9 @@
 - kerning
 - drawImage
 - pragma
+- iso # lowercase needed in reference list
+- RFC
+- rfc
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -163,6 +163,8 @@
 - innerText
 - isTrusted
 - isComposing
+- x1
+- y1
 
 # DOM Events
 - auxclick
@@ -217,6 +219,10 @@
 - unicity
 - Menuitem
 - menuitems
+- namespaced-element
+- Namespaced
+- namespaceURI
+- testability
 
 # Parts of Unicode
 - 000A
@@ -251,3 +257,7 @@
 # Language codes
 - da
 - nl
+
+# Color values
+- HSL
+- hsl

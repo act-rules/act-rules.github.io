@@ -15,10 +15,12 @@ input_aspects:
   - CSS Styling
   - Accessibility Tree
 acknowledgments:
-  audio file:
-    - audio is an excerpt from JFK's 'Moon Speech'
   authors:
     - António Estriga
+  funding:
+    - WAI-Tools
+  assets:
+    - audio is an excerpt from JFK's 'Moon Speech'
 ---
 
 ## Applicability

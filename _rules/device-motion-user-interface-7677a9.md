@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Carlos Duarte
     - João Vicente
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -30,7 +32,7 @@ This rule applies to any [HTML document][] with an associated [Window object][] 
 
 ## Expectation
 
-For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target one of the following is true:
+For each registered [device orientation event][device orientation] or [device motion event][device motion] in the test target at least one of the following is true:
 
 - **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
 - **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], causing the same [changes in content][] as the event.
@@ -47,6 +49,8 @@ For each registered [device orientation event][device orientation] or [device mo
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. These extra requirements are left out of this rule, and should be tested separately.
 
 - [Understanding Success Criterion 2.5.4: Motion Actuation][sc2.5.4]
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)

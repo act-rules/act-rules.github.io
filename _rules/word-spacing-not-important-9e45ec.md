@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -25,7 +27,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 ## Expectation
 
-For each test target, one of the following is true:
+For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [word-spacing][] property is not [important][]; or
 - **wide enough**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
@@ -45,7 +47,7 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 ## Background
 
-When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum recommended threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
+When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum required threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
 
 CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
@@ -157,7 +159,7 @@ The [computed][] value of the `word-spacing` property of this `p` element is **n
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `word-spacing` of only 0.1 times the font size, which is below the recommended minimum.
+This `p` element has a [computed][] `word-spacing` of only 0.1 times the font size, which is below the required minimum.
 
 ```html
 <p style="word-spacing: 0.1em !important">
@@ -167,7 +169,7 @@ This `p` element has a [computed][] `word-spacing` of only 0.1 times the font si
 
 #### Failed Example 2
 
-This `p` element has a [computed][] `word-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
+This `p` element has a [computed][] `word-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the required minimum.
 
 ```html
 <style>

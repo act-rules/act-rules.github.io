@@ -21,11 +21,13 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element with a [semantic role][] that defines its [children][child] to be [presentational children][].
+This rule applies to any [HTML or SVG element][] with a [semantic role][] that defines its [children][child] to be [presentational children][].
 
 ## Expectation
 
@@ -142,3 +144,4 @@ This element has a `link` role which does not have [presentational children][].
 [descendants]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition Descendant, as on 2020-10-21'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/10/21'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
+[html or svg element]: #namespaced-element

@@ -21,6 +21,8 @@ acknowledgments:
   authors:
     - Emma Pratt Richens
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -55,7 +57,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-No attributes are duplicated.
+This `img` element contains no duplicated attributes.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
@@ -63,7 +65,7 @@ No attributes are duplicated.
 
 #### Passed Example 2
 
-No attributes, therefore no attributes are duplicated.
+This `br` element contains no attributes, so there is no duplicated attribute.
 
 ```html
 <br />
@@ -71,7 +73,7 @@ No attributes, therefore no attributes are duplicated.
 
 #### Passed Example 3
 
-Empty attributes, no attributes are duplicated.
+This `input` element contains three different attributes, two of them being empty.
 
 ```html
 <input type="checkbox" disabled readonly />
@@ -79,7 +81,7 @@ Empty attributes, no attributes are duplicated.
 
 #### Passed Example 4
 
-SVG, no attributes are duplicated.
+This `SVG` element contains no attributes.
 
 ```html
 <svg>
@@ -89,7 +91,7 @@ SVG, no attributes are duplicated.
 
 #### Passed Example 5
 
-Script, no attributes are duplicated. HTML or SVG code within a script should be ignored.
+This `script` element contains duplicated attributes, but they are ignored because they are placed within the `script` tag.
 
 ```html
 <script>
@@ -101,7 +103,7 @@ Script, no attributes are duplicated. HTML or SVG code within a script should be
 
 #### Failed Example 1
 
-At least one attribute is duplicated.
+This `img` element contains a duplicated `alt` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />
@@ -109,7 +111,7 @@ At least one attribute is duplicated.
 
 #### Failed Example 2
 
-Empty attributes, at least one attribute is duplicated.
+This `input` element contains a duplicate `disabled` attribute.
 
 ```html
 <input type="checkbox" disabled="disabled" disabled readonly />
@@ -117,7 +119,7 @@ Empty attributes, at least one attribute is duplicated.
 
 #### Failed Example 3
 
-SVG, at least one attribute is duplicated.
+This `line` element contains duplicate `x1` and duplicate `y1` attributes.
 
 ```html
 <svg>
@@ -129,7 +131,7 @@ SVG, at least one attribute is duplicated.
 
 #### Inapplicable Example 1
 
-Code is XML, and not HTML or SVG.
+This code is XML, not HTML or SVG.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -142,8 +144,8 @@ Code is XML, and not HTML or SVG.
 
 #### Inapplicable Example 2
 
-Code is JavaScript, and not HTML or SVG.
+This code is JavaScript, not HTML or SVG.
 
 ```js
-var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="" alt="W3C logo" />'
+var foo = '<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />'
 ```

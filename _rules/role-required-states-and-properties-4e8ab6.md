@@ -20,11 +20,13 @@ input_aspects:
 acknowledgments:
   authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
 
 ## Expectation
 
@@ -131,3 +133,4 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
 [wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
+[html or svg element]: #namespaced-element

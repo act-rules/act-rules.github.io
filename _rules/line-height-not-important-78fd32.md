@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -25,7 +27,7 @@ This rule applies to any HTML element that is [visible][] and for which the `sty
 
 ## Expectation
 
-For each test target, one of the following is true:
+For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
 - **large enough**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property; or

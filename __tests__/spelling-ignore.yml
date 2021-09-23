@@ -82,6 +82,7 @@
 - kerning
 - drawImage
 - pragma
+- namespaced
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

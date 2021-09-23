@@ -21,6 +21,8 @@ acknowledgments:
     - Wilco Fiers
   previous_authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

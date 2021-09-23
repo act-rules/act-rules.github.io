@@ -29,6 +29,8 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

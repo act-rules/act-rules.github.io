@@ -17,6 +17,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
   assets:
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
     - Image from a Ming Dynasty edition of the Romance of the Three Kingdoms, original kept in the library holdings of Peking University.
@@ -31,7 +33,7 @@ This rule applies to any [HTML web page][].
 In each test target, either there is no [non-repeated content after repeated content][] or there exists an element for which all the following are true:
 
 - the element is [non-repeated content after repeated content][]; and
-- the element has a [semantic role][] of `heading`; and
+- the element is a [semantic][] `heading`; and
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][].
 
@@ -327,7 +329,7 @@ This [document][] has no [non-repeated content after repeated content][].
 
 #### Failed Example 1
 
-In this document, there is no element with a [semantic role][] of `heading`, even though the `strong` element is styled to appear as one.
+In this document, there is [semantic][] `heading` element, even though the `strong` element is styled to appear as one.
 
 ```html
 <html>
@@ -456,7 +458,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
-[semantic role]: #semantic-role 'Definition of Semantic Role'
+[semantic]: #semantic-role 'Definition of Semantic Role'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1: Bypass Blocks'
 [tech h69]: https://www.w3.org/WAI/WCAG21/Techniques/html/H69 'Technique H69: Providing Heading Elements at the Beginning of each Section of Content'

@@ -8,7 +8,7 @@ title: Process
 - [To Do](#To-Do)
 - [In Progress](#In-Progress)
 - [Needs Reviews](#Needs-Reviews)
-- [Final Call](#Final-Call)
+- [Call for Review](#Call-for-Review)
 - [Done](#Done)
 - [Rejected](#Rejected)
 
@@ -28,7 +28,7 @@ The purpose of this stage is to avoid that people spend a huge amount of time on
 
 ### Passes this stage and moves on to "To Do" when:
 
-- Currently no explicit criteria for passing this stage, but 3 initial approvals from different organizations is recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Final Call later.
+- Currently no explicit criteria for passing this stage, but 3 initial approvals from different organizations  are recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Call for Review later.
 
 ### Fails this stage and becomes "Rejected" when:
 
@@ -44,7 +44,7 @@ The purpose of this stage is to avoid that people spend a huge amount of time on
 
 - Focus on whether the rule is a valid test for the accessibility requirements (WCAG success criteria) that it lists.
 - Focus on whether you can agree to the general concept of the rule, or if the idea needs to be tweaked or rejected all together.
-- Be honest about your concerns, since rejecting a rule at this point will save a lot of resources compared to rejecting it at the Final Call later.
+- Be honest about your concerns, since rejecting a rule at this point will save a lot of resources compared to rejecting it at the Call for Review later.
 
 ## To do
 
@@ -133,11 +133,13 @@ Rules that have been fixed up by the author and are ready for review again, aimi
   - ... in need of changes, big or small (even if you didn't do a full review) --> Use "Request changes" status (and make comments)
   - ... anything else --> Use "Comment" status
 
-## Final Call (aka Call for Consensus (CFC))
+## Call for Review
 
 Final gate-keeping mechanism where the whole community gets to object to a rule, if they don't agree to it, and implementers get a shot at trying it out in practice and giving feedback based on real-life experience with the rule.
 
 We encourage initial implementations BEFORE publishing the rule, so that all the feedback from the implementation can get included in the original pull request, instead of being raised as new issues for already published rules - making even published rules quite unstable.
+
+This stage was formerly called Final Call or Call for Consensus (CFC)
 
 ### Enters this stage when:
 
@@ -145,9 +147,9 @@ We encourage initial implementations BEFORE publishing the rule, so that all the
 - Rule author considers the rule to be in its final form.
 - Rule is either a new rule or an already published rule where substantial changes have been made.
 
-#### Changes that does require a "Final call"
+#### Changes that do require a "Call for Review"
 
-Substantial changes, that require a "Final call", are in general changes that can affect the outcome of a rule.
+Substantial changes, that require a "Call for Review", are in general changes that can affect the outcome of a rule.
 This includes, but might not be limited to changes that changes, extends or limits the scope of what is considered for these sections:
 
 - Accessibility Requirements (success criteria)
@@ -155,41 +157,41 @@ This includes, but might not be limited to changes that changes, extends or limi
 - Expectations
 - Test cases (Passed/Failed/Inapplicable)
 
-#### Changes that does not require a "Final call"
+#### Changes that do not require a "Call for Review"
 
-These changes are considered non-substantial and will not require a "Final call" before being published:
+These changes are considered non-substantial and will not require a "Call for Review" before being published:
 
 - Editorial changes, that do not change the meaning of a rule (also if it's in the Applicability, Expectations or Examples)
 - Changes to the Assumptions, Background, Accessibility Support. If changes to these sections seem to impact the possible outcomes of a rule, probably these sections have been misused.
 
 ### Passes this stage when:
 
-- No changes or only changes that _do not_ require a "Final call" is made to the rule after "Final Call" is launched.
+- No changes or only changes that _do not_ require a "Call for Review" are made to the rule after "Call for Review" is launched.
 
 ### Fails this stage and moves back two stages to "In Progress" when:
 
-- Changes that do require a final call is made to the rule after Final Call is launched.
+- Changes that do require a "Call for Review" are made to the rule after "Call for Review" is launched.
 
-If this happens, a new final call should be launched after the first one. It is recommended to let the first final call expire first, before launching a new one, to get a broad range of reviewers on board already in the first round to hopefully avoid multiple rounds of final calls for the same pull request.
+If this happens, a new "Call for Review" should be launched after the first one. It is recommended to let the first "Call for Review" expire first, before launching a new one, to get a broad range of reviewers on board already in the first round to hopefully avoid multiple rounds of Calls for Review for the same pull request.
 
 ### Instructions for this stage
 
 #### Rule author's job for this stage:
 
-- Send email out to all of ACT Rules Community Group that rule is in "Final call" for the next 2 weeks.
-- Follow up on feedback during the Final Call, and handle requested changes, evaluating whether they are of a type that MUST spawn a new "Final call":
-  - For changes that _does not_ require a "Final call" (see above): Implement changes as soon as possible, and dismiss outdated reviews (to let all reviewers know that the pull request is review ready), and request a new review from that person.
-  - For changes that _does_ require a new "Final call": Evaluate whether "Final call" should be allowed to run out before changes are made, or if changes should be made right away, but with a note that a new "Final call" will be required.
+- Send email out to all of ACT Rules Community Group that rule is in "Call for Review" for the next 2 weeks.
+- Follow up on feedback during the "Call for Review", and handle requested changes, evaluating whether they are of a type that MUST spawn a new "Call for Review":
+  - For changes that _do not_ require a "Call for Review" (see above): Implement changes as soon as possible, and dismiss outdated reviews (to let all reviewers know that the pull request is review ready), and request a new review from that person.
+  - For changes that _do_ require a new "Call for Review": Evaluate whether "Call for Review" should be allowed to run out before changes are made, or if changes should be made right away, but with a note that a new "Call for Review" will be required.
 
 #### Reviewer's job for this stage:
 
 - Thorough reviews, take time to dive into the rule.
-- When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a final call, or the ones the do not require a final call).
+- When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a "Call for Review", or the ones that do not require a "Call for Review").
 - For tool vendors and testing methodology owners: Implement rule in tools and methodologies
   - At this stage, the rule should be quite stable, minimizing the risk of doing a too-early implementation, that has to be re-done from scratch later due to changes in the rule.
   - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with test cases, ambiguities in applicability or expectations, missing definitions etc.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
-- Keep up to date on Final Calls using this list: https://github.com/act-rules/act-rules.github.io/labels/Final%20call
+- Keep up to date on Calls for Review using this list: https://github.com/act-rules/act-rules.github.io/issues/461
 
 ### Done
 
@@ -197,7 +199,7 @@ Published rules
 
 ### Enters this stage when:
 
-- A rule has received 3 approvals from 3 different organizations and successfully survived its 2 week Final Call (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
+- A rule has received 3 approvals from 3 different organizations and successfully survived its 2 week Call for Review (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
 
 ### Rejected
 

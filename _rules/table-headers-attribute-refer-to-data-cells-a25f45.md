@@ -22,6 +22,8 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -370,6 +372,7 @@ The `table` is not [included in the accessibility tree][].
 	</tr>
 </table>
 ```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'

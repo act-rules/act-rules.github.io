@@ -22,6 +22,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

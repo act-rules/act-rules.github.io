@@ -19,6 +19,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -42,7 +42,7 @@ For each target element, all [text nodes][] in the [visible text content][] eith
 
 ## Assumptions
 
-This rule assumes that all resources needing for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute), but this is not tested by this rule.
+This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute), but this is not tested by this rule.
 
 ## Accessibility Support
 

@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

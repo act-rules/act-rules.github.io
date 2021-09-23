@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -45,9 +47,9 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 ## Background
 
-When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum recommended threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
+When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum required threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
 
-CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
+CSS specifications define each declaration as being either [important][] (if it has the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
@@ -157,7 +159,7 @@ The [computed][] value of the `letter-spacing` property of this `p` element is *
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font size, which is below the recommended minimum.
+This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font size, which is below the required minimum.
 
 ```html
 <p style="letter-spacing: 0.1em !important">
@@ -167,7 +169,7 @@ This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font 
 
 #### Failed Example 2
 
-This `p` element has a [computed][] `letter-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the recommended minimum.
+This `p` element has a [computed][] `letter-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the required minimum.
 
 ```html
 <style>

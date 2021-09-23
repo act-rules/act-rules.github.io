@@ -43,6 +43,8 @@ input_rules:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
   assets:
     - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles Henry Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
     - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)

@@ -24,14 +24,16 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
 This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **widget**: the ancestor is a [semantic widget][]; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [semantic widget][] that is [disabled][]; or
+- **widget**: the ancestor is a [inheriting semantic][] `widget`; or
+- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
 - **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
 
 ## Expectation
@@ -398,6 +400,6 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
 [sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[semantic widget]: #semantic-widget 'Definition of Semantic Widget'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'

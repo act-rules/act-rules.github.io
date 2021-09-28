@@ -56,6 +56,8 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Background
 
+### Bibliography
+
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)

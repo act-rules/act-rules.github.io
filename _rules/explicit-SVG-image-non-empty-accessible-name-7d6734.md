@@ -44,6 +44,8 @@ Until browser support for the [SVG Accessibility API Mappings][] is more consist
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [SVG Accessibility API Mappings (working draft)][svg accessibility api mappings]
 - [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/)

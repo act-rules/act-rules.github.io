@@ -45,6 +45,8 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
+### Bibliography
+
 - The term [label](https://www.w3.org/TR/WCAG21/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 

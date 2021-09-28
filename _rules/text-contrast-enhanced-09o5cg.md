@@ -171,10 +171,10 @@ This light gray text has a contrast ratio of 5.7:1 on the white background.
 
 #### Failed Example 2
 
-This light gray text has a contrast ratio between 1.6:1 and 5.3:1 on the white to blue gradient background.
+This light gray text has a contrast ratio between 4.6:1 and 5.7:1 on the white to cyan gradient background.
 
 ```html
-<p style="color: #CCC; background: linear-gradient(to right, #FFF, #00F); width: 300px">
+<p style="color: #666; background: linear-gradient(to right, #FFF, #0FF); width: 300px">
 	Some text in English
 </p>
 ```

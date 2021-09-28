@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

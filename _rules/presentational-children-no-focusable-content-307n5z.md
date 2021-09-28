@@ -21,6 +21,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

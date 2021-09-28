@@ -22,7 +22,9 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
-  images:
+  funding:
+    - WAI-Tools
+  assets:
     - Times Square image released into the public domain by (WT-shared) Ypsilonatshared at wts wikivoyage.
     - Book shelf image by Alexandre Boue, licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en) license.
     - Ivanhoe Classic Comics released into the public domain by Malcolm Kildale under the [Creative Commons Attribution-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license

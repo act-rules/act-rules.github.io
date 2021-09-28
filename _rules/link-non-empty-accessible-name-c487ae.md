@@ -63,7 +63,12 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Background
 
+### Related rules
+
 - [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)

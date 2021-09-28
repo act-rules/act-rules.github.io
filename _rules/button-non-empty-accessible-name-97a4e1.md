@@ -42,7 +42,12 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Background
 
+### Related rules
+
 - [Image button has non-empty accessible name](https://act-rules.github.io/rules/59796f)
+
+### Bibliography
+
 - [HTML Accessibility API Mappings 1.0 (working draft), 5.2 `input type="button"`, `input type="submit"` and `input type="reset"`](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)

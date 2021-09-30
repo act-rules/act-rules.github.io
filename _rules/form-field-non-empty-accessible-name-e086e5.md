@@ -56,6 +56,7 @@ This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/W
 - [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
 - [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65)
+- [Rule: Element with aria-hidden has no focusable content](https://act-rules.github.io/rules/6cfa84)
 
 ## Test Cases
 

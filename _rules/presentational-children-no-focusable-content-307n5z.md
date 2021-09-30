@@ -30,7 +30,7 @@ None of the target elements have [descendants][] in the [flat tree][] that are p
 
 ## Assumptions
 
-This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criteria 4.1.2.
+This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criterion 4.1.2.
 
 ## Accessibility Support
 

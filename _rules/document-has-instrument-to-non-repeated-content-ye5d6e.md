@@ -57,6 +57,8 @@ The intention of this rule is that focus is moved to the main area of content of
 
 While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
 
+### Bibliography
+
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]

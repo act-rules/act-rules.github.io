@@ -46,6 +46,8 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 
 [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] only checks that landmarks are correctly used, but does not check whether landmarks could have been used and were omitted. Therefore, failing this rule (not having enough landmarks) does not necessarily fail that technique, and it is not listed as an accessibility mapping.
 
+### Bibliography
+
 - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)

@@ -54,6 +54,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
 - [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
 - [CSS Transforms Module Level 2](https://drafts.csswg.org/css-transforms-2)

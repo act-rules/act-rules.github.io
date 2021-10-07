@@ -39,7 +39,7 @@ For each test target, at least one of the following is true:
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [line-height][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. 
 
 ## Background
 
@@ -70,7 +70,7 @@ This `p` element has a **not [important][]** [computed][] `line-height`.
 This `p` element has a [computed][] `line-height` of twice the font size, which is **large enough**.
 
 ```html
-<p style="line-height: 2em !important">
+<p style="line-height: 2em !important; max-width: 200px;">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

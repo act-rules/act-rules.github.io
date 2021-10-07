@@ -50,7 +50,7 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 ## Assumptions
 
 - This rule assumes that all image buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
-- This rule assumes that the default name for image buttons ("Submit Query"), as defined by the [HTML Accessibility API Mapping][html aam image button] is never descriptive.
+- This rule assumes that the default name for image buttons ("Submit Query"), as defined by the [HTML Accessibility API Mapping][html aam image button], is never descriptive.
 
 ## Accessibility Support
 

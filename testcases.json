@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1126,
+  "count": 1128,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -8338,6 +8338,24 @@
       }
     },
     {
+      "testcaseId": "e860f8badc29cd5db9b60050f73c395a0a8de519",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/e086e5/e860f8badc29cd5db9b60050f73c395a0a8de519.html",
+      "relativePath": "testcases/e086e5/e860f8badc29cd5db9b60050f73c395a0a8de519.html",
+      "expected": "passed",
+      "ruleId": "e086e5",
+      "ruleName": "Form field has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "2531f5fa4a4c2f8f357de91cc8a54e244fd1e3d1",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/e086e5/2531f5fa4a4c2f8f357de91cc8a54e244fd1e3d1.html",
@@ -8428,10 +8446,28 @@
       }
     },
     {
-      "testcaseId": "5be867508d4da11703175f32d6f3541b42538256",
+      "testcaseId": "5891d23a51ac07d7b85d2b469f970637d45a6382",
       "testcaseTitle": "Failed Example 6",
-      "url": "https://act-rules.github.io/testcases/e086e5/5be867508d4da11703175f32d6f3541b42538256.html",
-      "relativePath": "testcases/e086e5/5be867508d4da11703175f32d6f3541b42538256.html",
+      "url": "https://act-rules.github.io/testcases/e086e5/5891d23a51ac07d7b85d2b469f970637d45a6382.html",
+      "relativePath": "testcases/e086e5/5891d23a51ac07d7b85d2b469f970637d45a6382.html",
+      "expected": "failed",
+      "ruleId": "e086e5",
+      "ruleName": "Form field has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/e086e5",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a9ff16fec8b977eb20b51b2150574b06bb81a177",
+      "testcaseTitle": "Failed Example 7",
+      "url": "https://act-rules.github.io/testcases/e086e5/a9ff16fec8b977eb20b51b2150574b06bb81a177.html",
+      "relativePath": "testcases/e086e5/a9ff16fec8b977eb20b51b2150574b06bb81a177.html",
       "expected": "failed",
       "ruleId": "e086e5",
       "ruleName": "Form field has non-empty accessible name",

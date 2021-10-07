@@ -37,7 +37,7 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 ## Expectation
 
-Each test target has a `lang` attribute that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+Each test target has a `lang` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ## Assumptions
 
@@ -53,7 +53,7 @@ _There are no major accessibility support issues known for this rule._
 - [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
-- [BCP 47: Tags for Identifying Languages](https://www.ietf.org/rfc/bcp/bcp47.txt)
+- [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
 ## Test Cases
@@ -106,7 +106,7 @@ This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 #### Inapplicable Example 1
 
-This rule does not apply to `svg` element.
+This rule does not apply to an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"></svg>
@@ -114,8 +114,10 @@ This rule does not apply to `svg` element.
 
 #### Inapplicable Example 2
 
-This rule does not apply to `math` element.
+This rule does not apply to a `math` element.
 
 ```xml
 <math></math>
 ```
+
+[attribute value]: #attribute-value

@@ -123,6 +123,14 @@ This [semantic][semantic role] `combobox` element has an [accessible name][] bec
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
 ```
 
+#### Passed Example 7
+
+This [semantic][semantic role] `checkbox` element has the text content as its [accessible name][].
+
+```html
+<div role="checkbox">I agree to the terms and conditions.</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -177,8 +185,16 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
-<label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<label for="firstname">first name</label>
+<div role="textbox" id="firstname"></div>
+```
+
+#### Failed Example 7
+
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The text content of the element serves as its value, not as an [accessible name][].
+
+```html
+<div role="textbox">first name</div>
 ```
 
 ### Inapplicable

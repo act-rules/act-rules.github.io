@@ -108,7 +108,7 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 
 This `input` element has an [accessible name][] because of its `placeholder` attribute.
 
-**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
+**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a user starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
 
 ```html
 <input placeholder="Your search query" /> <button type="submit">search</button>

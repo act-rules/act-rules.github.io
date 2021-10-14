@@ -113,16 +113,6 @@ Content made [unfocusable][focusable] through `disabled` attribute.
 </div>
 ```
 
-#### Passed Example 6
-
-Content taken out of sequential focus order using `tabindex`.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-2">Some button</button>
-</div>
-```
-
 ### Failed
 
 #### Failed Example 1

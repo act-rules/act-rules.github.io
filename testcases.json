@@ -19812,12 +19812,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19836,12 +19830,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19860,12 +19848,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19884,12 +19866,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19908,12 +19884,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19932,12 +19902,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19956,12 +19920,6 @@
       "ruleName": "Element with presentational children has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/307n5z",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:4.1.2": {
           "forConformance": true,
           "failed": "not satisfied",

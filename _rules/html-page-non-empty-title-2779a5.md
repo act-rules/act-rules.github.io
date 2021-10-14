@@ -47,7 +47,7 @@ Each target element has at least one [descendant](https://dom.spec.whatwg.org/#c
 
 ## Expectation 2
 
-For each target element, the first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+For each target element, the first [HTML][] `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -202,3 +202,5 @@ This `title` element is a child of an `svg` element.
   <title>This is an SVG</title>
 </svg>
 ```
+
+[html]: #namespaced-element

@@ -79,6 +79,7 @@
 - kerning
 - drawImage
 - pragma
+- namespaced
 - iso # lowercase needed in reference list
 - RFC
 - rfc

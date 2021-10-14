@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and for which the `style` attribute [declares][declared] the [word-spacing][] CSS property.
+This rule applies to any [HTML element][] that is [visible][] and for which the `style` attribute [declares][declared] the [word-spacing][] CSS property.
 
 ## Expectation
 
@@ -261,3 +261,4 @@ The `style` attribute of this `p` element does not [declare][declared] the `word
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
 [word-spacing]: https://www.w3.org/TR/css-text-3/#word-spacing-property 'CSS Text Module Level 3 - Word Spacing: the word-spacing property'
+[html element]: #namespaced-element

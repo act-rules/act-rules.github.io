@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with a [semantic][semantic role] [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any [HTML element][] with a [semantic][semantic role] [rowheader][] or [columnheader][] for which all of the following is true:
 
 - the element is [visible][]; and
 - the element is [included in the accessibility tree][]; and
@@ -353,3 +353,4 @@ This `th` element is part of a table which is not [included in the accessibility
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[html element]: #namespaced-element

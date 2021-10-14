@@ -1194,17 +1194,6 @@
               "WebPage"
             ],
             "id": "_:struct_5",
-            "description": "https://act-rules.github.io/testcases/6cfa84/a8370a7c4e710e4dcece674a415c6dd4d4e69382.html",
-            "source": "https://act-rules.github.io/testcases/6cfa84/a8370a7c4e710e4dcece674a415c6dd4d4e69382.html",
-            "title": "a8370a7c4e710e4dcece674a415c6dd4d4e69382",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_6",
             "description": "https://act-rules.github.io/testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
             "title": "8028b91449bd3f9f607dcc91be3b559035bf719c",
@@ -1215,7 +1204,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_7",
+            "id": "_:struct_6",
             "description": "https://act-rules.github.io/testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
             "title": "8e728d4484e9a796f142c6edb4545a3b8c15f88b",
@@ -1226,7 +1215,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_8",
+            "id": "_:struct_7",
             "description": "https://act-rules.github.io/testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
             "title": "2749b82af024c1f878272013d7bb8a961e662d7a",
@@ -1237,7 +1226,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_9",
+            "id": "_:struct_8",
             "description": "https://act-rules.github.io/testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
             "title": "c7b59d766471afb67d9d5e5dc6492b1a0f3421c1",
@@ -1248,7 +1237,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_10",
+            "id": "_:struct_9",
             "description": "https://act-rules.github.io/testcases/6cfa84/1d19581eebfa0f92c17dd772ca67623cb3ad3bdb.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/1d19581eebfa0f92c17dd772ca67623cb3ad3bdb.html",
             "title": "1d19581eebfa0f92c17dd772ca67623cb3ad3bdb",
@@ -1259,7 +1248,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_11",
+            "id": "_:struct_10",
             "description": "https://act-rules.github.io/testcases/6cfa84/738e5ea04afe9baef6499ad3d3bb675dcc61dd82.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/738e5ea04afe9baef6499ad3d3bb675dcc61dd82.html",
             "title": "738e5ea04afe9baef6499ad3d3bb675dcc61dd82",
@@ -1270,7 +1259,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_12",
+            "id": "_:struct_11",
             "description": "https://act-rules.github.io/testcases/6cfa84/4de29b45568a0fe40bff84c4556a4bc07dfab02d.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/4de29b45568a0fe40bff84c4556a4bc07dfab02d.html",
             "title": "4de29b45568a0fe40bff84c4556a4bc07dfab02d",
@@ -1281,7 +1270,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_13",
+            "id": "_:struct_12",
             "description": "https://act-rules.github.io/testcases/6cfa84/21498af9b02caf76133b59775aa7abab2942e7fd.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/21498af9b02caf76133b59775aa7abab2942e7fd.html",
             "title": "21498af9b02caf76133b59775aa7abab2942e7fd",

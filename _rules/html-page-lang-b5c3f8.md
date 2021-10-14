@@ -106,7 +106,7 @@ This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 #### Inapplicable Example 1
 
-This rule does not apply to `svg` element.
+This rule does not apply to an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"></svg>
@@ -114,7 +114,7 @@ This rule does not apply to `svg` element.
 
 #### Inapplicable Example 2
 
-This rule does not apply to `math` element.
+This rule does not apply to a `math` element.
 
 ```xml
 <math></math>

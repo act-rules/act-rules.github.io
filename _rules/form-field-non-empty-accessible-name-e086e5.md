@@ -108,7 +108,7 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 
 This `input` element has an [accessible name][] because of its `placeholder` attribute.
 
-**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
+**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a user starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
 
 ```html
 <input placeholder="Your search query" /> <button type="submit">search</button>
@@ -121,6 +121,14 @@ This [semantic][semantic role] `combobox` element has an [accessible name][] bec
 ```html
 <div>Country</div>
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
+```
+
+#### Passed Example 7
+
+This [semantic][semantic role] `checkbox` element has the text content as its [accessible name][].
+
+```html
+<div role="checkbox">I agree to the terms and conditions.</div>
 ```
 
 ### Failed
@@ -177,8 +185,16 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
-<label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<label for="firstname">first name</label>
+<div role="textbox" id="firstname"></div>
+```
+
+#### Failed Example 7
+
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The text content of the element serves as its value, not as an [accessible name][].
+
+```html
+<div role="textbox">first name</div>
 ```
 
 ### Inapplicable
@@ -201,7 +217,7 @@ This `input` element is not [included in the accessibility tree][] because of it
 
 #### Inapplicable Example 3
 
-This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "presentation".
+This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "none".
 
 ```html
 <select role="none" disabled>

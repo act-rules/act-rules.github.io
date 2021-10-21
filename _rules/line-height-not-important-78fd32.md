@@ -28,7 +28,7 @@ This rule applies to any HTML element with multi-line text that is [visible][] a
 For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
-- **large enough**: the used value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property; or
+- **large enough**: the [used](https://www.w3.org/TR/css-cascade-4/#used) value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property; or
 - **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions

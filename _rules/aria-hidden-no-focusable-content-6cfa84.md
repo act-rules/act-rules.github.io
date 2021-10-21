@@ -59,7 +59,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
-- [Fourth rule of ARIA use (work in progress)](https://www.w3.org/TR/using-aria/#fourth)
+- [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
 
 ## Test Cases
 
@@ -110,16 +110,6 @@ Content made [unfocusable][focusable] through `disabled` attribute.
 	<div aria-hidden="false">
 		<button tabindex="-1">Some button</button>
 	</div>
-</div>
-```
-
-#### Passed Example 6
-
-Content taken out of sequential focus order using `tabindex`.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-2">Some button</button>
 </div>
 ```
 

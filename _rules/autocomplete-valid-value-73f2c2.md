@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
+This rule applies to any [HTML][] `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
 
 - **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
 - **disabled**: the element is a [disabled element]; or
@@ -45,7 +45,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG21/#input-purposes) and collect information about the user.
 
-If the `autocomplete` attribute is used to describe "custom" taxonomy, for example `<input type="text" autocomplete="banner" />`, success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example using the custom autocomplete value "banner" (`<input type="text" autocomplete="banner" />`), success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
 
 The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success criterion [1.3.5 Identify Input Purpose][sc135].
 
@@ -111,7 +111,7 @@ This `autocomplete` [attribute value][] only has the required token "street-addr
 This `autocomplete` [attribute value][] list includes a `work` token, allowed because it is used before `email`.
 
 ```html
-<label>Work email<input autocomplete="Work Email"/></label>
+<label>Work email<input autocomplete="work email"/></label>
 ```
 
 #### Passed Example 5
@@ -261,3 +261,4 @@ This `autocomplete` attribute is inapplicable because it has the `off` value.
 [space separated]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'HTML Set of space separated tokens 2020/08/12'
 [visible]: #visible 'Definition of Visible'
 [widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'WAI-ARIA widget roles'
+[html]: #namespaced-element

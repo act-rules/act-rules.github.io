@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rules applies to any HTML element with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
+This rules applies to any [HTML element][] with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
 
 - **descendant**: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
@@ -64,7 +64,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-This `article` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which has a [valid language tag][].
 
 ```html
 <html>
@@ -78,7 +78,7 @@ This `article` element has a `lang` [attribute value][] which is not empty (`""`
 
 #### Passed Example 2
 
-This `blockquote` element has a `lang` [attribute value][] which is not empty (`""`) and has a [valid language tag][]. The region section in the value is ignored by the rule (and the definition of [valid language tag][]).
+This `blockquote` element has a `lang` [attribute value][] which has a [valid language tag][]. The region section ("CH") in the value is ignored by the rule (and the definition of [valid language tag][]).
 
 ```html
 <html>
@@ -138,7 +138,7 @@ This `div` element has a valid `lang` [attribute value][]. The [accessible name]
 
 #### Failed Example 1
 
-This `article` element has a `lang` [attribute value][] which does not have a [valid language tag][] because its primary language subtag does not exist in the registry.
+This `article` element has a `lang` [attribute value][] which does not have a [valid language tag][] because its primary language subtag does not exist in the [language subtag registry][].
 
 ```html
 <html>
@@ -339,3 +339,5 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 [valid language tag]: #valid-language-tag
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of Whitespace'
+[html element]: #namespaced-element
+[language subtag registry]: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry

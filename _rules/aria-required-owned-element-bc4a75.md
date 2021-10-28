@@ -141,15 +141,15 @@ This element with the `list` role only owns elements with the `listitem` role, o
 
 #### Passed Example 7
 
-This element with the `list` role only owns an element with a `group` role. The `group` in turn owns an element with the `listitem` role, and an element with the `group` role, in which each element has the `listitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `menuitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.
 
 ```html
-<div role="list">
+<div role="menu">
 	<div role="group">
-		<span role="listitem">Item 1</span>
+		<span role="menuitem">Item 1</span>
 		<div role="group">
-			<span role="listitem">Item 2</span>
-			<span role="listitem">Item 3</span>
+			<span role="menuitem">Item 2</span>
+			<span role="menuitem">Item 3</span>
 		</div>
 	</div>
 </div>
@@ -226,15 +226,15 @@ This element with the `list` role owns an element with the `group` role, but the
 
 #### Failed Example 7
 
-This element with the `list` role only owns an element with a `group` role. The `group` in turn owns an element with the `listitem` role, and an element with the `group` role, in which each element has the `tab` role. ARIA `group` roles are allowed to own other elements with a `group` role, but those nested `group` nodes must still meet the requirements.
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `treeitem` role. ARIA `group` roles are allowed to own other elements with a `group` role, but those nested `group` nodes must still meet the requirements.
 
 ```html
-<div role="list">
+<div role="menu">
 	<div role="group">
-		<span role="listitem">Item 1</span>
+		<span role="menuitem">Item 1</span>
 		<div role="group">
-			<span role="tab">Item 1</span>
-			<span role="tab">Item 2</span>
+			<span role="treeitem">Item 1</span>
+			<span role="treeitem">Item 2</span>
 		</div>
 	</div>
 </div>

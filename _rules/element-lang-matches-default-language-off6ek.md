@@ -37,7 +37,7 @@ This rule applies to any [HTML element][] with a `lang` attribute for which all 
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element is in a [document][] with a [content type][] of `text/html`; and
-- the element's `lang` [attribute value][] is a [valid language tag][]; and
+- the element's `lang` [attribute value][] has a [known primary language tag][]; and
 - there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
@@ -46,9 +46,9 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Assumptions
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 
@@ -303,7 +303,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code. This is not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code. This is not a [known primary language tag][].
 
 ```html
 <html lang="en">
@@ -315,7 +315,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Inapplicable Example 7
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags]. This is not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags]. This is not a [known primary language tag][].
 
 ```html
 <html lang="lb">
@@ -339,7 +339,6 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
-[valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
-[valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'
+[known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element

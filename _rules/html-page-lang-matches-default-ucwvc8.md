@@ -35,14 +35,14 @@ htmlHintIgnore:
 
 This rule applies to any [document element][] if it is an `html` element for which all of the following are true:
 
-- The [document element][] has a `lang` attribute with a value that is a [valid language tag][]; and
+- The [document element][] has a `lang` attribute with a value that has a [known primary language tag][]; and
 - The [document element][] is in a [top-level browsing context][]; and
 - The [document element][] has a [content type][] of `text/html`; and
 - The [document element][] has a defined [default page language][].
 
 ## Expectation
 
-For each test target, the [primary language][] of the [valid language tag][] matches the [default page language][] of the test target.
+For each test target, the [primary language][] of the `lang` attribute matches the [default page language][] of the test target.
 
 ## Assumptions
 
@@ -50,9 +50,9 @@ For each test target, the [primary language][] of the [valid language tag][] mat
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 
@@ -294,7 +294,7 @@ This page has an undefined [default language][default page language] because it 
 
 #### Inapplicable Example 5
 
-The `lang` [attribute value][] of this page is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+The `lang` [attribute value][] of this page is an [iso 639.2][] three letters code, hence not a [known primary language tag][].
 
 ```html
 <html lang="eng">
@@ -306,7 +306,7 @@ The `lang` [attribute value][] of this page is an [iso 639.2][] three letters co
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this page is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+The `lang` [attribute value][] of this page is a [grandfathered tag][grandfathered tags], hence not a [known primary language tag][].
 
 ```html
 <html lang="i-lux">
@@ -327,4 +327,4 @@ The `lang` [attribute value][] of this page is a [grandfathered tag][grandfather
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
 [sc311]: https://www.w3.org/TR/WCAG21/#language-of-page 'Success Criterion 3.1.1 Language of Page'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'
-[valid language tag]: #valid-language-tag
+[known primary language tag]: #known-primary-language-tag

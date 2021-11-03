@@ -25,7 +25,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to each HTML element that has one of the following [semantic roles][semantic role]:
+This rule applies to each [HTML element][] that has one of the following [semantic roles][semantic role]:
 
 - `checkbox`,
 - `combobox`,
@@ -244,3 +244,4 @@ There are no elements with any of the required [semantic roles][semantic role].
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text]: https://www.w3.org/TR/WCAG21/#dfn-text
 [visible]: #visible 'Definition of visible'
+[html element]: #namespaced-element

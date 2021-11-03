@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with multi-line text that is [visible][] and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
+This rule applies to any HTML element with [visible][] text that includes a [line-break](https://www.w3.org/TR/css-text-3/#line-breaking) and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
 
 ## Expectation
 

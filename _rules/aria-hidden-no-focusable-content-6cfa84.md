@@ -60,6 +60,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
 - [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
+- [Rule: Element with presentational children has no focusable content](https://act-rules.github.io/rules/307n5z)
 
 ## Test Cases
 

@@ -28,7 +28,7 @@ This rule applies to any HTML element with [visible][] text that includes a [lin
 For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
-- **large enough**: the used value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property; or
+- **large enough**: the [used](https://www.w3.org/TR/css-cascade-4/#used) value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property; or
 - **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute.
 
 ## Assumptions
@@ -45,7 +45,7 @@ When a style is [declared][] in the `style` attribute with an [important][] decl
 
 CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
-This rule does not consider other style attributes that could be used to increase the distance between lines of text. For example, style attributes such as `position`, `padding`, and `margin` could be used to increase the distance between lines of text to meet `1.4.12`. Oppositely, those style attributes could also be used to reduce the distance between lines of text. Thus, it is possible to pass this rule, but still fail `1.4.12` due to other styling choices.
+This rule does not consider other style attributes that could be used to increase the distance between lines of text. For example, style attributes such as `position`, `padding`, and `margin` could be used to increase the distance between lines of text to meet [Success Criterion 1.4.12 Text Spacing][sc1412]. Oppositely, those style attributes could also be used to reduce the distance between lines of text. Thus, it is possible to pass this rule, but still fail [Success Criterion 1.4.12 Text Spacing][sc1412] due to other styling choices.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)

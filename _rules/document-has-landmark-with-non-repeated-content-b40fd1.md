@@ -53,9 +53,9 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
-In most examples, the `nav` element is a [block of repeated content][].
-
 ## Test Cases
+
+In most examples, the `nav` element is a [block of repeated content][].
 
 ### Passed
 

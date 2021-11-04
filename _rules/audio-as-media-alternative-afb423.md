@@ -39,7 +39,7 @@ Each target element is labeled as an audio alternative for text on the page. Thi
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

@@ -48,7 +48,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

@@ -36,8 +36,7 @@ The label (from expectation 2) is [visible][] and [included in the accessibility
 
 ## Assumptions
 
-- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 

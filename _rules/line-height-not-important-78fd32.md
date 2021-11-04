@@ -35,6 +35,8 @@ For each test target, at least one of the following is true:
 
 - There is no mechanism available on the page to adjust [line-height][]. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
+- The font size is constant for all text in the element. If font-size changes (e.g., through use of the `::first-line` pseudo-element) then the required line height would also change throughout the element. This is untested by the current rule. 
+
 ## Accessibility Support
 
 While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. 

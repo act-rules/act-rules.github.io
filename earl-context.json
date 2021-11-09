@@ -8,6 +8,7 @@
 		"sch": "https://schema.org/",
 		"doap": "http://usefulinc.com/ns/doap#",
 		"foaf": "http://xmlns.com/foaf/0.1/",
+		"ptr": "http://www.w3.org/2009/pointers#",
 		"WebPage": "sch:WebPage",
 		"url": "dct:source",
 		"source": "dct:source",

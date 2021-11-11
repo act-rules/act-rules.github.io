@@ -303,7 +303,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code. This is not a [known primary language tag][].
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `eng`[iso 639.2][] three letters code does not exist in the [language subtag registry][].
 
 ```html
 <html lang="en">
@@ -315,7 +315,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Inapplicable Example 7
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags]. This is not a [known primary language tag][].
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `i-lox` [grandfathered tag][grandfathered tags] does not exist in the [language subtag registry][].
 
 ```html
 <html lang="lb">
@@ -340,5 +340,6 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
+[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element

@@ -43,7 +43,7 @@ Currently the description track is not supported by most assistive technologies.
 
 ## Background
 
-- Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
+Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
 
 ### Bibliography
 

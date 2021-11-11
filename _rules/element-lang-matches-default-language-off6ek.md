@@ -46,9 +46,9 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Assumptions
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even on [language tags][language tag] that do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only[language tags][language tag] with a [known primary language tag][] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 

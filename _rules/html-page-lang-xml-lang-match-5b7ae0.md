@@ -177,7 +177,7 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 
 #### Inapplicable Example 9
 
-The `lang` attribute of this page is an [iso 639.2][] three letters code, hence not a [known primary language tag][].
+The `lang` attribute of this page is an [iso 639.2][] three letters code, hence has no [known primary language tag][].
 
 ```html
 <html lang="eng" xml:lang="en"></html>
@@ -185,7 +185,7 @@ The `lang` attribute of this page is an [iso 639.2][] three letters code, hence 
 
 #### Inapplicable Example 10
 
-The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence not a [known primary language tag][].
+The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence has no [known primary language tag][].
 
 ```html
 <html lang="i-lux" xml:lang="lb"></html>

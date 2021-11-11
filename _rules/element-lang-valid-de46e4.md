@@ -242,7 +242,7 @@ This `div` element has an invalid `lang` [attribute value][]. The [accessible na
 
 #### Failed Example 8
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, which is not a [known primary language tag][].
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, which has no [known primary language tag][].
 
 ```html
 <html lang="en">
@@ -254,7 +254,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Failed Example 9
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], which is not a [known primary language tag][].
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], which has no [known primary language tag][].
 
 ```html
 <html lang="lb">

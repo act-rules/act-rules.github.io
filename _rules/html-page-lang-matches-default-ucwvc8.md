@@ -42,7 +42,7 @@ This rule applies to any [document element][] if it is an `html` element for whi
 
 ## Expectation
 
-For each test target, the [primary language][] of the `lang` attribute matches the [default page language][] of the test target.
+For each test target, the [known primary language tag][] of its `lang` attribute matches the [default page language][] of the test target.
 
 ## Assumptions
 
@@ -294,7 +294,7 @@ This page has an undefined [default language][default page language] because it 
 
 #### Inapplicable Example 5
 
-The `lang` [attribute value][] of this page is an [iso 639.2][] three letters code, hence not a [known primary language tag][].
+The `lang` [attribute value][] of this page is an [iso 639.2][] three letters code, hence has no [known primary language tag][].
 
 ```html
 <html lang="eng">
@@ -306,7 +306,7 @@ The `lang` [attribute value][] of this page is an [iso 639.2][] three letters co
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this page is a [grandfathered tag][grandfathered tags], hence not a [known primary language tag][].
+The `lang` [attribute value][] of this page is a [grandfathered tag][grandfathered tags], hence has no [known primary language tag][].
 
 ```html
 <html lang="i-lux">

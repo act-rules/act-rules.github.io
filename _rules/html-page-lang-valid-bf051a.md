@@ -101,7 +101,7 @@ This `html` element has a `lang` attribute with a [known primary language tag][]
 
 #### Failed Example 3
 
-The `lang` attribute of this page is an [iso 639.2][] three letters code, which is not a [known primary language tag][].
+The `lang` attribute of this page is an [iso 639.2][] three letters code, which has no [known primary language tag][].
 
 ```html
 <html lang="eng">
@@ -113,7 +113,7 @@ The `lang` attribute of this page is an [iso 639.2][] three letters code, which 
 
 #### Failed Example 4
 
-The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], which is not a [known primary language tag][].
+The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], which has no [known primary language tag][].
 
 ```html
 <html lang="i-lux">

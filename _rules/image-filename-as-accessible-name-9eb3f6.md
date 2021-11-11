@@ -45,7 +45,7 @@ deprecated: |
 
 ## Applicability
 
-This rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
+This rule applies to any [HTML element][] that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
 
 - **img**: the element is an `img` with an [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; or
 - **input image**: the element is an `input` element in the [Image Button][] state with an [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
@@ -268,3 +268,4 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 [semantic role]: #semantic-role 'Definition of semantic role'
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
 [whitespace]: #whitespace 'Definition of whitespace'
+[html element]: #namespaced-element

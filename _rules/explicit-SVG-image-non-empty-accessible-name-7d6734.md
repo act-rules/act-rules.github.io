@@ -22,7 +22,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any element in the [SVG](https://www.w3.org/2000/svg) namespace with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
+This rule applies to any [SVG element][] with an [explicit semantic role][explicit role] of either `img`, `graphics-document`, `graphics-symbol`, that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -187,3 +187,4 @@ This `circle` element has an [explicit role][] that is neither `img`, `graphics-
 [explicit role]: #explicit-role 'Definition of explicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [svg accessibility api mappings]: https://www.w3.org/TR/svg-aam-1.0
+[svg element]: #namespaced-element

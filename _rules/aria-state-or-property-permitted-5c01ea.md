@@ -30,7 +30,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][] that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
 ## Expectation
 
@@ -38,7 +38,7 @@ For each test target, one of the following is true:
 
 - **global**: the test target is a [global state or property][global]; or
 - **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
-- **language feature**: the test target is specified on an HTML element and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+- **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
 ## Assumptions
 
@@ -211,4 +211,4 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
-[html or svg element]: #namespaced-element
+[namespaced element]: #namespaced-element

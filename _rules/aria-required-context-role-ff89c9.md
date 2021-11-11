@@ -163,11 +163,11 @@ These elements with an [explicit role][] of `listitem` are not children in the [
 
 #### Failed Example 3
 
-These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][]. They are instead children in the [accessibility tree][] of the `div` with an `aria-label` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][]. They are instead children in the [accessibility tree][] of the `div` with an `aria-live` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
 
 ```html
 <div role="list">
-	<div aria-label="menu">
+	<div aria-live="polite">
 		<div role="listitem">List item 1</div>
 		<div role="listitem">List item 2</div>
 	</div>

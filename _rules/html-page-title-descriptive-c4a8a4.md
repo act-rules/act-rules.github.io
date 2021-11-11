@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the first HTML `title` element that
+This rule applies to the first [HTML][] `title` element that
 
 - is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
 - contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
@@ -177,3 +177,5 @@ This `title` element is a child of an `svg` element.
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
 ```
+
+[html]: #namespaced-element

@@ -45,7 +45,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element that is a [semantic][semantic role] `link` [included in the accessibility tree][].
+This rule applies to any [HTML element][] that is a [semantic][semantic role] `link` [included in the accessibility tree][].
 
 ## Expectation
 
@@ -340,3 +340,4 @@ This `a` element does not have the role of link because it does not have an `hre
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'
+[html element]: #namespaced-element

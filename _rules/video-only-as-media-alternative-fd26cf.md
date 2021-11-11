@@ -45,7 +45,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- The term [label](https://www.w3.org/TR/WCAG21/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
+The term [label](https://www.w3.org/TR/WCAG21/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
 
 ### Bibliography
 

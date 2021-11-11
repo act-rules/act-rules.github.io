@@ -47,7 +47,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
 ### Bibliography
 

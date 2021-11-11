@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace); and
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and

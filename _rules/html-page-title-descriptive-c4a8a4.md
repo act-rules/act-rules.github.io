@@ -48,7 +48,9 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+- This rule is testing Technique G88: Providing descriptive titles for Web pages
+- A prerequisite for this rule is that Technique H25: Providing a title using the title element is used for living up to 2.4.2 Page Titled
 
 ## Accessibility Support
 
@@ -67,11 +69,8 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 ### Bibliography
 
 - [Understanding Success Criterion 2.4.2: Page titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-
-### Assumptions
-
-- This rule is testing [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
-- A prerequisite for this rule is that [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25) is used for living up to 2.4.2 Page Titled
+- [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
+- [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
 
 ## Test Cases
 

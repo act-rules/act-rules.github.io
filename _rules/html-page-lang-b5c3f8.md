@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
@@ -106,7 +106,7 @@ This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 #### Inapplicable Example 1
 
-This rule does not apply to `svg` element.
+This rule does not apply to an `svg` element.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"></svg>
@@ -114,7 +114,7 @@ This rule does not apply to `svg` element.
 
 #### Inapplicable Example 2
 
-This rule does not apply to `math` element.
+This rule does not apply to a `math` element.
 
 ```xml
 <math></math>

@@ -32,7 +32,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
+This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
 
 - It has a [horizontal scroll distance][scrollable] greater than the [computed][] [left][padding-left] or [right padding][padding-right] of the element; or
 - It has a [vertical scroll distance][scrollable] greater than the [computed][] [top][padding-top] or [bottom padding][padding-bottom] of the element
@@ -264,3 +264,4 @@ This `iframe` element is not a [scrollable element][scrollable].
 [padding-bottom]: https://www.w3.org/TR/CSS22/box.html#propdef-padding-bottom
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration
 [success criterion 2.1.1 keyboard]: https://www.w3.org/TR/WCAG21/#keyboard
+[html element]: #namespaced-element

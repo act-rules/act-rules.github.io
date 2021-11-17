@@ -50,10 +50,11 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making its state of [visible](#visible) or hidden unclear.
 
-- [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
+- [CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
 - [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
+- [Element with presentational children has no focusable content](307n5z.md)
 
 ## Test Cases
 

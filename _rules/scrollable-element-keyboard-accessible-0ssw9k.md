@@ -49,7 +49,7 @@ This rule assumes that all [scrollable elements][scrollable] with visible conten
 
 Some browsers will automatically make any [scrollable element][scrollable] focusable to ensure keyboard accessibility. However, the browser does not include these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
 
-There are also differences between browsers in if they make right padding scrollable. While some browsers allow scrolling the full border-width of the content of a scrollable region, others constrain scrolling to the content box instead.
+Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/css-box-4/#content-box) of elements; while others allow to scroll the full [border box](https://drafts.csswg.org/css-box-4/#border-box), hence including the element's padding. This results in some elements being scrollable with a browser but not with another.
 
 ## Background
 

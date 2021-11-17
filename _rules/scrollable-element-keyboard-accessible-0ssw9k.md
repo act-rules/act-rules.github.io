@@ -49,6 +49,8 @@ This rule assumes that all [scrollable elements][scrollable] with visible conten
 
 Some browsers will automatically make any [scrollable element][scrollable] focusable to ensure keyboard accessibility. However, the browser does not include these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
 
+There are also differences between browsers in if they make right padding scrollable. While some browsers allow scrolling the full border-width of the content of a scrollable region, others constrain scrolling to the content box instead.
+
 ## Background
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
@@ -226,7 +228,7 @@ This [scrollable][] `section` element has no [visible][] content.
 This `section` element has a [horizontal scroll distance][scrollable] that is less than its horizontal [padding][], and [vertical scroll distance][scrollable] that is less than its vertical [padding][].
 
 ```html
-<section style="height: 210px; width: 500px; overflow: scroll; padding: 30px;">
+<section style="height: 210px; width: 530px; overflow: scroll; padding: 30px 0 30px 30px;">
 	<div role="heading" aria-level="1">WCAG 2.1 Abstract</div>
 	<div style="width: 520px">
 		Web Content Accessibility Guidelines (WCAG) 2.1 covers a wide range of recommendations for making Web content more

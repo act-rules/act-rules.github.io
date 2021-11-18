@@ -35,10 +35,10 @@ htmlHintIgnore:
 
 This rule applies to any [HTML element][] with a `lang` attribute for which all the following are true:
 
-- the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- the element is in a [document][] with a [content type][] of `text/html`; and
-- the element's `lang` [attribute value][] is a [valid language tag][]; and
-- there is some non-empty [text inheriting its programmatic language][] from the element.
+- <dfn id="in-body">**(in body)**</dfn> the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- <dfn id="html">**(HTML)**</dfn> the element is in a [document][] with a [content type][] of `text/html`; and
+- <dfn id="valid-lang">(**Valid language)**</dfn> the element's `lang` [attribute value][] is a [valid language tag][]; and
+- <dfn id="not-empty">**(Not empty)**</dfn> there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 
@@ -242,7 +242,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Inapplicable Example 1
 
-There are no HTML elements in this document.
+This document is not [HTML](#html).
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en">
@@ -252,7 +252,7 @@ There are no HTML elements in this document.
 
 #### Inapplicable Example 2
 
-There is no descendant of a `body` element with a `lang` attribute.
+There is no [descendant of a `body`](#in-body) element with a `lang` attribute.
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ There is no descendant of a `body` element with a `lang` attribute.
 
 #### Inapplicable Example 3
 
-This `p` element has an invalid language tag.
+This `p` element does not have a [valid language tag](#valid-lang).
 
 ```html
 <html lang="en">
@@ -278,7 +278,7 @@ This `p` element has an invalid language tag.
 
 #### Inapplicable Example 4
 
-There is no [text inheriting its programmatic language][] from the first `p` element because it has no content.
+There is no [text inheriting its programmatic language][] from the first `p` element because the only [element inheriting its programmatic language][] is itself, and it has no text node child. The element is [empty](#not-empty).
 
 ```html
 <html lang="en">
@@ -291,7 +291,7 @@ There is no [text inheriting its programmatic language][] from the first `p` ele
 
 #### Inapplicable Example 5
 
-There is no [text inheriting its programmatic language][] from this `p` element because it has no content that is either [visible][] or [included in the accessibility tree][].
+There is no [text inheriting its programmatic language][] from this `p` element because it has no content that is either [visible][] or [included in the accessibility tree][]. The element is [empty](#not-empty).
 
 ```html
 <html lang="en">
@@ -328,6 +328,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
+[element inheriting its programmatic language]: #text-inheriting-language:element 'Definition of Element Inheriting its Programmatic Language from an Element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
@@ -336,7 +337,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 [most common language]: #most-common-element-language 'Definition of Common Language of an Element'
 [primary language]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.1 'Definition of primary language subtag'
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
-[text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
+[text inheriting its programmatic language]: #text-inheriting-language:text 'Definition of Text Inheriting its Programmatic Language from an Element'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'

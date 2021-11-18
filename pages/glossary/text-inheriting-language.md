@@ -9,13 +9,13 @@ input_aspects:
   - CSS Styling
 ---
 
-The _text inheriting its programmatic language_ from an element E is composed of all the following texts:
+The <dfn id="text-inheriting-language:text">text inheriting its programmatic language</dfn> from an element E is composed of all the following texts:
 
 - **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element inheriting its programmatic language from E;
 - **accessible text**: the [accessible name][] and [accessible description][] of any element inheriting its programmatic language from E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
 
-An element F is an _element inheriting its programmatic language_ from an element E if at least one of the following conditions is true (recursively):
+An element F is an <dfn id="text-inheriting-language:element">element inheriting its programmatic language</dfn> from an element E if at least one of the following conditions is true (recursively):
 
 - F is E itself (an element always inherits its programmatic language from itself); or
 - F does not have a non-empty `lang` attribute, and is the child in the [flat tree][] of an element inheriting its programmatic language from E; or

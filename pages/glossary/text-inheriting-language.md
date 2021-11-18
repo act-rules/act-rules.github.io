@@ -12,7 +12,7 @@ input_aspects:
 The <dfn id="text-inheriting-language:text">text inheriting its programmatic language</dfn> from an element E is composed of all the following texts:
 
 - **text nodes**: the value of any [text nodes][] that are [visible][] or [included in the accessibility tree][] and children of an element inheriting its programmatic language from E;
-- **accessible text**: the [accessible name][] and [accessible description][] of any element inheriting its programmatic language from E, and [included in the accessibility tree][];
+- **accessible text**: the [accessible name][] and [accessible description][] of any [element inheriting its programmatic language](#text-inheriting-language:element) from E, and [included in the accessibility tree][];
 - **page title**: the value of the [document title][], only if E is a [document][] in a [top-level browsing context][].
 
 An element F is an <dfn id="text-inheriting-language:element">element inheriting its programmatic language</dfn> from an element E if at least one of the following conditions is true (recursively):

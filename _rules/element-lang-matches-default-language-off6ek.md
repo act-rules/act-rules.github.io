@@ -37,7 +37,7 @@ This rule applies to any [HTML element][] with a `lang` attribute for which all 
 
 - <dfn id="in-body">**(in body)**</dfn> the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - <dfn id="html">**(HTML)**</dfn> the element is in a [document][] with a [content type][] of `text/html`; and
-- <dfn id="valid-lang">(**Valid language)**</dfn> the element's `lang` [attribute value][] is a [valid language tag][]; and
+- <dfn id="valid-lang">**(Valid language)**</dfn> the element's `lang` [attribute value][] is a [valid language tag][]; and
 - <dfn id="not-empty">**(Not empty)**</dfn> there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation

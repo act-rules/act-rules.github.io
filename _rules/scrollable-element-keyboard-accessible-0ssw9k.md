@@ -43,7 +43,7 @@ Each test target is either included in [sequential focus navigation][] or has a 
 
 ## Assumptions
 
-This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][] or because scroll can be controlled in some other keyboard accessible way such as through a button or custom scrollbar, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
+This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][], the scroll area is whitespace, or because scroll can be controlled in some other keyboard accessible way such as through a button or custom scrollbar, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
 
 ## Accessibility Support
 

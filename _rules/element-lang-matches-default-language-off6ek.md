@@ -332,7 +332,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 The [text inheriting its programmatic language][] from this `div` element it only [whitespace][].
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<div lang="invalid"></div>
 	</body>

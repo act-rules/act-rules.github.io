@@ -315,7 +315,7 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 There is no [text inheriting its programmatic language][] from this `div` element.
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<div lang="invalid">
 			<img src="/test-assets/shared/fireworks.jpg" alt="" />
@@ -329,7 +329,7 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 The [text inheriting its programmatic language][] from this `div` element it only [whitespace][].
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<div lang="invalid"></div>
 	</body>

@@ -5,12 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-  wcag20:4.1.2: # Name, Role, Value (A)
+  wcag20:2.4.3: # Focus Order (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed

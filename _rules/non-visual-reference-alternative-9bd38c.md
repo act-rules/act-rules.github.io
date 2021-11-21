@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that when content is identified through a visual reference, there are also non-visual references identifying the same content.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:1.3.3: # Sensory Characteristics (A)
     forConformance: true
     failed: not satisfied

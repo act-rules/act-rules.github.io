@@ -10,11 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.6: # Contrast (Enhanced)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
   - DOM Tree

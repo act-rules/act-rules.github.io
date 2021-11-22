@@ -185,6 +185,14 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 </map>
 ```
 
+#### Passed Example 11
+
+This `span` element has an [inheriting semantic role] of `link` and an [accessible name] given by its child text node.
+
+```html
+See [<span onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref link">ACT rules</span
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -274,6 +282,14 @@ This `a` element has an [explicit role][] of `none`. However, it is [focusable][
 <a href="https://www.w3.org/WAI" role="none"> </a>
 ```
 
+### Failed Example 11
+
+This `span` element has an [inheriting semantic role] of `link` and an empty [accessible name].
+
+```html
+See [<span onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref link"></span
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -332,6 +348,7 @@ This `a` element does not have the role of link because it does not have an `hre
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inheriting semantic role]: #inheriting-semantic-role 'Definition of inheriting semantic role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'

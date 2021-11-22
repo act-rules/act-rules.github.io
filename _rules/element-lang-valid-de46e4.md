@@ -326,7 +326,7 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 
 #### Inapplicable Example 5
 
-The [text inheriting its programmatic language][] from this `div` element it only [whitespace][].
+The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
 
 ```html
 <html lang="en">

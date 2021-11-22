@@ -329,7 +329,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 
 #### Inapplicable Example 8
 
-The [text inheriting its programmatic language][] from this `div` element it only [whitespace][].
+The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
 
 ```html
 <html lang="en">

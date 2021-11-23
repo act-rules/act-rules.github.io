@@ -45,7 +45,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that is a [semantic][semantic role] `link` [included in the accessibility tree][].
+This rule applies to any [HTML element][] that is an [inheriting semantic][inheriting semantic role] `link` [included in the accessibility tree][].
 
 ## Expectation
 

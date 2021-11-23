@@ -187,7 +187,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 
 #### Passed Example 11
 
-This `span` element has an [inheriting semantic role] of `link` and an [accessible name] given by its child text node.
+This `span` element has an [inheriting semantic role][] of `link` and an [accessible name] given by its child text node.
 
 ```html
 See [<span onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref">ACT rules</span>]
@@ -282,9 +282,9 @@ This `a` element has an [explicit role][] of `none`. However, it is [focusable][
 <a href="https://www.w3.org/WAI" role="none"> </a>
 ```
 
-### Failed Example 11
+#### Failed Example 11
 
-This `span` element has an [inheriting semantic role] of `link` and an empty [accessible name].
+This `span` element has an [inheriting semantic role][] of `link` and an empty [accessible name].
 
 ```html
 See [<span onclick="location.href='https://act-rules.github.io/'" role="doc-biblioref"></span>]

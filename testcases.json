@@ -20841,10 +20841,10 @@
       }
     },
     {
-      "testcaseId": "9646f97144271b3e95b6648f5814085ddaa8ee08",
+      "testcaseId": "3dae0395b45b6fd720b1984f732897357f590399",
       "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/0ssw9k/9646f97144271b3e95b6648f5814085ddaa8ee08.html",
-      "relativePath": "testcases/0ssw9k/9646f97144271b3e95b6648f5814085ddaa8ee08.html",
+      "url": "https://act-rules.github.io/testcases/0ssw9k/3dae0395b45b6fd720b1984f732897357f590399.html",
+      "relativePath": "testcases/0ssw9k/3dae0395b45b6fd720b1984f732897357f590399.html",
       "expected": "inapplicable",
       "ruleId": "0ssw9k",
       "ruleName": "Scrollable element is keyboard accessible",

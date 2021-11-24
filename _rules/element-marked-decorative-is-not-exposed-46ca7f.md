@@ -58,7 +58,7 @@ This `img` element is [marked as decorative][] through its empty `alt` attribute
 
 #### Passed Example 2
 
-This `img` element is [marked as decorative][] through its `alt` attribute and is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
+This `img` element is [marked as decorative][] through its empty `alt` attribute and is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="" aria-hidden="true" />
@@ -66,7 +66,7 @@ This `img` element is [marked as decorative][] through its `alt` attribute and i
 
 #### Passed Example 3
 
-This `img` element is [marked as decorative][] through its `alt` attribute and is not [included in the accessibility tree][] because it is `hidden` to everyone.
+This `img` element is [marked as decorative][] through its empty `alt` attribute and is not [included in the accessibility tree][] because it is `hidden` to everyone.
 
 ```html
 <img src="/test-assets/shared/w3c-logo.png" alt="" hidden />

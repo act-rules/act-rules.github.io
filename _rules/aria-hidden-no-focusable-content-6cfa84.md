@@ -35,7 +35,7 @@ This rule applies to any element with an `aria-hidden` [attribute value][] of `t
 
 ## Expectation
 
-None of the target elements can be [focused][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that can be [focused][].
+None of the target elements are [focusable][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are [focusable][].
 
 ## Assumptions
 
@@ -65,7 +65,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 
 #### Passed Example 1
 
-This `<p>` element cannot be focused by default.
+This `<p>` element is not [focusable][].
 
 ```html
 <p aria-hidden="true">Some text</p>
@@ -73,7 +73,7 @@ This `<p>` element cannot be focused by default.
 
 #### Passed Example 2
 
-This `a` element cannot be focused because it is hidden through CSS.
+This `a` element is not [focusable][] because it is hidden through CSS.
 
 ```html
 <div aria-hidden="true">
@@ -83,7 +83,7 @@ This `a` element cannot be focused because it is hidden through CSS.
 
 #### Passed Example 3
 
-This `input` element cannot be focused because of the `disabled` attribute.
+This `input` element is not [focusable][] because of the `disabled` attribute.
 
 ```html
 <input disabled aria-hidden="true" />
@@ -93,7 +93,7 @@ This `input` element cannot be focused because of the `disabled` attribute.
 
 #### Failed Example 1
 
-This `a` element positioned off screen can still be focused through keyboard.
+This `a` element positioned off screen is [focusable][] using the keyboard.
 
 ```html
 <div aria-hidden="true">
@@ -103,7 +103,7 @@ This `a` element positioned off screen can still be focused through keyboard.
 
 #### Failed Example 2
 
-This `input` element can still be focused because it was incorrectly disabled.
+This `input` element is [focusable][] because it was incorrectly disabled.
 
 ```html
 <div aria-hidden="true">
@@ -113,7 +113,7 @@ This `input` element can still be focused because it was incorrectly disabled.
 
 #### Failed Example 3
 
-This `button` element can be still be focused because `aria-hidden` can't be reset once set to true on an ancestor.
+This `button` element is [focusable][] and a descendent of an element with an `aria-hidden` [attribute value][] of `true` because `aria-hidden` can't be reset once set to true on an ancestor.
 
 ```html
 <div aria-hidden="true">
@@ -125,7 +125,7 @@ This `button` element can be still be focused because `aria-hidden` can't be res
 
 #### Failed Example 4
 
-This `p` can be focused because of the `tabindex` attribute.
+This `p` is [focusable][] because of the `tabindex` attribute.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
@@ -133,7 +133,7 @@ This `p` can be focused because of the `tabindex` attribute.
 
 #### Failed Example 5
 
-This `p` can still be focused through pointer or touch because of the `tabindex` attribute.
+This `button` is [focusable][] because of the `tabindex` attribute.
 
 ```html
 <div aria-hidden="true">
@@ -143,7 +143,7 @@ This `p` can still be focused through pointer or touch because of the `tabindex`
 
 #### Failed Example 6
 
-This `summary` element can be focused.
+This `summary` element is [focusable][].
 
 ```html
 <details aria-hidden="true">

@@ -93,12 +93,12 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
 			>About us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -231,14 +231,14 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
 			>Contact us</a
 		>) and get in touch (
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 			>Contact us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -365,6 +365,17 @@ These two `span` elements do not have a [semantic role][] of link.
 			>Contact Us </span
 		>)
 	</p>
+</html>
+```
+
+#### Inapplicable Example 5
+
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
+
+```html
+<html lang="en">
+	<div>You can learn more in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>> page.</div>
+	<div>You can find contact information in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.</div>
 </html>
 ```
 

@@ -374,7 +374,7 @@ These two HTML `a` elements have the same [accessible name][] and link to the [s
 
 ```html
 <html lang="en">
-	<div>You can learn more in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>> page.</div>
+	<div>You can learn more in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.</div>
 	<div>You can find contact information in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.</div>
 </html>
 ```

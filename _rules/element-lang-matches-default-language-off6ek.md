@@ -35,10 +35,10 @@ htmlHintIgnore:
 
 This rule applies to any [HTML element][] with a `lang` attribute for which all the following are true:
 
-- <dfn id="in-body">**(in body)**</dfn> the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- <dfn id="html">**(HTML)**</dfn> the element is in a [document][] with a [content type][] of `text/html`; and
-- <dfn id="valid-lang">**(Valid language)**</dfn> the element's `lang` [attribute value][] is a [valid language tag][]; and
-- <dfn id="not-empty">**(Not empty)**</dfn> there is some non-empty [text inheriting its programmatic language][] from the element.
+- <dfn id="off6ek:in-body">in body</dfn>: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- <dfn id="off6ek:html">HTML</dfn>: the element is in a [document][] with a [content type][] of `text/html`; and
+- <dfn id="off6ek:valid-lang">Valid language</dfn>: the element's `lang` [attribute value][] is a [valid language tag][]; and
+- <dfn id="off6ek:not-empty">Not empty</dfn>: there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 
@@ -242,7 +242,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Inapplicable Example 1
 
-This document is not [HTML](#html).
+This document is not [HTML](#off6ek:html).
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en">
@@ -252,7 +252,7 @@ This document is not [HTML](#html).
 
 #### Inapplicable Example 2
 
-There is no [descendant of a `body`](#in-body) element with a `lang` attribute.
+There is no [descendant of a `body`](#off6ek:in-body) element with a `lang` attribute.
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ There is no [descendant of a `body`](#in-body) element with a `lang` attribute.
 
 #### Inapplicable Example 3
 
-This `p` element does not have a [valid language tag](#valid-lang).
+This `p` element does not have a [valid language tag](#off6ek:valid-lang).
 
 ```html
 <html lang="en">
@@ -278,7 +278,7 @@ This `p` element does not have a [valid language tag](#valid-lang).
 
 #### Inapplicable Example 4
 
-There is no [text inheriting its programmatic language][] from the first `p` element because the only [element inheriting its programmatic language][] is itself, and it has no text node child. The element is [empty](#not-empty).
+The first `p` element is [empty](#off6ek:not-empty) because the only [element inheriting its programmatic language][] is itself, and it has no text node child.
 
 ```html
 <html lang="en">
@@ -291,7 +291,7 @@ There is no [text inheriting its programmatic language][] from the first `p` ele
 
 #### Inapplicable Example 5
 
-There is no [text inheriting its programmatic language][] from this `p` element because it has no content that is either [visible][] or [included in the accessibility tree][]. The element is [empty](#not-empty).
+This `p` element is [empty](#off6ek:not-empty) because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">

@@ -70,7 +70,7 @@ This `p` element has a **not [important][]** [computed][] `line-height`.
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `line-height` of twice the font size, which is **large enough**.
+This `p` element has a [used][] `line-height` of twice the font size, which is **large enough**.
 
 ```html
 <p style="line-height: 2em !important; max-width: 200px;">
@@ -80,7 +80,7 @@ This `p` element has a [computed][] `line-height` of twice the font size, which 
 
 #### Passed Example 3
 
-This `p` element has a [computed][] `line-height` of `30px`, which is **large enough** (the threshold is `30px`).
+This `p` element has a [used][] `line-height` of `30px`, which is **large enough** (the threshold is `30px`).
 
 ```html
 <style>
@@ -96,7 +96,7 @@ This `p` element has a [computed][] `line-height` of `30px`, which is **large en
 
 #### Passed Example 4
 
-This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) which is **large enough**.
+This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which is **large enough**.
 
 ```html
 <style>
@@ -112,7 +112,7 @@ This `p` element has a [computed][] `line-height` of `25.6px` (160% of `16px`) w
 
 #### Passed Example 5
 
-This `p` element has a [computed][] `line-height` of `1.6` which is **large enough**.
+This `p` element has a [used][] `line-height` of `1.6` which is **large enough**.
 
 ```html
 <p style="line-height: 1.6 !important; max-width: 200px;">
@@ -184,7 +184,7 @@ The [computed][] value of the `line-height` property of this `p` element is **no
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `line-height` equal to the font size, which is below the required minimum.
+This `p` element has a [used][] `line-height` equal to the font size, which is below the required minimum.
 
 ```html
 <p style="line-height: 1em !important; max-width: 200px;">
@@ -194,7 +194,7 @@ This `p` element has a [computed][] `line-height` equal to the font size, which 
 
 #### Failed Example 2
 
-This `p` element has a [computed][] `line-height` of `20px`, which is below the required minimum given the specified font size is 20 pixels.
+This `p` element has a [used][] `line-height` of `20px`, which is below the required minimum given the specified font size is 20 pixels.
 
 ```html
 <style>
@@ -210,7 +210,7 @@ This `p` element has a [computed][] `line-height` of `20px`, which is below the 
 
 #### Failed Example 3
 
-This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) which is below the required minimum.
+This `p` element has a [used][] `line-height` of `19.2px` (120% of `16px`) which is below the required minimum.
 
 ```html
 <style>
@@ -226,7 +226,7 @@ This `p` element has a [computed][] `line-height` of `19.2px` (120% of `16px`) w
 
 #### Failed Example 4
 
-This `p` element has a [computed][] `line-height` of `1.2` which is below the required minimum.
+This `p` element has a [used][] `line-height` of `1.2` which is below the required minimum.
 
 ```html
 <p style="line-height: 1.2 !important; max-width: 200px;">
@@ -268,7 +268,7 @@ There is no HTML element.
 
 #### Inapplicable Example 2
 
-This `p` element is not multi-line text.
+This `p` element does not have a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break).
 
 ```html
 <p style="line-height: 1em !important;">

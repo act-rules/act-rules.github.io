@@ -81,7 +81,7 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [], glossa
 
 	/**
 	 * Check that each link (in page or in definitions list) is either a known glossary key
-	 * or an internal link to an HTML element in the page with an id.
+	 * or an internal link to an HTML element in the page (including glossary) with an id.
 	 */
 	test.each(links)('%s', link => {
 		// Remove leading '#'

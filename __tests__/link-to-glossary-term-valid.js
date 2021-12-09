@@ -50,10 +50,14 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
 	 * get the `id` of all html elements in the page (notably the dfn elements)
 	 * -> eg: <dfn id="123456:anchor-name">
 	 */
-	const htmlIds = getMarkdownAstNodesOfType(markdownAST, 'html')
-		.map(({ value }) => value.match(/id="([^"]*)"/))
-		.filter(value => value !== null)
-		.map(matches => matches[1]) // Only keep the matched group
+	const htmlIds =
+		// Find all HTML element in the markdown
+		getMarkdownAstNodesOfType(markdownAST, 'html')
+			// Keep the ones with an `id` attribute
+			.map(({ value }) => value.match(/id="([^"]*)"/))
+			.filter(value => value !== null)
+			// Only keep the matched group, aka the value of the `id` attribute
+			.map(matches => matches[1])
 
 	/**
 	 * get all links
@@ -89,7 +93,9 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
 	 * or an internal link to an HTML element in the page with an id.
 	 */
 	test.each(links)('%s', link => {
+		// Remove leading '#'
 		const key = link.substr(1)
+		// Is it a known key, or an HTML `id`?
 		const actual = glossaryKeys.includes(key) || htmlIds.includes(key)
 		const msg = `Glossary term - [#${key}] does not exist`
 		expect(actual, msg).toBe(true)

@@ -13,7 +13,9 @@ const describeRule = (groupName, runTests) => {
 	// The keys of all glossary items
 	const glossaryKeys = glossaryData.map(({ frontmatter }) => frontmatter.key)
 	// The `id` of all elements used in glossary items
-	const glossaryIds = glossaryData.map(({ markdownAST }) => getIds(markdownAST)).flat()
+	const glossaryIds = glossaryData
+		.map(({ markdownAST }) => getIds(markdownAST))
+		.reduce((flattened, element) => flattened.concat(element), [])
 
 	/**
 	 * Create arbitrary meta data that can be used in various tests

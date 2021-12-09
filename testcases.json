@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1127,
+  "count": 1124,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -10029,26 +10029,8 @@
       }
     },
     {
-      "testcaseId": "a6dcaf4d1cea0415f98791051548131d3eee2f89",
-      "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/a6dcaf4d1cea0415f98791051548131d3eee2f89.html",
-      "relativePath": "testcases/5b7ae0/a6dcaf4d1cea0415f98791051548131d3eee2f89.html",
-      "expected": "inapplicable",
-      "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
-      "rulePage": "https://act-rules.github.io/rules/5b7ae0",
-      "ruleAccessibilityRequirements": {
-        "wcag20:3.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
       "testcaseId": "d6d28e9a7b29738a732c0e95b9ae2daa61e6c453",
-      "testcaseTitle": "Inapplicable Example 6",
+      "testcaseTitle": "Inapplicable Example 5",
       "url": "https://act-rules.github.io/testcases/5b7ae0/d6d28e9a7b29738a732c0e95b9ae2daa61e6c453.html",
       "relativePath": "testcases/5b7ae0/d6d28e9a7b29738a732c0e95b9ae2daa61e6c453.html",
       "expected": "inapplicable",
@@ -10066,7 +10048,7 @@
     },
     {
       "testcaseId": "c4886c9dee8d8967df6a8f8a73eec3fb769910cb",
-      "testcaseTitle": "Inapplicable Example 7",
+      "testcaseTitle": "Inapplicable Example 6",
       "url": "https://act-rules.github.io/testcases/5b7ae0/c4886c9dee8d8967df6a8f8a73eec3fb769910cb.html",
       "relativePath": "testcases/5b7ae0/c4886c9dee8d8967df6a8f8a73eec3fb769910cb.html",
       "expected": "inapplicable",
@@ -10084,45 +10066,9 @@
     },
     {
       "testcaseId": "665108f327fc16f723810acad88adbac600e8cf5",
-      "testcaseTitle": "Inapplicable Example 8",
+      "testcaseTitle": "Inapplicable Example 7",
       "url": "https://act-rules.github.io/testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
       "relativePath": "testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
-      "expected": "inapplicable",
-      "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
-      "rulePage": "https://act-rules.github.io/rules/5b7ae0",
-      "ruleAccessibilityRequirements": {
-        "wcag20:3.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "bf55db9cf1da4fc8c905bfa6f978b2a2303707ea",
-      "testcaseTitle": "Inapplicable Example 9",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/bf55db9cf1da4fc8c905bfa6f978b2a2303707ea.html",
-      "relativePath": "testcases/5b7ae0/bf55db9cf1da4fc8c905bfa6f978b2a2303707ea.html",
-      "expected": "inapplicable",
-      "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
-      "rulePage": "https://act-rules.github.io/rules/5b7ae0",
-      "ruleAccessibilityRequirements": {
-        "wcag20:3.1.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "ff33366d81a3e62e13a1e6c42db2f9a7d4deab0b",
-      "testcaseTitle": "Inapplicable Example 10",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/ff33366d81a3e62e13a1e6c42db2f9a7d4deab0b.html",
-      "relativePath": "testcases/5b7ae0/ff33366d81a3e62e13a1e6c42db2f9a7d4deab0b.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",

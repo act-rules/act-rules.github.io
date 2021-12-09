@@ -6,6 +6,7 @@ const describePage = require('../test-utils/describe-page')
 const isUrl = require('is-url')
 const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 const uniqueArray = require('../utils/unique-array')
+const getIds = require('../utils/get-ids')
 
 const whitelist = [
 	/^description$/,
@@ -45,19 +46,9 @@ describe(`Validate glossary references`, () => {
 	})
 })
 
-function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
-	/**
-	 * get the `id` of all html elements in the page (notably the dfn elements)
-	 * -> eg: <dfn id="123456:anchor-name">
-	 */
-	const htmlIds =
-		// Find all HTML element in the markdown
-		getMarkdownAstNodesOfType(markdownAST, 'html')
-			// Keep the ones with an `id` attribute
-			.map(({ value }) => value.match(/id="([^"]*)"/))
-			.filter(value => value !== null)
-			// Only keep the matched group, aka the value of the `id` attribute
-			.map(matches => matches[1])
+function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [], glossaryIds = [] }) {
+	// Get the value of all HTML `id` attributes in the file and in glossary
+	const htmlIds = getIds(markdownAST).concat(...glossaryIds)
 
 	/**
 	 * get all links

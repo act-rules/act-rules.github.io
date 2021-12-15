@@ -49,6 +49,7 @@ When a style is [declared][] in the `style` attribute with an [important][] decl
 
 CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
+In the Expectation of this rule, we evaluate the [used](https://www.w3.org/TR/css-cascade-4/#used) value of the [line-height][] property instead of the [computed][] value since the [used](https://www.w3.org/TR/css-cascade-4/#used) value is guaranteed to use absolute units (i.e., pixels). This allows us to easily determine if the 1.5 times threshold is met versus a [computed][] which may be a unitless number that is difficult to evaluate.
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)

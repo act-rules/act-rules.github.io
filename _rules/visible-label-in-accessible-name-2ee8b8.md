@@ -24,6 +24,8 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Bryn Anderson
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -40,7 +42,7 @@ For each target element, all [text nodes][] in the [visible text content][] eith
 
 ## Assumptions
 
-_There are currently no assumptions_
+This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
 
 ## Accessibility Support
 

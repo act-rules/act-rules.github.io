@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -324,3 +326,4 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
+[html element]: #namespaced-element

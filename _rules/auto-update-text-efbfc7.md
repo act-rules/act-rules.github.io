@@ -22,15 +22,17 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
 This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][], for which all the following is true:
 
-- **changed:** the `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
-- **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
-- **not alone:** the [element][html element] has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
+- **changed:** the `innerText` property of the element changes multiple times within a 10 minute time span where there is no [user interaction][]; and
+- **no child changed:** the element does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
+- **not alone:** the element has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
 
 ## Expectation
 
@@ -311,7 +313,7 @@ This `span` element with text content that automatically changes multiple times 
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
-[html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[html element]: #namespaced-element
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text

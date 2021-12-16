@@ -268,7 +268,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 
 #### Inapplicable Example 1
 
-There is no element with a lang attribute value which is a descendant of a body element".
+There is no element with a lang attribute value which is a descendant of a body element.
 
 ```html
 <html lang="en">

@@ -60,7 +60,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 - There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-- Accessibility support for [inheriting semantic][inheriting semanticc role] links may vary depending on the assistive technology in use.
+- Accessibility support for [inheriting semantic][] links may vary depending on the assistive technology in use.
 
 ## Background
 
@@ -288,7 +288,9 @@ This `a` element has an [explicit role][] of `none`. However, it is [focusable][
 This `a` element has an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute but it has an empty [accessible name].
 
 ```html
-See [<a href="https://act-rules.github.io/" role="doc-biblioref"><img src="https://github.com/act-rules/act-rules.github.io/blob/develop/test-assets/shared/act-logo.png" alt=""></a>]
+See [<a href="https://act-rules.github.io/" role="doc-biblioref"
+	><img src="https://github.com/act-rules/act-rules.github.io/blob/develop/test-assets/shared/act-logo.png" alt=""/></a
+>]
 ```
 
 ### Inapplicable

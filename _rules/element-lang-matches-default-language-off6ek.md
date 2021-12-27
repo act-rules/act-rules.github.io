@@ -114,14 +114,14 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [most common language][]. The most common language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
 ```html
-<html lang="fr">
+<html lang="FR">
 	<head>
 		<title>Feu d'artifice du nouvel an</title>
 	</head>
 	<body>
-		<div lang="en">
+		<div lang="EN">
 			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-			<p lang="fr">
+			<p lang="FR">
 				Bonne année !
 			</p>
 		</div>

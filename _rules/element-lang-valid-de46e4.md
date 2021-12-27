@@ -127,7 +127,7 @@ This `div` element has a valid `lang` [attribute value][]. The [accessible name]
 ```html
 <html>
 	<body>
-		<div lang="en">
+		<div lang="EN">
 			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
 		</div>
 	</body>

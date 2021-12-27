@@ -65,7 +65,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 This `html` element has identical [primary language subtags][] for its `lang` and `xml:lang` attributes.
 
 ```html
-<html lang="en" xml:lang="en"></html>
+<html lang="EN" xml:lang="en"></html>
 ```
 
 #### Passed Example 2

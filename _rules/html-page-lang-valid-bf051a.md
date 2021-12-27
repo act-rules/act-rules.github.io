@@ -70,7 +70,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 This `html` element has a `lang` attribute whose value is a [valid][valid language tag] [primary language subtag][].
 
 ```html
-<html lang="fr"></html>
+<html lang="FR"></html>
 ```
 
 #### Passed Example 2

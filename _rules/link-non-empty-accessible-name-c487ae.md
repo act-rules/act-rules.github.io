@@ -188,7 +188,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 
 #### Passed Example 11
 
-This `a` element has an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute as well as an [accessible name] given by its child text node.
+This `a` element is an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute as well as an [accessible name] given by its child text node.
 
 ```html
 See [<a href="https://act-rules.github.io/" role="doc-biblioref">ACT rules</a>]
@@ -285,7 +285,7 @@ This `a` element has an [explicit role][] of `none`. However, it is [focusable][
 
 #### Failed Example 11
 
-This `a` element has an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute but it has an empty [accessible name].
+This `a` element is an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute but it has an empty [accessible name].
 
 ```html
 See [<a href="https://act-rules.github.io/" role="doc-biblioref"

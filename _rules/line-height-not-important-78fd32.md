@@ -271,12 +271,14 @@ There is no HTML element.
 
 #### Inapplicable Example 2
 
-This `p` element does not have a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break).
+This `p` element will never have a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break) due to the use of an overflow container. In this case, even changing the view port size will not cause a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break).
 
 ```html
-<p style="line-height: 1em !important;">
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
+<div style="overflow-x: scroll;">
+	<p style="line-height: 1em !important; width: 1000px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</p>
+</div>
 ```
 
 #### Inapplicable Example 3
@@ -318,7 +320,6 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
 [line-height]: https://drafts.csswg.org/css2/visudet.html#propdef-line-height 'CSS Visual formatting model details - line-height property'
-[line-height normal]: https://drafts.csswg.org/css2/#valdef-line-height-normal "CSS 2.2 (Editor's draft) - normal line-height"
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
@@ -326,4 +327,3 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
-[html element]: #namespaced-element

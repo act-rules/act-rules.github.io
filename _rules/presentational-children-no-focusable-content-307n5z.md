@@ -48,6 +48,7 @@ Elements with a [semantic role][] that has [presentational children][] will not 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [WAI-ARIA 1.1 Presentational Children][presentational children]
+- [Element with aria-hidden has no focusable content](aria-hidden-no-focusable-content-6cfa84.md)
 
 ## Test Cases
 

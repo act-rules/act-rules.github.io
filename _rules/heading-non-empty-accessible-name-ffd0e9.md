@@ -50,6 +50,8 @@ _There are currently no assumptions._
 
 Completely empty headings (e.g., `<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
 
+### Bibliography
+
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 - [Technique H42: Using h1-h6 to identify headings][tech h42]
 

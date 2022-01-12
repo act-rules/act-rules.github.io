@@ -28,11 +28,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that has a negative number as a `tabindex` [attribute value][].
+This rule applies to any non-focusable `iframe` element that has focusable content.
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not include elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+For each test target, the [nested browsing context][] does not contain elements that are [visible][] and part of the [sequential focus navigation][]. 
 
 ## Assumptions
 
@@ -77,6 +77,14 @@ This `iframe` element contains no [visible][] content because of the small size 
 
 ```html
 <iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Passed Example 4
+
+This `iframe` element contains no [visible][] content because the iframe is hidden.
+
+```html
+<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 ### Failed

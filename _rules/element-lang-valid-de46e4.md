@@ -55,6 +55,8 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 ## Background
 
+### Bibliography
+
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
@@ -270,7 +272,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 
 #### Inapplicable Example 1
 
-There is no element with a lang attribute value which is a descendant of a body element".
+There is no element with a lang attribute value which is a descendant of a body element.
 
 ```html
 <html lang="en">

@@ -44,6 +44,8 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 WCAG has no clear requirement of unicity of the focus indicator for each [focusable][] element. Therefore, this rule can pass even if several focus indicators are identical. Such a situation may nonetheless cause confusion and all Examples in this rule avoid it.
 
+### Bibliography
+
 - [Success Criterion 2.4.7 Focus Visible][sc247]
 - [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411]
 - [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412]

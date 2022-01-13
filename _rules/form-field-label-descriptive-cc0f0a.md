@@ -78,6 +78,8 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Background
 
+### Bibliography
+
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]

@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - is in a [top-level browsing context][]; and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type][] of `text/html`; and
@@ -51,6 +51,8 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 ## Background
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
+
+### Bibliography
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
@@ -143,21 +145,13 @@ This rule only applies to documents with a [content type][] of `text/html`
 
 #### Inapplicable Example 5
 
-This rule does not apply to `html` elements whose `lang` attribute is not a [known primary language tag][].
-
-```html
-<html lang="em" xml:lang="en"></html>
-```
-
-#### Inapplicable Example 6
-
 This rule does not apply to `html` elements without an `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 This rule applies neither to `html` elements without an `xml:lang` attribute, nor to `html` in [nested browsing context][]
 
@@ -167,28 +161,12 @@ This rule applies neither to `html` elements without an `xml:lang` attribute, no
 </html>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 7
 
 This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attribute.
 
 ```html
 <html lang="fr" xml:lang=""></html>
-```
-
-#### Inapplicable Example 9
-
-The `lang` attribute of this page is an [iso 639.2][] three letters code, hence has no [known primary language tag][].
-
-```html
-<html lang="eng" xml:lang="en"></html>
-```
-
-#### Inapplicable Example 10
-
-The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence has no [known primary language tag][].
-
-```html
-<html lang="i-lux" xml:lang="lb"></html>
 ```
 
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'

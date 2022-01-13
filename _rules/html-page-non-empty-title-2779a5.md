@@ -61,7 +61,12 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
+### Related rules
+
 - [HTML page title is descriptive](https://act-rules.github.io/rules/c4a8a4)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
@@ -83,7 +88,7 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that serves as the title for the page and the `iframe` since it does not have its own.
+This page has a `title` element that serves as the title for the page and the `iframe` since the `iframe` does not have its own.
 
 ```html
 <html>

@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1124,
+  "count": 1126,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -786,6 +786,24 @@
       }
     },
     {
+      "testcaseId": "21c5ee18656453fbe61e1bde4b87f2a8688f9caf",
+      "testcaseTitle": "Passed Example 7",
+      "url": "https://act-rules.github.io/testcases/bc4a75/21c5ee18656453fbe61e1bde4b87f2a8688f9caf.html",
+      "relativePath": "testcases/bc4a75/21c5ee18656453fbe61e1bde4b87f2a8688f9caf.html",
+      "expected": "passed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "668eca5516086c86c0c2b7118c545642d826e0de",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/bc4a75/668eca5516086c86c0c2b7118c545642d826e0de.html",
@@ -880,6 +898,24 @@
       "testcaseTitle": "Failed Example 6",
       "url": "https://act-rules.github.io/testcases/bc4a75/8ddfd4feb48c2f7630e6ff2758de03bd661797b5.html",
       "relativePath": "testcases/bc4a75/8ddfd4feb48c2f7630e6ff2758de03bd661797b5.html",
+      "expected": "failed",
+      "ruleId": "bc4a75",
+      "ruleName": "ARIA required owned elements",
+      "rulePage": "https://act-rules.github.io/rules/bc4a75",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a7a314ced1f32dcfec0b00c0defd7858e2c77415",
+      "testcaseTitle": "Failed Example 7",
+      "url": "https://act-rules.github.io/testcases/bc4a75/a7a314ced1f32dcfec0b00c0defd7858e2c77415.html",
+      "relativePath": "testcases/bc4a75/a7a314ced1f32dcfec0b00c0defd7858e2c77415.html",
       "expected": "failed",
       "ruleId": "bc4a75",
       "ruleName": "ARIA required owned elements",

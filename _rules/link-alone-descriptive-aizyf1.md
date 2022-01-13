@@ -45,7 +45,12 @@ Each test target has an [accessible name][] which describes its purpose.
 
 ## Background
 
+### Related rules
+
 - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)

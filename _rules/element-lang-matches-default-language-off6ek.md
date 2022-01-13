@@ -339,7 +339,7 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 ```html
 <html lang="en">
 	<body>
-		<div lang="invalid"></div>
+		<div lang="invalid">&nbsp;</div>
 	</body>
 </html>
 ```

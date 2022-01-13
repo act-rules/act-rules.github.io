@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace); and
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
@@ -54,8 +54,13 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
+### Related rules
+
 - [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
 - [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+
+### Bibliography
+
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)

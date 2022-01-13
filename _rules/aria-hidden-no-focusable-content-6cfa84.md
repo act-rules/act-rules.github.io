@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
     failed: not satisfied
@@ -35,7 +30,7 @@ acknowledgments:
 
 This rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
-**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. An element with `aria-hidden="true"` hides itself, all its content and all its descendants from assistive technologies.
 
 ## Expectation
 
@@ -66,6 +61,7 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
 - [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
+- [Element with presentational children has no focusable content](presentational-children-no-focusable-content-307n5z.md)
 
 ## Test Cases
 

@@ -43,15 +43,19 @@ Each test target is either included in [sequential focus navigation][] or has a 
 
 ## Assumptions
 
-This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][] or because scroll can be controlled in some other keyboard accessible way such as through a button or custom scrollbar, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
+This rule assumes that all [scrollable elements][scrollable] with visible content need to be keyboard accessible. [Scrollable elements][scrollable] that do not need to be keyboard accessible, perhaps because their content is [purely decorative][], the scroll area is whitespace, or because scroll can be controlled in some other keyboard accessible way such as through a button or custom scrollbar, may fail this rule but still satisfy [success criterion 2.1.1 Keyboard][].
 
 ## Accessibility Support
 
 Some browsers will automatically make any [scrollable element][scrollable] focusable to ensure keyboard accessibility. However, the browser does not include these elements in [sequential focus navigation][] when it has a negative number as a tabindex [attribute value][].
 
+Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/css-box-4/#content-box) of elements; while others allow to scroll the full [border box](https://drafts.csswg.org/css-box-4/#border-box), hence including the element's padding. This results in some elements being scrollable with a browser but not with another.
+
 ## Background
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html)
 - [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
@@ -226,7 +230,7 @@ This [scrollable][] `section` element has no [visible][] content.
 This `section` element has a [horizontal scroll distance][scrollable] that is less than its horizontal [padding][], and [vertical scroll distance][scrollable] that is less than its vertical [padding][].
 
 ```html
-<section style="height: 210px; width: 500px; overflow: scroll; padding: 30px;">
+<section style="height: 210px; width: 530px; overflow: scroll; padding: 30px 0 30px 30px;">
 	<div role="heading" aria-level="1">WCAG 2.1 Abstract</div>
 	<div style="width: 520px">
 		Web Content Accessibility Guidelines (WCAG) 2.1 covers a wide range of recommendations for making Web content more

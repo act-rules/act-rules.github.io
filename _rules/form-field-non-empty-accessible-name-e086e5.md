@@ -52,6 +52,8 @@ Note that this rule does not test other control-like roles such as `button` and 
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
 
+### Bibliography
+
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
@@ -108,7 +110,7 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 
 This `input` element has an [accessible name][] because of its `placeholder` attribute.
 
-**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
+**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a user starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
 
 ```html
 <input placeholder="Your search query" /> <button type="submit">search</button>
@@ -121,6 +123,14 @@ This [semantic][semantic role] `combobox` element has an [accessible name][] bec
 ```html
 <div>Country</div>
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
+```
+
+#### Passed Example 7
+
+This [semantic][semantic role] `checkbox` element has the text content as its [accessible name][].
+
+```html
+<div role="checkbox">I agree to the terms and conditions.</div>
 ```
 
 ### Failed
@@ -177,8 +187,16 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
-<label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<label for="firstname">first name</label>
+<div role="textbox" id="firstname"></div>
+```
+
+#### Failed Example 7
+
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The text content of the element serves as its value, not as an [accessible name][].
+
+```html
+<div role="textbox">first name</div>
 ```
 
 ### Inapplicable

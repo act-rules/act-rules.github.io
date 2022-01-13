@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is a [semantic][semantic role] `heading`, [included in the accessibility tree][].
+This rule applies to any [HTML element][] that is a [semantic][semantic role] `heading`, [included in the accessibility tree][].
 
 ## Expectation
 
@@ -49,6 +49,8 @@ _There are currently no assumptions._
 ## Background
 
 Completely empty headings (e.g., `<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 - [Technique H42: Using h1-h6 to identify headings][tech h42]
@@ -196,3 +198,4 @@ This `h1` element is not [included in the accessibility tree][].
 [tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
 [usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [visible]: #visible 'Definition of visible'
+[html element]: #namespaced-element

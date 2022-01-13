@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property that is applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`, where the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
+This rule applies to any [HTML element][] that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property that is applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`, where the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
 - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
 - [rotate3d](https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d)
@@ -53,6 +53,8 @@ This rule does not consider and may produce incorrect results for:
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
 - [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
@@ -295,3 +297,5 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	</body>
 </html>
 ```
+
+[html element]: #namespaced-element

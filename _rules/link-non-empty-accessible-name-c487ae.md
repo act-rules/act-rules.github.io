@@ -45,7 +45,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element that is a [semantic][semantic role] `link` [included in the accessibility tree][].
+This rule applies to any [HTML element][] that is a [semantic][semantic role] `link` [included in the accessibility tree][].
 
 ## Expectation
 
@@ -63,7 +63,12 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Background
 
+### Related rules
+
 - [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
@@ -335,3 +340,4 @@ This `a` element does not have the role of link because it does not have an `hre
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'
+[html element]: #namespaced-element

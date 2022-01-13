@@ -23,11 +23,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element that:
+This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - is in a [top-level browsing context][]; and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type][] of `text/html`; and
-- has a `lang` attribute that has a [valid language tag][]; and
+- has a `lang` attribute with a [known primary language tag][]; and
 - has a non-empty `xml:lang` attribute.
 
 ## Expectation
@@ -38,9 +38,9 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - The rule assumes that having `lang` and `xml:lang` attributes with matching [primary language subtags][] but non-matching [language tags](https://www.rfc-editor.org/rfc/rfc5646.html#section-2) overall, will not cause accessibility issues. This is not necessarily the case for all languages. One notable case is the [language tags](https://www.rfc-editor.org/rfc/rfc5646.html#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues.
 
@@ -51,6 +51,8 @@ Since most assistive technologies will consistently use `lang` over `xml:lang` w
 ## Background
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
+
+### Bibliography
 
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
@@ -143,21 +145,13 @@ This rule only applies to documents with a [content type][] of `text/html`
 
 #### Inapplicable Example 5
 
-This rule does not apply to `html` elements whose `lang` attribute is not a [valid language tag][].
-
-```html
-<html lang="em" xml:lang="en"></html>
-```
-
-#### Inapplicable Example 6
-
 This rule does not apply to `html` elements without an `xml:lang` attribute.
 
 ```html
 <html lang="en"></html>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 6
 
 This rule applies neither to `html` elements without an `xml:lang` attribute, nor to `html` in [nested browsing context][]
 
@@ -167,28 +161,12 @@ This rule applies neither to `html` elements without an `xml:lang` attribute, no
 </html>
 ```
 
-#### Inapplicable Example 8
+#### Inapplicable Example 7
 
 This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attribute.
 
 ```html
 <html lang="fr" xml:lang=""></html>
-```
-
-#### Inapplicable Example 9
-
-The `lang` attribute of this page is an [iso 639.2][] three letters code, hence not a [valid language tag][].
-
-```html
-<html lang="eng" xml:lang="en"></html>
-```
-
-#### Inapplicable Example 10
-
-The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
-
-```html
-<html lang="i-lux" xml:lang="lb"></html>
 ```
 
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'Definition of content type'
@@ -200,4 +178,4 @@ The `lang` attribute of this page is a [grandfathered tag][grandfathered tags], 
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
 [sc311]: https://www.w3.org/TR/WCAG21/#language-of-page 'Success Criterion 3.1.1 Language of Page'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
-[valid language tag]: #valid-language-tag 'Definition of valid language tag'
+[known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'

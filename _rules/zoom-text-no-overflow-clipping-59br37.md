@@ -27,7 +27,7 @@ acknowledgments:
 This rule applies to any [text node][] for which all of the following is true when in a [viewport size][] of 640 by 512:
 
 - The [text node][] is [visible][]; and
-- The [text node][] has an HTML element as a [parent][] in the [flat tree][]; and
+- The [text node][] has an [HTML element][] as a [parent][] in the [flat tree][]; and
 - The [text node][] has an [ancestor][] in the [flat tree][] with a [computed][] [overflow-x][overflow] or [overflow-y][overflow] of `hidden` or `clip`; and
 - The [text node][] does not have an [ancestor][] in the [flat tree][] with an `aria-hidden` [attribute value][] of `true`.
 
@@ -58,6 +58,8 @@ Some user agents treat the value of the `aria-hidden` attribute as case-sensitiv
 ## Background
 
 When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used][] value is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
 - [G42: Using a technology that has commonly-available user agents that support zoom](https://www.w3.org/WAI/WCAG21/Techniques/general/G142)
@@ -252,3 +254,4 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [content box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-content-box
 [used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
+[html element]: #namespaced-element

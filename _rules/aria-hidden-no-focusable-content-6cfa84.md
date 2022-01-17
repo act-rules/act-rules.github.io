@@ -67,7 +67,7 @@ The 1 second time span introduced in the exception of the definition of [focusab
 
 #### Passed Example 1
 
-This `<p>` element is not [focusable][].
+This `p` element is not [focusable][].
 
 ```html
 <p aria-hidden="true">Some text</p>
@@ -127,7 +127,7 @@ This `button` element is [focusable][] and a descendent of an element with an `a
 
 #### Failed Example 4
 
-This `p` is [focusable][] because of the `tabindex` attribute.
+This `p` element is [focusable][] because of the `tabindex` attribute.
 
 ```html
 <p tabindex="0" aria-hidden="true">Some text</p>
@@ -135,7 +135,7 @@ This `p` is [focusable][] because of the `tabindex` attribute.
 
 #### Failed Example 5
 
-This `button` is [focusable][] because of the `tabindex` attribute.
+This `button` element is [focusable][] because of the `tabindex` attribute.
 
 ```html
 <div aria-hidden="true">

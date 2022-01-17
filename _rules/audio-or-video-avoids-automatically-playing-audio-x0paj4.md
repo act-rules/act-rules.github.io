@@ -32,10 +32,10 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-   - DOM Tree
-   - CSS Styling
-   - Audio output
-   - Visual output
+  - DOM Tree
+  - CSS Styling
+  - Audio output
+  - Visual output
 acknowledgments:
   authors:
     - Carlos Duarte
@@ -67,7 +67,7 @@ This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechani
 
 This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
-No [user style sheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes of the ones presented here. 
+No [user style sheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes from the ones presented here.
 
 ## Accessibility Support
 
@@ -88,7 +88,7 @@ The [instruments][instrument] used to pass this rule (if any), must meet all lev
 
 #### Passed Example 1
 
-This `audio` element has an [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element has (in its default controls) an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
@@ -160,6 +160,7 @@ This `video` element's audio autoplays for longer than 3 seconds, and does not h
 	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 </video>
 ```
+
 #### Failed Example 3
 
 This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not visible.

@@ -17,7 +17,7 @@ An element is _focusable_ if one or both of the following are true:
 
 Notes:
 
-- The 1 second time span is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
+- The 1 second time span is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focusability of an element consistently would be impractical without a time limit.
 - The [tabindex value][] of an element is the value of the [tabindex attribute][] parsed using the [rules for parsing integers][]. For the [tabindex value][] to be different from null, it needs to be [parsed][rules for parsing integers] without errors.
 
 [rules for parsing integers]: https://html.spec.whatwg.org/#rules-for-parsing-integers

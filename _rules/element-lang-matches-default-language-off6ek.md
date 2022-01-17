@@ -37,7 +37,7 @@ This rule applies to any [HTML element][] with a `lang` attribute for which all 
 
 - the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - the element is in a [document][] with a [content type][] of `text/html`; and
-- the element's `lang` [attribute value][] is a [valid language tag][]; and
+- the element's `lang` [attribute value][] has a [known primary language tag][]; and
 - there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
@@ -46,9 +46,9 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Assumptions
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags][] even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even on [language tags][rfc 5646] that do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [language tags][rfc 5646] with a [known primary language tag][] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 ## Accessibility Support
 
@@ -58,7 +58,12 @@ _There are no major accessibility support issues known for this rule._
 
 This rule checks that, if a `lang` attribute is used, its value is correct with respect to the content. This rule does not check whether a `lang` attribute should have been used or not. Especially, this rule does not check when `lang` attributes are missing. This must be tested separately and it is therefore possible to pass this rule without satisfying [Success Criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG21/#language-of-parts).
 
+### Related rules
+
 - [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
+
+### Bibliography
+
 - [Understanding Success Criterion 3.1.2: Language of Page][usc312]
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
@@ -303,7 +308,7 @@ There is no [text inheriting its programmatic language][] from this `p` element 
 
 #### Inapplicable Example 6
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code. This is not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `eng` [iso 639.2][] three letters code does not exist in the [language subtag registry][].
 
 ```html
 <html lang="en">
@@ -315,7 +320,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Inapplicable Example 7
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags]. This is not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `i-lox` [grandfathered tag][grandfathered tags] does not exist in the [language subtag registry][].
 
 ```html
 <html lang="lb">
@@ -339,7 +344,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
-[valid language tag]: #valid-language-tag 'Definition of Valid Language Tag'
-[valid language tags]: #valid-language-tag 'Definition of Valid Language Tag'
+[known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
+[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element

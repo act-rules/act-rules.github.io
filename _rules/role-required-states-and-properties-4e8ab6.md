@@ -20,11 +20,13 @@ input_aspects:
 acknowledgments:
   authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
 
 ## Expectation
 
@@ -45,6 +47,8 @@ This rule relies on browsers and assistive technologies to support leaving out [
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ## Background
+
+### Bibliography
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState)
@@ -131,3 +135,4 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.1/#requiredState
 [wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.1/#implictValueForRole
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
+[html or svg element]: #namespaced-element

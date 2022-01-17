@@ -17,15 +17,17 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible][] and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
+This rule applies to any [HTML element][] that is [visible][] and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
 
 ## Expectation
 
-For each test target, one of the following is true:
+For each test target, at least one of the following is true:
 
 - **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
 - **large enough**: the [computed][] value of its [line-height][] property is not `normal`, and is at least `1.5` or 1.5 times the [computed][] value of its [font-size][] property; or
@@ -46,6 +48,8 @@ While some assistive technologies are able to set [user origin][] or [user agent
 When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum recommended threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
 
 CSS specifications define each declaration as being either [important][] (if is as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
@@ -310,3 +314,4 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
+[html element]: #namespaced-element

@@ -18,11 +18,13 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any [semantic link][] for which all the following is true:
+This rule applies to any [inheriting semantic][] `link` for which all the following is true:
 
 - the link is [included in the accessibility tree][]; and
 - the link has a non-empty (`""`) [accessible name][].
@@ -34,16 +36,21 @@ Each test target has an [accessible name][] which describes its purpose.
 ## Assumptions
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
-- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249].
+- This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249].
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
+### Related rules
+
 - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
@@ -186,7 +193,7 @@ These links have [accessible names][accessible name] which, alone, do not descri
 
 #### Inapplicable Example 1
 
-There is no [semantic link][] in this document.
+There is no [inheriting semantic][] `link` in this document.
 
 ```html
 <a href="https://www.w3.org/WAI" role="button">Web Accessibility Initiative (WAI)</a>
@@ -204,7 +211,7 @@ This link is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-There is no [semantic link][] in this document (`a` element without an `href` attribute do not have a role of `link`).
+There is no [inheriting semantic][] `link` in this document (`a` element without an `href` attribute do not have a role of `link`).
 
 ```html
 <a>placeholder</a>
@@ -213,9 +220,8 @@ There is no [semantic link][] in this document (`a` element without an `href` at
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[semantic link]: #semantic-link 'Definition of Semantic Link'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'

@@ -37,6 +37,8 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -66,6 +68,8 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 ## Background
 
 This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325].
+
+### Bibliography
 
 - [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
 - [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)

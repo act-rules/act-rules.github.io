@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
     failed: not satisfied
@@ -27,13 +22,15 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
 This rule applies to any element with an `aria-hidden` [attribute value][] of `true`.
 
-**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. `aria-hidden="true"` hides itself and all its content from assistive technologies.
+**Note:** Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` **does not** expose that element. An element with `aria-hidden="true"` hides itself, all its content and all its descendants from assistive technologies.
 
 ## Expectation
 
@@ -53,11 +50,14 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making its state of [visible](#visible) or hidden unclear.
 
+### Bibliography
+
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [`aria-hidden` (state)](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden)
-- [Fourth rule of ARIA use (work in progress)](https://www.w3.org/TR/using-aria/#fourth)
+- [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
+- [Element with presentational children has no focusable content](presentational-children-no-focusable-content-307n5z.md)
 
 ## Test Cases
 
@@ -108,16 +108,6 @@ Content made [unfocusable][focusable] through `disabled` attribute.
 	<div aria-hidden="false">
 		<button tabindex="-1">Some button</button>
 	</div>
-</div>
-```
-
-#### Passed Example 6
-
-Content taken out of sequential focus order using `tabindex`.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-2">Some button</button>
 </div>
 ```
 

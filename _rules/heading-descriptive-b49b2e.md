@@ -21,19 +21,27 @@ acknowledgments:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is either [visible][] or [included in the accessibility tree][].
 
 ## Expectation 1
 
-Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].
+For each target element at least one of the following is true:
+
+- the target element is not [visible][]; or
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target element in tree order in the [flat tree][].
 
 ## Expectation 2
 
-Each target element which is [included in the accessibility tree][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
+For each target element at least one of the following is true:
+
+- the target element is not [included in the accessibility tree][]; or
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -44,9 +52,11 @@ Each target element which is [included in the accessibility tree][] describes th
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)

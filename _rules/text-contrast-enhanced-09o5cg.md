@@ -28,14 +28,16 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **widget**: the ancestor is a [semantic widget][]; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [semantic widget][] that is [disabled][]; or
+- **widget**: the ancestor is a [inheriting semantic][] `widget`; or
+- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
 - **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
 
 ## Expectation
@@ -62,6 +64,8 @@ For each test target, the [highest possible contrast][] between the [foreground 
 Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
 - [G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G17)
@@ -169,10 +173,10 @@ This light gray text has a contrast ratio of 5.7:1 on the white background.
 
 #### Failed Example 2
 
-This light gray text has a contrast ratio between 1.6:1 and 5.3:1 on the white to blue gradient background.
+This light gray text has a contrast ratio between 4.6:1 and 5.7:1 on the white to cyan gradient background.
 
 ```html
-<p style="color: #CCC; background: linear-gradient(to right, #FFF, #00F); width: 300px">
+<p style="color: #666; background: linear-gradient(to right, #FFF, #0FF); width: 300px">
 	Some text in English
 </p>
 ```
@@ -408,6 +412,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
 [sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
 [semantic role]: #semantic-role 'Definition of Semantic role'
-[semantic widget]: #semantic-widget 'Definition of Semantic Widget'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
+[html element]: #namespaced-element

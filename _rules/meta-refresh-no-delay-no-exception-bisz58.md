@@ -30,6 +30,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -56,6 +58,8 @@ For each test target, running the [shared declarative refresh steps][], given th
 Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
 - [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)

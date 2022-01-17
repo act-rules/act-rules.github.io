@@ -20,13 +20,15 @@ acknowledgments:
   previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if one of the following is true:
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.1][] [explicit semantic role][] with [required owned elements][], except if one or more of the following is true:
 
-- the element has a [semantic role][] of `combobox`; or
+- the element is a [semantic][semantic role] `combobox`; or
 - the element has the `aria-busy` [attribute value][] of `true`, or has an [ancestor][] in the accessibility tree with this [attribute value][].
 
 ## Expectation
@@ -55,6 +57,8 @@ The applicability of this rule is limited to the [WAI-ARIA 1.1 Recommendation][w
 The combobox role is excluded from this rule, because the design pattern for it as described in ARIA 1.1 has proven problematic. The combobox will be significantly different for ARIA 1.2, where it does not have [required owned elements][].
 
 **Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
@@ -136,6 +140,23 @@ This element with the `list` role only owns elements with the `listitem` role, o
 </div>
 ```
 
+
+#### Passed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `menuitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="menuitem">Item 2</span>
+			<span role="menuitem">Item 3</span>
+		</div>
+	</div>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -205,6 +226,22 @@ This element with the `list` role owns an element with the `group` role, but the
 </div>
 ```
 
+#### Failed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `treeitem` role. ARIA `group` roles are allowed to own other elements with a `group` role, but those nested `group` nodes must still meet the requirements.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="treeitem">Item 1</span>
+			<span role="treeitem">Item 2</span>
+		</div>
+	</div>
+</div>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -235,7 +272,7 @@ This element with the `progressbar` role does not need [required owned elements]
 
 #### Inapplicable Example 4
 
-This element with the `menu` role has attribute an `aria-busy` attribute set to `true`.
+This element with the `menu` role has an `aria-busy` attribute set to `true`.
 
 ```html
 <ul role="menu" aria-busy="true">
@@ -264,3 +301,4 @@ This element with the `combobox` role conforms to [WAI-ARIA 1.1][] without owned
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'
+[html or svg element]: #namespaced-element

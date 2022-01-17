@@ -24,6 +24,8 @@ acknowledgments:
     - Carlos Duarte
   previous_authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -33,12 +35,12 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of two or more HTML or SVG elements which
+This rule applies to any set of two or more [HTML or SVG elements][] for which all the following are true:
 
-- have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
-- are in the same [web page (HTML)][]; and
-- are [included in the accessibility tree][included in the accessibility tree]; and
-- have [matching][] [accessible names][accessible name] that are not empty (`""`); and
+- the elements are [inheriting semantic][] `link` nodes; and
+- the elements are in the same [web page (HTML)][]; and
+- the elements are [included in the accessibility tree][included in the accessibility tree]; and
+- the elements have [matching][] [accessible names][accessible name] that are not empty (`""`); and
 - have the same [programmatically determined link context][].
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].
@@ -64,6 +66,8 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 
@@ -78,10 +82,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a>)
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a>)
 	</p>
 </html>
 ```
@@ -93,10 +96,9 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>
@@ -109,11 +111,10 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
+		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a
 			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index-copy.html"
-			>Contact us</a
+			>About us</a
 		>)
 	</p>
 </html>
@@ -373,6 +374,7 @@ These two `span` elements do not have a [semantic role][] of link.
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [matching]: #matching-characters 'Definition of matching characters'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [same resource]: #same-resource 'Definition of same resource'
@@ -381,3 +383,4 @@ These two `span` elements do not have a [semantic role][] of link.
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
+[html or svg elements]: #namespaced-element

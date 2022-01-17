@@ -31,6 +31,8 @@ acknowledgments:
     - Daniël Strik
     - Jean-Yves Moyen
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -64,6 +66,8 @@ _There are no major accessibility support issues known for this rule._
 The rule doesn't require the non-visual characteristic description to be included in the accessibility tree. If the alternatives are not included in the accessibility tree, only [Success Criteria 1.3.1 Info and Relationships][sc131] would fail instead of both [Success Criterion 1.3.3 Sensory Characteristics][sc133] and [Success Criteria 1.3.1 Info and Relationships][sc131]. Hence, the rule passes in these cases as it is not a failure of all accessibility requirements.
 
 The identified web content does not have to be positioned on the same web page and doesn't need to be linked to from the tested web page.
+
+### Bibliography
 
 - [WCAG 2.1 - Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [WCAG 2.1 - Understanding Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
@@ -288,7 +292,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 
 #### Passed Example 12
 
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
+This paragraph includes the [visual reference word][] "green". The content in the second column is identified with the word "green" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
 
 ```html
 <html lang="en">

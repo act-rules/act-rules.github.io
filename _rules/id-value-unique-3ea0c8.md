@@ -21,6 +21,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -29,13 +31,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any `id` attribute whose value is not an empty string (`""`), specified on a HTML or SVG element.
+This rule applies to any `id` attribute whose value is not an empty string (`""`), specified on a [HTML or SVG element][].
 
 **Note:** Elements that are neither [included in the accessibility tree][] nor [visible][] are still considered for this rule.
 
 ## Expectation
 
-The value of the attribute is unique across all other `id` attributes specified on HTML or SVG elements that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
+The value of the attribute is unique across all other `id` attributes specified on [HTML or SVG elements][html or svg element] that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
 ## Assumptions
 
@@ -46,6 +48,8 @@ _There are currently no assumptions._
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
 - [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)
@@ -161,3 +165,4 @@ These `id` attributes have an empty value.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [programmatic label]: #programmatic-label 'Definition of programmatic label'
 [visible]: #visible 'Definition of visible'
+[html or svg element]: #namespaced-element

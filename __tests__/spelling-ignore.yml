@@ -33,7 +33,6 @@
 - api # lowercase needed in reference list
 - APIs
 - MDN
-- BCP
 - HTML5
 - HTML
 - JSON
@@ -46,8 +45,6 @@
 - dpub # lowercase needed in reference list
 - CSSOM
 - DNS
-- BCP
-- bcp
 - X11
 - IDL
 - idl # lowercase needed in reference list
@@ -80,6 +77,12 @@
 - accesskey
 - Accesskeys
 - kerning
+- drawImage
+- pragma
+- namespaced
+- iso # lowercase needed in reference list
+- RFC
+- rfc
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -127,10 +130,14 @@
 - GitHub
 
 # Test case anamolies
+- brewitt-taylor
 - level2-frame1
 - level1-frame2
 - level1-frame1
 - XYZ
+- Yu
+- Sumei
+- Tuttle
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -157,6 +164,8 @@
 - innerText
 - isTrusted
 - isComposing
+- x1
+- y1
 
 # DOM Events
 - auxclick
@@ -196,6 +205,7 @@
 - programmatically
 - personalization
 - autofill
+- dismissible
 - implementers
 - presentational
 - backtick
@@ -210,6 +220,10 @@
 - unicity
 - Menuitem
 - menuitems
+- namespaced-element
+- Namespaced
+- namespaceURI
+- testability
 
 # Parts of Unicode
 - 000A
@@ -244,3 +258,9 @@
 # Language codes
 - da
 - nl
+- de
+- eng
+
+# Color values
+- HSL
+- hsl

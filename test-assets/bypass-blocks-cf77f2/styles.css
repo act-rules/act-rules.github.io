@@ -1,0 +1,13 @@
+.off-screen {
+	position: absolute;
+	top: -999px;
+}
+
+.visible-on-focus {
+	position: absolute;
+	top: -100px;
+}
+.visible-on-focus:focus-within {
+	position: relative;
+	top: 0px;
+}

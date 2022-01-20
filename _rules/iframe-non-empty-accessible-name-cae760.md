@@ -46,6 +46,8 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Background
 
+### Bibliography
+
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [User interface component][]

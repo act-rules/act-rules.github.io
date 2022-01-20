@@ -494,6 +494,7 @@ This document contains no [text node][] that is either [visible][] or [included 
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc133]: https://www.w3.org/TR/WCAG21/#sensory-characteristics 'Success Criterion 1.3.3 Sensory Characteristics'
 [text node]: https://dom.spec.whatwg.org/#text 'Specification of Text Node'
 [visible]: #visible 'Definition of Visible'

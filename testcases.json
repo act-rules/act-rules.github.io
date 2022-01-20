@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1126,
+  "count": 1128,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -15921,6 +15921,42 @@
       }
     },
     {
+      "testcaseId": "9f56c77f4e790b52f176c5e2e582112af17ce658",
+      "testcaseTitle": "Passed Example 11",
+      "url": "https://act-rules.github.io/testcases/c487ae/9f56c77f4e790b52f176c5e2e582112af17ce658.html",
+      "relativePath": "testcases/c487ae/9f56c77f4e790b52f176c5e2e582112af17ce658.html",
+      "expected": "passed",
+      "ruleId": "c487ae",
+      "ruleName": "Link has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G91": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
       "testcaseId": "113298e42bd5a240371affac3747a470c617610b",
       "testcaseTitle": "Failed Example 1",
       "url": "https://act-rules.github.io/testcases/c487ae/113298e42bd5a240371affac3747a470c617610b.html",
@@ -16249,6 +16285,42 @@
       "testcaseTitle": "Failed Example 10",
       "url": "https://act-rules.github.io/testcases/c487ae/8130b961773da8671837e6a633ca879d1edd28d0.html",
       "relativePath": "testcases/c487ae/8130b961773da8671837e6a633ca879d1edd28d0.html",
+      "expected": "failed",
+      "ruleId": "c487ae",
+      "ruleName": "Link has non-empty accessible name",
+      "rulePage": "https://act-rules.github.io/rules/c487ae",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G91": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "8b39de5e01179f2ca0b55e8aae65a18766530003",
+      "testcaseTitle": "Failed Example 11",
+      "url": "https://act-rules.github.io/testcases/c487ae/8b39de5e01179f2ca0b55e8aae65a18766530003.html",
+      "relativePath": "testcases/c487ae/8b39de5e01179f2ca0b55e8aae65a18766530003.html",
       "expected": "failed",
       "ruleId": "c487ae",
       "ruleName": "Link has non-empty accessible name",

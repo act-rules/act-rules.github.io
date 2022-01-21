@@ -376,9 +376,42 @@ These two HTML `a` elements have the same [accessible name][] and link to the [s
 
 ```html
 <html lang="en">
-	<div>You can learn more in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.</div>
-	<div>You can find contact information in the <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.</div>
+	<div>
+		You can learn more in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
+	<div>
+		You can find contact information in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
 </html>
+```
+
+#### Inapplicable Example 6
+
+These lists have `a` elements with the same [accessible names][accessible name] but different [programmatically determined link contexts][programmatically determined link context] as determined by their preceding `h2` elements.
+
+```html
+<h2>ACT at WAI</h2>
+<ul>
+	<li><a href="https://www.w3.org/WAI/standards-guidelines/act/">Overview</a></li>
+	<li><a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">List of rules</a></li>
+</ul>
+
+<h2>ACT at GitHub</h2>
+<ul>
+	<li><a href="https://act-rules.github.io/pages/about">Overview</a></li>
+	<li><a href="https://act-rules.github.io/rules/">List of rules</a></li>
+</ul>
+```
+
+#### Inapplicable Example 7
+
+These two HTML `a` elements have the same [accessible name][] but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
+
+```html
+<div><a href="https://www.w3.org/WAI/">Read more</a> about the W3C WAI</div>
+<div><a href="https://www.w3.org/International/">Read more</a> about the W3C internationalization</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

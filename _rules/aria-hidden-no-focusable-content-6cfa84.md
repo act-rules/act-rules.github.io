@@ -91,6 +91,17 @@ This `input` element is not [focusable][] because of the `disabled` attribute.
 <input disabled aria-hidden="true" />
 ```
 
+#### Passed Example 4
+
+This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus.
+
+```html
+<div aria-hidden="true">
+	<a href="/" style="position:absolute; top:-999em" onfocus="document.querySelector('input').focus()">First link</a>
+</div>
+<input />
+```
+
 ### Failed
 
 #### Failed Example 1

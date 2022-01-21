@@ -30,4 +30,3 @@ This definition assumes that the HTML document with the link is a document using
 [parent]: https://dom.spec.whatwg.org/#concept-tree-parent 'DOM, parent, 2021/11/29'
 [preceding]: https://dom.spec.whatwg.org/#concept-tree-preceding 'DOM, preceding, 2022/01/17'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[text nodes]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2021/11/29'

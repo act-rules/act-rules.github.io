@@ -119,7 +119,7 @@ Content made [unfocusable][focusable] through `disabled` attribute.
 
 ```html
 <div aria-hidden="true">
-	<a href="/" style="position:absolute; top:-999em">Link</a>
+	<a href="/" style="position:absolute; left:-9999px">Link</a>
 </div>
 ```
 

@@ -232,7 +232,7 @@ This `p` element is not [visible][] because of `display: none`.
 This `p` element is not [visible][] because it is positioned off-screen.
 
 ```html
-<p style="position: absolute; top: -999em; letter-spacing: 0.1em !important;">
+<p style="position: absolute; left: -9999px; letter-spacing: 0.1em !important;">
 	The toy brought back fond memories of being lost in the rain forest.
 </p>
 ```

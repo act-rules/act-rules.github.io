@@ -85,7 +85,6 @@ This `object` element placed off screen, which embeds an audio resource, has a n
 		.offScreen {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<body>

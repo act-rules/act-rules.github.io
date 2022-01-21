@@ -280,7 +280,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 	<body>
 		<div class="col-container">
 			<div class="col">
-				<p style="position:absolute; top:-9999em">Click the button labelled "howdy", on the right, for a surprise</p>
+				<p style="position:absolute; left:-9999px">Click the button labelled "howdy", on the right, for a surprise</p>
 			</div>
 			<div class="col">
 				<button onclick="alert('Surprise!')">Howdy</button>

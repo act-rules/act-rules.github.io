@@ -1,6 +1,6 @@
 .off-screen {
 	position: absolute;
-	top: -999px;
+	left: -9999px;
 }
 
 .visible-on-focus {

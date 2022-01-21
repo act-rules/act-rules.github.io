@@ -107,7 +107,6 @@ This off screen `button` element has an [accessible name][] because of its text 
 		.notInPage {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<body>
@@ -160,7 +159,6 @@ This off screen `button` element has no [accessible name][] because it has no co
 		.notInPage {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<body>

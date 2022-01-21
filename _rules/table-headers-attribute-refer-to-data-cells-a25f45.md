@@ -325,7 +325,6 @@ The `table` is not [visible][] in page.
 		.notInPage {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<table class="notInPage">

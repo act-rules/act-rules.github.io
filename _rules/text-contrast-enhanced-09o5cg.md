@@ -293,7 +293,7 @@ This text is not [visible][] because of `display: none`.
 This text is not [visible][] because it is positioned off screen.
 
 ```html
-<p style="position:absolute; top: -999em">Some invisible text in English</p>
+<p style="position:absolute; left: -9999px">Some invisible text in English</p>
 ```
 
 #### Inapplicable Example 3

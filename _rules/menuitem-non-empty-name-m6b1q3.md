@@ -124,7 +124,6 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 		.offscreen {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<div role="menu" class="offscreen">

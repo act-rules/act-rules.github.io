@@ -202,11 +202,11 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 
 ```html
 <html lang="en">
-	<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
+	<h2 style="position: absolute; left: -9999px;">Shipping address</h2>
 	<input aria-label="Name" id="shipping-name" type="text" name="name" />
 	<input aria-label="Street" id="shipping-street" type="text" name="street" />
 
-	<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
+	<h2 style="position: absolute; left: -9999px;">Billing address</h2>
 	<input aria-label="Name" id="billing-name" type="text" name="name" />
 	<input aria-label="Street" id="billing-street" type="text" name="street" />
 </html>
@@ -254,7 +254,7 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 ```html
 <html lang="en">
-	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
+	<label>First name: <input style="position: absolute; left: -9999px;" type="text" name="fname"/></label>
 </html>
 ```
 

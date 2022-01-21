@@ -204,7 +204,7 @@ The `lang` [attribute value][] does not have a valid language tag, and its [desc
 <html>
 	<body>
 		<article lang="English">
-			<p style="position: absolute; top: -9999px">
+			<p style="position: absolute; left: -9999px">
 				They wandered into a strange Tiki bar on the edge of the small beach town.
 			</p>
 		</article>

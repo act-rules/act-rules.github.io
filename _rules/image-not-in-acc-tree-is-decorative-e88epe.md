@@ -215,7 +215,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 <style>
 	img {
 		position: absolute;
-		top: -9999em;
+		left: -9999px;
 	}
 </style>
 <img src="/test-assets/shared/fireworks.jpg" alt="" />

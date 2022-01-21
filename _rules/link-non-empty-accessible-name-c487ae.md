@@ -169,7 +169,6 @@ This `a` element placed off screen has an [accessible name][] from its content.
 		.offScreenLink {
 			position: absolute;
 			left: -9999px;
-			top: -9999px;
 		}
 	</style>
 	<body>

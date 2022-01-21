@@ -140,8 +140,8 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 ```html
 <html lang="en">
-	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<span role="heading" aria-level="1" style="position: absolute; left: -9999px;">Opening Hours</span>
+	<p style="position: absolute; left: -9999px;">
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>
@@ -200,8 +200,8 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 ```html
 <html lang="en">
-	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<span role="heading" style="position: absolute; left: -9999px;">Weather</span>
+	<p style="position: absolute; left: -9999px;">
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>

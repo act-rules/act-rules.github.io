@@ -126,7 +126,7 @@ This `input` element is [focusable][] because it was incorrectly disabled.
 
 #### Failed Example 3
 
-This `button` element is [focusable][] and a descendent of an element with an `aria-hidden` [attribute value][] of `true` because `aria-hidden` can't be reset once set to true on an ancestor.
+This `button` element is [focusable][] and a descendant of an element with an `aria-hidden` [attribute value][] of `true` because `aria-hidden` can't be reset once set to true on an ancestor.
 
 ```html
 <div aria-hidden="true">

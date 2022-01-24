@@ -48,7 +48,12 @@ Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.1/#requ
 
 For value type `URI`, this rule does not require that the destination URI exists.
 
+### Related rules
+
 - [ARIA state or property is permitted](https://act-rules.github.io/rules/5c01ea)
+
+### Bibliography
+
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA 1.1, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)

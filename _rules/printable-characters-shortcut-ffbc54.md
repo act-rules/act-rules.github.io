@@ -51,6 +51,8 @@ This rule allows [changes to the content][changes in content] when a [user inter
 
 The "Turn off" and "Remap" requirements from [Success Criterion 2.1.4][sc2.1.4] are combined in the **disable/remap** item of the Expectation section. For the disable requirement, [changes in content][] that are made through [keyboard events][keyboard event] with a [printable character][] value for the `key` attribute and a `getModifierState` return value of `false` for each of the [valid modifier keys][] effectively need to be [blocked][blocked event] (in other words, turned off or disabled). The remap requirement unblocks the events if the `getModifierState` query returns `true` for at least one of the [valid modifier keys][]. Once the `getModifierState` returns `true` for at least one of the [valid modifier keys][] of a [keyboard event][], such [keyboard event][] is no longer applicable for the rule and it passes the "Remap" requirement from [Success Criterion 2.1.4][sc2.1.4].
 
+### Bibliography
+
 - [Understanding Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]
 - [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
 - [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)

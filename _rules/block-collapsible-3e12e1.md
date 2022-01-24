@@ -48,11 +48,13 @@ Usually the same [instrument][] removes both [visibility][visible] and [inclusio
 
 [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not have any requirements concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document. Notably, [instruments][instrument] located after (in reading order) the block they collapse are likely not satisfying [Success Criterion 2.4.1 Bypass blocks][sc241], which this rule is designed for. Thus, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241].
 
+### Bibliography
+
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
-
 ## Test Cases
+
+To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 ### Passed
 

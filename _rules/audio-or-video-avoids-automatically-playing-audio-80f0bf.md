@@ -40,6 +40,8 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+deprecated: |
+  This rule has been deprecated and superceded by Rule [`audio` or `video` avoids automatically playing audio](https://act-rules.github.io/rules/x0paj4). This rule is not maintained anymore and should not be used.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

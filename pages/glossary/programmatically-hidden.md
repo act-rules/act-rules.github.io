@@ -15,7 +15,7 @@ An HTML element is _programmatically hidden_ if either it has a [computed][] CSS
 
 **Note**: Contrarily to the other conditions, the `visibility` CSS property may be reverted by descendants.
 
-**Note**: The [HTML standard suggests](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements) rendering elements with the `hidden` attribute with a CSS rule that applies the value `none` to the CSS property `display` of the element. Although the suggestion is not normative, know user agents render it according to the suggestion. If a user agent does not follow the suggestion, this definition will not apply in the user agent's context.
+**Note**: The [HTML standard suggests](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements) rendering elements with the `hidden` attribute with a CSS rule that applies the value `none` to the CSS property `display` of the element. Although the suggestion is not normative, know user agents render it according to the suggestion. If a user agent does not follow the suggestion, this definition may produce incorrect results for this user agent.
 
 [computed]: https://www.w3.org/TR/css-cascade/#computed-value 'CSS definition of computed value'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

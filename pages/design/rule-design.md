@@ -151,6 +151,19 @@ The description should:
 
 For a detailed description on what to write test cases for see [test case design](../test-cases). For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
 
+### Test instructions
+
+At times, it may be necessary for the user to follow a set of instructions to get a test case into a state in which it can be evaluated against the expectation. It happens when the pass, failure, or inapplicability of a test case can only be determined after a change of the state of a test case that is triggered by the user's action and not the content itself. 
+
+Such instructions should be explicit to make sure that the desired state of a test case is obtained. The steps necessary to get the test case into the desired state need to be listed out. The instructions for evaluating the rule should not be included in the list of instructions to improve readability. For example, a test case description with a set of instructions could look like the following:
+
+> **Test instructions**:
+> - Start the test when the window is loaded;
+> - Enter "technology" into the textbox;
+> - Click the button.
+>
+> This `p` element with `role="status"` has an implicit `aria-live` value of "polite".
+
 ## Listed conditions
 
 Applicability and expectations, often have multiple conditions that need to be met for something to be applicable / passed. When there are more than three conditions, listing them all in the running text can be difficult to read and understand. Instead, use a bullet-point list following this format:

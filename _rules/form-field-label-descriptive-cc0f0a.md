@@ -27,6 +27,8 @@ acknowledgments:
   previous_authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -75,6 +77,8 @@ Each test target, together with its [visual context][], describes the purpose of
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+### Bibliography
 
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]

@@ -30,6 +30,8 @@ acknowledgments:
     - Jean-Yves Moyen
   previous_authors:
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -43,7 +45,7 @@ deprecated: |
 
 ## Applicability
 
-This rule applies to any HTML element that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
+This rule applies to any [HTML element][] that is [included in the accessibility tree][] and has a non-empty (`""`) [accessible name][], for which one of the following is true:
 
 - **img**: the element is an `img` with an [accessible name][] that is equivalent to the [filename][] of at least one of the [image sources][] in its [source set][]; or
 - **input image**: the element is an `input` element in the [Image Button][] state with an [accessible name][] that is equivalent to the [filename][] specified in its `src` attribute.
@@ -65,6 +67,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 It is fairly common for content management systems (CMS) or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoint cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
@@ -264,3 +268,4 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 [semantic role]: #semantic-role 'Definition of semantic role'
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
 [whitespace]: #whitespace 'Definition of whitespace'
+[html element]: #namespaced-element

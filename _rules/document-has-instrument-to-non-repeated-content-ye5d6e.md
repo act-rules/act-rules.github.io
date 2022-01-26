@@ -28,6 +28,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
   assets:
     - _The Three Kingdoms_ by Luo Guanzhong, translation by Yu Sumei (Tuttle publishing, 2014, ISBN 9780804843935)
 ---
@@ -55,17 +57,19 @@ The intention of this rule is that focus is moved to the main area of content of
 
 While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
 
+### Bibliography
+
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]
 - [Technique G124: Adding links at the top of the page to each area of the content][tech g124]
+
+## Test Cases
 
 To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 
 Due to the differences between the 3 techniques considered here, it is almost impossible to pass all of them at the same time. The first few Passed Examples illustrate these differences and pass different techniques. The rest of the Passed Examples illustrate variations inside the rule and are based on cases that pass [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1] given that it is simpler than the other two.
 
 The examples sometimes group the skip links inside a `nav` landmark (notably when there are several). According to [WAI-ARIA authoring practices][navigation landmark], if another `nav` landmark was present on the page (e.g. for site navigation), then each should have a different accessible name.
-
-## Test Cases
 
 ### Passed
 
@@ -124,7 +128,7 @@ In this [document][], the third `a` element is an [instrument][] to move the foc
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -154,7 +158,7 @@ In this [document][], the second `a` element (inside the second `aside` element)
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -184,7 +188,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -212,7 +216,7 @@ In this [document][], the first `div` element is an [instrument][] to move the f
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -239,7 +243,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -267,7 +271,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -296,7 +300,7 @@ In this [document][], the first `a` element is an [instrument][] to move the foc
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -314,7 +318,7 @@ This [document][] has no [instrument][] to skip to the non-repeated content.
 		<title>The Three Kingdoms, Chapter 1</title>
 	</head>
 	<body>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -341,7 +345,7 @@ In this [document][], the link to skip to the non-repeated content does not refe
 	</head>
 	<body>
 		<a href="#invalid-id">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<p>The Romance of the Three Kingdoms is a 14th century historical novel.</p>
@@ -368,7 +372,7 @@ In this [document][], the skip link does not move focus [just before][] some [no
 	</head>
 	<body>
 		<a href="#before-main">Skip to main content</a>
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			<p id="before-main">The Romance of the Three Kingdoms is a 14th century historical novel.</p>

@@ -22,7 +22,9 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
-  images:
+  funding:
+    - WAI-Tools
+  assets:
     - Times Square image released into the public domain by (WT-shared) Ypsilonatshared at wts wikivoyage.
     - Book shelf image by Alexandre Boue, licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en) license.
     - Ivanhoe Classic Comics released into the public domain by Malcolm Kildale under the [Creative Commons Attribution-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license
@@ -53,6 +55,8 @@ _No accessibility support issues known._
 ## Background
 
 This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which includes exceptions to the images it applies to that are not part of [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. Therefore, some images that are inapplicable for this rule can be applicable to [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
 - [Understanding Success Criterion 1.4.9: Images of Text (No Exception)][sc1.4.9]

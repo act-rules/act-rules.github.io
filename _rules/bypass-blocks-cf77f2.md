@@ -43,6 +43,8 @@ input_rules:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
   assets:
     - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles Henry Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
     - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
@@ -81,6 +83,8 @@ This rule only checks if there is a way to bypass at least one section of repeat
 ## Background
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.4.1 Bypass Block][sc241]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - Creating links to skip blocks of content:
@@ -238,7 +242,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -268,7 +272,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -291,7 +295,7 @@ This [HTML web page][] is passing rule [_Block of repeated content is collapsibl
 			</p>
 		</div>
 
-		<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+		<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 
 		<aside id="about-book">
 			The Romance of the Three Kingdoms is a 14th century historical novel.
@@ -321,7 +325,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -366,7 +370,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>
@@ -396,7 +400,7 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
 				of time.
 			</p>
-			<a href="/test-assets/bypass-blocks-cf77f2/chapter1.html">Read Chapter 2</a>
+			<a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Read Chapter 2</a>
 		</div>
 	</body>
 </html>

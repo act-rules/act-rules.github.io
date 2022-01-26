@@ -1,16 +1,17 @@
 ---
 title: About Us
+order: 10
 ---
 
-## Mission Statement
+## What we do
 
-The ACT Rules Community Group (previously known as Auto-WCAG), is an open forum set up to document and harmonize the interpretation of W3C accessibility standards, such as WCAG and WAI-ARIA, for testing purposes.
+The ACT Rules Community Group is an open forum set up to document and harmonize the interpretation of W3C accessibility standards, such as WCAG and WAI-ARIA, for testing purposes.
 
 The ACT Rules Community Group (ACT-R) achieves this by bringing together the people developing, implementing and using various accessibility testing tools and methodologies to document interpretations as test rules. Test rules are defined using the ACT Rules Format, and reviewed by the community. The process of researching, documenting, and sharing knowledge from different perspectives within the group, builds towards a common understanding. By publishing such test rules, ACT-R hopes to motivate organizations to share their own insights, and adopt commonly agreed test rules.
 
 ACT-R is not set up to remove differences or impose changes on accessibility testing tools and methodologies. There is value in innovation and diverse approaches. Rather it aims to contribute to more consistent results, regardless of how the testing is done. Knowing when something meets a requirement, and when it does not, should be clear and consistent.
 
-## Why Harmonization Matters
+## Why it matters
 
 Accessibility compliance is becoming a legal requirement all around the world. This makes it increasingly important for organizations to understand exactly what they need to do to be compliant. Accessibility requirements such as WCAG 2.1 are often written in technology agnostic language. Interpretation exactly what those requirements mean for a specific technology requires interpretation. This interpretation can be different between different testers, between different organizations and in different regions around the world.
 

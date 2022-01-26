@@ -25,11 +25,13 @@ acknowledgments:
     - Carlos Duarte
     - Marie Trudelle
     - Ramit Garg
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any [semantic link][] for which all the following is true:
+This rule applies to any [inheriting semantic][] `link` for which all the following is true:
 
 - the link is [included in the accessibility tree][]; and
 - the link has a non-empty ("") [accessible name][].
@@ -42,20 +44,25 @@ The [accessible name][] of each target element together with its [programmatical
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 
-- This rule assumes that all elements with the [semantic role][] of ['link'][link] are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
+- This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
+### Related rules
+
 - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
 - [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
@@ -323,7 +330,7 @@ The `link` element is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-An `a` element without the [semantic role][] `link`.
+This `a` element is not a [semantic][semantic role] `link`, because it has no `href` attribute.
 
 ```html
 <a>placeholder</a>
@@ -331,10 +338,9 @@ An `a` element without the [semantic role][] `link`.
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[link]: https://www.w3.org/TR/wai-aria/#link
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'
-[semantic link]: #semantic-link 'Definition of Semantic Link'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4 Link Purpose (In Context)'
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9 Link Purpose (Link Only)'

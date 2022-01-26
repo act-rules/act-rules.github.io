@@ -83,6 +83,7 @@
 - iso # lowercase needed in reference list
 - RFC
 - rfc
+- MediaStream
 - MediaStreamTrack
 - enable-blink-features=WebCodecs
 - MediaStreamInsertableStreams
@@ -228,6 +229,7 @@
 - Namespaced
 - namespaceURI
 - testability
+- seekable
 
 # Parts of Unicode
 - 000A

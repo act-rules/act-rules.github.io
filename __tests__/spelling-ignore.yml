@@ -83,6 +83,9 @@
 - iso # lowercase needed in reference list
 - RFC
 - rfc
+- MediaStreamTrack
+- enable-blink-features=WebCodecs
+- MediaStreamInsertableStreams
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

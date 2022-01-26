@@ -23,7 +23,10 @@ This rule applies to every `audio` element that is:
 
 ## Expectation
 
-For each test target, after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
+For each test target at least one of the following is true:
+
+- the target element's [media resource][] is not [seekable][]; or
+- after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
 
 ## Assumptions
 
@@ -43,7 +46,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-This `audio` element plays a live media resource by streaming the audio from the device's microphone.
+This `audio` element plays a live media resource by streaming the audio from the device's microphone. The [media resource][] is a MediaStream which is not [seekable][].
 
 Test instructions:
 
@@ -133,4 +136,5 @@ This `audio` element does not have controls.
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource
 [play button]: #play-button
 [seek]: https://html.spec.whatwg.org/multipage/media.html#dom-media-seek
+[seekable]: https://html.spec.whatwg.org/multipage/media.html#dom-media-seekable
 [visible]: #visible 'Definition of visible'

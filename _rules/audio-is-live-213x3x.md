@@ -21,7 +21,7 @@ This rule applies to every `audio` element that is:
 - playing; or,
 - has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
-## Expectation 
+## Expectation
 
 For each test target, after [seeking][seek] the end of the target element's [media resource][] the [current playback position][] is not the end of the target element's [media resource][].
 
@@ -45,40 +45,53 @@ There are no major accessibility support issues known for this rule.
 
 This `audio` element plays a live media resource by streaming the audio from the device's microphone.
 
-This example requires a browser supporting the experimental MediaStreamTrack API. The browser must be authorized to access a microphone. You can successfully test this example on Google Chrome with the flag --enable-blink-features=WebCodecs,MediaStreamInsertableStreams
+Test instructions:
+
+- Load the test case in a browser supporting the experimental MediaStreamTrack API (You can successfully test this example on Google Chrome with the flag --enable-blink-features=WebCodecs,MediaStreamInsertableStreams);
+- Authorize the browser to access a microphone.
 
 ```html
 <html lang="en">
+	<p>
+		This example requires a browser supporting the experimental MediaStreamTrack API. The browser must be authorized to
+		access a microphone. You can successfully test this example on Google Chrome with the flag
+		--enable-blink-features=WebCodecs,MediaStreamInsertableStreams
+	</p>
 
-<p id="vLog"></p>
-<audio controls autoplay></audio>
+	<p id="vLog"></p>
+	<audio controls autoplay></audio>
 
-<script>
-  const log = document.querySelector('#vLog');
+	<script>
+		const log = document.querySelector('#vLog')
 
-  document.addEventListener('DOMContentLoaded', function(event) {
-    if (typeof MediaStreamTrackProcessor === 'undefined' ||
-      typeof MediaStreamTrackGenerator === 'undefined') {
-      log.innerHTML =
-        'Your browser does not support the experimental MediaStreamTrack API. ' +
-        'Please launch with the --enable-blink-features=WebCodecs,MediaStreamInsertableStreams flag';
-      return;
-    }
+		document.addEventListener(
+			'DOMContentLoaded',
+			function(event) {
+				if (typeof MediaStreamTrackProcessor === 'undefined' || typeof MediaStreamTrackGenerator === 'undefined') {
+					log.innerHTML =
+						'Your browser does not support the experimental MediaStreamTrack API. ' +
+						'Please launch with the --enable-blink-features=WebCodecs,MediaStreamInsertableStreams flag'
+					return
+				}
 
-    const constraints = {
-      audio: true,
-      video: false
-    };
+				const constraints = {
+					audio: true,
+					video: false,
+				}
 
-    navigator.mediaDevices.getUserMedia(constraints).then(function(mediaStream) {
-
-      document.querySelector('audio').srcObject = mediaStream;
-
-    }).catch(function(err) {
-      log.innerHTML += err.name + ": " + err.message;
-    });
-  }, false);
-</script>
+				navigator.mediaDevices
+					.getUserMedia(constraints)
+					.then(function(mediaStream) {
+						document.querySelector('audio').srcObject = mediaStream
+					})
+					.catch(function(err) {
+						log.innerHTML += err.name + ': ' + err.message
+					})
+			},
+			false
+		)
+	</script>
+</html>
 ```
 
 ### Failed

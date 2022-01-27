@@ -53,6 +53,9 @@ CSS specifications define each declaration as being either [important][] (if is 
 
 This rule evaluates the [used][] value of the [line-height][] property instead of its [computed][] value because the [used][] value is guaranteed to use absolute units (i.e., pixels). This streamlines comparison with the [computed][] [font-size][] which is also absolute. The [computed][] [line-height][] may be a unitless number that is harder to compare.
 
+### Bibliography
+
+
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)

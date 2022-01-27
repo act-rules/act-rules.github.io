@@ -65,6 +65,8 @@ The 10 minute time span in the applicability is arbitrary. It is selected so tha
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. These extra requirements are left out of this rule, and should be tested separately.
 
+### Bibliography
+
 - [Understanding Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]
 - [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][g186]
 - [F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content][f16]

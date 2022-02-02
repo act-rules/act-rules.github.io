@@ -50,6 +50,10 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 A [focusable][] element with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making its state of [visible](#visible) or hidden unclear.
 
+### Related rules
+
+- [Element with presentational children has no focusable content](https://act-rules.github.io/rules/307n5z)
+
 ### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)

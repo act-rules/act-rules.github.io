@@ -52,6 +52,10 @@ A [focusable][] element with `aria-hidden="true"` is ignored as part of the read
 
 The 1 second time span introduced in the exception of the definition of [focusable][] is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
 
+### Related rules
+
+- [Element with presentational children has no focusable content](https://act-rules.github.io/rules/307n5z)
+
 ### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)

@@ -140,6 +140,22 @@ This element with the `list` role only owns elements with the `listitem` role, o
 </div>
 ```
 
+#### Passed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `menuitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="menuitem">Item 2</span>
+			<span role="menuitem">Item 3</span>
+		</div>
+	</div>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -205,6 +221,22 @@ This element with the `list` role owns an element with the `group` role, but the
 	<div role="group">
 		<span role="tab">Item 1</span>
 		<span role="tab">Item 2</span>
+	</div>
+</div>
+```
+
+#### Failed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `treeitem` role. ARIA `group` roles are allowed to own other elements with a `group` role, but those nested `group` nodes must still meet the requirements.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="treeitem">Item 1</span>
+			<span role="treeitem">Item 2</span>
+		</div>
 	</div>
 </div>
 ```

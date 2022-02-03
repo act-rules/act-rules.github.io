@@ -37,15 +37,15 @@ This rule applies to any [HTML element][] with a `lang` [attribute value][] that
 
 ## Expectation
 
-For each test target, the `lang` [attribute value][] is a [valid language tag][].
+For each test target, the `lang` [attribute value][] has a [known primary language tag][].
 
 ## Assumptions
 
 - This rule assumes that the `lang` [attribute value][] is used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate the programming language of a `code` element), the content may still conform to WCAG despite failing this rule.
 
-- This rule assumes that user agents and assistive technologies can programmatically determine [valid language tags](#valid-language-tag) even if these do not conform to the [RFC 5646][] syntax.
+- This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
-- This rule assumes that only [valid language tags][valid language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+- This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
 - This rule assumes that the text nodes contain text that express something in [human language][] and therefore need a correct programmatic language.
 
@@ -68,7 +68,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 
 #### Passed Example 1
 
-This `article` element has a `lang` [attribute value][] which has a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which has a [known primary language tag][].
 
 ```html
 <html>
@@ -82,7 +82,7 @@ This `article` element has a `lang` [attribute value][] which has a [valid langu
 
 #### Passed Example 2
 
-This `blockquote` element has a `lang` [attribute value][] which has a [valid language tag][]. The region section ("CH") in the value is ignored by the rule (and the definition of [valid language tag][]).
+This `blockquote` element has a `lang` [attribute value][] which has a [known primary language tag][]. The region section ("CH") in the value is ignored by the rule (and the definition of [known primary language tag][]).
 
 ```html
 <html>
@@ -96,7 +96,7 @@ This `blockquote` element has a `lang` [attribute value][] which has a [valid la
 
 #### Passed Example 3
 
-This `p` element has a `lang` [attribute value][] which has a [valid language tag][], but a syntactically invalid region subtag which is ignored by the rule.
+This `p` element has a `lang` [attribute value][] which has a [known primary language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
 <html>
@@ -142,7 +142,7 @@ This `div` element has a valid `lang` [attribute value][]. The [accessible name]
 
 #### Failed Example 1
 
-This `article` element has a `lang` [attribute value][] which does not have a [valid language tag][] because its primary language subtag does not exist in the [language subtag registry][].
+This `article` element has a `lang` [attribute value][] which does not have a [known primary language tag][] because its primary language subtag does not exist in the [language subtag registry][].
 
 ```html
 <html>
@@ -156,7 +156,7 @@ This `article` element has a `lang` [attribute value][] which does not have a [v
 
 #### Failed Example 2
 
-This `article` element has a `lang` [attribute value][] which is not a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which has no [known primary language tag][].
 
 ```html
 <html>
@@ -170,7 +170,7 @@ This `article` element has a `lang` [attribute value][] which is not a [valid la
 
 #### Failed Example 3
 
-This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus is not a [valid language tag][].
+This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus has no [known primary language tag][].
 
 ```html
 <html>
@@ -246,7 +246,7 @@ This `div` element has an invalid `lang` [attribute value][]. The [accessible na
 
 #### Failed Example 8
 
-The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, hence not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, which has no [known primary language tag][].
 
 ```html
 <html lang="en">
@@ -258,7 +258,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 
 #### Failed Example 9
 
-The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], hence not a [valid language tag][].
+The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], which has no [known primary language tag][].
 
 ```html
 <html lang="lb">
@@ -355,6 +355,6 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [text node]: https://dom.spec.whatwg.org/#text
-[valid language tag]: #valid-language-tag
+[known primary language tag]: #known-primary-language-tag
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of Whitespace'

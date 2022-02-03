@@ -49,8 +49,13 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+### Related rules
+
 - [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
 - [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+
+### Bibliography
+
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)

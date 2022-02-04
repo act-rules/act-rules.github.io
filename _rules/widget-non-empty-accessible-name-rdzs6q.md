@@ -374,4 +374,3 @@ This `select` element is not [included in the accessibility tree][] because it i
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
-[visible]: #visible 'Definition of Visible'

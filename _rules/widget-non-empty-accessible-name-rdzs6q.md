@@ -22,6 +22,10 @@ acknowledgments:
     - Bryn Anderson
     - Stein Erik Skotkjerra
     - Wilco Fiers
+htmlHintIgnore:
+  # https://www.npmjs.com/package/htmlhint
+  # (used with `npm test` to ensure validity of code snippets)
+  - 'alt-require'
 ---
 
 ## Applicability

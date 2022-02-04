@@ -15,7 +15,6 @@ The _programmatically determined context_ of a link (or _programmatically determ
 - being the closest [ancestor][] of the link in the [flat tree][] that generates a [block container][]; or
 - being the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`; or
 - being a header cell [assigned][] to the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`; or
-- being the closest [preceding][] element in the [flat tree][] with the role of `heading`; or
 - being referenced by an `aria-describedby` attribute of the link.
 
 This definition is based on the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).
@@ -27,5 +26,4 @@ This definition assumes that the HTML document with the link is a document using
 [block container]: https://drafts.csswg.org/css-display/#block-container 'CSS Display Module Level 3, block container, 2022/01/17'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping Module Level 1, flat tree, 2021/11/29'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[preceding]: https://dom.spec.whatwg.org/#concept-tree-preceding 'DOM, preceding, 2022/01/17'
 [semantic role]: #semantic-role 'Definition of semantic role'

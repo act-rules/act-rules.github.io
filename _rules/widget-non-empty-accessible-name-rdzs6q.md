@@ -22,6 +22,8 @@ acknowledgments:
     - Bryn Anderson
     - Stein Erik Skotkjerra
     - Wilco Fiers
+  assets:
+    - Image used in passed example 10 and failed example 9 is courtesy of NASA/JPL-Caltech.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

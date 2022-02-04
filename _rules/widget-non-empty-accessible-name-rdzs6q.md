@@ -213,7 +213,7 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 <img src="/test-assets/rdzs6q/planets.jpg" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
-	<area shape="rect" coords="0,0,30,100" href="sun.html" alt="Sun" />
+	<area shape="rect" coords="0,0,30,100" href="/test-assets/rdzs6q/sun.html" alt="Sun" />
 </map>
 ```
 

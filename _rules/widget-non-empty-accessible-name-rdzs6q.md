@@ -134,8 +134,6 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 
 This `input` element has an [accessible name][] because of its `placeholder` attribute.
 
-**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a user starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
-
 ```html
 <input placeholder="Your search query" /> <button type="submit">search</button>
 ```
@@ -369,6 +367,7 @@ This `select` element is not [included in the accessibility tree][] because it i
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [attribute value]: #attribute-value 'Definition of attribute value'
+[explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'WCAG definition of Labels'

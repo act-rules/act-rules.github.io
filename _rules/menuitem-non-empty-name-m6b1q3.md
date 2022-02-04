@@ -1,6 +1,6 @@
 ---
 id: m6b1q3
-name: Menuitem has non-empty accessible name
+name: DEPRECATED - Menuitem has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each element with a `menuitem` role has a non-empty accessible name.
@@ -21,6 +21,8 @@ acknowledgments:
     - WAI-Tools
   assets:
     - The "file.svg" icon is part of the Feather Icons package, which uses the [MIT license](https://github.com/feathericons/feather/blob/master/LICENSE).
+deprecated: |
+  This rule has been deprecated and superceded by Rule [Widget has non-empty accessible name](https://act-rules.github.io/rules/rdzs6q). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

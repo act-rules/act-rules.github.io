@@ -1,6 +1,6 @@
 ---
 id: e086e5
-name: Form field has non-empty accessible name
+name: DEPRECATED - Form field has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each form field element has a non-empty accessible name.
@@ -20,6 +20,8 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+deprecated: |
+  This rule has been deprecated and superceded by Rule [Widget has non-empty accessible name](https://act-rules.github.io/rules/rdzs6q). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

@@ -17,6 +17,11 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+  previous_authors:
+    - Anne Thyme Nørregaard
+    - Bryn Anderson
+    - Stein Erik Skotkjerra
+    - Wilco Fiers
 ---
 
 ## Applicability

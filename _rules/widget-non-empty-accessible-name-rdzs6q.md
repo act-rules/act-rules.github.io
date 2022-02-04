@@ -210,10 +210,10 @@ This `a` element has an [accessible name][] from its content.
 This `area` element has a [semantic role][] of `link` and an [accessible name][] via `alt`.
 
 ```html
-<img src="/test-assets/c487ae/planets.jpg" width="145" height="126" alt="Planets" usemap="#planetmap" />
+<img src="/test-assets/rdzs6q/planets.jpg" width="145" height="126" alt="Planets" usemap="#planetmap" />
 
 <map name="planetmap">
-	<area shape="rect" coords="0,0,30,100" href="sun.htm" alt="Sun" />
+	<area shape="rect" coords="0,0,30,100" href="sun.html" alt="Sun" />
 </map>
 ```
 

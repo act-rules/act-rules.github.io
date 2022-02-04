@@ -16,10 +16,7 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Anne Thyme Nørregaard
-    - Bryn Anderson
-  funding:
-    - WAI-Tools
+    - Carlos Duarte
 ---
 
 ## Applicability

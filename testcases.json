@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1128,
+  "count": 1129,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -14553,10 +14553,10 @@
       }
     },
     {
-      "testcaseId": "81206ee36822e5d9f511fc22bce11ede3f322247",
+      "testcaseId": "433c605e59694fd6868f3bf53736b678f908c5d8",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/78fd32/81206ee36822e5d9f511fc22bce11ede3f322247.html",
-      "relativePath": "testcases/78fd32/81206ee36822e5d9f511fc22bce11ede3f322247.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/433c605e59694fd6868f3bf53736b678f908c5d8.html",
+      "relativePath": "testcases/78fd32/433c605e59694fd6868f3bf53736b678f908c5d8.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14571,10 +14571,10 @@
       }
     },
     {
-      "testcaseId": "876792eb82b1e6fe8cbcec23f79248cefc39ac96",
+      "testcaseId": "7f0d12d945d6d8a825e77c4c83e375c17a8b1260",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/78fd32/876792eb82b1e6fe8cbcec23f79248cefc39ac96.html",
-      "relativePath": "testcases/78fd32/876792eb82b1e6fe8cbcec23f79248cefc39ac96.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/7f0d12d945d6d8a825e77c4c83e375c17a8b1260.html",
+      "relativePath": "testcases/78fd32/7f0d12d945d6d8a825e77c4c83e375c17a8b1260.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14589,10 +14589,10 @@
       }
     },
     {
-      "testcaseId": "a516d406d117e04739a446076264e9d5fd9d752a",
+      "testcaseId": "694ff0c1416e93670fc73c6b2df27c90cb4933dc",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/78fd32/a516d406d117e04739a446076264e9d5fd9d752a.html",
-      "relativePath": "testcases/78fd32/a516d406d117e04739a446076264e9d5fd9d752a.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/694ff0c1416e93670fc73c6b2df27c90cb4933dc.html",
+      "relativePath": "testcases/78fd32/694ff0c1416e93670fc73c6b2df27c90cb4933dc.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14607,10 +14607,10 @@
       }
     },
     {
-      "testcaseId": "cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6",
+      "testcaseId": "891e18323461d29cd2dc5b5ba3548532bc1c41d3",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/78fd32/cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6.html",
-      "relativePath": "testcases/78fd32/cb36f6e7e4be40692fee6c7bd8b0af0ff6f1b0d6.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/891e18323461d29cd2dc5b5ba3548532bc1c41d3.html",
+      "relativePath": "testcases/78fd32/891e18323461d29cd2dc5b5ba3548532bc1c41d3.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14625,10 +14625,10 @@
       }
     },
     {
-      "testcaseId": "e2f9138260ce14245ebc17e59b42f8f64cd08bc5",
+      "testcaseId": "42d7ce694c4c42ed3931dfb7f4cd79af7de1f897",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/78fd32/e2f9138260ce14245ebc17e59b42f8f64cd08bc5.html",
-      "relativePath": "testcases/78fd32/e2f9138260ce14245ebc17e59b42f8f64cd08bc5.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/42d7ce694c4c42ed3931dfb7f4cd79af7de1f897.html",
+      "relativePath": "testcases/78fd32/42d7ce694c4c42ed3931dfb7f4cd79af7de1f897.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14643,10 +14643,10 @@
       }
     },
     {
-      "testcaseId": "1fc0772272b34710f88019a71536bf9007322fc3",
+      "testcaseId": "7e71a51e3773b4e2ca73f72fd988be1a6ef76418",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/78fd32/1fc0772272b34710f88019a71536bf9007322fc3.html",
-      "relativePath": "testcases/78fd32/1fc0772272b34710f88019a71536bf9007322fc3.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/7e71a51e3773b4e2ca73f72fd988be1a6ef76418.html",
+      "relativePath": "testcases/78fd32/7e71a51e3773b4e2ca73f72fd988be1a6ef76418.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14661,10 +14661,10 @@
       }
     },
     {
-      "testcaseId": "825f436c2e3df2f568929d195ad59616e8d1446a",
+      "testcaseId": "be89071193b0d039ddf124b7acf1d557004daf87",
       "testcaseTitle": "Passed Example 7",
-      "url": "https://act-rules.github.io/testcases/78fd32/825f436c2e3df2f568929d195ad59616e8d1446a.html",
-      "relativePath": "testcases/78fd32/825f436c2e3df2f568929d195ad59616e8d1446a.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/be89071193b0d039ddf124b7acf1d557004daf87.html",
+      "relativePath": "testcases/78fd32/be89071193b0d039ddf124b7acf1d557004daf87.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14679,10 +14679,10 @@
       }
     },
     {
-      "testcaseId": "b9c937432afbb36e65d62ad247346b8b8042e1de",
+      "testcaseId": "4271774b903befe682e3e4da4cd7a01ca2e22cda",
       "testcaseTitle": "Passed Example 8",
-      "url": "https://act-rules.github.io/testcases/78fd32/b9c937432afbb36e65d62ad247346b8b8042e1de.html",
-      "relativePath": "testcases/78fd32/b9c937432afbb36e65d62ad247346b8b8042e1de.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/4271774b903befe682e3e4da4cd7a01ca2e22cda.html",
+      "relativePath": "testcases/78fd32/4271774b903befe682e3e4da4cd7a01ca2e22cda.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14697,10 +14697,10 @@
       }
     },
     {
-      "testcaseId": "4165b375730e27289a7df5a8523704247ec8ca29",
+      "testcaseId": "bdea78d70eda859182c31d21f6e04b8a12d87c82",
       "testcaseTitle": "Passed Example 9",
-      "url": "https://act-rules.github.io/testcases/78fd32/4165b375730e27289a7df5a8523704247ec8ca29.html",
-      "relativePath": "testcases/78fd32/4165b375730e27289a7df5a8523704247ec8ca29.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/bdea78d70eda859182c31d21f6e04b8a12d87c82.html",
+      "relativePath": "testcases/78fd32/bdea78d70eda859182c31d21f6e04b8a12d87c82.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14715,10 +14715,10 @@
       }
     },
     {
-      "testcaseId": "31a591256b9b60b5b1c96845f356cb577aa4ffd7",
+      "testcaseId": "33bce33a077ad7fd2e34b4bf4bb34cc26fb28d23",
       "testcaseTitle": "Passed Example 10",
-      "url": "https://act-rules.github.io/testcases/78fd32/31a591256b9b60b5b1c96845f356cb577aa4ffd7.html",
-      "relativePath": "testcases/78fd32/31a591256b9b60b5b1c96845f356cb577aa4ffd7.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/33bce33a077ad7fd2e34b4bf4bb34cc26fb28d23.html",
+      "relativePath": "testcases/78fd32/33bce33a077ad7fd2e34b4bf4bb34cc26fb28d23.html",
       "expected": "passed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14733,10 +14733,10 @@
       }
     },
     {
-      "testcaseId": "7a170dbec6d36996b0625fa59f7648ece3be0541",
+      "testcaseId": "6d3e0c4e14eca510a1f14068cbe0cf01dea8877d",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/78fd32/7a170dbec6d36996b0625fa59f7648ece3be0541.html",
-      "relativePath": "testcases/78fd32/7a170dbec6d36996b0625fa59f7648ece3be0541.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/6d3e0c4e14eca510a1f14068cbe0cf01dea8877d.html",
+      "relativePath": "testcases/78fd32/6d3e0c4e14eca510a1f14068cbe0cf01dea8877d.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14751,10 +14751,10 @@
       }
     },
     {
-      "testcaseId": "933d408f6bc140fbd41ffd742453a2bf3474f3c6",
+      "testcaseId": "f38ccd07215941a657b8f7ae158e71247e8338cd",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/78fd32/933d408f6bc140fbd41ffd742453a2bf3474f3c6.html",
-      "relativePath": "testcases/78fd32/933d408f6bc140fbd41ffd742453a2bf3474f3c6.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/f38ccd07215941a657b8f7ae158e71247e8338cd.html",
+      "relativePath": "testcases/78fd32/f38ccd07215941a657b8f7ae158e71247e8338cd.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14769,10 +14769,10 @@
       }
     },
     {
-      "testcaseId": "e27524b0a6c228b9c7b351e24e09c84dd28fd0f4",
+      "testcaseId": "7f5181ef5b3cc2a0a17850f36a0c544258b3a497",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/78fd32/e27524b0a6c228b9c7b351e24e09c84dd28fd0f4.html",
-      "relativePath": "testcases/78fd32/e27524b0a6c228b9c7b351e24e09c84dd28fd0f4.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/7f5181ef5b3cc2a0a17850f36a0c544258b3a497.html",
+      "relativePath": "testcases/78fd32/7f5181ef5b3cc2a0a17850f36a0c544258b3a497.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14787,10 +14787,10 @@
       }
     },
     {
-      "testcaseId": "bf114456b0c5d14e7746d81d2142c3b6d9aaf74e",
+      "testcaseId": "8357d0c7f5ee9eea54aafe34d041540454ac71ea",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/78fd32/bf114456b0c5d14e7746d81d2142c3b6d9aaf74e.html",
-      "relativePath": "testcases/78fd32/bf114456b0c5d14e7746d81d2142c3b6d9aaf74e.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/8357d0c7f5ee9eea54aafe34d041540454ac71ea.html",
+      "relativePath": "testcases/78fd32/8357d0c7f5ee9eea54aafe34d041540454ac71ea.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14805,10 +14805,10 @@
       }
     },
     {
-      "testcaseId": "7377bc6d68efb0c88d33e49fb96b8009ceb754c8",
+      "testcaseId": "1e50edac0dfd91cf4649e7a56d92b1fb4715ebd8",
       "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/78fd32/7377bc6d68efb0c88d33e49fb96b8009ceb754c8.html",
-      "relativePath": "testcases/78fd32/7377bc6d68efb0c88d33e49fb96b8009ceb754c8.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/1e50edac0dfd91cf4649e7a56d92b1fb4715ebd8.html",
+      "relativePath": "testcases/78fd32/1e50edac0dfd91cf4649e7a56d92b1fb4715ebd8.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14823,10 +14823,10 @@
       }
     },
     {
-      "testcaseId": "62f66da20c77a684f5c1d2d411ddf819bedf61e5",
+      "testcaseId": "a56532cceabed95bd36bf9efafe63f7fde90cce5",
       "testcaseTitle": "Failed Example 6",
-      "url": "https://act-rules.github.io/testcases/78fd32/62f66da20c77a684f5c1d2d411ddf819bedf61e5.html",
-      "relativePath": "testcases/78fd32/62f66da20c77a684f5c1d2d411ddf819bedf61e5.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/a56532cceabed95bd36bf9efafe63f7fde90cce5.html",
+      "relativePath": "testcases/78fd32/a56532cceabed95bd36bf9efafe63f7fde90cce5.html",
       "expected": "failed",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14859,10 +14859,10 @@
       }
     },
     {
-      "testcaseId": "a9522ba39546fd729b1750b1555aa275ea639839",
+      "testcaseId": "2746b22a10b9b1a6f285398bea944dd505552468",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/78fd32/a9522ba39546fd729b1750b1555aa275ea639839.html",
-      "relativePath": "testcases/78fd32/a9522ba39546fd729b1750b1555aa275ea639839.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/2746b22a10b9b1a6f285398bea944dd505552468.html",
+      "relativePath": "testcases/78fd32/2746b22a10b9b1a6f285398bea944dd505552468.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14877,10 +14877,10 @@
       }
     },
     {
-      "testcaseId": "1ab916c4ce46f566e1ccadcbfac9820e30f009f9",
+      "testcaseId": "5b1d9a9f464dec0b2fd5677ab697549100459c7e",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/78fd32/1ab916c4ce46f566e1ccadcbfac9820e30f009f9.html",
-      "relativePath": "testcases/78fd32/1ab916c4ce46f566e1ccadcbfac9820e30f009f9.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/5b1d9a9f464dec0b2fd5677ab697549100459c7e.html",
+      "relativePath": "testcases/78fd32/5b1d9a9f464dec0b2fd5677ab697549100459c7e.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",
@@ -14895,10 +14895,28 @@
       }
     },
     {
-      "testcaseId": "fd21a8d262dc9d5a6109fab863bfaa98ee3d7329",
+      "testcaseId": "166eef5525285ab005e0279c0d64a78fa4d16305",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/78fd32/fd21a8d262dc9d5a6109fab863bfaa98ee3d7329.html",
-      "relativePath": "testcases/78fd32/fd21a8d262dc9d5a6109fab863bfaa98ee3d7329.html",
+      "url": "https://act-rules.github.io/testcases/78fd32/166eef5525285ab005e0279c0d64a78fa4d16305.html",
+      "relativePath": "testcases/78fd32/166eef5525285ab005e0279c0d64a78fa4d16305.html",
+      "expected": "inapplicable",
+      "ruleId": "78fd32",
+      "ruleName": "Line height in `style` attributes is not `!important`",
+      "rulePage": "https://act-rules.github.io/rules/78fd32",
+      "ruleAccessibilityRequirements": {
+        "wcag21:1.4.12": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "11030dcc3016cbc648061c48638ec31d002fd3fe",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/78fd32/11030dcc3016cbc648061c48638ec31d002fd3fe.html",
+      "relativePath": "testcases/78fd32/11030dcc3016cbc648061c48638ec31d002fd3fe.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
       "ruleName": "Line height in `style` attributes is not `!important`",

@@ -18858,12 +18858,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -18888,12 +18882,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -18918,12 +18906,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -18948,12 +18930,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -18978,12 +18954,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19008,12 +18978,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19038,12 +19002,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19068,12 +19026,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19098,12 +19050,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19128,12 +19074,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19158,12 +19098,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19188,12 +19122,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19218,12 +19146,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19248,12 +19170,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19278,12 +19194,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19308,12 +19218,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19338,12 +19242,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19368,12 +19266,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19398,12 +19290,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19428,12 +19314,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",
@@ -19458,12 +19338,6 @@
       "ruleName": "Content has alternative for visual reference",
       "rulePage": "https://act-rules.github.io/rules/9bd38c",
       "ruleAccessibilityRequirements": {
-        "wcag20:1.3.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
         "wcag20:1.3.3": {
           "forConformance": true,
           "failed": "not satisfied",

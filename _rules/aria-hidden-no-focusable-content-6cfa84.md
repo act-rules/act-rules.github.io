@@ -36,7 +36,7 @@ None of the target elements are [focusable][], nor do they have [descendants](ht
 
 ## Assumptions
 
-Interacting with the page to focus an element does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog would make previously hidden and not [focusable][] elements to become [focusable][].
+Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden and not [focusable][] elements become [focusable][].
 
 ## Accessibility Support
 

@@ -56,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-No trap for keyboard navigation.
+These [focusable][] elements do not create a trap for keyboard navigation.
 
 ```html
 <a href="#">Link 1</a> <button>Button1</button>
@@ -64,7 +64,7 @@ No trap for keyboard navigation.
 
 #### Passed Example 2
 
-Using `tabindex="1"`.
+This [focusable][] element does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -72,7 +72,7 @@ Using `tabindex="1"`.
 
 #### Passed Example 3
 
-Using `tabindex="-1"`.
+This [focusable][] element does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -82,7 +82,7 @@ Using `tabindex="-1"`.
 
 #### Failed Example 1
 
-Keyboard trap one element.
+This [focusable][] element creates a keyboard trap.
 
 ```html
 <a href="#">Link 1</a>
@@ -93,7 +93,7 @@ Keyboard trap one element.
 
 #### Failed Example 2
 
-Keyboard trap group.
+These [focusable][] elements create a keyboard trap.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
@@ -109,7 +109,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable][] element between keyboard traps.
+This `button` element is between other `button` elements creating keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -121,7 +121,7 @@ A [focusable][] element between keyboard traps.
 
 #### Inapplicable Example 1
 
-No [focusable][] element.
+There is no [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -129,7 +129,7 @@ No [focusable][] element.
 
 #### Inapplicable Example 2
 
-Disabled element.
+There is no [focusable][] element.
 
 ```html
 <button type="button" disabled>Click Me!</button>
@@ -137,7 +137,7 @@ Disabled element.
 
 #### Inapplicable Example 3
 
-Hidden element using `display:none`.
+There is no [focusable][] element.
 
 ```html
 <button type="button" style="display:none;">Click Me!</button>
@@ -145,7 +145,7 @@ Hidden element using `display:none`.
 
 #### Inapplicable Example 4
 
-Hidden element using `visibility:hidden`.
+There is no [focusable][] element.
 
 ```html
 <a href="#" style="visibility:hidden;">Link 1</a> <button style="visibility:hidden;">Button1</button>

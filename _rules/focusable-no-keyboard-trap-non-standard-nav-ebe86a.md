@@ -66,7 +66,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Keyboard trap with help information in a paragraph before, and where the method advised works.
+These focusable `button` elements create a keyboard trap with help information in a paragraph before, and where the method advised works.
 
 ```html
 <script>
@@ -90,7 +90,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 
 #### Passed Example 2
 
-Keyboard trap with help information within the trap, and where the method advised works.
+These focusable `button` elements create a keyboard trap with help information within the trap, and where the method advised works.
 
 ```html
 <script>
@@ -114,7 +114,7 @@ Keyboard trap with help information within the trap, and where the method advise
 
 #### Passed Example 3
 
-Keyboard trap with "help" link that once clicked exposes the instructions.
+These focusable `button` elements create a keyboard trap with "help" link that once clicked exposes the instructions.
 
 ```html
 <script>
@@ -145,7 +145,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 #### Failed Example 1
 
-Keyboard trap with no instructions.
+These focusable `button` elements create a keyboard trap with no instructions.
 
 ```html
 <script>
@@ -168,7 +168,7 @@ Keyboard trap with no instructions.
 
 #### Failed Example 2
 
-Keyboard trap with instructions that doesn't give advise on the method for proceeding.
+These focusable `button` elements create a keyboard trap with instructions that don't give advise on the method for proceeding.
 
 ```html
 <script>
@@ -192,7 +192,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 
 #### Failed Example 3
 
-Keyboard trap with help text, where the method advised doesn't work.
+These focusable `button` elements create a keyboard trap with help text, where the method advised doesn't work.
 
 ```html
 <script>
@@ -214,7 +214,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 #### Inapplicable Example 1
 
-Not a keyboard trap (interactive element).
+This focusable `button` elements do not create a keyboard trap.
 
 ```html
 <a id="link1" href="#">Link 1</a>

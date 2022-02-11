@@ -68,7 +68,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-No trap for keyboard navigation.
+These [focusable][] elements do not create a trap for keyboard navigation.
 
 ```html
 <a href="#">Link 1</a> <button>Button1</button>
@@ -76,7 +76,7 @@ No trap for keyboard navigation.
 
 #### Passed Example 2
 
-Using `tabindex="1"`.
+This [focusable][] element does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -84,7 +84,7 @@ Using `tabindex="1"`.
 
 #### Passed Example 3
 
-Using `tabindex="-1"`.
+This [focusable][] element does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -92,7 +92,7 @@ Using `tabindex="-1"`.
 
 #### Passed Example 4
 
-Keyboard trap with help information in a paragraph before, and where the method advised works.
+These focusable `button` elements create a keyboard trap with help information in a paragraph before, and where the method advised works.
 
 ```html
 <script>
@@ -116,7 +116,7 @@ Keyboard trap with help information in a paragraph before, and where the method 
 
 #### Passed Example 5
 
-Keyboard trap with help information within the trap, and where the method advised works.
+These focusable `button` elements create a keyboard trap with help information within the trap, and where the method advised works.
 
 ```html
 <script>
@@ -140,7 +140,7 @@ Keyboard trap with help information within the trap, and where the method advise
 
 #### Passed Example 6
 
-Keyboard trap with "help" link that once clicked exposes the instructions.
+These focusable `button` elements create a keyboard trap with "help" link that once clicked exposes the instructions.
 
 ```html
 <script>
@@ -171,7 +171,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 #### Failed Example 1
 
-Keyboard trap one element.
+This [focusable][] element creates a keyboard trap.
 
 ```html
 <a href="#">Link 1</a>
@@ -182,7 +182,7 @@ Keyboard trap one element.
 
 #### Failed Example 2
 
-Keyboard trap group.
+These [focusable][] elements create a keyboard trap.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
@@ -198,7 +198,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable][] element between keyboard traps.
+This `button` element is between other `button` elements creating keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -208,7 +208,7 @@ A [focusable][] element between keyboard traps.
 
 #### Failed Example 4
 
-Keyboard trap with no instructions.
+These focusable `button` elements create a keyboard trap with no instructions.
 
 ```html
 <script>
@@ -231,7 +231,7 @@ Keyboard trap with no instructions.
 
 #### Failed Example 5
 
-Keyboard trap with instructions that doesn't give advise on the method for proceeding.
+These focusable `button` elements create a keyboard trap with instructions that don't give advise on the method for proceeding.
 
 ```html
 <script>
@@ -255,7 +255,7 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 
 #### Failed Example 6
 
-Keyboard trap with help text, where the method advised doesn't work.
+These focusable `button` elements create a keyboard trap with help text, where the method advised doesn't work.
 
 ```html
 <script>
@@ -277,7 +277,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 #### Inapplicable Example 1
 
-No [focusable][] element.
+There is no [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -285,7 +285,7 @@ No [focusable][] element.
 
 #### Inapplicable Example 2
 
-Disabled element.
+There is no [focusable][] element.
 
 ```html
 <button type="button" disabled>Click Me!</button>
@@ -293,7 +293,7 @@ Disabled element.
 
 #### Inapplicable Example 3
 
-Hidden element using `display:none`.
+There is no [focusable][] element.
 
 ```html
 <button type="button" style="display:none;">Click Me!</button>
@@ -301,7 +301,7 @@ Hidden element using `display:none`.
 
 #### Inapplicable Example 4
 
-Hidden element using `visibility:hidden`.
+There is no [focusable][] element.
 
 ```html
 <a href="#" style="visibility:hidden;">Link 1</a> <button style="visibility:hidden;">Button1</button>

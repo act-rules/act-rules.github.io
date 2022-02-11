@@ -168,7 +168,7 @@ The [computed][] value of the `line-height` property of this `p` element is **no
 
 ```html
 <p style="line-height: 1.2em">
-	<span style="line-height: inherit !important; max-width: 200px;">
+	<span style="line-height: inherit !important; display: block; max-width: 200px;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
 </p>
@@ -180,7 +180,7 @@ The [computed][] value of the `line-height` property of this `p` element is **no
 
 ```html
 <p style="line-height: 1.2em">
-	<span style="line-height: unset !important; max-width: 200px;">
+	<span style="line-height: unset !important; display: block; max-width: 200px;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
 </p>

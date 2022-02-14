@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1129,
+  "count": 1131,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -6392,6 +6392,30 @@
       }
     },
     {
+      "testcaseId": "74b2f3c358f15142cc220c97153bbc6043beaa87",
+      "testcaseTitle": "Inapplicable Example 8",
+      "url": "https://act-rules.github.io/testcases/off6ek/74b2f3c358f15142cc220c97153bbc6043beaa87.html",
+      "relativePath": "testcases/off6ek/74b2f3c358f15142cc220c97153bbc6043beaa87.html",
+      "expected": "inapplicable",
+      "ruleId": "off6ek",
+      "ruleName": "HTML element language subtag matches language",
+      "rulePage": "https://act-rules.github.io/rules/off6ek",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "satisfied",
+          "inapplicable": "satisfied"
+        }
+      }
+    },
+    {
       "testcaseId": "52b44481e1067806d435c1020422dc401c9a23b4",
       "testcaseTitle": "Passed Example 1",
       "url": "https://act-rules.github.io/testcases/de46e4/52b44481e1067806d435c1020422dc401c9a23b4.html",
@@ -6800,10 +6824,34 @@
       }
     },
     {
-      "testcaseId": "ec82f5dc070d778af4ae3c2f0bcde360fc9c4275",
+      "testcaseId": "4a8c4233dae2c53b88d59a2ddda3e2731383a9f9",
       "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/de46e4/ec82f5dc070d778af4ae3c2f0bcde360fc9c4275.html",
-      "relativePath": "testcases/de46e4/ec82f5dc070d778af4ae3c2f0bcde360fc9c4275.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/4a8c4233dae2c53b88d59a2ddda3e2731383a9f9.html",
+      "relativePath": "testcases/de46e4/4a8c4233dae2c53b88d59a2ddda3e2731383a9f9.html",
+      "expected": "inapplicable",
+      "ruleId": "de46e4",
+      "ruleName": "Element with `lang` attribute has valid language tag",
+      "rulePage": "https://act-rules.github.io/rules/de46e4",
+      "ruleAccessibilityRequirements": {
+        "wcag20:3.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H58": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "5fe66bc41e0c30230d38e2167ddd756ae85afb14",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/de46e4/5fe66bc41e0c30230d38e2167ddd756ae85afb14.html",
+      "relativePath": "testcases/de46e4/5fe66bc41e0c30230d38e2167ddd756ae85afb14.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",

@@ -33,7 +33,7 @@ This rule applies to any [HTML element][] with a `lang` [attribute value][] that
 
 - **descendant**: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
-- **text**: there is some non-empty [text inheriting its programmatic language][] from the element.
+- **text**: there is some [text inheriting its programmatic language][] from the element which is neither empty nor only [whitespace][].
 
 ## Expectation
 
@@ -46,6 +46,8 @@ For each test target, the `lang` [attribute value][] has a [known primary langua
 - This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
 - This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
+
+- This rule assumes that the text nodes contain text that express something in [human language][] and therefore need a correct programmatic language.
 
 ## Accessibility Support
 
@@ -315,11 +317,23 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 There is no [text inheriting its programmatic language][] from this `div` element.
 
 ```html
-<html>
+<html lang="en">
 	<body>
 		<div lang="invalid">
 			<img src="/test-assets/shared/fireworks.jpg" alt="" />
 		</div>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 5
+
+The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
+
+```html
+<html lang="en">
+	<body>
+		<div lang="invalid"></div>
 	</body>
 </html>
 ```
@@ -330,9 +344,12 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8
+[html element]: #namespaced-element
+[human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG definition of Human Language'
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
+[language subtag registry]: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [node document]: https://dom.spec.whatwg.org/#concept-node-document
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
@@ -341,5 +358,3 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 [known primary language tag]: #known-primary-language-tag
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of Whitespace'
-[html element]: #namespaced-element
-[language subtag registry]: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry

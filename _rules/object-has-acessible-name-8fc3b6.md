@@ -20,7 +20,8 @@ acknowledgments:
   funding:
     - WAI-Tools
   assets:
-    - audio is an excerpt from JFK's 'Moon Speech'
+    - Rabbit video is (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
+    - JFK's We Choose the Moon speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability

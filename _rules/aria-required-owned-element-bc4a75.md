@@ -140,7 +140,6 @@ This element with the `list` role only owns elements with the `listitem` role, o
 </div>
 ```
 
-
 #### Passed Example 7
 
 This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `menuitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.

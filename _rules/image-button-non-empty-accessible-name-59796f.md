@@ -177,6 +177,6 @@ The image button is ignored by assistive technologies because it is not [include
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[attribute value]: #attribute-value 'Definition of Attribute Value'
+[attribute value]: #attribute-value:enumerated 'Definition of Attribute Value'
 [html aam image button]: https://www.w3.org/TR/html-aam-1.0/#input-type-image 'HTML Accessibility API Mapping, image button'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

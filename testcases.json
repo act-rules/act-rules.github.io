@@ -24362,7 +24362,7 @@
       "relativePath": "testcases/f196ce/5bced10c9f182208dacf0071c35e99403a23013b.html",
       "expected": "passed",
       "ruleId": "f196ce",
-      "ruleName": "`video` element visual content has description track",
+      "ruleName": "DEPRECATED — `video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24386,7 +24386,7 @@
       "relativePath": "testcases/f196ce/e100b751bd9a03c6e874239476027e792029c50b.html",
       "expected": "failed",
       "ruleId": "f196ce",
-      "ruleName": "`video` element visual content has description track",
+      "ruleName": "DEPRECATED — `video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24410,7 +24410,7 @@
       "relativePath": "testcases/f196ce/7d8028be2134f6def96fab23f8c07b5ea6175b38.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "`video` element visual content has description track",
+      "ruleName": "DEPRECATED — `video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24434,7 +24434,7 @@
       "relativePath": "testcases/f196ce/540ef897c00b6bce2ac0a522615df7ba8be6aadc.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "`video` element visual content has description track",
+      "ruleName": "DEPRECATED — `video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24458,7 +24458,7 @@
       "relativePath": "testcases/f196ce/453c90aae9cc15233a77c81948324010d681f7d2.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "`video` element visual content has description track",
+      "ruleName": "DEPRECATED — `video` element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24919,7 +24919,7 @@
       "relativePath": "testcases/ac7dc6/2c391535c73e7943fec5380e981c99cc4c1a7fb1.html",
       "expected": "passed",
       "ruleId": "ac7dc6",
-      "ruleName": "`video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24937,7 +24937,7 @@
       "relativePath": "testcases/ac7dc6/e68cdbe91c114225b5fd441fe00ea758ca3f1cf0.html",
       "expected": "failed",
       "ruleId": "ac7dc6",
-      "ruleName": "`video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24955,7 +24955,7 @@
       "relativePath": "testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "`video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24973,7 +24973,7 @@
       "relativePath": "testcases/ac7dc6/e33bdd1fbdb40749eae23ee5cb90ec309fcf2646.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "`video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24991,7 +24991,7 @@
       "relativePath": "testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "`video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {

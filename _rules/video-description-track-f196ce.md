@@ -1,6 +1,6 @@
 ---
 id: f196ce
-name: '`video` element visual content has description track'
+name: 'DEPRECATED — `video` element visual content has description track'
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
@@ -27,6 +27,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+deprecated: |
+  This rule has been deprecated as descriptions tracks were removed in [#1665](https://github.com/act-rules/act-rules.github.io/pull/1665) as a way to provide video alternative. This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

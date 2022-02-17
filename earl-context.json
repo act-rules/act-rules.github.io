@@ -14,6 +14,25 @@
 		"source": "dct:source",
 		"redirectedTo": "dct:source",
 		"title": "dct:title",
+		"Project": "doap:Project",
+		"Version": "doap:Version",
+		"name": "doap:name",
+		"description": "doap:description",
+		"shortdesc": "doap:shortdesc",
+		"created": "doap:created",
+		"release": "doap:release",
+		"revision": "doap:revision",
+		"homepage": {
+			"@id": "doap:homepage",
+			"@type": "@id"
+		},
+		"license": {
+			"@id": "doap:license",
+			"@type": "@id"
+		},
+		"assertedThat": {
+			"@reverse": "assertedBy"
+		},
 		"assertions": {
 			"@reverse": "subject"
 		},

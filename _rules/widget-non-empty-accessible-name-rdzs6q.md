@@ -62,6 +62,7 @@ _There are currently no assumptions_
 - Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
+- Some elements have a role of `button` and a default accessible name defined by the [HTML Accessibility API Mapping][html aam input button], for example `input` elements whose `type` [attribute value][] is either `submit` or `reset`. This rule considers that these default names can be descriptive and therefore does not fail them.
 
 ## Background
 

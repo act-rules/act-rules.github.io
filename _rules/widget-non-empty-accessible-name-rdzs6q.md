@@ -32,7 +32,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has a [semantic role][] that is one of the following [semantic roles][]:
+This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and has a [semantic role][] that is or inherits from one of the following [semantic roles][]:
 
 - `button`; or
 - `checkbox`; or
@@ -61,6 +61,7 @@ _There are currently no assumptions_
 
 - Certain assistive technologies can be set up to ignore the title attribute, which means that to some users the title attribute will not act as an [accessible name][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
 
 ## Background
 

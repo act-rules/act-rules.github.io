@@ -51,7 +51,7 @@ acknowledgments:
   funding:
     - WAI-Tools
   assets:
-    - Rabbit video is (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
     - Web Accessibility Perspective videos by W3C WAI.
 ---
 

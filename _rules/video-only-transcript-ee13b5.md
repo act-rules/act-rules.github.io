@@ -23,7 +23,7 @@ acknowledgments:
   funding:
     - WAI-Tools
   assets:
-    - Rabbit video is (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

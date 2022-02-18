@@ -72,7 +72,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Accessibility Support
 
-The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
+The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
 ## Background
 

@@ -6056,10 +6056,10 @@
       }
     },
     {
-      "testcaseId": "5173d391c6023c70c855a97043536bff25f36947",
+      "testcaseId": "d2670ce730c1be7a8876a2837d5f1b1fb6e83ac6",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/off6ek/5173d391c6023c70c855a97043536bff25f36947.html",
-      "relativePath": "testcases/off6ek/5173d391c6023c70c855a97043536bff25f36947.html",
+      "url": "https://act-rules.github.io/testcases/off6ek/d2670ce730c1be7a8876a2837d5f1b1fb6e83ac6.html",
+      "relativePath": "testcases/off6ek/d2670ce730c1be7a8876a2837d5f1b1fb6e83ac6.html",
       "expected": "passed",
       "ruleId": "off6ek",
       "ruleName": "HTML element language subtag matches language",
@@ -6512,10 +6512,10 @@
       }
     },
     {
-      "testcaseId": "3d88fcac3f4f0baf9ae51952540ce0a35e2dd42b",
+      "testcaseId": "3bc716b9f3d4789c4a6aea4787d273b72a41d153",
       "testcaseTitle": "Passed Example 5",
-      "url": "https://act-rules.github.io/testcases/de46e4/3d88fcac3f4f0baf9ae51952540ce0a35e2dd42b.html",
-      "relativePath": "testcases/de46e4/3d88fcac3f4f0baf9ae51952540ce0a35e2dd42b.html",
+      "url": "https://act-rules.github.io/testcases/de46e4/3bc716b9f3d4789c4a6aea4787d273b72a41d153.html",
+      "relativePath": "testcases/de46e4/3bc716b9f3d4789c4a6aea4787d273b72a41d153.html",
       "expected": "passed",
       "ruleId": "de46e4",
       "ruleName": "Element with `lang` attribute has valid language tag",
@@ -9369,10 +9369,10 @@
       }
     },
     {
-      "testcaseId": "1c6ec3a424d066eca3efb24a313ece57f84ba3f4",
+      "testcaseId": "7be069572fd0b44a568ac14dd5d9fdaf79b2e0b0",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/ucwvc8/1c6ec3a424d066eca3efb24a313ece57f84ba3f4.html",
-      "relativePath": "testcases/ucwvc8/1c6ec3a424d066eca3efb24a313ece57f84ba3f4.html",
+      "url": "https://act-rules.github.io/testcases/ucwvc8/7be069572fd0b44a568ac14dd5d9fdaf79b2e0b0.html",
+      "relativePath": "testcases/ucwvc8/7be069572fd0b44a568ac14dd5d9fdaf79b2e0b0.html",
       "expected": "passed",
       "ruleId": "ucwvc8",
       "ruleName": "HTML page language subtag matches default language",
@@ -9705,10 +9705,10 @@
       }
     },
     {
-      "testcaseId": "dfb5c0b5168f4b961f2f7a1c5bfa4cd1d96faf0a",
+      "testcaseId": "420078615633798993938edd512033d9a88020bb",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/bf051a/dfb5c0b5168f4b961f2f7a1c5bfa4cd1d96faf0a.html",
-      "relativePath": "testcases/bf051a/dfb5c0b5168f4b961f2f7a1c5bfa4cd1d96faf0a.html",
+      "url": "https://act-rules.github.io/testcases/bf051a/420078615633798993938edd512033d9a88020bb.html",
+      "relativePath": "testcases/bf051a/420078615633798993938edd512033d9a88020bb.html",
       "expected": "passed",
       "ruleId": "bf051a",
       "ruleName": "HTML page `lang` attribute has valid language tag",
@@ -9873,10 +9873,10 @@
       }
     },
     {
-      "testcaseId": "d142ede8fa654921d3f3dde67124f9aa067262a7",
+      "testcaseId": "36d59e8a65d283c335b9acbe8e55b77a527b82ca",
       "testcaseTitle": "Passed Example 1",
-      "url": "https://act-rules.github.io/testcases/5b7ae0/d142ede8fa654921d3f3dde67124f9aa067262a7.html",
-      "relativePath": "testcases/5b7ae0/d142ede8fa654921d3f3dde67124f9aa067262a7.html",
+      "url": "https://act-rules.github.io/testcases/5b7ae0/36d59e8a65d283c335b9acbe8e55b77a527b82ca.html",
+      "relativePath": "testcases/5b7ae0/36d59e8a65d283c335b9acbe8e55b77a527b82ca.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
       "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",

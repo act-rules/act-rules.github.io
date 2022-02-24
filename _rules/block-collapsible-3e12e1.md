@@ -46,7 +46,9 @@ _There are no major accessibility support issues known for this rule._
 
 Usually the same [instrument][] removes both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a [block of repeated content][]. That [instrument][] may remove all [blocks of repeated content][block of repeated content]. If there is no [block of repeated content][] before the non-repeated content the rule passes.
 
-[Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not have any requirements concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document. Notably, [instruments][instrument] located after (in reading order) the block they collapse are likely not satisfying [Success Criterion 2.4.1 Bypass blocks][sc241], which this rule is designed for. Thus, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241].
+[Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28] does not have any requirements concerning the location of the [instruments][instrument] in relation to the [block of repeated content][] they control, hence this rule doesn't. It is likely a good idea to either keep each [instrument][] close to the start of the [block of repeated content][] it controls; or to group them all in one place near the start of the document.
+
+[Instruments][instrument] located after the block they collapse in reading order are likely not satisfying [Success Criterion 2.4.1 Bypass blocks][sc241], which this rule is designed for. Thus, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241].
 
 ### Bibliography
 

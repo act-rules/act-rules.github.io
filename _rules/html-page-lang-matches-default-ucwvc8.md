@@ -104,7 +104,7 @@ This page has a `lang` [attribute value][] of `en` (English), which matches the 
 This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
-<html lang="en">
+<html lang="EN">
 	<head>
 		<title>Gelukkig</title>
 	</head>

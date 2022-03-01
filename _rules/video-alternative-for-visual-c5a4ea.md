@@ -138,7 +138,7 @@ A video element with a track element that contains descriptions.
 
 #### Passed Example 4
 
-The video element describes some of the text on the same page. The text identifies the video as an alternative.
+This video element describes some of the text on the same page. The text identifies the video as an alternative.
 
 
 

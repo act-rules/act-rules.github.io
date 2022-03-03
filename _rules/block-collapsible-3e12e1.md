@@ -29,7 +29,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each [block of repeated content][] which is before at least one node of [non-repeated content after repeated content][] in the [flat tree][], all the following are true:
+For each test target, and each of its [block of repeated content][] which is before at least one node of [non-repeated content after repeated content][] in the [flat tree][], all the following are true:
 
 - there exists an [instrument][] to make all nodes in this [block][] not [visible][]; and
 - there exists an [instrument][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].

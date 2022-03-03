@@ -3,7 +3,7 @@ id: e88epe
 name: Image not in the accessibility tree is decorative
 rule_type: atomic
 description: |
-  This rule checks that visible img, svg and canvas elements that are ignored by assistive technologies are decorative
+  This rule checks that visible `img`, `svg` and `canvas` elements that are ignored by assistive technologies are decorative.
 accessibility_requirements:
   wcag20:1.1.1: # Non-text content (A)
     forConformance: true
@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
   assets:
     - W3C
     - Wikimedia
@@ -30,13 +32,13 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and for which one of the following is true:
+This rule applies to any `img`, `canvas` or `svg` element that is [visible][] and for which at least one of the following is true:
 
 - **excluded**: The element is not [included in the accessibility tree][]; or
 - **ignored svg**: The element is an `svg` with an empty (`""`) [accessible name][] and a [semantic role][] of `graphics-document`; or
 - **ignored canvas**: The element is a `canvas` with an empty (`""`) [accessible name][] and no [explicit semantic role][]; or
 
-**Exception**: This rule never applies to elements for which one of the following is true:
+**Exception**: This rule never applies to elements for which one or more of the following is true:
 
 - The element has an [ancestor][] in the [flat tree][] that is [named from author][]; or
 - The element is an `img` element where the [current request][]'s [state][image request state] is not [completely available][].
@@ -60,6 +62,8 @@ Each test target is [purely decorative][].
 _No accessibility support issues known._
 
 ## Background
+
+### Bibliography
 
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67.html)
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)

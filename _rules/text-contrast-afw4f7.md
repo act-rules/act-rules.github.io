@@ -24,14 +24,16 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an HTML element, except if the [text node][] has an [ancestor][] in the [flat tree][] for which one of the following is true:
+This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **widget**: the ancestor is a [semantic widget][]; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [semantic widget][] that is [disabled][]; or
+- **widget**: the ancestor is a [inheriting semantic][] `widget`; or
+- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
 - **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
 
 ## Expectation
@@ -60,6 +62,8 @@ Passing this rule does not mean that the text has sufficient color contrast. If 
 This rule is designed specifically for [1.4.3 Contrast (Minimum)][sc143], which has the expected contrast ratio of 4.5:1 (or 3:1 for large text). Because text that fails a contrast ratio of 4.5:1 also fails a contrast ratio of 7:1, this rule maps to [1.4.6 Contrast (Enhanced)][sc146] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [1.4.6 Contrast (Enhanced)][sc146].
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
@@ -398,6 +402,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
 [sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[semantic widget]: #semantic-widget 'Definition of Semantic Widget'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
+[html element]: #namespaced-element

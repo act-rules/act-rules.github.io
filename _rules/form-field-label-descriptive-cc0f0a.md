@@ -27,6 +27,8 @@ acknowledgments:
   previous_authors:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -60,13 +62,13 @@ and where both the element and the [programmatic label][] are [visible][].
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
-**Note:** It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note:** It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Headings and Labels][sc246].
 
-**Note:** Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Heading and Labels][sc246].
+**Note:** Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Headings and Labels][sc246].
 
 ## Assumptions
 
-- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Heading and Labels][sc246].
+- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
 - This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
@@ -75,6 +77,8 @@ Each test target, together with its [visual context][], describes the purpose of
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+### Bibliography
 
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
@@ -272,11 +276,11 @@ The `span` element is not a [programmatic label][] of any element.
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatic label]: #programmatic-label 'Definition of programmatic label'
-[sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Heading and Labels'
+[sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Headings and Labels'
 [sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
 [sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Heading and Labels'
+[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Headings and Labels'
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'
 [visual context]: #visual-context 'Definition of visual context'

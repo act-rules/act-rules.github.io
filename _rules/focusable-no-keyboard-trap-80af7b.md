@@ -29,17 +29,19 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule only applies to any HTML or SVG element that is [focusable][].
+This rule only applies to any [HTML or SVG element][] that is [focusable][].
 
 **Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ## Expectation
 
-For each test target, the [outcome](#outcome) of one of the following rules is "passed":
+For each test target, the [outcome](#outcome) of at least one of the following rules is "passed":
 
 - [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://act-rules.github.io/rules/a1b64e)
 - [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://act-rules.github.io/rules/ebe86a)
@@ -53,6 +55,8 @@ _There are currently no assumptions._
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
 - [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
@@ -302,3 +306,4 @@ Hidden element using `visibility:hidden`.
 ```
 
 [focusable]: #focusable 'Definition of focusable'
+[html or svg element]: #namespaced-element

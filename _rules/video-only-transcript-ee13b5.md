@@ -20,6 +20,8 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -45,7 +47,10 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+
+### Bibliography
+
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159)
 
@@ -64,14 +69,14 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
 
 #### Passed Example 2
 
-This `video` element, which has no audio, has a transcript which does not convey information included in the video-only content. The transcript is available through a link on the same page.
+This `video` element, which has no audio, has a transcript which conveys information included in the video-only content. The transcript is available through a link on the same page.
 
 ```html
 <html lang="en">
@@ -96,14 +101,14 @@ This `video` element, which has no audio, has an incorrect text transcript avail
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat dog climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
 
 #### Failed Example 2
 
-This `video` element, which has no audio, has a incorrect text transcript available through a link on the same page.
+This `video` element, which has no audio, has an incorrect text transcript available through a link on the same page.
 
 ```html
 <html lang="en">
@@ -126,7 +131,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
@@ -142,7 +147,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```

@@ -18,6 +18,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -49,6 +51,8 @@ The list of roles in the applicability is derived by taking all the roles from [
 Note that this rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
+
+### Bibliography
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
@@ -106,7 +110,7 @@ This `textarea` element has an [accessible name][] because of its `aria-labelled
 
 This `input` element has an [accessible name][] because of its `placeholder` attribute.
 
-**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a users starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
+**Note**: While the `placeholder` attribute is sufficient to provide an [accessible name][], a [visible][] [label][] that does not disappear when a user starts to enter data is still required for [success criterion 3.3.2 Labels or Instructions][sc332].
 
 ```html
 <input placeholder="Your search query" /> <button type="submit">search</button>
@@ -114,11 +118,19 @@ This `input` element has an [accessible name][] because of its `placeholder` att
 
 #### Passed Example 6
 
-This element with a `combobox` [role][semantic role] has an [accessible name][] because of its `aria-label` attribute.
+This [semantic][semantic role] `combobox` element has an [accessible name][] because of its `aria-label` attribute.
 
 ```html
 <div>Country</div>
 <div aria-label="country" role="combobox" aria-disabled="true">England</div>
+```
+
+#### Passed Example 7
+
+This [semantic][semantic role] `checkbox` element has the text content as its [accessible name][].
+
+```html
+<div role="checkbox">I agree to the terms and conditions.</div>
 ```
 
 ### Failed
@@ -161,7 +173,7 @@ This `select` element has an empty (`""`) [accessible name][] because the `div` 
 
 #### Failed Example 5
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form fields.
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The parent `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
 <label>
@@ -172,11 +184,19 @@ This element with a `textbox` [role][semantic role] has an empty (`""`) [accessi
 
 #### Failed Example 6
 
-This element with a `textbox` [role][semantic role] has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The `label` element does not give it an [accessible name][], this only works for native form fields.
 
 ```html
-<label for="lastname">first name</label>
-<div role="textbox" id="lastname"></div>
+<label for="firstname">first name</label>
+<div role="textbox" id="firstname"></div>
+```
+
+#### Failed Example 7
+
+This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible name][]. The text content of the element serves as its value, not as an [accessible name][].
+
+```html
+<div role="textbox">first name</div>
 ```
 
 ### Inapplicable
@@ -199,7 +219,7 @@ This `input` element is not [included in the accessibility tree][] because of it
 
 #### Inapplicable Example 3
 
-This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "presentation".
+This `select` element is not [included in the accessibility tree][] because it is `disabled` and has a `role` attribute value of "none".
 
 ```html
 <select role="none" disabled>
@@ -212,8 +232,7 @@ This `select` element is not [included in the accessibility tree][] because it i
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict 
-Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of Visible'

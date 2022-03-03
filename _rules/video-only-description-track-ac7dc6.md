@@ -1,6 +1,6 @@
 ---
 id: ac7dc6
-name: '`video` element visual-only content has description track'
+name: 'DEPRECATED — `video` element visual-only content has description track'
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
@@ -20,6 +20,10 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+deprecated: |
+  This rule has been deprecated as descriptions tracks were removed in [#1665](https://github.com/act-rules/act-rules.github.io/pull/1665) as a way to provide video alternative. This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability
@@ -41,7 +45,10 @@ Currently the description track is not supported by most assistive technologies.
 
 ## Background
 
-- Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
+Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
+
+### Bibliography
+
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 

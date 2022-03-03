@@ -15,10 +15,12 @@ input_aspects:
   - CSS Styling
   - Accessibility Tree
 acknowledgments:
-  audio file:
-    - audio is an excerpt from JFK's 'Moon Speech'
   authors:
     - António Estriga
+  funding:
+    - WAI-Tools
+  assets:
+    - audio is an excerpt from JFK's 'Moon Speech'
 ---
 
 ## Applicability
@@ -40,6 +42,8 @@ Non-supported media formats make screen readers render the text content of the e
 ## Background
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 

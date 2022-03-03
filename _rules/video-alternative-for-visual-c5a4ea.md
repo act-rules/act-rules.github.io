@@ -140,8 +140,6 @@ A video element with a track element that contains descriptions.
 
 This video element describes some of the text on the same page. The text identifies the video as an alternative.
 
-
-
 ```html
 <html lang="en">
 	<p>

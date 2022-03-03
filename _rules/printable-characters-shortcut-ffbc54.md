@@ -63,6 +63,7 @@ The "Turn off" and "Remap" requirements from [Success Criterion 2.1.4][sc2.1.4] 
 <summary>
 These Javascript and Style files are used in several examples:
 </summary>
+
 File [`/test-assets/ffbc54/shortcut.js](/test-assets/ffbc54/shortcut.js):
 
 ```javascript

@@ -28,11 +28,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any non-focusable `iframe` element that has focusable content.
+This rule applies to any non-focusable `iframe` element that has [focusable][] content.
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not contain elements that are [visible][] and part of the [sequential focus navigation][]. 
+For each test target, the [nested browsing context][] does not [contain](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
+
+An element is <dfn id="#akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Assumptions
 

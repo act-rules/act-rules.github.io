@@ -117,4 +117,3 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [visible]: #visible 'Definition of visible'
 [focusable]: #focusable 'Definition of focusable'
-[contain]: #contain 'Definition of contain'

@@ -116,3 +116,5 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [visible]: #visible 'Definition of visible'
+[focusable]: #focusable 'Definition of focusable'
+[contain]: #contain 'Definition of contain'

@@ -161,7 +161,8 @@
 	"scripts": {
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
-		"test": "jest --coverage"
+		"test": "jest --coverage",
+		"build:wai": "zx .github/scripts/wai-build.mjs"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -210,5 +211,9 @@
 		"hooks": {
 			"pre-commit": "lint-staged"
 		}
+	},
+	"dependencies": {
+		"act-tools": "github:act-rules/act-tools#main",
+		"zx": "^5.2.0"
 	}
 }

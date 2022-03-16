@@ -25,8 +25,6 @@ acknowledgments:
 
 This rule applies to any [HTML or SVG element][] that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
-
 ## Expectation 1
 
 For each target element help information is [visible](#visible) and [included in the accessibility tree](#included-in-the-accessibility-tree) or can be accessed from within the keyboard trap.
@@ -53,6 +51,8 @@ For each target element focus can cycle to the browser UI by using the method ad
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Bibliography
 

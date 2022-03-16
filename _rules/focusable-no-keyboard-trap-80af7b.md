@@ -97,18 +97,27 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 ```html
 <script>
 	var trapOn = false
+
+	const moveFocusToButton = btn => {
+		if (trapOn) {
+			document.getElementById(btn).focus()
+		}
+	}
+
+	const escapeTrapOnCtrlM = e => {
+		if (e.keyCode === 77 && e.ctrlKey) {
+			trapOn = false
+			document.getElementById('link2').focus()
+		}
+	}
 </script>
 
 <p>Press Ctrl+M to Exit</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77 && e.ctrlKey){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -121,18 +130,27 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 ```html
 <script>
 	var trapOn = false
+
+	const moveFocusToButton = btn => {
+		if (trapOn) {
+			document.getElementById(btn).focus()
+		}
+	}
+
+	const escapeTrapOnCtrlM = e => {
+		if (e.keyCode === 77 && e.ctrlKey) {
+			trapOn = false
+			document.getElementById('link2').focus()
+		}
+	}
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
 <p>Press Ctrl+M to Exit</p>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77 && e.ctrlKey){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -146,21 +164,32 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 <script>
 	var trapOn = false
 
-	function showHelpText() {
+	const showHelpText = () => {
 		document.getElementById('helptext').innerHTML = '<p>Press Ctrl+M to Exit</p>'
+	}
+
+	const moveFocusTo = elm => {
+		if (trapOn) {
+			document.getElementById(elm).focus()
+		}
+	}
+
+	const escapeTrapOnCtrlM = e => {
+		if (e.keyCode === 77 && e.ctrlKey) {
+			trapOn = false
+			document.getElementById('link2').focus()
+		}
 	}
 </script>
 
-<div
-	onkeydown="(function(e){ if (e.keyCode === 77 && e.ctrlKey){trapOn=false;document.getElementById('link2').focus();}})(event)"
->
+<div onkeydown="escapeTrapOnCtrlM(event)">
 	<a id="link1" href="#">Link 1</a>
-	<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('helpLink').focus();})(event)">
+	<button id="btn1" onfocus="trapOn = true" onblur="moveFocusTo('helpLink')">
 		Button 1
 	</button>
 	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+	<button id="btn2" onblur="moveFocusTo('btn1')">
 		Button 2
 	</button>
 </div>
@@ -213,17 +242,26 @@ These focusable `button` elements create a keyboard trap with no instructions.
 ```html
 <script>
 	var trapOn = false
+
+	const moveFocusToButton = btn => {
+		if (trapOn) {
+			document.getElementById(btn).focus()
+		}
+	}
+
+	const escapeTrapOnCtrlM = e => {
+		if (e.keyCode === 77 && e.ctrlKey) {
+			trapOn = false
+			document.getElementById('link2').focus()
+		}
+	}
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77 && e.ctrlKey){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -236,18 +274,27 @@ These focusable `button` elements create a keyboard trap with instructions that 
 ```html
 <script>
 	var trapOn = false
+
+	const moveFocusToButton = btn => {
+		if (trapOn) {
+			document.getElementById(btn).focus()
+		}
+	}
+
+	const escapeTrapOnCtrlM = e => {
+		if (e.keyCode === 77 && e.ctrlKey) {
+			trapOn = false
+			document.getElementById('link2').focus()
+		}
+	}
 </script>
 
 <p>Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77 && e.ctrlKey){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -260,14 +307,20 @@ These focusable `button` elements create a keyboard trap with help text, where t
 ```html
 <script>
 	var trapOn = false
+
+	const moveFocusToButton = (btn) => {
+		if (trapOn) {
+			document.getElementById(btn).focus();
+		}
+	}
 </script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')"">
 	Button 1
 </button>
 <p>Press Ctrl+M to Exit</p>
-<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>

@@ -76,7 +76,7 @@ These [focusable][] elements do not create a trap for keyboard navigation.
 
 #### Passed Example 2
 
-This [focusable][] element does not create a trap for keyboard navigation.
+This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -84,7 +84,7 @@ This [focusable][] element does not create a trap for keyboard navigation.
 
 #### Passed Example 3
 
-This [focusable][] element does not create a trap for keyboard navigation.
+This element is made [focusable][] by the `tabindex` attribute, even if it is not part of the sequential focus navigation. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -92,7 +92,7 @@ This [focusable][] element does not create a trap for keyboard navigation.
 
 #### Passed Example 4
 
-These focusable `button` elements create a keyboard trap with help information in a paragraph before, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a paragraph before the `button` elements and the method advised works to escape the keyboard trap.
 
 ```html
 <script>
@@ -116,7 +116,7 @@ These focusable `button` elements create a keyboard trap with help information i
 
 #### Passed Example 5
 
-These focusable `button` elements create a keyboard trap with help information within the trap, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information within the trap and the method advised works to escape the keyboard trap.
 
 ```html
 <script>
@@ -140,7 +140,7 @@ These focusable `button` elements create a keyboard trap with help information w
 
 #### Passed Example 6
 
-These focusable `button` elements create a keyboard trap with "help" link that once clicked exposes the instructions.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in an "help" link that once clicked exposes the instructions to escape the keyboard trap.
 
 ```html
 <script>
@@ -171,7 +171,7 @@ These focusable `button` elements create a keyboard trap with "help" link that o
 
 #### Failed Example 1
 
-This [focusable][] element creates a keyboard trap.
+This [focusable][] element creates a keyboard trap brining focus to the `button`.
 
 ```html
 <a href="#">Link 1</a>
@@ -182,7 +182,7 @@ This [focusable][] element creates a keyboard trap.
 
 #### Failed Example 2
 
-These [focusable][] elements create a keyboard trap.
+These [focusable][] `button` elements create a keyboard trap preventing the last `button` to be reached using the keyboard.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
@@ -198,7 +198,7 @@ These [focusable][] elements create a keyboard trap.
 
 #### Failed Example 3
 
-This `button` element is between other `button` elements creating keyboard traps.
+This `button` element is between other `button` elements creating a keyboard trap.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -231,7 +231,7 @@ These focusable `button` elements create a keyboard trap with no instructions.
 
 #### Failed Example 5
 
-These focusable `button` elements create a keyboard trap with instructions that don't give advise on the method for proceeding.
+These focusable `button` elements create a keyboard trap with instructions that don't give advice on the method for proceeding.
 
 ```html
 <script>

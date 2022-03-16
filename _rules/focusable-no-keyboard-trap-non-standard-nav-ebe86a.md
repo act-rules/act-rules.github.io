@@ -66,7 +66,7 @@ This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0
 
 #### Passed Example 1
 
-These focusable `button` elements create a keyboard trap with help information in a paragraph before, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a paragraph before the `button` elements and the method advised works to escape the keyboard trap.
 
 ```html
 <script>
@@ -90,7 +90,7 @@ These focusable `button` elements create a keyboard trap with help information i
 
 #### Passed Example 2
 
-These focusable `button` elements create a keyboard trap with help information within the trap, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information within the trap and the method advised works to escape the keyboard trap.
 
 ```html
 <script>
@@ -114,7 +114,7 @@ These focusable `button` elements create a keyboard trap with help information w
 
 #### Passed Example 3
 
-These focusable `button` elements create a keyboard trap with "help" link that once clicked exposes the instructions.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in an "help" link that once clicked exposes the instructions to escape the keyboard trap.
 
 ```html
 <script>
@@ -168,7 +168,7 @@ These focusable `button` elements create a keyboard trap with no instructions.
 
 #### Failed Example 2
 
-These focusable `button` elements create a keyboard trap with instructions that don't give advise on the method for proceeding.
+These focusable `button` elements create a keyboard trap with instructions that don't give advice on the method for proceeding.
 
 ```html
 <script>

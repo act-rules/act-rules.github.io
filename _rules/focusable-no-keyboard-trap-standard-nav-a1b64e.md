@@ -64,7 +64,7 @@ These [focusable][] elements do not create a trap for keyboard navigation.
 
 #### Passed Example 2
 
-This [focusable][] element does not create a trap for keyboard navigation.
+This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -72,7 +72,7 @@ This [focusable][] element does not create a trap for keyboard navigation.
 
 #### Passed Example 3
 
-This [focusable][] element does not create a trap for keyboard navigation.
+This element is made [focusable][] by the `tabindex` attribute, even if it is not part of the sequential focus navigation. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -82,7 +82,7 @@ This [focusable][] element does not create a trap for keyboard navigation.
 
 #### Failed Example 1
 
-This [focusable][] element creates a keyboard trap.
+This [focusable][] element creates a keyboard trap brining focus to the `button`.
 
 ```html
 <a href="#">Link 1</a>
@@ -93,7 +93,7 @@ This [focusable][] element creates a keyboard trap.
 
 #### Failed Example 2
 
-These [focusable][] elements create a keyboard trap.
+These [focusable][] `button` elements create a keyboard trap preventing the last `button` to be reached using the keyboard.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">

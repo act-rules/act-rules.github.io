@@ -37,8 +37,6 @@ acknowledgments:
 
 This rule applies to any [HTML or SVG element][] that is [focusable][].
 
-**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
-
 ## Expectation
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is "passed":
@@ -55,6 +53,8 @@ _There are currently no assumptions._
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
 ### Bibliography
 

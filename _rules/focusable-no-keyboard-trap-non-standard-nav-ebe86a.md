@@ -17,11 +17,13 @@ acknowledgments:
     - Malin Øvrebø
     - Shadi Abou-Zahra
     - Stein Erik Skotkjerra
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML or SVG element that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
+This rule applies to any [HTML or SVG element][] that is [focusable](#focusable) where focus cannot cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
 **Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
 
@@ -51,6 +53,8 @@ For each target element focus can cycle to the browser UI by using the method ad
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
 - [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
@@ -216,3 +220,5 @@ Not a keyboard trap (interactive element).
 <button id="btn2">Button 2</button>
 <a id="link2" href="#">Link 2</a>
 ```
+
+[html or svg element]: #namespaced-element

@@ -10,17 +10,14 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.10: # Reflow (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -49,6 +46,8 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 ## Background
 
 This rule is designed specifically for [1.4.4 Resize text][sc144], which requires that text can be resized up to 200%. Because text that can not be resized up to 200% can not fit in an area of 320 by 256 [CSS pixels][], this rule maps to [1.4.10 Reflow][sc1410] as well. All passed examples in this rule satisfy both success criteria.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
 - [HTML Specification - The `meta` element][meta]
@@ -232,8 +231,8 @@ There is no viewport `meta` element.
 ```html
 <html>
 	<head>
-		<title>Simple page showing random text</title>
-		<meta http-equiv="refresh" content="10; URL='https://github.com'" />
+		<title>Lorem ipsum</title>
+		<meta charset="UTF-8" />
 	</head>
 	<body>
 		<p>

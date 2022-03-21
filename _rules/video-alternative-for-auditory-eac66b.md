@@ -32,6 +32,10 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -47,7 +51,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-- This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
+- This rule assumes that the video element is used to play synchronized media (video with audio), and that there is a mechanism to start the media.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
@@ -55,6 +59,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded)
 - [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G93)
@@ -84,9 +90,10 @@ A video element that describes some of the text on the same page. The text on th
 ```html
 <html lang="en">
 	<p>
-		Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
-		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
-		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse
+		doesn't work, is frustrating. Many people use only the keyboard to navigate websites. Either through preference or
+		circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+		below to watch the same information again in video form.
 	</p>
 	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 </html>
@@ -123,7 +130,7 @@ A video element that describes some of the text on the same page. The video cont
 
 #### Inapplicable Example 1
 
-A video element without that is not [visible][].
+A video element that is not [visible][].
 
 ```html
 <html lang="en">

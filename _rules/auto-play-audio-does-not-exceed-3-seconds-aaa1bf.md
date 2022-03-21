@@ -19,16 +19,21 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
 
 This rule applies to any `audio` or `video` element for which all the following are true:
 
-- (**autoplay**) the element has an `autoplay` [attribute value][] of `true`; and
-- (**not muted**) the element has a `muted` [attribute value][] of `false`; and
-- (**not paused**) the element has a `paused` [attribute value][] of `false`; and
-- (**duration**) the element has a [media resource][] lasting more than 3 seconds and that contains audio.
+- **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
+- **not muted**: the element has a `muted` [attribute value][] of `false`; and
+- **not paused**: the element has a `paused` [attribute value][] of `false`; and
+- **duration**: the element has a [media resource][] lasting more than 3 seconds that contains audio.
 
 ## Expectation
 
@@ -42,9 +47,11 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG21/Techniques/failures/F23)

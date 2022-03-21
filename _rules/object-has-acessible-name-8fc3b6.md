@@ -15,10 +15,13 @@ input_aspects:
   - CSS Styling
   - Accessibility Tree
 acknowledgments:
-  audio file:
-    - audio is an excerpt from JFK's 'Moon Speech'
   authors:
     - António Estriga
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -40,6 +43,8 @@ Non-supported media formats make screen readers render the text content of the e
 ## Background
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 

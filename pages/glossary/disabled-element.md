@@ -7,7 +7,7 @@ input_aspects:
   - DOM tree
 ---
 
-An element is _disabled_ when it has been rendered [inoperable][] in one of the following ways:
+An element is _disabled_ when it has been rendered [inoperable][] in one or more of the following ways:
 
 1. The element matches the [`:disabled` pseudo-class][disabled pseudo-class]. For HTML elements this means that the element is [actually disabled][].
 

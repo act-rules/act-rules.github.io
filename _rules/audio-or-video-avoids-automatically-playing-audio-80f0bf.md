@@ -38,6 +38,11 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -48,10 +53,10 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element for which all the following are true:
 
-- (**autoplay**) the element has an `autoplay` [attribute value][] of `true`; and
-- (**not muted**) the element has a `muted` [attribute value][] of `false`; and
-- (**not paused**) the element has a `paused` [attribute value][] of `false`; and
-- (**duration**) the element has a [media resource][] lasting more than 3 seconds and that contains audio.
+- **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
+- **not muted**: the element has a `muted` [attribute value][] of `false`; and
+- **not paused**: the element has a `paused` [attribute value][] of `false`; and
+- **duration**: the element has a [media resource][] lasting more than 3 seconds and that contains audio.
 
 ## Expectation
 
@@ -63,14 +68,18 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 ## Assumptions
 
 - This rule assumes that it is not possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142] if the total length of the automatically playing audio is more than 3 seconds, even if there are pauses in the sound and no more than 3 seconds in a row with actual sound.
-- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be located in the same [web page][]. Note that mechanisms that are provided by user agents, assistive technologies, or operating systems are hardly testable as they depend on the user. Note that mechanisms that are located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
+- This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be located in the same [web page][]. Mechanisms located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 - This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
 ## Accessibility Support
 
-The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
+The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
 ## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [Accessible Multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia)
@@ -137,7 +146,7 @@ This `video` element autoplays and has an [instrument][] to pause, stop, or turn
 
 #### Failed Example 1
 
-This `audio` element autoplays, lasts for more than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element autoplays, lasts for more than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
@@ -145,7 +154,7 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio
 
 ```html
 <video autoplay>

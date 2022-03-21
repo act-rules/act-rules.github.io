@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that when content is identified through a visual reference, there are also non-visual references identifying the same content.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:1.3.3: # Sensory Characteristics (A)
     forConformance: true
     failed: not satisfied
@@ -31,6 +26,8 @@ acknowledgments:
     - Daniël Strik
     - Jean-Yves Moyen
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -49,7 +46,7 @@ For each test target, either it contains none of the [visual reference words][],
 
 ## Assumptions
 
-- This rule assumes that [visual reference words][] are forms of information conveyed through visual presentation. Therefore, failing this rule fails both [Success Criterion 1.3.1 Info and Relationships][sc131] and [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Visual presentation is not limited to CSS and includes images such as the image of a circle with text.
+- This rule assumes that [visual reference words][] are forms of information conveyed through visual presentation. Therefore, failing this rule fails [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Visual presentation is not limited to CSS and includes images such as the image of a circle with text.
 
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
@@ -61,11 +58,12 @@ _There are no major accessibility support issues known for this rule._
 
 [Visual reference words][] that can be interpreted with the non-sensory meaning include, in English, expressions like "right after this" where "right" is a [visual reference word][] used with the meaning "immediately"; or words like "below" that is often used with the meaning "further in reading order".
 
-The rule doesn't require the non-visual characteristic description to be included in the accessibility tree. If the alternatives are not included in the accessibility tree, only [Success Criteria 1.3.1 Info and Relationships][sc131] would fail instead of both [Success Criterion 1.3.3 Sensory Characteristics][sc133] and [Success Criteria 1.3.1 Info and Relationships][sc131]. Hence, the rule passes in these cases as it is not a failure of all accessibility requirements.
+The rule doesn't require the non-visual characteristic description to be included in the accessibility tree. If the alternatives are not included in the accessibility tree, only [Success Criteria 1.3.1 Info and Relationships][sc131] would fail instead of [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Hence, the rule passes in these cases as it is not a failure of the accessibility requirements of this rule.
 
 The identified web content does not have to be positioned on the same web page and doesn't need to be linked to from the tested web page.
 
-- [WCAG 2.1 - Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+### Bibliography
+
 - [WCAG 2.1 - Understanding Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
 - [G96: Providing textual identification of items that otherwise rely only on sensory information to be understood](https://www.w3.org/WAI/WCAG21/Techniques/general/G96)
 - [F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG21/Techniques/failures/F14)
@@ -288,7 +286,7 @@ This paragraph includes the [visual reference word][] "right". The content in th
 
 #### Passed Example 12
 
-This paragraph includes the [visual reference word][] "right". The content in the second column is identified with the word "right" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
+This paragraph includes the [visual reference word][] "green". The content in the second column is identified with the word "green" but also identified by referencing the word "howdy", thus matching the **non-visual reference** condition. Note that, despite the fact that the text is not included in the accessibility tree, this example is applicable because it is visible.
 
 ```html
 <html lang="en">

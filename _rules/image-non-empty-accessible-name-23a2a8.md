@@ -30,6 +30,8 @@ acknowledgments:
   previous_authors:
     - Anne Thyme Nørregaard
     - Stein Erik Skotkjerra
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -38,7 +40,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to HTML `img` elements and HTML elements with the [semantic role][] of `img`, except if the element has a [hidden state][] of "true".
+This rule applies to [HTML][] `img` elements and [HTML elements][html] that are a [semantic][semantic role] `img`, except if the element is [programmatically hidden][].
 
 ## Expectation
 
@@ -52,10 +54,12 @@ _There are currently no assumptions._
 
 - There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 - There are several popular browsers that do not treat images with empty `alt` attribute as having a role of `presentation` but instead add the `img` element to the accessibility tree with a [semantic role][] of either `img` or `graphic`.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `img` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `img` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Images can have their role set to `presentation` through an empty `alt` attribute. [Presentational Roles Conflict Resolution][] does not specify what to do if such an image is [focusable][] (it only specifies what to do in case of explicit `role="none"` or `role="presentation"`). Some browsers expose these images and some don't. Thus, this rule may fail for technologies that expose these without creating an accessibility issue for users of other technologies.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
@@ -73,7 +77,7 @@ _There are currently no assumptions._
 
 #### Passed Example 1
 
-This HTML `img` element has an [accessible name][] because of the `alt` attribute.
+This `img` element has an [accessible name][] because of the `alt` attribute.
 
 ```html
 <img alt="W3C logo" src="/test-assets/shared/w3c-logo.png" />
@@ -81,7 +85,7 @@ This HTML `img` element has an [accessible name][] because of the `alt` attribut
 
 #### Passed Example 2
 
-This element with a [semantic role][] of `img` has an [accessible name][] because of the `aria-label` attribute.
+This [semantic][semantic role] `img` element has an [accessible name][] because of the `aria-label` attribute.
 
 ```html
 <div
@@ -93,7 +97,7 @@ This element with a [semantic role][] of `img` has an [accessible name][] becaus
 
 #### Passed Example 3
 
-This element with a [semantic role][] of `img` has an [accessible name][] because of an `aria-labelledby` attribute and an element with matching `id`.
+This [semantic][semantic role] `img` element has an [accessible name][] because of an `aria-labelledby` attribute and an element with matching `id`.
 
 ```html
 <div style="display: none" id="img-label">W3C logo</div>
@@ -204,7 +208,7 @@ This `svg` element has an [implicit role][] of `graphics-document`.
 
 #### Inapplicable Example 2
 
-This element with a [semantic role][] of `img` is hidden with `aria-hidden` set to "true".
+This [semantic][semantic role] `img` element is hidden with `aria-hidden` set to "true".
 
 ```html
 <div
@@ -246,6 +250,7 @@ This `img` element is hidden with `visibility: hidden`.
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [implicit role]: #implicit-role 'Definition of implicit role'
-[hidden state]: #hidden-state 'Definition of hidden state'
-[semantic role]: #semantic-role 'Definition of semantic role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[html]: #namespaced-element

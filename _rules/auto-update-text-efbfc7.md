@@ -3,7 +3,7 @@ id: efbfc7
 name: Text content that changes automatically can be paused, stopped or hidden
 rule_type: atomic
 description: |
-  This rule checks that for any text content that automatically changes in a 10 minute time span, there are instruments to pause, stop, or hide it or to control its changing frequency. The arbitrary 10 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
+  This rule checks that for any text content that regularly changes automatically, there are instruments to pause, stop, or hide it or to control its changing frequency.
 accessibility_requirements: # Remove whatever is not applicable
   wcag20:2.2.2: # Pause, Stop, Hide (A)
     forConformance: true
@@ -22,19 +22,21 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][] if:
+This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][], for which all the following is true:
 
-- **changed:** the `innerText` property of the [element][html element] changes multiple times within a 10 minute time span where there is no [user interaction][]; and
-- **no child changed:** the [element][html element] does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
-- **not alone:** the [element][html element] has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
+- **changed:** the `innerText` property of the element changes multiple times within a 10 minute time span where there is no [user interaction][]; and
+- **no child changed:** the element does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
+- **not alone:** the element has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
 
 ## Expectation
 
-For each test target there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve one of the following objectives:
+For each test target there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve at least one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -49,7 +51,7 @@ For each test target there is at least one set of [instruments][instrument], whe
 - The content being changed automatically is information. If the automatically changing content is not information (for example, an ASCII rendered spinning icon that does not provide information on what time is left for a process to end or how much progress has been made) the rule might fail but the success criterion might still be satisfied.
 - Any [content][] changes are enabled by the content of the [HTML document][] the test target belongs to. Changes originating from any other sources (e.g. browser shortcuts, browser extensions, browser settings, user agents, external browser applications) are not considered.
 - All user actions are transmitted by the user agent to the [HTML document][]. If there are other event sources that result from a user action this rule might fail but the success criterion might still be satisfied.
-- Available mechanisms for controlling the content changes rely on [activation][]. If there are other mechanisms that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
+- Available [instruments][instrument] for controlling the content changes rely on [activation][]. If there are other [instruments][instrument] that do not rely on [activation][] then the rule might fail but the success criterion might still be satisfied.
 - If there are other ways to control the automatically changing content that do not require the user to interact with the web page, failing this rule might not be a failure of the success criterion.
 - This rule does not check that the pausing instrument does not tie up the user focus. If that happens, then this rule might pass but the success criterion would not be satisfied.
 
@@ -58,6 +60,12 @@ For each test target there is at least one set of [instruments][instrument], whe
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+The 10 minute time span in the applicability is arbitrary. It is selected so that testing this rule would not become impractical. This 10 minute constraint is not included in WCAG. Content that changes less frequently may fail success criteria 2.2.2 without failing this rule.
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 2.2.2: Pause, Stop, Hide][sc 2.2.2]
 - [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][g186]
@@ -307,7 +315,7 @@ This `span` element with text content that automatically changes multiple times 
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
-[html element]: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+[html element]: #namespaced-element
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text

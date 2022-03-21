@@ -80,7 +80,7 @@ This element is made [focusable][] by the `tabindex` attribute, even if it is no
 
 #### Failed Example 1
 
-This [focusable][] element creates a keyboard trap brining focus to the `button`.
+This [focusable][] element creates a keyboard trap bringing focus to the `button`.
 
 ```html
 <a href="#">Link 1</a>

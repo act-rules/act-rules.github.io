@@ -198,7 +198,7 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 
 #### Failed Example 1
 
-This [focusable][] element creates a keyboard trap brining focus to the `button`.
+This [focusable][] element creates a keyboard trap bringing focus to the `button`.
 
 ```html
 <a href="#">Link 1</a>

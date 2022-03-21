@@ -66,7 +66,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 #### Passed Example 1
 
-This `aria-required` attribute has a valid true/false value.
+This `aria-required` property has a valid true/false value.
 
 ```html
 <div role="textbox" aria-required="true" aria-label="A required textbox"></div>
@@ -74,7 +74,7 @@ This `aria-required` attribute has a valid true/false value.
 
 #### Passed Example 2
 
-This `aria-expanded` attribute has a valid true/false/undefined value.
+This `aria-expanded` state has a valid true/false/undefined value.
 
 ```html
 <div role="button" aria-expanded="undefined">A button</div>
@@ -82,7 +82,7 @@ This `aria-expanded` attribute has a valid true/false/undefined value.
 
 #### Passed Example 3
 
-This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
+This `aria-pressed` state has a valid tristate value.
 
 ```html
 <div role="button" aria-pressed="mixed">An other button</div>
@@ -90,7 +90,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 4
 
-`aria-errormessage` property with valid ID reference value
+This `aria-errormessage` property has a valid ID reference value.
 
 ```html
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
@@ -98,7 +98,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 5
 
-`aria-owns` property with valid ID reference list value
+This `aria-owns` property has a valid ID reference list value.
 
 ```html
 <h1>Shopping list</h1>
@@ -109,7 +109,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 6
 
-`aria-rowindex` property with valid integer value
+This `aria-rowindex` property has a valid integer value.
 
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
@@ -117,7 +117,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 7
 
-`aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties with valid number values
+These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have valid number values.
 
 ```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
@@ -125,7 +125,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 8
 
-`aria-placeholder` property with valid string value
+This `aria-placeholder` property has a valid string value.
 
 ```html
 <div role="textbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
@@ -135,7 +135,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 9
 
-`aria-dropeffect` property with valid token list value
+This `aria-dropeffect` property has a valid token list value.
 
 ```html
 <div role="dialog" aria-dropeffect="copy move"></div>
@@ -143,7 +143,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Passed Example 10
 
-`aria-controls`, which is a required property for the role `scrollbar`, has `ID Reference list` that references at least one element existing in the same document tree.
+This `aria-controls` property, which is required for the role `scrollbar`, has an `ID Reference list` value that references at least one element existing in the same document tree.
 
 ```html
 <div id="content1">Lorem ipsum...</div>
@@ -161,7 +161,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 1
 
-`aria-required` property with invalid true/false value
+This `aria-required` property has an invalid true/false value.
 
 ```html
 <div role="textbox" aria-required="undefined" aria-label="A required textbox"></div>
@@ -169,7 +169,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 2
 
-`aria-expanded` state with invalid true/false/undefined value
+This `aria-expanded` state has an invalid true/false/undefined value.
 
 ```html
 <div role="button" aria-expanded="mixed">A button</div>
@@ -177,7 +177,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 3
 
-`aria-pressed` state with invalid tristate value
+This `aria-pressed` state has an invalid tristate value.
 
 ```html
 <div role="button" aria-pressed="horizontal">An other button</div>
@@ -185,7 +185,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 4
 
-`aria-errormessage` property with invalid ID reference value, since space is not allowed in a single ID
+This `aria-errormessage` property has an invalid ID reference value, since it must reference and single ID and space is not allowed in it.
 
 ```html
 <div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
@@ -193,7 +193,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 5
 
-`aria-rowindex` property with invalid integer value
+This `aria-rowindex` property has an invalid integer value.
 
 ```html
 <div role="gridcell" aria-rowindex="2.5">Fred</div>
@@ -201,7 +201,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 6
 
-`aria-valuemin`, `aria-valuemax` and `aria-valuenow` property with invalid number values
+These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have invalid number values.
 
 ```html
 <div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two" aria-label="Choose a value"></div>
@@ -209,7 +209,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 7
 
-`aria-live` property with invalid token value
+This `aria-live` property has an invalid token value.
 
 ```html
 <div role="main" aria-live="nope"></div>
@@ -217,7 +217,7 @@ This `aria-pressed` attribute has a valid true/false/mixed/undefined value.
 
 #### Failed Example 8
 
-Element with invalid token list value
+This `aria-dropeffect` property has an invalid token list value.
 
 ```html
 <div role="dialog" aria-dropeffect="invalid move"></div>
@@ -225,7 +225,7 @@ Element with invalid token list value
 
 #### Failed Example 9
 
-`aria-expanded` state with invalid true/false/undefined value for custom element
+This `aria-expanded` state has an invalid true/false/undefined value.
 
 ```html
 <my-button role="button" aria-expanded="collapsed">My button</my-button>
@@ -233,7 +233,7 @@ Element with invalid token list value
 
 #### Failed Example 10
 
-`aria-controls`, which is a required property for the role `scrollbar`, references an element that does not exist in the same document tree.
+This `aria-controls` property, which is required for the role `scrollbar`, references an element that does not exist in the same document tree.
 
 ```html
 <div
@@ -250,7 +250,7 @@ Element with invalid token list value
 
 #### Inapplicable Example 1
 
-Element does not have any ARIA states or properties
+This element does not have any ARIA states or properties
 
 ```html
 <div>Some Content</div>
@@ -258,7 +258,7 @@ Element does not have any ARIA states or properties
 
 #### Inapplicable Example 2
 
-Element has ARIA role, but no ARIA states or properties
+This element has an ARIA role, but no ARIA states or properties
 
 ```html
 <div role="button">Some Content</div>
@@ -266,7 +266,7 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable Example 3
 
-`aria-checked` state with empty value
+This `aria-checked` state has an empty value.
 
 **Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However WAI-ARIA 1.1 indicates `aria-checked` has a default value of `undefined`.
 
@@ -276,7 +276,7 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable Example 4
 
-`aria-hidden` state on an element that is not an [HTML or SVG element][].
+This `aria-hidden` state is an attribute for an element that is not an [HTML or SVG element][].
 
 ```xml
 <math aria-hidden="true"></math>

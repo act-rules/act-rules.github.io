@@ -67,22 +67,7 @@ There are no major accessibility support issues known for this rule.
 These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a paragraph before the `button` elements and the method advised works to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
-
-	const moveFocusToButton = btn => {
-		if (trapOn) {
-			document.getElementById(btn).focus()
-		}
-	}
-
-	const escapeTrapOnCtrlM = e => {
-		if (e.keyCode === 77 && e.ctrlKey) {
-			trapOn = false
-			document.getElementById('link2').focus()
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <p>Press Ctrl+M to Exit</p>
 <a id="link1" href="#">Link 1</a>
@@ -100,22 +85,7 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 These focusable `button` elements have scripts that create a keyboard trap. The document includes help information within the trap and the method advised works to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
-
-	const moveFocusToButton = btn => {
-		if (trapOn) {
-			document.getElementById(btn).focus()
-		}
-	}
-
-	const escapeTrapOnCtrlM = e => {
-		if (e.keyCode === 77 && e.ctrlKey) {
-			trapOn = false
-			document.getElementById('link2').focus()
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
@@ -133,26 +103,7 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in an "help" link that once clicked exposes the instructions to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
-
-	const showHelpText = () => {
-		document.getElementById('helptext').innerHTML = '<p>Press Ctrl+M to Exit</p>'
-	}
-
-	const moveFocusTo = elm => {
-		if (trapOn) {
-			document.getElementById(elm).focus()
-		}
-	}
-
-	const escapeTrapOnCtrlM = e => {
-		if (e.keyCode === 77 && e.ctrlKey) {
-			trapOn = false
-			document.getElementById('link2').focus()
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <div onkeydown="escapeTrapOnCtrlM(event)">
 	<a id="link1" href="#">Link 1</a>
@@ -175,22 +126,7 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 These focusable `button` elements create a keyboard trap with no instructions.
 
 ```html
-<script>
-	var trapOn = false
-
-	const moveFocusToButton = btn => {
-		if (trapOn) {
-			document.getElementById(btn).focus()
-		}
-	}
-
-	const escapeTrapOnCtrlM = e => {
-		if (e.keyCode === 77 && e.ctrlKey) {
-			trapOn = false
-			document.getElementById('link2').focus()
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
@@ -207,22 +143,7 @@ These focusable `button` elements create a keyboard trap with no instructions.
 These focusable `button` elements create a keyboard trap with instructions that don't give advice on the method for proceeding.
 
 ```html
-<script>
-	var trapOn = false
-
-	const moveFocusToButton = btn => {
-		if (trapOn) {
-			document.getElementById(btn).focus()
-		}
-	}
-
-	const escapeTrapOnCtrlM = e => {
-		if (e.keyCode === 77 && e.ctrlKey) {
-			trapOn = false
-			document.getElementById('link2').focus()
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <p>Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
@@ -240,15 +161,7 @@ These focusable `button` elements create a keyboard trap with instructions that 
 These focusable `button` elements create a keyboard trap with help text, where the method advised doesn't work.
 
 ```html
-<script>
-	var trapOn = false
-
-	const moveFocusToButton = (btn) => {
-		if (trapOn) {
-			document.getElementById(btn).focus();
-		}
-	}
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
 <button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')"">

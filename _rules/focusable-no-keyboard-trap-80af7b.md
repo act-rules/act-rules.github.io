@@ -31,8 +31,6 @@ acknowledgments:
     - Geir Sindre Fossøy
   funding:
     - WAI-Tools
-htmlHintIgnore:
-  - 'spec-char-escape'
 ---
 
 ## Applicability
@@ -229,7 +227,7 @@ These focusable `button` elements create a keyboard trap with help text, where t
 <script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')"">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')">
 	Button 1
 </button>
 <p>Press Ctrl+M to Exit</p>

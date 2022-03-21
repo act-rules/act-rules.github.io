@@ -31,6 +31,8 @@ acknowledgments:
     - Geir Sindre Fossøy
   funding:
     - WAI-Tools
+htmlHintIgnore:
+  - 'spec-char-escape'
 ---
 
 ## Applicability

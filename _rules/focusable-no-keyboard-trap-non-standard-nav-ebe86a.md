@@ -52,8 +52,6 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
-
 ### Bibliography
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)

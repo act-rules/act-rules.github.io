@@ -13,4 +13,4 @@ jobs:
       - uses: actions/setup-node@v1
       - run: git config user.name "${{ secrets.USER_NAME }}"
       - run: git config user.email "${{ secrets.USER_EMAIL }}"
-      - run: node run build:wai
+      - run: npm run build:wai

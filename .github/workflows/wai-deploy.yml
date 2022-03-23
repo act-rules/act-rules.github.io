@@ -3,7 +3,7 @@ name: wai-deploy
 on:
   push:
     branches:
-      - develop-test
+      - develop
 
 jobs:
   dispatch:

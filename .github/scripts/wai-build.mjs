@@ -44,10 +44,19 @@ async function generateTestCases({ tmpDir, rulesDir, testAssetsDir }) {
 }
 
 async function commitAndPush({ tmpDir }) {
-  const commitMessage = (await $`git log -1 --pretty=%B`).stdout
   cd(tmpDir);
-  await $`git add .`;
-  await $`git commit -m ${commitMessage}`;
-  await $`git push`;
-  cd(`../`);
+  try {
+    const diff = (await $`git diff --name-status`).stdout;
+    if (diff.trim().length === 0) {
+      console.log('No changes detected, skipping git commit')
+      return;
+    }
+  
+    const commitMessage = (await $`git log -1 --pretty=%B`).stdout
+    await $`git add .`;
+    await $`git commit -m ${commitMessage}`;
+    await $`git push`;
+  } finally {
+    cd(`../`);
+  }
 }

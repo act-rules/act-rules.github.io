@@ -13,9 +13,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      # Git setup
       - run: git config --global url."https://${{ secrets.USER_NAME }}:${{ secrets.USER_PAT }}@github.com".insteadOf "https://github.com"
+      - run: git config user.name "${{ secrets.USER_NAME }}"
+      - run: git config user.email "${{ secrets.USER_EMAIL }}"
 
-      # - run: git config user.name "${{ secrets.USER_NAME }}"
-      # - run: git config user.email "${{ secrets.USER_EMAIL }}"
       - run: npm install
       - run: npm run build:wai

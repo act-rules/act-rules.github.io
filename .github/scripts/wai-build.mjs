@@ -19,7 +19,7 @@ async function cloneWcagActRules({ tmpDir }) {
   await $`git clone \
     --single-branch \
     --branch master \
-    git@github.com:w3c/wcag-act-rules.git ${tmpDir} \
+    https://github.com/w3c/wcag-act-rules.git ${tmpDir} \
     --depth 1
   `;
 }

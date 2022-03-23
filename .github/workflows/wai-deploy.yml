@@ -15,8 +15,8 @@ jobs:
           node-version: '14'
       # Git setup
       - run: git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
-      - run: git config user.name "${{ secrets.WAI_GIT_NAME }}"
-      - run: git config user.email "${{ secrets.WAI_GIT_EMAIL }}"
+      - run: git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
+      - run: git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
 
       - run: npm install
       - run: npm run build:wai

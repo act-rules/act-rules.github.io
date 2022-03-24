@@ -105,7 +105,7 @@ This `a` element is not [focusable][] because it moves focus to the `input` elem
     <button>Close button</button>
 </div>
 <div aria-hidden="true">
-    <a href="#" id="sentinelAfter" style="position: absolute; left: -999px;">Focus sentinel</a>
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
 </div>
 <script>
     sentinelAfter.addEventListener("focus", () => {

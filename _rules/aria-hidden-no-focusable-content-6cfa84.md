@@ -106,6 +106,16 @@ This `a` element is part of the [sequential focus navigation][], but moves focus
 <input />
 ```
 
+#### Passed Example 5
+
+This `button` element is [focusable][], but not part of the [sequential focus navigation][] because of the `tabindex` attribute.
+
+```html
+<div aria-hidden="true">
+	<button tabindex="-1">Some button</button>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -149,16 +159,6 @@ This `p` element is part of the [sequential focus navigation][] because of the `
 ```
 
 #### Failed Example 5
-
-This `button` element is part of the [sequential focus navigation][] because of the `tabindex` attribute.
-
-```html
-<div aria-hidden="true">
-	<button tabindex="-1">Some button</button>
-</div>
-```
-
-#### Failed Example 6
 
 This `summary` element is part of the [sequential focus navigation][].
 

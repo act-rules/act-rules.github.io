@@ -1,0 +1,11 @@
+<!DOCTYPE html> <html lang="en">
+	<canvas id="logo" width="72" height="48" aria-label="HTML 5"></canvas>
+	<script>
+		const img = new Image()
+		img.src = '/test-assets/shared/w3c-logo.png'
+		img.onload = function() {
+			const ctx = document.querySelector('#logo').getContext('2d')
+			ctx.drawImage(img, 0, 0)
+		}
+	</script>
+</html>

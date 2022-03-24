@@ -11613,10 +11613,10 @@
       }
     },
     {
-      "testcaseId": "ae213da4816dd48515ff973df1579788bf1c1f33",
+      "testcaseId": "766587b669e2928e8c5f21e3b1cd97e5b3e27a07",
       "testcaseTitle": "Passed Example 3",
-      "url": "https://act-rules.github.io/testcases/qt1vmo/ae213da4816dd48515ff973df1579788bf1c1f33.html",
-      "relativePath": "testcases/qt1vmo/ae213da4816dd48515ff973df1579788bf1c1f33.html",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/766587b669e2928e8c5f21e3b1cd97e5b3e27a07.html",
+      "relativePath": "testcases/qt1vmo/766587b669e2928e8c5f21e3b1cd97e5b3e27a07.html",
       "expected": "passed",
       "ruleId": "qt1vmo",
       "ruleName": "Image accessible name is descriptive",
@@ -11703,10 +11703,10 @@
       }
     },
     {
-      "testcaseId": "4fba9938782523d464380318c97357e2eaed9cec",
+      "testcaseId": "0ef4f516db9ed70cb25f39c99637272808b8e60f",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/qt1vmo/4fba9938782523d464380318c97357e2eaed9cec.html",
-      "relativePath": "testcases/qt1vmo/4fba9938782523d464380318c97357e2eaed9cec.html",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/0ef4f516db9ed70cb25f39c99637272808b8e60f.html",
+      "relativePath": "testcases/qt1vmo/0ef4f516db9ed70cb25f39c99637272808b8e60f.html",
       "expected": "failed",
       "ruleId": "qt1vmo",
       "ruleName": "Image accessible name is descriptive",
@@ -11763,10 +11763,10 @@
       }
     },
     {
-      "testcaseId": "0d650d35e4f2920b9e6496db64f48657fc465694",
+      "testcaseId": "736732db66e5b294bc82833892dec24ab5993f2a",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/qt1vmo/0d650d35e4f2920b9e6496db64f48657fc465694.html",
-      "relativePath": "testcases/qt1vmo/0d650d35e4f2920b9e6496db64f48657fc465694.html",
+      "url": "https://act-rules.github.io/testcases/qt1vmo/736732db66e5b294bc82833892dec24ab5993f2a.html",
+      "relativePath": "testcases/qt1vmo/736732db66e5b294bc82833892dec24ab5993f2a.html",
       "expected": "inapplicable",
       "ruleId": "qt1vmo",
       "ruleName": "Image accessible name is descriptive",

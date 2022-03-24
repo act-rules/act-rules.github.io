@@ -22,6 +22,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 deprecated: |
   This rule has been deprecated as descriptions tracks were removed in [#1665](https://github.com/act-rules/act-rules.github.io/pull/1665) as a way to provide video alternative. This rule is not maintained anymore and should not be used.
 ---

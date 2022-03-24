@@ -1,0 +1,17 @@
+# This workflow runs when a commit lands in develop
+name: wai-deploy
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+      - run: git config user.name "${{ secrets.USER_NAME }}"
+      - run: git config user.email "${{ secrets.USER_EMAIL }}"
+      - run: npm install
+      - run: npm run build:wai

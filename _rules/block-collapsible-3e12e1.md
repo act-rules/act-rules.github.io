@@ -29,7 +29,7 @@ This rule applies to any [HTML web page][].
 
 ## Expectation
 
-For each test target, and each of its [blocks of repeated content][] which are before at least one node of [non-repeated content after repeated content][] in the [flat tree][], all the following are true:
+For each test target, and each of its [blocks of repeated content][block of repeated content] which are before at least one node of [non-repeated content after repeated content][] in the [flat tree][], all the following are true:
 
 - there exists an [instrument][] to make all nodes in this [block][] not [visible][]; and
 - there exists an [instrument][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
@@ -295,7 +295,6 @@ This [document][] is not an [HTML web page][].
 [block]: #block-of-content 'Definition of Block of Content'
 [block of content]: #block-of-content 'Definition of Block of Content'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
-[blocks of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Definition of Flat Tree'
 [focused]: https://html.spec.whatwg.org/#focused 'HTML definition of Focused'

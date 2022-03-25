@@ -126,7 +126,7 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 
 #### Passed Example 6
 
-These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in an "help" link that once clicked exposes the instructions to escape the keyboard trap.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a "help" link that once clicked exposes the instructions to escape the keyboard trap.
 
 ```html
 <script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>

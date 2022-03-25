@@ -74,7 +74,7 @@ This `aria-required` property has a valid [true/false](https://www.w3.org/TR/wai
 
 #### Passed Example 2
 
-This `aria-expanded` state has a valid true/false/undefined value.
+This `aria-expanded` state has a valid [true/false/undefined](https://www.w3.org/TR/wai-aria-1.2/#valuetype_true-false-undefined) value.
 
 ```html
 <div role="button" aria-expanded="undefined">A button</div>
@@ -82,7 +82,7 @@ This `aria-expanded` state has a valid true/false/undefined value.
 
 #### Passed Example 3
 
-This `aria-pressed` state has a valid tristate value.
+This `aria-pressed` state has a valid [tristate](https://www.w3.org/TR/wai-aria-1.2/#valuetype_tristate) value.
 
 ```html
 <div role="button" aria-pressed="mixed">An other button</div>
@@ -90,7 +90,7 @@ This `aria-pressed` state has a valid tristate value.
 
 #### Passed Example 4
 
-This `aria-errormessage` property has a valid ID reference value.
+This `aria-errormessage` property has a valid [ID reference](https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref) value.
 
 ```html
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>
@@ -98,7 +98,7 @@ This `aria-errormessage` property has a valid ID reference value.
 
 #### Passed Example 5
 
-This `aria-owns` property has a valid ID reference list value.
+This `aria-owns` property has a valid [ID reference list](https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref_list) value.
 
 ```html
 <h1>Shopping list</h1>
@@ -109,7 +109,7 @@ This `aria-owns` property has a valid ID reference list value.
 
 #### Passed Example 6
 
-This `aria-rowindex` property has a valid integer value.
+This `aria-rowindex` property has a valid [integer](https://www.w3.org/TR/wai-aria-1.2/#valuetype_integer) value.
 
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
@@ -117,7 +117,7 @@ This `aria-rowindex` property has a valid integer value.
 
 #### Passed Example 7
 
-These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have valid number values.
+These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have valid [number](https://www.w3.org/TR/wai-aria-1.2/#valuetype_number) values.
 
 ```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
@@ -125,7 +125,7 @@ These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have valid
 
 #### Passed Example 8
 
-This `aria-placeholder` property has a valid string value.
+This `aria-placeholder` property has a valid [string](https://www.w3.org/TR/wai-aria-1.2/#valuetype_string) value.
 
 ```html
 <div role="textbox" aria-placeholder="MM-DD-YYYY" aria-label="Your birthdate">
@@ -135,7 +135,7 @@ This `aria-placeholder` property has a valid string value.
 
 #### Passed Example 9
 
-This `aria-dropeffect` property has a valid token list value.
+This `aria-dropeffect` property has a valid [token](https://www.w3.org/TR/wai-aria-1.2/#valuetype_token) list value.
 
 ```html
 <div role="dialog" aria-dropeffect="copy move"></div>
@@ -143,7 +143,7 @@ This `aria-dropeffect` property has a valid token list value.
 
 #### Passed Example 10
 
-This `aria-controls` property, which is required for the role `scrollbar`, has an `ID Reference list` value that references at least one element existing in the same document tree.
+This `aria-controls` property, which is required for the role `scrollbar`, has an [`ID Reference list`](https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref_list) value that references at least one element existing in the same document tree.
 
 ```html
 <div id="content1">Lorem ipsum...</div>
@@ -161,7 +161,7 @@ This `aria-controls` property, which is required for the role `scrollbar`, has a
 
 #### Failed Example 1
 
-This `aria-required` property has an invalid true/false value.
+This `aria-required` property has an invalid [true/false](https://www.w3.org/TR/wai-aria-1.2/#valuetype_true-false) value.
 
 ```html
 <div role="textbox" aria-required="undefined" aria-label="A required textbox"></div>
@@ -169,7 +169,7 @@ This `aria-required` property has an invalid true/false value.
 
 #### Failed Example 2
 
-This `aria-expanded` state has an invalid true/false/undefined value.
+This `aria-expanded` state has an invalid [true/false/undefined](https://www.w3.org/TR/wai-aria-1.2/#valuetype_true-false-undefined) value.
 
 ```html
 <div role="button" aria-expanded="mixed">A button</div>
@@ -177,7 +177,7 @@ This `aria-expanded` state has an invalid true/false/undefined value.
 
 #### Failed Example 3
 
-This `aria-pressed` state has an invalid tristate value.
+This `aria-pressed` state has an invalid [tristate](https://www.w3.org/TR/wai-aria-1.2/#valuetype_tristate) value.
 
 ```html
 <div role="button" aria-pressed="horizontal">An other button</div>
@@ -185,7 +185,7 @@ This `aria-pressed` state has an invalid tristate value.
 
 #### Failed Example 4
 
-This `aria-errormessage` property has an invalid ID reference value, since it must reference and single ID and space is not allowed in it.
+This `aria-errormessage` property has an invalid [ID reference](https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref) value, since it must reference and single ID and space is not allowed in it.
 
 ```html
 <div role="textbox" aria-errormessage="error1 error2" aria-label="A textbox with an error"></div>
@@ -193,7 +193,7 @@ This `aria-errormessage` property has an invalid ID reference value, since it mu
 
 #### Failed Example 5
 
-This `aria-rowindex` property has an invalid integer value.
+This `aria-rowindex` property has an invalid [integer](https://www.w3.org/TR/wai-aria-1.2/#valuetype_integer) value.
 
 ```html
 <div role="gridcell" aria-rowindex="2.5">Fred</div>
@@ -201,7 +201,7 @@ This `aria-rowindex` property has an invalid integer value.
 
 #### Failed Example 6
 
-These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have invalid number values.
+These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have invalid [number](https://www.w3.org/TR/wai-aria-1.2/#valuetype_number) values.
 
 ```html
 <div role="spinbutton" aria-valuemin="one" aria-valuemax="three" aria-valuenow="two" aria-label="Choose a value"></div>
@@ -209,7 +209,7 @@ These `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties have inval
 
 #### Failed Example 7
 
-This `aria-live` property has an invalid token value.
+This `aria-live` property has an invalid [token](https://www.w3.org/TR/wai-aria-1.2/#valuetype_token) value.
 
 ```html
 <div role="main" aria-live="nope"></div>
@@ -217,7 +217,7 @@ This `aria-live` property has an invalid token value.
 
 #### Failed Example 8
 
-This `aria-dropeffect` property has an invalid token list value.
+This `aria-dropeffect` property has an invalid [token list](https://www.w3.org/TR/wai-aria-1.2/#dfn-token-list) value.
 
 ```html
 <div role="dialog" aria-dropeffect="invalid move"></div>
@@ -225,7 +225,7 @@ This `aria-dropeffect` property has an invalid token list value.
 
 #### Failed Example 9
 
-This `aria-expanded` state has an invalid true/false/undefined value.
+This `aria-expanded` state has an invalid [true/false/undefined](https://www.w3.org/TR/wai-aria-1.2/#valuetype_true-false-undefined) value.
 
 ```html
 <my-button role="button" aria-expanded="collapsed">My button</my-button>

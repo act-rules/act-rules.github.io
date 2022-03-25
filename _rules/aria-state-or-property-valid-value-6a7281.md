@@ -66,7 +66,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 #### Passed Example 1
 
-This `aria-required` property has a valid true/false value.
+This `aria-required` property has a valid [true/false](https://www.w3.org/TR/wai-aria-1.2/#valuetype_true-false) value.
 
 ```html
 <div role="textbox" aria-required="true" aria-label="A required textbox"></div>

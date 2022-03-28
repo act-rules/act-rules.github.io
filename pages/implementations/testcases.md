@@ -54,6 +54,6 @@ Correctness of an implementation is based on the results for test cases. See [im
 
 If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
 
-1. If you have a tool that can return a data format, you will need to run your tests against the ACT-R test cases and [submit a report](../reporting/).
+1. If you have a tool that can return a data format, you will need to run your tests against the ACT rule's test cases and [submit a report](../reporting/).
 
-2. If you have a manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.
+2. If you have a manual test methodology where you fill results into some report template or semi-automated tool, you can [use the ACT Implementor tool](https://act-implementor.netlify.app/#/) instead to produce implementation reports.

@@ -108,7 +108,7 @@ This `a` element is not [focusable][] because it moves focus to the `input` elem
     <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
 </div>
 <script>
-    sentinelAfter.addEventListener("focus", () => {
+    document.getElementById("sentinelAfter").addEventListener("focus", () => {
         dialogFirst.focus();
     });
 </script>

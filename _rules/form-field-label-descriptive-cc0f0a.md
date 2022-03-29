@@ -198,7 +198,7 @@ The `span` element is a [programmatic label][] of the `input` element but does n
 
 #### Failed Example 4
 
-The `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. The `label` elements, are not descriptive enough because they are reused on multiple fields. The headings are not [visible][]. Therefore, they do not provide [visual context][].
+These `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. They are not descriptive enough because they are reused on multiple fields. The headings are not [visible][]. Therefore, they do not provide [visual context][].
 
 ```html
 <html lang="en">
@@ -217,7 +217,7 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 
 #### Failed Example 5
 
-Both the `button` and the `span` elements are [programmatic labels][programmatic label] of the `input` element, but only the `button` is [visible][]. It has no [visual context][], and is not descriptive.
+These `button` and `span` elements are both [programmatic labels][programmatic label] of the `input` element, but only the `button` is [visible][]. It has no [visual context][], and is not descriptive.
 
 ```html
 <html lang="en">

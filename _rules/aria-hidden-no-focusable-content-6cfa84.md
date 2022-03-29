@@ -100,16 +100,19 @@ This `input` element is not [focusable][] because of the `disabled` attribute.
 This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus.
 
 ```html
-<div role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
+<div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
     <label>Some input <input id="dialogFirst"></label><br />
-    <button>Close button</button>
+    <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
     <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
 </div>
 <script>
     document.getElementById("sentinelAfter").addEventListener("focus", () => {
-        dialogFirst.focus();
+        document.getElementById("dialogFirst").focus();
+    });
+    document.getElementById("sampleModal").addEventListener("click", () => {
+        document.getElementById("sampleModal").style.display = "none";
     });
 </script>
 ```

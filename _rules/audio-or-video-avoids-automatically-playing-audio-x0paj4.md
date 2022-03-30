@@ -67,8 +67,6 @@ This rule assumes that the [instrument][] to control the sound must be located i
 
 This rule assumes that the [instrument][] to control the sound is visible and accessible in order to be effective and usable by all kinds of users. If the [instrument][] is hidden to some users, it is possible to pass this rule but still not satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
-No [user style sheets](https://drafts.csswg.org/css-cascade/#cascade-origin-user) are used and no changes to the [user agent default style sheet](https://drafts.csswg.org/css-cascade/#cascade-origin-ua) are in place, otherwise the test cases might have different outcomes from the ones presented here.
-
 ## Accessibility Support
 
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.

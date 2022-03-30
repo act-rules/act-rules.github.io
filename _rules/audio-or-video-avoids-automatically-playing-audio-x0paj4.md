@@ -88,7 +88,7 @@ The [instruments][instrument] used to pass this rule (if any), must meet all lev
 
 #### Passed Example 1
 
-This `audio` element has (in its default controls) an [instrument][] to pause, stop, or turn the audio volume off.
+This `audio` element has its default controls as an [instrument][] to pause, stop, and mute the audio.
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>

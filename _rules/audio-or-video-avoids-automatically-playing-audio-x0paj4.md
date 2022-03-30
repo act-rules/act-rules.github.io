@@ -55,7 +55,7 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
 - **not muted**: the element has a `muted` [attribute value][] of `false`; and
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **audio duration**: the element has a [media resource][] for which the audio output lasts more than 3 seconds.
+- **audio duration**: the element has a [media resource][] for which the audio output lasts longer than 3 seconds.
 
 ## Expectation
 

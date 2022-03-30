@@ -110,19 +110,6 @@ This `video` element has its default controls as an [instrument][] to pause, sto
 This `video` element autoplays and has an [instrument][] to pause, stop, or mute the audio.
 
 ```html
-<head>
-	<style>
-		button {
-			color: #000;
-		}
-		button:hover {
-			cursor: pointer;
-			cursor: pointer;
-			background-color: grey;
-			color: white;
-		}
-	</style>
-</head>
 <body>
 	<div id="video-container">
 		<!-- Video -->

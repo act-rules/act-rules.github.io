@@ -59,7 +59,7 @@ This rule applies to any `audio` or `video` element for which all the following 
 
 ## Expectation
 
-For each test target, there is at least one [instrument][] in the same [web page][] to pause or stop the audio, or turn the audio volume off independently from the overall system volume control.
+For each test target, there is at least one [instrument][] in the same [web page][] to pause, stop, or mute the audio.
 
 ## Assumptions
 

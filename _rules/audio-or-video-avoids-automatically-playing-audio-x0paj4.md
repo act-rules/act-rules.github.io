@@ -63,7 +63,7 @@ For each test target, there is at least one [instrument][] in the same [web page
 
 ## Assumptions
 
-This rule assumes that the [instrument][] to control the sound must be located in the same [web page][]. [Instruments][instrument] located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the [instrument][]. If a [instrument][] external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
+This rule assumes that it is not sufficient for the [instrument][] to control the sound to be located on a different [web page][], or a different state of the same [web page][] to pass the rule. [Instruments][instrument] located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen reader users) since the autoplaying sound will interfere with their ability to find and activate the [instrument][]. If an [instrument][] external to the [web page][] is provided, this rule will fail but it is still possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
 This rule assumes that the [instrument][] to control the sound is visible and accessible in order to be effective and usable by all kinds of users. If the [instrument][] is hidden to some users, it is possible to pass this rule but still not satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 

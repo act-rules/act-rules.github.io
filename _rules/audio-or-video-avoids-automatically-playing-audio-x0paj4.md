@@ -96,7 +96,7 @@ This `audio` element has its default controls as an [instrument][] to pause, sto
 
 #### Passed Example 2
 
-This `video` element has (in its default controls) an [instrument][] to pause it, an [instrument][] to stop it, and an [instrument][] to turn its audio volume off.
+This `video` element has its default controls as an [instrument][] to pause, stop mute the audio.
 
 ```html
 <video autoplay controls>
@@ -107,7 +107,7 @@ This `video` element has (in its default controls) an [instrument][] to pause it
 
 #### Passed Example 3
 
-This `video` element autoplays and has an [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element autoplays and has an [instrument][] to pause, stop, or mute the audio.
 
 ```html
 <head>
@@ -152,7 +152,7 @@ This `audio` element autoplays, lasts for more than 3 seconds, and does not have
 
 #### Failed Example 2
 
-This `video` element's audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio
+This `video` element's audio autoplays for longer than 3 seconds, and does not have an [instrument][] to pause, stop, or mute the audio.
 
 ```html
 <video autoplay>
@@ -163,7 +163,7 @@ This `video` element's audio autoplays for longer than 3 seconds, and does not h
 
 #### Failed Example 3
 
-This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not visible.
+This `video` element has an [instrument][] to pause, stop, or mute the audio but the [instrument][] is not visible.
 
 ```html
 <head>
@@ -199,7 +199,7 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Failed Example 4
 
-This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but its `button` elements do not have accessible names.
+This `video` element has an [instrument][] to pause, stop, or mute the audio but its `button` elements do not have accessible names.
 
 ```html
 <head>
@@ -234,7 +234,7 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Failed Example 5
 
-This `video` element has an [instrument][] to pause, stop, or turn the audio volume off but the [instrument][] is not included in the accessibility tree.
+This `video` element has an [instrument][] to pause, stop, or mute the audio but the [instrument][] is not included in the accessibility tree.
 
 ```html
 <head>
@@ -271,7 +271,7 @@ This `video` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Inapplicable Example 1
 
-This `video` element audio autoplays for longer than 3 seconds but is `muted`.
+This `video` element's audio autoplays for longer than 3 seconds but is `muted`.
 
 ```html
 <video autoplay muted>

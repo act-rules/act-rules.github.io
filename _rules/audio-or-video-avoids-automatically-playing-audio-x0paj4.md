@@ -69,7 +69,7 @@ This rule assumes that the [instrument][] to control the sound is visible and ac
 
 ## Accessibility Support
 
-The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
+Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
 ## Background
 

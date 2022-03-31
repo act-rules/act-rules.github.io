@@ -32,11 +32,11 @@ This rule applies to any element with an `aria-hidden` [attribute value][] of `t
 
 ## Expectation
 
-None of the target elements or their [descendants][] in the [flat tree][] are part of the [sequential focus navigation][], unless, upon receiving focus, focus is moved to an element that does not fail this rule.
+None of the target elements has [inclusive descendants][] in the [flat tree][] that are [focusable][] and part of the [sequential focus navigation][].
 
 ## Assumptions
 
-Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden and elements not part of the [sequential focus navigation][] become part of the [sequential focus navigation][].
+Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden and elements not [focusable][] and part of the [sequential focus navigation][] become [focusable][] and part of the [sequential focus navigation][].
 
 ## Accessibility Support
 

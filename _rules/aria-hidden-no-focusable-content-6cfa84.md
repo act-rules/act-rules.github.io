@@ -32,7 +32,7 @@ This rule applies to any element with an `aria-hidden` [attribute value][] of `t
 
 ## Expectation
 
-None of the target elements are part of the [sequential focus navigation][], nor do they have [descendants](https://dom.spec.whatwg.org/#concept-tree-descendant) in the [flat tree](https://drafts.csswg.org/css-scoping/#flat-tree) that are part of the [sequential focus navigation][], unless, upon receiving focus, focus is moved to an element that does not fail this rule.
+None of the target elements or their [descendants][] in the [flat tree][] are part of the [sequential focus navigation][], unless, upon receiving focus, focus is moved to an element that does not fail this rule.
 
 ## Assumptions
 

@@ -40,6 +40,9 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

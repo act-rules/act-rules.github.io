@@ -101,7 +101,7 @@ This `a` element is not [focusable][] because it moves focus to the `input` elem
 
 ```html
 <div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
-    <label>Some input <input id="dialogFirst"></label><br />
+    <label>First and last name <input id="dialogFirst"></label><br />
     <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
@@ -111,7 +111,7 @@ This `a` element is not [focusable][] because it moves focus to the `input` elem
     document.getElementById("sentinelAfter").addEventListener("focus", () => {
         document.getElementById("dialogFirst").focus();
     });
-    document.getElementById("sampleModal").addEventListener("click", () => {
+    document.getElementById("closeButton").addEventListener("click", () => {
         document.getElementById("sampleModal").style.display = "none";
     });
 </script>
@@ -182,18 +182,18 @@ This `summary` element is [focusable][].
 
 #### Failed Example 7
 
-This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to Passed Example 4.
+This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that immediately jumps focus to a valid location.
 
 ```html
 <div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
-    <label>Some input <input id="dialogFirst"></label><br />
+    <label>First and last name <input id="dialogFirst"></label><br />
     <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
     <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
 </div>
 <script>
-    document.getElementById("sampleModal").addEventListener("click", () => {
+    document.getElementById("closeButton").addEventListener("click", () => {
         document.getElementById("sampleModal").style.display = "none";
     });
 </script>

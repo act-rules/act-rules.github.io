@@ -16,6 +16,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability

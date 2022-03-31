@@ -35,7 +35,7 @@ For each test target, at least one of the following is true:
   - <dfn id="24afc2:wide-enough-cond">wide enough</dfn>: the parent of the text node has [wide enough letter spacing](#24afc2:wide-enough-def); or
   - <dfn id="24afc2:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [letter-spacing][] property which is not the one [declared][] in the `style` attribute of the target.
 
-An element has a <dfn id="24afc2:wide-enough-def">wide enough letter spacing</dfn> if the computed value of its [letter-spacing][] property is at least 0.12 times the computed value of its [font-size][] property.
+An element has a <dfn id="24afc2:wide-enough-def">wide enough letter spacing</dfn> if the [used][] value of its [letter-spacing][] property is at least 0.12 times the computed value of its [font-size][] property.
 
 ## Assumptions
 
@@ -309,6 +309,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
+[used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'

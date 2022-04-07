@@ -261,7 +261,6 @@ This viewport `meta` element does not have a `content` attribute.
 </html>
 ```
 
-[case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive 'ASCII case-insensitive'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
 [maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
 [meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'

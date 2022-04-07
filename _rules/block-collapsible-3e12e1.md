@@ -31,8 +31,8 @@ This rule applies to any [HTML web page][].
 
 For each test target, and each of its [blocks of repeated content][block of repeated content] which are before at least one node of [non-repeated content after repeated content][] in the [flat tree][], all the following are true:
 
-- there exists an [instrument][] to make all nodes in this [block][] not [visible][]; and
-- there exists an [instrument][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
+- there exists an [instrument][] before the [block][] to make all nodes in this [block][] not [visible][]; and
+- there exists an [instrument][] before the [block][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
 ## Assumptions
 

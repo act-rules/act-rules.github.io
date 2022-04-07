@@ -207,6 +207,8 @@
 - autofill
 - dismissible
 - implementers
+- implementor
+- implementors
 - presentational
 - backtick
 - camelCase
@@ -224,6 +226,8 @@
 - Namespaced
 - namespaceURI
 - testability
+- focusability
+- unitless
 
 # Parts of Unicode
 - 000A
@@ -258,6 +262,8 @@
 # Language codes
 - da
 - nl
+- de
+- eng
 
 # Color values
 - HSL

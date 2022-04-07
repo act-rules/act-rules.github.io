@@ -7,7 +7,7 @@ objective: true
 
 A [node][] is <dfn>Horizontally Clipped by Overflow</dfn> if it has an [ancestor][] in the [flat tree][] with a [computed][] [overflow-x][] of `hidden` or `clip`, where changing the [overflow-x][] of all such [ancestors][ancestor] to `visible` would cause more of the [node][] to become [visible][].
 
-#### Example of Vertically Clipped by Overflow
+#### Example of Horizontally Clipped by Overflow
 
 This `img` element has an [ancestor][] `div` element with an `overflow-x` of `hidden`. The width of the `img` is greater than that of the [ancestor][] `div`, and so is clipped by the `overflow-x` property of the `div`.
 

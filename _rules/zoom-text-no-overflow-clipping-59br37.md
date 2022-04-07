@@ -192,7 +192,7 @@ This [text node][] is [vertically clipped][] at a [viewport size][] of 640 by 51
 
 #### Failed Example 5
 
-This [text node][] is [vertically clipped][] at a [viewport size][] of 640 by 512.
+This [text node][] is [horizontally clipped][] at a [viewport size][] of 640 by 512.
 
 ```html
 <style>

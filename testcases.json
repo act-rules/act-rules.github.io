@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1131,
+  "count": 1132,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -11485,6 +11485,30 @@
       "testcaseTitle": "Passed Example 3",
       "url": "https://act-rules.github.io/testcases/akn7bn/1dca03a88ba0738f5a15e7636f534b826af870dc.html",
       "relativePath": "testcases/akn7bn/1dca03a88ba0738f5a15e7636f534b826af870dc.html",
+      "expected": "passed",
+      "ruleId": "akn7bn",
+      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "rulePage": "https://act-rules.github.io/rules/akn7bn",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.1.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G202": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "524d02eed5b71e279febb083f70c463f99318806",
+      "testcaseTitle": "Passed Example 4",
+      "url": "https://act-rules.github.io/testcases/akn7bn/524d02eed5b71e279febb083f70c463f99318806.html",
+      "relativePath": "testcases/akn7bn/524d02eed5b71e279febb083f70c463f99318806.html",
       "expected": "passed",
       "ruleId": "akn7bn",
       "ruleName": "iframe with negative tabindex has no interactive elements",

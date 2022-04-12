@@ -67,7 +67,7 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
-This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.2.3 No Timing][sc223] and [3.2.5 Change on Request][sc325].
+This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [3.2.5 Change on Request][sc325].
 
 ### Bibliography
 
@@ -242,6 +242,5 @@ No `http-equiv="refresh"` attribute.
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
 [sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable 'WCAG 2.1 Success Criterion 2.2.1 Timing Adjustable'
-[sc223]: https://www.w3.org/TR/WCAG21/#no-timing 'WCAG 2.1 Success Criterion 2.2.3 No Timing'
 [sc325]: https://www.w3.org/TR/WCAG21/#change-on-request 'WCAG 2.1 Success Criterion 3.2.5 Change on Request'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'

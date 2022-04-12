@@ -54,7 +54,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ being either 0 or greater than 72000 (20 hours).
+For each test target, running the [shared declarative refresh steps][], refresh steps results in _time_ being 0 or greater than 72000 (20 hours).
 
 ## Assumptions
 
@@ -124,6 +124,9 @@ Refreshes after 30 seconds.
 <head>
 	<meta http-equiv="refresh" content="30" />
 </head>
+<body>
+	<p>This page refreshes after 30 seconds.</p>
+</body>
 ```
 
 #### Failed Example 2
@@ -134,6 +137,9 @@ Redirects after 30 seconds.
 <head>
 	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
 </head>
+<body>
+	<p>This page redirects afte 30 seconds.</p>
+</body>
 ```
 
 #### Failed Example 3
@@ -145,6 +151,9 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 	<meta http-equiv="refresh" content="0: https://w3.org" />
 	<meta http-equiv="refresh" content="5; https://w3.org" />
 </head>
+<body>
+	<p>This page refreshes after 5 seconds.</p>
+</body>
 ```
 
 #### Failed Example 4
@@ -155,6 +164,9 @@ Redirects after exactly 20 hours.
 <head>
 	<meta http-equiv="refresh" content="72000; https://w3.org" />
 </head>
+<body>
+	<p>This page redirects after exactly 20 hours.</p>
+</body>
 ```
 
 ### Inapplicable
@@ -167,6 +179,9 @@ No `content` attribute.
 <head>
 	<meta http-equiv="refresh" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 2
@@ -177,6 +192,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta content="30" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 3
@@ -187,6 +205,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta http-equiv="refresh" content="0: https://w3.org" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 4
@@ -197,6 +218,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta http-equiv="refresh" content="-00.12 foo" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 5
@@ -207,6 +231,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta http-equiv="refresh" content="; 30" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 6
@@ -214,9 +241,9 @@ No `http-equiv="refresh"` attribute.
 `content` attribute is invalid and therefore inapplicable.
 
 ```html
-<head>
-	<meta http-equiv="refresh" content="" />
-</head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 7
@@ -227,6 +254,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta http-equiv="refresh" content="+5; https://w3.org" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 #### Inapplicable Example 8
@@ -237,6 +267,9 @@ No `http-equiv="refresh"` attribute.
 <head>
 	<meta http-equiv="refresh" content="foo; URL='https://w3.org'" />
 </head>
+<body>
+	<p>This page does not redirect.</p>
+</body>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

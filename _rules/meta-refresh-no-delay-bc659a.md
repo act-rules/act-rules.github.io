@@ -241,6 +241,9 @@ No `http-equiv="refresh"` attribute.
 `content` attribute is invalid and therefore inapplicable.
 
 ```html
+<head>
+	<meta http-equiv="refresh" content="" />
+</head>
 <body>
 	<p>This page does not redirect.</p>
 </body>

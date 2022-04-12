@@ -85,7 +85,7 @@ This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which c
 
 #### Passed Example 1
 
-Redirects immediately.
+This page redirects to a new page immediately.
 
 ```html
 <head>
@@ -95,7 +95,7 @@ Redirects immediately.
 
 #### Passed Example 2
 
-First valid `<meta http-equiv="refresh">` redirects immediately.
+First valid `<meta http-equiv="refresh">` on the page redirects to a new page immediately.
 
 ```html
 <head>
@@ -106,7 +106,7 @@ First valid `<meta http-equiv="refresh">` redirects immediately.
 
 #### Passed Example 3
 
-Redirects after more than 20 hours.
+This page redirects after more than 20 hours.
 
 ```html
 <head>
@@ -118,7 +118,7 @@ Redirects after more than 20 hours.
 
 #### Failed Example 1
 
-Refreshes after 30 seconds.
+This page efreshes after 30 seconds.
 
 ```html
 <head>
@@ -131,7 +131,7 @@ Refreshes after 30 seconds.
 
 #### Failed Example 2
 
-Redirects after 30 seconds.
+The page redirects to a new page after 30 seconds.
 
 ```html
 <head>
@@ -144,7 +144,7 @@ Redirects after 30 seconds.
 
 #### Failed Example 3
 
-First `<meta http-equiv="refresh">` element is not valid, second one redirects after 5 seconds.
+The first `<meta http-equiv="refresh">` element on the page is not valid, so the second `<meta http-equiv="refresh">` redirects to a new page after 5 seconds.
 
 ```html
 <head>
@@ -158,7 +158,7 @@ First `<meta http-equiv="refresh">` element is not valid, second one redirects a
 
 #### Failed Example 4
 
-Redirects after exactly 20 hours.
+This page redirects to a new page after exactly 20 hours.
 
 ```html
 <head>
@@ -173,33 +173,33 @@ Redirects after exactly 20 hours.
 
 #### Inapplicable Example 1
 
-No `content` attribute.
+This page will not refresh because it lacks a `content` attribute.
 
 ```html
 <head>
 	<meta http-equiv="refresh" />
 </head>
 <body>
-	<p>This page does not redirect.</p>
+	<p>This page does not refresh.</p>
 </body>
 ```
 
 #### Inapplicable Example 2
 
-No `http-equiv="refresh"` attribute.
+This page will not refresh because it lacks a `http-equiv="refresh"` attribute.
 
 ```html
 <head>
 	<meta content="30" />
 </head>
 <body>
-	<p>This page does not redirect.</p>
+	<p>This page does not refresh.</p>
 </body>
 ```
 
 #### Inapplicable Example 3
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -212,46 +212,46 @@ No `http-equiv="refresh"` attribute.
 
 #### Inapplicable Example 4
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="-00.12 foo" />
 </head>
 <body>
-	<p>This page does not redirect.</p>
+	<p>This page does not refresh.</p>
 </body>
 ```
 
 #### Inapplicable Example 5
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="; 30" />
 </head>
 <body>
-	<p>This page does not redirect.</p>
+	<p>This page does not refresh.</p>
 </body>
 ```
 
 #### Inapplicable Example 6
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="" />
 </head>
 <body>
-	<p>This page does not redirect.</p>
+	<p>This page does not refresh.</p>
 </body>
 ```
 
 #### Inapplicable Example 7
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -264,7 +264,7 @@ No `http-equiv="refresh"` attribute.
 
 #### Inapplicable Example 8
 
-`content` attribute is invalid and therefore inapplicable.
+This 'meta' element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>

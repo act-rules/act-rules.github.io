@@ -3,7 +3,7 @@ id: e7aa44
 name: '`audio` element content has text alternative'
 rule_type: composite
 description: |
-  This rule checks if audio only elements have a text alternative available.
+  This rule checks that `audio` elements have a text alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
@@ -26,6 +26,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -65,7 +67,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Audio with controls and internal transcript
+This `audio` element has native player controls and an internal transcript.
 
 ```html
 <html lang="en">
@@ -81,7 +83,7 @@ Audio with controls and internal transcript
 
 #### Passed Example 2
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
+This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
 ```html
 <html lang="en">
@@ -102,7 +104,7 @@ An audio element that describes some of the text on the same page. The text on t
 
 #### Failed Example 1
 
-Audio with controls and incorrect internal transcript
+This `audio` element has native player controls but has an incorrect internal transcript.
 
 ```html
 <html lang="en">
@@ -118,7 +120,7 @@ Audio with controls and incorrect internal transcript
 
 #### Failed Example 2
 
-An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
+This `audio` element describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -139,7 +141,7 @@ An audio element that describes some of the text on the same page. The text is n
 
 #### Inapplicable Example 1
 
-Audio without controls.
+This `audio` element does not have native player controls.
 
 ```html
 <html lang="en">
@@ -149,7 +151,7 @@ Audio without controls.
 
 #### Inapplicable Example 2
 
-An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
+This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
 <html lang="en">

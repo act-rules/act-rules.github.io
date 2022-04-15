@@ -118,7 +118,7 @@ This page redirects after more than 20 hours.
 
 #### Failed Example 1
 
-This page efreshes after 30 seconds.
+This page refreshes after 30 seconds.
 
 ```html
 <head>

@@ -48,7 +48,7 @@ Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="tru
 
 By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 
-An element that is part of the [sequential focus navigation][] with `aria-hidden="true"` is ignored as part of the reading order, but still part of the focus order, making its state of [visible](#visible) or hidden unclear.
+However, if the element is also part of the [sequential focus navigation][], the assistive technology will want to announce the element where focus has landed. If focus lands on an element with `aria-hidden="true"`, the element's state of decorative vs non-decorative and [visible](#visible) vs hidden unclear.
 
 The 1 second time span introduced in the exception of the definition of [focusable][] is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
 

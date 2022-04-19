@@ -97,7 +97,11 @@ This `input` element is not [focusable][] because of the `disabled` attribute.
 
 #### Passed Example 4
 
-This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus.
+This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus. The element named
+'Focus sentinel' might also be referred to as a bumper. These elements are typically found before and after a modal / dialog in 
+order to contain focus within the modal. Page authors do not want the sentinel to be visible, nor do they want them to be read by
+a screen reader. But, they do want the element to be part of the [sequential focus navigation][]. This allows the page author
+to detect that focus has left the dialog in order to wrap it to the top/bottom as appropriate.
 
 ```html
 <div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
@@ -182,7 +186,9 @@ This `summary` element is [focusable][].
 
 #### Failed Example 7
 
-This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that immediately jumps focus to a valid location.
+This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that 
+immediately jumps focus to a valid location. Focus sentinels are typically used before and after modal dialogs in order to contain 
+and wrap focus. In this case, the `focus` event was removed, but the sentinel was not.
 
 ```html
 <div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">

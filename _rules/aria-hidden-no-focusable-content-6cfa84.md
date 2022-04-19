@@ -97,8 +97,8 @@ This `input` element is not [focusable][] because of the `disabled` attribute.
 
 #### Passed Example 4
 
-This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus. The element named
-'Focus sentinel' might also be referred to as a bumper. These elements are typically found before and after a modal / dialog in 
+This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus. These elements
+are sometimes referred to as 'focus sentinel' or 'bumper'. They are typically found before and after a modal / dialog in 
 order to contain focus within the modal. Page authors do not want the sentinel to be visible, nor do they want them to be read by
 a screen reader. But, they do want the element to be part of the [sequential focus navigation][]. This allows the page author
 to detect that focus has left the dialog in order to wrap it to the top/bottom as appropriate.
@@ -109,7 +109,7 @@ to detect that focus has left the dialog in order to wrap it to the top/bottom a
     <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
-    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a>
 </div>
 <script>
     document.getElementById("sentinelAfter").addEventListener("focus", () => {
@@ -196,7 +196,7 @@ and wrap focus. In this case, the `focus` event was removed, but the sentinel wa
     <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
-    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Focus sentinel</a>
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a>
 </div>
 <script>
     document.getElementById("closeButton").addEventListener("click", () => {

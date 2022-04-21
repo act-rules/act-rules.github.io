@@ -120,7 +120,7 @@ This `audio` element autoplays, and there is a transcript of the audio.
 
 #### Failed Example 1
 
-This `audio` element has native player controls but has an incorrect internal transcript.
+This `audio` element has a play button but has an incorrect transcript.
 
 ```html
 <html lang="en">
@@ -136,7 +136,7 @@ This `audio` element has native player controls but has an incorrect internal tr
 
 #### Failed Example 2
 
-This `audio` element describes some of the text on the same page. The text is not [visible][] on the page.
+This `audio` element autoplays but the text transcript is not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -149,7 +149,7 @@ This `audio` element describes some of the text on the same page. The text is no
 	<p>
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
 </html>
 ```
 

@@ -32,7 +32,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that:
+This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
 - has an autoplay attribute value of true;  or,
 - has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).

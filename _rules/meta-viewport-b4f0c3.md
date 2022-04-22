@@ -30,7 +30,7 @@ For each test target, the [attribute value][] does hot have a `user-scalable` pr
 
 ## Expectation 2
 
-For each test target, the [attribute value][] does hot have a `maximum-scale` property with a value less than 2.
+For each test target, the [attribute value][] does not have a `maximum-scale` property with a value less than 2.
 
 ## Assumptions
 

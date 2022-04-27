@@ -35,7 +35,9 @@ acknowledgments:
 This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a [play button][] that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
+- has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
+
+**Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation
 
@@ -184,5 +186,4 @@ This `a` element links to an audio file, but there is no `audio` element on this
 </html>
 ```
 
-[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

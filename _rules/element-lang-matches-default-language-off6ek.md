@@ -324,6 +324,5 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
-[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [visible]: #visible 'Definition of Visible'
 [whitespace]: #whitespace 'Definition of whitespace'

@@ -54,7 +54,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], refresh steps results in _time_ being 0 or greater than 72000 (20 hours).
+For each test target, running the [shared declarative refresh steps][] results in _time_ being 0 or greater than 72000 (20 hours).
 
 ## Assumptions
 

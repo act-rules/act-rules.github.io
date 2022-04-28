@@ -111,7 +111,7 @@ This multiple `input` elements share a [form field error indicator][] that ident
 
 ```html
 <form>
-	<p><strong id="error">
+	<p id="error"><strong>
 		Name and color cannot be empty. Please complete all required fields.
 	</strong></p>
 	<fieldset>

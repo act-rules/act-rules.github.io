@@ -8,7 +8,7 @@ All ACT rules include a number of test cases, which are designed for easy consum
 	See the Test Cases JSON
  </a>
 
-**Note**: HTML test cases are embedded in a small template which adds a `!doctype`, HTML root node with lang attribute, and head with a title. These are omitted for test cases with an HTML element or a doctype.
+**Note**: HTML test cases are embedded in a small template which adds a `!DOCTYPE`, HTML root node with lang attribute, and head with a title. These are omitted for test cases with an HTML element or a `!DOCTYPE`.
 
 ## Test Case Format
 

@@ -78,7 +78,7 @@ This viewport `meta` element does not prevent user scaling because it has `user-
 
 #### Passed Example 2
 
-This viewport `meta` element allows users to scale content up to 600% because it has `maximum-scale` set to 6.0.
+This viewport `meta` element allows users to scale content up to 200% because it has `maximum-scale` set to 6.0.
 
 ```html
 <html>

@@ -95,7 +95,7 @@ This page redirects to a new page immediately.
 
 #### Passed Example 2
 
-First valid `<meta http-equiv="refresh">` on the page redirects to a new page immediately.
+First valid `meta` element on the page redirects to a new page immediately.
 
 ```html
 <head>

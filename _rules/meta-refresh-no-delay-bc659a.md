@@ -144,7 +144,7 @@ The page redirects to a new page after 30 seconds.
 
 #### Failed Example 3
 
-The first `<meta http-equiv="refresh">` element on the page is not valid, so the second `<meta http-equiv="refresh">` redirects to a new page after 5 seconds.
+The first `meta` element on the page is not valid because it uses colon (":") rather than semicolon (";"). The second `meta` element redirects to a new page after 5 seconds.
 
 ```html
 <head>

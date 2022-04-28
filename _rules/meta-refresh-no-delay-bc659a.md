@@ -186,7 +186,7 @@ This page will not refresh because it lacks a `content` attribute.
 
 #### Inapplicable Example 2
 
-This page will not refresh because it lacks a `http-equiv="refresh"` attribute.
+This page will not refresh because it lacks a `http-equiv` attribute.
 
 ```html
 <head>

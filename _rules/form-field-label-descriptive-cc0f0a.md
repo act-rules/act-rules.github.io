@@ -246,9 +246,9 @@ The `label` element is not [visible][].
 
 ```html
 <html lang="en">
-	<label style="display:none;">
-		First name: <input type="text" />
-	</label>
+	<label for="fname" style="position: absolute; left: -9999px;">First name:</label>
+	<label aria-hidden="true">First name:</label>
+	<input id="fname" type="text" name="fname" />
 </html>
 ```
 

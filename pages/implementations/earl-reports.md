@@ -82,9 +82,9 @@ The following properties are required for each Assertion:
 
 ### Test Criterion
 
-For each result, we'll need to know which rule or procedure in the tool reported it, and which WCAG success criteria were failed. To do so, on the `test` property add an object. This must include:
+For each result, we'll need to know which rule or procedure in the tool reported it, and which WCAG success criteria were failed. To do so, on the `test` property, add an object. This must include:
 
-- `title`: A string, the uniquely identifies what rule or procedure in the tool found the result.
+- `title`: A string, that uniquely identifies which rule or procedure in the tool found the result.
 - `isPartOf`: An array of strings, listing the WCAG success criteria that fail when the rule or procedure fails. These must use the IDs of the WCAG success criteria, prefaced with `WCAG2:`. For example `WCAG2:name-role-value`.
 
 ```json
@@ -111,4 +111,4 @@ For each result, we'll need to know which rule or procedure in the tool reported
 
 **Note**: The IDs of WCAG success criteria can be found in [sc-urls.json](https://github.com/act-rules/act-tools/blob/main/src/data/sc-urls.json), on the `scId` property. These are the IDs introduced in WCAG 2.1, and continued in WCAG 2.2. Use these IDs, even when reporting for WCAG 2.0.
 
-**Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `title` and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.
+**Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `isPartOf`, `title`, and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.

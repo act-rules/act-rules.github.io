@@ -1,6 +1,6 @@
 ---
 id: akn7bn
-name: iframe with negative tabindex has no interactive elements
+name: Iframe with negative tabindex has no interactive elements
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with a negative `tabindex` attribute value contain no interactive elements.

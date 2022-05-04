@@ -11,7 +11,7 @@ If you developed an accessibility tool or a testing methodology and would like t
 
 ## Understanding the Reporting format
 
-To display an accessibility test tool or methodology on the WAI website, use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://json-ld.org). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
+To display an accessibility test tool or methodology on the WAI website, use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://www.w3.org/TR/json-ld/). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
 
 ### Context And Graph
 

@@ -187,7 +187,7 @@ This `summary` element is [focusable][].
 #### Failed Example 7
 
 This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that 
-immediately jumps focus to a valid location. Focus sentinels are typically used before and after modal dialogs in order to contain 
+immediately jumps focus to a valid location. Focus sentinels are typically used before and after a modal dialog in order to contain 
 and wrap focus. In this case, the `focus` event was removed, but the sentinel was not.
 
 ```html
@@ -235,3 +235,4 @@ This `aria-hidden` attribute has an incorrect value.
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [focusable]: #focusable 'Definition of focusable'
+[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/08/12'

@@ -32,7 +32,7 @@ This rule applies to any element with an `aria-hidden` [attribute value][] of `t
 
 ## Expectation
 
-None of the target elements has [inclusive descendants][] in the [flat tree][] that are [focusable][] and part of the [sequential focus navigation][].
+None of the target elements has an [inclusive descendant][] in the [flat tree][] that are [focusable][] and part of the [sequential focus navigation][].
 
 ## Assumptions
 
@@ -198,5 +198,7 @@ This `aria-hidden` attribute has an incorrect value.
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focusable]: #focusable 'Definition of focusable'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation

@@ -207,6 +207,8 @@
 - autofill
 - dismissible
 - implementers
+- implementor
+- implementors
 - presentational
 - backtick
 - camelCase
@@ -243,6 +245,8 @@
 - TestSubject
 - earl:cantTell
 - getComputedPriority
+- isPartOf
+- scId
 
 # sizes
 - 1em

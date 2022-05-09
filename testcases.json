@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1132,
+  "count": 1133,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -2560,10 +2560,34 @@
       }
     },
     {
-      "testcaseId": "0e8259423a992f087ad3dca54431bc8909f0892d",
+      "testcaseId": "e6b333585de57aae36893c2d3920036ba4ef4c96",
+      "testcaseTitle": "Passed Example 3",
+      "url": "https://act-rules.github.io/testcases/e7aa44/e6b333585de57aae36893c2d3920036ba4ef4c96.html",
+      "relativePath": "testcases/e7aa44/e6b333585de57aae36893c2d3920036ba4ef4c96.html",
+      "expected": "passed",
+      "ruleId": "e7aa44",
+      "ruleName": "`audio` element content has text alternative",
+      "rulePage": "https://act-rules.github.io/rules/e7aa44",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.2.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:G158": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0020da34308d3233331b46b50f45b3fb667b578e",
       "testcaseTitle": "Failed Example 1",
-      "url": "https://act-rules.github.io/testcases/e7aa44/0e8259423a992f087ad3dca54431bc8909f0892d.html",
-      "relativePath": "testcases/e7aa44/0e8259423a992f087ad3dca54431bc8909f0892d.html",
+      "url": "https://act-rules.github.io/testcases/e7aa44/0020da34308d3233331b46b50f45b3fb667b578e.html",
+      "relativePath": "testcases/e7aa44/0020da34308d3233331b46b50f45b3fb667b578e.html",
       "expected": "failed",
       "ruleId": "e7aa44",
       "ruleName": "`audio` element content has text alternative",
@@ -2584,10 +2608,10 @@
       }
     },
     {
-      "testcaseId": "b13cc282a4ca19035985408725b74189e08004e9",
+      "testcaseId": "6b34494821e5c4135879b83d322e759961b4b665",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/e7aa44/b13cc282a4ca19035985408725b74189e08004e9.html",
-      "relativePath": "testcases/e7aa44/b13cc282a4ca19035985408725b74189e08004e9.html",
+      "url": "https://act-rules.github.io/testcases/e7aa44/6b34494821e5c4135879b83d322e759961b4b665.html",
+      "relativePath": "testcases/e7aa44/6b34494821e5c4135879b83d322e759961b4b665.html",
       "expected": "failed",
       "ruleId": "e7aa44",
       "ruleName": "`audio` element content has text alternative",
@@ -2656,10 +2680,10 @@
       }
     },
     {
-      "testcaseId": "a712845ae1efc5353a374239dd9c4c51522e0927",
+      "testcaseId": "922845ddb4b9611c1c98c03cb104ba4599acb0b5",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
-      "relativePath": "testcases/e7aa44/a712845ae1efc5353a374239dd9c4c51522e0927.html",
+      "url": "https://act-rules.github.io/testcases/e7aa44/922845ddb4b9611c1c98c03cb104ba4599acb0b5.html",
+      "relativePath": "testcases/e7aa44/922845ddb4b9611c1c98c03cb104ba4599acb0b5.html",
       "expected": "inapplicable",
       "ruleId": "e7aa44",
       "ruleName": "`audio` element content has text alternative",

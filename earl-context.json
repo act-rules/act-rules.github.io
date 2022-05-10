@@ -2,8 +2,13 @@
 	"@context": {
 		"@vocab": "http://www.w3.org/ns/earl#",
 		"earl": "http://www.w3.org/ns/earl#",
+		"WCAG": "http://www.w3.org/TR/WCAG/#",
+		"WCAG10": "http://www.w3.org/TR/WCAG10/#",
+		"WCAG2": "http://www.w3.org/TR/WCAG2/#",
 		"WCAG20": "http://www.w3.org/TR/WCAG20/#",
 		"WCAG21": "http://www.w3.org/TR/WCAG21/#",
+		"WCAG22": "http://www.w3.org/TR/WCAG22/#",
+		"WCAG30": "http://www.w3.org/TR/wcag-3.0/#",
 		"dct": "http://purl.org/dc/terms/",
 		"sch": "https://schema.org/",
 		"doap": "http://usefulinc.com/ns/doap#",

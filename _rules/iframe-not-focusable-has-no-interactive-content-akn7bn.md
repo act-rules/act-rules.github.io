@@ -1,4 +1,4 @@
-  ---
+---
 id: akn7bn
 name: iframe with negative tabindex has no interactive elements
 rule_type: atomic

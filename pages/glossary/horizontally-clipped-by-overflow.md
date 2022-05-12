@@ -12,7 +12,7 @@ A [node][] is <dfn>Horizontally Clipped by Overflow</dfn> if it has an [ancestor
 This `img` element has an [ancestor][] `div` element with an `overflow-x` of `hidden`. The width of the `img` is greater than that of the [ancestor][] `div`, and so is clipped by the `overflow-x` property of the `div`.
 
 ```html
-<div style="width: 100px; overflow-y: hidden;">
+<div style="width: 100px; overflow-x: hidden;">
 	<img src="/test-assets/shared/w3c-logo.png" width="150" alt="Partial W3C Logo" />
 </div>
 ```

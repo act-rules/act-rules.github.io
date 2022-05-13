@@ -3,7 +3,7 @@ id: 2eb176
 name: '`audio` element content has transcript'
 rule_type: atomic
 description: |
-  Non-streaming `audio` elements must have a text alternative for all included auditory information.
+  This rule checks that `audio` elements have a transcript that includes all auditory information.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -56,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Audio with controls and internal transcript
+This `audio` element has native player controls and an internal transcript.
 
 ```html
 <html lang="en">
@@ -72,7 +72,7 @@ Audio with controls and internal transcript
 
 #### Passed Example 2
 
-Audio with controls and external transcript
+This `audio` element has native player controls and an external transcript.
 
 ```html
 <html lang="en">
@@ -83,7 +83,7 @@ Audio with controls and external transcript
 
 #### Passed Example 3
 
-Audio with autoplay and external transcript
+This `audio` element has an `autoplay` attribute and an external transcript.
 
 ```html
 <html lang="en">
@@ -96,7 +96,7 @@ Audio with autoplay and external transcript
 
 #### Failed Example 1
 
-Audio with controls and no transcript
+This `audio` element has native player controls and no transcript.
 
 ```html
 <html lang="en">
@@ -106,7 +106,7 @@ Audio with controls and no transcript
 
 #### Failed Example 2
 
-Audio with controls and incorrect internal transcript
+This `audio` element has native player controls and an incorrect internal transcript.
 
 ```html
 <html lang="en">
@@ -122,7 +122,7 @@ Audio with controls and incorrect internal transcript
 
 #### Failed Example 3
 
-Audio with controls and incorrect external transcript
+This `audio` element has native player controls and an incorrect external transcript.
 
 ```html
 <html lang="en">
@@ -133,7 +133,7 @@ Audio with controls and incorrect external transcript
 
 #### Failed Example 4
 
-Audio with autoplay and incorrect external transcript
+This `audio` element has an `autoplay` attribute and an incorrect external transcript.
 
 ```html
 <html lang="en">
@@ -144,7 +144,7 @@ Audio with autoplay and incorrect external transcript
 
 #### Failed Example 5
 
-Audio with controls and [non-visible][visible] internal transcript
+This `audio` element has native player controls and a [non-visible][visible] internal transcript.
 
 ```html
 <html lang="en">
@@ -160,7 +160,7 @@ Audio with controls and [non-visible][visible] internal transcript
 
 #### Failed Example 6
 
-Audio with controls and internal transcript that is not exposed to the accessibility tree
+This `audio` element has native player controls and an internal transcript that is not exposed to the accessibility tree.
 
 ```html
 <html lang="en">
@@ -178,7 +178,7 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 
 #### Inapplicable Example 1
 
-Audio without controls.
+This `audio` element has no native player controls.
 
 ```html
 <html lang="en">
@@ -188,7 +188,7 @@ Audio without controls.
 
 #### Inapplicable Example 2
 
-Audio with hidden controls.
+This `audio` element has hidden native player controls.
 
 ```html
 <html lang="en">

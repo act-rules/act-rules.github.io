@@ -123,7 +123,7 @@
 	],
 	"devDependencies": {
 		"act-tools": "github:act-rules/act-tools#main",
-		"aria-query": "^4.0.2",
+		"aria-query": "^4.2.2",
 		"dictionary-en-us": "^2.2.1",
 		"fastmatter": "^2.1.1",
 		"gfm-code-blocks": "^1.0.0",
@@ -134,7 +134,7 @@
 		"jest": "^25.5.4",
 		"jest-expect-message": "^1.0.2",
 		"jest-extended": "^0.11.5",
-		"js-yaml": "^3.14.0",
+		"js-yaml": "^3.14.1",
 		"lint-staged": "^9.5.0",
 		"marked": "^0.7.0",
 		"prettier": "^1.19.1",
@@ -149,9 +149,9 @@
 		"retext-stringify": "^2.0.4",
 		"retext-syntax-urls": "^1.0.2",
 		"unified": "^8.4.2",
-		"unist-util-visit": "^2.0.2",
-		"vfile-reporter": "^6.0.0",
-		"zx": "^5.2.0"
+		"unist-util-visit": "^2.0.3",
+		"vfile-reporter": "^6.0.2",
+		"zx": "^5.3.0"
 	},
 	"keywords": [
 		"WCAG",

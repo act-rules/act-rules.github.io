@@ -28,11 +28,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that has a negative number as a `tabindex` [attribute value][].
+This rule applies to any non-focusable `iframe` element that has [focusable][] content.
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not include elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+For each test target, the [nested browsing context][] does not [contain](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
+
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Assumptions
 
@@ -79,6 +81,14 @@ This `iframe` element contains no [visible][] content because of the small size 
 <iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
+#### Passed Example 4
+
+This `iframe` element contains no [visible][] content because the iframe is hidden.
+
+```html
+<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -106,3 +116,4 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [visible]: #visible 'Definition of visible'
+[focusable]: #focusable 'Definition of focusable'

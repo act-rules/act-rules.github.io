@@ -8589,10 +8589,10 @@
       }
     },
     {
-      "testcaseId": "d8e383a123d1cfbaeab6ed551f08ac2f7a9494f8",
+      "testcaseId": "49a6b0a208fa118829c6622ffc1dc2ce150a1ce1",
       "testcaseTitle": "Passed Example 4",
-      "url": "https://act-rules.github.io/testcases/b49b2e/d8e383a123d1cfbaeab6ed551f08ac2f7a9494f8.html",
-      "relativePath": "testcases/b49b2e/d8e383a123d1cfbaeab6ed551f08ac2f7a9494f8.html",
+      "url": "https://act-rules.github.io/testcases/b49b2e/49a6b0a208fa118829c6622ffc1dc2ce150a1ce1.html",
+      "relativePath": "testcases/b49b2e/49a6b0a208fa118829c6622ffc1dc2ce150a1ce1.html",
       "expected": "passed",
       "ruleId": "b49b2e",
       "ruleName": "Heading is descriptive",
@@ -8625,10 +8625,10 @@
       }
     },
     {
-      "testcaseId": "4b060cc7f719b34e7976b45850c9dd2ba47a8a2e",
+      "testcaseId": "ffb1127189b433a4d64fe895c24db7a8e3816080",
       "testcaseTitle": "Passed Example 6",
-      "url": "https://act-rules.github.io/testcases/b49b2e/4b060cc7f719b34e7976b45850c9dd2ba47a8a2e.html",
-      "relativePath": "testcases/b49b2e/4b060cc7f719b34e7976b45850c9dd2ba47a8a2e.html",
+      "url": "https://act-rules.github.io/testcases/b49b2e/ffb1127189b433a4d64fe895c24db7a8e3816080.html",
+      "relativePath": "testcases/b49b2e/ffb1127189b433a4d64fe895c24db7a8e3816080.html",
       "expected": "passed",
       "ruleId": "b49b2e",
       "ruleName": "Heading is descriptive",
@@ -8715,10 +8715,10 @@
       }
     },
     {
-      "testcaseId": "e410079a28dd1a4cf4c823218b2ee058ee9dff86",
+      "testcaseId": "5310147eff2036b05df603cd66f32d8ac9163c6b",
       "testcaseTitle": "Failed Example 3",
-      "url": "https://act-rules.github.io/testcases/b49b2e/e410079a28dd1a4cf4c823218b2ee058ee9dff86.html",
-      "relativePath": "testcases/b49b2e/e410079a28dd1a4cf4c823218b2ee058ee9dff86.html",
+      "url": "https://act-rules.github.io/testcases/b49b2e/5310147eff2036b05df603cd66f32d8ac9163c6b.html",
+      "relativePath": "testcases/b49b2e/5310147eff2036b05df603cd66f32d8ac9163c6b.html",
       "expected": "failed",
       "ruleId": "b49b2e",
       "ruleName": "Heading is descriptive",

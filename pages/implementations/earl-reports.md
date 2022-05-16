@@ -4,14 +4,14 @@ title: Reporting Format
 
 ## Contribute An Implementation
 
-If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
+If you developed an accessibility tool or a testing methodology and would like to have your implementation included in the WAI website, there are two ways you can do so.
 
-1. If you have a tool that can return a data format, you will need to run your tests against the [ACT-R test cases](../testcases/) and [submit a report](../reporting/).
-2. If you use manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.
+1. If you have a tool that can return a data format, you will need to run your tests against the [test cases](../testcases/) and [submit a report](../reporting/).
+2. If you have a manual test methodology where you fill results into some report template or semi-automated tool, you [can use the ACT Implementor tool](https://act-implementor.netlify.app/#/) instead to produce implementation reports.
 
 ## Understanding the Reporting format
 
-To display a accessibility test tool or methodology on the ACT-R Community website, ACT-R use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://json-ld.org). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
+To display an accessibility test tool or methodology on the WAI website, use the [Evaluation And Reporting Language](https://www.w3.org/TR/EARL10-Schema/) expressed using [JSON-LD](https://www.w3.org/TR/json-ld/). Tool developers that have an EARL reporter should be able to provide their existing reports. If you don't already have an EARL reporter, we provided a basic data structure that you can use.
 
 ### Context And Graph
 
@@ -52,7 +52,7 @@ Add an `Assertion` object to the `assertions` array for each outcome provided by
 The following properties are required for each Assertion:
 
 - `@type`: This must be `Assertion`, to distinguish it from other data types that might exist in an EARL report.
-- `test.title`: A title for the rule / test procedure as it is known in the implementation
+- `test`: See [Test Criterion](#test-criterion).
 - `result.outcome`: One of the following values:
 
   - `earl:passed`: A node in the test case passed the rule
@@ -71,8 +71,8 @@ The following properties are required for each Assertion:
 			"assertions": [
 				{
 					"@type": "Assertion",
-					"test": { "title": "My Tool's rule title" },
-					"result": { "outcome": "earl:passed" }
+					"result": { "outcome": "earl:passed" },
+					"test": { ... },
 				}
 			]
 		}
@@ -80,4 +80,35 @@ The following properties are required for each Assertion:
 }
 ```
 
-**Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `title` and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.
+### Test Criterion
+
+For each result, we'll need to know which rule or procedure in the tool reported it, and which WCAG success criteria were failed. To do so, on the `test` property, add an object. This must include:
+
+- `title`: A string, that uniquely identifies which rule or procedure in the tool found the result.
+- `isPartOf`: An array of strings, listing the WCAG success criteria that fail when the rule or procedure fails. These must use the IDs of the WCAG success criteria, prefaced with `WCAG2:`. For example `WCAG2:name-role-value`.
+
+```json
+{
+	"@context": "https://act-rules.github.io/earl-context.json",
+	"@graph": [
+		{
+			"@type": "TestSubject",
+			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"assertions": [
+				{
+					"@type": "Assertion",
+					"result": { "outcome": "earl:passed" },
+					"test": {
+						"title": "image-button-has-name",
+						"isPartOf": ["WCAG2:non-text-content", "WCAG2:name-role-value"]
+					}
+				}
+			]
+		}
+	]
+}
+```
+
+**Note**: The IDs of WCAG success criteria can be found in [sc-urls.json](https://github.com/act-rules/act-tools/blob/main/src/data/sc-urls.json), on the `scId` property. These are the IDs introduced in WCAG 2.1, and continued in WCAG 2.2. Use these IDs, even when reporting for WCAG 2.0.
+
+**Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `isPartOf`, `title`, and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.

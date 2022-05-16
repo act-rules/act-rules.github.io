@@ -140,11 +140,11 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 
 ```html
 <html lang="en">
-	<h2>Shipping address</h2>
+	<h2>Shipping</h2>
 	<label>Name<input id="shipping-name" type="text" name="name"/></label>
 	<label>Street<input id="shipping-street" type="text" name="street"/></label>
 
-	<h2>Billing address</h2>
+	<h2>Billing</h2>
 	<label>Name<input id="billing-name" type="text" name="name"/></label>
 	<label>Street<input id="billing-street" type="text" name="street"/></label>
 </html>
@@ -156,7 +156,7 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 
 ```html
 <html lang="en">
-	<div id="shipping">Shipping address</div>
+	<div id="shipping">Shipping</div>
 	<span id="name">Name</span>
 	<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
 </html>

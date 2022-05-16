@@ -50,6 +50,9 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Test Procedure
@@ -119,7 +122,7 @@ A video element with a link to a text transcript.
 
 #### Passed Example 3
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
+This video element describes some of the text on the same page. The text identifies the video as an alternative.
 
 ```html
 <html lang="en">

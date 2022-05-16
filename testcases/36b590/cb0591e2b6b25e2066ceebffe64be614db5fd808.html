@@ -1,0 +1,21 @@
+<!DOCTYPE html> <form>
+	<p id="error">
+		<strong>
+			Name and color cannot be empty. Please complete all required fields.
+		</strong>
+	</p>
+	<fieldset>
+		<legend>Shipping</legend>
+		<label for="name">Name (required)</label>
+		<input type="text" id="name" required />
+		<br />
+		<label for="address">Address</label>
+		<input type="text" id="address" />
+	</fieldset>
+	<fieldset>
+		<legend>Pick a color (required)</legend>
+		<label><input type="radio" name="color" value="blue" required />Blue</label>
+		<label><input type="radio" name="color" value="yellow" />Yellow</label>
+	</fieldset>
+	<input type="button" value="Submit" aria-describedby="error" />
+</form>

@@ -111,4 +111,32 @@ For each result, we'll need to know which rule or procedure in the tool reported
 
 **Note**: The IDs of WCAG success criteria can be found in [sc-urls.json](https://github.com/act-rules/act-tools/blob/main/src/data/sc-urls.json), on the `scId` property. These are the IDs introduced in WCAG 2.1, and continued in WCAG 2.2. Use these IDs, even when reporting for WCAG 2.0.
 
+## isPartOf
+
+Alternatively, it is possible to specify WCAG 2 success criteria by number instead of by ID. This can be done in the following format:
+
+```json
+{
+	"@context": "https://act-rules.github.io/earl-context.json",
+	"@graph": [
+		{
+			"@type": "TestSubject",
+			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"assertions": [
+				{
+					"@type": "Assertion",
+					"result": { "outcome": "earl:passed" },
+					"test": {
+						"title": "image-button-has-name",
+						"isPartOf": [{ "title": "WCAG 2: 1.1.1" }, { "title": "WCAG 2: 4.1.2" }]
+					}
+				}
+			]
+		}
+	]
+}
+```
+
+The `title` format is fairly permissive. To be recognized as a success criterion, the string `WCAG 2` or `WCAG2`, and the success criterion number (separated with dots) must be included. For example `WCAG 2.1 criterion 1.1.1 Non-text content` would be recognized. To explicitly add the success criterion ID the `@id` property can be used.
+
 **Advanced**: All required properties map to [EARL](http://www.w3.org/ns/earl#), except for `isPartOf`, `title`, and `source` which are properties of [Dublin Core](http://purl.org/dc/terms/). Property names can be anything, as long as they can be expanded to the correct URL.

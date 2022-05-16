@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: Audio or video that plays automatically has a control mechanism
+name: Audio or video element that plays automatically has a control mechanism
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.

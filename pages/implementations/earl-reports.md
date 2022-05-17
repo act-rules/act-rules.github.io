@@ -111,7 +111,7 @@ For each result, we'll need to know which rule or procedure in the tool reported
 
 **Note**: The IDs of WCAG success criteria can be found in [sc-urls.json](https://github.com/act-rules/act-tools/blob/main/src/data/sc-urls.json), on the `scId` property. These are the IDs introduced in WCAG 2.1, and continued in WCAG 2.2. Use these IDs, even when reporting for WCAG 2.0.
 
-## isPartOf
+### isPartOf
 
 Alternatively, it is possible to specify WCAG 2 success criteria by number instead of by ID. This can be done in the following format:
 

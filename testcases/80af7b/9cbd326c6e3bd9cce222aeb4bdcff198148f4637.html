@@ -1,0 +1,11 @@
+<!DOCTYPE html> <script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
+
+<p>Press Ctrl+M to Exit</p>
+<a id="link1" href="#">Link 1</a>
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
+	Button 1
+</button>
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
+	Button 2
+</button>
+<a id="link2" href="#">Link 2</a>

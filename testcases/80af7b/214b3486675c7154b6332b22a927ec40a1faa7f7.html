@@ -1,0 +1,14 @@
+<!DOCTYPE html> <script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
+
+<div onkeydown="escapeTrapOnCtrlM(event)">
+	<a id="link1" href="#">Link 1</a>
+	<button id="btn1" onfocus="trapOn = true" onblur="moveFocusTo('helpLink')">
+		Button 1
+	</button>
+	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
+	<div id="helptext"></div>
+	<button id="btn2" onblur="moveFocusTo('btn1')">
+		Button 2
+	</button>
+</div>
+<a id="link2" href="#">Link 2</a>

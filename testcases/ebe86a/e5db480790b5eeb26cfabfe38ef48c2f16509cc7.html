@@ -1,0 +1,11 @@
+<!DOCTYPE html> <script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
+
+<a id="link1" href="#">Link 1</a>
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')">
+	Button 1
+</button>
+<p>Press Ctrl+M to Exit</p>
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')">
+	Button 2
+</button>
+<a id="link2" href="#">Link 2</a>

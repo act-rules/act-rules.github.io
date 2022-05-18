@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1130,
+  "count": 1132,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -17013,10 +17013,10 @@
       }
     },
     {
-      "testcaseId": "610a3e4af19f3650adf6b2cd06223defde8084e6",
+      "testcaseId": "97e4e6c87174af3d4402266e106aac175c85ee87",
       "testcaseTitle": "Passed Example 2",
-      "url": "https://act-rules.github.io/testcases/fd3a94/610a3e4af19f3650adf6b2cd06223defde8084e6.html",
-      "relativePath": "testcases/fd3a94/610a3e4af19f3650adf6b2cd06223defde8084e6.html",
+      "url": "https://act-rules.github.io/testcases/fd3a94/97e4e6c87174af3d4402266e106aac175c85ee87.html",
+      "relativePath": "testcases/fd3a94/97e4e6c87174af3d4402266e106aac175c85ee87.html",
       "expected": "passed",
       "ruleId": "fd3a94",
       "ruleName": "Links with identical accessible names and context serve equivalent purpose",
@@ -17205,10 +17205,10 @@
       }
     },
     {
-      "testcaseId": "75d84a5edb66a03aef8352434beb59353001dd2d",
+      "testcaseId": "49b96fff7b6caabd37e13b7c9f0e153603abbe9a",
       "testcaseTitle": "Failed Example 2",
-      "url": "https://act-rules.github.io/testcases/fd3a94/75d84a5edb66a03aef8352434beb59353001dd2d.html",
-      "relativePath": "testcases/fd3a94/75d84a5edb66a03aef8352434beb59353001dd2d.html",
+      "url": "https://act-rules.github.io/testcases/fd3a94/49b96fff7b6caabd37e13b7c9f0e153603abbe9a.html",
+      "relativePath": "testcases/fd3a94/49b96fff7b6caabd37e13b7c9f0e153603abbe9a.html",
       "expected": "failed",
       "ruleId": "fd3a94",
       "ruleName": "Links with identical accessible names and context serve equivalent purpose",
@@ -17377,6 +17377,54 @@
       "testcaseTitle": "Inapplicable Example 4",
       "url": "https://act-rules.github.io/testcases/fd3a94/8a0402b156eef4b9027b23c46f93e0a17ef52c44.html",
       "relativePath": "testcases/fd3a94/8a0402b156eef4b9027b23c46f93e0a17ef52c44.html",
+      "expected": "inapplicable",
+      "ruleId": "fd3a94",
+      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/fd3a94",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "98019796f9ef8c980f87dca022df1f223531bc78",
+      "testcaseTitle": "Inapplicable Example 5",
+      "url": "https://act-rules.github.io/testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
+      "relativePath": "testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
+      "expected": "inapplicable",
+      "ruleId": "fd3a94",
+      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "rulePage": "https://act-rules.github.io/rules/fd3a94",
+      "ruleAccessibilityRequirements": {
+        "wcag20:2.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag20:2.4.9": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "f63a0bd36b1e7762299df130e1c3b0569b6d57ad",
+      "testcaseTitle": "Inapplicable Example 6",
+      "url": "https://act-rules.github.io/testcases/fd3a94/f63a0bd36b1e7762299df130e1c3b0569b6d57ad.html",
+      "relativePath": "testcases/fd3a94/f63a0bd36b1e7762299df130e1c3b0569b6d57ad.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
       "ruleName": "Links with identical accessible names and context serve equivalent purpose",

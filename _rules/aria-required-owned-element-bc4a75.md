@@ -92,12 +92,14 @@ This element with the `tablist` role only owns elements with the `tab` role. The
 
 #### Passed Example 3
 
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`. The `td` element is ignored because it has an [explicit semantic role][] of `none`.
 
 ```html
 <table role="grid">
 	<tr role="row">
-		<span role="cell">Item 1</span>
+		<td role="none">
+			<span role="cell">Item 1</span>
+		</td>
 	</tr>
 </table>
 ```

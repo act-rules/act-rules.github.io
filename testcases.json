@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1132,
+  "count": 1131,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -4766,54 +4766,6 @@
       "testcaseTitle": "Passed Example 12",
       "url": "https://act-rules.github.io/testcases/cf77f2/156ec33e8c22060bc0381e854a2fc1da29520b89.html",
       "relativePath": "testcases/cf77f2/156ec33e8c22060bc0381e854a2fc1da29520b89.html",
-      "expected": "passed",
-      "ruleId": "cf77f2",
-      "ruleName": "Bypass Blocks of Repeated Content",
-      "rulePage": "https://act-rules.github.io/rules/cf77f2",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.1": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G1": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G123": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G124": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:H69": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:SCR28": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "6b1b6c8fa1b1d65d75df7574fea91393c4bc5830",
-      "testcaseTitle": "Passed Example 13",
-      "url": "https://act-rules.github.io/testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
-      "relativePath": "testcases/cf77f2/6b1b6c8fa1b1d65d75df7574fea91393c4bc5830.html",
       "expected": "passed",
       "ruleId": "cf77f2",
       "ruleName": "Bypass Blocks of Repeated Content",

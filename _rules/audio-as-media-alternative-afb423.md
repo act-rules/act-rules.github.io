@@ -37,7 +37,6 @@ The auditory information of each test target is available as text (directly or v
 
 Each target element is labeled as an audio alternative for text on the page by an identifier that is [visible][] and [included in the accessibility tree][].
 
-**Note:** The term label does not refer to the `label` element.
 
 ## Assumptions
 

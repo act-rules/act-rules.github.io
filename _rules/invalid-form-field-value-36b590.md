@@ -111,11 +111,11 @@ This multiple `input` elements share a [form field error indicator][] that ident
 
 ```html
 <form>
-	<h2 id="error">
-		Name and color cannot be left unfilled. Please complete all required fields.
-	</h2>
+	<p id="error"><strong>
+		Name and color cannot be empty. Please complete all required fields.
+	</strong></p>
 	<fieldset>
-		<legend>Your data</legend>
+		<legend>Shipping</legend>
 		<label for="name">Name (required)</label>
 		<input type="text" id="name" required />
 		<br />
@@ -137,9 +137,10 @@ This `input` element does not have a [form field error indicator][].
 
 ```html
 <form>
-	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<input type="button" value="Submit" />
+	<label for="filter">Product filter</label>
+	<input type="text" id="filter" />
+	<input type="button" value="filter" />
+	<p>To see all products, leave the field empty.</p>
 </form>
 ```
 
@@ -168,7 +169,7 @@ This `input` element has a [form field error indicator][] but its message does n
 <form>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" />
-	<span id="error">Please enter a correct age.</span><br />
+	<span id="error">Please enter the correct text.</span><br />
 	<input type="button" value="Submit" />
 </form>
 ```

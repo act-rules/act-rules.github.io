@@ -38,11 +38,11 @@ The `object` element is not rendered for presentational purposes. If the `object
 
 ## Accessibility Support
 
-Non-supported media formats make screen readers render the text content of the element instead of other attributes.
+Non-supported media formats make screen readers render the text content of the element instead of other attributes. If there is no name for the `object` then the screen reader will not announce the context that is present visually.
 
 ## Background
 
-Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
+Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately. When the object resource is not loaded the fallback content is rendered. The only [accessible name][] that is announced by the screen reader is for an `object` that has valid `data` set. The `object` method of adding an [accessible name][] will depend on the role of the `data`.
 
 ### Bibliography
 
@@ -127,6 +127,14 @@ This `object` element which embeds an audio resource has an empty [accessible na
 
 ```html
 <object aria-labelledby="download" data="/test-assets/moon-audio/moon-speech.mp3"></object>
+```
+
+#### Failed Example 5
+
+This `object` element has an empty [accessible name][] as the `img` attribute has not been set correctly.
+
+```html
+<object><img alt="hello world"></object>
 ```
 
 ### Inapplicable

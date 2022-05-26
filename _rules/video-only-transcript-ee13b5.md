@@ -36,7 +36,7 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript. That text transcript is [visible][] and [included in the accessibility tree][], either on the page or through a link.
+The visual information of each test target is available through a text transcript that is [visible][] and [included in the accessibility tree][], either on the page or through a link.
 
 ## Assumptions
 

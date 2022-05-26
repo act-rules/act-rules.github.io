@@ -48,7 +48,7 @@ Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="tru
 
 By adding `aria-hidden="true"` to an element, content authors ensure that assistive technologies will ignore the element. This can be used to hide parts of a web page that are [pure decoration](https://www.w3.org/TR/WCAG21/#dfn-pure-decoration), such as icon fonts - that are not meant to be read by assistive technologies.
 
-However, if the element is also part of the [sequential focus navigation][], the assistive technology will want to announce the element where focus has landed. If focus lands on an element with `aria-hidden="true"`, the element's state of decorative vs non-decorative and [visible](#visible) vs hidden unclear.
+An element with an `aria-hidden` attribute set to `true` that is also part of the [sequential focus navigation][] may cause confusion for users of assistive technologies because the element can be reached via [sequential focus navigation][], but it should be hidden and not [included in the accessibility tree][].
 
 The 1 second time span introduced in the exception of the definition of [focusable][] is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
 
@@ -201,4 +201,5 @@ This `aria-hidden` attribute has an incorrect value.
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [focusable]: #focusable 'Definition of focusable'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation

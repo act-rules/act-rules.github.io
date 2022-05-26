@@ -22,11 +22,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport`. In addition, when the `content` attribute value is mapped to a list of property/value pairs in a user-agent specific manner, one of the properties is either `user-scalable` or `maximum-scale`.
+This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport`. In addition, the `content` [attribute value][] has the `user-scalable` or `maximum-scale` properties.
 
 ## Expectation 1
 
-For each test target, the [attribute value][] does hot have a `user-scalable` property with a value of `no`.
+For each test target, the [attribute value][] does not have a `user-scalable` property with a value of `no`.
 
 ## Expectation 2
 

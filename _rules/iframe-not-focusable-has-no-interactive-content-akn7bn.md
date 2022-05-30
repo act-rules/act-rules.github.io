@@ -1,6 +1,6 @@
 ---
 id: akn7bn
-name: iframe with negative tabindex has no interactive elements
+name: Iframe with negative tabindex has no interactive elements
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with a negative `tabindex` attribute value contain no interactive elements.
@@ -67,7 +67,7 @@ This `iframe` element contains no content that is part of [sequential focus navi
 
 #### Passed Example 2
 
-This `iframe` element contains a link that, because of its `tabindex` is not part of [sequential focus navigation][].
+This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>

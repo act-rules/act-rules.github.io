@@ -36,15 +36,14 @@ The rule name is its descriptive title. The agreed conventions for naming of rul
 
 - Be succinct, direct and declarative, and avoid unnecessary words, _e.g. an, the_.
 - Use declarative verbs, _e.g. has, have, is_.
-- Use back ticks to indicate words from code, _e.g. `label` v. Label_.
-- Identify code as an element or attribute as appropriate, _e.g. `title` element, `title` attribute_.
-- Use sentence case, _e.g. "Heading is descriptive"_, unless using code, _e.g. "`id` attribute value is unique"_, or initials, _e.g. "HTML page has title"_. Note: names starting with a backtick also need to be wrapped with quotes for the parser.
-- Use singular tense so that necessary plurals stand out, _e.g. "`video` element has captions"_.
+- Identify code as an element or attribute as appropriate, _e.g. title element, title attribute_.
+- Use sentence case, _e.g. "Heading is descriptive"_, including for code, _e.g. "Id attribute value is unique"_, or initials, _e.g. "HTML page has title"_.
+- Use singular tense so that necessary plurals stand out, _e.g. "Video element has captions"_.
 - Front load the applicable thing, _e.g. "Button has accessible name"_.
 - Refer to each applicable thing in a consistent way across rules, especially when related or checking the same applicable thing.
-- Describe the passing condition, _e.g. "`id` attribute value is unique", rather than "page has no duplicate `id`s"_.
-- Do not use hyphens or dashes unless correct for code, _e.g. `aria-*`_.
-- Do not use camelCase unless correct for code, _e.g. `iframe` not iFrame, `feImage` in SVG_.
+- Describe the passing condition, _e.g. "Id attribute value is unique", rather than "page has no duplicate id attributes"_.
+- Do not use hyphens or dashes unless correct for code, _e.g. aria-\*_.
+- Do not use camelCase unless correct for code, _e.g. iframe not iFrame, feImage in SVG_.
 - If unsure, refer to WCAG language used.
 - Aim to be unique, which should happen if title includes the applicable thing and passing condition.
 

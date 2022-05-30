@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1131,
+  "count": 1130,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -7965,10 +7965,10 @@
       }
     },
     {
-      "testcaseId": "172cc53f730ad4c0f06856346072edc2c8ff5f8e",
+      "testcaseId": "5d11716ba4bcb2c9804cbea517e2382b51d89217",
       "testcaseTitle": "Failed Example 4",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/172cc53f730ad4c0f06856346072edc2c8ff5f8e.html",
-      "relativePath": "testcases/cc0f0a/172cc53f730ad4c0f06856346072edc2c8ff5f8e.html",
+      "url": "https://act-rules.github.io/testcases/cc0f0a/5d11716ba4bcb2c9804cbea517e2382b51d89217.html",
+      "relativePath": "testcases/cc0f0a/5d11716ba4bcb2c9804cbea517e2382b51d89217.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",
@@ -7989,10 +7989,10 @@
       }
     },
     {
-      "testcaseId": "03ace5b72303f768b5f1ec3685796fe28e50e634",
+      "testcaseId": "925f5da9291c3ff7ee2c98cf43773ff6933be5a9",
       "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/03ace5b72303f768b5f1ec3685796fe28e50e634.html",
-      "relativePath": "testcases/cc0f0a/03ace5b72303f768b5f1ec3685796fe28e50e634.html",
+      "url": "https://act-rules.github.io/testcases/cc0f0a/925f5da9291c3ff7ee2c98cf43773ff6933be5a9.html",
+      "relativePath": "testcases/cc0f0a/925f5da9291c3ff7ee2c98cf43773ff6933be5a9.html",
       "expected": "failed",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",
@@ -8037,10 +8037,10 @@
       }
     },
     {
-      "testcaseId": "071ed0f3870c0c3d4c0dec0a8d0f629b8dd684f1",
+      "testcaseId": "4ae2a7b651a21179c0a61890268d86014e269f6a",
       "testcaseTitle": "Inapplicable Example 2",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/071ed0f3870c0c3d4c0dec0a8d0f629b8dd684f1.html",
-      "relativePath": "testcases/cc0f0a/071ed0f3870c0c3d4c0dec0a8d0f629b8dd684f1.html",
+      "url": "https://act-rules.github.io/testcases/cc0f0a/4ae2a7b651a21179c0a61890268d86014e269f6a.html",
+      "relativePath": "testcases/cc0f0a/4ae2a7b651a21179c0a61890268d86014e269f6a.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",
@@ -8061,34 +8061,10 @@
       }
     },
     {
-      "testcaseId": "43548ef28fac9a7964a4a1d964df4aff6113053e",
+      "testcaseId": "377aa77f49f130e1baa8e0ea4679de95187424a2",
       "testcaseTitle": "Inapplicable Example 3",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/43548ef28fac9a7964a4a1d964df4aff6113053e.html",
-      "relativePath": "testcases/cc0f0a/43548ef28fac9a7964a4a1d964df4aff6113053e.html",
-      "expected": "inapplicable",
-      "ruleId": "cc0f0a",
-      "ruleName": "Form field label is descriptive",
-      "rulePage": "https://act-rules.github.io/rules/cc0f0a",
-      "ruleAccessibilityRequirements": {
-        "wcag20:2.4.6": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "wcag-technique:G131": {
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "2679bd4d437e0a5a49d279a1c39b06d6d9ab427f",
-      "testcaseTitle": "Inapplicable Example 4",
-      "url": "https://act-rules.github.io/testcases/cc0f0a/2679bd4d437e0a5a49d279a1c39b06d6d9ab427f.html",
-      "relativePath": "testcases/cc0f0a/2679bd4d437e0a5a49d279a1c39b06d6d9ab427f.html",
+      "url": "https://act-rules.github.io/testcases/cc0f0a/377aa77f49f130e1baa8e0ea4679de95187424a2.html",
+      "relativePath": "testcases/cc0f0a/377aa77f49f130e1baa8e0ea4679de95187424a2.html",
       "expected": "inapplicable",
       "ruleId": "cc0f0a",
       "ruleName": "Form field label is descriptive",

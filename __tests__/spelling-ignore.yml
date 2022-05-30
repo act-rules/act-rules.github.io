@@ -246,6 +246,8 @@
 - TestSubject
 - earl:cantTell
 - getComputedPriority
+- isPartOf
+- scId
 
 # sizes
 - 1em

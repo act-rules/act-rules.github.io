@@ -67,7 +67,7 @@ This `iframe` element contains no content that is part of [sequential focus navi
 
 #### Passed Example 2
 
-This `iframe` element contains a link that, because of its `tabindex` is not part of [sequential focus navigation][].
+This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>

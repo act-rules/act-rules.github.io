@@ -81,30 +81,16 @@ This element with the `list` role only owns elements with the `listitem` role. T
 
 #### Passed Example 2
 
-This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is one of the [required owned elements][] for `tablist`.
-
-```html
-<ul role="tablist">
-	<li role="tab">Tab 1</li>
-	<li role="tab">Tab 2</li>
-</ul>
-```
-
-#### Passed Example 3
-
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`. The `td` element is ignored because it has an [explicit semantic role][] of `none`.
-
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
 ```html
 <table role="grid">
 	<tr role="row">
-		<td role="none">
-			<span role="cell">Item 1</span>
-		</td>
+		<td role="cell">Item 1</td>
 	</tr>
 </table>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 This element with the `menu` role only owns elements with the `menuitem`, `menuitemradio` and `menuitemcheckbox` role. These roles are all [required owned elements][] for `menu`. The element with the `none` role is not [owned by][] the `menu` because it is not [included in the accessibility tree][].
 
@@ -115,6 +101,18 @@ This element with the `menu` role only owns elements with the `menuitem`, `menui
 	<div role="menuitemradio" aria-checked="false">Item 2</div>
 	<div role="menuitemcheckbox" aria-checked="false">Item 3</div>
 </div>
+```
+
+#### Passed Example 4
+
+This element with the `tablist` role only owns elements with the `tab` role. The `tab` role is one of the [required owned elements][] for `tablist`. The `li` element is ignored because it has an [explicit semantic role][] of `none`.
+
+```html
+<ul role="tablist">
+	<li role="none">
+		<span role="tab">Tab 1</span>
+	</li>
+</ul>
 ```
 
 #### Passed Example 5

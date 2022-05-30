@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Line height in `style` attributes is not `!important`",
+      "title": "Report for ACT-R Rule - Line height in style attributes is not !important",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Line height in `style` attributes is not `!important`",
+          "siteName": "ACT-R Rule - Line height in style attributes is not !important",
           "siteScope": "https://act-rules.github.io/testcases/78fd32/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

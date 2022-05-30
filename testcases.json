@@ -12,7 +12,7 @@
       "relativePath": "testcases/5f99a7/9a417788dfd68b83820b01deb71e427f8d8edc3a.html",
       "expected": "passed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -23,7 +23,7 @@
       "relativePath": "testcases/5f99a7/4084cf8b4837f69d8ffca44fc13f6a4e3f51fc84.html",
       "expected": "passed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -34,7 +34,7 @@
       "relativePath": "testcases/5f99a7/bd673776fddce4f81a3f7ec43c5986ee21983341.html",
       "expected": "passed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -45,7 +45,7 @@
       "relativePath": "testcases/5f99a7/bc5dc64fa7070b8eeb02023dbcdf6699fca53b77.html",
       "expected": "passed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -56,7 +56,7 @@
       "relativePath": "testcases/5f99a7/5552a82ba7fd830b212b4e858205521f1b52d5ee.html",
       "expected": "failed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -67,7 +67,7 @@
       "relativePath": "testcases/5f99a7/8a920a0a51a6eecba025b59d037e46f6a1d775ea.html",
       "expected": "failed",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -78,7 +78,7 @@
       "relativePath": "testcases/5f99a7/deab475b4823df6c12ff62ea36fc1f64ecf79b3f.html",
       "expected": "inapplicable",
       "ruleId": "5f99a7",
-      "ruleName": "`aria-*` attribute is defined in WAI-ARIA",
+      "ruleName": "ARIA attribute is defined in WAI-ARIA",
       "rulePage": "https://act-rules.github.io/rules/5f99a7",
       "ruleAccessibilityRequirements": null
     },
@@ -89,7 +89,7 @@
       "relativePath": "testcases/6cfa84/6993d0144f7c3ba330666daf9f0b077fb61894f1.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -114,7 +114,7 @@
       "relativePath": "testcases/6cfa84/46416c73f816af91f446e6056c96e89ac7882edb.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -139,7 +139,7 @@
       "relativePath": "testcases/6cfa84/a613606d901cbdb0a83d62107647bbd3a2beaad8.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -164,7 +164,7 @@
       "relativePath": "testcases/6cfa84/7ca22500f92a856f5edadfb482a073f3dba47d3b.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -189,7 +189,7 @@
       "relativePath": "testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -214,7 +214,7 @@
       "relativePath": "testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -239,7 +239,7 @@
       "relativePath": "testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -264,7 +264,7 @@
       "relativePath": "testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -289,7 +289,7 @@
       "relativePath": "testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -314,7 +314,7 @@
       "relativePath": "testcases/6cfa84/1d19581eebfa0f92c17dd772ca67623cb3ad3bdb.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -339,7 +339,7 @@
       "relativePath": "testcases/6cfa84/738e5ea04afe9baef6499ad3d3bb675dcc61dd82.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -364,7 +364,7 @@
       "relativePath": "testcases/6cfa84/4de29b45568a0fe40bff84c4556a4bc07dfab02d.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -389,7 +389,7 @@
       "relativePath": "testcases/6cfa84/21498af9b02caf76133b59775aa7abab2942e7fd.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with `aria-hidden` has no focusable content",
+      "ruleName": "Element with aria-hidden has no focusable content",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -2097,7 +2097,7 @@
       "relativePath": "testcases/afb423/5b0d73b16341a9d74ffa8f448a03893a6f816d4a.html",
       "expected": "passed",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2108,7 +2108,7 @@
       "relativePath": "testcases/afb423/c028911c12b611c095a49cdb1a2bf2c263a049c1.html",
       "expected": "failed",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2119,7 +2119,7 @@
       "relativePath": "testcases/afb423/dd674046da6c8e2279b6d08b3dd786ecf3159ee4.html",
       "expected": "failed",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2130,7 +2130,7 @@
       "relativePath": "testcases/afb423/8a39d527fc5b24a2123d9c3e44397dfc91456481.html",
       "expected": "failed",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2141,7 +2141,7 @@
       "relativePath": "testcases/afb423/7d59a6033d95696174d4aa3d2520aa1c06dd8327.html",
       "expected": "failed",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2152,7 +2152,7 @@
       "relativePath": "testcases/afb423/e450f0455932478a827dca455b1cb2f9eb0aa310.html",
       "expected": "inapplicable",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2163,7 +2163,7 @@
       "relativePath": "testcases/afb423/6fecb639ae678012c490f5bfcb95d88ff07a02de.html",
       "expected": "inapplicable",
       "ruleId": "afb423",
-      "ruleName": "`audio` element content is media alternative for text",
+      "ruleName": "Audio element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/afb423",
       "ruleAccessibilityRequirements": null
     },
@@ -2174,7 +2174,7 @@
       "relativePath": "testcases/80f0bf/baf99ce14eac43fcd9240adea389200100287691.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2217,7 +2217,7 @@
       "relativePath": "testcases/80f0bf/cc5c2900c8d128d3ca25d8443f1f3e0a0e5f58e6.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2260,7 +2260,7 @@
       "relativePath": "testcases/80f0bf/85c01775d802057e6f43c2248b8a5eb916c50c74.html",
       "expected": "passed",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2303,7 +2303,7 @@
       "relativePath": "testcases/80f0bf/37070c2165bf6380c3f79aea7865a8589ab24de6.html",
       "expected": "failed",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2346,7 +2346,7 @@
       "relativePath": "testcases/80f0bf/63df2c2d14957cfa0957844313864dd15273c8a3.html",
       "expected": "failed",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2389,7 +2389,7 @@
       "relativePath": "testcases/80f0bf/766a470116dc76c4f56cb2fcf26ba75e9f0a4505.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2432,7 +2432,7 @@
       "relativePath": "testcases/80f0bf/6a0fc31d6bea6ceced58d1ef97713935e4fd2717.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2475,7 +2475,7 @@
       "relativePath": "testcases/80f0bf/a8c2fcf03cc5d141a531aac6e4d4662d624df475.html",
       "expected": "inapplicable",
       "ruleId": "80f0bf",
-      "ruleName": "`audio` or `video` avoids automatically playing audio",
+      "ruleName": "Audio or video element avoids automatically playing audio",
       "rulePage": "https://act-rules.github.io/rules/80f0bf",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.2": {
@@ -2518,7 +2518,7 @@
       "relativePath": "testcases/e7aa44/b50bb4758857f30b71688dedba190ae2dc2a358e.html",
       "expected": "passed",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2542,7 +2542,7 @@
       "relativePath": "testcases/e7aa44/ca6443fb0a0e25da299d63a7aee795409784abc3.html",
       "expected": "passed",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2566,7 +2566,7 @@
       "relativePath": "testcases/e7aa44/e6b333585de57aae36893c2d3920036ba4ef4c96.html",
       "expected": "passed",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2590,7 +2590,7 @@
       "relativePath": "testcases/e7aa44/0020da34308d3233331b46b50f45b3fb667b578e.html",
       "expected": "failed",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2614,7 +2614,7 @@
       "relativePath": "testcases/e7aa44/6b34494821e5c4135879b83d322e759961b4b665.html",
       "expected": "failed",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2638,7 +2638,7 @@
       "relativePath": "testcases/e7aa44/a60d2b26e04c3e364e27f1113e49292b9db8f733.html",
       "expected": "inapplicable",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2662,7 +2662,7 @@
       "relativePath": "testcases/e7aa44/2dfa209363c9d1edab2e7bcd5448a0f21db78300.html",
       "expected": "inapplicable",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2686,7 +2686,7 @@
       "relativePath": "testcases/e7aa44/922845ddb4b9611c1c98c03cb104ba4599acb0b5.html",
       "expected": "inapplicable",
       "ruleId": "e7aa44",
-      "ruleName": "`audio` element content has text alternative",
+      "ruleName": "Audio element content has text alternative",
       "rulePage": "https://act-rules.github.io/rules/e7aa44",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -2710,7 +2710,7 @@
       "relativePath": "testcases/2eb176/5265ee862ec0a9b343ff6546bb7cab68b48e147d.html",
       "expected": "passed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2721,7 +2721,7 @@
       "relativePath": "testcases/2eb176/c791c107034d6c92a7e5bfcc4c548f88688ce5db.html",
       "expected": "passed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2732,7 +2732,7 @@
       "relativePath": "testcases/2eb176/6957932d603a81b680f78aa15116ddcce0150242.html",
       "expected": "passed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2743,7 +2743,7 @@
       "relativePath": "testcases/2eb176/b3fc76d9e3bac4cff68fc65e0661c7c606109f5f.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2754,7 +2754,7 @@
       "relativePath": "testcases/2eb176/715fa0860433575c16363237376182030bd2eb50.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2765,7 +2765,7 @@
       "relativePath": "testcases/2eb176/5a619cb9816f69a23324b80553497712097504ee.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2776,7 +2776,7 @@
       "relativePath": "testcases/2eb176/a52f206a4a2392743af67acb04d0ae06011ae32b.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2787,7 +2787,7 @@
       "relativePath": "testcases/2eb176/cc663d637ca81033f0b59e6613c8bd376324ee2c.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2798,7 +2798,7 @@
       "relativePath": "testcases/2eb176/1e324500a9e3a26281ff371fc64b59f35a25e6b4.html",
       "expected": "failed",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2809,7 +2809,7 @@
       "relativePath": "testcases/2eb176/80b586e5ee092e41159fba875572f945b88426ca.html",
       "expected": "inapplicable",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2820,7 +2820,7 @@
       "relativePath": "testcases/2eb176/fb66537a8b4f876e10fbd155d06b24581098de05.html",
       "expected": "inapplicable",
       "ruleId": "2eb176",
-      "ruleName": "`audio` element content has transcript",
+      "ruleName": "Audio element content has transcript",
       "rulePage": "https://act-rules.github.io/rules/2eb176",
       "ruleAccessibilityRequirements": null
     },
@@ -2831,7 +2831,7 @@
       "relativePath": "testcases/aaa1bf/e8a48b617a529bd77a77693eddc7212655da60ab.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2849,7 +2849,7 @@
       "relativePath": "testcases/aaa1bf/19ebd0fed367ae04538cbd14453d24677605b4d1.html",
       "expected": "passed",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2867,7 +2867,7 @@
       "relativePath": "testcases/aaa1bf/8f236da8cd1d5500f183090c931924082872828b.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2885,7 +2885,7 @@
       "relativePath": "testcases/aaa1bf/e5ff765dbde9dbed20468768a7d3309b55118bca.html",
       "expected": "failed",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2903,7 +2903,7 @@
       "relativePath": "testcases/aaa1bf/d809d976abb2a380cad56f475137e02eef84efc0.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2921,7 +2921,7 @@
       "relativePath": "testcases/aaa1bf/83842286ad2ec56764a060bde6dcad15a2ebe556.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2939,7 +2939,7 @@
       "relativePath": "testcases/aaa1bf/789efe6174e5200636a3799d7448729781d797db.html",
       "expected": "inapplicable",
       "ruleId": "aaa1bf",
-      "ruleName": "`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds",
+      "ruleName": "Audio or video element that plays automatically has no audio that lasts more than 3 seconds",
       "rulePage": "https://act-rules.github.io/rules/aaa1bf",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G60": {
@@ -2957,7 +2957,7 @@
       "relativePath": "testcases/4c31df/3f332520b2388c44833dbfba59ff0badcc982cd9.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -2975,7 +2975,7 @@
       "relativePath": "testcases/4c31df/54dcd31125317acfaa27785ccac67ea3b07189a7.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -2993,7 +2993,7 @@
       "relativePath": "testcases/4c31df/cf4bc23e70caa9b42a6f82739a8492cb51393dbc.html",
       "expected": "passed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3011,7 +3011,7 @@
       "relativePath": "testcases/4c31df/7ec8d56096c205bb26f35b08f08c9b36d033e8be.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3029,7 +3029,7 @@
       "relativePath": "testcases/4c31df/4399639718e80eb9f5457a31d1bf08675c1670ef.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3047,7 +3047,7 @@
       "relativePath": "testcases/4c31df/06e3bcbe22a1fb452df499d522ab74305ab95b06.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3065,7 +3065,7 @@
       "relativePath": "testcases/4c31df/89568d0b210c9cab1cd40dd82a98df3430278424.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3083,7 +3083,7 @@
       "relativePath": "testcases/4c31df/443451c0305efbcda7e8696d75e1f40aecb43ddf.html",
       "expected": "failed",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3101,7 +3101,7 @@
       "relativePath": "testcases/4c31df/f3f51606693d3068a0eb6cda61dfb061106f51a7.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3119,7 +3119,7 @@
       "relativePath": "testcases/4c31df/b13d65523ad27d9c763caca8bcc0fcce4b5ca5fb.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3137,7 +3137,7 @@
       "relativePath": "testcases/4c31df/bd4315c24d14613e43f5a01f4ea3daea83617754.html",
       "expected": "inapplicable",
       "ruleId": "4c31df",
-      "ruleName": "`audio` or `video` that plays automatically has a control mechanism",
+      "ruleName": "Audio or video element that plays automatically has a control mechanism",
       "rulePage": "https://act-rules.github.io/rules/4c31df",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G170": {
@@ -3430,7 +3430,7 @@
       "relativePath": "testcases/73f2c2/e94e89adabbadc97313644e50421038cfe6845e9.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3448,7 +3448,7 @@
       "relativePath": "testcases/73f2c2/4c964f038f3006fb1937270c2d2a92fa977f8312.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3466,7 +3466,7 @@
       "relativePath": "testcases/73f2c2/66da8770dec02a107d406407c4fab3ed5830464f.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3484,7 +3484,7 @@
       "relativePath": "testcases/73f2c2/47486ff08596b8ae32b83602a589ccb60a1c338a.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3502,7 +3502,7 @@
       "relativePath": "testcases/73f2c2/d53ee32f2da8a07291143a39a7c832844487d0fa.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3520,7 +3520,7 @@
       "relativePath": "testcases/73f2c2/a88c99fe37073b324d2b84386b93cf3d1499a008.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3538,7 +3538,7 @@
       "relativePath": "testcases/73f2c2/d26599a293a2bfc9eb4420e97162f2a3339027ce.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3556,7 +3556,7 @@
       "relativePath": "testcases/73f2c2/4a1c9057d14220a41d9589ca3951606a022ae724.html",
       "expected": "passed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3574,7 +3574,7 @@
       "relativePath": "testcases/73f2c2/6243ece20495552d4455d286334289e5d14482a5.html",
       "expected": "failed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3592,7 +3592,7 @@
       "relativePath": "testcases/73f2c2/330eee3fc19acb858bd16eed5ec809044353f3b4.html",
       "expected": "failed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3610,7 +3610,7 @@
       "relativePath": "testcases/73f2c2/29257085a49ae65e15b1c503ec77b041891a530a.html",
       "expected": "failed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3628,7 +3628,7 @@
       "relativePath": "testcases/73f2c2/ae3de698292f1b82be69fad21f25ac6ab5b6b8df.html",
       "expected": "failed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3646,7 +3646,7 @@
       "relativePath": "testcases/73f2c2/559b03ee843956cf02c96172002b5750f075183f.html",
       "expected": "failed",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3664,7 +3664,7 @@
       "relativePath": "testcases/73f2c2/117f1586b6ac5d4df8f485b2e452293593d166b0.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3682,7 +3682,7 @@
       "relativePath": "testcases/73f2c2/b2b6c61cf75375cfdf3dd17b461c96ff9c5ee923.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3700,7 +3700,7 @@
       "relativePath": "testcases/73f2c2/f1de3c8936de268146a99faaa32e2d5c92dda188.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3718,7 +3718,7 @@
       "relativePath": "testcases/73f2c2/4b8fdc64e5133b1e277dde4dca8dd63bcdff1915.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3736,7 +3736,7 @@
       "relativePath": "testcases/73f2c2/ff29a9f56f52e0ed45a2abb3267a39d72a740b36.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3754,7 +3754,7 @@
       "relativePath": "testcases/73f2c2/ead23d3e8316748e758c5189c16add0861161b5a.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -3772,7 +3772,7 @@
       "relativePath": "testcases/73f2c2/4c09ccf6cbd5b6729e7ace06d68de935befc0b1b.html",
       "expected": "inapplicable",
       "ruleId": "73f2c2",
-      "ruleName": "`autocomplete` attribute has valid value",
+      "ruleName": "Autocomplete attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/73f2c2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.3.5": {
@@ -6326,7 +6326,7 @@
       "relativePath": "testcases/de46e4/52b44481e1067806d435c1020422dc401c9a23b4.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6350,7 +6350,7 @@
       "relativePath": "testcases/de46e4/883ce158e792551e72924b127e7e1673949ff4ef.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6374,7 +6374,7 @@
       "relativePath": "testcases/de46e4/2c6ce29c2934936b9dd032e87695bffae9bc514e.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6398,7 +6398,7 @@
       "relativePath": "testcases/de46e4/c39849b0dc83ea0262f90869b33d1937822a3316.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6422,7 +6422,7 @@
       "relativePath": "testcases/de46e4/3bc716b9f3d4789c4a6aea4787d273b72a41d153.html",
       "expected": "passed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6446,7 +6446,7 @@
       "relativePath": "testcases/de46e4/ca2f0f03e0dddd80cef6554814b919fac1666c02.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6470,7 +6470,7 @@
       "relativePath": "testcases/de46e4/6eeab3c1580d2ee40e3adb6912c1ec159d6fbb26.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6494,7 +6494,7 @@
       "relativePath": "testcases/de46e4/e47a3d36d4f2a25286c2d0641968aa26f83dfbac.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6518,7 +6518,7 @@
       "relativePath": "testcases/de46e4/fd281d0b30ffe5442e38b6a109ab75c2a88ad21f.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6542,7 +6542,7 @@
       "relativePath": "testcases/de46e4/4c655a5da71710e6ca6245186af7f5963e89b332.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6566,7 +6566,7 @@
       "relativePath": "testcases/de46e4/bbbe2413e9ae6546057a024c50426225bb5729e9.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6590,7 +6590,7 @@
       "relativePath": "testcases/de46e4/ad8f4976cf482e02acfbb71230f5055693ee75ff.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6614,7 +6614,7 @@
       "relativePath": "testcases/de46e4/a2290d9cd1226c969b2063a8464e8d6ac4187f08.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6638,7 +6638,7 @@
       "relativePath": "testcases/de46e4/a925c1aefbeec908d327431a48f5044bf16068a1.html",
       "expected": "failed",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6662,7 +6662,7 @@
       "relativePath": "testcases/de46e4/dbbbdb101cce4c8be156e489fe06648827fe02d3.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6686,7 +6686,7 @@
       "relativePath": "testcases/de46e4/949f41987201e52f8404c1246d1229eec06dea08.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6710,7 +6710,7 @@
       "relativePath": "testcases/de46e4/e38b5ef2c56c19d88da636f6138d9ceadba0669e.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6734,7 +6734,7 @@
       "relativePath": "testcases/de46e4/4a8c4233dae2c53b88d59a2ddda3e2731383a9f9.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6758,7 +6758,7 @@
       "relativePath": "testcases/de46e4/5fe66bc41e0c30230d38e2167ddd756ae85afb14.html",
       "expected": "inapplicable",
       "ruleId": "de46e4",
-      "ruleName": "Element with `lang` attribute has valid language tag",
+      "ruleName": "Element with lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/de46e4",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.2": {
@@ -6892,7 +6892,7 @@
       "relativePath": "testcases/7d6734/0fd9df3029d10e81ef1e453902e8f61670939b52.html",
       "expected": "passed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -6910,7 +6910,7 @@
       "relativePath": "testcases/7d6734/114be98c8b9af5e15b6694283669cd1ef1c8677b.html",
       "expected": "passed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -6928,7 +6928,7 @@
       "relativePath": "testcases/7d6734/c06653b29a9b1d4af2d01ddcce0b2a8359978986.html",
       "expected": "passed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -6946,7 +6946,7 @@
       "relativePath": "testcases/7d6734/02eaadc12c2f6d5cc373a3c14617ce76ad641573.html",
       "expected": "failed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -6964,7 +6964,7 @@
       "relativePath": "testcases/7d6734/e3d76e9cf123a0634873ec6958b314eea9b34ce7.html",
       "expected": "failed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -6982,7 +6982,7 @@
       "relativePath": "testcases/7d6734/38ce008f37f6044eaf424a5a095079d37eeff2ab.html",
       "expected": "failed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -7000,7 +7000,7 @@
       "relativePath": "testcases/7d6734/8e8856994838daabd460b798776a8b6ff4b70701.html",
       "expected": "failed",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -7018,7 +7018,7 @@
       "relativePath": "testcases/7d6734/bf3fc26ba9d6b85063ab348d056fcdf62bc4dc66.html",
       "expected": "inapplicable",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -7036,7 +7036,7 @@
       "relativePath": "testcases/7d6734/b2c79cfb69b5eafdacc4da4d8843ccfe12544110.html",
       "expected": "inapplicable",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -7054,7 +7054,7 @@
       "relativePath": "testcases/7d6734/e3ae8018f2f77f2e9e6c64605bf4848071acf55e.html",
       "expected": "inapplicable",
       "ruleId": "7d6734",
-      "ruleName": "`svg` element with explicit role has non-empty accessible name",
+      "ruleName": "SVG element with explicit role has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/7d6734",
       "ruleAccessibilityRequirements": {
         "wcag20:1.1.1": {
@@ -9087,7 +9087,7 @@
       "relativePath": "testcases/b5c3f8/9e6fd0d4112ad490218f17263e36ec33f8adb8db.html",
       "expected": "passed",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9111,7 +9111,7 @@
       "relativePath": "testcases/b5c3f8/2f3f2c774ba3e0ac44c37bdb43a34c85bf73e484.html",
       "expected": "failed",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9135,7 +9135,7 @@
       "relativePath": "testcases/b5c3f8/71b6d84f72e6a65150e8bf82a6b3f8ad090dea39.html",
       "expected": "failed",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9159,7 +9159,7 @@
       "relativePath": "testcases/b5c3f8/1b7bd1aaf28209779a14e227ed6b04602f3988b4.html",
       "expected": "failed",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9183,7 +9183,7 @@
       "relativePath": "testcases/b5c3f8/474d1225bab283228455fbee4f7df67f1ec21ace.html",
       "expected": "failed",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9207,7 +9207,7 @@
       "relativePath": "testcases/b5c3f8/190e6aec2df43e234c468b187d427c32d5d942c1.svg",
       "expected": "inapplicable",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9231,7 +9231,7 @@
       "relativePath": "testcases/b5c3f8/580a61d57084cdbbe6b27c3dc35d4cc51d078c41.xml",
       "expected": "inapplicable",
       "ruleId": "b5c3f8",
-      "ruleName": "HTML page has `lang` attribute",
+      "ruleName": "HTML page has lang attribute",
       "rulePage": "https://act-rules.github.io/rules/b5c3f8",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9615,7 +9615,7 @@
       "relativePath": "testcases/bf051a/420078615633798993938edd512033d9a88020bb.html",
       "expected": "passed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9639,7 +9639,7 @@
       "relativePath": "testcases/bf051a/73848bd985bde636a3d21962036d1541cad24a9e.html",
       "expected": "passed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9663,7 +9663,7 @@
       "relativePath": "testcases/bf051a/a0e1c0cf69971fb9faf31a5a1180cf9124aa8db9.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9687,7 +9687,7 @@
       "relativePath": "testcases/bf051a/e806126ba40cc2ee3da9d01afb217bded3b816bc.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9711,7 +9711,7 @@
       "relativePath": "testcases/bf051a/6b30e5fdcfd916ef0f745359c8130cc53c46006c.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9735,7 +9735,7 @@
       "relativePath": "testcases/bf051a/ead0da7af1ba13e4006e7fc024555a6f08d77592.html",
       "expected": "failed",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9759,7 +9759,7 @@
       "relativePath": "testcases/bf051a/059ada2b641d9bc6989b2c0c69809311f65f2a39.svg",
       "expected": "inapplicable",
       "ruleId": "bf051a",
-      "ruleName": "HTML page `lang` attribute has valid language tag",
+      "ruleName": "HTML page lang attribute has valid language tag",
       "rulePage": "https://act-rules.github.io/rules/bf051a",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9783,7 +9783,7 @@
       "relativePath": "testcases/5b7ae0/36d59e8a65d283c335b9acbe8e55b77a527b82ca.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9801,7 +9801,7 @@
       "relativePath": "testcases/5b7ae0/cde90a850f13c443f9551e962583df6fd829a5ad.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9819,7 +9819,7 @@
       "relativePath": "testcases/5b7ae0/bd91d04e04dcdbb60ab1f0c88177dcb229fc1102.html",
       "expected": "passed",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9837,7 +9837,7 @@
       "relativePath": "testcases/5b7ae0/6da071ec0a0d593e34312963e5bf39d15dbfcff6.html",
       "expected": "failed",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9855,7 +9855,7 @@
       "relativePath": "testcases/5b7ae0/d0c97864c4b9c98a3b0bd4c45d7c5866625c572a.html",
       "expected": "failed",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9873,7 +9873,7 @@
       "relativePath": "testcases/5b7ae0/a90ff0d9b336c69de45dd9d0633df61c4fc2ab71.svg",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9891,7 +9891,7 @@
       "relativePath": "testcases/5b7ae0/29dbe4d1cc0497bb95e19be6e6bd0c8a9ed42cc5.svg",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9909,7 +9909,7 @@
       "relativePath": "testcases/5b7ae0/02d1b673b395a741734d8516491be54f74d8a783.xml",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9927,7 +9927,7 @@
       "relativePath": "testcases/5b7ae0/24fd835bb3314fafe0c822f640869bb93dae23d3.xhtml",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9945,7 +9945,7 @@
       "relativePath": "testcases/5b7ae0/d6d28e9a7b29738a732c0e95b9ae2daa61e6c453.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9963,7 +9963,7 @@
       "relativePath": "testcases/5b7ae0/c4886c9dee8d8967df6a8f8a73eec3fb769910cb.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -9981,7 +9981,7 @@
       "relativePath": "testcases/5b7ae0/665108f327fc16f723810acad88adbac600e8cf5.html",
       "expected": "inapplicable",
       "ruleId": "5b7ae0",
-      "ruleName": "HTML page `lang` and `xml:lang` attributes have matching values",
+      "ruleName": "HTML page lang and xml:lang attributes have matching values",
       "rulePage": "https://act-rules.github.io/rules/5b7ae0",
       "ruleAccessibilityRequirements": {
         "wcag20:3.1.1": {
@@ -10509,7 +10509,7 @@
       "relativePath": "testcases/3ea0c8/c4a04f0e727601ca5defcfa316e36b3e50326024.html",
       "expected": "passed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10533,7 +10533,7 @@
       "relativePath": "testcases/3ea0c8/0f5326024cf93cc21bc950e7c9c9639be89a66a7.html",
       "expected": "passed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10557,7 +10557,7 @@
       "relativePath": "testcases/3ea0c8/c14899be89e4086b94e241ddd989e73e5c3a222e.html",
       "expected": "passed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10581,7 +10581,7 @@
       "relativePath": "testcases/3ea0c8/ba16145298c2ba046d37949d5950f7b7ade09633.html",
       "expected": "passed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10605,7 +10605,7 @@
       "relativePath": "testcases/3ea0c8/205b890bb3484334349effd8a88b1681f2b0ecdc.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10629,7 +10629,7 @@
       "relativePath": "testcases/3ea0c8/a07feb1cb84ed1e2337ce4e2141371392cb7857f.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10653,7 +10653,7 @@
       "relativePath": "testcases/3ea0c8/717472889322dc9243ad16a9e0b537116280c3ba.html",
       "expected": "failed",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10677,7 +10677,7 @@
       "relativePath": "testcases/3ea0c8/4184b8d1e232b1ce8c0c262dde2b4d2e9fd3d0c5.html",
       "expected": "inapplicable",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10701,7 +10701,7 @@
       "relativePath": "testcases/3ea0c8/415be88a584bd2672659faf8dce7276c57584048.html",
       "expected": "inapplicable",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10725,7 +10725,7 @@
       "relativePath": "testcases/3ea0c8/e276b0ca08851f6ce0ea0ab1280d9fbe26119868.html",
       "expected": "inapplicable",
       "ruleId": "3ea0c8",
-      "ruleName": "`id` attribute value is unique",
+      "ruleName": "Id attribute value is unique",
       "rulePage": "https://act-rules.github.io/rules/3ea0c8",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.1": {
@@ -10749,7 +10749,7 @@
       "relativePath": "testcases/4b1c6c/4ebd9d852ba994b56adf0733fc5d9e51e6709389.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10767,7 +10767,7 @@
       "relativePath": "testcases/4b1c6c/2f88d4c183d3302d77f9943792b0e76bdc1540a0.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10785,7 +10785,7 @@
       "relativePath": "testcases/4b1c6c/fd08806c48992079eb5d61f6202bd60126d6620d.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10803,7 +10803,7 @@
       "relativePath": "testcases/4b1c6c/18073411173ee4b1e1614bbe3bc33005a142414d.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10821,7 +10821,7 @@
       "relativePath": "testcases/4b1c6c/996d6b233d22b61339cf40b3bfe738fc4e608a26.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10839,7 +10839,7 @@
       "relativePath": "testcases/4b1c6c/c5d4378d9c7aa56a766881e51c0114fe77c67ea8.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10857,7 +10857,7 @@
       "relativePath": "testcases/4b1c6c/b45cbf0c0488c5e10d6c62d9cdcf465dca96aa39.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10875,7 +10875,7 @@
       "relativePath": "testcases/4b1c6c/2de95e027a0ea8eabe6d6768fcf1aba23d0b2614.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10893,7 +10893,7 @@
       "relativePath": "testcases/4b1c6c/4aba2ac4b984819ae29adc7be3d38a04b5391a42.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10911,7 +10911,7 @@
       "relativePath": "testcases/4b1c6c/a00721ec4ac80c5c932ee7ca4873f493ce943e98.html",
       "expected": "passed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10929,7 +10929,7 @@
       "relativePath": "testcases/4b1c6c/bd0ab42eb840cf581146e1c2666bcbf06c353983.html",
       "expected": "failed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10947,7 +10947,7 @@
       "relativePath": "testcases/4b1c6c/3f7c676d1539a5222f0190b228d1d9a19f4a40aa.html",
       "expected": "failed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10965,7 +10965,7 @@
       "relativePath": "testcases/4b1c6c/5ae26503ad7287336e89667cb0036ff614361cff.html",
       "expected": "failed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -10983,7 +10983,7 @@
       "relativePath": "testcases/4b1c6c/c326fc94a3ff1cc20192cf4499ef925989247151.html",
       "expected": "failed",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11001,7 +11001,7 @@
       "relativePath": "testcases/4b1c6c/7e09da0f778301673cde0d84fe8c9d7aceed6966.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11019,7 +11019,7 @@
       "relativePath": "testcases/4b1c6c/c55fb995151cd2adf8ad3f1dc526af30ff00eb8c.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11037,7 +11037,7 @@
       "relativePath": "testcases/4b1c6c/4b9ba85f7cb9d736bb57046a5a478df1fd874920.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11055,7 +11055,7 @@
       "relativePath": "testcases/4b1c6c/894f49715c010aeec0724752b3412219a3601f1e.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11073,7 +11073,7 @@
       "relativePath": "testcases/4b1c6c/ccd06a7b8f5bc077f27d836d12ba29837c0c84af.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11091,7 +11091,7 @@
       "relativePath": "testcases/4b1c6c/ea7a2067edbe3bbfdad22a8bd0fe746f39492f9c.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11109,7 +11109,7 @@
       "relativePath": "testcases/4b1c6c/c24ff2ab92e810c1339603c454603ee202f03927.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11127,7 +11127,7 @@
       "relativePath": "testcases/4b1c6c/71ddf0145b934bef76f8ab350839bd22627dc136.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11145,7 +11145,7 @@
       "relativePath": "testcases/4b1c6c/7a9794a6dfa5f44fa2dd8f496c7f01d4397c09a4.html",
       "expected": "inapplicable",
       "ruleId": "4b1c6c",
-      "ruleName": "`iframe` elements with identical accessible names have equivalent purpose",
+      "ruleName": "Iframe elements with identical accessible names have equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/4b1c6c",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11163,7 +11163,7 @@
       "relativePath": "testcases/cae760/00d0ca6f65fac3fda16eefab537af52f2f3ad1bb.html",
       "expected": "passed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11181,7 +11181,7 @@
       "relativePath": "testcases/cae760/2813dd16dbc09fc3c554133cb3bc5ff2e27cd1bf.html",
       "expected": "passed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11199,7 +11199,7 @@
       "relativePath": "testcases/cae760/9d6c71a7f9d0e01551fd56c559dd665755881a08.html",
       "expected": "passed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11217,7 +11217,7 @@
       "relativePath": "testcases/cae760/5a15849f8c4be14525f19699608c7de01e95c3ff.html",
       "expected": "failed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11235,7 +11235,7 @@
       "relativePath": "testcases/cae760/a84d20cfef3a8a7f840d499427dcd764988af01d.html",
       "expected": "failed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11253,7 +11253,7 @@
       "relativePath": "testcases/cae760/b5daca9f2e3baa8dd9426a4945a2f860cf892d91.html",
       "expected": "failed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11271,7 +11271,7 @@
       "relativePath": "testcases/cae760/38cee2a5fee5b3d670e0d63d78dda5abaea50e0a.html",
       "expected": "failed",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11289,7 +11289,7 @@
       "relativePath": "testcases/cae760/b52cbe5f0131e309dcad4c4dd4116cbebd6a74b3.html",
       "expected": "inapplicable",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11307,7 +11307,7 @@
       "relativePath": "testcases/cae760/09b97d8cfc40060db30a433ba483cfea18ca2832.html",
       "expected": "inapplicable",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11325,7 +11325,7 @@
       "relativePath": "testcases/cae760/394132219ba385a90dda40efe822ab8db0cc9483.html",
       "expected": "inapplicable",
       "ruleId": "cae760",
-      "ruleName": "`iframe` element has non-empty accessible name",
+      "ruleName": "Iframe element has non-empty accessible name",
       "rulePage": "https://act-rules.github.io/rules/cae760",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -11343,7 +11343,7 @@
       "relativePath": "testcases/akn7bn/9f51cc873f37c786f03e13d96f00a44b77d965ae.html",
       "expected": "passed",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -11367,7 +11367,7 @@
       "relativePath": "testcases/akn7bn/4cee29f54888120f0b99fb7a1a4646556a0d10a0.html",
       "expected": "passed",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -11391,7 +11391,7 @@
       "relativePath": "testcases/akn7bn/1dca03a88ba0738f5a15e7636f534b826af870dc.html",
       "expected": "passed",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -11415,7 +11415,7 @@
       "relativePath": "testcases/akn7bn/524d02eed5b71e279febb083f70c463f99318806.html",
       "expected": "passed",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -11439,7 +11439,7 @@
       "relativePath": "testcases/akn7bn/346253fff2e5fa725402c99e97dba9f3a2cbbf65.html",
       "expected": "failed",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -11463,7 +11463,7 @@
       "relativePath": "testcases/akn7bn/04a4eca0f7fe8fb25d070e83cee67a44eca7ae19.html",
       "expected": "inapplicable",
       "ruleId": "akn7bn",
-      "ruleName": "iframe with negative tabindex has no interactive elements",
+      "ruleName": "Iframe with negative tabindex has no interactive elements",
       "rulePage": "https://act-rules.github.io/rules/akn7bn",
       "ruleAccessibilityRequirements": {
         "wcag20:2.1.1": {
@@ -14247,7 +14247,7 @@
       "relativePath": "testcases/24afc2/f1bc9f0a78a93c36c8ab530475196fb9be950e31.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14265,7 +14265,7 @@
       "relativePath": "testcases/24afc2/7dbbf1b7ca89a68e26df31548b072ca4471d0e59.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14283,7 +14283,7 @@
       "relativePath": "testcases/24afc2/a927b072f52658854981ff868f27599dfb9ca813.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14301,7 +14301,7 @@
       "relativePath": "testcases/24afc2/8c396602966f757064baa7f17a24964ecea206c8.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14319,7 +14319,7 @@
       "relativePath": "testcases/24afc2/74d8b65bddd2568319787ffcf1e80635ddcfaa58.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14337,7 +14337,7 @@
       "relativePath": "testcases/24afc2/e2160771b10bf00b8496f110b8480c61ef93309e.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14355,7 +14355,7 @@
       "relativePath": "testcases/24afc2/51e49f03a39411b94fb59f598c930cdbd07ca192.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14373,7 +14373,7 @@
       "relativePath": "testcases/24afc2/b12ef87ab75089650743ba88802762e3e031abb8.html",
       "expected": "passed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14391,7 +14391,7 @@
       "relativePath": "testcases/24afc2/28968762b325cd842efc4d838620af4045b16361.html",
       "expected": "failed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14409,7 +14409,7 @@
       "relativePath": "testcases/24afc2/619f6afb037b508d7dbf3c0e1fdbbf8929e87b94.html",
       "expected": "failed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14427,7 +14427,7 @@
       "relativePath": "testcases/24afc2/0d7c8aa0f0ee6b251990bc5a607fd1b9e1c16031.html",
       "expected": "failed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14445,7 +14445,7 @@
       "relativePath": "testcases/24afc2/ae15b8f04bcd0bdc4f3fa3c9bc14ba66e630f17a.html",
       "expected": "failed",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14463,7 +14463,7 @@
       "relativePath": "testcases/24afc2/2dff643fccfc0775691bab6045c1122169a37f65.svg",
       "expected": "inapplicable",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14481,7 +14481,7 @@
       "relativePath": "testcases/24afc2/9128e5dea722f5618ed9e55ca45d6fd3f24ba39e.html",
       "expected": "inapplicable",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14499,7 +14499,7 @@
       "relativePath": "testcases/24afc2/f57bef417a8dca35f6c08c6f031652d89fa9deb2.html",
       "expected": "inapplicable",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14517,7 +14517,7 @@
       "relativePath": "testcases/24afc2/d2796b1a8198f9f872a46e88686d2eb5569428b4.html",
       "expected": "inapplicable",
       "ruleId": "24afc2",
-      "ruleName": "Letter spacing in `style` attributes is not `!important`",
+      "ruleName": "Letter spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/24afc2",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14535,7 +14535,7 @@
       "relativePath": "testcases/78fd32/433c605e59694fd6868f3bf53736b678f908c5d8.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14553,7 +14553,7 @@
       "relativePath": "testcases/78fd32/7f0d12d945d6d8a825e77c4c83e375c17a8b1260.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14571,7 +14571,7 @@
       "relativePath": "testcases/78fd32/694ff0c1416e93670fc73c6b2df27c90cb4933dc.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14589,7 +14589,7 @@
       "relativePath": "testcases/78fd32/891e18323461d29cd2dc5b5ba3548532bc1c41d3.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14607,7 +14607,7 @@
       "relativePath": "testcases/78fd32/42d7ce694c4c42ed3931dfb7f4cd79af7de1f897.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14625,7 +14625,7 @@
       "relativePath": "testcases/78fd32/7e71a51e3773b4e2ca73f72fd988be1a6ef76418.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14643,7 +14643,7 @@
       "relativePath": "testcases/78fd32/be89071193b0d039ddf124b7acf1d557004daf87.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14661,7 +14661,7 @@
       "relativePath": "testcases/78fd32/4271774b903befe682e3e4da4cd7a01ca2e22cda.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14679,7 +14679,7 @@
       "relativePath": "testcases/78fd32/b7fb6580197d0790856479c9fcf26ee5ff8c689a.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14697,7 +14697,7 @@
       "relativePath": "testcases/78fd32/e5690445e1e76bc60b7b3c414fe96ccc4369a084.html",
       "expected": "passed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14715,7 +14715,7 @@
       "relativePath": "testcases/78fd32/6d3e0c4e14eca510a1f14068cbe0cf01dea8877d.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14733,7 +14733,7 @@
       "relativePath": "testcases/78fd32/f38ccd07215941a657b8f7ae158e71247e8338cd.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14751,7 +14751,7 @@
       "relativePath": "testcases/78fd32/7f5181ef5b3cc2a0a17850f36a0c544258b3a497.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14769,7 +14769,7 @@
       "relativePath": "testcases/78fd32/8357d0c7f5ee9eea54aafe34d041540454ac71ea.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14787,7 +14787,7 @@
       "relativePath": "testcases/78fd32/1e50edac0dfd91cf4649e7a56d92b1fb4715ebd8.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14805,7 +14805,7 @@
       "relativePath": "testcases/78fd32/a56532cceabed95bd36bf9efafe63f7fde90cce5.html",
       "expected": "failed",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14823,7 +14823,7 @@
       "relativePath": "testcases/78fd32/ab6e2015292591ce45e0cd39c38f2003a79949f8.svg",
       "expected": "inapplicable",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14841,7 +14841,7 @@
       "relativePath": "testcases/78fd32/2746b22a10b9b1a6f285398bea944dd505552468.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14859,7 +14859,7 @@
       "relativePath": "testcases/78fd32/5b1d9a9f464dec0b2fd5677ab697549100459c7e.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14877,7 +14877,7 @@
       "relativePath": "testcases/78fd32/166eef5525285ab005e0279c0d64a78fa4d16305.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -14895,7 +14895,7 @@
       "relativePath": "testcases/78fd32/11030dcc3016cbc648061c48638ec31d002fd3fe.html",
       "expected": "inapplicable",
       "ruleId": "78fd32",
-      "ruleName": "Line height in `style` attributes is not `!important`",
+      "ruleName": "Line height in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/78fd32",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -17547,7 +17547,7 @@
       "relativePath": "testcases/bc659a/cbf6409b0df0b3b6437ab3409af341587b144969.html",
       "expected": "passed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17589,7 +17589,7 @@
       "relativePath": "testcases/bc659a/beeaf6f49d37ef2d771effd40bcb3bfc9655fbf4.html",
       "expected": "passed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17631,7 +17631,7 @@
       "relativePath": "testcases/bc659a/4a37117137ddae558eb09d671f605fa2ad8d5367.html",
       "expected": "passed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17673,7 +17673,7 @@
       "relativePath": "testcases/bc659a/95f01f2edc22df2794ea7f606f7fb855f1e2dc67.html",
       "expected": "failed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17715,7 +17715,7 @@
       "relativePath": "testcases/bc659a/bcf969320f87281ac6e996b1725e5633f1255863.html",
       "expected": "failed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17757,7 +17757,7 @@
       "relativePath": "testcases/bc659a/f2a48cafddd30c8b9a918fe0fe664c44db253b0d.html",
       "expected": "failed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17799,7 +17799,7 @@
       "relativePath": "testcases/bc659a/af2a6e7b7e607d0cfeff0f70a1f9ab6330ba50a4.html",
       "expected": "failed",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17841,7 +17841,7 @@
       "relativePath": "testcases/bc659a/ea38668c1bdc61887bfe64ec47ba83a4e2713da9.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17883,7 +17883,7 @@
       "relativePath": "testcases/bc659a/20c0295b10134c62b78994d3c952cbbfbf838030.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17925,7 +17925,7 @@
       "relativePath": "testcases/bc659a/84b7a46e7e9cb736cc9327bce10240e943801ba6.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -17967,7 +17967,7 @@
       "relativePath": "testcases/bc659a/0cf51395718454dabba4bbad975f41fd51f33f4a.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -18009,7 +18009,7 @@
       "relativePath": "testcases/bc659a/26966d81745c8ab45553c3c305eacba632f4b11f.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -18051,7 +18051,7 @@
       "relativePath": "testcases/bc659a/efd32f45d51c3f3e97a7449a6f4f348c9f4106a8.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -18093,7 +18093,7 @@
       "relativePath": "testcases/bc659a/2cf5502b5807593934392d51f7500b0637a83d81.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -18135,7 +18135,7 @@
       "relativePath": "testcases/bc659a/c8ed0642698f8e519b0939501cb37fabcd7c253f.html",
       "expected": "inapplicable",
       "ruleId": "bc659a",
-      "ruleName": "`meta` element has no refresh delay",
+      "ruleName": "Meta element has no refresh delay",
       "rulePage": "https://act-rules.github.io/rules/bc659a",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.1": {
@@ -18177,7 +18177,7 @@
       "relativePath": "testcases/bisz58/d1bbcc895f6e11010b033578d073138e7c4fc57e.html",
       "expected": "passed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18213,7 +18213,7 @@
       "relativePath": "testcases/bisz58/d789ff3d0c087c77117a02527e71a646a343d4a3.html",
       "expected": "passed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18249,7 +18249,7 @@
       "relativePath": "testcases/bisz58/293add8170d86d1f418c0620470920105003da42.html",
       "expected": "failed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18285,7 +18285,7 @@
       "relativePath": "testcases/bisz58/0c9b0abdee645fa6145f02913a76e809a244708d.html",
       "expected": "failed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18321,7 +18321,7 @@
       "relativePath": "testcases/bisz58/459353149c69b2ee77944c5641cbff66396829e0.html",
       "expected": "failed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18357,7 +18357,7 @@
       "relativePath": "testcases/bisz58/4f9bb0a8ab7bd76505483c47da831440b864fe50.html",
       "expected": "failed",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18393,7 +18393,7 @@
       "relativePath": "testcases/bisz58/329cba6f6b7fa215ae1e8006de9263570b91c11d.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18429,7 +18429,7 @@
       "relativePath": "testcases/bisz58/1d1c596243bc75f495b61d89bc2a6396ea29442a.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18465,7 +18465,7 @@
       "relativePath": "testcases/bisz58/1812017f58925ef5061af2f60c68afa671281c91.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18501,7 +18501,7 @@
       "relativePath": "testcases/bisz58/0ae68e88f61e1bc6cc56f7a4ae1bcf852d68cde2.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18537,7 +18537,7 @@
       "relativePath": "testcases/bisz58/a1a1550e2be737918ba96c4cc7237060515ef8cb.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18573,7 +18573,7 @@
       "relativePath": "testcases/bisz58/371137ff8848c11ce6db9252bfe8e4bd3b2690d9.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18609,7 +18609,7 @@
       "relativePath": "testcases/bisz58/ffa9d5785ba84df4dfacbafc5fdb8b82a365f5b4.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18645,7 +18645,7 @@
       "relativePath": "testcases/bisz58/1ecaa280edc88898e1023c0470fd71eb105f6cf9.html",
       "expected": "inapplicable",
       "ruleId": "bisz58",
-      "ruleName": "`meta` element has no refresh delay (no exception)",
+      "ruleName": "Meta element has no refresh delay (no exception)",
       "rulePage": "https://act-rules.github.io/rules/bisz58",
       "ruleAccessibilityRequirements": {
         "wcag20:2.2.4": {
@@ -18681,7 +18681,7 @@
       "relativePath": "testcases/b4f0c3/dc6c5a33d7f24964195701ffb835f1978fedc446.html",
       "expected": "passed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18699,7 +18699,7 @@
       "relativePath": "testcases/b4f0c3/83fc038ee6995b0318fc97bc2750d9604b544c82.html",
       "expected": "passed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18717,7 +18717,7 @@
       "relativePath": "testcases/b4f0c3/5279bbeb99fcae99b30471a30680db5fd5f9d676.html",
       "expected": "passed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18735,7 +18735,7 @@
       "relativePath": "testcases/b4f0c3/e4de67808dbc7c2dd303d83ad99ed303141305fc.html",
       "expected": "passed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18753,7 +18753,7 @@
       "relativePath": "testcases/b4f0c3/42bfbd40933a0aa7954e841ec0b239de643e8d2a.html",
       "expected": "passed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18771,7 +18771,7 @@
       "relativePath": "testcases/b4f0c3/31f334557a025bf43ca166fc34a28fdcfcae5aab.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18789,7 +18789,7 @@
       "relativePath": "testcases/b4f0c3/c5f798530233fd0eebd7cf6b5261b84dba732204.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18807,7 +18807,7 @@
       "relativePath": "testcases/b4f0c3/52463746d10d2bf67ea6f0e579a2f76bde9346ca.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18825,7 +18825,7 @@
       "relativePath": "testcases/b4f0c3/94bfda6abb6966e3681e234b88daf04c095ff3be.html",
       "expected": "failed",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18843,7 +18843,7 @@
       "relativePath": "testcases/b4f0c3/a6168c69ccbd4aa12f7411633e8bd74420a01d43.html",
       "expected": "inapplicable",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -18861,7 +18861,7 @@
       "relativePath": "testcases/b4f0c3/a3e4172be1332a16e9856b83dc82a4db1c749394.html",
       "expected": "inapplicable",
       "ruleId": "b4f0c3",
-      "ruleName": "`meta` `viewport` allows for zoom",
+      "ruleName": "Meta viewport allows for zoom",
       "rulePage": "https://act-rules.github.io/rules/b4f0c3",
       "ruleAccessibilityRequirements": {
         "wcag20:1.4.4": {
@@ -19941,7 +19941,7 @@
       "relativePath": "testcases/674b10/9ba09fb345e5e4fae83776a55049957281def46e.html",
       "expected": "passed",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -19971,7 +19971,7 @@
       "relativePath": "testcases/674b10/ec996cbf1dc213ca6b056675d20360d4a7f3fd5e.html",
       "expected": "passed",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20001,7 +20001,7 @@
       "relativePath": "testcases/674b10/22ce45f8d27d909d70fc264cb4d7c5532749eceb.html",
       "expected": "passed",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20031,7 +20031,7 @@
       "relativePath": "testcases/674b10/e13183529116f26df6f6b3904d4b38db148752f3.html",
       "expected": "failed",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20061,7 +20061,7 @@
       "relativePath": "testcases/674b10/158817a3dd84625f5c228b4b818b3a2ef10837db.html",
       "expected": "failed",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20091,7 +20091,7 @@
       "relativePath": "testcases/674b10/4374cbb747d5a9b7ac8a838ac119df1f322bf617.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20121,7 +20121,7 @@
       "relativePath": "testcases/674b10/5f2fe96c4ca0e1778b07d3c05d14d9df3998ab40.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20151,7 +20151,7 @@
       "relativePath": "testcases/674b10/f6955b1fb22888498299c32c15c370cd4ec64aab.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20181,7 +20181,7 @@
       "relativePath": "testcases/674b10/c6e80108a6b09b606569dabc910e358f120b9bcb.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20211,7 +20211,7 @@
       "relativePath": "testcases/674b10/4e914fd7a11371b22e9b6b03a02d093addf3e654.html",
       "expected": "inapplicable",
       "ruleId": "674b10",
-      "ruleName": "`role` attribute has valid value",
+      "ruleName": "Role attribute has valid value",
       "rulePage": "https://act-rules.github.io/rules/674b10",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -20241,7 +20241,7 @@
       "relativePath": "testcases/4e8ab6/2549eb63af24ea8b5d659afd53374c96bc344278.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20265,7 +20265,7 @@
       "relativePath": "testcases/4e8ab6/9131439ea2fa6ebb37e3c8ccadffabef4762eefe.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20289,7 +20289,7 @@
       "relativePath": "testcases/4e8ab6/6c8f7ec672c71b94f4ba517049208f66b4ec2dc1.html",
       "expected": "passed",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20313,7 +20313,7 @@
       "relativePath": "testcases/4e8ab6/2d7dadf8c1245fb59907fb770e7a2ac55c6de6d3.html",
       "expected": "failed",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20337,7 +20337,7 @@
       "relativePath": "testcases/4e8ab6/da13a6ea7c396248be37fd2c1b724bef551b5e02.html",
       "expected": "failed",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20361,7 +20361,7 @@
       "relativePath": "testcases/4e8ab6/1540d1347564772bd12f3b7c67c9b37b7bc41b90.html",
       "expected": "inapplicable",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20385,7 +20385,7 @@
       "relativePath": "testcases/4e8ab6/398f52dc30a9d2ed3a0cf7169e0ff53013d3c0fd.html",
       "expected": "inapplicable",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -20409,7 +20409,7 @@
       "relativePath": "testcases/4e8ab6/647fb4efbab4b870ae5bdd2b3781196d2d49ffc9.html",
       "expected": "inapplicable",
       "ruleId": "4e8ab6",
-      "ruleName": "Element with `role` attribute has required states and properties",
+      "ruleName": "Element with role attribute has required states and properties",
       "rulePage": "https://act-rules.github.io/rules/4e8ab6",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -21183,7 +21183,7 @@
       "relativePath": "testcases/a25f45/9ca3347f9cc650826458c4a93ef4bb48fe05b924.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21207,7 +21207,7 @@
       "relativePath": "testcases/a25f45/b50314a077856c381dc97b7ab137c47feeec3317.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21231,7 +21231,7 @@
       "relativePath": "testcases/a25f45/d4180a079caba89d0b67fb0a6e3b5c786299c683.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21255,7 +21255,7 @@
       "relativePath": "testcases/a25f45/4c7ecdda09a93d361c292de91d2f89f751dabde2.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21279,7 +21279,7 @@
       "relativePath": "testcases/a25f45/d8fb3e97f99c0f6661a5b7750e3f5a57835017dd.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21303,7 +21303,7 @@
       "relativePath": "testcases/a25f45/9950efbcae11c6a74d285355e65f3010de06b0f1.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21327,7 +21327,7 @@
       "relativePath": "testcases/a25f45/b4a1ee541c688a4274f8f44cf59fb61504e50126.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21351,7 +21351,7 @@
       "relativePath": "testcases/a25f45/7b0aec741508524b48e73fd0ec10435409994e9c.html",
       "expected": "passed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21375,7 +21375,7 @@
       "relativePath": "testcases/a25f45/de7be114aef0050e7e9b0eb5cc114c2dead9a2ed.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21399,7 +21399,7 @@
       "relativePath": "testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21423,7 +21423,7 @@
       "relativePath": "testcases/a25f45/48a474d8339827ca31a341e784a6ebbc2b52ab10.html",
       "expected": "failed",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21447,7 +21447,7 @@
       "relativePath": "testcases/a25f45/98f8a6a4387e780e8fbcd8201244750091df857a.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21471,7 +21471,7 @@
       "relativePath": "testcases/a25f45/d496254239c30419f2d57ea643dae036d1151832.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21495,7 +21495,7 @@
       "relativePath": "testcases/a25f45/c762c64d2fad555db40034d643e8f12cd5bcddc4.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21519,7 +21519,7 @@
       "relativePath": "testcases/a25f45/cf152e4f1f83863272aeb9809601677935a57e6b.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -21543,7 +21543,7 @@
       "relativePath": "testcases/a25f45/3da68fb99173bb3e1f102d6da9a1f0e397694907.html",
       "expected": "inapplicable",
       "ruleId": "a25f45",
-      "ruleName": "`headers` attribute specified on a cell refers to cells in the same `table` element",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
       "rulePage": "https://act-rules.github.io/rules/a25f45",
       "ruleAccessibilityRequirements": {
         "wcag20:1.3.1": {
@@ -23109,7 +23109,7 @@
       "relativePath": "testcases/eac66b/e948ed956b90e7269d1b35b48735c67000bf2d8d.html",
       "expected": "passed",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23145,7 +23145,7 @@
       "relativePath": "testcases/eac66b/00586dd2d086f7ffbd603ab6e1066e86635dbc8f.html",
       "expected": "passed",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23181,7 +23181,7 @@
       "relativePath": "testcases/eac66b/5b1d323a1d169c63e0b85ef92ebe9be6ad66da05.html",
       "expected": "failed",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23217,7 +23217,7 @@
       "relativePath": "testcases/eac66b/a3210286ea712af8bc4b66793ccfd8662a036fc8.html",
       "expected": "failed",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23253,7 +23253,7 @@
       "relativePath": "testcases/eac66b/d014914e602895a0e192f169c45764e012ba315b.html",
       "expected": "inapplicable",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23289,7 +23289,7 @@
       "relativePath": "testcases/eac66b/cf7a98ea3f944752d202f8df24906137035e48f8.html",
       "expected": "inapplicable",
       "ruleId": "eac66b",
-      "ruleName": "`video` element auditory content has accessible alternative",
+      "ruleName": "Video element auditory content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/eac66b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.2": {
@@ -23325,7 +23325,7 @@
       "relativePath": "testcases/c5a4ea/2294ea2ee2405123b7ac565256f4ffc2fbde0230.html",
       "expected": "passed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23379,7 +23379,7 @@
       "relativePath": "testcases/c5a4ea/418475d20705cdb65760b6b2e8e499e5c0e43a00.html",
       "expected": "passed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23433,7 +23433,7 @@
       "relativePath": "testcases/c5a4ea/26d6803551b1f3b247c4f4750d1291b8d99f5d22.html",
       "expected": "passed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23487,7 +23487,7 @@
       "relativePath": "testcases/c5a4ea/2b5216187a19a904cfe74e0fe39c9e307d25a213.html",
       "expected": "failed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23541,7 +23541,7 @@
       "relativePath": "testcases/c5a4ea/bfc91b0445d5b2afe1709fc87ed67f0ab3ed72c4.html",
       "expected": "failed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23595,7 +23595,7 @@
       "relativePath": "testcases/c5a4ea/3938988521b4347e0dd1d9624b79c92c8339a691.html",
       "expected": "failed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23649,7 +23649,7 @@
       "relativePath": "testcases/c5a4ea/51991f17502dcc8a459e32e849af3211c7efe68a.html",
       "expected": "failed",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23703,7 +23703,7 @@
       "relativePath": "testcases/c5a4ea/48804abea1fcf8ff1659bdb7d438bd63a6839826.html",
       "expected": "inapplicable",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23757,7 +23757,7 @@
       "relativePath": "testcases/c5a4ea/4dac8142ec00fec20afcd59056d04664b6acb40c.html",
       "expected": "inapplicable",
       "ruleId": "c5a4ea",
-      "ruleName": "`video` element visual content has accessible alternative",
+      "ruleName": "Video element visual content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c5a4ea",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.3": {
@@ -23811,7 +23811,7 @@
       "relativePath": "testcases/ab4d13/4cca47adf2b5d5f85637e0406a3497afbe5ff072.html",
       "expected": "passed",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23822,7 +23822,7 @@
       "relativePath": "testcases/ab4d13/95e37ca9d46a38e488a5b47554b2115db09e8e34.html",
       "expected": "failed",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23833,7 +23833,7 @@
       "relativePath": "testcases/ab4d13/a74f5d1485dc93a903f71bd7fed2b76e8ca92ff8.html",
       "expected": "failed",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23844,7 +23844,7 @@
       "relativePath": "testcases/ab4d13/11313b9966aa91467dfbd98ad856d002c1838d46.html",
       "expected": "failed",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23855,7 +23855,7 @@
       "relativePath": "testcases/ab4d13/3ecd15df4e7910adc453b3874dc9f3047b549939.html",
       "expected": "failed",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23866,7 +23866,7 @@
       "relativePath": "testcases/ab4d13/4fa755c5cb4e7f0f8269971424d59dd03fb4ec93.html",
       "expected": "inapplicable",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23877,7 +23877,7 @@
       "relativePath": "testcases/ab4d13/1c126cf1f9bd5989380e1ffcb33e8e8bf246c2ff.html",
       "expected": "inapplicable",
       "ruleId": "ab4d13",
-      "ruleName": "`video` element content is media alternative for text",
+      "ruleName": "Video element content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/ab4d13",
       "ruleAccessibilityRequirements": null
     },
@@ -23888,7 +23888,7 @@
       "relativePath": "testcases/1ea59c/0b5da083763602cfe3a2bfef78bc59dbdfcc9bae.html",
       "expected": "passed",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -23918,7 +23918,7 @@
       "relativePath": "testcases/1ea59c/1215f0593ff98672ea3288046b5a468d22b647aa.html",
       "expected": "passed",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -23948,7 +23948,7 @@
       "relativePath": "testcases/1ea59c/7fdf40bcfe1ad00c419e52042d991ca04167ee7a.html",
       "expected": "failed",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -23978,7 +23978,7 @@
       "relativePath": "testcases/1ea59c/7acb0df1cea1e056a611582a0bfa8e217602e0af.html",
       "expected": "failed",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -24008,7 +24008,7 @@
       "relativePath": "testcases/1ea59c/e874973a89bd0284c1bda121f38f7465faac6c72.html",
       "expected": "failed",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -24038,7 +24038,7 @@
       "relativePath": "testcases/1ea59c/29d541a8cf1cc14e8ab85dd20823dadb6bd63789.html",
       "expected": "inapplicable",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -24068,7 +24068,7 @@
       "relativePath": "testcases/1ea59c/d192a47f74ddc5fce571796a7ff0d6c4790063ab.html",
       "expected": "inapplicable",
       "ruleId": "1ea59c",
-      "ruleName": "`video` element visual content has audio description",
+      "ruleName": "Video element visual content has audio description",
       "rulePage": "https://act-rules.github.io/rules/1ea59c",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G8": {
@@ -24098,7 +24098,7 @@
       "relativePath": "testcases/f51b46/601393ff91b5c96d76a83e6897191eec8060ab2e.html",
       "expected": "passed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24128,7 +24128,7 @@
       "relativePath": "testcases/f51b46/5422b7f5851c2cf212e71560bfaf9aa06ec5f8b5.html",
       "expected": "passed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24158,7 +24158,7 @@
       "relativePath": "testcases/f51b46/52fbebdeb649fe794b9428d880a5381c228e9399.html",
       "expected": "failed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24188,7 +24188,7 @@
       "relativePath": "testcases/f51b46/df819bb0502a77e3235a6f8e25133aea869cb2b9.html",
       "expected": "failed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24218,7 +24218,7 @@
       "relativePath": "testcases/f51b46/3ea30bc4725e2c4d43ce716d2815e5427e3bbb45.html",
       "expected": "failed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24248,7 +24248,7 @@
       "relativePath": "testcases/f51b46/e607aaf5db10510f0b6df07f6ebb28e12aa79ffd.html",
       "expected": "failed",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24278,7 +24278,7 @@
       "relativePath": "testcases/f51b46/b73b0ee52cb9c7e813f887f0cec6f7fd18c964b5.html",
       "expected": "inapplicable",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24308,7 +24308,7 @@
       "relativePath": "testcases/f51b46/cac684e87985463e1134df2e8ad94ba7f01377e3.html",
       "expected": "inapplicable",
       "ruleId": "f51b46",
-      "ruleName": "`video` element auditory content has captions",
+      "ruleName": "Video element auditory content has captions",
       "rulePage": "https://act-rules.github.io/rules/f51b46",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G87": {
@@ -24338,7 +24338,7 @@
       "relativePath": "testcases/f196ce/5bced10c9f182208dacf0071c35e99403a23013b.html",
       "expected": "passed",
       "ruleId": "f196ce",
-      "ruleName": "DEPRECATED — `video` element visual content has description track",
+      "ruleName": "DEPRECATED — Video element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24362,7 +24362,7 @@
       "relativePath": "testcases/f196ce/e100b751bd9a03c6e874239476027e792029c50b.html",
       "expected": "failed",
       "ruleId": "f196ce",
-      "ruleName": "DEPRECATED — `video` element visual content has description track",
+      "ruleName": "DEPRECATED — Video element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24386,7 +24386,7 @@
       "relativePath": "testcases/f196ce/7d8028be2134f6def96fab23f8c07b5ea6175b38.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "DEPRECATED — `video` element visual content has description track",
+      "ruleName": "DEPRECATED — Video element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24410,7 +24410,7 @@
       "relativePath": "testcases/f196ce/540ef897c00b6bce2ac0a522615df7ba8be6aadc.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "DEPRECATED — `video` element visual content has description track",
+      "ruleName": "DEPRECATED — Video element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24434,7 +24434,7 @@
       "relativePath": "testcases/f196ce/453c90aae9cc15233a77c81948324010d681f7d2.html",
       "expected": "inapplicable",
       "ruleId": "f196ce",
-      "ruleName": "DEPRECATED — `video` element visual content has description track",
+      "ruleName": "DEPRECATED — Video element visual content has description track",
       "rulePage": "https://act-rules.github.io/rules/f196ce",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G78": {
@@ -24458,7 +24458,7 @@
       "relativePath": "testcases/c3232f/90b7864f21830a00f59c2a52b3d9a2359d2c2867.html",
       "expected": "passed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24488,7 +24488,7 @@
       "relativePath": "testcases/c3232f/85b0303b527a3d2836b4256a73cb438081bbc224.html",
       "expected": "passed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24518,7 +24518,7 @@
       "relativePath": "testcases/c3232f/7d7a94d0ae749de98095b3af35f0adf65cb01bd1.html",
       "expected": "passed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24548,7 +24548,7 @@
       "relativePath": "testcases/c3232f/28ec159184ae06f3854db2cce0dbb80f29d73f66.html",
       "expected": "failed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24578,7 +24578,7 @@
       "relativePath": "testcases/c3232f/f600a7ad3e0d61dd5ef28703702918ae54226aea.html",
       "expected": "failed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24608,7 +24608,7 @@
       "relativePath": "testcases/c3232f/f0a60f2924c927d3dc97676d02c83ab38025955f.html",
       "expected": "failed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24638,7 +24638,7 @@
       "relativePath": "testcases/c3232f/17189684688eb0b0fb6cbb3109527bf1558756b3.html",
       "expected": "failed",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24668,7 +24668,7 @@
       "relativePath": "testcases/c3232f/59c0ee3628444964ca1313430417bfbbce9322b7.html",
       "expected": "inapplicable",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24698,7 +24698,7 @@
       "relativePath": "testcases/c3232f/2a4472d9d5765846750d18be872821b1e6eaed08.html",
       "expected": "inapplicable",
       "ruleId": "c3232f",
-      "ruleName": "`video` element visual-only content has accessible alternative",
+      "ruleName": "Video element visual-only content has accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/c3232f",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.1": {
@@ -24728,7 +24728,7 @@
       "relativePath": "testcases/fd26cf/fa92223fabcf9d3d1d7e4a3d0926975ce6b7781b.html",
       "expected": "passed",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24739,7 +24739,7 @@
       "relativePath": "testcases/fd26cf/42dc29d6f17d04e977a6b3308f1b71115ca8a7b3.html",
       "expected": "failed",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24750,7 +24750,7 @@
       "relativePath": "testcases/fd26cf/104b2d11da7ad83e0d5c2de3e8e59edc5d152326.html",
       "expected": "failed",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24761,7 +24761,7 @@
       "relativePath": "testcases/fd26cf/9990152b03c01651e876773620d8f744d9618ffe.html",
       "expected": "failed",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24772,7 +24772,7 @@
       "relativePath": "testcases/fd26cf/7bef8ce1029460edc1ec8c9112fbf69a554d101e.html",
       "expected": "failed",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24783,7 +24783,7 @@
       "relativePath": "testcases/fd26cf/a8bd9a1a3e00d799fbc6fb47cedd2d58c7d795af.html",
       "expected": "inapplicable",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24794,7 +24794,7 @@
       "relativePath": "testcases/fd26cf/e34172389d155178ac2f3aeb62afe154421bae6e.html",
       "expected": "inapplicable",
       "ruleId": "fd26cf",
-      "ruleName": "`video` element visual-only content is media alternative for text",
+      "ruleName": "Video element visual-only content is media alternative for text",
       "rulePage": "https://act-rules.github.io/rules/fd26cf",
       "ruleAccessibilityRequirements": null
     },
@@ -24805,7 +24805,7 @@
       "relativePath": "testcases/d7ba54/96639ebdf926372859626da6cd99d94f069e06cb.html",
       "expected": "passed",
       "ruleId": "d7ba54",
-      "ruleName": "`video` element visual-only content has audio track alternative",
+      "ruleName": "Video element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G166": {
@@ -24823,7 +24823,7 @@
       "relativePath": "testcases/d7ba54/a9a095faa3ed030e6dab5d1808eac01c6c7f5dcc.html",
       "expected": "failed",
       "ruleId": "d7ba54",
-      "ruleName": "`video` element visual-only content has audio track alternative",
+      "ruleName": "Video element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G166": {
@@ -24841,7 +24841,7 @@
       "relativePath": "testcases/d7ba54/1b1e51c2aff8208b76b9c275c513d1ce8b409f34.html",
       "expected": "failed",
       "ruleId": "d7ba54",
-      "ruleName": "`video` element visual-only content has audio track alternative",
+      "ruleName": "Video element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G166": {
@@ -24859,7 +24859,7 @@
       "relativePath": "testcases/d7ba54/7706e5b38f166440f27b877d7ad623714e7102d6.html",
       "expected": "inapplicable",
       "ruleId": "d7ba54",
-      "ruleName": "`video` element visual-only content has audio track alternative",
+      "ruleName": "Video element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G166": {
@@ -24877,7 +24877,7 @@
       "relativePath": "testcases/d7ba54/a56e070355a7524e70170151da11c783dabdce94.html",
       "expected": "inapplicable",
       "ruleId": "d7ba54",
-      "ruleName": "`video` element visual-only content has audio track alternative",
+      "ruleName": "Video element visual-only content has audio track alternative",
       "rulePage": "https://act-rules.github.io/rules/d7ba54",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G166": {
@@ -24895,7 +24895,7 @@
       "relativePath": "testcases/ac7dc6/2c391535c73e7943fec5380e981c99cc4c1a7fb1.html",
       "expected": "passed",
       "ruleId": "ac7dc6",
-      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — Video element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24913,7 +24913,7 @@
       "relativePath": "testcases/ac7dc6/e68cdbe91c114225b5fd441fe00ea758ca3f1cf0.html",
       "expected": "failed",
       "ruleId": "ac7dc6",
-      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — Video element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24931,7 +24931,7 @@
       "relativePath": "testcases/ac7dc6/f931e98962823c2ae50951afc5f3fc19e194cfb7.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — Video element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24949,7 +24949,7 @@
       "relativePath": "testcases/ac7dc6/e33bdd1fbdb40749eae23ee5cb90ec309fcf2646.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — Video element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24967,7 +24967,7 @@
       "relativePath": "testcases/ac7dc6/37a4612f75de804360b62ea77d1717d549b34ddb.html",
       "expected": "inapplicable",
       "ruleId": "ac7dc6",
-      "ruleName": "DEPRECATED — `video` element visual-only content has description track",
+      "ruleName": "DEPRECATED — Video element visual-only content has description track",
       "rulePage": "https://act-rules.github.io/rules/ac7dc6",
       "ruleAccessibilityRequirements": {
         "wcag-technique:H96": {
@@ -24985,7 +24985,7 @@
       "relativePath": "testcases/ee13b5/82c346e4ac0f1d92078c008f60f510fd36a1a9d1.html",
       "expected": "passed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25003,7 +25003,7 @@
       "relativePath": "testcases/ee13b5/866f176927d564fa237c31c1291e4c7db9e9b543.html",
       "expected": "passed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25021,7 +25021,7 @@
       "relativePath": "testcases/ee13b5/256292a7480138b52f6b2e1f09cf3c1ad94cd4bb.html",
       "expected": "failed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25039,7 +25039,7 @@
       "relativePath": "testcases/ee13b5/fa6bda6cbbfcb7f3824ab40c5cfbf04ea594b185.html",
       "expected": "failed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25057,7 +25057,7 @@
       "relativePath": "testcases/ee13b5/4581865d7490c677523761448180199acd177a64.html",
       "expected": "failed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25075,7 +25075,7 @@
       "relativePath": "testcases/ee13b5/cc93463a901f16916b340ee39a0e706dd86ba4dd.html",
       "expected": "failed",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25093,7 +25093,7 @@
       "relativePath": "testcases/ee13b5/53283de0652d7b4132aa00dc2fdd3d60fbd657cf.html",
       "expected": "inapplicable",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25111,7 +25111,7 @@
       "relativePath": "testcases/ee13b5/82a0aa825af5d4d97bec9039a0de8da3cd1159b7.html",
       "expected": "inapplicable",
       "ruleId": "ee13b5",
-      "ruleName": "`video` element visual-only content has transcript",
+      "ruleName": "Video element visual-only content has transcript",
       "rulePage": "https://act-rules.github.io/rules/ee13b5",
       "ruleAccessibilityRequirements": {
         "wcag-technique:G159": {
@@ -25129,7 +25129,7 @@
       "relativePath": "testcases/1ec09b/d58a1772ea37b702630ffec4224ee843308f12db.html",
       "expected": "passed",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25165,7 +25165,7 @@
       "relativePath": "testcases/1ec09b/a2b46a07e183c60af65528dc7c2de446776ab694.html",
       "expected": "passed",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25201,7 +25201,7 @@
       "relativePath": "testcases/1ec09b/2a274dfb63a2e73e9768199534fabc1db0472722.html",
       "expected": "failed",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25237,7 +25237,7 @@
       "relativePath": "testcases/1ec09b/a6839ec6a83ef44c14587870afbabfafc13daac2.html",
       "expected": "failed",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25273,7 +25273,7 @@
       "relativePath": "testcases/1ec09b/9164db309a6589b695bdcf93c31506c9c6f3fb59.html",
       "expected": "failed",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25309,7 +25309,7 @@
       "relativePath": "testcases/1ec09b/fa62605088fe81313de51135e84eeeedc53ae1da.html",
       "expected": "inapplicable",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25345,7 +25345,7 @@
       "relativePath": "testcases/1ec09b/1ec3fbd4dd60e6d50a82b523b82115d356c26894.html",
       "expected": "inapplicable",
       "ruleId": "1ec09b",
-      "ruleName": "`video` element visual content has strict accessible alternative",
+      "ruleName": "Video element visual content has strict accessible alternative",
       "rulePage": "https://act-rules.github.io/rules/1ec09b",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.5": {
@@ -25381,7 +25381,7 @@
       "relativePath": "testcases/1a02b0/3e9fe258c8c806974fdc4d1bd9b4d9ce378fd3db.html",
       "expected": "passed",
       "ruleId": "1a02b0",
-      "ruleName": "Audio and visuals of `video` element have transcript",
+      "ruleName": "Audio and visuals of video element have transcript",
       "rulePage": "https://act-rules.github.io/rules/1a02b0",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
@@ -25405,7 +25405,7 @@
       "relativePath": "testcases/1a02b0/fd348e3b3ca63113d627c08015b05a9fb93aa921.html",
       "expected": "passed",
       "ruleId": "1a02b0",
-      "ruleName": "Audio and visuals of `video` element have transcript",
+      "ruleName": "Audio and visuals of video element have transcript",
       "rulePage": "https://act-rules.github.io/rules/1a02b0",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
@@ -25429,7 +25429,7 @@
       "relativePath": "testcases/1a02b0/0f9f312a987e748463ae1b420d3cfc6cec5c1a25.html",
       "expected": "failed",
       "ruleId": "1a02b0",
-      "ruleName": "Audio and visuals of `video` element have transcript",
+      "ruleName": "Audio and visuals of video element have transcript",
       "rulePage": "https://act-rules.github.io/rules/1a02b0",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
@@ -25453,7 +25453,7 @@
       "relativePath": "testcases/1a02b0/08d91d5ef8f6af8fca284c70b9fa90da43563ae3.html",
       "expected": "failed",
       "ruleId": "1a02b0",
-      "ruleName": "Audio and visuals of `video` element have transcript",
+      "ruleName": "Audio and visuals of video element have transcript",
       "rulePage": "https://act-rules.github.io/rules/1a02b0",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
@@ -25477,7 +25477,7 @@
       "relativePath": "testcases/1a02b0/4e354f735d074f1d351a2bcb93a77247512f5b56.html",
       "expected": "inapplicable",
       "ruleId": "1a02b0",
-      "ruleName": "Audio and visuals of `video` element have transcript",
+      "ruleName": "Audio and visuals of video element have transcript",
       "rulePage": "https://act-rules.github.io/rules/1a02b0",
       "ruleAccessibilityRequirements": {
         "wcag20:1.2.8": {
@@ -25813,7 +25813,7 @@
       "relativePath": "testcases/9e45ec/dbe4bfd976d642eca79deec7dd3b969620b352f2.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25831,7 +25831,7 @@
       "relativePath": "testcases/9e45ec/94bb0d8d836327ea9aaeba9a44699b675d5623c6.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25849,7 +25849,7 @@
       "relativePath": "testcases/9e45ec/77a441eea7f4809aa9c0e9fa77caf26adf27321c.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25867,7 +25867,7 @@
       "relativePath": "testcases/9e45ec/80e73cbd0f07dc169c5d990e29208d0871ab3fd6.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25885,7 +25885,7 @@
       "relativePath": "testcases/9e45ec/78d27317c72323bac1200e0f3f5a6353f46ac37b.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25903,7 +25903,7 @@
       "relativePath": "testcases/9e45ec/47e1c13e6e0075cde0b804600f89a6e14a50830a.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25921,7 +25921,7 @@
       "relativePath": "testcases/9e45ec/a9cb9f8f6776401d48a151d1d09993ef0b98150d.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25939,7 +25939,7 @@
       "relativePath": "testcases/9e45ec/60800c7446eb25324d08b976b6b3f41c15d2f19b.html",
       "expected": "passed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25957,7 +25957,7 @@
       "relativePath": "testcases/9e45ec/f9c23e95b02c67512a832612c1a4445538a3e23e.html",
       "expected": "failed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25975,7 +25975,7 @@
       "relativePath": "testcases/9e45ec/b636ef6c236adfc218417389e5958fd1d816ae30.html",
       "expected": "failed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -25993,7 +25993,7 @@
       "relativePath": "testcases/9e45ec/673f852759f47787bb3992c6377843ecbb0aa3ad.html",
       "expected": "failed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -26011,7 +26011,7 @@
       "relativePath": "testcases/9e45ec/4d7879908d3865d39ea13a630ffd70ecd688d687.html",
       "expected": "failed",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -26029,7 +26029,7 @@
       "relativePath": "testcases/9e45ec/c13bcb844ef653ecdbca35a0dfb727e307fee6af.svg",
       "expected": "inapplicable",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -26047,7 +26047,7 @@
       "relativePath": "testcases/9e45ec/f73a12b13cbc7deec3554434c4c395646a91a0fc.html",
       "expected": "inapplicable",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -26065,7 +26065,7 @@
       "relativePath": "testcases/9e45ec/4b55d76e967a90922608f69a52073548b57f9322.html",
       "expected": "inapplicable",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {
@@ -26083,7 +26083,7 @@
       "relativePath": "testcases/9e45ec/86286f7c2330ca8c9c65dbbbd9dee54b154416f0.html",
       "expected": "inapplicable",
       "ruleId": "9e45ec",
-      "ruleName": "Word spacing in `style` attributes is not `!important`",
+      "ruleName": "Word spacing in style attributes is not !important",
       "rulePage": "https://act-rules.github.io/rules/9e45ec",
       "ruleAccessibilityRequirements": {
         "wcag21:1.4.12": {

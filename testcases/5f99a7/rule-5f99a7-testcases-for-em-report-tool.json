@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - `aria-*` attribute is defined in WAI-ARIA",
+      "title": "Report for ACT-R Rule - ARIA attribute is defined in WAI-ARIA",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - `aria-*` attribute is defined in WAI-ARIA",
+          "siteName": "ACT-R Rule - ARIA attribute is defined in WAI-ARIA",
           "siteScope": "https://act-rules.github.io/testcases/5f99a7/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

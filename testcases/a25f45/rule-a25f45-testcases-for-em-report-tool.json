@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - `headers` attribute specified on a cell refers to cells in the same `table` element",
+      "title": "Report for ACT-R Rule - Headers attribute specified on a cell refers to cells in the same table element",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - `headers` attribute specified on a cell refers to cells in the same `table` element",
+          "siteName": "ACT-R Rule - Headers attribute specified on a cell refers to cells in the same table element",
           "siteScope": "https://act-rules.github.io/testcases/a25f45/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - `audio` or `video` avoids automatically playing audio",
+      "title": "Report for ACT-R Rule - Audio or video element avoids automatically playing audio",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - `audio` or `video` avoids automatically playing audio",
+          "siteName": "ACT-R Rule - Audio or video element avoids automatically playing audio",
           "siteScope": "https://act-rules.github.io/testcases/80f0bf/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

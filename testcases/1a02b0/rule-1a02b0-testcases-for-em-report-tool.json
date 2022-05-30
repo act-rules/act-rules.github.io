@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Audio and visuals of `video` element have transcript",
+      "title": "Report for ACT-R Rule - Audio and visuals of video element have transcript",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Audio and visuals of `video` element have transcript",
+          "siteName": "ACT-R Rule - Audio and visuals of video element have transcript",
           "siteScope": "https://act-rules.github.io/testcases/1a02b0/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

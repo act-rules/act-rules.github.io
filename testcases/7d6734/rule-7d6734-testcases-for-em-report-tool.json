@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - `svg` element with explicit role has non-empty accessible name",
+      "title": "Report for ACT-R Rule - SVG element with explicit role has non-empty accessible name",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - `svg` element with explicit role has non-empty accessible name",
+          "siteName": "ACT-R Rule - SVG element with explicit role has non-empty accessible name",
           "siteScope": "https://act-rules.github.io/testcases/7d6734/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"

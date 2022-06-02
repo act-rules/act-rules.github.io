@@ -1,6 +1,6 @@
 ---
 id: aaa1bf
-name: '`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds'
+name: Audio or video element that plays automatically has no audio that lasts more than 3 seconds
 rule_type: atomic
 description: |
   `audio` or `video` that plays automatically does not output audio for more than 3 seconds.

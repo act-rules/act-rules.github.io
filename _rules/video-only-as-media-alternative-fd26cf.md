@@ -30,7 +30,7 @@ All the information contained in each target element is available as text (direc
 
 ## Expectation 2
 
-Each target element is labeled as a video alternative for text on the page by an identifier that is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
 
 ## Assumptions

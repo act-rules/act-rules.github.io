@@ -271,20 +271,6 @@ There is no [descendant of a `body`](#off6ek:in-body) element with a `lang` attr
 
 #### Inapplicable Example 3
 
-This `p` element does not have a [valid language tag](#off6ek:valid-lang).
-
-```html
-<html lang="en">
-	<body>
-		<p lang="français">
-			I love ACT rules!
-		</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 4
-
 The first `p` element is [empty](#off6ek:not-empty) because the only [element inheriting its programmatic language][] is itself, and it has no text node child.
 
 ```html
@@ -296,7 +282,7 @@ The first `p` element is [empty](#off6ek:not-empty) because the only [element in
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 4
 
 This `p` element is [empty](#off6ek:not-empty) because it has no content that is either [visible][] or [included in the accessibility tree][].
 
@@ -308,31 +294,7 @@ This `p` element is [empty](#off6ek:not-empty) because it has no content that is
 </html>
 ```
 
-#### Inapplicable Example 6
-
-The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `eng` [iso 639.2][] three letters code does not exist in the [language subtag registry][].
-
-```html
-<html lang="en">
-	<body>
-		<p lang="eng">I love ACT rules!</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 7
-
-The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `i-lox` [grandfathered tag][grandfathered tags] does not exist in the [language subtag registry][].
-
-```html
-<html lang="lb">
-	<body>
-		<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
-	</body>
-</html>
-```
-
-#### Inapplicable Example 8
+#### Inapplicable Example 5
 
 The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
 
@@ -362,6 +324,5 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
-[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [visible]: #visible 'Definition of Visible'
 [whitespace]: #whitespace 'Definition of whitespace'

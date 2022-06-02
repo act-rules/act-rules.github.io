@@ -1,6 +1,6 @@
 ---
 id: 6cfa84
-name: Element with `aria-hidden` has no content in sequential focus navigation
+name: Element with aria-hidden has no content in sequential focus navigation
 rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain elements that are part of the sequential focus navigation and focusable.

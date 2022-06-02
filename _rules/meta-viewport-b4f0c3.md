@@ -1,6 +1,6 @@
 ---
 id: b4f0c3
-name: '`meta` `viewport` allows for zoom'
+name: Meta viewport allows for zoom
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.

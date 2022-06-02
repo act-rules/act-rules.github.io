@@ -1,6 +1,6 @@
 ---
 id: de46e4
-name: Element with `lang` attribute has valid language tag
+name: Element with lang attribute has valid language tag
 rule_type: atomic
 description: |
   This rule checks that a non-empty `lang` attribute of an element in the page has a language tag with a known primary language subtag.

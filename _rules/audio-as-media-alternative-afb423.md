@@ -35,7 +35,7 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labeled as an audio alternative for text on the page by an identifier that is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
 
 ## Assumptions

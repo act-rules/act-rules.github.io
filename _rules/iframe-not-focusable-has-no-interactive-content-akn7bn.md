@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any non-focusable `iframe` element that has [focusable][] content.
+This rule applies to any `iframe` element that has a negative number as a `tabindex` [attribute value][].
 
 ## Expectation
 
@@ -59,34 +59,18 @@ By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or 
 
 #### Passed Example 1
 
-This `iframe` element contains no content that is part of [sequential focus navigation][].
-
-```html
-<iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>
-```
-
-#### Passed Example 2
-
 This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
 This `iframe` element contains no [visible][] content because of the small size of the iframe.
 
 ```html
 <iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
-```
-
-#### Passed Example 4
-
-This `iframe` element contains no [visible][] content because the iframe is hidden.
-
-```html
-<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 ### Failed
@@ -107,6 +91,22 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 
 ```html
 <iframe tabindex="0" srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 2
+
+This `iframe` element contains no content that is part of [sequential focus navigation][].
+
+```html
+<iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>
+```
+
+#### Inapplicable Example 3
+
+This `iframe` element contains no [visible][] content because the iframe is hidden.
+
+```html
+<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

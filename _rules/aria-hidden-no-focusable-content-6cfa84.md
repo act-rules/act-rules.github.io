@@ -36,7 +36,7 @@ None of the target elements has an [inclusive descendant][] in the [flat tree][]
 
 ## Assumptions
 
-Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden and elements not [focusable][] and part of the [sequential focus navigation][] become [focusable][] and part of the [sequential focus navigation][].
+Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden elements  that were not [focusable][] or part of the [sequential focus navigation][] become [focusable][] and part of the [sequential focus navigation][].
 
 ## Accessibility Support
 

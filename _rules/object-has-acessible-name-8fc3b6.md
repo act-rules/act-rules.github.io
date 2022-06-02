@@ -42,7 +42,9 @@ Non-supported media formats make screen readers render the text content of the e
 
 ## Background
 
-Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately. When the object resource is not loaded the fallback content is rendered. The [accessible name][] announced by the screen reader is for an `object` with a valid `data` attribute and will depend on the role of the `data` attribute.
+- Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately. 
+- When the object resource is not loaded the fallback content is rendered. 
+- The [accessible name][] announced by the screen reader is for an `object` with a valid `data` attribute and will depend on the role of the `data` attribute.
 
 ### Bibliography
 

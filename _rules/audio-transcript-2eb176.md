@@ -1,6 +1,6 @@
 ---
 id: 2eb176
-name: '`audio` element content has transcript'
+name: Audio element content has transcript
 rule_type: atomic
 description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.

@@ -133,10 +133,12 @@ This `object` element which embeds an audio resource has an empty [accessible na
 
 #### Failed Example 5
 
-This `object` element has an empty [accessible name][] as the `img` attribute has not been set correctly.
+This `object` element has an empty [accessible name][]. The `img` element inside the `object` is not used in computing the `object`'s accessible name.
 
 ```html
-<object><img alt="hello world"></object>
+<object data="/test-assets/shared/w3c-logo.png">
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+</object>
 ```
 
 ### Inapplicable
@@ -188,6 +190,15 @@ There is no `object` element.
 ```html
 <audio title="Moon speech" src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
+
+#### Inapplicable Example 7
+
+This `object` element does not need an accessible name because it loads no image, audio, or video. Instead the `img` element inside the `object` is rendered.
+
+````html
+<object>
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+</object>
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -392,7 +392,7 @@ These two `span` elements do not have a [semantic role][] of link.
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
 
@@ -409,7 +409,7 @@ These two HTML `a` elements have the same [accessible name][] and link to the [s
 </html>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 These two HTML `a` elements have the same [accessible name][] but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
 

@@ -107,7 +107,7 @@ The [accessible name][] describes the purpose of the link.
 The [accessible name][] together with the [accessible description][] describes the purpose of the link.
 
 ```html
-<a href="#desc" title="See the product's description">Product</a>
+<a href="#desc" title="See the product's description">More</a>
 
 <p id="desc">This product consists of several web pages.</p>
 ```

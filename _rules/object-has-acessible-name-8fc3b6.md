@@ -195,10 +195,11 @@ There is no `object` element.
 
 This `object` element does not need an accessible name because it loads no image, audio, or video. Instead the `img` element inside the `object` is rendered.
 
-````html
+```html
 <object>
 	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 </object>
+```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

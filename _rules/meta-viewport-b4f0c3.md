@@ -23,6 +23,7 @@ acknowledgments:
 ## Applicability
 
 This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport` for which at least one of the following is true:
+
 - the `content` [attribute value][] has the `user-scalable` property; or
 - the `content` [attribute value][] has the `maximum-scale` property.
 
@@ -81,13 +82,13 @@ This viewport `meta` element does not prevent user scaling because it has `user-
 
 #### Passed Example 2
 
-This viewport `meta` element allows users to scale content up to 200% because it has `maximum-scale` set to 6.0.
+This viewport `meta` element allows users to scale content up to 200% because it has `maximum-scale` set to 2.0.
 
 ```html
 <html>
 	<head>
 		<title>Simple page showing random text</title>
-		<meta name="viewport" content="maximum-scale=6.0" />
+		<meta name="viewport" content="maximum-scale=2.0" />
 	</head>
 	<body>
 		<p>

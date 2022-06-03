@@ -1,6 +1,6 @@
 ---
 id: e7aa44
-name: '`audio` element content has text alternative'
+name: Audio element content has text alternative
 rule_type: composite
 description: |
   This rule checks that `audio` elements have a text alternative available.
@@ -35,9 +35,7 @@ acknowledgments:
 This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
 - has an `autoplay` [attribute value][] of true;  or,
-- has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -203,4 +201,5 @@ This `a` element links to an audio file, but there is no `audio` element on this
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

@@ -1,6 +1,6 @@
 ---
 id: 9e45ec
-name: Word spacing in `style` attributes is not `!important`
+name: Word spacing in style attributes is not !important
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `word-spacing` by using `!important`, except if it's at least `0.16` times the font size.

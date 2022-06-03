@@ -1,6 +1,6 @@
 ---
 id: 7d6734
-name: '`svg` element with explicit role has non-empty accessible name'
+name: SVG element with explicit role has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.

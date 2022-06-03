@@ -203,3 +203,4 @@ This `object` element does not need an accessible name because it loads no image
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'
+[explicit role]: #explicit-role 'Definition of Explicit role'

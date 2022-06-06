@@ -107,7 +107,7 @@ These two HTML `a` elements have the same non-empty [accessible name][], empty [
 
 #### Passed Example 3
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context], and resolve to identical resources.
+These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][] and the same [context][programmatically determined link context], and resolve to identical resources.
 
 ```html
 <html lang="en">

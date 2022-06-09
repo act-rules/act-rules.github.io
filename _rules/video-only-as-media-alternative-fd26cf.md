@@ -1,6 +1,6 @@
 ---
 id: fd26cf
-name: '`video` element visual-only content is media alternative for text'
+name: Video element visual-only content is media alternative for text
 rule_type: atomic
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
@@ -16,6 +16,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -44,7 +46,10 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- The term [label](https://www.w3.org/TR/WCAG21/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
+The term [label](https://www.w3.org/TR/WCAG21/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
+
+### Bibliography
+
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 
 ## Test Cases

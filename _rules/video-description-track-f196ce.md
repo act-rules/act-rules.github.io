@@ -1,6 +1,6 @@
 ---
 id: f196ce
-name: '`video` element visual content has description track'
+name: DEPRECATED — Video element visual content has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.
@@ -27,6 +27,10 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+deprecated: |
+  This rule has been deprecated as descriptions tracks were removed in [#1665](https://github.com/act-rules/act-rules.github.io/pull/1665) as a way to provide video alternative. This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability
@@ -50,6 +54,8 @@ Currently the description track is not supported by most assistive technology. A
 This means that the rule can only provide a pass for these success criteria if assistive technology support the description track or if the video player that is used has implemented such a work around.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded)

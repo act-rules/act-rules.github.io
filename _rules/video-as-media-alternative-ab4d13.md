@@ -1,6 +1,6 @@
 ---
 id: ab4d13
-name: '`video` element content is media alternative for text'
+name: Video element content is media alternative for text
 rule_type: atomic
 description: |
   This rule checks non-streaming `video` is a media alternative for text on the page.
@@ -16,6 +16,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -41,6 +43,8 @@ This rule assumes that a mechanism is available to start the video and that the 
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded)

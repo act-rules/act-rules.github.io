@@ -65,6 +65,8 @@ _There are no major accessibility support issues known for this rule._
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 
@@ -92,12 +94,12 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
 			>About us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -230,14 +232,14 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
 			>Contact us</a
 		>) and get in touch (
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 			>Contact us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -365,6 +367,32 @@ These two `span` elements do not have a [semantic role][] of link.
 		>)
 	</p>
 </html>
+```
+
+#### Inapplicable Example 5
+
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
+
+```html
+<html lang="en">
+	<div>
+		You can learn more in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
+	<div>
+		You can find contact information in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
+</html>
+```
+
+#### Inapplicable Example 6
+
+These two HTML `a` elements have the same [accessible name][] but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
+
+```html
+<div><a href="https://www.w3.org/WAI/">Read more</a> about the W3C WAI</div>
+<div><a href="https://www.w3.org/International/">Read more</a> about the W3C internationalization</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

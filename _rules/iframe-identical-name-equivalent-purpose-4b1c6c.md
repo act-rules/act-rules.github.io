@@ -1,6 +1,6 @@
 ---
 id: 4b1c6c
-name: '`iframe` elements with identical accessible names have equivalent purpose'
+name: Iframe elements with identical accessible names have equivalent purpose
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.
@@ -46,6 +46,8 @@ This rule assumes that assistive technologies are exposing all `iframe` elements
 ## Background
 
 When determining if target elements embed the same resource, resolving the embedded resource includes any redirects that are instant.
+
+### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)

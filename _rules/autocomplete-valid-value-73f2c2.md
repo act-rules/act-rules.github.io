@@ -1,6 +1,6 @@
 ---
 id: 73f2c2
-name: '`autocomplete` attribute has valid value'
+name: Autocomplete attribute has valid value
 rule_type: atomic
 description: |
   This rule checks that the HTML `autocomplete` attribute has a correct value.
@@ -65,6 +65,8 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 Many browsers provide auto-filling suggestions even when the control's `type` [attribute value][] is not [appropriate][appropriate field name for the form control] for its `autocomplete` [attribute value][]. The same happens when the `autocomplete` property is queried. However, the `autocomplete` property is not programmatically identifiable if the requirements for the optional tokens are not met.
 
 The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determinable)

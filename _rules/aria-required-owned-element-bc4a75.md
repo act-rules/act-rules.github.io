@@ -58,6 +58,8 @@ The combobox role is excluded from this rule, because the design pattern for it 
 
 **Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.1/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.1/#subclassroles) of `listitem`.
 
+### Bibliography
+
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.1/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.1/#dfn-owned-element)
@@ -138,6 +140,22 @@ This element with the `list` role only owns elements with the `listitem` role, o
 </div>
 ```
 
+#### Passed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `menuitem` role. ARIA `group` roles are allowed to own other elements with a `group` role.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="menuitem">Item 2</span>
+			<span role="menuitem">Item 3</span>
+		</div>
+	</div>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -203,6 +221,22 @@ This element with the `list` role owns an element with the `group` role, but the
 	<div role="group">
 		<span role="tab">Item 1</span>
 		<span role="tab">Item 2</span>
+	</div>
+</div>
+```
+
+#### Failed Example 7
+
+This element with the `menu` role only owns an element with a `group` role. The `group` in turn owns an element with the `menuitem` role, and an element with the `group` role, in which each element has the `treeitem` role. ARIA `group` roles are allowed to own other elements with a `group` role, but those nested `group` nodes must still meet the requirements.
+
+```html
+<div role="menu">
+	<div role="group">
+		<span role="menuitem">Item 1</span>
+		<div role="group">
+			<span role="treeitem">Item 1</span>
+			<span role="treeitem">Item 2</span>
+		</div>
 	</div>
 </div>
 ```

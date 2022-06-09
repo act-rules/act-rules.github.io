@@ -1,6 +1,6 @@
 ---
 id: bisz58
-name: '`meta` element has no refresh delay (no exception)'
+name: Meta element has no refresh delay (no exception)
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
@@ -58,6 +58,8 @@ For each test target, running the [shared declarative refresh steps][], given th
 Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
 - [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)

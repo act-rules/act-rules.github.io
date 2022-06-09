@@ -55,6 +55,8 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
 - [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
@@ -105,7 +107,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 ```html
 <html lang="en">
 	<h1>
-		<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
+		<img src="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
 	</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
@@ -133,12 +135,12 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
 	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>
@@ -198,7 +200,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 ```html
 <html lang="en">
 	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>

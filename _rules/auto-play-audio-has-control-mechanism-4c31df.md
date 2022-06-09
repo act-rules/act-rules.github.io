@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: '`audio` or `video` that plays automatically has a control mechanism'
+name: Audio or video element that plays automatically has a control mechanism
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -21,6 +21,9 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -53,6 +56,8 @@ _There are currently no assumptions_
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
 - [Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG21/Techniques/failures/F93)

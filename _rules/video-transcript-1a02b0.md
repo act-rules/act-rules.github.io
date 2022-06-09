@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: 'Audio and visuals of `video` element have transcript'
+name: Audio and visuals of video element have transcript
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -27,6 +27,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -52,6 +54,8 @@ This rule assumes that a mechanism is available to start the video and that the 
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded)
 - [Understanding Success Criterion 1.2.8: Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded)

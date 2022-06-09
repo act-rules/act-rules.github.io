@@ -58,7 +58,12 @@ There is a known combination of a popular browser and assistive technology that 
 
 ## Background
 
+### Related rules
+
 - [Button has non-empty accessible name](https://act-rules.github.io/rules/97a4e1)
+
+### Bibliography
+
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG21/Techniques/html/H36)
@@ -172,6 +177,6 @@ The image button is ignored by assistive technologies because it is not [include
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[attribute value]: #attribute-value 'Definition of Attribute Value'
+[attribute value]: #attribute-value:enumerated 'Definition of Attribute Value'
 [html aam image button]: https://www.w3.org/TR/html-aam-1.0/#input-type-image 'HTML Accessibility API Mapping, image button'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

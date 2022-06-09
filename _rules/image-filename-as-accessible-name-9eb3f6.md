@@ -40,7 +40,7 @@ assets:
   - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
   - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 deprecated: |
-  This rule has been deprecated and superceded by Rule [Image accessible name is descriptive](https://act-rules.github.io/rules/qt1vmo). This rule is not maintained anymore and should not be used.
+  This rule has been deprecated and superseded by Rule [Image accessible name is descriptive](https://act-rules.github.io/rules/qt1vmo). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability
@@ -67,6 +67,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 It is fairly common for content management systems (CMS) or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoint cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)

@@ -77,6 +77,8 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Background
 
+### Bibliography
+
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
@@ -137,11 +139,11 @@ The `label` elements are [programmatic labels][programmatic label] of their resp
 
 ```html
 <html lang="en">
-	<h2>Shipping address</h2>
+	<h2>Shipping</h2>
 	<label>Name<input id="shipping-name" type="text" name="name"/></label>
 	<label>Street<input id="shipping-street" type="text" name="street"/></label>
 
-	<h2>Billing address</h2>
+	<h2>Billing</h2>
 	<label>Name<input id="billing-name" type="text" name="name"/></label>
 	<label>Street<input id="billing-street" type="text" name="street"/></label>
 </html>
@@ -153,7 +155,7 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 
 ```html
 <html lang="en">
-	<div id="shipping">Shipping address</div>
+	<div id="shipping">Shipping</div>
 	<span id="name">Name</span>
 	<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
 </html>
@@ -195,29 +197,32 @@ The `span` element is a [programmatic label][] of the `input` element but does n
 
 #### Failed Example 4
 
-The `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. The `label` elements, are not descriptive enough (because they are repeated over several fields). The headings are not [visible][]. Therefore, they do not provide [visual context][].
+These `label` elements are [programmatic labels][programmatic label] of their respective `input` elements. They are not descriptive enough because they are reused on multiple fields. The headings are not [visible][]. Therefore, they do not provide [visual context][].
 
 ```html
 <html lang="en">
-	<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
-	<input aria-label="Name" id="shipping-name" type="text" name="name" />
-	<input aria-label="Street" id="shipping-street" type="text" name="street" />
-
-	<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
-	<input aria-label="Name" id="billing-name" type="text" name="name" />
-	<input aria-label="Street" id="billing-street" type="text" name="street" />
+	<fieldset>
+		<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
+		<label>Name: <input type="text" name="shipping-name" /></label>
+		<label>Street: <input type="text" name="shipping-street" /></label>
+	</fieldset>
+	<fieldset>		
+		<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
+		<label>Name: <input type="text" name="billing-name" /></label>
+		<label>Street: <input type="text" name="billing-street" /></label>
+	</fieldset>
 </html>
 ```
 
 #### Failed Example 5
 
-Both the `div` and the `span` elements are [programmatic labels][programmatic label] of the `input` element, but only the `div` is [visible][]. It has no [visual context][], and is not descriptive.
+These `button` and `span` elements are both [programmatic labels][programmatic label] of the `input` element, but only the `button` is [visible][]. It has no [visual context][], and is not descriptive.
 
 ```html
 <html lang="en">
-	<div id="shipping">Shipping address</div>
-	<span id="name" style="display: none">Name</span>
-	<input id="shipping-name" type="text" name="name" aria-labelledby="shipping name" />
+	<span id="search" style="display: none">Search</span>
+	<input type="text" name="search" aria-labelledby="submit search" />
+	<button id="submit">Go</button>
 </html>
 ```
 
@@ -240,7 +245,8 @@ The `label` element is not [visible][].
 
 ```html
 <html lang="en">
-	<label for="fname" style="display:none;">First name:</label>
+	<label for="fname" style="position: absolute; left: -9999px;">First name:</label>
+	<label aria-hidden="true">First name:</label>
 	<input id="fname" type="text" name="fname" />
 </html>
 ```
@@ -251,18 +257,7 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 ```html
 <html lang="en">
-	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" type="text" name="fname"/></label>
-</html>
-```
-
-#### Inapplicable Example 4
-
-The `span` element is not a [programmatic label][] of any element.
-
-```html
-<html lang="en">
-	<span>First name:</span>
-	<input type="text" name="fname" />
+	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" disabled role="none" /></label>
 </html>
 ```
 

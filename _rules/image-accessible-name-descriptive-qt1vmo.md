@@ -62,6 +62,8 @@ _There are no major accessibility support issues known for this rule._
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
 - [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G95)
@@ -108,11 +110,14 @@ This `canvas` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<canvas id="act" width="200" height="60" aria-label="ACT Rules!"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="W3C"></canvas>
 	<script>
-		const ctx = document.querySelector('#act').getContext('2d')
-		ctx.font = '30px Arial'
-		ctx.fillText('ACT Rules!', 20, 40)
+		const img = new Image();
+		img.src = '/test-assets/shared/w3c-logo.png';
+		img.onload = function () {
+			const ctx = document.querySelector('#logo').getContext('2d');
+			ctx.drawImage(img, 0, 0);
+		}
 	</script>
 </html>
 ```
@@ -156,11 +161,14 @@ This `canvas` element has an `aria-label` attribute that incorrectly describes t
 
 ```html
 <html lang="en">
-	<canvas id="act" width="200" height="60" aria-label="HTML 5"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="HTML 5"></canvas>
 	<script>
-		const ctx = document.querySelector('#act').getContext('2d')
-		ctx.font = '30px Arial'
-		ctx.fillText('ACT Rules!', 20, 40)
+		const img = new Image();
+		img.src = '/test-assets/shared/w3c-logo.png';
+		img.onload = function () {
+			const ctx = document.querySelector('#logo').getContext('2d');
+			ctx.drawImage(img, 0, 0);
+		}
 	</script>
 </html>
 ```
@@ -181,6 +189,7 @@ This decorative `img` element has an empty (`""`) [accessible name][] because it
 
 ```html
 <html lang="en">
+	<p>Happy new year!</p>
 	<img src="/test-assets/shared/fireworks.jpg" role="presentation" />
 </html>
 ```

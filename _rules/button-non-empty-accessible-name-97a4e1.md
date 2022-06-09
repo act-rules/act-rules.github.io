@@ -42,7 +42,14 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Background
 
+This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
+
+### Related rules
+
 - [Image button has non-empty accessible name](https://act-rules.github.io/rules/59796f)
+
+### Bibliography
+
 - [HTML Accessibility API Mappings 1.0 (working draft), 5.2 `input type="button"`, `input type="submit"` and `input type="reset"`](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)

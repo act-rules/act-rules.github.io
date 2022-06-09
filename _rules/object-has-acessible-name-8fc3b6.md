@@ -20,7 +20,8 @@ acknowledgments:
   funding:
     - WAI-Tools
   assets:
-    - audio is an excerpt from JFK's 'Moon Speech'
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -42,6 +43,8 @@ Non-supported media formats make screen readers render the text content of the e
 ## Background
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
@@ -96,13 +99,21 @@ This `object` element placed off screen, which embeds an audio resource, has a n
 
 #### Failed Example 1
 
+This `object` element which embeds an audio resource has an empty [accessible name][] because it does not provide an accessible name through one of `title`, `aria-label` or `aria-labelledby` attributes.
+
+```html
+<object data="/test-assets/moon-audio/moon-speech.mp3"></object>
+```
+
+#### Failed Example 2
+
 This `object` element which embeds a video resource has an empty [accessible name][] because the `title` attribute is empty.
 
 ```html
 <object title="" data="/test-assets/rabbit-video/video.mp4"></object>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
 This `object` element which embeds an image resource has an empty [accessible name][] because the `span` element with `id="label"` is empty.
 
@@ -110,20 +121,12 @@ This `object` element which embeds an image resource has an empty [accessible na
 <span id="label"></span> <object aria-labelledby="label" data="/test-assets/shared/w3c-logo.png"></object>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 This `object` element which embeds an audio resource has an empty [accessible name][] because the `aria-labelledby` attribute references a non-existing id.
 
 ```html
 <object aria-labelledby="download" data="/test-assets/moon-audio/moon-speech.mp3"></object>
-```
-
-#### Failed Example 4
-
-This `object` element which embeds an audio resource has an empty [accessible name][] because it does not provide an accessible name through one of `title`, `aria-label` or `aria-labelledby` attributes.
-
-```html
-<object data="/test-assets/moon-audio/moon-speech.mp3"></object>
 ```
 
 ### Inapplicable

@@ -1,6 +1,6 @@
 ---
 id: bisz58
-name: '`meta` element has no refresh delay (no exception)'
+name: Meta element has no refresh delay (no exception)
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.

@@ -1,6 +1,6 @@
 ---
 id: a25f45
-name: '`headers` attribute specified on a cell refers to cells in the same `table` element'
+name: Headers attribute specified on a cell refers to cells in the same table element
 rule_type: atomic
 description: |
   This rule checks that the `headers` attribute on a cell refer to other cells in the same `table` element.

@@ -1,6 +1,6 @@
 ---
 id: b5c3f8
-name: HTML page has `lang` attribute
+name: HTML page has lang attribute
 rule_type: atomic
 description: |
   This rule checks that an HTML page has a non-empty `lang` attribute.

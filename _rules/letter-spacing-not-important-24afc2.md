@@ -1,6 +1,6 @@
 ---
 id: 24afc2
-name: Letter spacing in `style` attributes is not `!important`
+name: Letter spacing in style attributes is not !important
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.

@@ -1,6 +1,6 @@
 ---
 id: 6cfa84
-name: Element with `aria-hidden` has no focusable content
+name: Element with aria-hidden has no focusable content
 rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain focusable elements.

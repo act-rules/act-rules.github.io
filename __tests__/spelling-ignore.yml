@@ -16,6 +16,7 @@
 - xhtml
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
+- Iframe
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
@@ -245,6 +246,8 @@
 - TestSubject
 - earl:cantTell
 - getComputedPriority
+- isPartOf
+- scId
 
 # sizes
 - 1em

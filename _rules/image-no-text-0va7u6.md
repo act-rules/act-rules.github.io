@@ -32,7 +32,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [rendered image resources][] in a [web page][].
+This rule applies to the [visible][] [image resource][] loaded on a [web page][]. Image resources can be loaded on a page through the following elements:
+
+- `img` elements with a non-empty [source set][]; or
+- `input` elements with a `type` attribute value of `image` and its `src` attribute value is not empty; or
+- `object` elements with a data attribute value referencing a resource with an image MIME type; or
+- `svg` elements having one or more `image` descendants with a non-empty `href` attribute value; or
+- elements with a computed CSS `background-image` property with at least one `url` reference.
 
 ## Expectation
 

@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Element with aria-hidden has no focusable content",
+      "title": "Report for ACT-R Rule - Element with aria-hidden has no content in sequential focus navigation",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Element with aria-hidden has no focusable content",
+          "siteName": "ACT-R Rule - Element with aria-hidden has no content in sequential focus navigation",
           "siteScope": "https://act-rules.github.io/testcases/6cfa84/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"
@@ -1183,6 +1183,17 @@
               "WebPage"
             ],
             "id": "_:struct_4",
+            "description": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
+            "source": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
+            "title": "0567a6c937cc508606af0ab2854d8a7d059ea2e2",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_5",
             "description": "https://act-rules.github.io/testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
             "title": "8028b91449bd3f9f607dcc91be3b559035bf719c",
@@ -1193,7 +1204,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_5",
+            "id": "_:struct_6",
             "description": "https://act-rules.github.io/testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
             "title": "8e728d4484e9a796f142c6edb4545a3b8c15f88b",
@@ -1204,7 +1215,7 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_6",
+            "id": "_:struct_7",
             "description": "https://act-rules.github.io/testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
             "title": "2749b82af024c1f878272013d7bb8a961e662d7a",
@@ -1215,21 +1226,10 @@
               "TestSubject",
               "WebPage"
             ],
-            "id": "_:struct_7",
+            "id": "_:struct_8",
             "description": "https://act-rules.github.io/testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
             "source": "https://act-rules.github.io/testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
             "title": "c7b59d766471afb67d9d5e5dc6492b1a0f3421c1",
-            "tested": false
-          },
-          {
-            "type": [
-              "TestSubject",
-              "WebPage"
-            ],
-            "id": "_:struct_8",
-            "description": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
-            "source": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
-            "title": "0567a6c937cc508606af0ab2854d8a7d059ea2e2",
             "tested": false
           },
           {

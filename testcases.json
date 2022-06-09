@@ -89,7 +89,7 @@
       "relativePath": "testcases/6cfa84/6993d0144f7c3ba330666daf9f0b077fb61894f1.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -114,7 +114,7 @@
       "relativePath": "testcases/6cfa84/46416c73f816af91f446e6056c96e89ac7882edb.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -139,7 +139,7 @@
       "relativePath": "testcases/6cfa84/a613606d901cbdb0a83d62107647bbd3a2beaad8.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -164,7 +164,32 @@
       "relativePath": "testcases/6cfa84/7ca22500f92a856f5edadfb482a073f3dba47d3b.html",
       "expected": "passed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
+      "rulePage": "https://act-rules.github.io/rules/6cfa84",
+      "ruleAccessibilityRequirements": {
+        "wcag20:4.1.2": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "using-aria:fourth": {
+          "title": "Fourth rule of ARIA use",
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "0567a6c937cc508606af0ab2854d8a7d059ea2e2",
+      "testcaseTitle": "Passed Example 5",
+      "url": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
+      "relativePath": "testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
+      "expected": "passed",
+      "ruleId": "6cfa84",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -189,7 +214,7 @@
       "relativePath": "testcases/6cfa84/8028b91449bd3f9f607dcc91be3b559035bf719c.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -214,7 +239,7 @@
       "relativePath": "testcases/6cfa84/8e728d4484e9a796f142c6edb4545a3b8c15f88b.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -239,7 +264,7 @@
       "relativePath": "testcases/6cfa84/2749b82af024c1f878272013d7bb8a961e662d7a.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -264,32 +289,7 @@
       "relativePath": "testcases/6cfa84/c7b59d766471afb67d9d5e5dc6492b1a0f3421c1.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
-      "rulePage": "https://act-rules.github.io/rules/6cfa84",
-      "ruleAccessibilityRequirements": {
-        "wcag20:4.1.2": {
-          "forConformance": true,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        },
-        "using-aria:fourth": {
-          "title": "Fourth rule of ARIA use",
-          "forConformance": false,
-          "failed": "not satisfied",
-          "passed": "further testing needed",
-          "inapplicable": "further testing needed"
-        }
-      }
-    },
-    {
-      "testcaseId": "0567a6c937cc508606af0ab2854d8a7d059ea2e2",
-      "testcaseTitle": "Failed Example 5",
-      "url": "https://act-rules.github.io/testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
-      "relativePath": "testcases/6cfa84/0567a6c937cc508606af0ab2854d8a7d059ea2e2.html",
-      "expected": "failed",
-      "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -309,12 +309,12 @@
     },
     {
       "testcaseId": "1d19581eebfa0f92c17dd772ca67623cb3ad3bdb",
-      "testcaseTitle": "Failed Example 6",
+      "testcaseTitle": "Failed Example 5",
       "url": "https://act-rules.github.io/testcases/6cfa84/1d19581eebfa0f92c17dd772ca67623cb3ad3bdb.html",
       "relativePath": "testcases/6cfa84/1d19581eebfa0f92c17dd772ca67623cb3ad3bdb.html",
       "expected": "failed",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -339,7 +339,7 @@
       "relativePath": "testcases/6cfa84/738e5ea04afe9baef6499ad3d3bb675dcc61dd82.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -364,7 +364,7 @@
       "relativePath": "testcases/6cfa84/4de29b45568a0fe40bff84c4556a4bc07dfab02d.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {
@@ -389,7 +389,7 @@
       "relativePath": "testcases/6cfa84/21498af9b02caf76133b59775aa7abab2942e7fd.html",
       "expected": "inapplicable",
       "ruleId": "6cfa84",
-      "ruleName": "Element with aria-hidden has no focusable content",
+      "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "rulePage": "https://act-rules.github.io/rules/6cfa84",
       "ruleAccessibilityRequirements": {
         "wcag20:4.1.2": {

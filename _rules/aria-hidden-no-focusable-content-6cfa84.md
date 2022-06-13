@@ -184,7 +184,7 @@ This `summary` element is part of the [sequential focus navigation][].
 </details>
 ```
 
-#### Failed Example 7
+#### Failed Example 6
 
 This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that 
 immediately jumps focus to a valid location. Focus sentinels are typically used before and after a modal dialog in order to contain 

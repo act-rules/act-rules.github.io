@@ -28,13 +28,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that has a negative number as a `tabindex` [attribute value][].
+This rule applies to any `iframe` element that [contains](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
+
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not [contain](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
-
-An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+For each test target, the [nested browsing context][] does not have a negative number as a `tabindex` [attribute value][].
 
 ## Assumptions
 

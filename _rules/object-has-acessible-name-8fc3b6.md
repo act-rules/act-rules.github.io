@@ -26,7 +26,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `object` element that is [included in the accessibility tree][] and embeds a resource with an [image MIME type](https://mimesniff.spec.whatwg.org/#image-mime-type) or an [audio or video MIME type](https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type).
+This rule applies to any `object` element for which all the following are true:
+
+- The `object` is [included in the accessibility tree][]; and
+- The `object` embeds a resource with an image MIME type or an audio or video MIME type
 
 ## Expectation
 

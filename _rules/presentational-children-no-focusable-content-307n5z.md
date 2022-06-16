@@ -102,7 +102,7 @@ This `button` element has a [child][] `span` element. Because the `span` element
 ```html
 <button>
 	Save
-	<span aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
+	<span role="button" aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
 </button>
 ```
 

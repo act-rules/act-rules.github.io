@@ -56,7 +56,7 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
-The image button with non-empty `title` attribute but empty `alt` attribute results in a button with empty accessible name on many browsers. There is a known popular browser instead, that uses the `title` attribute as fallback even with empty `alt`, resulting in a button with `title` attribute value as accessible name. 
+The image button with non-empty `title` attribute but empty `alt` attribute results in a button with empty accessible name on many browsers. There is a known popular browser that uses the `title` attribute as fallback even with empty `alt`, resulting in a button with `title` attribute value as accessible name. 
 
 ## Background
 

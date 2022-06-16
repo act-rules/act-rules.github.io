@@ -56,6 +56,8 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
+The image button with non-empty `title` attribute but empty `alt` attribute results in a button with empty accessible name on many browsers. On Firefox, instead, the `title` attribute is used as fallback, resulting in a button with `title` attribute value as accessible name. 
+
 ## Background
 
 ### Related rules
@@ -127,6 +129,14 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 ```
 
 #### Failed Example 3
+
+The image button has a non-empty `title` attribute, but an empty `alt` attribute, hence its name is the default "Submit Query".
+
+```html
+<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" alt="" />
+```
+
+#### Failed Example 4
 
 The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button the default [accessible name][] of "Submit Query".
 

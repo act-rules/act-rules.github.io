@@ -1,0 +1,23 @@
+<!DOCTYPE html> <div
+	id="sampleModal"
+	role="dialog"
+	aria-label="Sample Modal"
+	aria-modal="true"
+	style="border: solid black 1px; padding: 1rem;"
+>
+	<label>First and last name <input id="dialogFirst"/></label><br />
+	<button id="closeButton">Close button</button>
+</div>
+<div aria-hidden="true">
+	<a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
+		>Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
+	>
+</div>
+<script>
+	document.getElementById('sentinelAfter').addEventListener('focus', () => {
+		document.getElementById('dialogFirst').focus()
+	})
+	document.getElementById('closeButton').addEventListener('click', () => {
+		document.getElementById('sampleModal').style.display = 'none'
+	})
+</script>

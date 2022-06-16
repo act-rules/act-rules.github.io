@@ -37,9 +37,14 @@ This rule applies to any `role` attribute for which all the following are true:
 - the attribute has a value that is neither empty ("") nor only [ASCII whitespace][]; and
 - the attribute is specified on an [HTML or SVG element][] which is not [programmatically hidden][].
 
-## Expectation
+## Expectation (mapping to 4.1.2)
 
-Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][].
+Each test target either has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][]; or the test target is not a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
+
+## Expectation (mapping to 1.3.1)
+
+Each test target either has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][]; or the test target has not a [structure](https://www.w3.org/TR/WCAG21/#dfn-structure) conveyed through presentation.
+
 
 ## Assumptions
 

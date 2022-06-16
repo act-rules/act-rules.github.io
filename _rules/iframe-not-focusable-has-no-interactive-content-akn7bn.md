@@ -34,7 +34,7 @@ An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing con
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not have a negative number as a `tabindex` [attribute value][].
+None of the test target has a negative number as a `tabindex` [attribute value][].
 
 ## Assumptions
 

@@ -43,16 +43,15 @@ The `object` element is not rendered for presentational purposes. If the `object
 
 Non-supported media formats make screen readers render the text content of the element instead of other attributes. 
 
-`object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
+`Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
 ## Background
 
-This rule is testing that the following 'object' attributes are followed:
+Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
-- The purpose is in the [accessible name][] but is not part of this rule and must be tested separately; and 
-- When the object resource is not loaded the fallback content is rendered; and
-- Valid `data` defines the [accessible name][] that is announced by the screen reader; and
-- The [accessible name][] is defined depending on the role of the `data` attribute.
+When the object resource is not loaded the fallback content is rendered. 
+
+Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute.
 
 ### Bibliography
 

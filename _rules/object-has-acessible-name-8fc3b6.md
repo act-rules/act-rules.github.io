@@ -41,7 +41,9 @@ The `object` element is not rendered for presentational purposes. If the `object
 
 ## Accessibility Support
 
-Non-supported media formats make screen readers render the text content of the element instead of other attributes. `object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
+Non-supported media formats make screen readers render the text content of the element instead of other attributes. 
+
+`object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
 ## Background
 

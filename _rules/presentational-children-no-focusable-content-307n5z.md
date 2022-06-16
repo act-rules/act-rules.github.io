@@ -34,7 +34,7 @@ This rule assumes that elements that are part of [sequential focus navigation][]
 
 ## Accessibility Support
 
-Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles; or in presence of focusable content. Because some browsers do, and others do not implement presentational children, there can be significant differences between browsers; and pages failing this rule may only be problematic with some browsers.
+Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
 
 ## Background
 

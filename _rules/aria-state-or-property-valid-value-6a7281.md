@@ -5,8 +5,8 @@ rule_type: atomic
 description: |
   This rule checks that each ARIA state or property has a valid value type.
 accessibility_requirements:
-  aria11:state_prop_values:
-    title: ARIA 1.1, 6.3 Values for States and Properties
+  aria12:propcharacteristic_value:
+    title: ARIA 1.1, 6.2.4 Value (Characteristics of States and Properties)
     forConformance: true
     failed: not satisfied
     passed: satisfied

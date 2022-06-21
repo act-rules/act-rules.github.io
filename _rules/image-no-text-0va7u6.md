@@ -34,12 +34,16 @@ acknowledgments:
 
 This rule applies to any [rendered image resources][] in a [web page][].
 
-## Expectation
+## Expectations
 
-For each test target, at least one of the following is true:
+For the test target, the expectation is that :
+- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language]
+
+## Exceptions 
+
+For each test target, at least one of the following exceptions is true:
 
 - **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
 - **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
 - **decoration**: the [embedded image][] the test target belongs to is [purely decorative][].
 

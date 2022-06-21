@@ -29,8 +29,7 @@ async function generateProposedRulePages({ tmpDir, rulesDir, glossaryDir }) {
   --rulesDir "${rulesDir}" \
   --glossaryDir "${glossaryDir}" \
   --outDir "${tmpDir}" \
-  --proposed \
-  --matrix
+  --proposed
   `;
 }
 

@@ -19,12 +19,13 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+      - name: Install dependencies
+        run: npm ci
       - name: Configure git
         run: |
           git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
           git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
           git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
-      - name: Install dependencies
-        run: npm ci
       - name: Build and deploy WAI update
         run: npm run build:wai

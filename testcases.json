@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1132,
+  "count": 1134,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -26232,6 +26232,42 @@
       "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/59br37/0413dfd271c1fba476c3e73d82f8d79a75c7300f.html",
       "relativePath": "testcases/59br37/0413dfd271c1fba476c3e73d82f8d79a75c7300f.html",
+      "expected": "failed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "eb8ec44eca314d04b8b14bd014ddd2462ededcc1",
+      "testcaseTitle": "Failed Example 4",
+      "url": "https://act-rules.github.io/testcases/59br37/eb8ec44eca314d04b8b14bd014ddd2462ededcc1.html",
+      "relativePath": "testcases/59br37/eb8ec44eca314d04b8b14bd014ddd2462ededcc1.html",
+      "expected": "failed",
+      "ruleId": "59br37",
+      "ruleName": "Zoomed text node is not clipped with CSS overflow",
+      "rulePage": "https://act-rules.github.io/rules/59br37",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.4.4": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "162a0171223f6d0120a57f9d82459853db0f1a1b",
+      "testcaseTitle": "Failed Example 5",
+      "url": "https://act-rules.github.io/testcases/59br37/162a0171223f6d0120a57f9d82459853db0f1a1b.html",
+      "relativePath": "testcases/59br37/162a0171223f6d0120a57f9d82459853db0f1a1b.html",
       "expected": "failed",
       "ruleId": "59br37",
       "ruleName": "Zoomed text node is not clipped with CSS overflow",

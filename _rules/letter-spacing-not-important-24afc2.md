@@ -205,6 +205,21 @@ Both this `div` and `p` elements have a single text node descendant, whose paren
 </div>
 ```
 
+#### Passed Example 13
+
+This `div` element has three text node descendants. The first one is [empty](#24afc2:empty); the second one is [wide enough](#24afc2:wide-enough-cond) because of the smaller `font-size` on its parent; and the last one is [wide enough](#24afc2:wide-enough-cond) because of the `letter-spacing` specified on its parent. The third `span` element has a [wide enough](#24afc2:wide-enough-cond) text node descendant.
+
+```html
+<div style="letter-spacing: 2.4px !important; font-size: 30px">
+  <!-- OK because too small but only whitespace -->
+  <span>&nbsp;</span>
+  <!-- OK because font-size has changed -->
+  <span style="font-size: 20px">Lorem</span>
+  <!-- OK because letter-spacing has changed -->
+  <span style="letter-spacing: 3.6px !important">ipsum</span>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1

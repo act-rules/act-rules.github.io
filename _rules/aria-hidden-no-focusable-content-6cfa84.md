@@ -97,13 +97,28 @@ This `input` element is not part of the [sequential focus navigation][] because 
 
 #### Passed Example 4
 
-This `a` element is part of the [sequential focus navigation][], but moves focus to the `input` element whenever it receives focus.
+This `a` element is not [focusable][] because it moves focus to the `input` element whenever it receives focus. These elements
+are sometimes referred to as 'focus sentinel' or 'bumper'. They are typically found before and after a modal / dialog in 
+order to contain focus within the modal. Page authors do not want the sentinel to be visible, nor do they want them to be read by
+a screen reader. But, they do want the element to be part of the [sequential focus navigation][]. This allows the page author
+to detect that focus has left the dialog in order to wrap it to the top/bottom as appropriate.
 
 ```html
-<div aria-hidden="true">
-	<a href="/" style="position:absolute; top:-999em" onfocus="document.querySelector('input').focus()">First link</a>
+<div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
+    <label>First and last name <input id="dialogFirst"></label><br />
+    <button id="closeButton">Close button</button>
 </div>
-<input />
+<div aria-hidden="true">
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a>
+</div>
+<script>
+    document.getElementById("sentinelAfter").addEventListener("focus", () => {
+        document.getElementById("dialogFirst").focus();
+    });
+    document.getElementById("closeButton").addEventListener("click", () => {
+        document.getElementById("sampleModal").style.display = "none";
+    });
+</script>
 ```
 
 #### Passed Example 5
@@ -167,6 +182,27 @@ This `summary` element is part of the [sequential focus navigation][].
 	<summary>Some button</summary>
 	<p>Some details</p>
 </details>
+```
+
+#### Failed Example 6
+
+This `a` element is [focusable][] because it fails to move focus when it receives focus. This is in contrast to a focus sentinel that 
+immediately jumps focus to a valid location. Focus sentinels are typically used before and after a modal dialog in order to contain 
+and wrap focus. In this case, the `focus` event was removed, but the sentinel was not.
+
+```html
+<div id="sampleModal" role="dialog" aria-label="Sample Modal" aria-modal="true" style="border: solid black 1px; padding: 1rem;">
+    <label>First and last name <input id="dialogFirst"></label><br />
+    <button id="closeButton">Close button</button>
+</div>
+<div aria-hidden="true">
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em">Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a>
+</div>
+<script>
+    document.getElementById("closeButton").addEventListener("click", () => {
+        document.getElementById("sampleModal").style.display = "none";
+    });
+</script>
 ```
 
 ### Inapplicable

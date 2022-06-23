@@ -3,7 +3,7 @@
   "website": "https://act-rules.github.io",
   "license": "https://act-rules.github.io/pages/license/",
   "description": "Accessibility conformance testing rules for HTML",
-  "count": 1131,
+  "count": 1132,
   "testcases": [
     {
       "testcaseId": "9a417788dfd68b83820b01deb71e427f8d8edc3a",
@@ -21394,8 +21394,32 @@
       }
     },
     {
-      "testcaseId": "a376cd9a2dab75096ea41cf3178cfce91e803cea",
+      "testcaseId": "5299339c3196acea1ca2091e1ecefc8678ab8e50",
       "testcaseTitle": "Failed Example 2",
+      "url": "https://act-rules.github.io/testcases/a25f45/5299339c3196acea1ca2091e1ecefc8678ab8e50.html",
+      "relativePath": "testcases/a25f45/5299339c3196acea1ca2091e1ecefc8678ab8e50.html",
+      "expected": "failed",
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "rulePage": "https://act-rules.github.io/rules/a25f45",
+      "ruleAccessibilityRequirements": {
+        "wcag20:1.3.1": {
+          "forConformance": true,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        },
+        "wcag-technique:H43": {
+          "forConformance": false,
+          "failed": "not satisfied",
+          "passed": "further testing needed",
+          "inapplicable": "further testing needed"
+        }
+      }
+    },
+    {
+      "testcaseId": "a376cd9a2dab75096ea41cf3178cfce91e803cea",
+      "testcaseTitle": "Failed Example 3",
       "url": "https://act-rules.github.io/testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
       "relativePath": "testcases/a25f45/a376cd9a2dab75096ea41cf3178cfce91e803cea.html",
       "expected": "failed",
@@ -21419,7 +21443,7 @@
     },
     {
       "testcaseId": "48a474d8339827ca31a341e784a6ebbc2b52ab10",
-      "testcaseTitle": "Failed Example 3",
+      "testcaseTitle": "Failed Example 4",
       "url": "https://act-rules.github.io/testcases/a25f45/48a474d8339827ca31a341e784a6ebbc2b52ab10.html",
       "relativePath": "testcases/a25f45/48a474d8339827ca31a341e784a6ebbc2b52ab10.html",
       "expected": "failed",

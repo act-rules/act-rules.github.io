@@ -130,7 +130,7 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 
 #### Failed Example 3
 
-The image button has a non-empty `title` attribute, but an empty `alt` attribute. This gives the button an empty [accessible name][].
+This image button has a non-empty `title` attribute, but an empty `alt` attribute. This gives the button an empty [accessible name][].
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" alt="" />

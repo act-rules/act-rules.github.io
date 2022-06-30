@@ -1,9 +1,9 @@
 ---
 id: fd3a94
-name: Links with identical accessible names and context serve equivalent purpose
+name: Links with identical accessible names and same context serve equivalent purpose
 rule_type: atomic
 description: |
-  This rule checks that links with identical accessible names and context resolve to the same or equivalent resources.
+  This rule checks that links with identical accessible names in the same context resolve to the same or equivalent resources.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true
@@ -65,6 +65,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
+
+This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
 
 ### Bibliography
 
@@ -372,7 +374,7 @@ These two `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even if the contexts have identical content, they are not the same (the same elements).
 
 ```html
 <html lang="en">
@@ -381,7 +383,7 @@ These two HTML `a` elements have the same [accessible name][] and link to the [s
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
 	</div>
 	<div>
-		You can find contact information in the
+		You can learn more in the
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
 	</div>
 </html>

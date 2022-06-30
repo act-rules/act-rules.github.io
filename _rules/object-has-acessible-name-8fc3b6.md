@@ -39,6 +39,10 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 The `object` element is not rendered for presentational purposes. If the `object` is decorative and not [marked as decorative][] then the rule might fail but the success criterion might still be satisfied.
 
+## Accessibility Support
+
+There are no major accessibility support issues known for this rule.
+
 ## Background
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.

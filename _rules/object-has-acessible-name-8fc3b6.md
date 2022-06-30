@@ -39,19 +39,17 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 The `object` element is not rendered for presentational purposes. If the `object` is decorative and not [marked as decorative][] then the rule might fail but the success criterion might still be satisfied.
 
-## Accessibility Support
+## Background
+
+Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
 Non-supported media formats make screen readers render the text content of the element instead of other attributes. 
 
 `Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
-## Background
+When the object resource is not loaded the fallback content is rendered as shown in Inapplicable Example 7.
 
-Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
-
-When the object resource is not loaded the fallback content is rendered. 
-
-Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute.
+Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute. For example,  an image will use an `alt` for the [accessible name][] but a MIME will not.
 
 ### Bibliography
 

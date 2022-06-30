@@ -16948,7 +16948,7 @@
       "relativePath": "testcases/fd3a94/89be3befb3d0c657a88470caca443612a0457f35.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -16972,7 +16972,7 @@
       "relativePath": "testcases/fd3a94/97e4e6c87174af3d4402266e106aac175c85ee87.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -16996,7 +16996,7 @@
       "relativePath": "testcases/fd3a94/c264fa7d4833ca9431912744a08c7611b9001b73.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17020,7 +17020,7 @@
       "relativePath": "testcases/fd3a94/21267b5df3a68d4812674c4737000e246de3e37e.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17044,7 +17044,7 @@
       "relativePath": "testcases/fd3a94/59502d493953f654b4f3a577e13687aca7c0918f.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17068,7 +17068,7 @@
       "relativePath": "testcases/fd3a94/78e44ead31be9523c999ce3f455e475aabbbd4bd.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17092,7 +17092,7 @@
       "relativePath": "testcases/fd3a94/aa27777ce3879e03a7a34efecbbfb643c2b7b1c8.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17116,7 +17116,7 @@
       "relativePath": "testcases/fd3a94/66ef303fa1910e500b3d6f7a6b5bf997c9ed40c2.html",
       "expected": "passed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17140,7 +17140,7 @@
       "relativePath": "testcases/fd3a94/32628c06b3d06830418d289544424b2268956cdb.html",
       "expected": "failed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17164,7 +17164,7 @@
       "relativePath": "testcases/fd3a94/49b96fff7b6caabd37e13b7c9f0e153603abbe9a.html",
       "expected": "failed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17188,7 +17188,7 @@
       "relativePath": "testcases/fd3a94/7b98642d1913388b61cc8be382d44bf203413715.html",
       "expected": "failed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17212,7 +17212,7 @@
       "relativePath": "testcases/fd3a94/2aa7c1665f9b88e2caf93c15efa910a5ef2561a4.html",
       "expected": "failed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17236,7 +17236,7 @@
       "relativePath": "testcases/fd3a94/bba222dd7808f61061be2bd00960e54060e893fa.html",
       "expected": "failed",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17260,7 +17260,7 @@
       "relativePath": "testcases/fd3a94/43d889c1206627eeb4238586dba8a814b85d0d2f.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17284,7 +17284,7 @@
       "relativePath": "testcases/fd3a94/db9dd709cf8de1e7fbb9b1aabc3332a01adbc901.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17308,7 +17308,7 @@
       "relativePath": "testcases/fd3a94/9eba56057959a6aaa7f9c608d5dccaa452919356.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17332,7 +17332,7 @@
       "relativePath": "testcases/fd3a94/8a0402b156eef4b9027b23c46f93e0a17ef52c44.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17350,13 +17350,13 @@
       }
     },
     {
-      "testcaseId": "98019796f9ef8c980f87dca022df1f223531bc78",
+      "testcaseId": "ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6",
       "testcaseTitle": "Inapplicable Example 5",
-      "url": "https://act-rules.github.io/testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
-      "relativePath": "testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
+      "url": "https://act-rules.github.io/testcases/fd3a94/ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6.html",
+      "relativePath": "testcases/fd3a94/ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {
@@ -17380,7 +17380,7 @@
       "relativePath": "testcases/fd3a94/f63a0bd36b1e7762299df130e1c3b0569b6d57ad.html",
       "expected": "inapplicable",
       "ruleId": "fd3a94",
-      "ruleName": "Links with identical accessible names and context serve equivalent purpose",
+      "ruleName": "Links with identical accessible names and same context serve equivalent purpose",
       "rulePage": "https://act-rules.github.io/rules/fd3a94",
       "ruleAccessibilityRequirements": {
         "wcag20:2.4.4": {

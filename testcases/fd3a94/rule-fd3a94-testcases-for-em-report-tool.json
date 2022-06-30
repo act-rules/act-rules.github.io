@@ -99,7 +99,7 @@
           "type": "Technology"
         }
       ],
-      "title": "Report for ACT-R Rule - Links with identical accessible names and context serve equivalent purpose",
+      "title": "Report for ACT-R Rule - Links with identical accessible names and same context serve equivalent purpose",
       "evaluationScope": {
         "type": "EvaluationScope",
         "conformanceTarget": "wai:WCAG2AA-Conformance",
@@ -110,7 +110,7 @@
             "WebSite"
           ],
           "id": "_:website",
-          "siteName": "ACT-R Rule - Links with identical accessible names and context serve equivalent purpose",
+          "siteName": "ACT-R Rule - Links with identical accessible names and same context serve equivalent purpose",
           "siteScope": "https://act-rules.github.io/testcases/fd3a94/"
         },
         "accessibilitySupportBaseline": "<< Fill out >>"
@@ -1326,9 +1326,9 @@
               "WebPage"
             ],
             "id": "_:struct_17",
-            "description": "https://act-rules.github.io/testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
-            "source": "https://act-rules.github.io/testcases/fd3a94/98019796f9ef8c980f87dca022df1f223531bc78.html",
-            "title": "98019796f9ef8c980f87dca022df1f223531bc78",
+            "description": "https://act-rules.github.io/testcases/fd3a94/ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6.html",
+            "source": "https://act-rules.github.io/testcases/fd3a94/ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6.html",
+            "title": "ab8b7042a9cf614275e8ff08f2f5d76efc6cf7d6",
             "tested": false
           },
           {

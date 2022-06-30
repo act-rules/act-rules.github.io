@@ -53,7 +53,7 @@ Non-supported media formats make screen readers render the text content of the e
 
 When the object resource is not loaded the fallback content is rendered as shown in Inapplicable Example 7.
 
-Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute. For example,  an image will use an `alt` for the [accessible name][] but a MIME will not.
+Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute. For example,  an image will use an `alt` for the [accessible name][] but an audio file will not.
 
 ### Bibliography
 

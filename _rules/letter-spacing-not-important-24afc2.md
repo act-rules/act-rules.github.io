@@ -35,7 +35,7 @@ For each test target, at least one of the following is true:
   - <dfn id="24afc2:wide-enough-cond">wide enough</dfn>: the parent of the text node has [wide enough letter spacing](#24afc2:wide-enough-def); or
   - <dfn id="24afc2:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [letter-spacing][] property which is not the one [declared][] in the `style` attribute of the target.
 
-An element has a <dfn id="24afc2:wide-enough-def">wide enough letter spacing</dfn> if the [used][] value of its [letter-spacing][] property is at least 0.12 times the computed value of its [font-size][] property.
+An element has a <dfn id="24afc2:wide-enough-def">wide enough letter spacing</dfn> if the [used][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property.
 
 ## Assumptions
 
@@ -67,7 +67,7 @@ CSS specifications define each declaration as being either [important][] (if it 
 
 #### Passed Example 1
 
-This `p` element has a [not important](#24afc2:not-important) [computed][] `letter-spacing`.
+This `p` element has a [not important][] [computed][] `letter-spacing`.
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -77,7 +77,7 @@ This `p` element has a [not important](#24afc2:not-important) [computed][] `lett
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size, which is [wide enough](#24afc2:wide-enough-cond).
+This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size, which is [wide enough][].
 
 ```html
 <p style="letter-spacing: 0.15em !important">
@@ -87,7 +87,7 @@ This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size,
 
 #### Passed Example 3
 
-This `p` element has a [computed][] [letter-spacing][] of `3px`, which is [wide enough](#24afc2:wide-enough-cond) (the threshold is `3px`).
+This `p` element has a [computed][] [letter-spacing][] of `3px`, which is [wide enough][] (the threshold is `3px`).
 
 ```html
 <style>
@@ -103,7 +103,7 @@ This `p` element has a [computed][] [letter-spacing][] of `3px`, which is [wide 
 
 #### Passed Example 4
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, and is [wide enough](#24afc2:wide-enough-cond).
+This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, and is [wide enough][].
 
 ```html
 <p style="letter-spacing: 0.1em !important; letter-spacing: 0.15em !important">
@@ -113,7 +113,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 
 #### Passed Example 5
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, and is [wide enough](#24afc2:wide-enough-cond).
+This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, and is [wide enough][].
 
 ```html
 <p style="letter-spacing: 0.15em !important; letter-spacing: 0.1em">
@@ -139,7 +139,7 @@ The [cascaded][] value of the `letter-spacing` property of this `p` element is [
 
 #### Passed Example 7
 
-The [computed][] value of the `letter-spacing` property of this `p` element is [not important](#24afc2:not-important). The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important](#24afc2:not-important).
+The [computed][] value of the `letter-spacing` property of this `p` element is [not important][]. The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important][].
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -151,7 +151,7 @@ The [computed][] value of the `letter-spacing` property of this `p` element is [
 
 #### Passed Example 8
 
-The [computed][] value of the `letter-spacing` property of this `p` element is [not important](#24afc2:not-important). The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important](#24afc2:not-important).
+The [computed][] value of the `letter-spacing` property of this `p` element is [not important][]. The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important][].
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -163,7 +163,7 @@ The [computed][] value of the `letter-spacing` property of this `p` element is [
 
 #### Passed Example 9
 
-This `div` element only has one text node descendant, and it is [wide enough](24afc2:wide-enough-cond) because its parent is the `p` element, with a `letter-spacing` of `2px`, more than `0.12` times the `font-size` of `10px`.
+This `div` element only has one text node descendant, and it is [wide enough][] because its parent is the `p` element, with a `letter-spacing` of `2px`, more than `0.12` times the `font-size` of `10px`.
 
 ```html
 <div style="font-size: 24px; letter-spacing: 2px !important">
@@ -195,7 +195,7 @@ This `div` element only has one text node descendant, and it is [empty](#24afc2:
 
 #### Passed Example 12
 
-Both this `div` and `p` elements have a single text node descendant, whose parent (the `p` element) is [wide enough](#24afc2:wide-enough-cond)
+Both this `div` and `p` elements have a single text node descendant, whose parent (the `p` element) is [wide enough][].
 
 ```html
 <div style="font-size: 24px; letter-spacing: 2px !important">
@@ -207,16 +207,16 @@ Both this `div` and `p` elements have a single text node descendant, whose paren
 
 #### Passed Example 13
 
-This `div` element has three text node descendants. The first one is [empty](#24afc2:empty); the second one is [wide enough](#24afc2:wide-enough-cond) because of the smaller `font-size` on its parent; and the last one is [wide enough](#24afc2:wide-enough-cond) because of the `letter-spacing` specified on its parent. The third `span` element has a [wide enough](#24afc2:wide-enough-cond) text node descendant.
+This `div` element has three text node descendants. The first one is [empty](#24afc2:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `letter-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
 
 ```html
 <div style="letter-spacing: 2.4px !important; font-size: 30px">
-  <!-- OK because too small but only whitespace -->
-  <span>&nbsp;</span>
-  <!-- OK because font-size has changed -->
-  <span style="font-size: 20px">Lorem</span>
-  <!-- OK because letter-spacing has changed -->
-  <span style="letter-spacing: 3.6px !important">ipsum</span>
+	<!-- OK because too small but only whitespace -->
+	<span>&nbsp;</span>
+	<!-- OK because font-size has changed -->
+	<span style="font-size: 20px">Lorem</span>
+	<!-- OK because letter-spacing has changed -->
+	<span style="letter-spacing: 3.6px !important">ipsum</span>
 </div>
 ```
 
@@ -321,6 +321,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
 [letter-spacing]: https://www.w3.org/TR/css-text-3/#propdef-letter-spacing 'CSS Text Module Level 3 - Tracking: the letter-spacing property'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
+[not important]: #24afc2:not-important 'The Not Important condition'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
@@ -329,3 +330,4 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of whitespace'
+[wide enough]: #24afc2:wide-enough-cond 'The Wide Enough condition'

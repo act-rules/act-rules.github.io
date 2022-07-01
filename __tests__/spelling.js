@@ -29,7 +29,6 @@ describe('Validate body for spelling mistakes', () => {
 	 * Rule markdown files under `_rules`
 	 */
 	describeRule('spellcheck rules', ruleData => {
-
 		const { frontmatter = {}, body } = ruleData
 		const { name = ``, description = `` } = frontmatter
 		const text = getCuratedMarkdownBody(body)

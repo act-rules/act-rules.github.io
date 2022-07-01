@@ -29,6 +29,7 @@ describe('Validate body for spelling mistakes', () => {
 	 * Rule markdown files under `_rules`
 	 */
 	describeRule('spellcheck rules', ruleData => {
+
 		const { frontmatter = {}, body } = ruleData
 		const { name = ``, description = `` } = frontmatter
 		const text = getCuratedMarkdownBody(body)
@@ -91,14 +92,26 @@ const checkSpelling = text => {
  * @param {String} body body of markdown
  * @param {Object} options options
  * @property {Boolean} options.stripCodeBlocks boolean denoting if code blocks should be removed from content
+ * @property {Boolean} options.stripRefNames boolean denoting if names and URLs in the references list should be removed
  * @returns {String}
  */
 function getCuratedMarkdownBody(body, options = {}) {
-	const { stripCodeBlocks = true } = options
+	// A better approach would be to look into the markdown AST rather than the full body, and only spellcheck blocks
+	// of the correct types (paragraphs, headings, titles of links, …)
+	const { stripCodeBlocks = true, stripRefNamesAndURLs = true } = options
 
 	if (stripCodeBlocks) {
 		const codeBlocks = gfmCodeBlocks(body)
 		body = codeBlocks.reduce((out, { block }) => out.replace(block, ''), body)
+	}
+
+	if (stripRefNamesAndURLs) {
+		// Start of line, Opening [, no ] (repeated), closing ], /[[][^\]]*]: [^ ]*/ => matches "[name]: url"
+		// => the leftover bit is the title, which should be spellchecked.
+		// The name is only spellchecked if it appears in text, which is OK.
+		// 'm' flag checks in multiline mode, aka each line is matched separately.
+		const refListRegex = /^\[[^\]]*]: [^ ]*/gm
+		body = body.replace(refListRegex, "")
 	}
 
 	return removeMd(body)

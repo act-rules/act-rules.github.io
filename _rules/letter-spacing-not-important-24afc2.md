@@ -175,7 +175,7 @@ This `div` element only has one text node descendant, and it is [wide enough][] 
 
 #### Passed Example 10
 
-This `div` element has no text node descendant and therefore matches the [spaced text](#24afc2:spaced-text).
+This `div` element has no text node descendant and therefore matches the [spaced text](#24afc2:spaced-text) condition.
 
 ```html
 <div style="letter-spacing: 1px !important; border-top: 1px solid black;">

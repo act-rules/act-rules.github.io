@@ -54,7 +54,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][] results in _time_ being 0 or greater than 72000 (20 hours).
+For each target, the _time_ from the content [attribute value][] is between 0 and 72000 (20 hours). To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
 ## Assumptions
 

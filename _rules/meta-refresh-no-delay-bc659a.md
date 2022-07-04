@@ -95,7 +95,7 @@ This page redirects to a new page immediately.
 
 #### Passed Example 2
 
-First valid `meta` element on the page redirects to a new page immediately.
+First valid `meta` element on this page redirects to a new page immediately.
 
 ```html
 <head>
@@ -131,7 +131,7 @@ This page refreshes after 30 seconds.
 
 #### Failed Example 2
 
-The page redirects to a new page after 30 seconds.
+This page redirects to a new page after 30 seconds.
 
 ```html
 <head>
@@ -144,7 +144,7 @@ The page redirects to a new page after 30 seconds.
 
 #### Failed Example 3
 
-The first `meta` element on the page is not valid because it uses colon (":") rather than semicolon (";"). The second `meta` element redirects to a new page after 5 seconds.
+The first `meta` element on this page is not valid because it uses colon (":") rather than semicolon (";"). The second `meta` element redirects to a new page after 5 seconds.
 
 ```html
 <head>

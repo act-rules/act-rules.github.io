@@ -95,7 +95,7 @@ This page redirects to a new page immediately.
 
 #### Passed Example 2
 
-First valid `meta` element on this page redirects to a new page immediately.
+The first valid `meta` element on this page redirects to a new page immediately.
 
 ```html
 <head>

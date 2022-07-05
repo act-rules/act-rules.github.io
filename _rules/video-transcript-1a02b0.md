@@ -1,6 +1,6 @@
 ---
 id: 1a02b0
-name: 'Audio and visuals of `video` element have transcript'
+name: Audio and visuals of video element have transcript
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -41,7 +41,7 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-A text transcript containing all the visual and auditory information of the test target is available, either on the page or available through a link.
+The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -146,4 +146,5 @@ A video element that is not [visible][].
 </html>
 ```
 
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'

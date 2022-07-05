@@ -1,6 +1,6 @@
 ---
 id: cae760
-name: '`iframe` element has non-empty accessible name'
+name: Iframe element has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each `iframe` element has a non-empty accessible name.

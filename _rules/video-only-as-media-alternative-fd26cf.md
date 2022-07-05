@@ -1,6 +1,6 @@
 ---
 id: fd26cf
-name: '`video` element visual-only content is media alternative for text'
+name: Video element visual-only content is media alternative for text
 rule_type: atomic
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
@@ -30,11 +30,8 @@ All the information contained in each target element is available as text (direc
 
 ## Expectation 2
 
-Each target element is labeled as a video alternative for text on the page.
+Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-## Expectation 3
-
-The label (from expectation 2) is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 

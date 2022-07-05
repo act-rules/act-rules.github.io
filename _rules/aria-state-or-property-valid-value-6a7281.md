@@ -6,7 +6,7 @@ description: |
   This rule checks that each ARIA state or property has a valid value type.
 accessibility_requirements:
   aria12:propcharacteristic_value:
-    title: ARIA 1.1, 6.2.4 Value (Characteristics of States and Properties)
+    title: ARIA 1.2, 6.2.4 Value (Characteristics of States and Properties)
     forConformance: true
     failed: not satisfied
     passed: satisfied

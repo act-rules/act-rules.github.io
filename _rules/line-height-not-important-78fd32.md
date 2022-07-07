@@ -23,15 +23,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with [visible][] text that includes a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break) and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
+This rule applies to any [HTML element][] with [visible][] text that includes a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break) and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
 
 ## Expectation
 
 For each test target, at least one of the following is true:
 
-- **not important**: the [computed][] value of its [line-height][] property is not [important][]; or
-- **large enough**: the [used][] value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property; or
-- **cascade**: the [cascaded][] value of its [line-height][] property is not a value [declared][] in its `style` attribute.
+- <dfn id="78fd32:not-important">not important</dfn>: the [computed][] value of its [line-height][] property is not [important][]; or
+- <dfn id="78fd32:spaced-text">spaced text</dfn>: for each text node descendant of this target, one of the following is true:
+  - <dfn id="78fd32:empty">empty</dfn>: the text node is only [whitespace][]; or
+  - <dfn id="78fd32:large-enough-cond">large enough</dfn>: the parent of the text node has [large enough line height](#78fd32:large-enough-def); or
+  - <dfn id="78fd32:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [line-height][] property which is not the one [declared][] in the `style` attribute of the target.
+
+An element has a <dfn id="78fd32:large-enough-def">large enough line height</dfn> if the [used][] value of its [line-height][] property is at least 1.5 times the [computed][] value of its [font-size][] property.
 
 ## Assumptions
 
@@ -65,7 +69,7 @@ This rule evaluates the [used][] value of the [line-height][] property instead o
 
 #### Passed Example 1
 
-This `p` element has a **not [important][]** [computed][] `line-height`.
+This `p` element has a [not important][] [computed][] `line-height`.
 
 ```html
 <p style="line-height: 1.2em; max-width: 200px;">
@@ -75,7 +79,7 @@ This `p` element has a **not [important][]** [computed][] `line-height`.
 
 #### Passed Example 2
 
-This `p` element has a [used][] `line-height` of twice the font size, which is **large enough**.
+This `p` element has a [used][] `line-height` of twice the font size, which is [large enough][].
 
 ```html
 <p style="line-height: 2em !important; max-width: 200px;">
@@ -85,7 +89,7 @@ This `p` element has a [used][] `line-height` of twice the font size, which is *
 
 #### Passed Example 3
 
-This `p` element has a [used][] `line-height` of `30px`, which is **large enough** (the threshold is `30px`).
+This `p` element has a [used][] `line-height` of `30px`, which is [large enough][] (the threshold is `30px`).
 
 ```html
 <style>
@@ -101,7 +105,7 @@ This `p` element has a [used][] `line-height` of `30px`, which is **large enough
 
 #### Passed Example 4
 
-This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which is **large enough**.
+This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which is [large enough][].
 
 ```html
 <style>
@@ -117,7 +121,7 @@ This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which
 
 #### Passed Example 5
 
-This `p` element has a [used][] `line-height` of `1.6` which is **large enough**.
+This `p` element has a [used][] `line-height` of `1.6` which is [large enough][].
 
 ```html
 <p style="line-height: 1.6 !important; max-width: 200px;">
@@ -127,7 +131,7 @@ This `p` element has a [used][] `line-height` of `1.6` which is **large enough**
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, which is **large enough**.
+This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, which is [large enough][].
 
 ```html
 <p style="line-height: 1em !important; line-height: 2em !important; max-width: 200px;">
@@ -137,7 +141,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 7
 
-This `p` element has two [declared][] values for its `line-height` property. The one which is [important][] wins the [cascade sort][]. It has a value of `2em`, which is **large enough**.
+This `p` element has two [declared][] values for its `line-height` property. The one which is [important][] wins the [cascade sort][]. It has a value of `2em`, which is [large enough][].
 
 ```html
 <p style="line-height: 2em !important; line-height: 1em; max-width: 200px;">
@@ -147,7 +151,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 8
 
-The [cascaded][] value of the `line-height` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the **cascade** condition.
+The [cascaded][] value of the `line-height` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade](#78fd32:cascade) condition.
 
 ```html
 <style>
@@ -163,7 +167,7 @@ The [cascaded][] value of the `line-height` property of this `p` element is [dec
 
 #### Passed Example 9
 
-The [computed][] value of the `line-height` property of this `p` element is **not [important][]**. The [computed][] value of the `line-height` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
+The [computed][] value of the `line-height` property of this `p` element is [not important][]. The [computed][] value of the `line-height` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important][].
 
 ```html
 <p style="line-height: 1.2em">
@@ -182,6 +186,61 @@ The [computed][] value of the `line-height` property of this `p` element is **no
 	<span style="line-height: unset !important; display: block; max-width: 200px;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
+</p>
+```
+
+#### Passed Example 11
+
+This `p` element only has one text node descendant, and it is [large enough][] because its parent is the `span` element, with a `line-height` of `24px`, more than `1.5` times the `font-size` of `16px`.
+
+```html
+<p style="font-size: 24px; line-height: 24px !important;  max-width: 200px;">
+	<span style="font-size: 16px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
+#### Passed Example 12
+
+This `p` has three text nodes descendants. The first and third are [large enough][]. The second one is [empty](#78fd32:empty)
+
+```html
+<p style="font-size: 24px; line-height: 24px !important;  max-width: 200px;">
+	<span style="font-size: 16px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+	<span>&nbsp;</span>
+	<span style="font-size: 16px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
+#### Passed Example 13
+
+Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [large enough][].
+
+```html
+<p style="font-size: 16px; line-height: 16px !important; max-width: 200px">
+	<span style="line-height: 24px !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
+#### Passed Example 14
+
+This `div` element has three text node descendants. The first one is [empty](#78fd32:empty); the second one is [large enough][] because of the smaller `font-size` on its parent; and the last one is [large enough][] because of the `letter-spacing` specified on its parent. The third `span` element has a [large enough][] text node descendant.
+
+```html
+<p style="line-height: 24px !important; font-size: 24px; max-width: 200px">
+	<!-- OK because too small but only whitespace -->
+	<span>&nbsp;</span>
+	<!-- OK because font-size has changed -->
+	<span style="font-size: 16px">The toy brought back fond memories of being lost in the rain forest.</span>
+	<!-- OK because letter-spacing has changed -->
+	<span style="letter-spacing: 36px !important">The toy brought back fond memories of being lost in the rain forest.</span>
 </p>
 ```
 
@@ -319,13 +378,17 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [declared]: https://www.w3.org/TR/css-cascade-4/#declared 'CSS Cascading and Inheritance Level 4 (Working draft) - Declared Values'
 [font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
+[html element]: #namespaced-element
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
+[large enough]: #78fd32:large-enough-cond 'The Large Enough condition'
 [line-height]: https://drafts.csswg.org/css2/visudet.html#propdef-line-height 'CSS Visual formatting model details - line-height property'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
+[not important]: #78fd32:not-important 'The Not Important condition'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
+[whitespace]: #whitespace 'Definition of whitespace'

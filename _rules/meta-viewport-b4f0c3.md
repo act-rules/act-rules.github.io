@@ -1,6 +1,6 @@
 ---
 id: b4f0c3
-name: '`meta` `viewport` allows for zoom'
+name: Meta viewport allows for zoom
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.
@@ -22,11 +22,14 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport`.
+This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport` for which at least one of the following is true:
+
+- the `content` [attribute value][] has the `user-scalable` property; or
+- the `content` [attribute value][] has the `maximum-scale` property.
 
 ## Expectation 1
 
-For each test target, the [attribute value][] does hot have a `user-scalable` property with a value of `no`.
+For each test target, the [attribute value][] does not have a `user-scalable` property with a value of `no`.
 
 ## Expectation 2
 
@@ -61,24 +64,6 @@ This rule is designed specifically for [1.4.4 Resize text][sc144], which require
 
 #### Passed Example 1
 
-This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="width=device-width" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 2
-
 This viewport `meta` element does not prevent user scaling because it has `user-scalable` set to `yes`.
 
 ```html
@@ -95,43 +80,25 @@ This viewport `meta` element does not prevent user scaling because it has `user-
 </html>
 ```
 
+#### Passed Example 2
+
+This viewport `meta` element allows users to scale content up to 200% because it has `maximum-scale` set to 2.0.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="maximum-scale=2.0" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
 #### Passed Example 3
-
-This viewport `meta` element allows users to scale content up to 600% because it has `maximum-scale` set to 6.0.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="maximum-scale=6.0" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
-This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 5
 
 This viewport `meta` element does not prevent user scaling because it has `maximum-scale` set to -1 which results in this value being dropped.
 
@@ -252,6 +219,42 @@ This viewport `meta` element does not have a `content` attribute.
 	<head>
 		<title>Simple page showing random text</title>
 		<meta name="viewport" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 3
+
+This viewport `meta` element does not specify the `maximum-scale` nor `user-scalable` values.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="width=device-width" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` nor `user-scalable` values.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="" />
 	</head>
 	<body>
 		<p>

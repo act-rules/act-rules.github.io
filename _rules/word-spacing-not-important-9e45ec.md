@@ -163,61 +163,61 @@ The [computed][] value of the `word-spacing` property of this `p` element is [no
 
 #### Passed Example 9
 
-This `div` element only has one text node descendant, and it is [wide enough][] because its parent is the `p` element, with a `word-spacing` of `2px`, more than `0.16` times the `font-size` of `10px`.
+This `p` element only has one text node descendant, and it is [wide enough][] because its parent is the `span` element, with a `word-spacing` of `2px`, more than `0.16` times the `font-size` of `10px`.
 
 ```html
-<div style="font-size: 24px; word-spacing: 2px !important">
-	<p style="font-size: 10px;">
+<p style="font-size: 24px; word-spacing: 2px !important">
+	<span style="font-size: 10px;">
 		The toy brought back fond memories of being lost in the rain forest.
-	</p>
-</div>
+	</span>
+</p>
 ```
 
 #### Passed Example 10
 
-This `div` element has no text node descendant and therefore matches the [spaced text](#9e45ec:spaced-text) condition.
+This `p` element has no text node descendant and therefore matches the [spaced text](#9e45ec:spaced-text) condition.
 
 ```html
-<div style="letter-spacing: 1px !important; border-top: 1px solid black;">
+<p style="letter-spacing: 1px !important; border-top: 1px solid black;">
 	<!-- empty div, border to make it "visible" -->
-</div>
+</p>
 ```
 
 #### Passed Example 11
 
-This `div` element only has one text node descendant, and it is [empty](#9e45ec:empty).
+This `p` element only has one text node descendant, and it is [empty](#9e45ec:empty).
 
 ```html
-<div style="word-spacing: 1px !important; border-top: 1px solid black;">
+<p style="word-spacing: 1px !important; border-top: 1px solid black;">
 	&nbsp:<!-- empty div, border to make it "visible" -->
-</div>
+</p>
 ```
 
 #### Passed Example 12
 
-Both this `div` and `p` elements have a single text node descendant, whose parent (the `p` element) is [wide enough][].
+Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [wide enough][].
 
 ```html
-<div style="font-size: 24px; word-spacing: 2px !important">
-	<p style="word-spacing: 4px !important;">
+<p style="font-size: 24px; word-spacing: 2px !important">
+	<span style="word-spacing: 4px !important;">
 		The toy brought back fond memories of being lost in the rain forest.
-	</p>
-</div>
+	</span>
+</p>
 ```
 
 #### Passed Example 13
 
-This `div` element has three text node descendants. The first one is [empty](#9e45ec:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `word-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
+This `p` element has three text node descendants. The first one is [empty](#9e45ec:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `word-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
 
 ```html
-<div style="word-spacing: 4px !important; font-size: 30px">
+<p style="word-spacing: 4px !important; font-size: 30px">
   <!-- OK because too small but only whitespace -->
   <span>&nbsp;</span>
   <!-- OK because font-size has changed -->
   <span style="font-size: 20px">Lorem</span>
   <!-- OK because letter-spacing has changed -->
   <span style="word-spacing: 5px !important">ipsum</span>
-</div>
+</p>
 ```
 
 ### Failed

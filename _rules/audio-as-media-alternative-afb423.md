@@ -25,9 +25,7 @@ acknowledgments:
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible][] and [included in the accessibility tree][].
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 1
 
@@ -35,9 +33,8 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labeled as an audio alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-**Note:** The term label does not refer to the `label` element.
 
 ## Assumptions
 
@@ -191,4 +188,5 @@ This `audio` element describes some of the text on the same page. The text on th
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

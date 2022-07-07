@@ -29,9 +29,13 @@ This rule applies to any [HTML element][] that is [visible][] and for which the 
 
 For each test target, at least one of the following is true:
 
-- **not important**: the [computed][] value of its [word-spacing][] property is not [important][]; or
-- **wide enough**: the [computed][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property; or
-- **cascade**: the [cascaded][] value of its [word-spacing][] property is not a value [declared][] in its `style` attribute.
+- <df id="9e45ec:not-important">not important</dfn>: the [computed][] value of its [word-spacing][] property is not [important][]; or
+- - <dfn id="9e45ec:spaced-text">spaced text</dfn>: for each text node descendant of this target, one of the following is true:
+    - <dfn id="9e45ec:empty">empty</dfn>: the text node is only [whitespace][]; or
+    - <dfn id="9e45ec:wide-enough-cond">wide enough</dfn>: the parent of the text node has [wide enough word spacing](#9e45ec:wide-enough-def); or
+    - <dfn id="9e45ec:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [word-spacing][] property which is not the one [declared][] in the `style` attribute of the target.
+
+An element has a <dfn id="9e45ec:wide-enough-def">wide enough word spacing</dfn> if the [used][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property.
 
 ## Assumptions
 
@@ -63,7 +67,7 @@ CSS specifications define each declaration as being either [important][] (if is 
 
 #### Passed Example 1
 
-This `p` element has a **not [important][]** [computed][] `word-spacing`.
+This `p` element has a [not important][] [computed][] `word-spacing`.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -73,7 +77,7 @@ This `p` element has a **not [important][]** [computed][] `word-spacing`.
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, which is **wide enough**.
+This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, which is [wide enough][].
 
 ```html
 <p style="word-spacing: 0.2em !important">
@@ -83,7 +87,7 @@ This `p` element has a [computed][] `word-spacing` of 0.2 times the font size, w
 
 #### Passed Example 3
 
-This `p` element has a [computed][] `word-spacing` of `4px`, which is **wide enough** (the threshold is `4px`).
+This `p` element has a [computed][] `word-spacing` of `4px`, which is [wide enough][] (the threshold is `4px`).
 
 ```html
 <style>
@@ -99,7 +103,7 @@ This `p` element has a [computed][] `word-spacing` of `4px`, which is **wide eno
 
 #### Passed Example 4
 
-This `p` element has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is **wide enough**.
+This `p` element has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is [wide enough][].
 
 ```html
 <p style="word-spacing: 0.1em !important; word-spacing: 0.2em !important">
@@ -109,7 +113,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 5
 
-This `p` element has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is **wide enough**.
+This `p` element has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is [wide enough][].
 
 ```html
 <p style="word-spacing: 0.2em !important; word-spacing: 0.1em">
@@ -119,7 +123,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 6
 
-The [cascaded][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the **cascade** condition.
+The [cascaded][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade](#9e45ec:cascade) condition.
 
 ```html
 <style>
@@ -135,7 +139,7 @@ The [cascaded][] value of the `word-spacing` property of this `p` element is [de
 
 #### Passed Example 7
 
-The [computed][] value of the `word-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
+The [computed][] value of the `word-spacing` property of this `p` element is [not important][]. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important][].
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -147,7 +151,7 @@ The [computed][] value of the `word-spacing` property of this `p` element is **n
 
 #### Passed Example 8
 
-The [computed][] value of the `word-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
+The [computed][] value of the `word-spacing` property of this `p` element is [not important][]. The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also [not important][].
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -155,6 +159,65 @@ The [computed][] value of the `word-spacing` property of this `p` element is **n
 		The toy brought back fond memories of being lost in the rain forest.
 	</span>
 </p>
+```
+
+#### Passed Example 9
+
+This `div` element only has one text node descendant, and it is [wide enough][] because its parent is the `p` element, with a `word-spacing` of `2px`, more than `0.16` times the `font-size` of `10px`.
+
+```html
+<div style="font-size: 24px; word-spacing: 2px !important">
+	<p style="font-size: 10px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</p>
+</div>
+```
+
+#### Passed Example 10
+
+This `div` element has no text node descendant and therefore matches the [spaced text](#9e45ec:spaced-text) condition.
+
+```html
+<div style="letter-spacing: 1px !important; border-top: 1px solid black;">
+	<!-- empty div, border to make it "visible" -->
+</div>
+```
+
+#### Passed Example 11
+
+This `div` element only has one text node descendant, and it is [empty](#9e45ec:empty).
+
+```html
+<div style="word-spacing: 1px !important; border-top: 1px solid black;">
+	&nbsp:<!-- empty div, border to make it "visible" -->
+</div>
+```
+
+#### Passed Example 12
+
+Both this `div` and `p` elements have a single text node descendant, whose parent (the `p` element) is [wide enough][].
+
+```html
+<div style="font-size: 24px; word-spacing: 2px !important">
+	<p style="word-spacing: 4px !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</p>
+</div>
+```
+
+#### Passed Example 13
+
+This `div` element has three text node descendants. The first one is [empty](#9e45ec:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `word-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
+
+```html
+<div style="word-spacing: 4px !important; font-size: 30px">
+  <!-- OK because too small but only whitespace -->
+  <span>&nbsp;</span>
+  <!-- OK because font-size has changed -->
+  <span style="font-size: 20px">Lorem</span>
+  <!-- OK because letter-spacing has changed -->
+  <span style="word-spacing: 5px !important">ipsum</span>
+</div>
 ```
 
 ### Failed
@@ -253,14 +316,18 @@ The `style` attribute of this `p` element does not [declare][declared] the `word
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [declared]: https://www.w3.org/TR/css-cascade-4/#declared 'CSS Cascading and Inheritance Level 4 (Working draft) - Declared Values'
 [font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
+[html element]: #namespaced-element
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
+[not important]: #9e45ec:not-important 'The Not Important condition'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
+[used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
 [word-spacing]: https://www.w3.org/TR/css-text-3/#word-spacing-property 'CSS Text Module Level 3 - Word Spacing: the word-spacing property'
-[html element]: #namespaced-element
+[whitespace]: #whitespace 'Definition of whitespace'
+[wide enough]: #9e45ec:wide-enough-cond 'The Wide Enough condition'

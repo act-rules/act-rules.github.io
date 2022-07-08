@@ -41,10 +41,10 @@ For the test target, the expectation is that :
 
 ## Exceptions 
 
-For each test target, at least one of the following exceptions is true:
+For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
 
 - **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
+- **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the visible part of the image or
 - **decoration**: the [embedded image][] the test target belongs to is [purely decorative][].
 
 ## Assumptions

@@ -56,9 +56,12 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
-An image button with non-empty `title` attribute but empty `alt` attribute results in a button with an empty accessible name on many browsers. There is a known popular browser that uses the `title` attribute as fallback even with empty `alt`, resulting in a button with `title` attribute value as accessible name. 
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some AU/AT stop at the first existing one, even if empty.
 
 ## Background
+
+Empty `alt` does not provide a "usable string" for `input` element with a `type` [attribute value][] of `image`.
+Therefore, contrarily to images, empty `alt` does not make image button decorative. Image buttons have a button role and therefore are exposed as interactive elements.
 
 ### Related rules
 
@@ -110,6 +113,14 @@ The image button has an [accessible name][] through the `aria-labelledby` attrib
 <div id="id1">Search</div>
 ```
 
+#### Passed Example 5
+
+This image button has an empty `alt` attribute, but a non-empty `title` attribute. This gives the button an non-empty [accessible name][] through the `title` attribute.
+
+```html
+<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" alt="" />
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -126,14 +137,6 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" alt="" />
-```
-
-#### Failed Example 3
-
-This image button has a non-empty `title` attribute, but an empty `alt` attribute. This gives the button an empty [accessible name][].
-
-```html
-<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" alt="" />
 ```
 
 #### Failed Example 4

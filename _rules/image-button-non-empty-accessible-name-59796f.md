@@ -139,7 +139,7 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 <input type="image" src="/test-assets/shared/search-icon.svg" alt="" />
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button the default [accessible name][] of "Submit Query".
 

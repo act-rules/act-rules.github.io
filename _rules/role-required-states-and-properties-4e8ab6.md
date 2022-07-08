@@ -222,6 +222,6 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in The Accessibility Tree'
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
 [wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.2/#implictValueForRole
-[wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [html or svg element]: #namespaced-element
+[focusable]: #focusable

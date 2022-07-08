@@ -89,7 +89,7 @@ This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`
 <main id="content"></main>
 ```
 
-### Passed Example 4
+#### Passed Example 4
 
 These `option` nodes do not need the required `aria-selected` property because it has a default value of `false`.
 
@@ -101,7 +101,7 @@ These `option` nodes do not need the required `aria-selected` property because i
 </ul>
 ```
 
-### Passed Example 5
+#### Passed Example 5
 
 This `separator` is not a `widget` because it is not [focusable][]. The `separator` role only requires the `aria-valuenow` property when the element is focusable.
 

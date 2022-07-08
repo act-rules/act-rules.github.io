@@ -180,7 +180,7 @@ This `combobox` does not have the required `aria-expanded` property. Prior to [W
 
 #### Failed Example 6
 
-This `combobox` uses `aria-owns` where it should use `aria-controls` property. This property is required as of [WAI-ARIA 1.1][].
+This `combobox` uses `aria-owns` instead of using the required `aria-controls` property.
 
 ```html
 <label for="tag_combo">Tag</label>

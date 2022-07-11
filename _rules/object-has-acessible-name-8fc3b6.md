@@ -51,7 +51,7 @@ Non-supported media formats make screen readers render the text content of the e
 
 `Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
-When the object resource is not loaded the fallback content is rendered as shown in Inapplicable Example 7.
+When the object resource is not loaded the fallback content is rendered as shown in the Inapplicable Example: `This 'object' element does not need an accessible name because it loads no image, audio, or video.`.
 
 Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute. For example,  an image will use an `alt` for the [accessible name][] but an audio file will not.
 
@@ -205,7 +205,7 @@ There is no `object` element.
 This `object` element does not need an accessible name because it loads no image, audio, or video. Instead the `img` element inside the `object` is rendered.
 
 ```html
-<object>
+<object data="/invalid/url/index.html">
 	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 </object>
 ```

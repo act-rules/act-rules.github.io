@@ -44,7 +44,7 @@ For each test target, one of the following is true:
 
 ## Expectation 2
 
-Each test target is not prohibited on the role of the element on which it is specified.
+Each test target is not [prohibited](https://www.w3.org/TR/wai-aria-1.2/#state_property_processing) on the role of the element on which it is specified.
 
 ## Assumptions
 

@@ -53,7 +53,7 @@ Non-supported media formats make screen readers render the text content of the e
 
 When the object resource is not loaded the fallback content is rendered as shown in the Inapplicable Example: `This 'object' element does not need an accessible name because it loads no image, audio, or video.`.
 
-Valid `data` attributes define the `object` [accessible name][] that is announced by the screen reader.  The [accessible name][] is defined depending on the type of the `data` attribute. For example,  an image will use an `alt` for the [accessible name][] but an audio file will not.
+The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not.
 
 ### Bibliography
 

@@ -30,7 +30,7 @@ acknowledgments:
 
 This rule applies to any `iframe` element that [contains](#akn7bn:contain) elements that are both [visible][] and part of the [sequential focus navigation][].
 
-An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. The elements (inside the iframe) are part of the [flattened tabindex-ordered focus navigation scope].
 
 ## Expectation
 
@@ -63,14 +63,6 @@ This `iframe` element contains a link that is not part of [sequential focus navi
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
-```
-
-#### Passed Example 2
-
-This `iframe` element contains no [visible][] content because of the small size of the iframe.
-
-```html
-<iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 ### Failed
@@ -109,6 +101,14 @@ This `iframe` element contains no [visible][] content because the iframe is hidd
 <iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
+#### Inapplicable Example 4
+
+This `iframe` element contains no [visible][] content because of the small size of the iframe.
+
+```html
+<iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
@@ -116,3 +116,4 @@ This `iframe` element contains no [visible][] content because the iframe is hidd
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [visible]: #visible 'Definition of visible'
+[flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML Living Standard, 2022/07/08'

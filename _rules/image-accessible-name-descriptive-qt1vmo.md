@@ -295,7 +295,7 @@ This is a `div` element with a background image. Background images must be teste
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit semantic role]: #explicit-semantic-role
+[explicit semantic role]: #explicit-role
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG 2.1 definition of non-text content'

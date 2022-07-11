@@ -34,7 +34,7 @@ acknowledgments:
 
 This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
-## Expectation
+## Expectation 1
 
 For each test target, one of the following is true:
 
@@ -42,7 +42,9 @@ For each test target, one of the following is true:
 - **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
-For each test target there are no prohibited attributes for the target's role.
+## Expectation 2
+
+Each test target is not prohibited on the role of the element on which it is specified.
 
 ## Assumptions
 

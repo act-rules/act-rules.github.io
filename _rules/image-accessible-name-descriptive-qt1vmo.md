@@ -58,7 +58,7 @@ This rule assumes that the language of the [accessible name][] of each test targ
 
 ## Accessibility Support
 
-Some popular browser / screen reader combinations do not pronounce the accessible names of `svgs` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
+Some popular browser / screen reader combinations do not pronounce the accessible names of `svg` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
 
 ## Background
 

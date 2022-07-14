@@ -29,7 +29,7 @@ acknowledgments:
 This rule applies to any `object` element for which all the following are true:
 
 - The `object` element is [included in the accessibility tree][]; and
-- The `object` element embeds a resource whose MIME type is either [image](https://mimesniff.spec.whatwg.org/#image-mime-type)), or [audio or video](https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type).
+- The `object` element embeds a resource whose MIME type is either [image](https://mimesniff.spec.whatwg.org/#image-mime-type), or [audio or video](https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type).
 
 ## Expectation
 

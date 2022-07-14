@@ -32,7 +32,9 @@ This rule applies to any `iframe` element that [contains](#akn7bn:contain) at le
 - the element is [visible][]; and
 - the element is part of the [flattened tabindex-ordered focus navigation scope][] of the `iframe`.
 
-An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. The elements (inside the iframe) are part of the [flattened tabindex-ordered focus navigation scope].
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. 
+
+The [flattened tabindex-ordered focus navigation scope][] of an `iframe` is essentially the [sequential focus navigation][] order inside its content.
 
 ## Expectation
 

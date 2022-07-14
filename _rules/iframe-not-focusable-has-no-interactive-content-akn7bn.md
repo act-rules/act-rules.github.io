@@ -28,7 +28,9 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that [contains](#akn7bn:contain) elements that are both [visible][] and part of the [sequential focus navigation][].
+This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
+- the element is [visible][]; and
+- the element is part of the [flattened tabindex-ordered focus navigation scope][] of the `iframe`.
 
 An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. The elements (inside the iframe) are part of the [flattened tabindex-ordered focus navigation scope].
 

@@ -69,7 +69,7 @@ This `iframe` element contains a link that is not part of [sequential focus navi
 
 #### Failed Example 1
 
-This `iframe` element has a link that is part of [sequential focus navigation][].
+This `iframe` element contains a [visible][] link that is part of its [flattened tabindex-ordered focus navigation scope][]. Note that the link is not part of the document's [sequential focus navigation][] because the containing `iframe` is excluded from the document's [tabindex-ordered focus navigation scope](https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope) due to its negative `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>

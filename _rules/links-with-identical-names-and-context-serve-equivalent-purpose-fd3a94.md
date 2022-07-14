@@ -1,9 +1,9 @@
 ---
 id: fd3a94
-name: Links with identical accessible names and context serve equivalent purpose
+name: Links with identical accessible names and same context serve equivalent purpose
 rule_type: atomic
 description: |
-  This rule checks that links with identical accessible names and context resolve to the same or equivalent resources.
+  This rule checks that links with identical accessible names in the same context resolve to the same or equivalent resources.
 accessibility_requirements:
   wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true
@@ -55,7 +55,6 @@ When followed, the links in each set of target elements resolve to the [same res
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] and [context][programmatically determined link context] would not be ambiguous to users in general, which is the exception mentioned in [Success Criterion 2.4.4 Link Purpose (In Context)][sc244]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 - This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name and context but resolve to different resources without failing [Success Criterion 2.4.4 Link Purpose (In Context)][sc244] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Accessibility Support
@@ -65,6 +64,8 @@ _There are no major accessibility support issues known for this rule._
 ## Background
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
+
+This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
 
 ### Bibliography
 
@@ -95,12 +96,12 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">About us</a
 		>) and get in touch (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect.html"
 			>About us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -233,14 +234,14 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
-	<p>
+	<div>
 		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
 			>Contact us</a
 		>) and get in touch (
 		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
 			>Contact us</a
 		>)
-	</p>
+	</div>
 </html>
 ```
 
@@ -368,6 +369,32 @@ These two `span` elements do not have a [semantic role][] of link.
 		>)
 	</p>
 </html>
+```
+
+#### Inapplicable Example 5
+
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even if the contexts have identical content, they are not the same (the same elements).
+
+```html
+<html lang="en">
+	<div>
+		You can learn more in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
+	<div>
+		You can learn more in the
+		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact us</a> page.
+	</div>
+</html>
+```
+
+#### Inapplicable Example 6
+
+These two HTML `a` elements have the same [accessible name][] but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
+
+```html
+<div><a href="https://www.w3.org/WAI/">Read more</a> about the W3C WAI</div>
+<div><a href="https://www.w3.org/International/">Read more</a> about the W3C internationalization</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

@@ -48,7 +48,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
-This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule.
+This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
 
 ### Bibliography
 

@@ -83,7 +83,7 @@ This `iframe` element contains a [visible][] link that is part of its [flattened
 
 #### Inapplicable Example 1
 
-This `iframe` element contains no content that is part of [sequential focus navigation][].
+This `iframe` element contains no content that is part of its [flattened tabindex-ordered focus navigation scope][].
 
 ```html
 <iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>

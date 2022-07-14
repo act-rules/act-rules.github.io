@@ -45,7 +45,7 @@ describeRule('testcases', ruleData => {
 		 */
 		htmlHintIgnore.forEach(ignoreRule => (rules[ignoreRule] = false))
 
-		const errors = htmlHint.default.verify(snippet, rules)
+		const errors = htmlHint.HTMLHint.verify(snippet, rules)
 
 		if (errors.length) {
 			console.log(`Rule Name: ${name} \n`)

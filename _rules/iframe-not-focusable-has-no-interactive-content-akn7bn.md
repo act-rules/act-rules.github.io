@@ -107,7 +107,7 @@ This `iframe` element contains no [visible][] content because of the small size 
 
 #### Inapplicable Example 4
 
-This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
+This `iframe` element contains a link that is not part of its [flattened tabindex-ordered focus navigation scope][] because of its `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>

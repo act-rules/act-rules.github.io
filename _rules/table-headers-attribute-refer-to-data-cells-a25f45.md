@@ -1,6 +1,6 @@
 ---
 id: a25f45
-name: '`headers` attribute specified on a cell refers to cells in the same `table` element'
+name: Headers attribute specified on a cell refers to cells in the same table element
 rule_type: atomic
 description: |
   This rule checks that the `headers` attribute on a cell refer to other cells in the same `table` element.
@@ -239,6 +239,26 @@ The `td` elements have a `headers` attribute referring to an ID that does not ex
 
 #### Failed Example 2
 
+The `td` elements have a `headers` attribute referring to an ID that exist in a separate `table`.
+
+```html
+<table>
+	<tr>
+		<th id="headOfColumn1">Projects</th>
+		<th id="headOfColumn2">Objective</th>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td headers="headOfColumn1">15%</td>
+		<td headers="headOfColumn2">10%</td>
+	</tr>
+</table>
+```
+
+#### Failed Example 3
+
 The `td` element has a `headers` attribute referring to its own ID.
 
 ```html
@@ -254,7 +274,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 </table>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 

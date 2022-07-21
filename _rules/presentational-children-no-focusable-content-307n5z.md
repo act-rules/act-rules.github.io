@@ -34,7 +34,7 @@ This rule assumes that elements that are part of [sequential focus navigation][]
 
 ## Accessibility Support
 
-Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles. Because some browsers do, and others do not implement presentational children, there can be significant differences between browsers.
+Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
 
 ## Background
 
@@ -102,7 +102,7 @@ This `button` element has a [child][] `span` element. Because the `span` element
 ```html
 <button>
 	Save
-	<span aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
+	<span role="button" aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
 </button>
 ```
 

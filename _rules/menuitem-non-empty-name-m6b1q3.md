@@ -116,7 +116,7 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 
 #### Failed Example 2
 
-This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
+This offscreen element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
 <html lang="en">

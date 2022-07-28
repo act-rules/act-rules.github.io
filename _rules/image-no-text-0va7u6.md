@@ -36,10 +36,6 @@ This rule applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 
-For the test target, the expectation is that :
-- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language]
-
-## Exceptions 
 
 For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
 

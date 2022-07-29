@@ -1,9 +1,9 @@
 ---
 id: akn7bn
-name: Iframe with negative tabindex has no interactive elements
+name: Iframe with interactive elements are in tab-order
 rule_type: atomic
 description: |
-  This rule checks that `iframe` elements with a negative `tabindex` attribute value contain no interactive elements.
+  This rule checks that `iframe` elements which contain an interactive (tabbable) element are themselves tabbable.
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true
@@ -29,16 +29,17 @@ acknowledgments:
 ## Applicability
 
 This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
+
 - the element is [visible][]; and
 - the element is part of the [flattened tabindex-ordered focus navigation scope][] of the `iframe`.
 
-An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][]. 
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 The [flattened tabindex-ordered focus navigation scope][] of an `iframe` is essentially the [sequential focus navigation][] order inside its content.
 
 ## Expectation
 
-None of the test target has a negative number as a `tabindex` [attribute value][].
+The test target does not have a negative number as a `tabindex` [attribute value][].
 
 ## Assumptions
 
@@ -50,7 +51,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or some other negative number, it becomes impossible to move the focus into the [browsing context][nested browsing context] of the `iframe` element. Even though its content is still included in the [sequential focus navigation][], there is no way to move the focus to any of the items in the `iframe` using standard keyboard navigation.
+Inside a page, each nested document (mostly, content of `iframe` element) has its own [tabindex-ordered focus navigation scope][] which is the local tab-order inside this document. Then, all of these are grouped together in a [flattened tabindex-ordered focus navigation scope][] which is effectively the tab-order of the full page. By setting the `tabindex` attribute of a [focus navigation scope owner][] (mostly, `iframe` elements) to a negative value, it is excluded from its containing document's [tabindex-ordered focus navigation scope][]; and therefore its [tabindex-ordered focus navigation scope][] is excluded from the global [flattened tabindex-ordered focus navigation scope][]. That is, a `button` may be in tab-order of a document, but if that document is included in another page via an `iframe` with negative `tabindex`, then the `button` is not in the `tab-order` of that page; and therefore not keyboard accessible.
 
 ### Bibliography
 
@@ -66,6 +67,14 @@ By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or 
 This `iframe` element does not have a `tabindex` [attribute value][] that is a negative number
 
 ```html
+<iframe srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Passed Example 2
+
+This `iframe` element does not have a `tabindex` [attribute value][] that is a negative number
+
+```html
 <iframe tabindex="0" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
@@ -73,7 +82,7 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 
 #### Failed Example 1
 
-This `iframe` element contains a [visible][] link that is part of its [flattened tabindex-ordered focus navigation scope][]. Note that the link is not part of the document's [sequential focus navigation][] because the containing `iframe` is excluded from the document's [tabindex-ordered focus navigation scope](https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope) due to its negative `tabindex`.
+This `iframe` element contains a [visible][] link that is part of its [flattened tabindex-ordered focus navigation scope][], and has a negative `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
@@ -107,7 +116,7 @@ This `iframe` element contains no [visible][] content because of the small size 
 
 #### Inapplicable Example 4
 
-This `iframe` element contains a link that is not part of its [flattened tabindex-ordered focus navigation scope][] because of its `tabindex`.
+This `iframe` element contains a link that is not part of its [flattened tabindex-ordered focus navigation scope][] because of its own `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
@@ -115,9 +124,11 @@ This `iframe` element contains a link that is not part of its [flattened tabinde
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
+[flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
+[focus navigation scope owner]: https://html.spec.whatwg.org/multipage/interaction.html#focus-navigation-scope-owner
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
+[tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope
 [visible]: #visible 'Definition of visible'
-[flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'

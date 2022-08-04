@@ -1,9 +1,9 @@
 ---
 id: akn7bn
-name: Iframe with interactive elements are in tab-order
+name: Iframe with interactive elements are not excluded from tab-order
 rule_type: atomic
 description: |
-  This rule checks that `iframe` elements which contain an interactive (tabbable) element are themselves tabbable.
+  This rule checks that `iframe` elements which contain an interactive (tabbable) element are not excluded from sequential focus navigation.
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true

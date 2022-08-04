@@ -108,7 +108,7 @@ p {
 	height: 50px;
 	padding-top: 15px;
 	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
-	text-shadow: 0px 0px 2px black
+	text-shadow: 0px 0px 2px black;
 }
 </style>
 <p>Black hole sun</p>

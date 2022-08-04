@@ -123,7 +123,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 
 #### Passed Example 6
 
-The [cascaded][] value of the `letter-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade](#24afc2:cascade) condition.
+The [cascaded][] value of the `letter-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade][] condition.
 
 ```html
 <style>
@@ -195,7 +195,7 @@ This `p` element only has one text node descendant, and it is [empty](#24afc2:em
 
 #### Passed Example 12
 
-Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [wide enough][].
+Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [wide enough][]. For the `p` element, the [cascade][] condition is also met by this text node.
 
 ```html
 <p style="font-size: 24px; letter-spacing: 2px !important">
@@ -207,7 +207,7 @@ Both this `p` and `span` elements have a single text node descendant, whose pare
 
 #### Passed Example 13
 
-This `p` element has three text node descendants. The first one is [empty](#24afc2:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `letter-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
+Both the `p` element and the third `span` element are test targets. The `p` element has three text node descendants. The first one is [empty](#24afc2:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one meets both the [wide enough][] and the [cascade][] conditions because of the `letter-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
 
 ```html
 <p style="letter-spacing: 2.4px !important; font-size: 30px">
@@ -215,7 +215,7 @@ This `p` element has three text node descendants. The first one is [empty](#24af
 	<span>&nbsp;</span>
 	<!-- OK because font-size has changed -->
 	<span style="font-size: 20px">The toy brought back fond memories of being lost in the rain forest.</span>
-	<!-- OK because letter-spacing has changed -->
+	<!-- OK because letter-spacing has changed and is now wide enough -->
 	<span style="letter-spacing: 3.6px !important"
 		>The toy brought back fond memories of being lost in the rain forest.</span
 	>
@@ -313,6 +313,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 ```
 
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
+[cascade]: #24afc2:cascade 'The Cascade condition'
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
 [cascaded]: https://www.w3.org/TR/css-cascade-4/#cascaded 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascaded Values'
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'

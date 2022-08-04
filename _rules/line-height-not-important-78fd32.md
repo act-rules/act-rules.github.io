@@ -151,7 +151,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 8
 
-The [cascaded][] value of the `line-height` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade](#78fd32:cascade) condition.
+The [cascaded][] value of the `line-height` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade][] condition.
 
 ```html
 <style>
@@ -219,7 +219,7 @@ This `p` has three text nodes descendants. The first and third are [large enough
 
 #### Passed Example 13
 
-Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [large enough][].
+Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [large enough][]. For the `p` element, the [cascade][] condition is also met by this text node.
 
 ```html
 <p style="font-size: 16px; line-height: 16px !important; max-width: 200px">
@@ -231,7 +231,7 @@ Both this `p` and `span` elements have a single text node descendant, whose pare
 
 #### Passed Example 14
 
-This `div` element has three text node descendants. The first one is [empty](#78fd32:empty); the second one is [large enough][] because of the smaller `font-size` on its parent; and the last one is [large enough][] because of the `letter-spacing` specified on its parent. The third `span` element has a [large enough][] text node descendant.
+Both the `p` element and the third `span` element are test targets. The `p` element has three text node descendants. The first one is [empty](#78fd32:empty); the second one is [large enough][] because of the smaller `font-size` on its parent; and the last one meets both the [large enough][] and the [cascade][] conditions because of the `letter-spacing` specified on its parent. The third `span` element has a [large enough][] text node descendant.
 
 ```html
 <p style="line-height: 24px !important; font-size: 24px; max-width: 200px">
@@ -239,8 +239,10 @@ This `div` element has three text node descendants. The first one is [empty](#78
 	<span>&nbsp;</span>
 	<!-- OK because font-size has changed -->
 	<span style="font-size: 16px">The toy brought back fond memories of being lost in the rain forest.</span>
-	<!-- OK because letter-spacing has changed -->
-	<span style="letter-spacing: 36px !important">The toy brought back fond memories of being lost in the rain forest.</span>
+	<!-- OK because letter-spacing has changed and is now large enough -->
+	<span style="letter-spacing: 36px !important"
+		>The toy brought back fond memories of being lost in the rain forest.</span
+	>
 </p>
 ```
 
@@ -373,6 +375,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 ```
 
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
+[cascade]: #78fd32:cascade 'The Cascade condition'
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
 [cascaded]: https://www.w3.org/TR/css-cascade-4/#cascaded 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascaded Values'
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'

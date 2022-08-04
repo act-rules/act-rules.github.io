@@ -30,10 +30,10 @@ This rule applies to any [HTML element][] that is [visible][] and for which the 
 For each test target, at least one of the following is true:
 
 - <df id="9e45ec:not-important">not important</dfn>: the [computed][] value of its [word-spacing][] property is not [important][]; or
-- - <dfn id="9e45ec:spaced-text">spaced text</dfn>: for each text node descendant of this target, one of the following is true:
-    - <dfn id="9e45ec:empty">empty</dfn>: the text node is only [whitespace][]; or
-    - <dfn id="9e45ec:wide-enough-cond">wide enough</dfn>: the parent of the text node has [wide enough word spacing](#9e45ec:wide-enough-def); or
-    - <dfn id="9e45ec:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [word-spacing][] property which is not the one [declared][] in the `style` attribute of the target.
+- <dfn id="9e45ec:spaced-text">spaced text</dfn>: for each text node descendant of this target, one of the following is true:
+  - <dfn id="9e45ec:empty">empty</dfn>: the text node is only [whitespace][]; or
+  - <dfn id="9e45ec:wide-enough-cond">wide enough</dfn>: the parent of the text node has [wide enough word spacing](#9e45ec:wide-enough-def); or
+  - <dfn id="9e45ec:cascade">cascade</dfn>: the parent of the text node has a [cascaded][] [word-spacing][] property which is not the one [declared][] in the `style` attribute of the target.
 
 An element has a <dfn id="9e45ec:wide-enough-def">wide enough word spacing</dfn> if the [used][] value of its [word-spacing][] property is at least 0.16 times the [computed][] value of its [font-size][] property.
 
@@ -123,7 +123,7 @@ This `p` element has two [declared][] values for its `word-spacing` property. Th
 
 #### Passed Example 6
 
-The [cascaded][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade](#9e45ec:cascade) condition.
+The [cascaded][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the [cascade][] condition.
 
 ```html
 <style>
@@ -195,7 +195,7 @@ This `p` element only has one text node descendant, and it is [empty](#9e45ec:em
 
 #### Passed Example 12
 
-Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [wide enough][].
+Both this `p` and `span` elements have a single text node descendant, whose parent (the `span` element) is [wide enough][]. For the `p` element, the [cascade][] condition is also met by this text node.
 
 ```html
 <p style="font-size: 24px; word-spacing: 2px !important">
@@ -207,16 +207,16 @@ Both this `p` and `span` elements have a single text node descendant, whose pare
 
 #### Passed Example 13
 
-This `p` element has three text node descendants. The first one is [empty](#9e45ec:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one is [wide enough][] because of the `word-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
+Both the `p` element and the third `span` element are test targets. The `p` element has three text node descendants. The first one is [empty](#9e45ec:empty); the second one is [wide enough][] because of the smaller `font-size` on its parent; and the last one meets both the [wide enough][] and the [cascade][] conditions because of the `word-spacing` specified on its parent. The third `span` element has a [wide enough][] text node descendant.
 
 ```html
 <p style="word-spacing: 4px !important; font-size: 30px">
-  <!-- OK because too small but only whitespace -->
-  <span>&nbsp;</span>
-  <!-- OK because font-size has changed -->
-  <span style="font-size: 20px">Lorem</span>
-  <!-- OK because letter-spacing has changed -->
-  <span style="word-spacing: 5px !important">ipsum</span>
+	<!-- OK because too small but only whitespace -->
+	<span>&nbsp;</span>
+	<!-- OK because font-size has changed -->
+	<span style="font-size: 20px">Lorem</span>
+	<!-- OK because letter-spacing has changed and is now wide enough -->
+	<span style="word-spacing: 5px !important">ipsum</span>
 </p>
 ```
 
@@ -311,6 +311,7 @@ The `style` attribute of this `p` element does not [declare][declared] the `word
 ```
 
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
+[cascade]: #9e45ec:cascade 'The Cascade condition'
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
 [cascaded]: https://www.w3.org/TR/css-cascade-4/#cascaded 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascaded Values'
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'

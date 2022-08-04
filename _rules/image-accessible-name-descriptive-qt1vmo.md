@@ -79,7 +79,7 @@ This `img` element has an `alt` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 </html>
 ```
 
@@ -110,13 +110,13 @@ This `canvas` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<canvas id="logo" width="72" height="48" aria-label="W3C"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="W3C logo"></canvas>
 	<script>
-		const img = new Image();
-		img.src = '/test-assets/shared/w3c-logo.png';
-		img.onload = function () {
-			const ctx = document.querySelector('#logo').getContext('2d');
-			ctx.drawImage(img, 0, 0);
+		const img = new Image()
+		img.src = '/test-assets/shared/w3c-logo.png'
+		img.onload = function() {
+			const ctx = document.querySelector('#logo').getContext('2d')
+			ctx.drawImage(img, 0, 0)
 		}
 	</script>
 </html>
@@ -130,7 +130,7 @@ This `img` element has an `alt` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM logo" />
 </html>
 ```
 
@@ -161,13 +161,13 @@ This `canvas` element has an `aria-label` attribute that incorrectly describes t
 
 ```html
 <html lang="en">
-	<canvas id="logo" width="72" height="48" aria-label="HTML 5"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="HTML 5 logo"></canvas>
 	<script>
-		const img = new Image();
-		img.src = '/test-assets/shared/w3c-logo.png';
-		img.onload = function () {
-			const ctx = document.querySelector('#logo').getContext('2d');
-			ctx.drawImage(img, 0, 0);
+		const img = new Image()
+		img.src = '/test-assets/shared/w3c-logo.png'
+		img.onload = function() {
+			const ctx = document.querySelector('#logo').getContext('2d')
+			ctx.drawImage(img, 0, 0)
 		}
 	</script>
 </html>
@@ -235,7 +235,7 @@ This `img` element is not [visible][].
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" style="display:none" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" style="display:none" />
 </html>
 ```
 

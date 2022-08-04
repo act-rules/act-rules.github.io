@@ -246,6 +246,16 @@ This `img` element is hidden with `visibility: hidden`.
 </div>
 ```
 
+#### Inapplicable Example 6
+
+This `img` element is [programmatically hidden][] with `content-visibility: hidden`.
+
+```html
+<div style="content-visibility: hidden">
+  <img src="/test-assets/shared/w3c-logo.png" />
+</div>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'

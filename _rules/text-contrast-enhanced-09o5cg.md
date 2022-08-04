@@ -107,7 +107,7 @@ This light gray text has a contrast ratio between 18:1 and 7:1 on the background
 	       height: 50px;
 	       padding-top: 15px;
 	       background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
-	       box-shadow: 0px 0px 2px black"
+	       text-shadow: 0px 0px 2px black"
 >
 	Black hole sun
 </p>

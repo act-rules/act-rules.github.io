@@ -42,7 +42,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-[Standard keyboard navigation](#standard-keyboard-navigation) can move focus both forward and backward. Therefore, cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not fully clear whether [Success Criterion 2.1.2 No keyboard trap][sc212] requires navigation in both directions. Therefore, this rule does not constrain navigation direction, to stay on the safe side.
+[Standard keyboard navigation](#standard-keyboard-navigation) can move focus both forward and backward. Therefore, cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not fully clear whether [Success Criterion 2.1.2 No keyboard trap][sc212] requires navigation in both directions. Therefore, to stay on the safe side, this rule does not constrain navigation direction.
 
 ### Bibliography
 

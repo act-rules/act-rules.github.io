@@ -29,6 +29,7 @@ This rule applies to any [HTML][] `input`, `select` and `textarea` element with 
 - **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
 - **disabled**: the element is a [disabled element]; or
 - **fixed value**: the element is an `input` element with a `type` [attribute value][] of `hidden`, `button`, `submit` or `reset`; or
+- **fixed value**: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
 - **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
 - **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
@@ -65,6 +66,9 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 Many browsers provide auto-filling suggestions even when the control's `type` [attribute value][] is not [appropriate][appropriate field name for the form control] for its `autocomplete` [attribute value][]. The same happens when the `autocomplete` property is queried. However, the `autocomplete` property is not programmatically identifiable if the requirements for the optional tokens are not met.
 
 The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+
+The intent of **fixed value** list item in Applicability section is to clearly define to which `input` element's `type` attribute [attribute value][] the `autocomplete` attribute applies.
+On an `input` element with a `type` [attribute value][] of `hidden`, the autocomplete attribute wears the [autofill anchor mantle](https://html.spec.whatwg.org/#autofill-anchor-mantle), describing the meaning of the given value. In all other cases, it wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
 
 ### Bibliography
 

@@ -59,7 +59,7 @@ For each target, the _time_ from the content [attribute value][] is between 0 an
 ## Assumptions
 
 - This rule assumes no functionality was provided by the website for the user to adjust the timer.
-- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to SC 2.2.1.
+- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to [2.2.1 Time Adjustable][sc211].
 
 ## Accessibility Support
 

@@ -56,12 +56,11 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
 
-The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some AU/AT stop at the first existing one, even if empty.
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
 
 ## Background
 
-Empty `alt` does not provide a "usable string" for `input` element with a `type` [attribute value][] of `image`.
-Therefore, contrarily to images, empty `alt` does not make image button decorative. Image buttons have a button role and therefore are exposed as interactive elements.
+Contrarily to images, an empty `alt` attribute does not make image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation default to other means of providing a name.
 
 ### Related rules
 

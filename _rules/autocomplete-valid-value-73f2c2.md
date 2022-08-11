@@ -252,6 +252,22 @@ This `autocomplete` attribute is inapplicable because it has the `off` value.
 <label>Friend's first name<input type="text" autocomplete="off"/></label>
 ```
 
+#### Inapplicable Example 8
+
+The `autocomplete` attribute does not apply to `input` type `submit` elements.
+
+```html
+<input type="submit" autocomplete="off"/>
+```
+
+#### Inapplicable Example 9
+
+Even if the input explicitly specifiy the amount of the transasctions and user agents could use transaction amount information to suggest for example a credit card that has sufficient balance, the element is not [visible][], and not [included in the accessibility tree][]
+
+```html
+<input type="hidden" autocomplete="transaction-amount" value="100.00">
+```
+
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/08/12'
 [ascii case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive 'definition of ASCII case-insensitive'
 [attribute value]: #attribute-value 'Definition of Attribute Value'

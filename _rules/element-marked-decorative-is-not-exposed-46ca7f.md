@@ -1,9 +1,9 @@
 ---
 id: 46ca7f
-name: Element marked as decorative is not exposed
+name: Element does not cause presentational role conflict
 rule_type: atomic
 description: |
-  This rule checks that elements marked as decorative either are not included in the accessibility tree, or have a presentational role.
+  This rule checks that an explicit role of presentation or none on an element is not ignored by the browser because of conflict resolution.
 accessibility_requirements:
 input_aspects:
   - Accessibility tree
@@ -12,6 +12,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+    - Wilco Fiers
   funding:
     - WAI-Tools
 htmlHintIgnore:
@@ -22,11 +23,15 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any element which is [marked as decorative][].
+This rule applies to any HTML element with an [explicit role][] of `presentation` or `none`.
 
-## Expectation
+## Expectation 1
 
-Each target element either is not [included in the accessibility tree][] or has a [semantic role][] of `none` or `presentation`.
+No target element is part of [sequential focus navigation][].
+
+## Expectation 2
+
+No target element has any [global ARIA attributes][].
 
 ## Assumptions
 
@@ -53,7 +58,7 @@ When these conflicts arise on [decorative][] [non-text content][], this is also 
 This `img` element is [marked as decorative][] through its empty `alt` attribute and has [semantic role][] of `none`.
 
 ```html
-<img src="/test-assets/shared/w3c-logo.png" alt="" />
+<h1 role="presentation">Big text, not a heading</h1>
 ```
 
 #### Passed Example 2
@@ -61,7 +66,7 @@ This `img` element is [marked as decorative][] through its empty `alt` attribute
 This `img` element is [marked as decorative][] through its empty `alt` attribute and is not [included in the accessibility tree][] because of the `aria-hidden` attribute.
 
 ```html
-<img src="/test-assets/shared/w3c-logo.png" alt="" aria-hidden="true" />
+<img src="/test-assets/shared/w3c-logo.png" role="none" aria-hidden="true" />
 ```
 
 #### Passed Example 3
@@ -69,7 +74,7 @@ This `img` element is [marked as decorative][] through its empty `alt` attribute
 This `img` element is [marked as decorative][] through its empty `alt` attribute and is not [included in the accessibility tree][] because it is `hidden` to everyone.
 
 ```html
-<img src="/test-assets/shared/w3c-logo.png" alt="" hidden />
+<button hidden>Empty control</button>
 ```
 
 #### Passed Example 4

@@ -3,7 +3,7 @@ id: c4a8a4
 name: HTML page title is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the first title in an HTML page describes the topic or purpose of that page.
+  This rule checks that the first title in an [HTML web page][] describes the topic or purpose of that page.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -37,10 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the first [HTML][] `title` element that
-
-- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
-- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+This rule applies to the first `title` element on an [HTML web page][] that contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 
@@ -176,3 +173,4 @@ This `title` element is a child of an `svg` element.
 ```
 
 [html]: #namespaced-element
+[html web page]: #web-page-html 'Definition of Web Page (HTML)'

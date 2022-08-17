@@ -45,7 +45,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-- A prerequisite for this rule is that Technique H25: Providing a title using the title element is used for living up to 2.4.2 Page Titled
+- A prerequisite for this rule is that Technique H25: Providing a title using the title element is used for meeting 2.4.2 Page Titled
 
 ## Accessibility Support
 

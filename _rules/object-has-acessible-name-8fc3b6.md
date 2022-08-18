@@ -29,6 +29,7 @@ acknowledgments:
 This rule applies to any `object` element for which all the following are true:
 
 - The `object` element is [included in the accessibility tree][]; and
+- The `object` element has no [explicit role][]; and
 - The `object` element embeds a resource whose MIME type is either [image](https://mimesniff.spec.whatwg.org/#image-mime-type), or [audio or video](https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type).
 
 ## Expectation
@@ -158,7 +159,18 @@ This `object` element has `alt` attribute, however this will not create an  [acc
 
 ### Inapplicable
 
+
 #### Inapplicable Example 1
+
+This `object` element has an [explicit role][] of "img". 
+
+**Note**: Object elements with other roles may still require an accessible name. This is tested through other rules.
+
+```html
+<object role="img" title="W3C" data="/test-assets/shared/w3c-logo.png"></object>
+```
+
+#### Inapplicable Example 2
 
 This `object` element is not [included in the accessibility tree][] due to `display:none`.
 
@@ -166,7 +178,7 @@ This `object` element is not [included in the accessibility tree][] due to `disp
 <object data="/test-assets/rabbit-video/video.mp4" style="display: none;"></object>
 ```
 
-#### Inapplicable Example 2
+#### Inapplicable Example 3
 
 This `object` element is not [included in the accessibility tree][] due to `visibility:hidden`.
 
@@ -174,7 +186,7 @@ This `object` element is not [included in the accessibility tree][] due to `visi
 <object data="/test-assets/moon-audio/moon-speech.mp3" style="visibility: hidden;"></object>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
 This `object` element is not [included in the accessibility tree][] due to `aria-hidden="true"`.
 
@@ -182,7 +194,7 @@ This `object` element is not [included in the accessibility tree][] due to `aria
 <object data="/test-assets/shared/w3c-logo.png" aria-hidden="true"></object>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
 This `object` element is not [included in the accessibility tree][] because it is marked as decorative through `role="presentation"`.
 
@@ -190,7 +202,7 @@ This `object` element is not [included in the accessibility tree][] because it i
 <object type="image/png" role="presentation" data="/test-assets/contrast/example.png"></object>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 This `object` element embeds an HTML resource.
 
@@ -198,7 +210,7 @@ This `object` element embeds an HTML resource.
 <object title="My University" data="/test-assets/shared/index.html"></object>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 There is no `object` element.
 
@@ -206,7 +218,7 @@ There is no `object` element.
 <audio title="Moon speech" src="/test-assets/moon-audio/moon-speech.mp3"></audio>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 8
 
 This `object` element does not need an accessible name because it loads no image, audio, or video. Instead the `img` element inside the `object` is rendered.
 

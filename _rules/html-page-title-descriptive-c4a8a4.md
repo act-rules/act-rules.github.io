@@ -45,7 +45,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-There are currently no assumpttions.
+There are currently no assumptions.
 
 ## Accessibility Support
 

@@ -153,7 +153,7 @@ This `object` element has an empty [accessible name][]. The `img` element inside
 This `object` element has `alt` attribute, however this will not create an  [accessible name][]. Because of this the accessible name is empty.
 
 ```html
-<object data="/test-assets/moon-audio/moon-speech.mp3" alt="JFK's Going to the moon speech"></object>
+<object data="/test-assets/moon-audio/moon-speech.mp3" alt="Moon speech"></object>
 ```
 
 ### Inapplicable

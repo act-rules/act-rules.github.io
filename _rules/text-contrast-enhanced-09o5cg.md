@@ -99,7 +99,7 @@ This dark gray text has a contrast ratio between 12.6:1 and 7:1 on the white to 
 
 #### Passed Example 3
 
-This light gray text has a contrast ratio between 18:1 and 7:1 on the background image.
+This white text has a contrast ratio between 18:1 and 7:1 on the background image.
 
 ```html
 <style>

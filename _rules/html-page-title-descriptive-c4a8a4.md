@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the first `title` element on an [HTML web page][] that contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+This rule applies to a `title` element on an [HTML web page][] that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `head` element that contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 

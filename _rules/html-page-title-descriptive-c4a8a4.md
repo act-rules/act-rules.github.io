@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to a `title` element on an [HTML web page][] that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `head` element that contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+This rule applies to the first `title` element on an [HTML web page][] that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) that contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 
@@ -45,7 +45,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-- A prerequisite for this rule is that Technique H25: Providing a title using the title element is used for meeting 2.4.2 Page Titled
+There are currently no assumpttions.
 
 ## Accessibility Support
 

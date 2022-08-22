@@ -136,7 +136,7 @@ This `img` element has an `alt` attribute that incorrectly describes the image.
 
 #### Failed Example 2
 
-This `svg` element has an `aria-label` attribute that incorrectly describes the image.
+This `svg` element has an `aria-label` attribute that incorrectly describes the image because aria-label is "W3C Logo" instead of "HTML 5 Logo".
 
 ```html
 <html lang="en">
@@ -157,7 +157,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 #### Failed Example 3
 
-This `canvas` element has an `aria-label` attribute that incorrectly describes the image.
+This `canvas` element has an `aria-label` attribute that incorrectly describes the image because aria-label is "HTML 5 Logo" instead of "W3C Logo".
 
 ```html
 <html lang="en">

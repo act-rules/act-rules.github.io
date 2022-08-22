@@ -262,7 +262,7 @@ The `autocomplete` attribute does not apply to `input` type `submit` elements.
 
 #### Inapplicable Example 9
 
-Even if the input explicitly specifiy the amount of the transasctions and user agents could use transaction amount information to suggest for example a credit card that has sufficient balance, the element is not [visible][], and not [included in the accessibility tree][]
+Even if the input explicitly specify the amount of the transactions and user agents could use transaction amount information to suggest for example a credit card that has sufficient balance, the element is not [visible][], and not [included in the accessibility tree][]
 
 ```html
 <input type="hidden" autocomplete="transaction-amount" value="100.00">

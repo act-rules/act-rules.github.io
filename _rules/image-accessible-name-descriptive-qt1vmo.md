@@ -58,7 +58,7 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Some popular browser / screen reader combinations do not pronounce the accessible names of `svg` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
 
 ## Background
 
@@ -89,7 +89,7 @@ This `svg` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="HTML 5">
+	<svg viewBox="0 0 512 512" aria-label="HTML 5" role="img">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -140,7 +140,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="W3C">
+	<svg viewBox="0 0 512 512" aria-label="W3C" role="img">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -295,6 +295,7 @@ This is a `div` element with a background image. Background images must be teste
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit semantic role]: #explicit-role
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG 2.1 definition of non-text content'

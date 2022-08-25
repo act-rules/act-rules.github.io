@@ -13,12 +13,11 @@ await generateProposedRulePages(config);
 await generateTestCases(config);
 await commitAndPush(config);
 
-
 async function cloneWcagActRules({ tmpDir }) {
   await $`rm -rf ${tmpDir}`;
   await $`git clone \
     --single-branch \
-    --branch master \
+    --branch main \
     https://github.com/w3c/wcag-act-rules.git ${tmpDir} \
     --depth 1
   `;

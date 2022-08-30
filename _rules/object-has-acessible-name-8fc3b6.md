@@ -52,7 +52,7 @@ Non-supported media formats make screen readers render the text content of the e
 
 `Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
-When the object resource is not loaded the fallback content is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video.".
+When the object resource is not loaded, the fallback content is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video."
 
 ### Bibliography
 

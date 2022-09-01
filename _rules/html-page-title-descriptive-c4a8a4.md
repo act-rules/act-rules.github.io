@@ -172,5 +172,5 @@ This `title` element is a child of an `svg` element.
 </svg>
 ```
 
-[document title]: https://html.spec.whatwg.org/multipage/dom.html#document.title 'HTML definition of Document Title'
+[document title]: https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2 'HTML definition of Document Title'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

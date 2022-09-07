@@ -32,7 +32,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
+This rule applies to any non-embedded [scrollable element][] that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
 
 - It has a [horizontal scroll distance][scrollable] greater than the [computed][] [left][padding-left] or [right padding][padding-right] of the element; or
 - It has a [vertical scroll distance][scrollable] greater than the [computed][] [top][padding-top] or [bottom padding][padding-bottom] of the element
@@ -54,6 +54,8 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 ## Background
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
+
+This rule is only applicable to non-embedded scrollable elements. Embedded scrollable elements, such as iframe or object elements, are covered in other rules such as [Iframe with negative tabindex has no interactive elements](iframe-not-focusable-has-no-interactive-content-akn7bn.md).
 
 ### Bibliography
 
@@ -160,7 +162,7 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 
 #### Inapplicable Example 1
 
-This `section` element has a [computed][] [overflow][] of `visible`.
+This `section` element is not [scrollable][] because it has a [scroll distance][scrollable] of 0 in both directions.
 
 ```html
 <section style="height: 95px; width: 500px;">
@@ -246,7 +248,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 
 #### Inapplicable Example 6
 
-This `iframe` element is not a [scrollable element][scrollable].
+This `iframe` element is an embedded [scrollable element][scrollable].
 
 ```html
 <iframe src="https://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>

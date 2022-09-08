@@ -89,7 +89,7 @@ The email `input` value is missing the "@" symbol. Its visual error indicator (t
 
 #### Failed Example 1
 
-This visual error indicator (the red border color of the first `input` element) conveyed the presence of an error through color (hue) differences only.
+The first name `input` value is empty. Its visual error indicator (the red border color of the first `input` element) conveyed the presence of an error through color (hue) differences only.
 
 ```html
 <label for="first_name" style="color:#333333">First Name</label>
@@ -100,24 +100,24 @@ This visual error indicator (the red border color of the first `input` element) 
 
 #### Failed Example 2
 
-This visual error indicator (the red color of the first `label` element) conveyed the presence of an error through color (hue) differences only.
+The phone number `input` value doesn't match the `type` value. Its visual error indicator (the red color of the first `label` element) conveyed the presence of an error through color (hue) differences only.
 
 ```html
-<label for="first_name" style="color:#dd0000">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #b0b0b0" aria-invalid="true">
-<label for="last_name" style="color:#333333">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
+<label for="phone_number" style="color:#dd0000">Phone number</label>
+<input type="tel" id="phone_number" autocomplete="tel" required style="border:1px solid #b0b0b0" aria-invalid="true" value="John Doe">
+<label for="email" style="color:#333333">Email</label>
+<input type="email" id="email" autocomplete="email" required style="border:1px solid #b0b0b0" value="john.doe@example.com">
 ```
 
 #### Failed Example 3
 
-This visual error indicator (for the first couple of `label` and `input` elements, respectively the red text color and the red border color) conveyed the presence of an error through color (hue) differences only.
+The email `input` value is missing the "@" symbol. Its visual error indicator (for the first couple of `label` and `input` elements, respectively the red text color and the red border color) conveyed the presence of an error through color (hue) differences only.
 
 ```html
-<label for="first_name" style="color:#dd0000">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true">
-<label for="last_name" style="color:#333333">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
+<label for="email" style="color:#dd0000">Email</label>
+<input type="email" id="email" autocomplete="email" required style="border:1px solid #dd0000" aria-invalid="true" value="john.doeexample.com">
+<label for="address" style="color:#333333">Address</label>
+<input type="text" id="address" autocomplete="address-line1" required style="border:1px solid #b0b0b0" value="5th Example Street">
 ```
 
 ### Inapplicable
@@ -147,10 +147,10 @@ Error field is not visible.
 
 ```html
 <div style="display:none">
-<label for="first_name" style="color:#dd0000">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true">
-<label for="last_name" style="color:#000">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #000" value="Doe">
+<label for="phone_number" style="color:#dd0000">Phone number</label>
+<input type="tel" id="phone_number" autocomplete="tel" required style="border:1px solid #b0b0b0" aria-invalid="true" value="John Doe">
+<label for="email" style="color:#333333">Email</label>
+<input type="email" id="email" autocomplete="email" required style="border:1px solid #b0b0b0" value="john.doe@example.com">
 </div>
 ```
 

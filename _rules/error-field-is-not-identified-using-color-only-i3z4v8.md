@@ -22,24 +22,26 @@ acknowledgments:
 
 This rule applies to any error field that is [visible][].
 
-## Expectation (1)
+## Expectation
 
 Each test target, together with its visual context, identify the presence of errors not only through color differences.
 
-## Assumptions
-
 If the presence of errors is conveyed through the use of colors that differ not only in their hue, but that also have a difference in lightness and the difference in relative luminance between the colors leads to a contrast ratio of 3:1 or greater, then this counts as an additional visual mean.
 
-*Note*: It is possible for an error field to be distinguishable from adjacent fields but still not have a meaningful error message. In that case, it would pass Success Criterion 1.4.1: Use of Color but still fail [Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) and, if applicable, [Scuccess Criterion 3.3.3: Error Suggestion](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html).
+## Assumptions
+
+There are currently no assumptions
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no major accessibility support issues known for this rule.
 
 ## Background
 
 - [Understanding Success Criterion 1.4.1: Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 - [F81 - Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only](https://www.w3.org/WAI/WCAG21/Techniques/failures/F81.html)
+
+It is possible for an error field to be distinguishable from adjacent fields but still not have a meaningful error message. In that case, it would pass Success Criterion 1.4.1: Use of Color but still fail [Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) and, if applicable, [Scuccess Criterion 3.3.3: Error Suggestion](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html).
 
 ## Test Cases
 
@@ -47,7 +49,7 @@ _No accessibility support issues known._
 
 #### Passed Example 1
 
-The presence of errors is conveyed through text error message.
+This error message (the `p` element) conveyed the presence of an error through its text.
 
 ```html
 <label for="first_name">First Name</label>
@@ -57,12 +59,12 @@ The presence of errors is conveyed through text error message.
 
 #### Passed Example 2
 
-The presence of errors is conveyed also through other CSS properties:
+This visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through its CSS properties:
 - font-weight: bold AND;
 - border-width: 3px.
 
 ```html
-<label for="first_name" style="color:#dd0000">First Name</label>
+<label for="first_name" style="color:#dd0000; font-weight:bold">First Name</label>
 <input type="text" id="first_name" autocomplete="given-name" style="border:3px solid #dd0000" aria-invalid="true">
 <label for="middle_name" style="color:#333333">Middle Name (optional)</label>
 <input type="text" id="middle_name" autocomplete="additional-name" style="border:1px solid #b0b0b0" value="Michael">
@@ -72,7 +74,7 @@ The presence of errors is conveyed also through other CSS properties:
 
 #### Passed Example 3
 
-The presence of errors is conveyed through:
+This visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through its CSS properties:
 - lightness (difference in relative luminance between the colors leads to a contrast ratio greater than 3:1) AND;
 - font-weight: bold.
 
@@ -87,7 +89,7 @@ The presence of errors is conveyed through:
 
 #### Failed Example 1
 
-The presence of errors is conveyed through color (hue) differences only.
+This visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through color (hue) differences only.
 
 ```html
 <label for="first_name" style="color:#dd0000">First Name</label>

@@ -89,7 +89,29 @@ This visual error indicator (the first couple of `label` and `input` elements) c
 
 #### Failed Example 1
 
-This visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through color (hue) differences only.
+This visual error indicator (the red border color of the first `input` element) conveyed the presence of an error through color (hue) differences only.
+
+```html
+<label for="first_name" style="color:#333333">First Name</label>
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true">
+<label for="last_name" style="color:#333333">Last Name</label>
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
+```
+
+#### Failed Example 2
+
+This visual error indicator (the red color of the first `label` element) conveyed the presence of an error through color (hue) differences only.
+
+```html
+<label for="first_name" style="color:#dd0000">First Name</label>
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #b0b0b0" aria-invalid="true">
+<label for="last_name" style="color:#333333">Last Name</label>
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
+```
+
+#### Failed Example 3
+
+This visual error indicator (for the first couple of `label` and `input` elements, respectively the red text color and the red border color) conveyed the presence of an error through color (hue) differences only.
 
 ```html
 <label for="first_name" style="color:#dd0000">First Name</label>

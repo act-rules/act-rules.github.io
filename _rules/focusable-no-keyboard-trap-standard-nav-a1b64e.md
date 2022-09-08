@@ -89,7 +89,7 @@ This [focusable][] element creates a keyboard trap bringing focus to the `button
 <button onblur="setTimeout(() => this.focus(), 10)">
 	Button1
 </button>
-<a href="#">Link 1</a>
+<a href="#">Link 2</a>
 ```
 
 #### Failed Example 2

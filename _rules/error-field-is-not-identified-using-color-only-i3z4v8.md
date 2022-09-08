@@ -55,6 +55,10 @@ This error message (the `p` element) conveyed the presence of an error through i
 <label for="first_name">First Name</label>
 <input type="text" id="first_name" autocomplete="given-name" style="border:1px solid #dd0000" aria-invalid="true" aria-describedby="first_name_error_msg">
 <p id="first_name_error_msg" class="error_msg" style="color:#dd0000">This field is empty. Enter your first name.</p>
+<label for="middle_name" style="color:#333333">Middle Name (optional)</label>
+<input type="text" id="middle_name" autocomplete="additional-name" style="border:1px solid #b0b0b0" value="Michael">
+<label for="last_name" style="color:#333333">Last Name</label>
+<input type="text" id="last_name" autocomplete="family-name" style="border:1px solid #b0b0b0" value="Doe">
 ```
 
 #### Passed Example 2

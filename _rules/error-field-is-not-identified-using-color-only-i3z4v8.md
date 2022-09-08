@@ -53,10 +53,10 @@ This error message (the `p` element) conveyed the presence of an error through i
 
 ```html
 <label for="first_name">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" style="border:1px solid #dd0000" aria-invalid="true" aria-describedby="first_name_error_msg">
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true" aria-errormessage="first_name_error_msg">
 <p id="first_name_error_msg" class="error_msg" style="color:#dd0000">This field is empty. Enter your first name.</p>
 <label for="last_name" style="color:#333333">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" style="border:1px solid #b0b0b0" value="Doe">
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
 ```
 
 #### Passed Example 2
@@ -67,9 +67,9 @@ This visual error indicator (the first couple of `label` and `input` elements) c
 
 ```html
 <label for="first_name" style="color:#dd0000; font-weight:bold">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" style="border:3px solid #dd0000" aria-invalid="true">
+<input type="text" id="first_name" autocomplete="given-name" required style="border:3px solid #dd0000" aria-invalid="true">
 <label for="last_name" style="color:#333333">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" style="border:1px solid #b0b0b0" value="Doe">
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
 ```
 
 #### Passed Example 3
@@ -80,9 +80,9 @@ This visual error indicator (the first couple of `label` and `input` elements) c
 
 ```html
 <label for="first_name" style="color:#dd0000; font-weight:bold;">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" style="border:1px solid #dd0000" aria-invalid="true">
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true">
 <label for="last_name" style="color:#000">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" style="border:1px solid #000" value="Doe">
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #000" value="Doe">
 ```
 
 ### Failed
@@ -93,9 +93,9 @@ This visual error indicator (the first couple of `label` and `input` elements) c
 
 ```html
 <label for="first_name" style="color:#dd0000">First Name</label>
-<input type="text" id="first_name" autocomplete="given-name" style="border:1px solid #dd0000" aria-invalid="true">
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #dd0000" aria-invalid="true">
 <label for="last_name" style="color:#333333">Last Name</label>
-<input type="text" id="last_name" autocomplete="family-name" style="border:1px solid #b0b0b0" value="Doe">
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #b0b0b0" value="Doe">
 ```
 
 ### Inapplicable

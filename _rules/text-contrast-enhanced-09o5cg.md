@@ -99,14 +99,19 @@ This dark gray text has a contrast ratio between 12.6:1 and 7:1 on the white to 
 
 #### Passed Example 3
 
-This light gray text has a contrast ratio between 18:1 and 7:1 on the background image.
+This white text has a contrast ratio between 18:1 and 7:1 on the background image.
 
 ```html
-<p
-	style="color: #EEE; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
->
-	Black hole sun
-</p>
+<style>
+p {
+	color: #FFF;
+	height: 50px;
+	padding-top: 15px;
+	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+	text-shadow: 0px 0px 2px black;
+}
+</style>
+<p>Black hole sun</p>
 ```
 
 #### Passed Example 4

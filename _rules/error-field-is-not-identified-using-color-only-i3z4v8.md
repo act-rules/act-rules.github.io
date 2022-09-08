@@ -4,7 +4,7 @@ name: Error field is not identified using color differences only
 rule_type: atomic
 description: |
   This rule checks that error fields can be identified not only by color differences but through another visual means.
-accessibility_requirements: # Remove whatever is not applicable
+accessibility_requirements:
   wcag21:1.4.1: # Use of Color (A)
     forConformance: true
     failed: not satisfied

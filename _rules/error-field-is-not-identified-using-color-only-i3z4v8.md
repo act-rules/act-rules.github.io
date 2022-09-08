@@ -18,9 +18,13 @@ acknowledgments:
     -  Giacomo Petri
 ---
 
+## Description
+
+This rule checks that errors are not identified only through color differences.
+
 ## Applicability
 
-This rule applies to any error field that is [visible][].
+This rule applies to any [visible][] input error with its context.
 
 ## Expectation
 

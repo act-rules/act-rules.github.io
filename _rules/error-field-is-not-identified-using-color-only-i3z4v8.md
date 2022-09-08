@@ -129,3 +129,14 @@ There are no error fields.
 ```html
 <p>This is a paragraph.</p>
 ```
+
+#### Inapplicable Example 2
+
+There are no error fields.
+
+```html
+<label for="first_name" style="color:#000;">First Name</label>
+<input type="text" id="first_name" autocomplete="given-name" required style="border:1px solid #000" value="John">
+<label for="last_name" style="color:#000">Last Name</label>
+<input type="text" id="last_name" autocomplete="family-name" required style="border:1px solid #000" value="Doe">
+```

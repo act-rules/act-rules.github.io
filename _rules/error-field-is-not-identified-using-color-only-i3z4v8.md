@@ -24,7 +24,7 @@ This rule checks that errors are not identified only through color differences.
 
 ## Applicability
 
-This rule applies to any [visible][] input error with its context.
+This rule applies to any [visible][] input error together with its visual context.
 
 ## Expectation
 

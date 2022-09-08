@@ -26,12 +26,11 @@ acknowledgments:
 
 This rule applies to any [HTML][] `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
 
-- **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
-- **disabled**: the element is a [disabled element]; or
-- **fixed value**: the element is an `input` element with a `type` [attribute value][] of `hidden`, `button`, `submit` or `reset`; or
-- **fixed value**: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
-- **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
-- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
+- <dfn id=73f2c2:toggle>toggle</dfn>: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
+- <dfn id=73f2c2:disabled>disabled</dfn>: the element is a [disabled element]; or
+- <dfn id=73f2c2:fixed-value>fixed value</dfn>: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
+- <dfn id=73f2c2:hidden>hidden</dfn>: the element is not [visible][], and not [included in the accessibility tree][]; or
+- <dfn id=73f2c2:static>static</dfn>: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
 ## Expectation
 
@@ -67,7 +66,8 @@ Many browsers provide auto-filling suggestions even when the control's `type` [a
 
 The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
-The intent of **fixed value** list item in Applicability section is to clearly define to which `input` element's `type` attribute [attribute value][] the `autocomplete` attribute applies.
+The [fixed value](#73f2c2:fixed-value) condition in the Applicability is excluding `input` elements who do not consider the `autocomplete` attribute, based on their `type` [attribute value][]; `input` elements with a `type` [attribute value][] of `hidden` are excluded by the [hidden](#73f2c2:hidden) condition.
+
 On an `input` element with a `type` [attribute value][] of `hidden`, the autocomplete attribute wears the [autofill anchor mantle](https://html.spec.whatwg.org/#autofill-anchor-mantle), describing the meaning of the given value. In all other cases, it wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
 
 ### Bibliography
@@ -254,7 +254,7 @@ This `autocomplete` attribute is inapplicable because it has the `off` value.
 
 #### Inapplicable Example 8
 
-The `autocomplete` attribute does not apply to `input` type `submit` elements.
+This `input` element has a [fixed value](#73f2c2:fixed-value) due to its `type` [attribute value][] of `submit`. `autocomplete` does not apply to Submit buttons.
 
 ```html
 <input type="submit" autocomplete="off"/>
@@ -262,7 +262,7 @@ The `autocomplete` attribute does not apply to `input` type `submit` elements.
 
 #### Inapplicable Example 9
 
-Even if the input explicitly specify the amount of the transactions and user agents could use transaction amount information to suggest for example a credit card that has sufficient balance, the element is not [visible][], and not [included in the accessibility tree][]
+This `input` element is [hidden](#73f2c2:hidden) because of its `type` [attribute value][] of `hidden` (following standard [User Agent stylesheet recommendations](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements). Knowing the transaction amount may still be used in other fields, e.g. to suggest a card with sufficient balance; this is not tested by this rule.
 
 ```html
 <input type="hidden" autocomplete="transaction-amount" value="100.00">

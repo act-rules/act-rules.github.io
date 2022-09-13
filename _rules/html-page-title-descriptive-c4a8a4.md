@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the [document title][] of each [html web page][].
+This rule applies to the first [document title][] of each [html web page][] that contains [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Expectation
 

@@ -24,7 +24,7 @@ This rule checks that errors are not identified only through color differences.
 
 ## Applicability
 
-This rule applies to any [visible][] input error together with its visual context.
+This rule applies to any [visible][] [input error][] together with its visual context.
 
 ## Expectation
 
@@ -158,4 +158,5 @@ Error field is not visible.
 </div>
 ```
 
+[input error]: https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html#dfn-input-error 'Definition of input error from WCAG 2.1 success criterion 3.3.1 Error Identification'
 [visible]: #visible 'Definition of Visible'

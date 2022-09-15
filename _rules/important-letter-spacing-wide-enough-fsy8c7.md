@@ -199,7 +199,7 @@ There is no HTML element.
 This `div` element has no text node child.
 
 ```html
-<div style="letter-spacing: 2px !important; border-top: 1px solid black;">
+<div style="letter-spacing: 0.1em !important; border-top: 1px solid black;">
 	<!-- empty div, border to make it "visible" -->
 </div>
 ```
@@ -288,6 +288,7 @@ The `p` element has no text node child. The [computed][] value of the `letter-sp
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [declared]: https://www.w3.org/TR/css-cascade-4/#declared 'CSS Cascading and Inheritance Level 4 (Working draft) - Declared Values'
+[html element]: #namespaced-element
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
@@ -298,4 +299,3 @@ The `p` element has no text node child. The [computed][] value of the `letter-sp
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
-[html element]: #namespaced-element

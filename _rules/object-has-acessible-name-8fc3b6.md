@@ -83,7 +83,7 @@ This `object` element which embeds a video resource has a non-empty [accessible 
 This `object` element which embeds an image resource has a non-empty [accessible name][] through its `aria-labelledby` attribute.
 
 ```html
-<span id="label">W3C</span> <object aria-labelledby="label" data="/test-assets/shared/w3c-logo.png"></object>
+<span id="label">W3C logo</span> <object aria-labelledby="label" data="/test-assets/shared/w3c-logo.png"></object>
 ```
 
 #### Passed Example 4

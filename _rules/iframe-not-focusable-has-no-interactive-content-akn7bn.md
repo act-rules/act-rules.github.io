@@ -80,7 +80,7 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 
 #### Failed Example 1
 
-This `iframe` element contains a [visible][] link that is part of its [flattened tabindex-ordered focus navigation scope][], and has a negative `tabindex`.
+This `iframe` element contains a [visible][] link that is part of its [sequential focus navigation order][], and has a negative `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
@@ -90,7 +90,7 @@ This `iframe` element contains a [visible][] link that is part of its [flattened
 
 #### Inapplicable Example 1
 
-This `iframe` element contains no content that is part of its [flattened tabindex-ordered focus navigation scope][].
+This `iframe` element contains no content that is part of its [sequential focus navigation order][].
 
 ```html
 <iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>
@@ -114,7 +114,7 @@ This `iframe` element contains no [visible][] content because of the small size 
 
 #### Inapplicable Example 4
 
-This `iframe` element contains a link that is not part of its [flattened tabindex-ordered focus navigation scope][] because of its own `tabindex`.
+This `iframe` element contains a link that is not part of its [sequential focus navigation order][] because of its own `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>

@@ -1,12 +1,12 @@
 ---
-id: 24afc2
-name: DEPRECATED - Letter spacing in style attributes is not !important
+id: fsy8c7
+name: Important letter spacing in style attributes is wide enough
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
-    forConformance: true
+    forConformance: true 
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -16,32 +16,31 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
-    - Jey Nandakumar
-  funding:
-    - WAI-Tools
-deprecated: |
-  This rule has been deprecated and superseded by Rule [Important letter spacing in style attributes is wide enough](https://act-rules.github.io/rules/fsy8c7). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability
 
-This rule applies to any [HTML element][] that is [visible][] and for which the `style` attribute [declares][declared] the [letter-spacing][] CSS property.
+This rule applies to any [HTML element][] for which all the following are true:
+
+- the element is has at least one [visible][] text node children; and
+- the [specified][] `letter-spacing` property of the element is [declared][] in a `style` attribute; and
+- the [computed][] `letter-spacing` property is [important][].
+
+The [specified][] `letter-spacing` of the element may be inherited from an ancestor, therefore the test targets do not necessarily have a `style` attribute.
 
 ## Expectation
 
-For each test target, at least one of the following is true:
-
-- **not important**: the [computed][] value of its [letter-spacing][] property is not [important][]; or
-- **wide enough**: the [computed][] value of its [letter-spacing][] property is at least 0.12 times the [computed][] value of its [font-size][] property; or
-- **cascade**: the [cascaded][] value of its [letter-spacing][] property is not a value [declared][] in its `style` attribute.
+For each test target, the [computed][] value of its `letter-spacing` property is at least 0.12 times the [computed][] value of its `font-size` property.
 
 ## Assumptions
 
-- There is no mechanism available on the page to adjust [letter-spacing][]. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
+- There is no mechanism available on the page to adjust `letter-spacing`. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
 - This rule assumes that WCAG's meaning for the "Letter spacing style property" is the value of the CSS `letter-spacing` property rather than the actual space between letters. The value of the CSS property is _added_ to whichever spacing already exist (for example, due to kerning). Thus, the actual space between letters can be larger than the value of the `letter-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between letters, then this rule may fail (with the `letter-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
 
 - This rule assumes that when inter-letters space is changed because of justification, the `letter-spacing` property is not changed. Therefore, whether a text is justified or not doesn't change the result of this rule. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148].
+
+- This rule assumes that at least one text node child of the target express something in a human language written in a script that that uses the `letter-spacing` property.
 
 ## Accessibility Support
 
@@ -65,17 +64,7 @@ CSS specifications define each declaration as being either [important][] (if it 
 
 #### Passed Example 1
 
-This `p` element has a **not [important][]** [computed][] `letter-spacing`.
-
-```html
-<p style="letter-spacing: 0.1em">
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
-```
-
-#### Passed Example 2
-
-This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size, which is **wide enough**.
+This `p` element has a [computed][] `letter-spacing` of 0.15 time the `font-size`.
 
 ```html
 <p style="letter-spacing: 0.15em !important">
@@ -83,9 +72,9 @@ This `p` element has a [computed][] `letter-spacing` of 0.15 time the font size,
 </p>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
-This `p` element has a [computed][] [letter-spacing][] of `3px`, which is **wide enough** (the threshold is `3px`).
+This `p` element has a [computed][] `letter-spacing` of `3px`, which is exactly 0.12 the `font-size`.
 
 ```html
 <style>
@@ -99,9 +88,9 @@ This `p` element has a [computed][] [letter-spacing][] of `3px`, which is **wide
 </p>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, and is **wide enough**.
+This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
 
 ```html
 <p style="letter-spacing: 0.1em !important; letter-spacing: 0.15em !important">
@@ -109,9 +98,9 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 </p>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, and is **wide enough**.
+This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
 
 ```html
 <p style="letter-spacing: 0.15em !important; letter-spacing: 0.1em">
@@ -119,44 +108,28 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 </p>
 ```
 
+#### Passed Example 5
+
+The `div` element has no text node child. The [computed][] `letter-spacing` of the `p` element is `2px`, 0.2 times its [computed][] `font-size` of `10px`
+
+```html
+<div style="font-size: 16px; letter-spacing: 2px !important">
+	<p style="font-size: 10px;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</p>
+</div>
+```
+
 #### Passed Example 6
 
-The [cascaded][] value of the `letter-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]). Thus, the `p` element matches the **cascade** condition.
+The `div` element has no text node child. The [computed][] `letter-spacing` of the `p` element is 0.2 times its `font-size`.
 
 ```html
-<style>
-	p {
-		letter-spacing: 0.1em !important;
-	}
-</style>
-
-<p style="letter-spacing: 0.15em">
-	The toy brought back fond memories of being lost in the rain forest.
-</p>
-```
-
-#### Passed Example 7
-
-The [computed][] value of the `letter-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
-
-```html
-<p style="letter-spacing: 0.1em">
-	<span style="letter-spacing: inherit !important;">
+<div style="letter-spacing: 0.1em !important">
+	<p style="letter-spacing: 0.2em !important;">
 		The toy brought back fond memories of being lost in the rain forest.
-	</span>
-</p>
-```
-
-#### Passed Example 8
-
-The [computed][] value of the `letter-spacing` property of this `p` element is **not [important][]**. The [computed][] value of the `letter-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore also **not [important][]**.
-
-```html
-<p style="letter-spacing: 0.1em">
-	<span style="letter-spacing: unset !important;">
-		The toy brought back fond memories of being lost in the rain forest.
-	</span>
-</p>
+	</p>
+</div>
 ```
 
 ### Failed
@@ -221,7 +194,17 @@ There is no HTML element.
 
 #### Inapplicable Example 2
 
-This `p` element is not [visible][] because of `display: none`.
+This `div` element has no text node child.
+
+```html
+<div style="letter-spacing: 2px !important; border-top: 1px solid black;">
+	<!-- empty div, border to make it "visible" -->
+</div>
+```
+
+#### Inapplicable Example 3
+
+This `p` element has no [visible][] text node child because of `display: none`.
 
 ```html
 <p style="display: none; letter-spacing: 0.1em !important;">
@@ -229,9 +212,9 @@ This `p` element is not [visible][] because of `display: none`.
 </p>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 4
 
-This `p` element is not [visible][] because it is positioned off-screen.
+This `p` element has no [visible][] text node child because it is positioned off-screen.
 
 ```html
 <p style="position: absolute; top: -999em; letter-spacing: 0.1em !important;">
@@ -239,9 +222,9 @@ This `p` element is not [visible][] because it is positioned off-screen.
 </p>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
-The `style` attribute of this `p` element does not [declare][declared] the `letter-spacing` property.
+This `p` element's `letter-spacing` property is not [declared][] in a `style` attribute.
 
 ```html
 <p style="width: 60%">
@@ -249,18 +232,66 @@ The `style` attribute of this `p` element does not [declare][declared] the `lett
 </p>
 ```
 
+#### Inapplicable Example 6
+
+The [specified][] value of the `letter-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
+
+```html
+<style>
+	p {
+		letter-spacing: 0.1em !important;
+	}
+</style>
+
+<p style="letter-spacing: 0.15em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Inapplicable Example 7
+
+This `p` element has a not [important][] [computed][] `letter-spacing`.
+
+```html
+<p style="letter-spacing: 0.1em">
+	The toy brought back fond memories of being lost in the rain forest.
+</p>
+```
+
+#### Inapplicable Example 8
+
+The `p` element has no text node child. The [computed][] value of the `letter-spacing` property of the `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+
+```html
+<p style="letter-spacing: 0.1em">
+	<span style="letter-spacing: inherit !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
+#### Inapplicable Example 9
+
+The `p` element has no text node child. The [computed][] value of the `letter-spacing` property of the `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+
+```html
+<p style="letter-spacing: 0.1em">
+	<span style="letter-spacing: unset !important;">
+		The toy brought back fond memories of being lost in the rain forest.
+	</span>
+</p>
+```
+
 [author origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-author 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - Author Origin'
 [cascade sort]: https://www.w3.org/TR/css-cascade-4/#cascade-sort 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascade Sort'
-[cascaded]: https://www.w3.org/TR/css-cascade-4/#cascaded 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascaded Values'
 [computed]: https://www.w3.org/TR/css-cascade-4/#computed 'CSS Cascading and Inheritance Level 4 (Working draft) - Computed Values'
 [declared]: https://www.w3.org/TR/css-cascade-4/#declared 'CSS Cascading and Inheritance Level 4 (Working draft) - Declared Values'
-[font-size]: https://www.w3.org/TR/css-fonts-4/#propdef-font-size 'CSS Fonts Module Level 4 (Working draft) - Font size: the font-size property'
 [important]: https://www.w3.org/TR/css-cascade-4/#importance 'CSS Cascading and Inheritance Level 4 (Working draft) - Importance'
 [inherited]: https://www.w3.org/TR/css-cascade-4/#inheriting 'CSS Cascading and Inheritance Level 4 (Working draft) - Inherited Values'
-[letter-spacing]: https://www.w3.org/TR/css-text-3/#propdef-letter-spacing 'CSS Text Module Level 3 - Tracking: the letter-spacing property'
 [normal]: https://www.w3.org/TR/css-cascade-4/#normal 'CSS Cascading and Inheritance Level 4 (Working draft) - Normal declarations'
 [sc1412]: https://www.w3.org/TR/WCAG21/#text-spacing 'Success Criterion 1.4.12 Text Spacing'
 [sc148]: https://www.w3.org/TR/WCAG21/#visual-presentation 'Success Criterion 1.4.8 Visual Presentation'
+[specified]: https://www.w3.org/TR/css-cascade-4/#specified 'CSS Cascading and Inheritance Level 4 (Working draft) - Specified Values'
 [specificity]: https://www.w3.org/TR/selectors/#specificity 'CSS Selectors Level 4 (Working draft) - Specificity'
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'

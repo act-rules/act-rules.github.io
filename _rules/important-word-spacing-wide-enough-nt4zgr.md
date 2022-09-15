@@ -252,7 +252,7 @@ The [specified][] value of the `word-spacing` property of this `p` element is [d
 
 #### Inapplicable Example 7
 
-This `p` element has a not [important][] [computed][] `word-spacing`.
+This `p` element does not have an [important][] [computed][] `word-spacing`.
 
 ```html
 <p style="word-spacing: 0.1em">

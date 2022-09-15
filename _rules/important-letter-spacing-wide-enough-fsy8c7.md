@@ -76,7 +76,7 @@ This `p` element has a [computed][] `letter-spacing` of 0.15 time the `font-size
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `letter-spacing` of `3px`, which is exactly 0.12 the `font-size`.
+This `p` element has a [computed][] `letter-spacing` of `3px`, which is exactly 0.12 the `font-size` of `25px`.
 
 ```html
 <style>
@@ -252,7 +252,7 @@ The [specified][] value of the `letter-spacing` property of this `p` element is 
 
 #### Inapplicable Example 7
 
-This `p` element has a not [important][] [computed][] `letter-spacing`.
+This `p` element does not have an [important][] [computed][] `letter-spacing`.
 
 ```html
 <p style="letter-spacing: 0.1em">

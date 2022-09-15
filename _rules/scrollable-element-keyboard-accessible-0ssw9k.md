@@ -146,13 +146,13 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 </style>
 <h1>Our sponsors:</h1>
 <section>
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
-	<img src="/test-assets/shared/eu-logo.svg" alt="EU logo" />
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
-	<img src="/test-assets/shared/eu-logo.svg" alt="EU logo" />
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
-	<img src="/test-assets/shared/eu-logo.svg" alt="EU logo" />
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/eu-logo.svg" alt="EU" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 </section>
 ```
 

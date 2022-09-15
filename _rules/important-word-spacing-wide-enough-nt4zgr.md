@@ -36,11 +36,13 @@ For each test target, the [computed][] value of its `word-spacing` property is a
 
 - There is no mechanism available on the page to adjust `word-spacing`. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
+- The font size is constant for all text in the element. If `font-size` changes (e.g., through use of the `::first-line` pseudo-element) then the required word spacing would also change throughout the element. This is untested by the current rule.
+
 - This rule assumes that WCAG's meaning for the "Word spacing style property" is the value of the CSS `word-spacing` property rather than the actual space between words. The value of the CSS property is _added_ to whichever spacing already exist (for example, the size of the space character). Thus, the actual space between words is larger than the value of the `word-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between words, then this rule may fail (with the `word-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
 
 - This rule assumes that when inter-words space is changed because of justification, the `word-spacing` property is not changed (the change occurs on the width of the space character between the words). Therefore, whether a text is justified or not doesn't change the result of this rule. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148].
 
-- This rule assumes that at least one text node child of the target express something in a human language written in a script that that uses the `letter-spacing` property.
+- At least one text node child of the element express something in a human language written in a script that that uses the `letter-spacing` property.
 
 ## Accessibility Support
 

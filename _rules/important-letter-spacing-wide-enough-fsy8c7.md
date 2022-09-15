@@ -6,7 +6,7 @@ description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
 accessibility_requirements:
   wcag21:1.4.12: # Text Spacing (AA)
-    forConformance: true 
+    forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -36,11 +36,13 @@ For each test target, the [computed][] value of its `letter-spacing` property is
 
 - There is no mechanism available on the page to adjust `letter-spacing`. If there is such a mechanism, it is possible to fail this rule while [Success Criterion 1.4.12 Text Spacing][sc1412] is still satisfied.
 
+- The font size is constant for all text in the element. If `font-size` changes (e.g., through use of the `::first-line` pseudo-element) then the required letter spacing would also change throughout the element. This is untested by the current rule.
+
 - This rule assumes that WCAG's meaning for the "Letter spacing style property" is the value of the CSS `letter-spacing` property rather than the actual space between letters. The value of the CSS property is _added_ to whichever spacing already exist (for example, due to kerning). Thus, the actual space between letters can be larger than the value of the `letter-spacing` property. If [Success Criterion 1.4.12 Text Spacing][sc1412] is concerned by the actual space between letters, then this rule may fail (with the `letter-spacing` property being too small) while the Success Criterion is still satisfied (with the actual space being enough).
 
 - This rule assumes that when inter-letters space is changed because of justification, the `letter-spacing` property is not changed. Therefore, whether a text is justified or not doesn't change the result of this rule. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148].
 
-- This rule assumes that at least one text node child of the target express something in a human language written in a script that that uses the `letter-spacing` property.
+- At least one text node child of the element express something in a human language written in a script that that uses the `letter-spacing` property.
 
 ## Accessibility Support
 

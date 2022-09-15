@@ -31,11 +31,9 @@ acknowledgments:
 This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
 
 - the element is [visible][]; and
-- the element is part of the [flattened tabindex-ordered focus navigation scope][] of the `iframe`.
+- the element is part of the [sequential focus navigation order][] of the `iframe`'s [document][].
 
 An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
-
-The [flattened tabindex-ordered focus navigation scope][] of an `iframe` is essentially the [sequential focus navigation][] order inside its content.
 
 ## Expectation
 
@@ -51,7 +49,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-Inside a page, each nested document (mostly, content of an `iframe` element) has its own [tabindex-ordered focus navigation scope][] which is the local tab-order inside this document. Then, all of these are grouped together in a [flattened tabindex-ordered focus navigation scope][] which is effectively the tab-order of the full page. By setting the `tabindex` attribute of a [focus navigation scope owner][] (mostly, an `iframe` element) to a negative value, it is excluded from its containing document's [tabindex-ordered focus navigation scope][]; and therefore its own [tabindex-ordered focus navigation scope][] is excluded from the global [flattened tabindex-ordered focus navigation scope][]. That is, a `button` may be in tab-order of a document, but if that document is included in another page via an `iframe` with negative `tabindex`, then the `button` is not in the tab-order of that page; and therefore not keyboard accessible.
+Inside a page, each nested document (mostly, content of an `iframe` element) has its own [sequential focus navigation order][] which is the local tab-order inside this document. Then, all of these are grouped together in a [flattened tabindex-ordered focus navigation scope][] which is effectively the tab-order of the full page. Setting the `tabindex` attribute of an `iframe` element to a negative value effectively excludes its content from the global tab-order of the page (when building the [tabindex-ordered focus navigation scope][] of the page). That is, a `button` may be in tab-order of a document, but if that document is included in another page via an `iframe` with negative `tabindex`, then the `button` is not in the tab-order of that page; and therefore not keyboard accessible.
 
 ### Bibliography
 
@@ -124,11 +122,11 @@ This `iframe` element contains a link that is not part of its [flattened tabinde
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
+[document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
-[focus navigation scope owner]: https://html.spec.whatwg.org/multipage/interaction.html#focus-navigation-scope-owner
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
-[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
+[sequential focus navigation order]: https://html.spec.whatwg.org/multipage/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope
 [visible]: #visible 'Definition of visible'

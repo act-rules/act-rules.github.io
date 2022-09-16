@@ -159,6 +159,24 @@ This `<title>` element, the first of two, does not describe the content of the d
 </html>
 ```
 
+#### Failed Example 3
+
+This `<title>` element is empty, thus does not describe the purpose of the page.
+
+```html
+<html lang="en">
+	<head>
+		<title>First title is incorrect</title>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

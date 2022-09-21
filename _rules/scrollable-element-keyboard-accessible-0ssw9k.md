@@ -248,7 +248,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 
 #### Inapplicable Example 6
 
-This `iframe` element is an embedded [scrollable element][scrollable].
+This `iframe` element is not a scrollable element, but instead contains a nested browsing context that is scrollable. These must be tested separately.
 
 ```html
 <iframe src="https://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>

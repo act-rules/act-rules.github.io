@@ -183,6 +183,14 @@ The `aria-orientation` property may not be used on `audio` element, nor it can b
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
 ```
 
+#### Failed Example 3
+
+The `aria-label` property may not be used on a `generic` element as it [prohibited from being named](https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited).
+
+```html
+<div aria-label="Bananas"></div>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

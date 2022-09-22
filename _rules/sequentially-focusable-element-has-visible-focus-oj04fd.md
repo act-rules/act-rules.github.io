@@ -145,6 +145,19 @@ The first [focusable][] element does not have any pixel changing color when it i
 <button class="no-focus-default">Dummy button</button>
 ```
 
+#### Failed Example 2
+
+The single link on the page has no visible focus.
+
+```html
+<style>
+	a:focus {
+		outline: none;
+	}
+</style>
+<a href="https://w3.org/WAI/">W3C, Web Accessibility Initiative</a>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

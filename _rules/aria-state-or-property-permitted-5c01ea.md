@@ -187,7 +187,7 @@ The `aria-orientation` property may not be used on `audio` element, nor it can b
 
 #### Failed Example 3
 
-The `aria-label` property may not be used on a `generic` element as it [prohibited from being named](https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited).
+The `aria-label` property may not be used on an element with a `generic` role as it is [prohibited from being named](https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited).
 
 ```html
 <div aria-label="Bananas"></div>

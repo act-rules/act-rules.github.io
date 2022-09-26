@@ -199,7 +199,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 ```html
 <html lang="en">
-	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
+	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
 	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>

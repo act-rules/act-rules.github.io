@@ -27,21 +27,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic][semantic role] `heading` element that is either [visible][] or [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][].
 
-## Expectation 1
+## Expectation
 
-For each target element at least one of the following is true:
-
-- the target element is not [visible][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target element in tree order in the [flat tree][].
-
-## Expectation 2
-
-For each target element at least one of the following is true:
-
-- the target element is not [included in the accessibility tree][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
+Each target element describes the topic or purpose of the first non-[decorative][] [palpable content][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
@@ -55,8 +45,11 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+Visible headings that are not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246]. 
+
 ### Bibliography
 
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
 - [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
@@ -91,17 +84,6 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][], with a default aria-level assigned.
-
-```html
-<html lang="en">
-	<span role="heading">Opening Hours</span>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Passed Example 4
-
 Heading marked up with `h1` element with an image that describes the topic or purpose of the following [palpable content][].
 
 ```html
@@ -113,7 +95,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 </html>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 Heading marked up with `h1` element that is a single character that describes the topic or purpose of the following [palpable content][].
 
@@ -133,7 +115,7 @@ Heading marked up with `h1` element that is a single character that describes th
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
@@ -146,18 +128,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 </html>
 ```
 
-#### Passed Example 7
-
-Heading marked up with `h1` element that describes the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 aria-hidden="true">Opening Hours</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Passed Example 8
+#### Passed Example 6
 
 This heading describes the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
 
@@ -219,6 +190,17 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 5
 
+Heading marked up with `h1` element that describes the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<h1 aria-hidden="true">Opening Hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
+```
+
+#### Failed Example 6
+
 This heading does not describe the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
 
 ```html
@@ -254,16 +236,6 @@ Heading that is neither [visible][] to users, nor [included in the accessibility
 
 #### Inapplicable Example 3
 
-Empty heading marked up with `h1` is not [visible][].
-
-```html
-<html lang="en">
-	<h1></h1>
-</html>
-```
-
-#### Inapplicable Example 4
-
 Empty heading marked up with `role="heading"` is not [visible][].
 
 ```html
@@ -277,6 +249,7 @@ Empty heading marked up with `role="heading"` is not [visible][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML definition of Palpable Content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships ' Success Criterion 1.3.1 Info and Relationships'
 [sc246]: https://www.w3.org/TR/WCAG21/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

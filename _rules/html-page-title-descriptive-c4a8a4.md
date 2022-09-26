@@ -172,22 +172,5 @@ This `title` element is a child of an `svg` element.
 </svg>
 ```
 
-#### Failed Example 3
-
-This `<title>` element is empty.
-
-```html
-<html lang="en">
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2 'HTML definition of Document Title'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'

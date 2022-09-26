@@ -236,6 +236,16 @@ Heading that is neither [visible][] to users, nor [included in the accessibility
 
 #### Inapplicable Example 3
 
+Empty heading marked up with `h1` is not [visible][].
+
+```html
+<html lang="en">
+	<h1></h1>
+</html>
+```
+
+#### Inapplicable Example 4
+
 Empty heading marked up with `role="heading"` is not [visible][].
 
 ```html

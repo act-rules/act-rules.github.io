@@ -159,24 +159,6 @@ This `<title>` element, the first of two, does not describe the content of the d
 </html>
 ```
 
-#### Failed Example 3
-
-This `<title>` element is empty, thus does not describe the purpose of the page.
-
-```html
-<html lang="en">
-	<head>
-		<title>First title is incorrect</title>
-		<title></title>
-	</head>
-	<body>
-		<p>
-			Clementines will be ready to harvest from late October through February.
-		</p>
-	</body>
-</html>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -188,6 +170,23 @@ This `title` element is a child of an `svg` element.
   <title>This is a circle</title>
   <circle cx="150" cy="75" r="50" fill="green"></circle>
 </svg>
+```
+
+#### Failed Example 3
+
+This `<title>` element is empty.
+
+```html
+<html lang="en">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			Clementines will be ready to harvest from late October through February.
+		</p>
+	</body>
+</html>
 ```
 
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2 'HTML definition of Document Title'

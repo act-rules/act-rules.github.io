@@ -162,7 +162,7 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 
 #### Inapplicable Example 1
 
-This `section` element is not [scrollable][] because it has a [scroll distance][scrollable] of 0 in both directions.
+This `section` element has a [computed][] [overflow][] of `visible`. Because of this its [scroll distance][scrollable] will be 0, regardless of the element's content.
 
 ```html
 <section style="height: 95px; width: 500px;">

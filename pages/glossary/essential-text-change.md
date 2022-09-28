@@ -2,7 +2,7 @@
 title: Essential Text Change
 key: essential-text-change
 unambiguous: true
-objective: true
+objective: false
 input_aspects:
   - Accessibility tree
   - CSS styling

@@ -257,7 +257,7 @@ This `autocomplete` attribute is inapplicable because it has the `off` value.
 This `input` element has a [fixed value](#73f2c2:fixed-value) due to its `type` [attribute value][] of `submit`. `autocomplete` does not apply to Submit buttons.
 
 ```html
-<input type="submit" autocomplete="off"/>
+<input type="submit" autocomplete="email"/>
 ```
 
 #### Inapplicable Example 9

@@ -190,17 +190,6 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 5
 
-Heading marked up with `h1` element that describes the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 aria-hidden="true">Opening Hours</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Failed Example 6
-
 This heading does not describe the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
 
 ```html
@@ -251,6 +240,17 @@ Empty heading marked up with `role="heading"` is not [visible][].
 ```html
 <html lang="en">
 	<p role="heading" aria-level="1"></p>
+</html>
+```
+
+#### Inapplicable Example 5
+
+Heading marked up with `h1` element that is not [visible][], and is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<h1 aria-hidden="true"></h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
 

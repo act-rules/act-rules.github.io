@@ -38,9 +38,11 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-The `object` element is not rendered for presentational purposes. If the `object` is decorative and not [marked as decorative][] then the rule might fail but the success criterion might still be satisfied.
+_There are currently no assumptions_
 
 ## Accessibility Support
+
+Some screen readers announce `object` elements even if they do not have an accessible name, while other skip the element. If an `object` is used to render decorative content, to ensure it is ignored by all major screen readers a presentational role is necessary.
 
 The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
 
@@ -48,7 +50,7 @@ The [MIME type][] of the resource embedded in the `data` attribute impacts how t
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
-Non-supported media formats make screen readers render the text content of the element instead of other attributes. 
+Non-supported media formats make screen readers render the text content of the element instead of other attributes.
 
 `Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
@@ -151,7 +153,7 @@ This `object` element has an empty [accessible name][]. The `img` element inside
 
 #### Failed Example 6
 
-This `object` element has `alt` attribute, however this will not create an  [accessible name][]. Because of this the accessible name is empty.
+This `object` element has `alt` attribute, however this will not create an [accessible name][]. Because of this the accessible name is empty.
 
 ```html
 <object data="/test-assets/moon-audio/moon-speech.mp3" alt="Moon speech"></object>
@@ -159,10 +161,9 @@ This `object` element has `alt` attribute, however this will not create an  [acc
 
 ### Inapplicable
 
-
 #### Inapplicable Example 1
 
-This `object` element has an [explicit role][] of "img". 
+This `object` element has an [explicit role][] of "img".
 
 **Note**: Object elements with other roles may still require an accessible name. This is tested through other rules.
 
@@ -232,6 +233,6 @@ This `object` element does not need an accessible name because it loads no image
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'
 [explicit role]: #explicit-role 'Definition of Explicit role'
-[MIME type]: https://mimesniff.spec.whatwg.org/#mime-type-groups 'MIME Sniffing - Living Standard, 2022/01/17'
-[image MIME type]: https://mimesniff.spec.whatwg.org/#image-mime-type 'MIME Sniffing - Living Standard, 2022/01/17'
-[audio or video MIME types]: https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type 'MIME Sniffing - Living Standard, 2022/01/17'
+[mime type]: https://mimesniff.spec.whatwg.org/#mime-type-groups 'MIME Sniffing - Living Standard, 2022/01/17'
+[image mime type]: https://mimesniff.spec.whatwg.org/#image-mime-type 'MIME Sniffing - Living Standard, 2022/01/17'
+[audio or video mime types]: https://mimesniff.spec.whatwg.org/#audio-or-video-mime-type 'MIME Sniffing - Living Standard, 2022/01/17'

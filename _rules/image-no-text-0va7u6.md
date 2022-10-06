@@ -10,8 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.9: # Images of Text (No Exception) (AA)
+  wcag20:1.4.9: # Images of Text (No Exception) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

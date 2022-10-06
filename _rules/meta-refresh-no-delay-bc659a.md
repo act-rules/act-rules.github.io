@@ -12,11 +12,13 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.2.4: # Interruptions (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:3.2.5: # Change on Request (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

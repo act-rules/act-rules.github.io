@@ -44,7 +44,7 @@ For each test target, one of the following is true:
 
 ## Expectation 2
 
-Each test target is not [prohibited](https://www.w3.org/TR/wai-aria-1.2/#state_property_processing) on the [semantic role][] of the element on which it is specified.
+Each test target is not [prohibited][] on the [semantic role][] of the element on which it is specified.
 
 ## Assumptions
 
@@ -187,7 +187,7 @@ The `aria-orientation` property may not be used on `audio` element, nor it can b
 
 #### Failed Example 3
 
-The `aria-label` property may not be used on an element with a `generic` role as it is [prohibited from being named](https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited).
+The `aria-label` property is [prohibited][] for an element with a `generic` role.
 
 ```html
 <div aria-label="Bananas"></div>
@@ -226,3 +226,4 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
+[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

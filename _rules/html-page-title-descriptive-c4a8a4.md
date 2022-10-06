@@ -37,7 +37,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the [document title][] of each [html web page][] if this [document title][] contains [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+This rule applies to the [document title][] of each [html web page][] if this [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 

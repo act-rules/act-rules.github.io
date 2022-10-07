@@ -45,7 +45,7 @@ _There are currently no assumptions_
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have [semantic roles][] that inherit from the `input`, `menuitem` or `select` role; and
-- are not form field controls (this notably excludes `menu`, `option` or `tree`).
+- are form field controls (this notably excludes `menu`, `option` or `tree`).
 
 This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 

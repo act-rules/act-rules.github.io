@@ -41,11 +41,11 @@ The value of the attribute is unique across all other `id` attributes specified 
 
 ## Assumptions
 
-_There are currently no assumptions._
+No assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 

@@ -34,7 +34,7 @@ This rule assumes that documents with only one focusable element automatically s
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are No accessibility support issues known..
 
 ## Background
 

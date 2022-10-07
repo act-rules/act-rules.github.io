@@ -32,7 +32,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-_There are currently no assumptions_
+No assumptions.
 
 ## Accessibility Support
 

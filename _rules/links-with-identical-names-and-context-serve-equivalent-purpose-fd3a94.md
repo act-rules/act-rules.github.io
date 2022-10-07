@@ -60,7 +60,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 

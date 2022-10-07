@@ -57,7 +57,7 @@ For each test target there is at least one set of [instruments][instrument], whe
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+No accessibility support issues known.
 
 ## Background
 

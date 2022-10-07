@@ -45,7 +45,7 @@ The language of the page can be set by other methods than the `lang` attribute, 
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 

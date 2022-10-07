@@ -41,11 +41,11 @@ For each test target, there are no duplicated [attributes](https://www.w3.org/TR
 
 ## Assumptions
 
-_There are currently no assumptions._
+No assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+No accessibility support issues known.
 
 ## Background
 

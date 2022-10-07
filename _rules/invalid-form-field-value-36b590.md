@@ -74,11 +74,11 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-_There are currently no assumptions._
+No assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 
@@ -111,9 +111,11 @@ This multiple `input` elements share a [form field error indicator][] that ident
 
 ```html
 <form>
-	<p id="error"><strong>
-		Name and color cannot be empty. Please complete all required fields.
-	</strong></p>
+	<p id="error">
+		<strong>
+			Name and color cannot be empty. Please complete all required fields.
+		</strong>
+	</p>
 	<fieldset>
 		<legend>Shipping</legend>
 		<label for="name">Name (required)</label>

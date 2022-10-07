@@ -50,7 +50,7 @@ This rule does not consider and may produce incorrect results for:
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+No accessibility support issues known.
 
 ## Background
 

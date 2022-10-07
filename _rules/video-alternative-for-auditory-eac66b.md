@@ -56,7 +56,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are No accessibility support issues known..
 
 ## Background
 

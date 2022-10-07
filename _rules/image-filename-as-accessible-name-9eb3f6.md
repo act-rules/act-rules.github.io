@@ -58,11 +58,11 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-_There are currently no assumptions_
+No assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 

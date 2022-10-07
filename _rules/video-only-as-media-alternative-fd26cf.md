@@ -32,14 +32,13 @@ All the information contained in each target element is available as text (direc
 
 Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-
 ## Assumptions
 
 A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are No accessibility support issues known..
 
 ## Background
 

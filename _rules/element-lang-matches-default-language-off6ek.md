@@ -54,7 +54,7 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+_There are No accessibility support issues known.._
 
 ## Background
 

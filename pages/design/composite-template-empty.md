@@ -49,7 +49,7 @@ For each test target, the outcome of (at least one of | all of | any of etc.) th
 
 ## Assumptions
 
-_No assumptions._
+No assumptions.
 
 ## Accessibility Support
 

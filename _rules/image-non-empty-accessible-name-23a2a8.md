@@ -48,7 +48,7 @@ Each target element has an [accessible name][] that is not empty (`""`), or has 
 
 ## Assumptions
 
-_There are currently no assumptions._
+No assumptions.
 
 ## Accessibility Support
 

@@ -52,9 +52,9 @@ This rule applies to any `img`, `canvas` or `svg` element that is [visible][] an
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][] of that test target.
 
-## Assumptions
+## Assumptions.
 
-_There are currently no assumptions_
+No assumptions.
 
 ## Accessibility Support
 

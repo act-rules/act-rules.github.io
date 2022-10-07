@@ -51,7 +51,7 @@ This rule assumes that the video element is used to play a video (for example, n
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are No accessibility support issues known..
 
 ## Background
 

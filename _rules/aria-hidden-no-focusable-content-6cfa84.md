@@ -141,7 +141,7 @@ This `button` element is [focusable][], but not part of the [sequential focus na
 
 #### Passed Example 6
 
-This `svg` element with `aria-hidden` is a descendant of a focusable link, rather than an ancestor.
+This `svg` element with `aria-hidden` does not have a focusable descendant, focusable ancestors are not a problem for this rule.
 
 ```html
 <a href="#">

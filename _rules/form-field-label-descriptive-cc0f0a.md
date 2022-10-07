@@ -263,7 +263,7 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 [abstract]: https://www.w3.org/TR/wai-aria-1.2/#abstract_roles 'List of abstract roles'
 [accessible name]: #accessible-name 'Definition of accessible name'
-[aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.1'
+[aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.2'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

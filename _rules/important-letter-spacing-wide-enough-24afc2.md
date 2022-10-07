@@ -24,17 +24,18 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] for which all the following are true:
+This rule applies to any [visible][] [text node][] child of an [HTML element][], when all the following are true for its `letter-spacing` property:
 
-- the element is has at least one [visible][] text node children; and
-- the [specified][] `letter-spacing` property of the element is [declared][] in a `style` attribute; and
-- the [computed][] `letter-spacing` property is [important][].
+- the [specified][] value is [declared][] in a `style` attribute; and
+- the [computed][] value is [important][].
 
-The [specified][] `letter-spacing` of the element may be inherited from an ancestor, therefore the test targets do not necessarily have a `style` attribute.
+Where the `letter-spacing` property of a text node means the one of its parent.
 
 ## Expectation
 
 For each test target, the [computed][] value of its `letter-spacing` property is at least 0.12 times the [computed][] value of its `font-size` property.
+
+Where the `letter-spacing` property of a text node means the one of its parent.
 
 ## Assumptions
 
@@ -46,7 +47,7 @@ For each test target, the [computed][] value of its `letter-spacing` property is
 
 - This rule assumes that when inter-letters space is changed because of justification, the `letter-spacing` property is not changed. Therefore, whether a text is justified or not doesn't change the result of this rule. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148].
 
-- At least one text node child of the element express something in a human language written in a script that that uses the `letter-spacing` property.
+- The target text node expresses something in a human language written in a script that that uses the `letter-spacing` property.
 
 ## Accessibility Support
 
@@ -66,11 +67,13 @@ CSS specifications define each declaration as being either [important][] (if it 
 
 ## Test Cases
 
+Test cases description abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+
 ### Passed
 
 #### Passed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of 0.15 time the `font-size`.
+This text node has a [computed][] `letter-spacing` of 0.15 time the `font-size`.
 
 ```html
 <p style="letter-spacing: 0.15em !important">
@@ -80,7 +83,7 @@ This `p` element has a [computed][] `letter-spacing` of 0.15 time the `font-size
 
 #### Passed Example 2
 
-This `p` element has a [computed][] `letter-spacing` of `3px`, which is exactly 0.12 the `font-size` of `25px`.
+This text node has a [computed][] `letter-spacing` of `3px`, which is exactly 0.12 the `font-size` of `25px`.
 
 ```html
 <style>
@@ -96,7 +99,7 @@ This `p` element has a [computed][] `letter-spacing` of `3px`, which is exactly 
 
 #### Passed Example 3
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
+This text node has two [declared][] values for its `letter-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
 
 ```html
 <p style="letter-spacing: 0.1em !important; letter-spacing: 0.15em !important">
@@ -106,7 +109,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 
 #### Passed Example 4
 
-This `p` element has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
+This text node has two [declared][] values for its `letter-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.15em`, which is wide enough.
 
 ```html
 <p style="letter-spacing: 0.15em !important; letter-spacing: 0.1em">
@@ -116,7 +119,7 @@ This `p` element has two [declared][] values for its `letter-spacing` property. 
 
 #### Passed Example 5
 
-The `div` element has no text node child. The [computed][] `letter-spacing` of the `p` element is `2px`, 0.2 times its [computed][] `font-size` of `10px`
+This text node has a [computed][] `letter-spacing` of `2px`, 0.2 times its [computed][] `font-size` of `10px`
 
 ```html
 <div style="font-size: 16px; letter-spacing: 2px !important">
@@ -128,7 +131,7 @@ The `div` element has no text node child. The [computed][] `letter-spacing` of t
 
 #### Passed Example 6
 
-The `div` element has no text node child. The [computed][] `letter-spacing` of the `p` element is 0.2 times its `font-size`.
+This text node has a [computed][] `letter-spacing` of 0.2 times its `font-size`.
 
 ```html
 <div style="letter-spacing: 0.1em !important">
@@ -142,7 +145,7 @@ The `div` element has no text node child. The [computed][] `letter-spacing` of t
 
 #### Failed Example 1
 
-This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font size, which is below the required minimum.
+This text node has a [computed][] `letter-spacing` of only 0.1 times the font size, which is below the required minimum.
 
 ```html
 <p style="letter-spacing: 0.1em !important">
@@ -152,7 +155,7 @@ This `p` element has a [computed][] `letter-spacing` of only 0.1 times the font 
 
 #### Failed Example 2
 
-This `p` element has a [computed][] `letter-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the required minimum.
+This text node has a [computed][] `letter-spacing` of `2px` which is only 0.1 times the font size (`20px`), thus below the required minimum.
 
 ```html
 <style>
@@ -168,7 +171,7 @@ This `p` element has a [computed][] `letter-spacing` of `2px` which is only 0.1 
 
 #### Failed Example 3
 
-This `p` element has a [computed][] `letter-spacing` of 0.
+This text node has a [computed][] `letter-spacing` of 0.
 
 ```html
 <p style="letter-spacing: normal !important">
@@ -178,7 +181,7 @@ This `p` element has a [computed][] `letter-spacing` of 0.
 
 #### Failed Example 4
 
-This `p` element has a [computed][] `letter-spacing` of 0.
+This text node has a [computed][] `letter-spacing` of 0.
 
 ```html
 <p style="letter-spacing: initial !important">
@@ -200,7 +203,7 @@ There is no HTML element.
 
 #### Inapplicable Example 2
 
-This `div` element has no text node child.
+There is no text node.
 
 ```html
 <div style="letter-spacing: 0.1em !important; border-top: 1px solid black;">
@@ -210,7 +213,7 @@ This `div` element has no text node child.
 
 #### Inapplicable Example 3
 
-This `p` element has no [visible][] text node child because of `display: none`.
+There is no [visible][] text node because of `display: none`.
 
 ```html
 <p style="display: none; letter-spacing: 0.1em !important;">
@@ -220,7 +223,7 @@ This `p` element has no [visible][] text node child because of `display: none`.
 
 #### Inapplicable Example 4
 
-This `p` element has no [visible][] text node child because it is positioned off-screen.
+There is no [visible][] text node because it is positioned off-screen.
 
 ```html
 <p style="position: absolute; top: -999em; letter-spacing: 0.1em !important;">
@@ -230,7 +233,7 @@ This `p` element has no [visible][] text node child because it is positioned off
 
 #### Inapplicable Example 5
 
-This `p` element's `letter-spacing` property is not [declared][] in a `style` attribute.
+This text node's `letter-spacing` property is not [declared][] in a `style` attribute.
 
 ```html
 <p style="width: 60%">
@@ -240,7 +243,7 @@ This `p` element's `letter-spacing` property is not [declared][] in a `style` at
 
 #### Inapplicable Example 6
 
-The [specified][] value of the `letter-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
+The [specified][] value of the `letter-spacing` property of this text node is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
 
 ```html
 <style>
@@ -256,7 +259,7 @@ The [specified][] value of the `letter-spacing` property of this `p` element is 
 
 #### Inapplicable Example 7
 
-This `p` element does not have an [important][] [computed][] `letter-spacing`.
+This text node does not have an [important][] [computed][] `letter-spacing`.
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -266,7 +269,7 @@ This `p` element does not have an [important][] [computed][] `letter-spacing`.
 
 #### Inapplicable Example 8
 
-The `p` element has no text node child. The [computed][] value of the `letter-spacing` property of the `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+The [computed][] value of the `letter-spacing` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
 
 ```html
 <p style="letter-spacing: 0.1em">
@@ -278,7 +281,7 @@ The `p` element has no text node child. The [computed][] value of the `letter-sp
 
 #### Inapplicable Example 9
 
-The `p` element has no text node child. The [computed][] value of the `letter-spacing` property of the `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+The [computed][] value of the `letter-spacing` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
 
 ```html
 <p style="letter-spacing: 0.1em">

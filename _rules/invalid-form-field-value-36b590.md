@@ -30,6 +30,8 @@ This rule applies to each [HTML element][] that has one of the following [semant
 - `checkbox`,
 - `combobox`,
 - `listbox`,
+- `menuitemcheckbox`,
+- `menuitemradio`,
 - `radio`,
 - `searchbox`,
 - `slider`,
@@ -71,10 +73,8 @@ _There are no major accessibility support issues known for this rule._
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
 
-- inherit from the [abstract][] `input` or `select` role, and
-- do not have a [required context][] role that inherits from the [abstract][] `input` or `select` role.
-
-The `menu` role, even though it meets the conditions above, does not represent a form field and is not considered applicable to this rule.
+- inherit from the `input`, `menuitem` or `select` role, and
+- are not form field controls (this notably excludes `menu`, `option` or `tree`).
 
 This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
 

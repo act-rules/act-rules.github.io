@@ -74,7 +74,7 @@ _There are no major accessibility support issues known for this rule._
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
 
 - inherit from the `input`, `menuitem` or `select` role, and
-- are not form field controls (this notably excludes `menu`, `option` or `tree`).
+- are form field controls (this notably excludes `menu`, `option` or `tree`).
 
 This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
 

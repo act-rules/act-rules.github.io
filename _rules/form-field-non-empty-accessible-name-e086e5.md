@@ -138,10 +138,10 @@ This [semantic][semantic role] `checkbox` element has the text content as its [a
 These `menuitemcheckbox` elements have an [accessible name][] given by their associated `label`.
 
 ```html
-<div role="group">
-	Add a dip:<br />
-	<label><input type="checkbox" role="menuitemcheckbox" />Ketchup</label><br />
-	<label><input type="checkbox" role="menuitemcheckbox" />Mayonnaise</label>
+<p id="dip">Add one or more dip:</p>
+<div role="menu" aria-labelledby="dip">
+  <span role="menuitemcheckbox"><label><input type="checkbox" />Ketchup</label></span><br />
+  <span role="menuitemcheckbox"><label><input type="checkbox" />Mayonnaise</label>
 </div>
 ```
 
@@ -216,10 +216,10 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 These `menuitemcheckbox` elements do not have an [accessible name][].
 
 ```html
-<div role="group">
-	Add a dip:<br />
-	<input type="checkbox" role="menuitemcheckbox" />Ketchup<br />
-	<input type="checkbox" role="menuitemcheckbox" />Mayonnaise
+<p id="dip">Add one or more dip:</p>
+<div role="menu" aria-labelledby="dip">
+  <span role="menuitemcheckbox"><input type="checkbox" />Ketchup</span><br />
+  <span role="menuitemcheckbox"><input type="checkbox" />Mayonnaise
 </div>
 ```
 

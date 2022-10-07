@@ -19,7 +19,7 @@ This test checks if a table with caption does not contain a summary with the sam
 
 ## Assumptions
 
-There are no assumptions.yet
+No assumptions yet
 
 ## Test properties
 

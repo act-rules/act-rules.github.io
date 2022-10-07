@@ -21,7 +21,7 @@ _Editor note_: This rule is designed to replace (parts of) [SC1-1-1-text-alterna
 
 ## Assumptions
 
-\*There are currently There are no assumptions.
+_There are currently no assumptions_
 
 ## Test procedure
 

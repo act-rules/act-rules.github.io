@@ -16,7 +16,7 @@ This test checks that a page is properly organized using headings.
 
 ## Assumptions
 
-There are no assumptions.yet
+No assumptions yet
 
 ## Test properties
 

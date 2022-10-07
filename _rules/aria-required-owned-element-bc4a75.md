@@ -210,6 +210,20 @@ This element with the `menu` role only owns an element with a `group` role. The 
 </div>
 ```
 
+#### Failed Example 7
+
+This element with the `list` role owns an element with the `listitem` role and and element with the `group` role, in which each element has the `listitem` role. The `group` role is no longer [required owned element][] for the `list` role.
+
+```html
+<div role="list">
+	<span role="listitem">Item 1</span>
+	<div role="group">
+		<span role="listitem">Item 2</span>
+		<span role="listitem">Item 3</span>
+	</div>
+</div>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

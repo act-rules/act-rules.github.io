@@ -1,9 +1,9 @@
 ---
 id: b33eff
-name: Orientation of the page is not restricted using CSS transform property
+name: Orientation of the page is not restricted using CSS transforms
 rule_type: atomic
 description: |
-  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transform property.
+  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms
 accessibility_requirements:
   wcag21:1.3.4: # Orientation
     forConformance: true

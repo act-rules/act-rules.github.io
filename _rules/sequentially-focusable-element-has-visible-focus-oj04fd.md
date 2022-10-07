@@ -38,7 +38,7 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-Default styling in most user agents is providing perfectly valid focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
+Default styling in user agents provides a focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
 
 WCAG 2.0 and 2.1 do not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance][sc2411] and [Success Criterion 2.4.12 Focus Not Obscured (Minimum)][sc2412] specifying how big the focus indicator should be. All Examples in this rule satisfy those success criteria.
 
@@ -59,23 +59,23 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
+The [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
-<a href="https://act-rules.github.io/">ACT rules</a> <button>Dummy button</button>
+<a href="https://act-rules.github.io/">ACT rules</a>
 ```
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
+The [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
-<span tabindex="0">Act rules</span> <button>Dummy button</button>
+<span tabindex="0">Act rules</span>
 ```
 
 #### Passed Example 3
 
-The first [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element). The border's `hsl` value (`hsl(240, 100%, 25%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the border appears.
+The [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element). The border's `hsl` value (`hsl(240, 100%, 25%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the border appears.
 
 ```html
 <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
@@ -91,7 +91,6 @@ The first [focusable][] element is part of [sequential focus navigation][]. Its 
 		>ACT rules</a
 	>
 </span>
-<button>Dummy button</button>
 ```
 
 #### Passed Example 4
@@ -136,26 +135,11 @@ Each of these three [focusable][] elements has a blue square in front of it when
 
 #### Failed Example 1
 
-The first [focusable][] element does not have any pixel changing color when it is [focused][] because the default styling has been overwritten by a style that removes the outline.
+The [focusable][] element does not have any pixel changing color when it is [focused][] because the default styling has been overwritten by a style that removes the outline.
 
 ```html
 <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
-
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
-<button class="no-focus-default">Dummy button</button>
-```
-
-#### Failed Example 2
-
-The single link on the page has no visible focus.
-
-```html
-<style>
-	a:focus {
-		outline: none;
-	}
-</style>
-<a href="https://w3.org/WAI/">W3C, Web Accessibility Initiative</a>
 ```
 
 ### Inapplicable
@@ -183,14 +167,6 @@ None of the [focusable][] elements in this document are part of [sequential focu
 ```html
 <a tabindex="-1" href="https://act-rules.github.io/">ACT rules</a>
 <a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
-```
-
-#### Inapplicable Example 4
-
-The [sequential focus navigation order][sequential focus navigation] of this document contains only one element.
-
-```html
-<a href="https://act-rules.github.io/">ACT rules</a> <a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
 ```
 
 [focusable]: #focusable 'Definition of Focusable'

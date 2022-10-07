@@ -140,8 +140,11 @@ These `menuitemcheckbox` elements have an [accessible name][] given by their ass
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-  <span role="menuitemcheckbox"><label><input type="checkbox" />Ketchup</label></span><br />
-  <span role="menuitemcheckbox"><label><input type="checkbox" />Mayonnaise</label>
+	<input type="checkbox" role="menuitemcheckbox" id="ketchup" /><label for="ketchup" aria-hidden="true">Ketchup</label
+	><br />
+	<input type="checkbox" role="menuitemcheckbox" id="mayonnaise" /><label for="mayonnaise" aria-hidden="true"
+		>Mayonnaise</label
+	>
 </div>
 ```
 
@@ -218,8 +221,8 @@ These `menuitemcheckbox` elements do not have an [accessible name][].
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-  <span role="menuitemcheckbox"><input type="checkbox" />Ketchup</span><br />
-  <span role="menuitemcheckbox"><input type="checkbox" />Mayonnaise
+	<input type="checkbox" role="menuitemcheckbox" /><span aria-hidden="true">Ketchup</span><br />
+	<input type="checkbox" role="menuitemcheckbox" /><span aria-hidden="true">Mayonnaise</span>
 </div>
 ```
 

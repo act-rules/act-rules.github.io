@@ -65,6 +65,8 @@ Passing this rule does not mean that the text has sufficient color contrast. If 
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
+### Bibliography
+
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
 - [G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G17)
 - [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG21/Techniques/general/G18)
@@ -97,14 +99,19 @@ This dark gray text has a contrast ratio between 12.6:1 and 7:1 on the white to 
 
 #### Passed Example 3
 
-This light gray text has a contrast ratio between 18:1 and 7:1 on the background image.
+This white text has a contrast ratio between 18:1 and 7:1 on the background image.
 
 ```html
-<p
-	style="color: #EEE; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
->
-	Black hole sun
-</p>
+<style>
+p {
+	color: #FFF;
+	height: 50px;
+	padding-top: 15px;
+	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+	text-shadow: 0px 0px 2px black;
+}
+</style>
+<p>Black hole sun</p>
 ```
 
 #### Passed Example 4

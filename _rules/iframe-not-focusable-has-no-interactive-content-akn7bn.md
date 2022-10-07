@@ -1,6 +1,6 @@
 ---
 id: akn7bn
-name: iframe with negative tabindex has no interactive elements
+name: Iframe with negative tabindex has no interactive elements
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with a negative `tabindex` attribute value contain no interactive elements.
@@ -28,11 +28,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that has a negative number as a `tabindex` [attribute value][].
+This rule applies to any non-focusable `iframe` element that has [focusable][] content.
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not include elements that are [visible][] and part of the [sequential focus navigation][]. An element is "included" in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+For each test target, the [nested browsing context][] does not [contain](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
+
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Assumptions
 
@@ -45,6 +47,8 @@ There are no major accessibility support issues known for this rule.
 ## Background
 
 By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or some other negative number, it becomes impossible to move the focus into the [browsing context][nested browsing context] of the `iframe` element. Even though its content is still included in the [sequential focus navigation][], there is no way to move the focus to any of the items in the `iframe` using standard keyboard navigation.
+
+### Bibliography
 
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [WCAG Technique G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
@@ -63,7 +67,7 @@ This `iframe` element contains no content that is part of [sequential focus navi
 
 #### Passed Example 2
 
-This `iframe` element contains a link that, because of its `tabindex` is not part of [sequential focus navigation][].
+This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
@@ -75,6 +79,14 @@ This `iframe` element contains no [visible][] content because of the small size 
 
 ```html
 <iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Passed Example 4
+
+This `iframe` element contains no [visible][] content because the iframe is hidden.
+
+```html
+<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 ### Failed
@@ -104,3 +116,4 @@ This `iframe` element does not have a `tabindex` [attribute value][] that is a n
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [visible]: #visible 'Definition of visible'
+[focusable]: #focusable 'Definition of focusable'

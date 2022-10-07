@@ -1,6 +1,6 @@
 ---
 id: cae760
-name: '`iframe` element has non-empty accessible name'
+name: Iframe element has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each `iframe` element has a non-empty accessible name.
@@ -45,6 +45,8 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
 
 ## Background
+
+### Bibliography
 
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)

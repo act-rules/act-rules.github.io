@@ -37,7 +37,6 @@ Each test target has an [accessible name][] which describes its purpose.
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249].
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -45,7 +44,12 @@ Each test target has an [accessible name][] which describes its purpose.
 
 ## Background
 
+### Related rules
+
 - [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
 - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)

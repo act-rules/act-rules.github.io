@@ -1,6 +1,6 @@
 ---
 id: 3ea0c8
-name: '`id` attribute value is unique'
+name: Id attribute value is unique
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
@@ -48,6 +48,8 @@ _There are currently no assumptions._
 _There are no major accessibility support issues known for this rule._
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
 - [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)

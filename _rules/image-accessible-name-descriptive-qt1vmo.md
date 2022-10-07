@@ -54,13 +54,15 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-This rule assumes that the language of the [accessible name][] of each test target can be correctly determined (either programmatically or by analyzing the content).
+_There are currently no assumptions_
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+Some popular browser / screen reader combinations do not pronounce the accessible names of `svg` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
@@ -77,7 +79,7 @@ This `img` element has an `alt` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 </html>
 ```
 
@@ -87,7 +89,7 @@ This `svg` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="HTML 5">
+	<svg viewBox="0 0 512 512" aria-label="HTML 5" role="img">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -108,11 +110,14 @@ This `canvas` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<canvas id="act" width="200" height="60" aria-label="ACT Rules!"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="W3C logo"></canvas>
 	<script>
-		const ctx = document.querySelector('#act').getContext('2d')
-		ctx.font = '30px Arial'
-		ctx.fillText('ACT Rules!', 20, 40)
+		const img = new Image()
+		img.src = '/test-assets/shared/w3c-logo.png'
+		img.onload = function() {
+			const ctx = document.querySelector('#logo').getContext('2d')
+			ctx.drawImage(img, 0, 0)
+		}
 	</script>
 </html>
 ```
@@ -125,7 +130,7 @@ This `img` element has an `alt` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM logo" />
 </html>
 ```
 
@@ -135,7 +140,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="W3C">
+	<svg viewBox="0 0 512 512" aria-label="W3C" role="img">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -156,11 +161,14 @@ This `canvas` element has an `aria-label` attribute that incorrectly describes t
 
 ```html
 <html lang="en">
-	<canvas id="act" width="200" height="60" aria-label="HTML 5"></canvas>
+	<canvas id="logo" width="72" height="48" aria-label="HTML 5 logo"></canvas>
 	<script>
-		const ctx = document.querySelector('#act').getContext('2d')
-		ctx.font = '30px Arial'
-		ctx.fillText('ACT Rules!', 20, 40)
+		const img = new Image()
+		img.src = '/test-assets/shared/w3c-logo.png'
+		img.onload = function() {
+			const ctx = document.querySelector('#logo').getContext('2d')
+			ctx.drawImage(img, 0, 0)
+		}
 	</script>
 </html>
 ```
@@ -181,6 +189,7 @@ This decorative `img` element has an empty (`""`) [accessible name][] because it
 
 ```html
 <html lang="en">
+	<p>Happy new year!</p>
 	<img src="/test-assets/shared/fireworks.jpg" role="presentation" />
 </html>
 ```
@@ -226,7 +235,7 @@ This `img` element is not [visible][].
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" style="display:none" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" style="display:none" />
 </html>
 ```
 
@@ -286,6 +295,7 @@ This is a `div` element with a background image. Background images must be teste
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[explicit semantic role]: #explicit-role
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG 2.1 definition of non-text content'

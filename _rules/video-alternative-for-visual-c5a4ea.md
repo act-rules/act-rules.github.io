@@ -1,6 +1,6 @@
 ---
 id: c5a4ea
-name: '`video` element visual content has accessible alternative'
+name: Video element visual content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have an alternative for the video content as audio or as text.
@@ -10,13 +10,15 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.2.5: # Audio Description (Prerecorded) (AAA)
+  wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -50,6 +52,9 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Test Procedure
@@ -78,6 +83,8 @@ The HTML `video` element can also have a `track` element that provides an audio 
 ## Background
 
 This rule is designed specifically for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which expects either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][sc125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adequately test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][sc125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
@@ -117,7 +124,7 @@ A video element with a link to a text transcript.
 
 #### Passed Example 3
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
+This video element describes some of the text on the same page. The text identifies the video as an alternative.
 
 ```html
 <html lang="en">

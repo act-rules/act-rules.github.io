@@ -43,6 +43,8 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
@@ -114,7 +116,7 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 
 #### Failed Example 2
 
-This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
+This off-screen element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
 <html lang="en">

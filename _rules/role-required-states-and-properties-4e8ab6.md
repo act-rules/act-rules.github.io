@@ -1,6 +1,6 @@
 ---
 id: 4e8ab6
-name: Element with `role` attribute has required states and properties
+name: Element with role attribute has required states and properties
 rule_type: atomic
 description: |
   This rule checks that elements that have an explicit role also specify all required states and properties.
@@ -47,6 +47,10 @@ This rule relies on browsers and assistive technologies to support leaving out [
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ## Background
+
+This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
+
+### Bibliography
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.1/#requiredState)

@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: '`video` element visual content has strict accessible alternative'
+name: Video element visual content has strict accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have audio description.
@@ -34,6 +34,9 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -57,6 +60,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96) can not be relied upon to conform to [1.2.5: Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-prerecorded).
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)

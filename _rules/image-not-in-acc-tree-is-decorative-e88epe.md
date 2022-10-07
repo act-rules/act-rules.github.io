@@ -63,6 +63,8 @@ _No accessibility support issues known._
 
 ## Background
 
+### Bibliography
+
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67.html)
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 
@@ -194,7 +196,7 @@ This `canvas` element which has no [semantic role][] and an empty (`""`) [access
 This `img` element is [included in the accessibility tree][] because the `alt` attribute is not empty (`""`).
 
 ```html
-<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
 ```
 
 #### Inapplicable Example 2

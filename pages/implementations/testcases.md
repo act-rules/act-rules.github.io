@@ -4,11 +4,11 @@ title: Test Cases
 
 All ACT rules include a number of test cases, which are designed for easy consumption by accessibility test tools and test methodologies. Test cases are updated regularly as part of rule writing. All test cases are described in a JSON file:
 
- <a class='btn' href='/testcases.json'>
-  See the Test Cases JSON
+ <a class='btn' href='https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases.json'>
+	See the Test Cases JSON
  </a>
 
-**Note**: Based on the file extension specified for a test case within the examples code snippet (e.g.: html, svg, xhtml), the corresponding `DOCTYPE`, if applicable, is dynamically added to the generated HTML test case file.
+**Note**: HTML test cases are embedded in a small template which adds a `!DOCTYPE`, HTML root node with lang attribute, and head with a title. These are omitted for test cases with an HTML element or a `!DOCTYPE`.
 
 ## Test Case Format
 
@@ -24,19 +24,29 @@ In the `testcases.json` file, test cases are included on the `testcases` array, 
 
 ```json
 {
-  "name": "ACT-Rules Community test cases",
-  "license": "https://act-rules.github.io/pages/license/",
-  "count": 558,
-  "testcases": [
-    {
-      "testcaseId": "55f3ed0ec0f324514a0d223b737bc1e4c81593c7",
-      "url": "https://act-rules.github.io/testcases/5f99a7/55f3ed0ec0f324514a0d223b737bc1e4c81593c7.html",
-      "expected": "passed",
-      "ruleId": "5f99a7",
-      "ruleName": "ARIA attribute is valid",
-      "rulePage": "https://act-rules.github.io/rules/5f99a7",
-      "ruleAccessibilityRequirements": ["wcag20:4.1.2"]
-    }, ... ]
+	"name": "ACT Task Force test cases",
+	"website": "https://www.w3.org/WAI/standards-guidelines/act/rules/",
+	"license": "https://act-rules.github.io/pages/license/",
+	"count": 1132,
+	"testcases": [
+		{
+			"ruleId": "97a4e1",
+			"ruleName": "Button has non-empty accessible name",
+			"ruleAccessibilityRequirements": {
+				"wcag20:4.1.2": {
+					"forConformance": true,
+					"failed": "not satisfied",
+					"passed": "further testing needed",
+					"inapplicable": "further testing needed"
+				}
+			},
+			"expected": "passed",
+			"testcaseId": "a4cc71b0434f71f4ea0069c409f73e0207dfb403",
+			"testcaseTitle": "Passed Example 1",
+			"relativePath": "testcases/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
+			"url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
+			"rulePage": "https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/proposed/"
+		}, ... ]
 }
 ```
 
@@ -52,8 +62,8 @@ Correctness of an implementation is based on the results for test cases. See [im
 
 ## Contribute An Implementation
 
-If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the ACT-R website, there are two ways you can do so.
+If you developed an accessibility tool or a testing methodology, and would like to have your implementation included in the WAI website, there are two ways you can do so.
 
-1. If you have a tool that can return a data format, you will need to run your tests against the ACT-R test cases and [submit a report](../reporting/).
+1. If you have a tool that can return a data format, you will need to run your tests against the ACT rule's test cases and [submit a report](../reporting/).
 
-2. If you have a manual test methodology, where you fill results into some report template or tool, you can [Use the WCAG-EM Report Tool](../wcag-em-tool/) instead to produce implementation reports.
+2. If you have a manual test methodology where you fill results into some report template or semi-automated tool, you can [use the ACT Implementor tool](https://act-implementor.netlify.app/#/) instead to produce implementation reports.

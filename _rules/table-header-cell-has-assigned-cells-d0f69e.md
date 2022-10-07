@@ -48,6 +48,8 @@ This rule assumes that table header cells have a relationship conveyed through p
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
 
+### Bibliography
+
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]

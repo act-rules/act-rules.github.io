@@ -1,6 +1,6 @@
 ---
 id: 7d6734
-name: '`svg` element with explicit role has non-empty accessible name'
+name: SVG element with explicit role has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.
@@ -43,6 +43,8 @@ Browser and assistive technology support for SVG `<title>` and `<desc>` elements
 Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [SVG Accessibility API Mappings (working draft)][svg accessibility api mappings]

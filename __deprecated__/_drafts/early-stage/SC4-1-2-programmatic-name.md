@@ -21,7 +21,7 @@ This rule checks if a interface control has a programmatically determined name
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Test procedure
 

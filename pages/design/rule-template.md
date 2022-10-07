@@ -61,7 +61,7 @@ There are no assumptions.
 
 ## Accessibility Support
 
-_There are no accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 
@@ -181,7 +181,7 @@ There are no assumptions.
 
 ## Accessibility Support
 
-_There are no accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

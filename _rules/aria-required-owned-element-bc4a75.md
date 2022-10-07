@@ -272,7 +272,7 @@ This element with the `menu` role has an `aria-busy` attribute set to `true`.
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
-[dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/
+[dpub 1.1]: https://www.w3.org/TR/dpub-aria-1.1/
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'
 [html or svg element]: #namespaced-element

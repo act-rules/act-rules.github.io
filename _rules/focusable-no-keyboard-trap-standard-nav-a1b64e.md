@@ -38,7 +38,7 @@ For each target element, focus can cycle to the browser UI by using [standard ke
 
 ## Accessibility Support
 
-There are No accessibility support issues known..
+There are There are no accessibility support issues known..
 
 ## Background
 

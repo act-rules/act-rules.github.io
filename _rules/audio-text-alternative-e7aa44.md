@@ -50,7 +50,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-No accessibility support issues known.
+There are no accessibility support issues known.
 
 ## Background
 

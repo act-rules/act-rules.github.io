@@ -37,7 +37,6 @@ This rule applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 
-
 For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
 
 - **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
@@ -51,7 +50,7 @@ For each test target, its [visible pixels][visible] do not contain text expressi
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+_There are no accessibility support issues known._
 
 ## Background
 

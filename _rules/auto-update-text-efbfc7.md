@@ -57,7 +57,7 @@ For each test target there is at least one set of [instruments][instrument], whe
 
 ## Accessibility Support
 
-No accessibility support issues known.
+There are no accessibility support issues known.
 
 ## Background
 

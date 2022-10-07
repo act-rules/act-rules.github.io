@@ -44,7 +44,7 @@ A mechanism is available to start the video and that the video element is not si
 
 ## Accessibility Support
 
-There are No accessibility support issues known..
+There are There are no accessibility support issues known..
 
 ## Background
 

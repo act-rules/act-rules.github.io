@@ -50,7 +50,7 @@ There are no assumptions.
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+_There are no accessibility support issues known._
 
 ## Background
 

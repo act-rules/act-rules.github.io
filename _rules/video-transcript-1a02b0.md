@@ -51,7 +51,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 ## Accessibility Support
 
-There are No accessibility support issues known..
+There are There are no accessibility support issues known..
 
 ## Background
 

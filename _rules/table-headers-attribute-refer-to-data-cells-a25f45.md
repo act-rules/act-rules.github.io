@@ -46,7 +46,7 @@ Each target's [attribute value][] is a [set of space separated tokens][], and no
 
 ## Accessibility Support
 
-There are There are no accessibility support issues known..
+There are no accessibility support issues known.
 
 ## Background
 

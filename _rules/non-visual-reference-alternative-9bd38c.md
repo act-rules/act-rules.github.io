@@ -50,7 +50,7 @@ This rule assumes that [visual reference words][] are forms of information conve
 
 ## Accessibility Support
 
-_There are There are no accessibility support issues known.._
+There are no accessibility support issues known.
 
 ## Background
 

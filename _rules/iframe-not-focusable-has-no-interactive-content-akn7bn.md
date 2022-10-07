@@ -42,7 +42,7 @@ This rule assumes that interactive content inside `iframe` elements is used to p
 
 ## Accessibility Support
 
-There are There are no accessibility support issues known..
+There are no accessibility support issues known.
 
 ## Background
 

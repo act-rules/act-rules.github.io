@@ -45,7 +45,7 @@ There are no assumptions.
 
 ## Accessibility Support
 
-_There are There are no accessibility support issues known.._
+There are no accessibility support issues known.
 
 ## Background
 

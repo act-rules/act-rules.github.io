@@ -48,7 +48,7 @@ This rule assumes that there is at least one [block of repeated content][] befor
 
 ## Accessibility Support
 
-_There are There are no accessibility support issues known.._
+There are no accessibility support issues known.
 
 ## Background
 

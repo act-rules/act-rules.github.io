@@ -24,7 +24,9 @@ This rule checks that errors are not identified only through color differences.
 
 ## Applicability
 
-This rule applies to any [visible][] [input error][] together with its visual context.
+This rule applies to any [visible][] [input error][] together with:
+- its [programmatic label]; and
+- the closest error message that refers to it.
 
 ## Expectation
 
@@ -78,12 +80,11 @@ The "phone number" `input` value doesn't match the `type` value. Its visual erro
 
 #### Passed Example 3
 
-The email `input` value is missing the "@" symbol. Its visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through its CSS properties:
-- lightness (difference in relative luminance between the colors leads to a contrast ratio greater than 3:1) AND;
-- font-weight: bold.
+The email `input` value is missing the "@" symbol. Its visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through its lightness (difference in relative luminance between the colors leads to a contrast ratio greater than 3:1).
+
 
 ```html
-<label for="email" style="color:#dd0000; font-weight:bold;">Email</label>
+<label for="email" style="color:#dd0000">Email</label>
 <input type="email" id="email" autocomplete="email" required style="border:1px solid #dd0000" aria-invalid="true" value="john.doeexample.com">
 <label for="address" style="color:#000">Address</label>
 <input type="text" id="address" autocomplete="address-line1" required style="border:1px solid #000" value="5th Example Street">
@@ -159,4 +160,5 @@ The error field is not visible.
 ```
 
 [input error]: https://www.w3.org/TR/WCAG21/#dfn-input-error 'Definition of input error from WCAG 2.1 success criterion 3.3.1 Error Identification'
+[programmatic label]: #programmatic-label 'Definition of programmatic label'
 [visible]: #visible 'Definition of Visible'

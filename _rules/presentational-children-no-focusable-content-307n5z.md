@@ -141,7 +141,7 @@ This element has a `link` role which does not have [presentational children][].
 [attribute value]: #attribute-value 'Definition of Attribute value'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [accessibility tree]: https://www.w3.org/TR/accname-1.1/#dfn-accessibility-tree 'Definition of Accessibility tree'
-[presentational children]: https://www.w3.org/TR/wai-aria-1.2/#childrenArePresentational 'WAI-ARIA 1.1 Presentational Children'
+[presentational children]: https://www.w3.org/TR/wai-aria-1.2/#childrenArePresentational 'WAI-ARIA 1.2 Presentational Children'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child 'Definition child, as on 2020-10-21'
 [descendants]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition Descendant, as on 2020-10-21'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/10/21'

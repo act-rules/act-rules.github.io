@@ -32,7 +32,7 @@ This rule applies to any [visible][] [input error][] together with:
 
 Each test target, together with its visual context, identify the presence of errors not only through color differences.
 
-If the presence of errors is conveyed through the use of colors that differ not only in their hue, but that also have a difference in lightness and the difference in relative luminance between the colors leads to a contrast ratio of 3:1 or greater, then this counts as an additional visual mean.
+A difference in hue resulting in a contrast ratio of 3:1 or greater is not considered as difference in color only.
 
 ## Assumptions
 

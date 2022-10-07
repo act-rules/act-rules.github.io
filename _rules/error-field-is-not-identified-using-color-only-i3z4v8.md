@@ -49,6 +49,8 @@ There are no major accessibility support issues known for this rule.
 
 It is possible for an error field to be distinguishable from adjacent fields but still not have a meaningful error message. In that case, it would pass Success Criterion 1.4.1: Use of Color but still fail [Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) and, if applicable, [Scuccess Criterion 3.3.3: Error Suggestion](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html).
 
+While a difference in color resulting in a contrast ratio of 3:1 or greater is enough, it is a better practice to also use additional visual cues.
+
 ## Test Cases
 
 ### Passed

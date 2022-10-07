@@ -49,7 +49,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-Inside a page, each nested document (mostly, content of an `iframe` element) has its own [sequential focus navigation order][] which is the local tab-order inside this document. Then, all of these are grouped together in a [flattened tabindex-ordered focus navigation scope][] which is effectively the tab-order of the full page. Setting the `tabindex` attribute of an `iframe` element to a negative value effectively excludes its content from the global tab-order of the page (when building the [tabindex-ordered focus navigation scope][] of the page). That is, a `button` may be in tab-order of a document, but if that document is included in another page via an `iframe` with negative `tabindex`, then the `button` is not in the tab-order of that page; and therefore not keyboard accessible.
+Setting the `tabindex` attribute of an `iframe` element to a negative value effectively excludes the content of that `iframe` from the tab-order of the page. A `button` may be in the tab-order of inside an `iframe`, but if the `iframe` is taken from the tab-order, the `button` is effectively keyboard inaccessible. 
+
+Each document, including document inside an `iframe` has its own [sequential focus navigation order][]. These focus orders are combined to get the page's global tab-order (called the [flattened tabindex-ordered focus navigation scope][]). For an `iframe` with a negative tabindex, its sequential focus navigation order is not included in the page's global tab-order.
 
 ### Bibliography
 

@@ -45,7 +45,7 @@ _There are currently no assumptions_
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
 - have [semantic roles][] that inherit from the `input`, `menuitem` or `select` role; and
-- meet WCAG's definition of [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) (this notably excludes `menu`, `option` or `tree`); if these elements are presented as user interface components, these need to be tested separately from this rule.
+- are not from field controls (this notably excludes `menu`, `option` or `tree`).
 
 This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 

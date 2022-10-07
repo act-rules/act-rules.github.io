@@ -53,7 +53,7 @@ It is possible for an error field to be distinguishable from adjacent fields but
 
 #### Passed Example 1
 
-The first name `input` value is empty. Its error message (the `p` element) conveyed the presence of an error through its text.
+The "first name" `input` value is empty. Its error message (the `p` element) conveys the presence of an error through its text.
 
 ```html
 <label for="first_name">First Name</label>
@@ -65,9 +65,9 @@ The first name `input` value is empty. Its error message (the `p` element) conve
 
 #### Passed Example 2
 
-The phone number `input` value doesn't match the `type` value. Its visual error indicator (the first couple of `label` and `input` elements) conveyed the presence of an error through its CSS properties:
-- font-weight: bold AND;
-- border-width: 3px.
+The "phone number" `input` value doesn't match the `type` value. Its visual error indicator (the first couple of `label` and `input` elements) conveys the presence of an error through its CSS properties:
+- `font-weight: bold`; and
+- `border-width: 3px`.
 
 ```html
 <label for="phone_number" style="color:#dd0000; font-weight:bold">Phone number</label>
@@ -93,7 +93,7 @@ The email `input` value is missing the "@" symbol. Its visual error indicator (t
 
 #### Failed Example 1
 
-The first name `input` value is empty. Its visual error indicator (the red border color of the first `input` element) conveyed the presence of an error through color (hue) differences only.
+The "first name" `input` value is empty. Its visual error indicator (the red border color of the first `input` element) conveys the presence of an error through color (hue) differences only.
 
 ```html
 <label for="first_name" style="color:#333333">First Name</label>
@@ -104,7 +104,7 @@ The first name `input` value is empty. Its visual error indicator (the red borde
 
 #### Failed Example 2
 
-The phone number `input` value doesn't match the `type` value. Its visual error indicator (the red color of the first `label` element) conveyed the presence of an error through color (hue) differences only.
+The "phone number" `input` value doesn't match the `type` value. Its visual error indicator (the red color of the first `label` element) conveys the presence of an error through color (hue) differences only.
 
 ```html
 <label for="phone_number" style="color:#dd0000">Phone number</label>
@@ -115,7 +115,7 @@ The phone number `input` value doesn't match the `type` value. Its visual error 
 
 #### Failed Example 3
 
-The email `input` value is missing the "@" symbol. Its visual error indicator (for the first couple of `label` and `input` elements, respectively the red text color and the red border color) conveyed the presence of an error through color (hue) differences only.
+The email `input` value is missing the "@" symbol. Its visual error indicator (for the first couple of `label` and `input` elements, respectively the red text color and the red border color) conveys the presence of an error through color (hue) differences only.
 
 ```html
 <label for="email" style="color:#dd0000">Email</label>
@@ -147,7 +147,7 @@ There are no error fields.
 
 #### Inapplicable Example 3
 
-Error field is not visible.
+The error field is not visible.
 
 ```html
 <div style="display:none">
@@ -158,5 +158,5 @@ Error field is not visible.
 </div>
 ```
 
-[input error]: https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html#dfn-input-error 'Definition of input error from WCAG 2.1 success criterion 3.3.1 Error Identification'
+[input error]: https://www.w3.org/TR/WCAG21/#dfn-input-error 'Definition of input error from WCAG 2.1 success criterion 3.3.1 Error Identification'
 [visible]: #visible 'Definition of Visible'

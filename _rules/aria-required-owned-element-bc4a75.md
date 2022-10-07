@@ -212,7 +212,7 @@ This element with the `menu` role only owns an element with a `group` role. The 
 
 #### Failed Example 7
 
-This element with the `list` role owns an element with the `listitem` role and and element with the `group` role, in which each element has the `listitem` role. The `group` role is no longer [required owned element][] for the `list` role.
+This element with the `list` role owns an element with the `listitem` role and an element with the `group` role, in which each element has the `listitem` role. The `group` role is no longer [required owned element][] for the `list` role.
 
 ```html
 <div role="list">
@@ -274,5 +274,5 @@ This element with the `menu` role has an `aria-busy` attribute set to `true`.
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [dpub 1.1]: https://www.w3.org/TR/dpub-aria-1.1/
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
-[ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition Ancestors, as on 2020-01-10'
 [html or svg element]: #namespaced-element
+[inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'DOM Definition of Inclusive Ancestor'

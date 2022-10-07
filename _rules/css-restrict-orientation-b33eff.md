@@ -25,7 +25,7 @@ acknowledgments:
 
 This rule applies to any [HTML element][] that is [visible](#visible) and has one of the following CSS properties applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`:
 
-1. the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual-transforms) property
+- the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual-transforms) property; or
 2. the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
 - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)

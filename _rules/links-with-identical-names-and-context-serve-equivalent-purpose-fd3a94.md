@@ -60,7 +60,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Accessibility Support
 
-_There are There are no accessibility support issues known.._
+There are no accessibility support issues known.
 
 ## Background
 

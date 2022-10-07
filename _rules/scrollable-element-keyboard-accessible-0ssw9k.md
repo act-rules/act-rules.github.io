@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

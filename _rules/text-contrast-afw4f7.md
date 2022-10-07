@@ -5,13 +5,14 @@ rule_type: atomic
 description: |
   This rule checks that the highest possible contrast of every text character with its background meets the minimal contrast requirement.
 accessibility_requirements:
-  wcag20:1.4.3: # Contrast (Minimum)
+  wcag20:1.4.3: # Contrast (Minimum) (AA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.6: # Contrast (Enhanced)
+  wcag20:1.4.6: # Contrast (Enhanced) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

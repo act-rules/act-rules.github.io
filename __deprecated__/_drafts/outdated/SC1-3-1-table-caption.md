@@ -1,16 +1,13 @@
 ---
 rule_id: SC1-3-1-table-caption
-name: 
+name:
 test_mode: automatic
 
 success_criterion:
-- 1.3.1 # Info and relationships (level A)
+  - 1.3.1 # Info and relationships (level A)
 
 authors:
-
----
-
-## Description
+---## Description
 
 This test checks if a table with caption does not contain a summary with the same text.
 
@@ -22,23 +19,23 @@ This test checks if a table with caption does not contain a summary with the sam
 
 ## Assumptions
 
-No assumptions yet
+There are no assumptions.yet
 
 ## Test properties
 
-| Property          | Value
-|-------------------|----
-| Success Criterion | 1.3.1 Info and Relationships
+| Property          | Value                        |
+| ----------------- | ---------------------------- |
+| Success Criterion | 1.3.1 Info and Relationships |
 | Test name         |
-| Test mode         | Automatic
-| Test environment  | DOM
-| Test subject      | Web page
+| Test mode         | Automatic                    |
+| Test environment  | DOM                          |
+| Test subject      | Web page                     |
 
 ## Test procedure
 
 ### Selector
 
-Test mode: [automatic][AUTO]
+Test mode: [automatic][auto]
 
 `table` Elements that have both a `summary` attribute and a `caption` element.
 
@@ -46,24 +43,24 @@ For each selected item, go through the following steps:
 
 ### Step 1
 
-Test mode: [automatic][AUTO]
+Test mode: [automatic][auto]
 
 Check if the summary duplicates the caption.
 
 if yes return
 
-| Outcome  | Failed
-|----------|-----
-| Testcase | SC1-3-1-table-caption
-| ID       | SC1-3-1-table-caption-failed1
-| Error    | The heading element must have content.
+| Outcome  | Failed                                 |
+| -------- | -------------------------------------- |
+| Testcase | SC1-3-1-table-caption                  |
+| ID       | SC1-3-1-table-caption-failed1          |
+| Error    | The heading element must have content. |
 
 else return
 
-| Outcome  | Passed
-|----------|-----
-| Testcase | SC1-3-1-table-caption
-| ID       | SC1-3-1-table-caption-passed1
+| Outcome  | Passed                        |
+| -------- | ----------------------------- |
+| Testcase | SC1-3-1-table-caption         |
+| ID       | SC1-3-1-table-caption-passed1 |
 
-[AUTO]: ../pages/test-modes.html#automatic
-[MANUAL]: ../pages/test-modes.html#manual
+[auto]: ../pages/test-modes.html#automatic
+[manual]: ../pages/test-modes.html#manual

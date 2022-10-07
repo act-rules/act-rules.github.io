@@ -54,7 +54,7 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions.
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

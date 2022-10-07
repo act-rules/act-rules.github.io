@@ -46,7 +46,7 @@ Each target element ...
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

@@ -44,7 +44,7 @@ For each test target, one of the following is true:
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

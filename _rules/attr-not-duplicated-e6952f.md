@@ -41,7 +41,7 @@ For each test target, there are no duplicated [attributes](https://www.w3.org/TR
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

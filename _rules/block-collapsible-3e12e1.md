@@ -36,7 +36,7 @@ For each [block of repeated content][] in each test target, which is before (in 
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

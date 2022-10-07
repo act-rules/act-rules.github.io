@@ -37,7 +37,7 @@ Each target element is labeled as an audio alternative for text on the page by c
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

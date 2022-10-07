@@ -24,7 +24,7 @@ Each target attribute is defined in [WAI-ARIA Specifications][].
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

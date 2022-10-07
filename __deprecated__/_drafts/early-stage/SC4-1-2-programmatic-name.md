@@ -13,15 +13,15 @@ authors: Charu Pandhi
 
 ## Description
 
-This rule checks if a interface control has a programmatically determined name 
+This rule checks if a interface control has a programmatically determined name
 
 ## Background
 
-- [F68: Failure of Success Criterion 4.1.2 due to a user interface control not having a programmatically determined name ] (https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F68)
+- [F68: Failure of Success Criterion 4.1.2 due to a user interface control not having a programmatically determined name ](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F68)
 
 ## Assumptions
 
-*There are currently no assumptions*
+\*There are currently There are no assumptions.
 
 ## Test procedure
 
@@ -45,28 +45,28 @@ else, return [step1-fail](#step1-fail)
 
 The resulting assertion is as follows,
 
-| Property | Value
-|----------|----------
-| type     | Assertion
-| test     | auto-wcag:{{ page.rule_id }}
-| subject  | *the selected element*
-| mode     | auto-wcag:{{ page.test_mode }}
-| result   | <One TestResult from below>
+| Property | Value                          |
+| -------- | ------------------------------ |
+| type     | Assertion                      |
+| test     | auto-wcag:{{ page.rule_id }}   |
+| subject  | _the selected element_         |
+| mode     | auto-wcag:{{ page.test_mode }} |
+| result   | <One TestResult from below>    |
 
 ### step1-fail1
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
+| Property    | Value      |
+| ----------- | ---------- |
+| type        | TestResult |
+| outcome     | Failed     |
 | description |
 
 ### step1-pass1
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Passed
+| Property    | Value      |
+| ----------- | ---------- |
+| type        | TestResult |
+| outcome     | Passed     |
 | description |
 
 ## Implementation Tests

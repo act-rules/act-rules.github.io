@@ -5,23 +5,23 @@ test_mode: semi-automatic
 Environment: Web Browser
 
 success_criterion:
-- 1.1.1
-- 4.1.2
+  - 1.1.1
+  - 4.1.2
 
 authors:
-- Wilco Fiers
-- Mark Rogers
+  - Wilco Fiers
+  - Mark Rogers
 ---
 
 ## Description
 
 This rule checks image buttons and image links are have a text alternative, and that this alternative is descriptive of either the image or of the purpose of the interactive element.
 
-*Editor note*: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
+_Editor note_: This rule is designed to replace (parts of) [SC1-1-1-text-alternative](/rules/SC1-1-1-text-alternative.html)
 
 ## Assumptions
 
-*There are currently no assumptions*
+\*There are currently There are no assumptions.
 
 ## Test procedure
 
@@ -38,7 +38,7 @@ Select all elements that matches the following CSS selector:
 
 Exclude elements from the list of selected elements if:
 
-  - They are `img` or `[role=image]` elements, and the button or link that contains it contains additional [non-text content][] or images.
+- They are `img` or `[role=image]` elements, and the button or link that contains it contains additional [non-text content][] or images.
 
 For each selected item, go through the following steps:
 
@@ -58,9 +58,9 @@ else, return [step1-fail](#step1-fail)
 
 The resulting assertion is as follows,
 
-| Property | Value
-|----------|----------
-| type     | Assertion
+| Property | Value     |
+| -------- | --------- |
+| type     | Assertion |
 | id       |
 | test     |
 | subject  |
@@ -69,18 +69,18 @@ The resulting assertion is as follows,
 
 ### step1-fail1
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Failed
+| Property    | Value      |
+| ----------- | ---------- |
+| type        | TestResult |
+| outcome     | Failed     |
 | description |
 
 ### step1-pass1
 
-| Property    | Value
-|-------------|----------
-| type        | TestResult
-| outcome     | Passed
+| Property    | Value      |
+| ----------- | ---------- |
+| type        | TestResult |
+| outcome     | Passed     |
 | description |
 
 ## Implementation Tests

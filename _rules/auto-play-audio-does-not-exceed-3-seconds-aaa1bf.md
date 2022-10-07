@@ -43,7 +43,7 @@ For each test target the total audio output does not last more than 3 seconds.
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

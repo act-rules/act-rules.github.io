@@ -74,7 +74,7 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

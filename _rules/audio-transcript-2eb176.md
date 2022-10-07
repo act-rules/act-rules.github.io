@@ -35,7 +35,7 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

@@ -41,7 +41,7 @@ The value of the attribute is unique across all other `id` attributes specified 
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

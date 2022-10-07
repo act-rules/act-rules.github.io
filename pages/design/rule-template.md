@@ -57,7 +57,7 @@ Each target element ...
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 
@@ -177,7 +177,7 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

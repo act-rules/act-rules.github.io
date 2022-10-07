@@ -46,7 +46,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-No assumptions.
+There are no assumptions.
 
 ## Accessibility Support
 

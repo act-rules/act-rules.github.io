@@ -45,7 +45,7 @@ _There are currently no assumptions_
 
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
-- have [semantic roles][] that inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
+- have [semantic roles][] that inherit from the `input`, `menuitem` or `select` role, and
 - do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
 
 Note that this rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
@@ -133,6 +133,18 @@ This [semantic][semantic role] `checkbox` element has the text content as its [a
 <div role="checkbox">I agree to the terms and conditions.</div>
 ```
 
+#### Passed Example 8
+
+These `menuitemcheckbox` elements have an [accessible name][] given by their associated `label`.
+
+```html
+<div role="group">
+	Add a dip:<br />
+	<label><input type="checkbox" role="menuitemcheckbox" />Ketchup</label><br />
+	<label><input type="checkbox" role="menuitemcheckbox" />Mayonnaise</label>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -197,6 +209,18 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 
 ```html
 <div role="textbox">first name</div>
+```
+
+#### Failed Example 8
+
+These `menuitemcheckbox` elements do not have an [accessible name][].
+
+```html
+<div role="group">
+	Add a dip:<br />
+	<input type="checkbox" role="menuitemcheckbox" />Ketchup<br />
+	<input type="checkbox" role="menuitemcheckbox" />Mayonnaise
+</div>
 ```
 
 ### Inapplicable

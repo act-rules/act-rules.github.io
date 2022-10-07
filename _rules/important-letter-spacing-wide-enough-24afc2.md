@@ -20,7 +20,9 @@ acknowledgments:
     - Jey Nandakumar
   funding:
     - WAI-Tools
----## Applicability
+---
+
+## Applicability
 
 This rule applies to any [HTML element][] for which all the following are true:
 

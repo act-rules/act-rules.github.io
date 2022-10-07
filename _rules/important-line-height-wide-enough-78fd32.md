@@ -1,5 +1,5 @@
 ---
-id: p3qr8p
+id: 78fd32
 name: Important line height in style attributes is wide enough
 rule_type: atomic
 description: |
@@ -16,6 +16,10 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  previous_authors:
+    - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability

@@ -34,13 +34,17 @@ acknowledgments:
 
 This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
-## Expectation
+## Expectation 1
 
 For each test target, one of the following is true:
 
 - **global**: the test target is a [global state or property][global]; or
 - **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+
+## Expectation 2
+
+Each test target is not [prohibited][] on the [semantic role][] of the element on which it is specified.
 
 ## Assumptions
 
@@ -181,6 +185,14 @@ The `aria-orientation` property may not be used on `audio` element, nor it can b
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
 ```
 
+#### Failed Example 3
+
+The `aria-label` property is [prohibited][] for an element with a `generic` role.
+
+```html
+<div aria-label="Bananas"></div>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -214,3 +226,4 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
+[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

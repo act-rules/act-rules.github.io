@@ -237,7 +237,6 @@ There are no elements with any of the required [semantic roles][semantic role].
 <p>This is a paragraph.</p>
 ```
 
-[abstract]: https://www.w3.org/TR/wai-aria-1.2/#abstract_roles
 [accessible description]: https://www.w3.org/TR/accname/#dfn-accessible-description
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
@@ -245,7 +244,6 @@ There are no elements with any of the required [semantic roles][semantic role].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
-[required context]: https://www.w3.org/TR/wai-aria-1.2/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text]: https://www.w3.org/TR/WCAG21/#dfn-text
 [visible]: #visible 'Definition of visible'

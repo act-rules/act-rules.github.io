@@ -28,11 +28,11 @@ This rule applies to any [HTML element][] that is [visible](#visible) and has on
 - the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual-transforms) property; or
 - the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
-- [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
-- [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
-- [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
-- [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
-- [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
+	- [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
+	- [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
+	- [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
+	- [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
+	- [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
 
 **Note:** These specific [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) are of interest to this rule as they have the potential to affect the [rotation](https://www.w3.org/TR/css-transforms-2/#Rotate3dDefined) of a given element.
 

@@ -1,6 +1,6 @@
 ---
 id: 0va7u6
-name: HTML graphics contain no text
+name: HTML images contain no text
 rule_type: atomic
 description: |
   This rule checks that images of text are not used

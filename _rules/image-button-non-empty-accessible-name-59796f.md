@@ -112,14 +112,6 @@ The image button has an [accessible name][] through the `aria-labelledby` attrib
 <div id="id1">Search</div>
 ```
 
-#### Passed Example 5
-
-This image button has an empty `alt` attribute, but a non-empty `title` attribute. This gives the button an non-empty [accessible name][] through the `title` attribute.
-
-```html
-<input type="image" src="/test-assets/shared/search-icon.svg" title="Search" alt="" />
-```
-
 ### Failed
 
 #### Failed Example 1

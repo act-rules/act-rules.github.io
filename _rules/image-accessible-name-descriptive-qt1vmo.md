@@ -85,11 +85,11 @@ This `img` element has an `alt` attribute that describes the image.
 
 #### Passed Example 2
 
-This `svg` element has an `aria-label` attribute that describes the image.
+This `svg` element has an `aria-label` attribute that describes the HTML5 logo image. 
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="HTML 5" role="img">
+	<svg viewBox="0 0 512 512" aria-label="HTML 5 logo" role="img">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -106,7 +106,7 @@ This `svg` element has an `aria-label` attribute that describes the image.
 
 #### Passed Example 3
 
-This `canvas` element has an `aria-label` attribute that describes the image.
+This `canvas` element has an `aria-label` attribute that describes the W3C logo image.
 
 ```html
 <html lang="en">
@@ -136,7 +136,7 @@ This `img` element has an `alt` attribute that incorrectly describes the image.
 
 #### Failed Example 2
 
-This `svg` element has an `aria-label` attribute that incorrectly describes the image (aria-label describes W3C Logo but actual image is HTML5 logo).
+This `svg` element has an `aria-label` attribute that incorrectly describes the image (aria-label describes W3C Logo but the actual image is HTML5 logo).
 
 ```html
 <html lang="en">
@@ -157,7 +157,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 #### Failed Example 3
 
-This `canvas` element has an `aria-label` attribute that incorrectly describes the image.
+This `canvas` element has an `aria-label` attribute that incorrectly describes the image (aria-label describes HTML5 logo but the actual image is W3C logo).
 
 ```html
 <html lang="en">

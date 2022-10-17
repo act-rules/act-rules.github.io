@@ -92,7 +92,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -100,32 +100,32 @@ The first valid `meta` element redirects immediately.
 
 #### Failed Example 1
 
-This `meta` element refreshes the page after 30 seconds.
+This `meta` element refreshes the page after 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30" />
+	<meta http-equiv="refresh" content="72001" />
 </head>
 ```
 
 #### Failed Example 2
 
-This `meta` element redirects the user after 30 seconds.
+This `meta` element redirects the user after 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
+	<meta http-equiv="refresh" content="72001; URL='https://w3.org'" />
 </head>
 ```
 
 #### Failed Example 3
 
-The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 5 seconds.
+The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 20 hours.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="0: https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -157,7 +157,7 @@ This `meta` element has no `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta content="30" />
+	<meta content="72001" />
 </head>
 ```
 
@@ -187,7 +187,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="; 30" />
+	<meta http-equiv="refresh" content="; 72001" />
 </head>
 ```
 
@@ -207,7 +207,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="+5; http://w3.org" />
+	<meta http-equiv="refresh" content="+72001; http://w3.org" />
 </head>
 ```
 

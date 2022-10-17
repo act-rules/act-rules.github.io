@@ -129,16 +129,6 @@ The first `meta` element is not valid (because of the colon instead of a semi-co
 </head>
 ```
 
-#### Failed Example 4
-
-This `meta` element redirects the user after 20 hours.
-
-```html
-<head>
-	<meta http-equiv="refresh" content="72001; http://example.com" />
-</head>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

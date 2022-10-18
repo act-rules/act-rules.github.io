@@ -28,11 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has a [visible][] [text node][] as a [descendant][] in the [flat tree][], for which all the following is true:
-
-- **changed:** the `innerText` property of the element changes multiple times within a 10 minute time span where there is no [user interaction][]; and
-- **no child changed:** the element does not have [children][child] in the [flat tree][] whose `innerText` property also changes; and
-- **not alone:** the element has an [ancestor][] element in the [flat tree][] with a non-empty `innerText` property whose value is different from the `innerText` of the test target.
+This rule applies to any [HTML element][] that has one or more [visible][] [text nodes][] as [children][] in the [flat tree][], where the combined text from the [text nodes][] changes multiple times within a 10 minute time span where there is no [user interaction][].
 
 ## Expectation
 
@@ -77,7 +73,7 @@ The [instruments][instrument] used to pass this rule (if any), must meet all lev
 
 #### Passed Example 1
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to stop the automatic changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
+This `span` element contains text content that automatically changes multiple times without user intervention and there is a button available to stop the automatic changes. The rule is not applicable to the second `p` element because its child [text node][] is unchanged.
 
 ```html
 <body onload="startUpdates()">
@@ -95,7 +91,7 @@ This `span` element contains text content that is automatically **changed** mult
 
 #### Passed Example 2
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to pause and resume the automatic changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
+This `span` element contains text content that automatically changes multiple times without user intervention and there is a button available to pause and resume the automatic changes. The rule is not applicable to the second `p` element because its child [text node][] is unchanged.
 
 ```html
 <body onload="startUpdates()">
@@ -113,7 +109,7 @@ This `span` element contains text content that is automatically **changed** mult
 
 #### Passed Example 3
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is a button available to hide the automatically updating content. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
+This `span` element contains text content that automatically changes multiple times without user intervention and there is a button available to hide the automatically updating content. The rule is not applicable to the second `p` element because its child [text node][] is unchanged.
 
 ```html
 <body onload="startUpdates()">
@@ -131,7 +127,7 @@ This `span` element contains text content that is automatically **changed** mult
 
 #### Passed Example 4
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is an [instrument][] available to modify the frequency of the changes. The rule is not applicable to the second `p` element because it has a **child changed** (the `span` element).
+This `span` element contains text content that automatically changes multiple times without user intervention and there is an [instrument][] available to modify the frequency of the changes. The rule is not applicable to the second `p` element because its child [text node][] is unchanged.
 
 ```html
 <body onload="startUpdates()">
@@ -151,7 +147,7 @@ This `span` element contains text content that is automatically **changed** mult
 
 #### Passed Example 5
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and the location of an [instrument][] to control the changes is clearly available.
+This `span` element contains text content that automatically changes multiple times without user intervention and the location of an [instrument][] to control the changes is clearly available. The rule is not applicable to the second `p` element because its child [text node][] is unchanged.
 
 ```html
 <body onload="startUpdates()">
@@ -199,7 +195,7 @@ This `span` element contains text content that is automatically **changed** mult
 
 #### Failed Example 1
 
-This `span` element contains text content that is automatically **changed** multiple times without user intervention and there is no [instrument][] available to stop, pause, hide or alter the frequency of the automatic changes.
+This `span` element contains text content that automatically changes multiple times without user intervention and there is no [instrument][] available to stop, pause, hide or alter the frequency of the automatic changes.
 
 ```html
 <body onload="startUpdates()">
@@ -230,7 +226,7 @@ This document does not have any visible text node.
 
 #### Inapplicable Example 2
 
-This document does not have text content that is automatically **changed**.
+This document does not have text content that automatically changes.
 
 ```html
 <p>
@@ -241,7 +237,7 @@ This document does not have text content that is automatically **changed**.
 
 #### Inapplicable Example 3
 
-This `span` element changes color but not its `innerText` property.
+This `span` element changes color but not the content of its [text nodes][] are unchanged.
 
 ```html
 <body onload="startColorUpdates()">
@@ -276,7 +272,7 @@ This `span` element changes color but not its `innerText` property.
 
 #### Inapplicable Example 4
 
-This `span` element contains text content that is automatically **changed** but only as a result of the user activating a button on the page.
+This `span` element contains text content that automatically changes but only as a result of the user activating a button on the page.
 
 ```html
 <body>
@@ -292,21 +288,10 @@ This `span` element contains text content that is automatically **changed** but 
 </body>
 ```
 
-#### Inapplicable Example 5
-
-This `span` element with text content that automatically changes multiple times is **alone** in the document.
-
-```html
-<body onload="startUpdates()">
-	<span id="target">1</span>
-
-	<script type="text/javascript" src="/test-assets/efbfc7/script.js"></script>
-</body>
-```
-
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor
 [activation]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
+[children]: https://dom.spec.whatwg.org/#concept-tree-child
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
@@ -319,6 +304,7 @@ This `span` element with text content that automatically changes multiple times 
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text
+[text nodes]: https://dom.spec.whatwg.org/#text
 [user interaction]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'

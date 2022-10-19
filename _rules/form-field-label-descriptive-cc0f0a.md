@@ -69,7 +69,6 @@ The list of applicable [semantic roles][semantic role] is derived by taking all 
 
 - inherit from the `input`, `menuitem` or `select` role, and
 - are form field controls (this notably excludes `menu`, `option` or `tree`).
--
 
 [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
 

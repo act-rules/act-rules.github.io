@@ -30,7 +30,7 @@ For each target element, there is at least one device pixel inside the [scrollin
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 

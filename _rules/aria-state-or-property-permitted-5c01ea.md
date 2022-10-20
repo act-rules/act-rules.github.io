@@ -44,7 +44,7 @@ For each test target, one of the following is true:
 
 ## Expectation 2
 
-Each test target is not [prohibited][] on the [semantic role][] of the element on which it is specified.
+No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
 ## Assumptions
 

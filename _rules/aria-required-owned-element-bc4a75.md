@@ -142,7 +142,7 @@ This element with the `menu` role only owns an element with a `group` role. The 
 
 #### Failed Example 1
 
-This element with the `list` role owns an element without any of its `listitem` [required owned elements][].
+This element with the `list` role owns an element which is not a `listitem` [required owned elements][].
 
 ```html
 <div role="list">

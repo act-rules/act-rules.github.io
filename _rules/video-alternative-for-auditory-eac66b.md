@@ -1,6 +1,6 @@
 ---
 id: eac66b
-name: '`video` element auditory content has accessible alternative'
+name: Video element auditory content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements have an alternative for information conveyed through audio.
@@ -32,6 +32,10 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -55,6 +59,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 There are no major accessibility support issues known for this rule.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded)
 - [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G93)
@@ -84,9 +90,10 @@ A video element that describes some of the text on the same page. The text on th
 ```html
 <html lang="en">
 	<p>
-		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. Many people use only the
-		keyboard to navigate websites. Either through preference or circumstance. This is solved by keyboard compatibility.
-		Keyboard compatibility is described in WCAG. See the video below to watch the same information again in video form.
+		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse
+		doesn't work, is frustrating. Many people use only the keyboard to navigate websites. Either through preference or
+		circumstance. This is solved by keyboard compatibility. Keyboard compatibility is described in WCAG. See the video
+		below to watch the same information again in video form.
 	</p>
 	<video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 </html>

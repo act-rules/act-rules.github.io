@@ -19,6 +19,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -28,12 +30,12 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any set of any two or more [HTML or SVG elements][] which
+This rule applies to any set of any two or more [HTML or SVG elements][] for which all the following are true:
 
-- have the [semantic role][] of `link`, or a role that inherits from the `link` role; and
-- are in the same [web page (HTML)][]; and
-- are [included in an accessibility tree][included in the accessibility tree]; and
-- that have [matching][] [accessible names][accessible name] that are not empty (`""`).
+- the elements are [inheriting semantic][] `link` nodes; and
+- the elements are in the same [web page (HTML)][]; and
+- the elements are [included in an accessibility tree][included in the accessibility tree]; and
+- the elements have [matching][] [accessible names][accessible name] that are not empty (`""`).
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][].
 
@@ -45,14 +47,15 @@ When followed, the links in each set of target elements resolve to the [same res
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
 - This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree]).
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [inheriting semantic][] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
@@ -376,6 +379,7 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 [explicit role]: #explicit-role 'Definition of explicit role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

@@ -16,6 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -24,7 +26,7 @@ The rule applies to any element which is part of [sequential focus navigation][]
 
 ## Expectation
 
-For each target element, there is at least one device pixel inside the [scrolling area][] of the [viewport][] whose color is different when the element is [focused][] from when it is not.
+For each target element, there is at least one device pixel inside the [scrolling area][] of the [viewport][] whose [HSL color value](https://www.w3.org/TR/css-color-3/#hsl-color) is different when the element is [focused][] from when it is not.
 
 ## Assumptions
 
@@ -42,6 +44,8 @@ WCAG does not have any requirement of how big or small focus indicator should be
 
 WCAG has no clear requirement of unicity of the focus indicator for each [focusable][] element. Therefore, this rule can pass even if several focus indicators are identical. Such a situation may nonetheless cause confusion and all Examples in this rule avoid it.
 
+### Bibliography
+
 - [Success Criterion 2.4.7 Focus Visible][sc247]
 - [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411]
 - [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412]
@@ -57,7 +61,7 @@ Due to the Applicability of this rule, test cases must have at least two element
 
 #### Passed Example 1
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling).
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
 <a href="https://act-rules.github.io/">ACT rules</a> <button>Dummy button</button>
@@ -65,7 +69,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 
 #### Passed Example 2
 
-The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling).
+The first [focusable][] element is part of [sequential focus navigation][]. It has an outline when it is [focused][] (due to default User Agent's styling). The outline has a different `hsl` value compared to the `hsl` value of the background over which the outline appears (the exact values depend on the type of browser being used).
 
 ```html
 <span tabindex="0">Act rules</span> <button>Dummy button</button>
@@ -73,7 +77,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. It h
 
 #### Passed Example 3
 
-The first [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element).
+The first [focusable][] element is part of [sequential focus navigation][]. Its parent `span` puts a border around it when it is [focused][] (the border of the `span` element). The border's `hsl` value (`hsl(240, 100%, 25%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the border appears.
 
 ```html
 <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
@@ -94,7 +98,7 @@ The first [focusable][] element is part of [sequential focus navigation][]. Its 
 
 #### Passed Example 4
 
-Each of these three [focusable][] elements has a blue square in front of it when it is [focused][].
+Each of these three [focusable][] elements has a blue square in front of it when it is [focused][]. The square's `hsl` value (`hsl(240, 100%, 25%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the square appears.
 
 ```html
 <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />

@@ -1,6 +1,6 @@
 ---
 id: cae760
-name: '`iframe` element has non-empty accessible name'
+name: Iframe element has non-empty accessible name
 rule_type: atomic
 description: |
   This rule checks that each `iframe` element has a non-empty accessible name.
@@ -17,6 +17,8 @@ acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -38,11 +40,12 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 - Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
 
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
-  - Assistive technologies being set up to ignore the `title` attribute, which means that to some users the `title` attribute will not act as an [accessible name][],
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
 
 ## Background
+
+### Bibliography
 
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)

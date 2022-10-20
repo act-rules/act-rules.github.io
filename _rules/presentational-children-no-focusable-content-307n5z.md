@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that elements with a role that makes its children presentational do not contain focusable elements.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag20:4.1.2: # Name, Role, Value (A)
     forConformance: true
     failed: not satisfied
@@ -21,6 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -33,21 +30,28 @@ None of the target elements have [descendants][] in the [flat tree][] that are p
 
 ## Assumptions
 
-This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criteria 1.3.1 and 4.1.2.
+This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criterion 4.1.2.
 
 ## Accessibility Support
 
-Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles. Because some browsers do, and others do not implement presentational children, there can be significant differences between browsers.
+Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
 
 ## Background
 
-This rule applies to elements with a [semantic role][] that defines its [children][child] to be [presentational children][]. This includes the following: `button`, `checkbox`, `img`, `math`, `menuitemcheckbox`, `menuitemradio`, `option`, `progressbar`, `radio`, `scrollbar`, `separator`, `slider`, `switch`, and `tab`.
+This rule applies to elements with a [semantic role][] that defines its [children][child] to be [presentational children][], which are all of the following: `button`, `checkbox`, `img`, `math`, `menuitemcheckbox`, `menuitemradio`, `option`, `progressbar`, `radio`, `scrollbar`, `separator`, `slider`, `switch`, and `tab`.
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
+
+### Related rules
+
+- [Element with aria-hidden has no focusable content](https://act-rules.github.io/rules/6cfa84)
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [WAI-ARIA 1.1 Presentational Children][presentational children]
+- [Element with aria-hidden has no focusable content](aria-hidden-no-focusable-content-6cfa84.md)
 
 ## Test Cases
 
@@ -98,7 +102,7 @@ This `button` element has a [child][] `span` element. Because the `span` element
 ```html
 <button>
 	Save
-	<span aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
+	<span role="button" aria-label="save options" aria-expanded="false" tabindex="0">▼</span>
 </button>
 ```
 

@@ -1,6 +1,6 @@
 ---
 id: ee13b5
-name: '`video` element visual-only content has transcript'
+name: Video element visual-only content has transcript
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
@@ -20,6 +20,10 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -32,12 +36,11 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available in a text transcript that is available either on the page or through a link. The text transcript needs to be [visible][] and [included in the accessibility tree][].
+The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
 
 ## Assumptions
 
-- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 
@@ -45,7 +48,10 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+
+### Bibliography
+
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159)
 

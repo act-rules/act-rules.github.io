@@ -1,6 +1,6 @@
 ---
 id: a25f45
-name: '`headers` attribute specified on a cell refers to cells in the same `table` element'
+name: Headers attribute specified on a cell refers to cells in the same table element
 rule_type: atomic
 description: |
   This rule checks that the `headers` attribute on a cell refer to other cells in the same `table` element.
@@ -22,6 +22,8 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
@@ -32,18 +34,15 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
 
-**Note:** `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
-
 ## Expectation 2
 
 Each target's [attribute value][] is a [set of space separated tokens][], and none of these tokens is the `id` of the element on which the test target is specified.
-
-**Note:** `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Assumptions
 
 - This rule assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for scripts, this rule may not be accurate.
 - This rule assumes that the `headers` attribute is required to express the relationship between data and table header cells in the same `table`. If the browser [computes an adequate fallback header][] for cells that have the `headers` [attribute value][] that does not correspond to the `id` of any one cell in the same `table`, success Criterion [1.3.1 Info and Relationships][sc131] may be satisfied even if this rule failed.
+- This rule assumes that the id values on the `headers` attribute are unique.
 
 ## Accessibility Support
 
@@ -51,9 +50,14 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-- [Understanding Success Criterion 1.3.1: Information and relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+### Bibliography
+
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
 - [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
+
+* `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
+* `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
 ## Test Cases
 
@@ -235,6 +239,26 @@ The `td` elements have a `headers` attribute referring to an ID that does not ex
 
 #### Failed Example 2
 
+The `td` elements have a `headers` attribute referring to an ID that exist in a separate `table`.
+
+```html
+<table>
+	<tr>
+		<th id="headOfColumn1">Projects</th>
+		<th id="headOfColumn2">Objective</th>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td headers="headOfColumn1">15%</td>
+		<td headers="headOfColumn2">10%</td>
+	</tr>
+</table>
+```
+
+#### Failed Example 3
+
 The `td` element has a `headers` attribute referring to its own ID.
 
 ```html
@@ -250,7 +274,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 </table>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 
@@ -370,6 +394,7 @@ The `table` is not [included in the accessibility tree][].
 	</tr>
 </table>
 ```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'

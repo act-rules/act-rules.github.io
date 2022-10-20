@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: '`video` element visual content has strict accessible alternative'
+name: Video element visual content has strict accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have audio description.
@@ -25,19 +25,18 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:H96: # Using the track element to provide audio descriptions
-    forConformance: false
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_rules:
   - 1ea59c
   - ab4d13
-  - f196ce
 acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -50,7 +49,6 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 - [`Video` Element Visual Content Has Audio Description](https://act-rules.github.io/rules/1ea59c)
 - [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13)
-- [`Video` Element Visual Content Has Description Track](https://act-rules.github.io/rules/f196ce)
 
 ## Assumptions
 
@@ -59,14 +57,14 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Accessibility Support
 
-See [Video element audio described: accessibility support](https://act-rules.github.io/rules/1ea59c#accessibility-support).
-See [Video element description track: accessibility support](https://act-rules.github.io/rules/f196ce#accessibility-support).
+The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96) can not be relied upon to conform to [1.2.5: Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-prerecorded).
 
 ## Background
 
+### Bibliography
+
 - [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
-- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 - [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G173)
 - [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G8)
 
@@ -88,20 +86,6 @@ A video element with a voiceover that describes the visual information.
 ```
 
 #### Passed Example 2
-
-A video element with a track element that contains descriptions.
-
-```html
-<html lang="en">
-	<video controls>
-		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-	</video>
-</html>
-```
-
-#### Passed Example 3
 
 A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
 
@@ -133,20 +117,6 @@ A video element with an incorrect audio description.
 
 #### Failed Example 2
 
-A video element with a track element that contains incorrect descriptions.
-
-```html
-<html lang="en">
-	<video controls>
-		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
-	</video>
-</html>
-```
-
-#### Failed Example 3
-
 A video element with a link to a text transcript.
 
 ```html
@@ -156,6 +126,20 @@ A video element with a link to a text transcript.
 		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
 	</video>
 	<a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
+```
+
+#### Failed Example 3
+
+A video element with a description track element. The description track is not supported.
+
+```html
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
 </html>
 ```
 

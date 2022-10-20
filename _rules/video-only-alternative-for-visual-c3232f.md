@@ -1,6 +1,6 @@
 ---
 id: c3232f
-name: '`video` element visual-only content has accessible alternative'
+name: Video element visual-only content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements without audio have an alternative available.
@@ -20,14 +20,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag-technique:H96: # Using the track element to provide audio descriptions
-    forConformance: false
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_rules:
   - fd26cf
-  - ac7dc6
   - ee13b5
   - d7ba54
 acknowledgments:
@@ -36,6 +30,11 @@ acknowledgments:
     - John Hicks
     - Rafal Charlampowicz
     - Wilco Fiers
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -51,45 +50,31 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
-- [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6)
 - [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5)
 - [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54)
 
 ## Assumptions
 
-- A mechanism is available to start the video and the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- A mechanism is available to start the video and the video element is not simply used to display the [poster](https://html.spec.whatwg.org/multipage/media.html#attr-video-poster).
 - The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-See [Video Only Element Has Description Track: accessibility support](https://act-rules.github.io/rules/ac7dc6#accessibility-support).
+The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96) can not be relied upon to conform to [1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded).
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159.html)
 - [G166: Providing audio that describes the important video content and describing it as such](https://www.w3.org/WAI/WCAG21/Techniques/general/G166.html)
-- [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96)
 
 ## Test Cases
 
 ### Passed
 
 #### Passed Example 1
-
-This `video` element, which has no audio, has a `track` element with descriptions. Thus, it passes rule [`Video` Element Visual-Only Content Has Description Track](https://act-rules.github.io/rules/ac7dc6).
-
-```html
-<html lang="en">
-	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
-	</video>
-</html>
-```
-
-#### Passed Example 2
 
 This `video` element, which has no audio, has a text transcript available on the same page. Thus, it passes rule [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5).
 
@@ -100,12 +85,12 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p>The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yaws, and then starts walking.
+He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
 ```
 
-#### Passed Example 3
+#### Passed Example 2
 
 This `video` element, which has no audio, has a separate audio track that describes the visual information. Thus, it passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54).
 
@@ -122,7 +107,7 @@ This `video` element, which has no audio, has a separate audio track that descri
 </html>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. Thus, it passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf).
 
@@ -141,20 +126,6 @@ This `video` element, which has no audio, is a media alternative for the text in
 
 #### Failed Example 1
 
-This `video` element, which has no audio, has a `track` element with incorrect descriptions.
-
-```html
-<html lang="en">
-	<video controls>
-		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
-		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
-		<track kind="descriptions" src="/test-assets/rabbit-video/incorrect-descriptions.vtt" />
-	</video>
-</html>
-```
-
-#### Failed Example 2
-
 This `video` element, which has no audio, has a transcript which does not convey the information included in the video-only content. The transcript is available through a link on the same page.
 
 ```html
@@ -167,7 +138,7 @@ This `video` element, which has no audio, has a transcript which does not convey
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 2
 
 This `video` element, which has no audio, has a separate audio track that incorrectly describes the visual information.
 
@@ -184,7 +155,7 @@ This `video` element, which has no audio, has a separate audio track that incorr
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 This `video` element, which has no audio, is a media alternative for the text in the page but it is not labeled as such.
 
@@ -196,6 +167,20 @@ This `video` element, which has no audio, is a media alternative for the text in
 		Keyboard compatibility is described in WCAG.
 	</p>
 	<video src="/test-assets/perspective-video/perspective-video-with-captions-silent.mp4" controls></video>
+</html>
+```
+
+#### Failed Example 4
+
+This `video` element, which has no audio, has a `track` element with descriptions. The description track is not supported.
+
+```html
+<html lang="en">
+	<video controls>
+		<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+		<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
+		<track kind="descriptions" src="/test-assets/rabbit-video/descriptions.vtt" />
+	</video>
 </html>
 ```
 

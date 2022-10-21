@@ -188,7 +188,7 @@ light gray background with a contrast ratio of 18.26:1
 
 This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
 The text has the default browser text color on the default browser background color. By default, this is 
-blacktext on a white background with a contrast ratio of 21:1
+black text on a white background with a contrast ratio of 21:1
 
 ```html
 <div role="button">My button!</div>

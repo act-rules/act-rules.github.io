@@ -305,8 +305,8 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 
 #### Failed Example 11
 
-This text is part of a widget because it is a child of a `button` element. The button text has a contrast
-ratio of 6.4:1.
+This text is part of a widget because it is a child of a `button` element. The button text has a contrast ratio of 6.4:1.
+
 ```html
 <button style="color: #555; background: #EEE;">My button!</button>
 ```

@@ -411,6 +411,21 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </div>
 ```
 
+#### Inapplicable Example 10
+
+This text is part of a [disabled][] widget because it is a child of a `button` element with the `disabled` attribute.
+```html
+<button style="color: #777; background: #EEE;" disabled>My button!</button>
+```
+
+#### Inapplicable Example 11
+
+This text is part of a [disabled][] widget because it is a child of an element with the `role` attribute set to `button` and with an `aria-disabled` attribute set to `true`.
+
+```html
+<div role="button" style="color: #777; background: #EEE;" aria-disabled="true">My button!</div>
+```
+
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
 [assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies 'WCAG definition of Assistive Technologies'

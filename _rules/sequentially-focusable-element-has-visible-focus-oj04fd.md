@@ -154,14 +154,6 @@ This document contains no [focusable][] element.
 
 #### Inapplicable Example 2
 
-This document contains only one [focusable][] element.
-
-```html
-<a href="https://act-rules.github.io/">ACT rules</a>
-```
-
-#### Inapplicable Example 3
-
 None of the [focusable][] elements in this document are part of [sequential focus navigation][].
 
 ```html

@@ -157,7 +157,7 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 #### Failed Example 3
 
-This `canvas` element has an `aria-label` attribute that incorrectly describes the image (aria-label describes HTML5 logo but the actual image is W3C logo).
+This `canvas` element has an `aria-label` attribute that incorrectly describes the image (the `aria-label` is "HTML5 logo" but the actual image is the W3C logo).
 
 ```html
 <html lang="en">

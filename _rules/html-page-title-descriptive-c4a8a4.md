@@ -169,7 +169,7 @@ This page has a generic [document title][]. The title contains the website name,
 		<title>University of Arkham</title>
 	</head>
 	<body>
-		<h1>Search results for "accessibility"</h1>
+		<h1>Search results for "accessibility" at the University of Arkham</h1>
 		<p>None</p>
 	</body>
 </html>

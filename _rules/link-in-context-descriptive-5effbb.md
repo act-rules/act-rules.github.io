@@ -5,13 +5,14 @@ rule_type: atomic
 description: |
   This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
-  wcag20:2.4.4: # Link Purpose (In Context)
+  wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.9: # Link Purpose (Link Only)
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

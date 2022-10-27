@@ -1,6 +1,6 @@
 ---
 id: 0va7u6
-name: HTML graphics contain no text
+name: HTML images contain no text
 rule_type: atomic
 description: |
   This rule checks that images of text are not used
@@ -10,8 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.9: # Images of Text (No Exception) (AA)
+  wcag20:1.4.9: # Images of Text (No Exception) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -36,12 +37,11 @@ This rule applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
 
-For each test target, at least one of the following is true:
+For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
 
 - **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
-- **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
-- **decoration**: the [embedded image][] the test target belongs to is [purely decorative][].
+- **not significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the visible part of the image or
+- **decoration**: the test target belongs to an [embedded image][] that is [purely decorative][].
 
 ## Assumptions
 

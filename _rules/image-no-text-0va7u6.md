@@ -1,6 +1,6 @@
 ---
 id: 0va7u6
-name: HTML graphics contain no text
+name: HTML images contain no text
 rule_type: atomic
 description: |
   This rule checks that images of text are not used
@@ -36,7 +36,6 @@ acknowledgments:
 This rule applies to any [rendered image resources][] in a [web page][].
 
 ## Expectation
-
 
 For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
 

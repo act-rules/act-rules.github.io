@@ -47,6 +47,7 @@ This rule does not consider and may produce incorrect results for:
 
 - Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 - The existence of any control on the page that can change the orientation on demand.
+- Scripts are not used to adjust the CSS orientation lock.
 
 ## Accessibility Support
 

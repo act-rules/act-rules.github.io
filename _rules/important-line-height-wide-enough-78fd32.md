@@ -24,18 +24,16 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] for which all the following are true:
+This rule applies to any [visible][] [text node][] child of an [HTML element][], when the text inside the elements includes a [soft wrap break][] and all the following are true for the `line-height` property of the element:
 
-- the element is has at least one [visible][] text node children; and
-- the text inside the element includes a [soft wrap break][]; and
-- the [specified][] `line-height` property of the element is [declared][] in a `style` attribute; and
-- the [computed][] `line-height` property is [important][].
-
-The [specified][] `line-height` of the element may be inherited from an ancestor, therefore the test targets do not necessarily have a `style` attribute.
+- the [specified][] value is [declared][] in a `style` attribute; and
+- the [computed][] value is [important][].
 
 ## Expectation
 
 For each test target, the [used][] value of its `line-height` property is at least 1.5 times the [computed][] value of its `font-size` property.
+
+Where the `line-height` and `font-size` properties of a text node means the ones of its parent.
 
 ## Assumptions
 
@@ -53,9 +51,9 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 ## Background
 
-When a style is [declared][] in the `style` attribute with an [important][] declaration, it "wins" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum recommended threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] origin can win the [cascade sort][] over styles with the [author origin][].
+Styles [declared][] in a `style` attribute have higher [cascade specificity][] than any selector; therefore, they "win" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum required threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] can win the [cascade sort][] over styles with the [author origin][].
 
-CSS specifications define each declaration as being either [important][] (such as the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for this property, and that `!important` is more widely known, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
+CSS specifications define each declaration as being either [important][] (if it has the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for some properties, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
 This rule evaluates the [used][] value of the `line-height` property instead of its [computed][] value because the [used][] value is guaranteed to use absolute units (i.e., pixels). This streamlines comparison with the [computed][] `font-size` which is also absolute. The [computed][] `line-height` may be a unitless number that is harder to compare.
 
@@ -65,13 +63,17 @@ This rule evaluates the [used][] value of the `line-height` property instead of 
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
+### About test cases
+
+Test cases description abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+
 ## Test Cases
 
 ### Passed
 
 #### Passed Example 1
 
-This `p` element has a [used][] `line-height` of twice the font size.
+This text node has a [used][] `line-height` of twice the font size.
 
 ```html
 <p style="line-height: 2em !important; max-width: 200px;">
@@ -81,7 +83,7 @@ This `p` element has a [used][] `line-height` of twice the font size.
 
 #### Passed Example 2
 
-This `p` element has a [used][] `line-height` of `30px`, which is exactly 1.5 times the `font-size` of `20px`.
+This text node has a [used][] `line-height` of `30px`, which is exactly 1.5 times the `font-size` of `20px`.
 
 ```html
 <style>
@@ -97,7 +99,7 @@ This `p` element has a [used][] `line-height` of `30px`, which is exactly 1.5 ti
 
 #### Passed Example 3
 
-This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which is 1.6 times the `font-size`.
+This text node has a [used][] `line-height` of `25.6px` (160% of `16px`) which is 1.6 times the `font-size`.
 
 ```html
 <style>
@@ -113,7 +115,7 @@ This `p` element has a [used][] `line-height` of `25.6px` (160% of `16px`) which
 
 #### Passed Example 4
 
-This `p` element has a [used][] `line-height` of `1.6` times the `font-size`.
+This text node has a [used][] `line-height` of `1.6` times the `font-size`.
 
 ```html
 <p style="line-height: 1.6 !important; max-width: 200px;">
@@ -123,7 +125,7 @@ This `p` element has a [used][] `line-height` of `1.6` times the `font-size`.
 
 #### Passed Example 5
 
-This `p` element has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, which is large enough.
+This text node has two [declared][] values for its `line-height` property. The latest wins the [cascade sort][]. It has a value of `2em`, which is large enough.
 
 ```html
 <p style="line-height: 1em !important; line-height: 2em !important; max-width: 200px;">
@@ -133,7 +135,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 6
 
-This `p` element has two [declared][] values for its `line-height` property. The one which is [important][] wins the [cascade sort][]. It has a value of `2em`, which is large enough.
+This text node has two [declared][] values for its `line-height` property. The one which is [important][] wins the [cascade sort][]. It has a value of `2em`, which is large enough.
 
 ```html
 <p style="line-height: 2em !important; line-height: 1em; max-width: 200px;">
@@ -143,7 +145,7 @@ This `p` element has two [declared][] values for its `line-height` property. The
 
 #### Passed Example 7
 
-The `div` element has no text node child. The [computed][] `line-height` of the `p` element is `15px`, 1.5 times its [computed][] `font-size` of `10px`
+This text node has a [computed][] `line-height` of `15px`, 1.5 times its [computed][] `font-size` of `10px`
 
 ```html
 <div style="font-size: 16px; line-height: 15px !important">
@@ -155,7 +157,7 @@ The `div` element has no text node child. The [computed][] `line-height` of the 
 
 #### Passed Example 8
 
-The `div` element has no text node child. The [computed][] `letter-spacing` of the `p` element is 1.5 times its `font-size`.
+This text node has a [computed][] `line-height` of 1.5 times its `font-size`.
 
 ```html
 <div style="letter-spacing: 1em !important">
@@ -169,7 +171,7 @@ The `div` element has no text node child. The [computed][] `letter-spacing` of t
 
 #### Failed Example 1
 
-This `p` element has a [used][] `line-height` equal to the font size, which is below the required minimum.
+This text node has a [used][] `line-height` equal to the font size, which is below the required minimum.
 
 ```html
 <p style="line-height: 1em !important; max-width: 200px;">
@@ -179,7 +181,7 @@ This `p` element has a [used][] `line-height` equal to the font size, which is b
 
 #### Failed Example 2
 
-This `p` element has a [used][] `line-height` of `20px`, which is below the required minimum given the specified font size is 20 pixels.
+This text node has a [used][] `line-height` of `20px`, which is below the required minimum given the specified font size is 20 pixels.
 
 ```html
 <style>
@@ -195,7 +197,7 @@ This `p` element has a [used][] `line-height` of `20px`, which is below the requ
 
 #### Failed Example 3
 
-This `p` element has a [used][] `line-height` of `19.2px` (120% of `16px`) which is below the required minimum.
+This text node has a [used][] `line-height` of `19.2px` (120% of `16px`) which is below the required minimum.
 
 ```html
 <style>
@@ -211,7 +213,7 @@ This `p` element has a [used][] `line-height` of `19.2px` (120% of `16px`) which
 
 #### Failed Example 4
 
-This `p` element has a [used][] `line-height` of `1.2` which is below the required minimum.
+This text node has a [used][] `line-height` of `1.2` which is below the required minimum.
 
 ```html
 <p style="line-height: 1.2 !important; max-width: 200px;">
@@ -221,7 +223,7 @@ This `p` element has a [used][] `line-height` of `1.2` which is below the requir
 
 #### Failed Example 5
 
-This `p` element has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value for `normal` is generally around 1.2).
+This text node has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value for `normal` is generally around 1.2).
 
 ```html
 <p style="line-height: normal !important; max-width: 200px;">
@@ -231,7 +233,7 @@ This `p` element has a [computed][] `line-height` of `normal` which is below the
 
 #### Failed Example 6
 
-This `p` element has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value for `normal` is generally around 1.2).
+This text node has a [computed][] `line-height` of `normal` which is below the required minimum ([used][] value for `normal` is generally around 1.2).
 
 ```html
 <p style="line-height: initial !important; max-width: 200px;">
@@ -253,17 +255,15 @@ There is no HTML element.
 
 #### Inapplicable Example 2
 
-This `div` element has no text node child.
+There is no text node.
 
 ```html
-<div style="letter-spacing: 0.1em !important; border-top: 1px solid black;">
-	<!-- empty div, border to make it "visible" -->
-</div>
+<div style="letter-spacing: 0.1em !important;"></div>
 ```
 
 #### Inapplicable Example 3
 
-This `p` element has no [visible][] text node child because of `display: none`.
+There is no [visible][] text node because of `display: none`.
 
 ```html
 <p style="display: none; line-height: 1em !important; max-width: 200px;">
@@ -273,7 +273,7 @@ This `p` element has no [visible][] text node child because of `display: none`.
 
 #### Inapplicable Example 4
 
-This `p` element has no [visible][] text node child because it is positioned off-screen.
+There is no [visible][] text node because it is positioned off-screen.
 
 ```html
 <p style="position: absolute; top: -999em; line-height: 1em !important; max-width: 200px;">
@@ -295,7 +295,7 @@ This `p` element will never have a [soft wrap break][] due to the use of an over
 
 #### Inapplicable Example 6
 
-This `p` element's `line-height` property is not [declared][] in a `style` attribute.
+This text node's `line-height` property is not [declared][] in a `style` attribute.
 
 ```html
 <p style="width: 60%; max-width: 200px;">
@@ -305,7 +305,7 @@ This `p` element's `line-height` property is not [declared][] in a `style` attri
 
 #### Inapplicable Example 7
 
-The [specified][] value of the `line-height` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
+The [specified][] value of the `line-height` property of this text node is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
 
 ```html
 <style>
@@ -321,7 +321,7 @@ The [specified][] value of the `line-height` property of this `p` element is [de
 
 #### Inapplicable Example 8
 
-This `p` element does not have an [important][] [computed][] `line-height`.
+This text node does not have an [important][] [computed][] `line-height`.
 
 ```html
 <p style="line-height: 1.2em; max-width: 200px;">
@@ -331,7 +331,7 @@ This `p` element does not have an [important][] [computed][] `line-height`.
 
 #### Inapplicable Example 9
 
-The `p` element has no text node child. The [computed][] value of the `line-height` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+The [computed][] value of the `line-height` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
 
 ```html
 <p style="line-height: 1.2em">
@@ -343,7 +343,7 @@ The `p` element has no text node child. The [computed][] value of the `line-heig
 
 #### Inapplicable Example 10
 
-The `p` element has no text node child. The [computed][] value of the `line-height` property of this `span` element is the [inherited][] value, that is the [computed][] value of its parent and therefore not [important][].
+The [computed][] value of the `line-height` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
 
 ```html
 <p style="line-height: 1.2em">

@@ -65,9 +65,11 @@ CSS specifications define each declaration as being either [important][] (if it 
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-## Test Cases
+### About test cases
 
 Test cases description abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+
+## Test Cases
 
 ### Passed
 
@@ -206,9 +208,7 @@ There is no HTML element.
 There is no text node.
 
 ```html
-<div style="letter-spacing: 0.1em !important; border-top: 1px solid black;">
-	<!-- empty div, border to make it "visible" -->
-</div>
+<div style="letter-spacing: 0.1em !important;"></div>
 ```
 
 #### Inapplicable Example 3

@@ -54,7 +54,7 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
+_There are no major accessibility support issues known for this rule._
 
 The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
 
@@ -96,8 +96,6 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 #### Passed Example 3
 
 The image button has an [accessible name][] through the `title` attribute.
-
-**note**: The `title` attribute may not always be [accessibility supported](#accessibility-support).
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />

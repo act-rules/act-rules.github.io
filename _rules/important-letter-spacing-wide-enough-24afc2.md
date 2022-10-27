@@ -24,18 +24,16 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] [text node][] child of an [HTML element][], when all the following are true for its `letter-spacing` property:
+This rule applies to any [visible][] [text node][] child of an [HTML element][], when all the following are true for the `letter-spacing` property of the element:
 
 - the [specified][] value is [declared][] in a `style` attribute; and
 - the [computed][] value is [important][].
-
-Where the `letter-spacing` property of a text node means the one of its parent.
 
 ## Expectation
 
 For each test target, the [computed][] value of its `letter-spacing` property is at least 0.12 times the [computed][] value of its `font-size` property.
 
-Where the `letter-spacing` property of a text node means the one of its parent.
+Where the `letter-spacing` and `font-size` properties of a text node means the ones of its parent.
 
 ## Assumptions
 

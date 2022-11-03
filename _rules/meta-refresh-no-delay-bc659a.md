@@ -69,7 +69,9 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
-This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [3.2.5 Change on Request][sc325]. Note: Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommend to avoid this.
+Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+
+This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [3.2.5 Change on Request][sc325].
 
 ### Bibliography
 

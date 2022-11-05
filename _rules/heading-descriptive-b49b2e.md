@@ -31,7 +31,12 @@ This rule applies to any [semantic][semantic role] `heading` element that is [in
 
 ## Expectation
 
-Each target element describes the topic or purpose of the first non-[decorative][] [palpable content][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
+Each target element describes the topic or purpose of the first node after the test target for which all the following are true:
+- The node is not [decorative][]; and
+- The node is [palpable content][] (such as text nodes or elements like `h1`, `p`, `img`. etc.); and
+- The node is [included in the accessibility tree].
+
+The order of elements is determined by the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 

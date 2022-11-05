@@ -1,9 +1,9 @@
 ---
 id: akn7bn
-name: Iframe with negative tabindex has no interactive elements
+name: Iframe with interactive elements is not excluded from tab-order
 rule_type: atomic
 description: |
-  This rule checks that `iframe` elements with a negative `tabindex` attribute value contain no interactive elements.
+  This rule checks that `iframe` elements which contain an interactive (tabbable) element are not excluded from sequential focus navigation.
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true
@@ -28,13 +28,16 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any non-focusable `iframe` element that has [focusable][] content.
+This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
+
+- the element is [visible][]; and
+- the element is part of the [sequential focus navigation order][] of the `iframe`'s [document][].
+
+An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
 
 ## Expectation
 
-For each test target, the [nested browsing context][] does not [contain](#akn7bn:contain) elements that are [visible][] and part of the [sequential focus navigation][].
-
-An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+The test target does not have a negative number as a `tabindex` [attribute value][].
 
 ## Assumptions
 
@@ -46,7 +49,9 @@ There are no major accessibility support issues known for this rule.
 
 ## Background
 
-By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or some other negative number, it becomes impossible to move the focus into the [browsing context][nested browsing context] of the `iframe` element. Even though its content is still included in the [sequential focus navigation][], there is no way to move the focus to any of the items in the `iframe` using standard keyboard navigation.
+Setting the `tabindex` attribute of an `iframe` element to a negative value effectively excludes its content from the tab-order of the page. A `button` may be in the tab-order of an `iframe`, but if the `iframe` itself is taken from the tab-order, the `button` is effectively keyboard inaccessible.
+
+Each document, including documents inside an `iframe`, has its own [sequential focus navigation order][]. These focus orders are combined to get the page's global tab-order (called the [flattened tabindex-ordered focus navigation scope][]). For an `iframe` with a negative tabindex, its sequential focus navigation order is not included in the page's global tab-order (as a consequence for the rules to build the [tabindex-ordered focus navigation scope][]).
 
 ### Bibliography
 
@@ -59,41 +64,25 @@ By setting the `tabindex` [attribute value][] of an `iframe` element to `-1` or 
 
 #### Passed Example 1
 
-This `iframe` element contains no content that is part of [sequential focus navigation][].
+This `iframe` element does not have a `tabindex` [attribute value][] that is a negative number
 
 ```html
-<iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>
+<iframe srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 #### Passed Example 2
 
-This `iframe` element contains a link that is not part of [sequential focus navigation][] because of its `tabindex`.
+This `iframe` element does not have a `tabindex` [attribute value][] that is a negative number
 
 ```html
-<iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
-```
-
-#### Passed Example 3
-
-This `iframe` element contains no [visible][] content because of the small size of the iframe.
-
-```html
-<iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
-```
-
-#### Passed Example 4
-
-This `iframe` element contains no [visible][] content because the iframe is hidden.
-
-```html
-<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
+<iframe tabindex="0" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-This `iframe` element has a link that is part of [sequential focus navigation][].
+This `iframe` element contains a [visible][] link that is part of its [sequential focus navigation order][], and has a negative `tabindex`.
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
@@ -103,17 +92,43 @@ This `iframe` element has a link that is part of [sequential focus navigation][]
 
 #### Inapplicable Example 1
 
-This `iframe` element does not have a `tabindex` [attribute value][] that is a negative number
+This `iframe` element contains no content that is part of its [sequential focus navigation order][].
 
 ```html
-<iframe tabindex="0" srcdoc="<a href='/'>Home</a>"></iframe>
+<iframe tabindex="-1" srcdoc="<h1>Hello world</h1>"></iframe>
+```
+
+#### Inapplicable Example 2
+
+This `iframe` element contains no [visible][] content because the iframe is hidden.
+
+```html
+<iframe tabindex="-1" hidden srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 3
+
+This `iframe` element contains no [visible][] content because of the small size of the iframe.
+
+```html
+<iframe tabindex="-1" width="1" height="1" srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 4
+
+This `iframe` element contains a link that is not part of its [sequential focus navigation order][] because of its own `tabindex`.
+
+```html
+<iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
+[document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
+[flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
-[sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
+[sequential focus navigation order]: https://html.spec.whatwg.org/multipage/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
+[tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope
 [visible]: #visible 'Definition of visible'
-[focusable]: #focusable 'Definition of focusable'

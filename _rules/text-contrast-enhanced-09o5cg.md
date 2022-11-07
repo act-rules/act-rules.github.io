@@ -425,6 +425,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 #### Inapplicable Example 10
 
 This text is part of a [disabled][] widget because it is a child of a `button` element with the `disabled` attribute.
+
 ```html
 <button style="color: #777; background: #EEE;" disabled>My button!</button>
 ```

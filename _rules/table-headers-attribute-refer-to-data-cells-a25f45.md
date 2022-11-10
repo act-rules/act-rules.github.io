@@ -28,7 +28,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element is [visible][] and [included in the accessibility tree][].
+This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element:
+- is [visible][]; and
+- AND is [included in the accessibility tree][]; and
+- has a role of `table`, `grid` or `treegrid`.
 
 ## Expectation 1
 
@@ -392,6 +395,16 @@ The `table` is not [included in the accessibility tree][].
 		<td headers="header1">15%</td>
 		<td headers="header2">10%</td>
 	</tr>
+</table>
+```
+
+#### Inapplicable Example 6
+
+The `table` doesn't have a role of `table`, `grid` or `treegrid`.
+
+```html
+<table role="region">
+	<td id="self" headers="self">World</td>
 </table>
 ```
 

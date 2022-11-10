@@ -30,7 +30,7 @@ acknowledgments:
 
 This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element:
 - is [visible][]; and
-- AND is [included in the accessibility tree][]; and
+- is [included in the accessibility tree][]; and
 - has a role of `table`, `grid` or `treegrid`.
 
 ## Expectation 1

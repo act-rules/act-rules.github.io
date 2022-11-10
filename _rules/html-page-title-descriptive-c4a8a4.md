@@ -73,7 +73,7 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 
 #### Passed Example 1
 
-This `<title>` element describes the content of the document.
+This `title` element describes the content of the document.
 
 ```html
 <html lang="en">
@@ -90,7 +90,7 @@ This `<title>` element describes the content of the document.
 
 #### Passed Example 2
 
-This `<title>` element, the first of two, describes the content of the document.
+This `title` element, the first of two, describes the content of the document.
 
 ```html
 <html lang="en">
@@ -108,7 +108,7 @@ This `<title>` element, the first of two, describes the content of the document.
 
 #### Passed Example 3
 
-This `<title>` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `<head>` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
+This `title` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `head` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
 
 ```html
 <html lang="en">
@@ -143,7 +143,7 @@ This `<title>` element does not describe the content of the document.
 
 #### Failed Example 2
 
-This `<title>` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `<title>` element.
+This `title` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `title` element.
 
 ```html
 <html lang="en">
@@ -155,6 +155,22 @@ This `<title>` element, the first of two, does not describe the content of the d
 		<p>
 			Clementines will be ready to harvest from late October through February.
 		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
+This page has a generic [document title][]. The title contains the website name, but does not describe the page.
+
+```html
+<html lang="en">
+	<head>
+		<title>University of Arkham</title>
+	</head>
+	<body>
+		<h1>Search results for "accessibility" at the University of Arkham</h1>
+		<p>None</p>
 	</body>
 </html>
 ```

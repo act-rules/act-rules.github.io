@@ -28,10 +28,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element:
-- is [visible][]; and
-- is [included in the accessibility tree][]; and
-- has a role of `table`, `grid` or `treegrid`.
+This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where all of the following is true for the [`table`][] element:
+
+- The `table` is [visible][]; and
+- The `table` is [included in the accessibility tree][]; and
+- The `table` has a [semantic role][] of `table`, `grid` or `treegrid`.
 
 ## Expectation 1
 

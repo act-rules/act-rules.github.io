@@ -137,6 +137,7 @@
 		"js-yaml": "^3.14.1",
 		"lint-staged": "^9.5.0",
 		"marked": "^4.0.10",
+		"moment": "^2.29.4",
 		"prettier": "^1.19.1",
 		"remark-frontmatter": "^1.3.2",
 		"remark-parse": "^8.0.3",

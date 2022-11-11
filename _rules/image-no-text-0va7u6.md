@@ -23,6 +23,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+    - Wilco Fiers
   funding:
     - WAI-Tools
   assets:
@@ -33,20 +34,21 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [rendered image resources][] in a [web page][].
+This rule applies to any [image resources][rendered image resources] rendered in a [web page][].
 
 ## Expectation
 
-For each test target, its [visible pixels][visible] do not contain text expressing anything in a [human language], except if at least one of the following is true:
+Each test target has no [visible][] [text][human language], except if at least one of the following is true:
 
-- **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- **not significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the visible part of the image or
-- **decoration**: the test target belongs to an [embedded image][] that is [purely decorative][].
+- <dfn id="0va7u6:decorative">decorative</dfn>: The image with text is [purely decorative][]; or
+- <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
+- <dfn id="0va7u6:essential">essential</dfn>: Ensuring consistent presentation of the text is [essential][].
 
 ## Assumptions
 
 - There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
 - The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
+- When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This is not true for SVG text that is in a separate file, and displayed through for example the `img` element.
 
 ## Accessibility Support
 
@@ -203,6 +205,17 @@ This image resource referenced by the `img` element contains text that provides 
 <p>Welcome to our website</p>
 ```
 
+#### Failed Example 5
+
+This `img` elements loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
+
+```html
+<img alt="WCAG Rocks" src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' height='20px' width='80px'>
+  <text x='0' y='15'>WCAG Rocks</text>
+</svg>" />
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -226,8 +239,8 @@ This `svg` element does not have `image` element descendants.
 </svg>
 ```
 
-[embedded image]: #embedded-image 'Definition of Embedded Image'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
+[essential]: #essential-text-presentation 'Definition of Essential (Text Presentation)'
+[insignificant]: #insignificant 'Definition of Insignificant'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'

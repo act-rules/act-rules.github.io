@@ -63,11 +63,11 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

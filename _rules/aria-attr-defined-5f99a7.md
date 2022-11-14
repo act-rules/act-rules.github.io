@@ -24,11 +24,11 @@ Each target attribute is defined in [WAI-ARIA Specifications][].
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

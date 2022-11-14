@@ -48,7 +48,7 @@ No test target is [prohibited][] on the [semantic role][] of the element on whic
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 

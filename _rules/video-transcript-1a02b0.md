@@ -27,8 +27,11 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+<<<<<<< HEAD
   assets:
     - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+=======
+>>>>>>> 087a4d26a1 (Add "funding" to acknowledgments (#1694))
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

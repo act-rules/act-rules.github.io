@@ -16,8 +16,11 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+<<<<<<< HEAD
   assets:
     - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
+=======
+>>>>>>> 087a4d26a1 (Add "funding" to acknowledgments (#1694))
 ---
 
 ## Applicability

@@ -21,32 +21,41 @@ acknowledgments:
     - Dagfinn Rømen
     - Geir Sindre Fossøy
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any element with the [semantic role][] of heading that is either [visible][] or [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is either [visible][] or [included in the accessibility tree][].
 
 ## Expectation 1
 
-Each target element which is [visible][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target in tree order in the [flat tree][].
+For each target element at least one of the following is true:
+
+- the target element is not [visible][]; or
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target element in tree order in the [flat tree][].
 
 ## Expectation 2
 
-Each target element which is [included in the accessibility tree][] describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target in tree order in the [flat tree][].
+For each target element at least one of the following is true:
+
+- the target element is not [included in the accessibility tree][]; or
+- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-- This rule assumes that the [flat tree][] order is close to the reading order, as elements are rendered on the page. Due to positioning, it is possible to render a document in a order that greatly differ from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule assumes that the [flat tree][] order is close to the reading order, as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `heading` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
@@ -98,7 +107,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 ```html
 <html lang="en">
 	<h1>
-		<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
+		<img src="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
 	</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
@@ -126,12 +135,12 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 6
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
 	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>
@@ -191,7 +200,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 ```html
 <html lang="en">
 	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>

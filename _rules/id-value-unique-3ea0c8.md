@@ -1,6 +1,6 @@
 ---
 id: 3ea0c8
-name: '`id` attribute value is unique'
+name: Id attribute value is unique
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
@@ -21,6 +21,8 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Bryn Anderson
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -39,13 +41,15 @@ The value of the attribute is unique across all other `id` attributes specified 
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
 - [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)

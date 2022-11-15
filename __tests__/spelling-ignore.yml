@@ -16,6 +16,8 @@
 - xhtml
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
+- Iframe
+- iframes
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
@@ -33,7 +35,6 @@
 - api # lowercase needed in reference list
 - APIs
 - MDN
-- BCP
 - HTML5
 - HTML
 - JSON
@@ -46,8 +47,6 @@
 - dpub # lowercase needed in reference list
 - CSSOM
 - DNS
-- BCP
-- bcp
 - X11
 - IDL
 - idl # lowercase needed in reference list
@@ -82,6 +81,10 @@
 - kerning
 - drawImage
 - pragma
+- namespaced
+- iso # lowercase needed in reference list
+- RFC
+- rfc
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -206,6 +209,8 @@
 - autofill
 - dismissible
 - implementers
+- implementor
+- implementors
 - presentational
 - backtick
 - camelCase
@@ -223,6 +228,8 @@
 - Namespaced
 - namespaceURI
 - testability
+- focusability
+- unitless
 
 # Parts of Unicode
 - 000A
@@ -240,6 +247,8 @@
 - TestSubject
 - earl:cantTell
 - getComputedPriority
+- isPartOf
+- scId
 
 # sizes
 - 1em
@@ -257,6 +266,8 @@
 # Language codes
 - da
 - nl
+- de
+- eng
 
 # Color values
 - HSL

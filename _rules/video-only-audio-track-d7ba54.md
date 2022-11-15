@@ -1,6 +1,6 @@
 ---
 id: d7ba54
-name: '`video` element visual-only content has audio track alternative'
+name: Video element visual-only content has audio track alternative
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative.
@@ -19,6 +19,10 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+  funding:
+    - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 ---
 
 ## Applicability
@@ -31,14 +35,15 @@ The visual information of each test target is available through an audio track.
 
 ## Assumptions
 
-- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
 - [G166: Providing audio that describes the important video content and describing it as such](https://www.w3.org/WAI/WCAG21/Techniques/general/G166)

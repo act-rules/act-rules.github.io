@@ -17,6 +17,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -33,7 +34,9 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Wilco Fiers
-  image:
+  funding:
+    - WAI-Tools
+  assets:
     - Image used in passed example 10 and failed example 9 is courtesy of NASA/JPL-Caltech.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
@@ -43,7 +46,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to any HTML element with the [semantic role][] of `link` that is [included in the accessibility tree][].
+This rule applies to any [HTML element][] that is an [inheriting semantic][] `link` [included in the accessibility tree][].
 
 ## Expectation
 
@@ -55,13 +58,18 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Accessibility Support
 
-- There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `link` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
 
 ## Background
 
+### Related rules
+
 - [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
@@ -183,6 +191,14 @@ This `area` element has a [semantic role][] of `link` and an [accessible name][]
 </map>
 ```
 
+#### Passed Example 11
+
+This `a` element is an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute as well as an [accessible name] given by its child text node.
+
+```html
+See [<a href="https://act-rules.github.io/" role="doc-biblioref">ACT rules</a>]
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -272,6 +288,16 @@ This `a` element has an [explicit role][] of `none`. However, it is [focusable][
 <a href="https://www.w3.org/WAI" role="none"> </a>
 ```
 
+#### Failed Example 11
+
+This `a` element is an [inheriting semantic][] `link` given by its `role="doc-biblioref"` attribute but it has an empty [accessible name].
+
+```html
+See [<a href="https://act-rules.github.io/" role="doc-biblioref"
+	><img src="https://github.com/act-rules/act-rules.github.io/blob/develop/test-assets/shared/act-logo.png" alt=""/></a
+>]
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -330,6 +356,8 @@ This `a` element does not have the role of link because it does not have an `hre
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inheriting semantic]: #inheriting-semantic 'Definition of inheriting semantic role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'
+[html element]: #namespaced-element

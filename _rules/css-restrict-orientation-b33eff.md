@@ -17,11 +17,13 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to any HTML element that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property that is applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`, where the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
+This rule applies to any [HTML element][] that is [visible](#visible) and has a CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property that is applied conditionally on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) with a value of `landscape` or `portrait`, where the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
 - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
 - [rotate3d](https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d)
@@ -37,7 +39,7 @@ This rule applies to any HTML element that is [visible](#visible) and has a CSS 
 
 The target element is neither rotated clockwise nor counter clockwise around the Z-axis at an angle corresponding to 90 degrees relative from the position of the element in `landscape` orientation to the position of the element in `portrait` orientation, and vice versa.
 
-**Note:** Imagine the display of a smartphone with cartoon figure at its center. With this example, if a user turns the smartphone a quarter turn, that is a partial move from one orientation to the other, the user would expect that the cartoon figure continues to remain facing upwards. The smartphone accomplishes this by rotating the contents of its display a quarter turn to counter the users change in orientation. In effect, the cartoon figure has remained in place and its rotation relative from one orientation to the other is 0 degrees. Now imagine that a developer facilitated this rotation of the cartoon figure by a quarter turn _only_ when the smartphone starts from one orientation and not the other; its rotation relative from one orientation to the other would then be 90 degrees and it would appear stuck, or locked, as the user moves between orientations. What the developer has done is effectively counter the smartphones attempt at countering the users change in orientation.
+**Note:** Imagine the display of a smartphone with cartoon figure at its center. With this example, if a user turns the smartphone a quarter turn, that is a partial move from one orientation to the other, the user would expect that the cartoon figure continues to remain facing upwards. The smartphone accomplishes this by rotating the contents of its display a quarter turn to counter the users change in orientation. In effect, the cartoon figure has remained in place and its rotation relative from one orientation to the other is 0 degrees. Now imagine that a developer facilitated this rotation of the cartoon figure by a quarter turn _only_ when the smartphone starts from one orientation and not the other; its rotation relative from one orientation to the other would then be 90 degrees and it would appear stuck, or locked, as the user moves between orientations. What the developer has done is effectively counter the smartphone's attempt at countering the user's change in orientation.
 
 ## Assumptions
 
@@ -45,12 +47,15 @@ This rule does not consider and may produce incorrect results for:
 
 - Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
 - The existence of any control on the page that can change the orientation on demand.
+- Scripts are not used to adjust the CSS orientation lock.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
 - [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
@@ -91,6 +96,8 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 #### Passed Example 2
 
 A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property has [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix) [transform function](https://www.w3.org/TR/css-transforms/#transform-functions) conditionally applied on the [orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation) [media feature](https://www.w3.org/TR/css3-mediaqueries/#media1) which does not restrict the element to either `portrait` or `landscape` orientation.
+
+**Note:** The extremely small number in the transform function below is included to ensure testing methodologies correctly interpret the impacts of the transformation and are not simply looking for 0.
 
 ```html
 <html lang="en">
@@ -293,3 +300,5 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	</body>
 </html>
 ```
+
+[html element]: #namespaced-element

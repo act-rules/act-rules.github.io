@@ -29,6 +29,8 @@ acknowledgments:
     - Jey Nandakumar
     - Stein Erik Skotkjerra
     - Wilco Fiers
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -45,7 +47,7 @@ Each target element has at least one [descendant](https://dom.spec.whatwg.org/#c
 
 ## Expectation 2
 
-For each target element, the first HTML `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+For each target element, the first [HTML][] `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
 ## Assumptions
 
@@ -53,13 +55,18 @@ This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
 
+### Related rules
+
 - [HTML page title is descriptive](https://act-rules.github.io/rules/c4a8a4)
+
+### Bibliography
+
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
@@ -81,7 +88,7 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that serves as the title for the page and the `iframe` since it does not have its own.
+This page has a `title` element that serves as the title for the page and the `iframe` since the `iframe` does not have its own.
 
 ```html
 <html>
@@ -200,3 +207,5 @@ This `title` element is a child of an `svg` element.
   <title>This is an SVG</title>
 </svg>
 ```
+
+[html]: #namespaced-element

@@ -29,13 +29,13 @@ acknowledgments:
     - Anne Thyme Nørregaard
     - Dagfinn Rømen
     - Geir Sindre Fossøy
+  funding:
+    - WAI-Tools
 ---
 
 ## Applicability
 
-This rule only applies to any [HTML or SVG element][] that is [focusable][].
-
-**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
+This rule applies to any [HTML or SVG element][] that is [focusable][].
 
 ## Expectation
 
@@ -46,13 +46,15 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
+
+### Bibliography
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
 - [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
@@ -64,7 +66,7 @@ _There are no major accessibility support issues known for this rule._
 
 #### Passed Example 1
 
-No trap for keyboard navigation.
+These [focusable][] elements do not create a trap for keyboard navigation.
 
 ```html
 <a href="#">Link 1</a> <button>Button1</button>
@@ -72,7 +74,7 @@ No trap for keyboard navigation.
 
 #### Passed Example 2
 
-Using `tabindex="1"`.
+This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -80,7 +82,7 @@ Using `tabindex="1"`.
 
 #### Passed Example 3
 
-Using `tabindex="-1"`.
+This element is made [focusable][] by the `tabindex` attribute, even if it is not part of the sequential focus navigation. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -88,23 +90,17 @@ Using `tabindex="-1"`.
 
 #### Passed Example 4
 
-Keyboard trap with help information in a paragraph before, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a paragraph before the `button` elements and the method advised works to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
-<p>Press the M-key to Exit</p>
+<p>Press Ctrl+M to Exit</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -112,23 +108,17 @@ Keyboard trap with help information in a paragraph before, and where the method 
 
 #### Passed Example 5
 
-Keyboard trap with help information within the trap, and where the method advised works.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information within the trap and the method advised works to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<p>Press the M-key to Exit</p>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<p>Press Ctrl+M to Exit</p>
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -136,25 +126,19 @@ Keyboard trap with help information within the trap, and where the method advise
 
 #### Passed Example 6
 
-Keyboard trap with "help" link that once clicked exposes the instructions.
+These focusable `button` elements have scripts that create a keyboard trap. The document includes help information in a "help" link that once clicked exposes the instructions to escape the keyboard trap.
 
 ```html
-<script>
-	var trapOn = false
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
-	function showHelpText() {
-		document.getElementById('helptext').innerHTML = '<p>Press the M-key to Exit</p>'
-	}
-</script>
-
-<div onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)">
+<div onkeydown="escapeTrapOnCtrlM(event)">
 	<a id="link1" href="#">Link 1</a>
-	<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('helpLink').focus();})(event)">
+	<button id="btn1" onfocus="trapOn = true" onblur="moveFocusTo('helpLink')">
 		Button 1
 	</button>
 	<a id="helpLink" href="#" onclick="showHelpText()">How to go the next element</a>
 	<div id="helptext"></div>
-	<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+	<button id="btn2" onblur="moveFocusTo('btn1')">
 		Button 2
 	</button>
 </div>
@@ -165,7 +149,7 @@ Keyboard trap with "help" link that once clicked exposes the instructions.
 
 #### Failed Example 1
 
-Keyboard trap one element.
+This [focusable][] element creates a keyboard trap bringing focus to the `button`.
 
 ```html
 <a href="#">Link 1</a>
@@ -176,7 +160,7 @@ Keyboard trap one element.
 
 #### Failed Example 2
 
-Keyboard trap group.
+These [focusable][] `button` elements create a keyboard trap preventing the last `button` to be reached using the keyboard.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
@@ -192,7 +176,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable][] element between keyboard traps.
+This `button` element is between other `button` elements creating a keyboard trap.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -202,22 +186,16 @@ A [focusable][] element between keyboard traps.
 
 #### Failed Example 4
 
-Keyboard trap with no instructions.
+These focusable `button` elements create a keyboard trap with no instructions.
 
 ```html
-<script>
-	var trapOn = false
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -225,23 +203,17 @@ Keyboard trap with no instructions.
 
 #### Failed Example 5
 
-Keyboard trap with instructions that doesn't give advise on the method for proceeding.
+These focusable `button` elements create a keyboard trap with instructions that don't give advice on the method for proceeding.
 
 ```html
-<script>
-	var trapOn = false
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <p>Go to the next element</p>
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 1
 </button>
-<button
-	id="btn2"
-	onkeydown="(function(e){ if (e.keyCode === 77){trapOn=false;document.getElementById('link2').focus();}})(event)"
-	onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)"
->
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')" onkeydown="escapeTrapOnCtrlM(event)">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -249,19 +221,17 @@ Keyboard trap with instructions that doesn't give advise on the method for proce
 
 #### Failed Example 6
 
-Keyboard trap with help text, where the method advised doesn't work.
+These focusable `button` elements create a keyboard trap with help text, where the method advised doesn't work.
 
 ```html
-<script>
-	var trapOn = false
-</script>
+<script src="/test-assets/focusable-no-keyboard-trap/keyboard.js"></script>
 
 <a id="link1" href="#">Link 1</a>
-<button id="btn1" onblur="(function(e){trapOn=true; document.getElementById('btn2').focus();})(event)">
+<button id="btn1" onfocus="trapOn = true" onblur="moveFocusToButton('btn2')">
 	Button 1
 </button>
-<p>Press the M-key to Exit</p>
-<button id="btn2" onblur="(function(e){ if(trapOn){document.getElementById('btn1').focus();}})(event)">
+<p>Press Ctrl+M to Exit</p>
+<button id="btn2" onfocus="trapOn = true" onblur="moveFocusToButton('btn1')">
 	Button 2
 </button>
 <a id="link2" href="#">Link 2</a>
@@ -271,7 +241,7 @@ Keyboard trap with help text, where the method advised doesn't work.
 
 #### Inapplicable Example 1
 
-No [focusable][] element.
+There is no [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -279,7 +249,7 @@ No [focusable][] element.
 
 #### Inapplicable Example 2
 
-Disabled element.
+There is no [focusable][] element.
 
 ```html
 <button type="button" disabled>Click Me!</button>
@@ -287,7 +257,7 @@ Disabled element.
 
 #### Inapplicable Example 3
 
-Hidden element using `display:none`.
+There is no [focusable][] element.
 
 ```html
 <button type="button" style="display:none;">Click Me!</button>
@@ -295,7 +265,7 @@ Hidden element using `display:none`.
 
 #### Inapplicable Example 4
 
-Hidden element using `visibility:hidden`.
+There is no [focusable][] element.
 
 ```html
 <a href="#" style="visibility:hidden;">Link 1</a> <button style="visibility:hidden;">Button1</button>

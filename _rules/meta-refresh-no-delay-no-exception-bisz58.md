@@ -1,6 +1,6 @@
 ---
 id: bisz58
-name: '`meta` element has no refresh delay (no exception)'
+name: Meta element has no refresh delay (no exception)
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
@@ -30,6 +30,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -56,6 +58,10 @@ For each test target, running the [shared declarative refresh steps][], given th
 Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
+
+Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+
+### Bibliography
 
 - [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
 - [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)
@@ -86,7 +92,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -94,42 +100,32 @@ The first valid `meta` element redirects immediately.
 
 #### Failed Example 1
 
-This `meta` element refreshes the page after 30 seconds.
+This `meta` element refreshes the page after 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30" />
+	<meta http-equiv="refresh" content="72001" />
 </head>
 ```
 
 #### Failed Example 2
 
-This `meta` element redirects the user after 30 seconds.
+This `meta` element redirects the user after 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
+	<meta http-equiv="refresh" content="72001; URL='https://w3.org'" />
 </head>
 ```
 
 #### Failed Example 3
 
-The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 5 seconds.
+The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 20 hours.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="0: https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
-</head>
-```
-
-#### Failed Example 4
-
-This `meta` element redirects the user after 20 hours.
-
-```html
-<head>
-	<meta http-equiv="refresh" content="72001; http://example.com" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -151,7 +147,7 @@ This `meta` element has no `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta content="30" />
+	<meta content="72001" />
 </head>
 ```
 
@@ -181,7 +177,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="; 30" />
+	<meta http-equiv="refresh" content="; 72001" />
 </head>
 ```
 
@@ -201,7 +197,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="+5; http://w3.org" />
+	<meta http-equiv="refresh" content="+72001; http://w3.org" />
 </head>
 ```
 

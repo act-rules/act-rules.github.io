@@ -31,6 +31,8 @@ input_aspects: # Remove what is not applicable
 acknowledgments:
   authors:
     - Anne Thyme Nørregaard
+  funding:
+    - WAI-Tools
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -43,22 +45,33 @@ This rule applies to any `input` element with a `type` [attribute value][] of `i
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`).
+Each target element has an [accessible name][] that is neither empty (`""`), nor the default name for this element (localized version of "Submit Query").
 
 ## Assumptions
 
 - This rule assumes that all image buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+- This rule assumes that the default name for image buttons ("Submit Query"), as defined by the [HTML Accessibility API Mapping][html aam image button], is never descriptive.
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
+_There are no major accessibility support issues known for this rule._
+
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
 
 ## Background
 
+Contrarily to `img` elements, an empty `alt` attribute does not make image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
+
+### Related rules
+
 - [Button has non-empty accessible name](https://act-rules.github.io/rules/97a4e1)
+
+### Bibliography
+
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG21/Techniques/html/H36)
+- [HTML Accessibility API Mappings for computing the accessible name of image buttons](https://www.w3.org/TR/html-aam-1.0/#input-type-image)
 
 ## Test Cases
 
@@ -84,8 +97,6 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 
 The image button has an [accessible name][] through the `title` attribute.
 
-**note**: The `title` attribute may not always be [accessibility supported](#accessibility-support).
-
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />
 ```
@@ -103,7 +114,7 @@ The image button has an [accessible name][] through the `aria-labelledby` attrib
 
 #### Failed Example 1
 
-The image button element has an empty [accessible name][]. The `name` attribute can not be used to provide an [accessible name][].
+The image button element has an [accessible name][] equal to the default "Submit Query". The `name` attribute can not be used to provide an [accessible name][].
 
 ```html
 <input type="image" name="search" src="/test-assets/shared/search-icon.svg" />
@@ -111,7 +122,7 @@ The image button element has an empty [accessible name][]. The `name` attribute 
 
 #### Failed Example 2
 
-The image button has an empty `alt` attribute, and no other attributes that can give it an [accessible name][].
+The image button has an empty `alt` attribute, and no other attributes that can give it an [accessible name][], hence its name is the default "Submit Query".
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" alt="" />
@@ -119,7 +130,7 @@ The image button has an empty `alt` attribute, and no other attributes that can 
 
 #### Failed Example 3
 
-The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button an empty [accessible name][].
+The image button has an `aria-labelledby` attribute, but the referenced element does not exist. This gives the button the default [accessible name][] of "Submit Query".
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" aria-labelledby="non-existing" />
@@ -168,5 +179,6 @@ The image button is ignored by assistive technologies because it is not [include
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[attribute value]: #attribute-value 'Definition of Attribute Value'
+[attribute value]: #attribute-value:enumerated 'Definition of Attribute Value'
+[html aam image button]: https://www.w3.org/TR/html-aam-1.0/#input-type-image 'HTML Accessibility API Mapping, image button'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

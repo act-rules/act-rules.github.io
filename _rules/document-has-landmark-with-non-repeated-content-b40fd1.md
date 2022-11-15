@@ -12,6 +12,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
   assets:
     - _Romance of the Three Kingdoms_ by Luo Guanzhong, translation by Charles Henry Brewitt-Taylor (Tuttle Publishing, 1925, ISBN 9780804834674)
     - _Three Kingdoms_ by Luo Guanzhong, translation by Moss Roberts (Foreign Language Press, 1976, ISBN 7-119-00590-1)
@@ -26,7 +28,7 @@ This rule applies to any [HTML web page][].
 
 Within each test target, either there is no [non-repeated content after repeated content][] or there exists an element for which all the following are true:
 
-- the element has [semantic role][] inheriting from `landmark`; and
+- the element is an [inheriting semantic][] `landmark`; and
 - the first [perceivable content][] (in [tree order][] in the [flat tree][]) which is an [inclusive descendant][] of the element is [non-repeated content after repeated content][]; and
 - the element is [included in the accessibility tree][].
 
@@ -44,14 +46,16 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 
 [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] only checks that landmarks are correctly used, but does not check whether landmarks could have been used and were omitted. Therefore, failing this rule (not having enough landmarks) does not necessarily fail that technique, and it is not listed as an accessibility mapping.
 
+### Bibliography
+
 - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
 
-In most examples, the `nav` element is a [block of repeated content][].
-
 ## Test Cases
+
+In most examples, the `nav` element is a [block of repeated content][].
 
 ### Passed
 
@@ -262,6 +266,7 @@ This [document][] is not an [HTML web page][].
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'

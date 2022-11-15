@@ -10,8 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  aria11:state_property_processing:
-    title: ARIA 1.1, 7.6 State and Property Attribute Processing
+  aria12:state_property_processing:
+    title: ARIA 1.2, 8.6 State and Property Attribute Processing
     forConformance: true
     failed: not satisfied
     passed: satisfied
@@ -24,23 +24,31 @@ acknowledgments:
   authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
+  funding:
+    - WAI-Tools
+  assets:
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
 
-This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][] that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
-## Expectation
+## Expectation 1
 
 For each test target, one of the following is true:
 
 - **global**: the test target is a [global state or property][global]; or
 - **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
-- **language feature**: the test target is specified on an HTML element and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+- **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+
+## Expectation 2
+
+No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
@@ -48,15 +56,20 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
-In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML Editor's Draft](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.1/#usage_intro). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.1/#application).
+In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
 
 Assessing the value of the attribute is out of scope for this rule.
 
+### Related rules
+
 - [ARIA state or property has valid value](https://act-rules.github.io/rules/6a7281)
+
+### Bibliography
+
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [WAI-ARIA 1.1, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.1/#states_and_properties)
-- [WAI-ARIA 1.1, Global States and Properties](https://www.w3.org/TR/wai-aria-1.1/#global_states)
+- [WAI-ARIA 1.2, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#states_and_properties)
+- [WAI-ARIA 1.2, Global States and Properties](https://www.w3.org/TR/wai-aria-1.2/#global_states)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
 - [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 
@@ -66,7 +79,7 @@ Assessing the value of the attribute is out of scope for this rule.
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [implicit role][] for `button` elements.
+The `aria-pressed` [state][] is [supported][] for a [semantic][semantic role] `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
@@ -74,7 +87,7 @@ The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`
 
 #### Passed Example 2
 
-The `aria-pressed` [state][] is [supported][] for the [semantic role][] `button`, which is the [explicit role][] of this `div` element.
+The `aria-pressed` [state][] is [supported][] for the [semantic][semantic role] `button`, which is the [explicit role][] of this `div` element.
 
 ```html
 <div role="button" aria-pressed="false">My button</div>
@@ -98,7 +111,7 @@ The `aria-label` [property][] is a [global][] [property][] and thus [inherited][
 
 #### Passed Example 5
 
-The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox`.
+The `aria-checked` [state][] is [required][] for the [semantic][semantic role] `checkbox`.
 
 ```html
 <div role="checkbox" aria-checked="false">My checkbox</div>
@@ -106,7 +119,7 @@ The `aria-checked` [state][] is [required][] for the [semantic role][] `checkbox
 
 #### Passed Example 6
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
 <div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
@@ -114,7 +127,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
@@ -122,7 +135,7 @@ The `aria-controls` [property][] is [required][] for the [semantic role][] `comb
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [required][] for the [semantic role][] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
 
 ```html
 <div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
@@ -158,7 +171,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic role][] `button`, which is the [implicit role][] for the `button` element.
+The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic][semantic role] `button`, which is the [implicit role][] for the `button` element.
 
 ```html
 <button aria-sort="">Sort by year</button>
@@ -170,6 +183,14 @@ The `aria-orientation` property may not be used on `audio` element, nor it can b
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
+```
+
+#### Failed Example 3
+
+The `aria-label` property is [prohibited][] for an element with a `generic` role.
+
+```html
+<div aria-label="Bananas"></div>
 ```
 
 ### Inapplicable
@@ -193,15 +214,16 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [attribute value]: #attribute-value 'Definition of attribute value'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
-[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
+[global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[inherited]: https://www.w3.org/TR/wai-aria/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
-[required]: https://www.w3.org/TR/wai-aria/#requiredState 'Definition of Required ARIA States and Properties'
+[inherited]: https://www.w3.org/TR/wai-aria-1.2/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria-1.2/#dfn-property 'Definition of ARIA Property'
+[required]: https://www.w3.org/TR/wai-aria-1.2/#requiredState 'Definition of Required ARIA States and Properties'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
-[supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
-[wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
-[html or svg element]: #namespaced-element
+[state]: https://www.w3.org/TR/wai-aria-1.2/#dfn-state 'Definition of ARIA State'
+[supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
+[wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
+[namespaced element]: #namespaced-element
+[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

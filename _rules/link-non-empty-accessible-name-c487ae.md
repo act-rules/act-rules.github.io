@@ -46,7 +46,12 @@ htmlHintIgnore:
 
 ## Applicability
 
+<<<<<<< HEAD
 This rule applies to any [HTML element][] that is an [inheriting semantic][] `link` [included in the accessibility tree][].
+=======
+This rule applies to any [HTML element][] that is a [semantic][semantic role] `link` [included in the accessibility tree][].
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 ## Expectation
 

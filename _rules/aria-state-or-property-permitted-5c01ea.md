@@ -44,10 +44,13 @@ For each test target, one of the following is true:
 - **global**: the test target is a [global state or property][global]; or
 - **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+  <<<<<<< HEAD
 
 ## Expectation 2
 
-No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
+# No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 ## Assumptions
 
@@ -225,8 +228,17 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [property]: https://www.w3.org/TR/wai-aria-1.2/#dfn-property 'Definition of ARIA Property'
 [required]: https://www.w3.org/TR/wai-aria-1.2/#requiredState 'Definition of Required ARIA States and Properties'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+
+<<<<<<< HEAD
 [state]: https://www.w3.org/TR/wai-aria-1.2/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
 [prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'
+=======
+[state]: https://www.w3.org/TR/wai-aria/#dfn-state 'Definition of ARIA State'
+[supported]: https://www.w3.org/TR/wai-aria/#supportedState 'Definition of Supported ARIA States and Properties'
+[wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.1/#state_prop_def 'Definition of ARIA States and Properties'
+[namespaced element]: #namespaced-element
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))

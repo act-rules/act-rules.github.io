@@ -325,4 +325,10 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
 [visible]: #visible 'Definition of Visible'
+
+<<<<<<< HEAD
 [whitespace]: #whitespace 'Definition of whitespace'
+=======
+[html element]: #namespaced-element
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))

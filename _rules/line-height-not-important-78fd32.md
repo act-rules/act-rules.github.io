@@ -23,7 +23,12 @@ acknowledgments:
 
 ## Applicability
 
+<<<<<<< HEAD
 This rule applies to any HTML element with [visible][] text that includes a [soft wrap break](https://www.w3.org/TR/css-text-3/#soft-wrap-break) and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
+=======
+This rule applies to any [HTML element][] that is [visible][] and for which the `style` attribute [declares][declared] the [line-height][] CSS property.
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 ## Expectation
 
@@ -329,3 +334,4 @@ The `style` attribute of this `p` element does not [declare][declared] the `line
 [user origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-user 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Origin'
 [user agent origin]: https://www.w3.org/TR/css-cascade-4/#cascade-origin-ua 'CSS Cascading and Inheritance Level 4 (Working draft) - Cascading Origins - User Agent Origin'
 [visible]: #visible 'Definition of visible'
+[html element]: #namespaced-element

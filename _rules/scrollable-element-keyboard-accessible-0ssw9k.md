@@ -33,7 +33,12 @@ acknowledgments:
 
 ## Applicability
 
+<<<<<<< HEAD
 This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][], and for which at least one of the following is true:
+=======
+This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 - the element has a [horizontal scroll distance][scrollable] greater than the [computed][] [left][padding-left] or [right padding][padding-right] of the element; or
 - the element has a [vertical scroll distance][scrollable] greater than the [computed][] [top][padding-top] or [bottom padding][padding-bottom] of the element.

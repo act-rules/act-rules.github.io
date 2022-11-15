@@ -29,7 +29,12 @@ acknowledgments:
 
 ## Applicability
 
+<<<<<<< HEAD
 This rule applies to any [HTML element][] with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
+=======
+This rules applies to any [HTML element][] with a `lang` [attribute value][] that is not empty (`""`) and for which all of the following is true:
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 - **descendant**: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
 - **content type**: the element has an associated [node document][] with a [content type][] of `text/html`; and
@@ -358,3 +363,10 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [known primary language tag]: #known-primary-language-tag
 [visible]: #visible 'Definition of visible'
 [whitespace]: #whitespace 'Definition of Whitespace'
+
+# <<<<<<< HEAD
+
+[html element]: #namespaced-element
+[language subtag registry]: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))

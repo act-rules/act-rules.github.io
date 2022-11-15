@@ -37,7 +37,14 @@ htmlHintIgnore:
 
 ## Applicability
 
+<<<<<<< HEAD
 This rule applies to the [document title][] of each [html web page][] if this [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
+=======
+This rule applies to the first [HTML][] `title` element that
+
+- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
+- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+  > > > > > > > 736e5c5d08 (Add namespaced element references (#1715))
 
 ## Expectation
 
@@ -188,5 +195,10 @@ This `title` element is a child of an `svg` element.
 </svg>
 ```
 
+<<<<<<< HEAD
 [document title]: https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2 'HTML definition of Document Title'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
+=======
+[html]: #namespaced-element
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))

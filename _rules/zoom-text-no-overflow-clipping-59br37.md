@@ -285,7 +285,13 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [text node]: https://dom.spec.whatwg.org/#text
 [text-overflow]: https://www.w3.org/TR/css-ui-3/#text-overflow
 [used]: https://www.w3.org/TR/css-cascade-4/#used 'CSS Cascading and Inheritance Level 4 (Working draft) - Used Values'
+
+<<<<<<< HEAD
 [vertically clipped]: #vertically-clipped-by-overflow
 [viewport size]: #viewport-size
 [visible]: #visible
 [white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
+=======
+[html element]: #namespaced-element
+
+> > > > > > > 736e5c5d08 (Add namespaced element references (#1715))

@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
+This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
 - **in a row** the element is a child of a `tr` element; and
 - **table** the element is an [inclusive descendant][] of a `table` element; and
@@ -100,21 +100,21 @@ Each of the 2 `th` elements has an assigned `td` element because this `td` eleme
 
 #### Passed Example 3
 
-Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
+Each of the 4 non-empty `th` elements is assigned to a `td` element, within the same `table` element.
 
 ```html
-<table role="grid">
+<table>
 	<thead>
-		<tr role="row">
-			<td></td>
-			<th scope="col" role="columnheader">Breakfast</th>
-			<th scope="col" role="columnheader">Lunch</th>
-			<th scope="col" role="columnheader">Dinner</th>
+		<tr>
+			<th></th>
+			<th scope="col">Breakfast</th>
+			<th scope="col">Lunch</th>
+			<th scope="col">Dinner</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr role="row">
-			<th scope="row" role="rowheader">Day 1</th>
+		<tr>
+			<th scope="row">Day 1</th>
 			<td>8:00</td>
 			<td>13:00</td>
 			<td>18:00</td>

@@ -51,7 +51,12 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
+<<<<<<< HEAD
 This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

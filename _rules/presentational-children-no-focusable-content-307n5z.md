@@ -42,9 +42,12 @@ This rule applies to elements with a [semantic role][] that defines its [childre
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
 
+<<<<<<< HEAD
+
 ### Related rules
 
-- [Element with aria-hidden has no focusable content](https://act-rules.github.io/rules/6cfa84)
+- # [Element with aria-hidden has no focusable content](https://act-rules.github.io/rules/6cfa84)
+  > > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

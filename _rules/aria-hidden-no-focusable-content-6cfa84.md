@@ -50,11 +50,16 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 
 An element with an `aria-hidden` attribute set to `true` that is also part of the [sequential focus navigation][] may cause confusion for users of assistive technologies because the element can be reached via [sequential focus navigation][], but it should be hidden and not [included in the accessibility tree][].
 
+<<<<<<< HEAD
 The 1 second time span introduced in the exception of the definition of [focusable][] is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
 
 ### Related rules
 
 - [Element with presentational children has no focusable content](https://act-rules.github.io/rules/307n5z)
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

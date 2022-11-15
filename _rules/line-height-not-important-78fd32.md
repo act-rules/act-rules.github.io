@@ -60,6 +60,8 @@ This rule evaluates the [used][] value of the [line-height][] property instead o
 
 ### Bibliography
 
+### Bibliography
+
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)

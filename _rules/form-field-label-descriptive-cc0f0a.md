@@ -64,6 +64,7 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Background
 
+<<<<<<< HEAD
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
 
 - inherit from the `input`, `menuitem` or `select` role, and
@@ -77,7 +78,12 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 
 ### Bibliography
 
-- [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
+- # [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
+
+### Bibliography
+
+- [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
+  > > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)

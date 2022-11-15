@@ -42,7 +42,12 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Background
 
+<<<<<<< HEAD
 This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Related rules
 

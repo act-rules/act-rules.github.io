@@ -71,6 +71,7 @@ There are no accessibility support issues known.
 
 ## Background
 
+<<<<<<< HEAD
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
 
 - inherit from the `input`, `menuitem` or `select` role, and
@@ -81,6 +82,10 @@ This rule does not test [form field error indicators][form field error indicator
 A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
 
 A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

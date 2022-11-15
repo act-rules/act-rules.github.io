@@ -66,7 +66,12 @@ There are no accessibility support issues known.
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
+<<<<<<< HEAD
 This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

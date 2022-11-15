@@ -46,6 +46,17 @@ WCAG has no clear requirement of unicity of the focus indicator for each [focusa
 
 ### Bibliography
 
+# <<<<<<< HEAD
+
+- [Success Criterion 2.4.7 Focus Visible][sc247]
+- [Success Criterion 2.4.11 Focus Appearance (Minimum)][sc2411]
+- [Success Criterion 2.4.12 Focus Appearance (Enhanced)][sc2412]
+- [Understanding Success Criterion 2.4.7: Focus Visible][usc247]
+- [Understanding Success Criterion 2.4.11: Focus Appearance (Minimum)][usc2411]
+- [Understanding Success Criterion 2.4.12: Focus Appearance (Enhanced)][usc2412]
+
+  > > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
+
 - [Success Criterion 2.4.7 Focus Visible][sc247]
 - [Success Criterion 2.4.11 Focus Appearance][sc2411]
 - [Success Criterion 2.4.12 Focus Not Obscured (Minimum)][sc2412]

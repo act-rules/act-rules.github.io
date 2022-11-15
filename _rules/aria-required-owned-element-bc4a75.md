@@ -55,6 +55,8 @@ The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][w
 
 ### Bibliography
 
+### Bibliography
+
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.2/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element)

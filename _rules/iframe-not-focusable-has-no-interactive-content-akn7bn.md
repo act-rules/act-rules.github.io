@@ -55,6 +55,8 @@ Each document, including documents inside an `iframe`, has its own [sequential f
 
 ### Bibliography
 
+### Bibliography
+
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [WCAG Technique G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
 

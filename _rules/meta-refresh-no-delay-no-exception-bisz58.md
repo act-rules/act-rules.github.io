@@ -59,7 +59,12 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
+<<<<<<< HEAD
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+
+=======
+
+> > > > > > > 4e3f9dbc96 (Add subheadings to "Background" sections (#1729))
 
 ### Bibliography
 

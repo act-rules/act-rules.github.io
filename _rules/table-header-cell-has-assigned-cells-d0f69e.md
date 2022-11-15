@@ -1,9 +1,9 @@
 ---
 id: d0f69e
-name: Table header cell has assigned cells
+name: Table header cell is assigned to a cell
 rule_type: atomic
 description: |
-  This rule checks that each table header has assigned cells in a table element.
+  This rule checks that each table header is assigned to at least one cell.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -24,16 +24,17 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] with a [semantic][semantic role] [rowheader][] or [columnheader][] for which all of the following is true:
+This rule applies to any `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
-- the element is [visible][]; and
-- the element is [included in the accessibility tree][]; and
-- the element has at least one ancestor in the [flat tree][] that is a [semantic][semantic role] [table][] or [grid][]; and
-- the element's closest ancestor in the [flat tree][] that is a [semantic][semantic role] [table][] or [grid][] is [included in the accessibility tree][].
+- **in a row** the element is a child of a `tr` element; and
+- **table** the element is an [inclusive descendant][] of a `table` element; and
+- **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
+- **visible** the `table` element is [visible][]; and
+- **no explicit role** the `th`, `tr`, `table`, and another elements in between them do not have an [explicit semantic role][].
 
 ## Expectation
 
-Each target element is [assigned][] to at least one element with an [inheriting semantic][] [cell][].
+Each target element is [assigned][] to at least one `td` or `th` element.
 
 ## Assumptions
 
@@ -341,18 +342,15 @@ This `th` element is part of a table which is not [included in the accessibility
 </table>
 ```
 
+[explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
-[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
-[cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
-[grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
-[html element]: #namespaced-element

@@ -80,31 +80,6 @@ This `th` element is [assigned][] to at least one `td` element.
 
 #### Passed Example 2
 
-Each of the 2 `span` elements with role of `columnheader` has assigned `span` elements with a role of `cell`.
-
-```html
-<div role="table">
-	<div role="rowgroup">
-		<div role="row">
-			<span role="columnheader">Month</span>
-			<span role="columnheader">Top Temperature</span>
-		</div>
-	</div>
-	<div role="rowgroup">
-		<div role="row">
-			<span role="cell">July</span>
-			<span role="cell">40 C</span>
-		</div>
-		<div role="row">
-			<span role="cell">August</span>
-			<span role="cell">45 C</span>
-		</div>
-	</div>
-</div>
-```
-
-#### Passed Example 3
-
 Each of the 2 `th` elements has an assigned `td` element because this `td` element spans 2 columns.
 
 ```html
@@ -123,7 +98,7 @@ Each of the 2 `th` elements has an assigned `td` element because this `td` eleme
 </table>
 ```
 
-#### Passed Example 4
+#### Passed Example 3
 
 Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
@@ -148,7 +123,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 </table>
 ```
 
-#### Passed Example 5
+#### Passed Example 4
 
 Each of the 2 `th` elements has an assigned `td` element because the `headers` attribute assigns the `th` with `id` equal to "col2" to the `td` element.
 
@@ -167,7 +142,7 @@ Each of the 2 `th` elements has an assigned `td` element because the `headers` a
 </table>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
 Each of the 5 `th` elements in this table has assigned cells, whether data or header.
 
@@ -231,25 +206,6 @@ This `th` element with `id` equal to "col2" does not have an assigned cell withi
 		<td headers="col1">Zimbabwe</td>
 	</tr>
 </table>
-```
-
-#### Failed Example 3
-
-This `div` with role of `columnheader` and text equal to "Occupant" does not have an assigned cell within the same `table` element.
-
-```html
-<div role="grid">
-	<div role="row">
-		<div role="columnheader">Room</div>
-		<div role="columnheader">Occupant</div>
-	</div>
-	<div role="row">
-		<div role="gridcell">1A</div>
-	</div>
-	<div role="row">
-		<div role="gridcell">2A</div>
-	</div>
-</div>
 ```
 
 ### Inapplicable

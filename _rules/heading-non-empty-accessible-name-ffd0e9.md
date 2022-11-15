@@ -36,7 +36,7 @@ Each test target has a non-empty (`""`) [accessible name][].
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 

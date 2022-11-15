@@ -32,22 +32,21 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
 - Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-- Elements with the `option` role are not tested in this rule because they do not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). If these elements are presented as user interface components, these need to be tested separately from this rule.
 
 ## Background
 
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
 
-- have [semantic roles][] that inherit from the [abstract](https://www.w3.org/TR/wai-aria/#abstract_roles) `input` or `select` role, and
-- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
+- have [semantic roles][] that inherit from the `input`, `menuitem` or `select` role; and
+- are form field controls (this notably excludes `menu`, `option` or `tree`).
 
-Note that this rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
+This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
 
@@ -132,6 +131,21 @@ This [semantic][semantic role] `checkbox` element has the text content as its [a
 <div role="checkbox">I agree to the terms and conditions.</div>
 ```
 
+#### Passed Example 8
+
+These `menuitemcheckbox` elements have an [accessible name][] given by their associated `label`.
+
+```html
+<p id="dip">Add one or more dip:</p>
+<div role="menu" aria-labelledby="dip">
+	<input type="checkbox" role="menuitemcheckbox" id="ketchup" /><label for="ketchup" aria-hidden="true">Ketchup</label
+	><br />
+	<input type="checkbox" role="menuitemcheckbox" id="mayonnaise" /><label for="mayonnaise" aria-hidden="true"
+		>Mayonnaise</label
+	>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -198,6 +212,18 @@ This [semantic][semantic role] `textbox` element has an empty (`""`) [accessible
 <div role="textbox">first name</div>
 ```
 
+#### Failed Example 8
+
+These `menuitemcheckbox` elements do not have an [accessible name][].
+
+```html
+<p id="dip">Add one or more dip:</p>
+<div role="menu" aria-labelledby="dip">
+	<input type="checkbox" role="menuitemcheckbox" /><span aria-hidden="true">Ketchup</span><br />
+	<input type="checkbox" role="menuitemcheckbox" /><span aria-hidden="true">Mayonnaise</span>
+</div>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -231,7 +257,7 @@ This `select` element is not [included in the accessibility tree][] because it i
 [accessible name]: #accessible-name 'Definition of accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of Visible'

@@ -63,15 +63,17 @@ This rule does not apply to tables and grids built using [WAI-ARIA 1.1][] [expli
 
 #### Passed Example 1
 
-This `th` element has an assigned `td` element.
+This `th` element is [assigned][] to at least one `td` element.
 
 ```html
 <table>
 	<tr>
 		<th>Time</th>
+		<th>Date</th>
 	</tr>
 	<tr>
 		<td>05:41</td>
+		<td>12/07/2021</td>
 	</tr>
 </table>
 ```

@@ -367,6 +367,23 @@ This `table` element does not have at least one `th` element that is assigned to
 </table>
 ```
 
+#### Inapplicable Example 11
+
+There are no non-empty `th` element in the `table` element.
+
+```html
+<table>
+	<tr>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr>
+		<td>United Kingdom</td>
+		<td>London</td>
+	</tr>
+</table>
+```
+
 [attribute value]: #attribute-value 'Definition of attribute value'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [semantic role]: #semantic-role 'Definition of semantic role'

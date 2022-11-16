@@ -16,6 +16,7 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Aron Janecki
     - Audrey Maniez
     - Jey Nandakumar
   funding:

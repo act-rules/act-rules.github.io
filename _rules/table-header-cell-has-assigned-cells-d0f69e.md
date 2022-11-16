@@ -80,7 +80,7 @@ This `th` element is [assigned][] to at least one `td` element.
 
 #### Passed Example 2
 
-Each of the 2 `th` elements has an assigned `td` element because this `td` element spans 2 columns.
+Each of the 2 `th` elements is assigned to the `td` element because this `td` element spans 2 columns.
 
 ```html
 <table>
@@ -125,26 +125,29 @@ Each of the 4 non-empty `th` elements is assigned to a `td` element, within the 
 
 #### Passed Example 4
 
-Each of the 2 `th` elements has an assigned `td` element because the `headers` attribute assigns the `th` with `id` equal to "col2" to the `td` element.
+Each of the 4 `th` elements is assigned to at least one `td` element because all of the `id` values for the `th` elements are referenced by the value of the `headers` attribute on `td` elements.
 
 ```html
 <table>
 	<tr>
-		<th id="col1">Cities</th>
-		<th id="col2">Count</th>
+		<th id="projects" rowspan="2">Projects</th>
+		<th id="objective" colspan="2">Objective</th>
 	</tr>
 	<tr>
-		<td>Paris</td>
+		<th id="1" headers="objective">1</th>
+		<th id="2" headers="objective">2</th>
 	</tr>
 	<tr>
-		<td headers="col2">1</td>
+		<td headers="projects">45%</td>
+		<td headers="objective 1">20%</td>
+		<td headers="objective 2">25%</td>
 	</tr>
 </table>
 ```
 
 #### Passed Example 5
 
-Each of the 5 `th` elements in this table has assigned cells, whether data or header.
+Each of the 5 `th` elements is assigned to a `td` or a `th` element.
 
 ```html
 <table>
@@ -173,7 +176,7 @@ Each of the 5 `th` elements in this table has assigned cells, whether data or he
 
 #### Failed Example 1
 
-The `th` element with text "Value" does not have an assigned cell within the same `table` element.
+The `th` element with text "Value" is not assigned to a `td` or a `th` element.
 
 ```html
 <table>
@@ -193,7 +196,7 @@ The `th` element with text "Value" does not have an assigned cell within the sam
 
 #### Failed Example 2
 
-This `th` element with `id` equal to "col2" does not have an assigned cell within the same `table` element because the `headers` attribute removes the cell association from its column.
+This `th` element with `id` equal to "col2" is not assigned to a `td` or a `th` element because the `headers` attribute removes the cell association from its column.
 
 ```html
 <table>

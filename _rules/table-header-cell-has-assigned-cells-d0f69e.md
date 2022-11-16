@@ -283,7 +283,7 @@ This `th` element is not [included in the accessibility tree][] because of the `
 
 #### Inapplicable Example 6
 
-This `th` element is not [included in the accessibility tree][] beause of the `aria-hidden="true"` attribute and there are no more `th` elements within the `table` element.
+This `th` element is not [included in the accessibility tree][] because of the `aria-hidden="true"` attribute and there are no more `th` elements within the `table` element.
 
 ```html
 <table>
@@ -367,7 +367,7 @@ This `table` element does not have at least one `th` element that is assigned to
 </table>
 ```
 
-#### Inapplicable Example 11
+#### Inapplicable Example 12
 
 There are no non-empty `th` element in the `table` element.
 
@@ -391,10 +391,8 @@ There are no non-empty `th` element in the `table` element.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
-[explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI-ARIA 1.1'

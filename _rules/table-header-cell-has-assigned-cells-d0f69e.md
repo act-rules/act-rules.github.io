@@ -29,8 +29,9 @@ This rule applies to any non-empty `th` element that is [included in the accessi
 - **in a row** the element is a child of a `tr` element; and
 - **table** the element is an [inclusive descendant][] of a `table` element; and
 - **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
+- **non-empty** the `table` element has at least one `th` element that is assigned to a non-empty `td` element, and
 - **visible** the `table` element is [visible][]; and
-- **no explicit role** the `th`, `tr`, `table`, and another elements in between them do not have an [explicit semantic role][].
+- **no explicit role** the `th`, `tr`, `table`, and another elements in between them do not have an [explicit semantic role][], and
 
 ## Expectation
 

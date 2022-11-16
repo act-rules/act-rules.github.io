@@ -27,7 +27,7 @@ acknowledgments:
 This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
 - **in a row** the element is a child of a `tr` element; and
-- **table** the element is an [inclusive descendant][] of a `table` element; and
+- **table** the `tr` element is an [inclusive descendant][] of a `table` element; and
 - **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
 - **non-empty** the `table` element has at least one `th` element that is assigned to a non-empty `td` element, and
 - **visible** the `table` element is [visible][]; and
@@ -216,7 +216,7 @@ This `th` element with `id` equal to "col2" is not assigned to a `td` or a `th` 
 
 #### Inapplicable Example 1
 
-There are no elements with a [semantic role][] of `header` within the `table` element.
+There are no `th` elements with a [semantic role][] of [rowheader][] or [columnheader][] within the `table` element.
 
 ```html
 <table>
@@ -228,7 +228,7 @@ There are no elements with a [semantic role][] of `header` within the `table` el
 
 #### Inapplicable Example 2
 
-There are no elements with a [semantic role][] of `header` within the `table` element.
+There are no `th` elements within the `table` element.
 
 ```html
 <table></table>
@@ -236,12 +236,12 @@ There are no elements with a [semantic role][] of `header` within the `table` el
 
 #### Inapplicable Example 3
 
-This `th` element has an [explicit role][] of `cell` and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `th` element has an [explicit semantic role][] of `columnheader`.
 
 ```html
 <table>
 	<tr>
-		<th role="cell">Column A</th>
+		<th role="columnheader">Column A</th>
 	</tr>
 	<tr>
 		<td>Cell A</td>
@@ -251,7 +251,24 @@ This `th` element has an [explicit role][] of `cell` and there are no more eleme
 
 #### Inapplicable Example 4
 
-This `th` element is neither [visible][] nor [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `tbody` element has an [explicit semantic role][] of `rowgroup`.
+
+```html
+<table>
+	<thead role="rowgroup">
+		<tr>
+			<th>Column A</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>Cell A</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 5
+
+This `th` element is not [included in the accessibility tree][] because of the `style="display: none;"` attribute and there are no more `th` elements within the `table` element.
 
 ```html
 <table>
@@ -264,9 +281,9 @@ This `th` element is neither [visible][] nor [included in the accessibility tree
 </table>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
-This `th` element is not [included in the accessibility tree][] and there are no more elements with a [semantic role][] of `header` within the `table` element.
+This `th` element is not [included in the accessibility tree][] beause of the `aria-hidden="true"` attribute and there are no more `th` elements within the `table` element.
 
 ```html
 <table>
@@ -279,9 +296,9 @@ This `th` element is not [included in the accessibility tree][] and there are no
 </table>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
-This `th` element is not a descendant in the [flat tree][] of a [semantic][semantic role] `table` or `grid`.
+This `th` element is a child of a `tr` element but the `tr` element is not an [inclusive descendant][] of a `table` element.
 
 ```html
 <div>
@@ -291,9 +308,9 @@ This `th` element is not a descendant in the [flat tree][] of a [semantic][seman
 </div>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 8
 
-This `th` element is part of a table which is not [included in the accessibility tree][].
+This `th` element does not have a [semantic role][] of a `columnheader` through the use of `role="presentation"` on the `table` element.
 
 ```html
 <table role="presentation">
@@ -302,6 +319,50 @@ This `th` element is part of a table which is not [included in the accessibility
 	</tr>
 	<tr>
 		<td>12:00</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 9
+
+This `table` element has only one `tr` element as its [inclusive descendant][].
+
+```html
+<table>
+	<tr>
+		<th>Time</th>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 10
+
+This `table` element is not [visible][].
+
+```html
+<table style="display: none;">
+	<tr>
+		<th>Time</th>
+	</tr>
+	<tr>
+		<td>12:00</td>
+	</tr>
+</table>
+```
+
+#### Inapplicable Example 11
+
+This `table` element does not have at least one `th` element that is assigned to a non-empty `td` element.
+
+```html
+<table>
+	<tr>
+		<th>Country</th>
+		<th>Capital</th>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
 	</tr>
 </table>
 ```

@@ -181,19 +181,37 @@ Each of the 5 `th` elements is assigned to a `td` or a `th` element.
 The `th` element with text "Value" is not assigned to a `td` or a `th` element.
 
 ```html
-<table>
-	<thead>
-		<tr>
-			<th>Rate</th>
-			<th>Value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>15%</td>
-		</tr>
-	</tbody>
-</table>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Failed Example 1</title>
+		<style>
+			table {
+				border-collapse: collapse;
+				border: hidden;
+			}
+			tr td,
+			tr th {
+				border: 1px solid grey;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Rate</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>15%</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
 ```
 
 #### Failed Example 2

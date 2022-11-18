@@ -138,9 +138,9 @@ These `menuitemcheckbox` elements have an [accessible name][] given by their ass
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-	<input type="checkbox" role="menuitemcheckbox" id="ketchup" /><label for="ketchup" aria-hidden="true">Ketchup</label
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><label id="ketchup" aria-hidden="true">Ketchup</label
 	><br />
-	<input type="checkbox" role="menuitemcheckbox" id="mayonnaise" /><label for="mayonnaise" aria-hidden="true"
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="mayonnaise" /><label id="mayonnaise" aria-hidden="true"
 		>Mayonnaise</label
 	>
 </div>

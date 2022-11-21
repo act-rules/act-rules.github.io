@@ -133,7 +133,7 @@ This [semantic][semantic role] `checkbox` element has the text content as its [a
 
 #### Passed Example 8
 
-These `menuitemcheckbox` elements have an [accessible name][] given by their associated `label`.
+These `menuitemcheckbox` elements have an [accessible name][] because its aria-labelledby attribute references a `label` element.
 
 ```html
 <p id="dip">Add one or more dip:</p>

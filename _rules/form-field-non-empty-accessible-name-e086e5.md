@@ -133,15 +133,15 @@ This [semantic][semantic role] `checkbox` element has the text content as its [a
 
 #### Passed Example 8
 
-These `menuitemcheckbox` elements have an [accessible name][] because its aria-labelledby attribute references a `label` element.
+These `menuitemcheckbox` elements have an [accessible name][] because its aria-labelledby attribute references a `span` element.
 
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><label id="ketchup" aria-hidden="true">Ketchup</label
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><span id="ketchup" aria-hidden="true">Ketchup</span
 	><br />
-	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="mayonnaise" /><label id="mayonnaise" aria-hidden="true"
-		>Mayonnaise</label
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="mayonnaise" /><span id="mayonnaise" aria-hidden="true"
+		>Mayonnaise</span
 	>
 </div>
 ```

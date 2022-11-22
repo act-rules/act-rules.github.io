@@ -258,7 +258,7 @@ There is no HTML element.
 There is no text node.
 
 ```html
-<div style="letter-spacing: 0.1em !important;"></div>
+<div style="line-height: 0.1em !important;"></div>
 ```
 
 #### Inapplicable Example 3

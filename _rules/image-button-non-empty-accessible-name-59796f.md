@@ -56,7 +56,11 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 _There are no major accessibility support issues known for this rule._
 
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
+
 ## Background
+
+Contrarily to `img` elements, an empty `alt` attribute does not make image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
 
 ### Related rules
 

@@ -39,7 +39,7 @@ For each target element, focus can cycle to the browser UI by using [standard ke
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

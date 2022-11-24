@@ -401,7 +401,7 @@ The `table` is not [included in the accessibility tree][].
 
 #### Inapplicable Example 6
 
-The `table` doesn't have a role of `table`, `grid` or `treegrid`.
+This `table` doesn't have a role of `table`, `grid` or `treegrid`.
 
 ```html
 <table role="region">

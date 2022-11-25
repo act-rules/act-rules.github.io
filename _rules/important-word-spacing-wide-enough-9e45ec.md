@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [visible][] [text node][] child of an [HTML element][], when all the following are true for the `word-spacing` property of the element:
+This rule applies to any [HTML element][] with one or more [visible][] [text node][] child, when all the following are true for the `word-spacing` property of the element:
 
 - the [specified][] value is [declared][] in a `style` attribute; and
 - the [computed][] value is [important][].
@@ -32,8 +32,6 @@ This rule applies to any [visible][] [text node][] child of an [HTML element][],
 ## Expectation
 
 For each test target, the [computed][] value of its `word-spacing` property is at least 0.16 times the [computed][] value of its `font-size` property.
-
-Where the `word-spacing` and `font-size` properties of a text node means the ones of its parent.
 
 ## Assumptions
 
@@ -73,7 +71,7 @@ Test cases description abusively refer to the CSS properties of text nodes, mean
 
 #### Passed Example 1
 
-This text node has a [computed][] `word-spacing` of 0.2 times the font size.
+This `p` element has a [computed][] `word-spacing` of 0.2 times the font size.
 
 ```html
 <p style="word-spacing: 0.2em !important">
@@ -83,7 +81,7 @@ This text node has a [computed][] `word-spacing` of 0.2 times the font size.
 
 #### Passed Example 2
 
-This text node has a [computed][] `word-spacing` of `4px`, which is exactly 0.16 times the [computed][] `font-size`.
+This `p` element has a [computed][] `word-spacing` of `4px`, which is exactly 0.16 times the [computed][] `font-size`.
 
 ```html
 <style>
@@ -99,7 +97,7 @@ This text node has a [computed][] `word-spacing` of `4px`, which is exactly 0.16
 
 #### Passed Example 3
 
-This text node has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is wide enough.
+This `p` element has two [declared][] values for its `word-spacing` property. The latest wins the [cascade sort][]. It has a value of `0.2em`, which is wide enough.
 
 ```html
 <p style="word-spacing: 0.1em !important; word-spacing: 0.2em !important">
@@ -109,7 +107,7 @@ This text node has two [declared][] values for its `word-spacing` property. The 
 
 #### Passed Example 4
 
-This text node has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is wide enough.
+This `p` element has two [declared][] values for its `word-spacing` property. The one which is [important][] wins the [cascade sort][]. It has a value of `0.2em`, which is wide enough.
 
 ```html
 <p style="word-spacing: 0.2em !important; word-spacing: 0.1em">
@@ -119,7 +117,7 @@ This text node has two [declared][] values for its `word-spacing` property. The 
 
 #### Passed Example 5
 
-This text node has a [computed][] `word-spacing` of `2px`, 0.2 times its [computed][] `font-size` of `10px`
+This `p` element has a [computed][] `word-spacing` of `2px`, 0.2 times its [computed][] `font-size` of `10px`; the `div` element has no [visible][] text node children.
 
 ```html
 <div style="font-size: 16px; word-spacing: 2px !important">
@@ -131,7 +129,7 @@ This text node has a [computed][] `word-spacing` of `2px`, 0.2 times its [comput
 
 #### Passed Example 6
 
-This text node has a [computed][] `word-spacing` of 0.2 times its `font-size`.
+This `p` element has a [computed][] `word-spacing` of 0.2 times its `font-size`; the `div` element has no [visible][] text node children.
 
 ```html
 <div style="word-spacing: 0.1em !important">
@@ -145,7 +143,7 @@ This text node has a [computed][] `word-spacing` of 0.2 times its `font-size`.
 
 #### Failed Example 1
 
-This text node has a [computed][] `word-spacing` of only 0.1 times the `font-size`, which is below the required minimum.
+This `p` element has a [computed][] `word-spacing` of only 0.1 times the `font-size`, which is below the required minimum.
 
 ```html
 <p style="word-spacing: 0.1em !important">
@@ -155,7 +153,7 @@ This text node has a [computed][] `word-spacing` of only 0.1 times the `font-siz
 
 #### Failed Example 2
 
-This text node has a [computed][] `word-spacing` of `2px` which is only 0.1 times the `font-size` (`20px`), thus below the required minimum.
+This `p` element has a [computed][] `word-spacing` of `2px` which is only 0.1 times the `font-size` (`20px`), thus below the required minimum.
 
 ```html
 <style>
@@ -171,7 +169,7 @@ This text node has a [computed][] `word-spacing` of `2px` which is only 0.1 time
 
 #### Failed Example 3
 
-This text node has a [computed][] `word-spacing` of 0.
+This `p` element has a [computed][] `word-spacing` of 0.
 
 ```html
 <p style="word-spacing: normal !important">
@@ -181,7 +179,7 @@ This text node has a [computed][] `word-spacing` of 0.
 
 #### Failed Example 4
 
-This text node has a [computed][] `word-spacing` of 0.
+This `p` element has a [computed][] `word-spacing` of 0.
 
 ```html
 <p style="word-spacing: initial !important">
@@ -231,7 +229,7 @@ There is no [visible][] text node because it is positioned off-screen.
 
 #### Inapplicable Example 5
 
-This text node's `word-spacing` property is not [declared][] in a `style` attribute.
+This `p` element's `word-spacing` property is not [declared][] in a `style` attribute.
 
 ```html
 <p style="width: 60%">
@@ -241,7 +239,7 @@ This text node's `word-spacing` property is not [declared][] in a `style` attrib
 
 #### Inapplicable Example 6
 
-The [specified][] value of the `word-spacing` property of this text node is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
+The [specified][] value of the `word-spacing` property of this `p` element is [declared][] in the style sheet, not in the `style` attribute (it wins the [cascade sort][] because it is [important][]).
 
 ```html
 <style>
@@ -257,7 +255,7 @@ The [specified][] value of the `word-spacing` property of this text node is [dec
 
 #### Inapplicable Example 7
 
-This text node does not have an [important][] [computed][] `word-spacing`.
+This `p` element does not have an [important][] [computed][] `word-spacing`.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -267,7 +265,7 @@ This text node does not have an [important][] [computed][] `word-spacing`.
 
 #### Inapplicable Example 8
 
-The [computed][] value of the `word-spacing` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
+The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][]; the `p` element has no [visible][] text node children.
 
 ```html
 <p style="word-spacing: 0.1em">
@@ -279,7 +277,7 @@ The [computed][] value of the `word-spacing` property of this text node is the [
 
 #### Inapplicable Example 9
 
-The [computed][] value of the `word-spacing` property of this text node is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][].
+The [computed][] value of the `word-spacing` property of this `span` element is the [inherited][] value, that is the [computed][] value of the `p` element and therefore not [important][]; the `p` element has no [visible][] text node children.
 
 ```html
 <p style="word-spacing: 0.1em">

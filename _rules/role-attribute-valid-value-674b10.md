@@ -59,10 +59,10 @@ The `role` attribute is a set of [space separated tokens][]. Having a [whitespac
 
 - [List of WAI-ARIA Roles][wai-aria role]
 - [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
-- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.0/#role_definitions)
+- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.1/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
-- [WAI-ARIA 1.1 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
-- [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro)
+- [WAI-ARIA 1.2 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.2/#roles_categorization)
+- [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.2/#introroles)
 
 ## Test Cases
 
@@ -184,5 +184,5 @@ This `role` attribute is specified on an element which is [programmatically hidd
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
-[wai-aria role]: https://www.w3.org/TR/wai-aria-1.1/#role_definitions 'List of WAI-ARIA roles'
+[wai-aria role]: https://www.w3.org/TR/wai-aria-1.2/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

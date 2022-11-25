@@ -35,14 +35,13 @@ The auditory information of each test target is available as text (directly or v
 
 Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

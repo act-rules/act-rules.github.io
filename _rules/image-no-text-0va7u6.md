@@ -50,7 +50,7 @@ For each test target, its [visible pixels][visible] do not contain text expressi
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

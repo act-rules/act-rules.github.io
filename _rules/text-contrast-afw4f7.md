@@ -33,7 +33,7 @@ acknowledgments:
 
 This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **widget**: the ancestor is a [inheriting semantic][] `widget`; or
+- **disabled widget**: the ancestor is a [inheriting semantic][] `widget` that is [disabled][]; or
 - **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
 - **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
 
@@ -102,11 +102,16 @@ This dark gray text has a contrast ratio between 12.6:1 and 5:1 on the white to 
 This light gray text has a contrast ratio between 13:1 and 5:1 on the background image.
 
 ```html
-<p
-	style="color: #CCC; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
->
-	Black hole sun
-</p>
+<style>
+p {
+	color: #CCC;
+	height: 50px;
+	padding-top: 15px;
+	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+	text-shadow: 0px 0px 2px black;
+}
+</style>
+<p>Black hole sun</p>
 ```
 
 #### Passed Example 4
@@ -167,6 +172,26 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 	const shadowRoot = document.getElementById('p').attachShadow({ mode: 'open' })
 	shadowRoot.innerHTML = '<span style="color: #333;">Some text in English</span>'
 </script>
+```
+
+#### Passed Example 10
+
+This text is part of a widget because it is a child of a `button` element. The text has the default
+browser button text color on the default browser button background color. By default, this is black text on a
+light gray background with a contrast ratio of 18.26:1
+
+```html
+<button>My button!</button>
+```
+
+#### Passed Example 11
+
+This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
+The text has the default browser text color on the default browser background color. By default, this is 
+black text on a white background with a contrast ratio of 21:1
+
+```html
+<div role="button">My button!</div>
 ```
 
 ### Failed
@@ -257,7 +282,7 @@ This semi-transparent gray text has a contrast ratio between 2.3:1 and 4.2:1 on 
 
 #### Failed Example 8
 
-The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 3.5:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
+The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 3.85:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -266,6 +291,23 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 <p style="font-family: helvetica; background: #EEE; color: #777;">
 	The quick brown fox jumps over the lazy dog.
 </p>
+```
+
+#### Failed Example 9
+
+This text is part of a widget because it is a child of a `button` element. The button text has a contrast
+ratio of 3.85:1.
+```html
+<button style="color: #777; background: #EEE;">My button!</button>
+```
+
+#### Failed Example 10
+
+This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
+The button text has a contrast ratio of 3.85:1.
+
+```html
+<div role="button" style="color: #777; background: #EEE;">My button!</div>
 ```
 
 ### Inapplicable
@@ -316,22 +358,6 @@ This text not part of a [text node][].
 
 #### Inapplicable Example 6
 
-This text is part of a widget because it is a child of a `button` element.
-
-```html
-<button>My button!</button>
-```
-
-#### Inapplicable Example 7
-
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-
-```html
-<div role="button">My button!</div>
-```
-
-#### Inapplicable Example 8
-
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element with `type="text"`.
 
 ```html
@@ -341,7 +367,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </label>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 7
 
 This text is part of a label of a [disabled][] widget, because it is in an element that is referenced by `aria-labelledby` from an element with `role="textbox"`.
 
@@ -359,7 +385,7 @@ This text is part of a label of a [disabled][] widget, because it is in an eleme
 </div>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 8
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in a `fieldset` element with the `disabled` attribute.
 
@@ -372,7 +398,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </fieldset>
 ```
 
-#### Inapplicable Example 11
+#### Inapplicable Example 9
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in an element with `role="group"` with the `aria-disabled="true"` attribute.
 
@@ -383,6 +409,22 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 		<input />
 	</label>
 </div>
+```
+
+#### Inapplicable Example 10
+
+This text is part of a [disabled][] widget because it is a child of a `button` element with the `disabled` attribute.
+
+```html
+<button style="color: #777; background: #EEE;" disabled>My button!</button>
+```
+
+#### Inapplicable Example 11
+
+This text is part of a [disabled][] widget because it is a child of an element with the `role` attribute set to `button` and with an `aria-disabled` attribute set to `true`.
+
+```html
+<div role="button" style="color: #777; background: #EEE;" aria-disabled="true">My button!</div>
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'

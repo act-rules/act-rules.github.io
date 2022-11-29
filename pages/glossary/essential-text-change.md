@@ -23,6 +23,6 @@ An _essential text change_ occurs when the modification of the text content of a
     
     *Not Important*
     - Text changes that do not require immediate user action, such as stock ticker information, sport scores, or advertisements
-    - "Rolling" updates containing informmation such as job postings or news article titles and links
+    - "Rolling" updates containing information such as job postings or news article titles and links
     - A countdown timer to an event that does not cause a loss of opportunity for the user, such as a countdown to the start of a sporting event
 

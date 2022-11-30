@@ -29,8 +29,8 @@ This rule applies to any non-empty `th` element that is [included in the accessi
 
 - **in a table** the `th` element is an [descendant][] of a `table` element for which all of the following are true:
   - **visible** the `table` element is [visible][]; and
-  - **content model** the `table` and its [descendant][] `tr` elements follow theirs [content model](https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model); and
-  - **non-empty data cell** the `table` element has at least one non-empty `td` element in.
+  - **content model** the `table` and its [descendant][] `tr` elements follow theirs [content model][]; and
+  - **non-empty data cell** the `table` element has at least one non-empty `td` element that is a [child][] of a `tr` element with the [index](https://dom.spec.whatwg.org/#concept-tree-index) of 1 if .
 - **no explicit role** the `th`, `tr`, `table`, and other elements in between them do not have an [explicit semantic role][].
 
 ## Expectation
@@ -403,6 +403,8 @@ There are no non-empty `th` element in the `table` element.
 ```
 
 [attribute value]: #attribute-value 'Definition of attribute value'
+[child]: https://dom.spec.whatwg.org/#concept-tree-child 'Definition of child'
+[content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'Definition of content model'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

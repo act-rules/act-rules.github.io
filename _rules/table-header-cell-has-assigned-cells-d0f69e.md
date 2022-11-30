@@ -27,11 +27,10 @@ acknowledgments:
 
 This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
-- **in a table** the `th` element is an [inclusive descendant][] of a `table` element for which all of the following are true:
+- **in a table** the `th` element is an [descendant][] of a `table` element for which all of the following are true:
   - **visible** the `table` element is [visible][]; and
-  - **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
-  - **content model** the `table` and its [inclusive descendant][] `tr` elements follow theirs [content model](https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model); and
-  - **non-empty data cell** the `table` element has at least one non-empty `td` element.
+  - **content model** the `table` and its [descendant][] `tr` elements follow theirs [content model](https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model); and
+  - **non-empty data cell** the `table` element has at least one non-empty `td` element in.
 - **no explicit role** the `th`, `tr`, `table`, and other elements in between them do not have an [explicit semantic role][].
 
 ## Expectation
@@ -317,7 +316,7 @@ This `th` element is not [included in the accessibility tree][] because of the `
 
 #### Inapplicable Example 7
 
-This `th` element is a child of a `tr` element but the `tr` element is not an [inclusive descendant][] of a `table` element.
+This `th` element is a child of a `tr` element but the `tr` element is not an [descendant][] of a `table` element.
 
 ```html
 <div>
@@ -344,7 +343,7 @@ This `th` element does not have a [semantic role][] of a `columnheader` through 
 
 #### Inapplicable Example 9
 
-This `table` element has only one `tr` element as its [inclusive descendant][].
+This `table` element has only one `tr` element as its [descendant][].
 
 ```html
 <table>
@@ -408,7 +407,7 @@ There are no non-empty `th` element in the `table` element.
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'Definition of inclusive descendant'
+[descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant 'Definition of descendant'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'

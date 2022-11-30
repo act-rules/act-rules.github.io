@@ -316,7 +316,7 @@ This `th` element is not [included in the accessibility tree][] because of the `
 
 #### Inapplicable Example 7
 
-This `th` element is a child of a `tr` element but the `tr` element is not an [descendant][] of a `table` element.
+This `th` element is not an [descendant][] of a `table` element.
 
 ```html
 <div>
@@ -370,7 +370,7 @@ This `table` element is not [visible][].
 
 #### Inapplicable Example 11
 
-This `table` element does not have at least one `th` element that is assigned to a non-empty `td` element.
+This `table` element does not have a non-empty `td` element.
 
 ```html
 <table>
@@ -387,7 +387,7 @@ This `table` element does not have at least one `th` element that is assigned to
 
 #### Inapplicable Example 12
 
-There are no non-empty `th` element in the `table` element.
+There are no non-empty `th` elements in the `table` element.
 
 ```html
 <table>

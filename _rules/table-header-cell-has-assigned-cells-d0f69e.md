@@ -27,11 +27,11 @@ acknowledgments:
 
 This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
-- **in a table** the `th` element is an [descendant][] of a `table` element for which all of the following are true:
+- **in a table** the `th` element is a [descendant][] of a `table` element for which all of the following are true:
   - **visible** the `table` element is [visible][]; and
-  - **content model** the `table` and its [descendant][] `tr` elements follow theirs [content model][]; and
-  - **non-empty data cell** the `table` element has at least one non-empty `td` element that is a [child][] of a `tr` element with the [index](https://dom.spec.whatwg.org/#concept-tree-index) of 1 if .
-- **no explicit role** the `th`, `tr`, `table`, and other elements in between them do not have an [explicit semantic role][].
+  - **minimum rows** the `table` element's [`rows` collection](https://html.spec.whatwg.org/multipage/tables.html#dom-table-rows) has 2 or more `tr` elements; and
+  - **non-empty data cell** the `table` element has at least one non-empty `td` element that is a [child][] of a `tr` element with the [`rowIndex`][] value of 1 or more if the `tr` element with the value of 0 has at least two `th` [children][child] or the value of 0 or more if the `tr` element with the value of 0 has one or less `th` [children][child].
+- **no explicit role** none of the elements that make up the [table model][] have an [explicit semantic role][].
 
 ## Expectation
 
@@ -404,8 +404,8 @@ There are no non-empty `th` element in the `table` element.
 
 [attribute value]: #attribute-value 'Definition of attribute value'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child 'Definition of child'
-[content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'Definition of content model'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
+[rowindex]: https://html.spec.whatwg.org/multipage/tables.html#dom-tr-rowindex 'Definition of rowIndex'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
@@ -414,5 +414,6 @@ There are no non-empty `th` element in the `table` element.
 [columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[table model]: https://html.spec.whatwg.org/multipage/tables.html#table-model 'Definition of table model'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI-ARIA 1.1'

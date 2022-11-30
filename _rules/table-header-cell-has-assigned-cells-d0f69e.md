@@ -28,11 +28,11 @@ acknowledgments:
 This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
 - **in a table** the `th` element is an [inclusive descendant][] of a `table` element for which all of the following are true:
-- **visible** the `table` element is [visible][]; and
-- **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
-- **content model** the `table` and its [inclusive descendant][] `tr` elements follow theirs [content model](https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model); and
-- **non-empty data cell** the `table` element has at least one non-empty `td` element, and
-- **no explicit role** the `th`, `tr`, `table`, and other elements in between them do not have an [explicit semantic role][], and
+  - **visible** the `table` element is [visible][]; and
+  - **minimum rows** the `table` element has at least two `tr` elements as its [inclusive descendant][] elements; and
+  - **content model** the `table` and its [inclusive descendant][] `tr` elements follow theirs [content model](https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model); and
+  - **non-empty data cell** the `table` element has at least one non-empty `td` element.
+- **no explicit role** the `th`, `tr`, `table`, and other elements in between them do not have an [explicit semantic role][].
 
 ## Expectation
 

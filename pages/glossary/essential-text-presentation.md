@@ -10,7 +10,7 @@ The presentation of text is considered essential in one of more of the following
 1. The text and its presentation is part of a brand; or
 2. The text is part of a digitized image of a physical object; or
 3. The text is part of a free-form digital illustration; or
-3. The text that is written, drawn, or otherwise hand-crafted; or
+3. The text is written, drawn, or otherwise hand-crafted; or
 4. The text is part of an image with other graphical objects, where its relationship is informative; or
 5. Changing part of the presentation would alter the meaning of content on the page.
 

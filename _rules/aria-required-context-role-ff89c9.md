@@ -117,7 +117,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 ```html
 <div role="list" aria-owns="item1 item2">
-	<div role="navigation">
+	<div role="listitem">
 		<div id="item1" role="listitem">List item 1</div>
 		<div id="item2" role="listitem">List item 2</div>
 	</div>

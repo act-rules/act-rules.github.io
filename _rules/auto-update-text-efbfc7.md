@@ -56,7 +56,7 @@ For each test target, either it is an [essential text change][], or there is at 
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

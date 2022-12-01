@@ -49,7 +49,7 @@ The [instrument][] to pause or stop or turn the audio volume off is [visible](#v
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 

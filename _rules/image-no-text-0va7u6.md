@@ -97,7 +97,7 @@ This image resource referenced by the `svg` element does not contain text.
 
 #### Passed Example 4
 
-This image resource referenced by the `object` element contains text, but it is not the most significant content.
+This image resource referenced by the `object` element contains text, but it is not the most [significant](#0va7u6:incidental) content.
 
 ```html
 <object data="/test-assets/0va7u6/times_square.jpg" title="Picture of Times Square, New York"></object>
@@ -105,7 +105,7 @@ This image resource referenced by the `object` element contains text, but it is 
 
 #### Passed Example 5
 
-This image resource referenced by the `img` element contains text, but its presentation is essential to convey the information.
+This image resource referenced by the `img` element contains text, but its presentation is [essential](#0va7u6:essential) to convey the information.
 
 ```html
 <p>
@@ -120,7 +120,7 @@ This image resource referenced by the `img` element contains text, but its prese
 
 #### Passed Example 6
 
-This image resource referenced by the `background-image` property of the `div` element contains a logo with text. Logotypes are considered an essential exception.
+This image resource referenced by the `background-image` property of the `div` element contains a logo with text. Logotypes are considered an [essential](#0va7u6:essential) exception.
 
 ```html
 <div
@@ -137,7 +137,7 @@ This image resource referenced by the `background-image` property of the `div` e
 
 #### Passed Example 7
 
-This image resource referenced by the `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [purely decorative][].
+This image resource referenced by the `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [decorative](#0va7u6:decorative).
 
 ```html
 <img src="/test-assets/0va7u6/books.jpg" alt="" />
@@ -171,7 +171,7 @@ These image resources referenced by the `input` elements are images of text (the
 
 #### Failed Example 1
 
-This image resource referenced by the `img` element contains text for which the particular presentation is not essential.
+This image resource referenced by the `img` element contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <img
@@ -182,7 +182,7 @@ This image resource referenced by the `img` element contains text for which the 
 
 #### Failed Example 2
 
-This image resource referenced by the `input` element in the [Image Button][] contains text for which the particular presentation is not essential.
+This image resource referenced by the `input` element in the [Image Button][] contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
@@ -190,7 +190,7 @@ This image resource referenced by the `input` element in the [Image Button][] co
 
 #### Failed Example 3
 
-This image resource referenced by the `background-image` property of the `div` element contains text for which the particular presentation is not essential.
+This image resource referenced by the `background-image` property of the `div` element contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
@@ -198,7 +198,7 @@ This image resource referenced by the `background-image` property of the `div` e
 
 #### Failed Example 4
 
-This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [purely decorative][].
+This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [decorative](#0va7u6:decorative).
 
 ```html
 <img src="/test-assets/0va7u6/welcome.png" alt="" />

@@ -5,11 +5,6 @@ rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationship (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
     forConformance: false
     failed: not satisfied
@@ -20,6 +15,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.3.1: # Info and Relationship (A)
+    secondary: true
+  wcag20:4.1.2: # Name, Role, Value (A)
+    secondary: true
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -52,6 +51,8 @@ Each test target has at least one token which is a valid value corresponding to 
 Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
 
 ## Background
+
+Using an invalid role is often the result of a typo or other developer error. Such roles are ignored by browsers and assistive technologies, and the element's default semantics is used. This often means that role that should exist does not. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. Having the rule target attributes containing at least one non-[ASCII whitespace][] character ensures that there is at least one token in the set.
 
@@ -186,3 +187,5 @@ This `role` attribute is specified on an element which is [programmatically hidd
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.2/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
+[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

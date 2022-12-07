@@ -11,6 +11,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: satisfied
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: true
+  wcag20:4.1.2: # Name, Role, Value (A)
+    secondary: true
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -43,6 +47,8 @@ This rule catches values that are undefined in [WAI-ARIA Specifications][], and 
 Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not ID) while some treat them as case-insensitive.
 
 ## Background
+
+Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property should exist does not. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement. For example, the value of the `aria-errormessage` attribute on an `input` does not need to reference an `id` that exists within the same document, because an [HTML element](https://html.spec.whatwg.org/#htmlelement) with such and `id` may be created in response to an [event](https://dom.spec.whatwg.org/#event) that may or may not happen.
 
@@ -284,3 +290,5 @@ Element has ARIA role, but no ARIA states or properties
 
 [wai-aria specifications]: #wai-aria-specifications 'List of WAI-ARIA Specifications'
 [html or svg element]: #namespaced-element
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
+[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

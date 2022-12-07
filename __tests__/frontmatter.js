@@ -1,6 +1,5 @@
 const describeRule = require('../test-utils/describe-rule')
 const describePage = require('../test-utils/describe-page')
-const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 
 describe('frontmatter', () => {
 	/**
@@ -96,6 +95,11 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 		 */
 		const accRequirementValues = Object.values(accessibility_requirements)
 		test.each(accRequirementValues)('has expected keys for accessibility requirement: `%p`', accReq => {
+			if (accReq[secondary]) {
+				expect(accReq[secondary]).toBeTrue()
+				return
+			}
+
 			const keys = Object.keys(accReq).sort()
 			expect(keys.length).toBeGreaterThanOrEqual(4)
 			expect(keys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed'])

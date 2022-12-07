@@ -17,6 +17,7 @@
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
 - Iframe
+- iframes
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
@@ -229,6 +230,7 @@
 - testability
 - focusability
 - unitless
+- luminance
 
 # Parts of Unicode
 - 000A
@@ -271,3 +273,9 @@
 # Color values
 - HSL
 - hsl
+
+# Variables used in definitions / descriptions
+- A-lum-max
+- A-lum-min
+- B-lum-max
+- B-lum-min

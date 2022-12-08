@@ -36,7 +36,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property should exist does not. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
+The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 ### Bibliography
 

@@ -66,7 +66,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Background
 
-The HTML `area` element is both a link and an non-text content. When this rule fails on `area` elements, [success criterion 1.1.1 Non-text content][sc111] is not satisfied.
+The HTML `area` element is both a link and an non-text content. When this rule fails on `area` elements [success criterion 1.1.1 Non-text content][sc111] is not satisfied.
 
 ### Related rules
 

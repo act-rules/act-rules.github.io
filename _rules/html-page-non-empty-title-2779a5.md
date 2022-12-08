@@ -63,7 +63,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 
 ### Related rules
 
-- [HTML page title is descriptive](https://act-rules.github.io/rules/c4a8a4)
+- [HTML page title is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/c4a8a4/proposed/)
 
 ### Bibliography
 

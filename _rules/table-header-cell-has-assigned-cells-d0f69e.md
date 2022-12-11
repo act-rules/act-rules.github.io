@@ -18,6 +18,7 @@ acknowledgments:
   authors:
     - Aron Janecki
     - Audrey Maniez
+    - Jean-Yves Moyen
     - Jey Nandakumar
   funding:
     - WAI-Tools

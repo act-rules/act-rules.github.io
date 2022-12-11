@@ -217,13 +217,21 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 
 #### Inapplicable Example 3
 
-The `aria-checked` state is the same as the implicit state of the `input type="checkbox"` element.
+The `input type="checkbox"` element has an implicitly determined state that corresponds to the `aria-checked` state.
 
 ```html
 <label>
 	All
 	<input type="checkbox" aria-checked="mixed" />
 </label>
+```
+
+#### Inapplicable Example 4
+
+The `h3` element has an implicitly determined property that corresponds to the `aria-level` property.
+
+```html
+<h1 aria-level="5">Introduction</h1>
 ```
 
 [attribute value]: #attribute-value 'Definition of attribute value'

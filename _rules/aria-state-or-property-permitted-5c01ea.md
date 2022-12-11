@@ -215,6 +215,17 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
+#### Inapplicable Example 3
+
+The `aria-checked` state is the same as the implicit state of the `input type="checkbox"` element.
+
+```html
+<label>
+	All
+	<input type="checkbox" aria-checked="mixed" />
+</label>
+```
+
 [attribute value]: #attribute-value 'Definition of attribute value'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'

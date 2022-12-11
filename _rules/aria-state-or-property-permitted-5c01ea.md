@@ -58,8 +58,6 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
 
-As per the [conflicts with host language semantics](https://www.w3.org/TR/wai-aria-1.2/#host_general_conflict) section of [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/), user agents must ignore [WAI-ARIA state or property][] that have the same [implicit WAI-ARIA semantic](https://www.w3.org/TR/wai-aria-1.2/#implicit_semantics) in order to avoid providing conflicting states and properties to assistive technologies.
-
 Assessing the value of the attribute is out of scope for this rule.
 
 ### Related rules
@@ -193,17 +191,6 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 
 ```html
 <div aria-label="Bananas"></div>
-```
-
-#### Failed Example 4
-
-The `aria-checked` state is [prohibited][] for an `input type="checkbox"` element to avoid providing conflicting states.
-
-```html
-<label>
-	<input type="checkbox" aria-checked="mixed" />
-	All
-</label>
 ```
 
 ### Inapplicable

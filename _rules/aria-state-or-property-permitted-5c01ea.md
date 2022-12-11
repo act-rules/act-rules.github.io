@@ -32,14 +32,18 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is:
+
+- **namespaced element**: specified on an [HTML or SVG element][namespaced element]; and
+- **perceivable**: the element is [included in the accessibility tree][]; and,
+- **not conflicting**: [WAI-ARIA state or property][] is not specified on an element that has the same [implicit WAI-ARIA semantic](https://www.w3.org/TR/wai-aria-1.2/#implicit_semantics).
 
 ## Expectation 1
 
 For each test target, one of the following is true:
 
 - **global**: the test target is a [global state or property][global]; or
-- **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
+- **semantic role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
 ## Expectation 2

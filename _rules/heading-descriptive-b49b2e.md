@@ -31,10 +31,7 @@ This rule applies to any [semantic][semantic role] `heading` element that is [in
 
 ## Expectation
 
-Each target element describes the topic or purpose of the first node after the test target for which all the following are true:
-- The node is not [decorative][]; and
-- The node is [palpable content][] (such as text nodes or elements like `h1`, `p`, `img`. etc.); and
-- The node is [included in the accessibility tree].
+Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][].
 
 The order of elements is determined by the [flat tree][].
 
@@ -50,7 +47,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
-Headings that are in the accessibility tree and not visible are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246]. 
+Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246]. 
 
 ### Bibliography
 

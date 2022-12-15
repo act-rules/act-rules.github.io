@@ -24,20 +24,26 @@ acknowledgments:
 
 This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport` for which at least one of the following is true:
 
-- the `content` [attribute value][] has the `user-scalable` property; or
-- the `content` [attribute value][] has the `maximum-scale` property.
+- the `content` attribute specified value includes the text `user-scalable`; or
+- the `content` attribute specified value includes the text `maximum-scale`.
+
+**Note:** The Applicability refers to string inclusion of the indicated strings in the value of the `content` attribute, as written.
 
 ## Expectation 1
 
 For each test target, the [attribute value][] does not have a `user-scalable` property with a value of `no`.
 
+The [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by parsing the specified value, then applying the [translations into `@viewport` descriptors][descriptor translation], notably [the translation for `user-scalable`](https://www.w3.org/TR/css-device-adapt-1/#user-scalable).
+
 ## Expectation 2
 
 For each test target, the [attribute value][] does not have a `maximum-scale` property with a value less than 2.
 
+The [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by parsing the specified value, then applying the [translations into `@viewport` descriptors][descriptor translation], notably [the translation for `maximum-scale`](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale) (including dropping the key-value pair completely for invalid values).
+
 ## Assumptions
 
-Pages for which any of the following is true may satisfy success criteria Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410], even if the rule results in a failed outcome.
+Pages for which any of the following is true may satisfy Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410], even if the rule results in a failed outcome.
 
 - The [page][] has no [visible][] [content][]; or
 - There is another [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content; or
@@ -46,6 +52,8 @@ Pages for which any of the following is true may satisfy success criteria Succes
 ## Accessibility Support
 
 Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
+
+The exact way the `content` attribute should be parsed (notably, for error handling) is not fully specified. CSS specification includes a [non-normative parsing algorithm](https://www.w3.org/TR/css-device-adapt-1/#parsing-algorithm). Different user agents may behave differently in some cases.
 
 ## Background
 
@@ -100,7 +108,7 @@ This viewport `meta` element allows users to scale content up to 200% because it
 
 #### Passed Example 3
 
-This viewport `meta` element does not prevent user scaling because it has `maximum-scale` set to -1 which results in this value being dropped.
+This viewport `meta` element does not prevent user scaling because it has `maximum-scale` set to -1 which results in this key-value pair being dropped.
 
 ```html
 <html>
@@ -264,13 +272,14 @@ This viewport `meta` element does not prevent user scaling because it does not s
 </html>
 ```
 
-[content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
-[maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
-[meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
-[page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
-[user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[visible]: #visible 'Definition of visible'
+[content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
 [css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
+[descriptor translation]: https://www.w3.org/TR/css-device-adapt-1/#translate-meta-to-at-viewport 'Translations of the content attribute into @viewport descriptors'
+[meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
+[maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
+[page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [sc144]: https://www.w3.org/TR/WCAG21/#resize-text 'WCAG 2.1 Success Criterion 1.4.4 Resize text'
 [sc1410]: https://www.w3.org/TR/WCAG21/#reflow 'WCAG 2.1 Success Criterion 1.4.10 Reflow'
+[user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
+[visible]: #visible 'Definition of visible'

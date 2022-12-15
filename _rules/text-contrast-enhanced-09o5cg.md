@@ -168,7 +168,7 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 This text has the [default user agent link text and background color](https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3), of `#0000EE` and white. This results in a contrast ratio of 9.39:1.
 
 ```html
-<a href="https://w3c.org">W3C</a>
+<a href="https://w3c.org/">W3C</a>
 ```
 
 #### Passed Example 10

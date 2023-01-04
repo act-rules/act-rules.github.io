@@ -52,7 +52,7 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

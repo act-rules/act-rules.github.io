@@ -55,7 +55,7 @@ This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

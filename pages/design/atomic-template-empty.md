@@ -46,11 +46,11 @@ Each target element ...
 
 ## Assumptions
 
-_No assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

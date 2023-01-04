@@ -207,7 +207,7 @@ This image resource referenced by the `img` element contains text that provides 
 
 #### Failed Example 5
 
-This `img` elements loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
+This `img` element loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
 
 ```html
 <img alt="WCAG Rocks" src="data:image/svg+xml;utf8,

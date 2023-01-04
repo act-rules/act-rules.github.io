@@ -419,7 +419,7 @@ These two HTML `a` elements have the same [accessible name][] but different [pro
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[accessible description]: https://www.w3.org/TR/wai-aria-1.2/#dfn-accessible-description 'Definition of accessible description'
+[accessible description]: #accessible-description 'Definition of Accessible Description'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

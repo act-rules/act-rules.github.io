@@ -78,7 +78,7 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 #### Passed Example 1
 
-These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context] and link to the [same resource][].
+These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context] and resolve to the [same resource][].
 
 ```html
 <html lang="en">

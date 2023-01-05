@@ -5,41 +5,42 @@ For the starting section, and examples, complete what you feel comfortable with 
 Save the finished rule with the Title to display or success criterion aspect being tested.
 
 ---
+
 id:
 name:
 rule_type: atomic
 description: |
-  This rule checks ...
+This rule checks ...
 accessibility_requirements: # Remove whatever is not applicable
-  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
-    forConformance: true | false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  aria11:anchor-name: # <Heading in WAI-ARIA>
-    title: Title to display
-    forConformance: true | false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  wcag-technique:Xxx: # <Technique title>
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  using-aria:anchor-name: # <Heading in Using ARIA>
-    title: Title to display
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
+wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
+forConformance: true | false
+failed: not satisfied
+passed: satisfied | further testing needed
+inapplicable: satisfied | further testing needed
+aria11:anchor-name: # <Heading in WAI-ARIA>
+title: Title to display
+forConformance: true | false
+failed: not satisfied
+passed: satisfied | further testing needed
+inapplicable: satisfied | further testing needed
+wcag-technique:Xxx: # <Technique title>
+forConformance: false
+failed: not satisfied
+passed: satisfied | further testing needed
+inapplicable: satisfied | further testing needed
+using-aria:anchor-name: # <Heading in Using ARIA>
+title: Title to display
+forConformance: false
+failed: not satisfied
+passed: satisfied | further testing needed
+inapplicable: satisfied | further testing needed
 input_aspects:
-  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
-acknowledgments:
-  authors:
-    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
-  previous_authors:
-    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+
+- # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
+  acknowledgments:
+  authors: - # (full names as found in `contributors` property in `package.json` - if not yet listed, please have authors added to the list)
+  previous_authors: - # (full names as found in `contributors` property in `package.json` - if not yet listed, please have authors added to the list)
+
 ---
 
 ## Applicability

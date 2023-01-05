@@ -1,7 +1,7 @@
 ---
 This is the template for the manual test rules. It matches the automation rules but there are parts that can be completed with help from other community members (like adding examples of code).
 
-For the starting section, and examples, complete what you feel comfortable with and then ask for help via emails to the chairs of the ACT Task Force and Community Group. Delete these instructions after the -- and before "id:" (delete rows 2-7).
+For the starting section, and examples, complete what you feel comfortable with and then ask for help via emails to the chairs of the ACT Task Force and Community Group. Delete these instructions after the --- and before "id:" (delete rows 2-7).
 
 Save the finished rule with the Title to display or success criterion aspect being tested.
 

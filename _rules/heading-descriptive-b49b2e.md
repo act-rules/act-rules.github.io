@@ -142,6 +142,26 @@ This heading describes the first [palpable content][] after it (the first `p` el
 </html>
 ```
 
+#### Passed Example 7
+
+Empty heading marked up with `h1` is not [visible][].
+
+```html
+<html lang="en">
+	<h1></h1>
+</html>
+```
+
+#### Passed Example 8
+
+Empty heading marked up with `role="heading"` is not [visible][].
+
+```html
+<html lang="en">
+	<p role="heading" aria-level="1"></p>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -214,7 +234,7 @@ No heading.
 </html>
 ```
 
-#### Inapplicable Example 2
+<!-- #### Inapplicable Example 2
 
 Heading that is neither [visible][] to users, nor [included in the accessibility tree][].
 
@@ -222,26 +242,6 @@ Heading that is neither [visible][] to users, nor [included in the accessibility
 <html lang="en">
 	<h1 style="display: none;">Opening hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Inapplicable Example 3
-
-Empty heading marked up with `h1` is not [visible][].
-
-```html
-<html lang="en">
-	<h1></h1>
-</html>
-```
-
-#### Inapplicable Example 4
-
-Empty heading marked up with `role="heading"` is not [visible][].
-
-```html
-<html lang="en">
-	<p role="heading" aria-level="1"></p>
 </html>
 ```
 
@@ -254,7 +254,7 @@ Heading marked up with `h1` element that is not [visible][], and is not [include
 	<h1 aria-hidden="true"></h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
-```
+``` -->
 
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

@@ -244,3 +244,4 @@ Semantic heading has an empty [accessible name][].
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
 [accessible name]: #accessible-name 'Definition of accessible name'
+[perceivable content]: #perceivable-content 'Definition of perceivable content'

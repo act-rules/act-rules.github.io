@@ -52,10 +52,10 @@ htmlHintIgnore:
 
 This rule applies to any `audio` or `video` element for which all the following are true:
 
-- **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
-- **not muted**: the element has a `muted` [attribute value][] of `false`; and
-- **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **audio duration**: the element has a [media resource][] for which the audio output lasts longer than 3 seconds.
+- <dfn id="x0paj4:autoplay">autoplay</dfn>: the element has an `autoplay` [attribute value][] of `true`; and
+- <dfn id="x0paj4:not-muted">not muted</dfn>: the element has a `muted` [attribute value][] of `false`; and
+- <dfn id="x0paj4:not-paused">not paused</dfn>: the element has a `paused` [attribute value][] of `false`; and
+- <dfn id="x0paj4:audio-duration">audio duration</dfn>: the element has a [media resource][] for which the audio output lasts longer than 3 seconds.
 
 ## Expectation
 
@@ -152,7 +152,7 @@ This `video` element's audio autoplays for longer than 3 seconds, and does not h
 
 #### Inapplicable Example 1
 
-This `video` element's audio autoplays for longer than 3 seconds but is `muted`.
+This `video` element's audio autoplays for longer than 3 seconds but is [`muted`](#x0paj4:not-muted).
 
 ```html
 <video autoplay muted>
@@ -163,7 +163,7 @@ This `video` element's audio autoplays for longer than 3 seconds but is `muted`.
 
 #### Inapplicable Example 2
 
-This `video` element has no audio output.
+This `video` element has [no audio output](<(#x0paj4:audio-duration)>).
 
 ```html
 <video autoplay>
@@ -174,7 +174,7 @@ This `video` element has no audio output.
 
 #### Inapplicable Example 3
 
-This `audio` element does not play automatically.
+This `audio` element does [not play automatically](#x0paj4:autoplay).
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
@@ -182,7 +182,7 @@ This `audio` element does not play automatically.
 
 #### Inapplicable Example 4
 
-This `video` element does not play for longer than 3 seconds.
+This `video` element does [not play for longer than 3 seconds](#x0paj4:audio-duration).
 
 ```html
 <video autoplay>

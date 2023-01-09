@@ -191,6 +191,16 @@ This `video` element does [not play for longer than 3 seconds](#x0paj4:audio-dur
 </video>
 ```
 
+#### Inapplicable Example 5
+
+This `video` element autoplays for 1 minute, but the audio [plays only for 2 seconds](#x0paj4:audio-duration).
+
+```html
+<video autoplay>
+	<source src="/test-assets/x0paj4/1minvideo.mp4" type="video/mp4" />
+</video>
+```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [media resource]: https://html.spec.whatwg.org/multipage/media.html#media-resource 'HTML Specification of Media Resource'

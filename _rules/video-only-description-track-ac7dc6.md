@@ -1,6 +1,6 @@
 ---
 id: ac7dc6
-name: 'DEPRECATED — `video` element visual-only content has description track'
+name: DEPRECATED — Video element visual-only content has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
@@ -38,8 +38,7 @@ The visual information of each test target is described with a description `trac
 
 ## Assumptions
 
-- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 

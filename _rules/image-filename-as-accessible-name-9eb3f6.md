@@ -58,11 +58,11 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content).
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

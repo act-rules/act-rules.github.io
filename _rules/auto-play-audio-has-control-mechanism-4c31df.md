@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: DEPRECATED — '`audio` or `video` that plays automatically has a control mechanism'
+name: DEPRECATED — Audio or video element that plays automatically has a control mechanism
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -51,7 +51,7 @@ The [instrument][] to pause or stop or turn the audio volume off is [visible](#v
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 

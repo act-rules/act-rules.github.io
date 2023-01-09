@@ -1,6 +1,6 @@
 ---
 id: c5a4ea
-name: '`video` element visual content has accessible alternative'
+name: Video element visual content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have an alternative for the video content as audio or as text.
@@ -10,13 +10,15 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.2.5: # Audio Description (Prerecorded) (AAA)
+  wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

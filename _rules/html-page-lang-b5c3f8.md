@@ -1,6 +1,6 @@
 ---
 id: b5c3f8
-name: HTML page has `lang` attribute
+name: HTML page has lang attribute
 rule_type: atomic
 description: |
   This rule checks that an HTML page has a non-empty `lang` attribute.
@@ -45,7 +45,7 @@ The language of the page can be set by other methods than the `lang` attribute, 
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

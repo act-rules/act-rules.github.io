@@ -39,20 +39,9 @@ This rule applies to each [HTML element][] that has one of the following [semant
 - `switch` or
 - `textbox`.
 
-**Note**: The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.1][] roles that:
-
-- inherit from the [abstract][] `input` or `select` role, and
-- do not have a [required context][] role that inherits from the [abstract][] `input` or `select` role.
-
 ## Expectation 1
 
 Each test target either has no [form field error indicators][form field error indicator], or at least one of the [form field error indicators][form field error indicator] allows the identification of the related test target, through [text][], or through [non-text content][], or through [presentation][].
-
-**Note**: This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
-
-**Note**: A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
-
-**Note**: A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
 
 ## Expectation 2
 
@@ -74,13 +63,24 @@ in [text][] that is [included in the accessibility tree][] or included in the [a
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
+
+The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
+
+- inherit from the `input`, `menuitem` or `select` role, and
+- are form field controls (this notably excludes `menu`, `option` or `tree`).
+
+This rule does not test [form field error indicators][form field error indicator] shown on a different page than that of the test target.
+
+A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
+
+A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
 
 ### Bibliography
 
@@ -107,15 +107,17 @@ This `input` element has a [form field error indicator][] that identifies it (by
 
 #### Passed Example 2
 
-This multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels), describes the cause of the error and how to resolve it.
+These multiple `input` elements share a [form field error indicator][] that identifies the elements unfilled (by referencing their labels), describes the cause of the error and how to resolve it.
 
 ```html
 <form>
-	<h2 id="error">
-		Name and color cannot be left unfilled. Please complete all required fields.
-	</h2>
+	<p id="error">
+		<strong>
+			Name and color cannot be empty. Please complete all required fields.
+		</strong>
+	</p>
 	<fieldset>
-		<legend>Your data</legend>
+		<legend>Shipping</legend>
 		<label for="name">Name (required)</label>
 		<input type="text" id="name" required />
 		<br />
@@ -137,9 +139,10 @@ This `input` element does not have a [form field error indicator][].
 
 ```html
 <form>
-	<label for="age">Age (years)</label>
-	<input type="number" id="age" />
-	<input type="button" value="Submit" />
+	<label for="filter">Product filter</label>
+	<input type="text" id="filter" />
+	<input type="button" value="filter" />
+	<p>To see all products, leave the field empty.</p>
 </form>
 ```
 
@@ -168,7 +171,7 @@ This `input` element has a [form field error indicator][] but its message does n
 <form>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" />
-	<span id="error">Please enter a correct age.</span><br />
+	<span id="error">Please enter the correct text.</span><br />
 	<input type="button" value="Submit" />
 </form>
 ```
@@ -234,15 +237,13 @@ There are no elements with any of the required [semantic roles][semantic role].
 <p>This is a paragraph.</p>
 ```
 
-[abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles
 [accessible description]: https://www.w3.org/TR/accname/#dfn-accessible-description
 [accessible name]: #accessible-name 'Definition of accessible name'
-[aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/
+[aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [form field error indicator]: #form-field-error-indicator
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
 [presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
-[required context]: https://www.w3.org/TR/wai-aria/#scope
 [semantic role]: #semantic-role 'Definition of semantic role'
 [text]: https://www.w3.org/TR/WCAG21/#dfn-text
 [visible]: #visible 'Definition of visible'

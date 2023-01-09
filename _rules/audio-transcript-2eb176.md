@@ -1,6 +1,6 @@
 ---
 id: 2eb176
-name: '`audio` element content has transcript'
+name: Audio element content has transcript
 rule_type: atomic
 description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.
@@ -25,9 +25,7 @@ acknowledgments:
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible][] and [included in the accessibility tree][].
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
 
@@ -37,11 +35,11 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -197,4 +195,5 @@ This `audio` element has hidden native player controls.
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

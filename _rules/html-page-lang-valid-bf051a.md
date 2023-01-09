@@ -1,6 +1,6 @@
 ---
 id: bf051a
-name: HTML page `lang` attribute has valid language tag
+name: HTML page lang attribute has valid language tag
 rule_type: atomic
 description: |
   This rule checks that the `lang` attribute of the root element of a non-embedded HTML page has a language tag with a known primary language subtag.
@@ -48,7 +48,7 @@ For each test target, the `lang` attribute has a [known primary language tag][].
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

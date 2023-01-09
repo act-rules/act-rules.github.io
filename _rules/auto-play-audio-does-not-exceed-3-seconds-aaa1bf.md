@@ -1,6 +1,6 @@
 ---
 id: aaa1bf
-name: DEPRECATED — '`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds'
+name: DEPRECATED — Audio or video element that plays automatically has no audio that lasts more than 3 seconds
 rule_type: atomic
 description: |
   `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
@@ -45,11 +45,11 @@ For each test target the total audio output does not last more than 3 seconds.
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

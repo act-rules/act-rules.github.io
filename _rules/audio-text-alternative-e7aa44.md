@@ -1,6 +1,6 @@
 ---
 id: e7aa44
-name: '`audio` element content has text alternative'
+name: Audio element content has text alternative
 rule_type: composite
 description: |
   This rule checks that `audio` elements have a text alternative available.
@@ -34,10 +34,8 @@ acknowledgments:
 
 This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
-- has an `autoplay` [attribute value][] of true;  or,
-- has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has an `autoplay` [attribute value][] of true; or,
+- has a [play button][] that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
 
 ## Expectation
 
@@ -52,7 +50,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -126,9 +124,9 @@ This `audio` element has a play button but has an incorrect transcript.
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p>
-		The above audio contains the following speech: We are going to the North Pole in this decade with puppies,
-		not because they are easy, but because they are cute, because that goal will serve to organize and measure the best
-		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		The above audio contains the following speech: We are going to the North Pole in this decade with puppies, not
+		because they are easy, but because they are cute, because that goal will serve to organize and measure the best of
+		our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
 	</p>
 </html>
@@ -203,4 +201,5 @@ This `a` element links to an audio file, but there is no `audio` element on this
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

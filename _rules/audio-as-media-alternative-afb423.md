@@ -1,6 +1,6 @@
 ---
 id: afb423
-name: '`audio` element content is media alternative for text'
+name: Audio element content is media alternative for text
 rule_type: atomic
 description: |
   This rule checks that the `audio` element is a media alternative for text on the page.
@@ -25,9 +25,7 @@ acknowledgments:
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible][] and [included in the accessibility tree][].
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation 1
 
@@ -35,17 +33,15 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labeled as an audio alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
-
-**Note:** The term label does not refer to the `label` element.
+Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -191,4 +187,5 @@ This `audio` element describes some of the text on the same page. The text on th
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

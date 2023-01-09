@@ -1,6 +1,6 @@
 ---
 id: eac66b
-name: '`video` element auditory content has accessible alternative'
+name: Video element auditory content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements have an alternative for information conveyed through audio.
@@ -56,7 +56,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

@@ -1,6 +1,6 @@
 ---
 id: 3ea0c8
-name: '`id` attribute value is unique'
+name: Id attribute value is unique
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
@@ -41,11 +41,11 @@ The value of the attribute is unique across all other `id` attributes specified 
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

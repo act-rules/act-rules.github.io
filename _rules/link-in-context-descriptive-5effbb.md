@@ -5,13 +5,14 @@ rule_type: atomic
 description: |
   This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
-  wcag20:2.4.4: # Link Purpose (In Context)
+  wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.9: # Link Purpose (Link Only)
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -45,8 +46,6 @@ The [accessible name][] of each target element together with its [programmatical
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
-
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

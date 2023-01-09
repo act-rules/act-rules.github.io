@@ -1,6 +1,6 @@
 ---
 id: f51b46
-name: '`video` element auditory content has captions'
+name: Video element auditory content has captions
 rule_type: atomic
 description: |
   This rule checks that captions are available for audio information in non-streaming `video` elements.
@@ -51,7 +51,7 @@ This rule assumes that the video element is used to play a video (for example, n
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

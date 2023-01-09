@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
 
 ## Expectation
 
@@ -142,26 +142,6 @@ This heading describes the first [palpable content][] after it (the first `p` el
 </html>
 ```
 
-#### Passed Example 7
-
-Empty heading marked up with `h1` is not [visible][].
-
-```html
-<html lang="en">
-	<h1></h1>
-</html>
-```
-
-#### Passed Example 8
-
-Empty heading marked up with `role="heading"` is not [visible][].
-
-```html
-<html lang="en">
-	<p role="heading" aria-level="1"></p>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -201,17 +181,6 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 aria-hidden="true">Weather</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Failed Example 5
-
 This heading does not describe the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
 
 ```html
@@ -226,7 +195,7 @@ This heading does not describe the first [palpable content][] after it (the firs
 
 #### Inapplicable Example 1
 
-No heading.
+There is no heading.
 
 ```html
 <html lang="en">
@@ -234,27 +203,36 @@ No heading.
 </html>
 ```
 
-<!-- #### Inapplicable Example 2
+#### Inapplicable Example 2
 
-Heading that is neither [visible][] to users, nor [included in the accessibility tree][].
+Heading is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
-	<h1 style="display: none;">Opening hours</h1>
+	<h1 hidden>Opening Hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 3
 
-Heading marked up with `h1` element that is not [visible][], and is not [included in the accessibility tree][].
+`h1` element has an empty [accessible name][].
 
 ```html
 <html lang="en">
-	<h1 aria-hidden="true"></h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
+	<h1></h1>
 </html>
-``` -->
+```
+
+#### Inapplicable Example 4
+
+Semantic heading has an empty [accessible name][].
+
+```html
+<html lang="en">
+	<p role="heading" aria-level="1"></p>
+</html>
+```
 
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
@@ -265,3 +243,4 @@ Heading marked up with `h1` element that is not [visible][], and is not [include
 [sc246]: https://www.w3.org/TR/WCAG21/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'

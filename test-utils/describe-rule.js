@@ -18,7 +18,7 @@ const describeRule = (groupName, runTests) => {
 		.reduce((flattened, element) => flattened.concat(element), [])
 
 	/**
-	 * Create arbitrary meta data that can be used in various tests
+	 * Create arbitrary metadata that can be used in various tests
 	 */
 	const metaData = {
 		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),

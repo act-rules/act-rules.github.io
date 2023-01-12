@@ -51,7 +51,7 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 Styles [declared][] in a `style` attribute have higher [cascade specificity][] than any selector; therefore, they "win" the [cascade sort] over any other style from [author origin][], i.e. it cannot be overridden by any of these. On the other hand, if such a style is [declared][] in a style sheet, it can still "lose" the [cascade sort][] to declarations with higher [specificity][] or simply coming from a later style sheet (such as ones injected by assistive technologies). This rule ensures that the element is not in the first case and that the style can be overridden by users, unless it is already at least the minimum required threshold. [Important][] styles that are declared with the [user][user origin] or [user agent][user agent origin] can win the [cascade sort][] over styles with the [author origin][].
 
-CSS specifications define each declaration as being either [important][] (if it has the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for some properties, and that `!important` is wider known that this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
+CSS specifications define each declaration as being either [important][] (if it has the `!important` annotation) or [normal][]. Given that `normal` is also a keyword for some properties, and that `!important` is wider known than this distinction, this rule rather uses "[important][]"/"not [important][]" to avoid confusion.
 
 This rule evaluates the [used][] value of the `line-height` property instead of its [computed][] value because the [used][] value is guaranteed to use absolute units (i.e., pixels). This streamlines comparison with the [computed][] `font-size` which is also absolute. The [computed][] `line-height` may be a unitless number that is harder to compare.
 
@@ -63,7 +63,7 @@ This rule evaluates the [used][] value of the `line-height` property instead of 
 
 ### About test cases
 
-Test cases description abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+Test cases descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
 
 ## Test Cases
 

@@ -59,7 +59,7 @@ Each test target is [purely decorative][].
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

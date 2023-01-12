@@ -10,7 +10,7 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-  aria11:anchor-name: # <Heading in WAI-ARIA>
+  aria12:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false
     failed: not satisfied
@@ -49,11 +49,11 @@ For each test target, the outcome of (at least one of | all of | any of etc.) th
 
 ## Assumptions
 
-_No assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 

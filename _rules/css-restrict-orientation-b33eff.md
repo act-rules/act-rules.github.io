@@ -51,7 +51,7 @@ This rule does not consider and may produce incorrect results for:
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

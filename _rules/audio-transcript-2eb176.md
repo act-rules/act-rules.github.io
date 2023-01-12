@@ -35,11 +35,11 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

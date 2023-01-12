@@ -35,13 +35,14 @@ For each target element, focus can cycle to the browser UI by using [standard ke
 
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 - The Browser UI is part of the focus navigation cycle of the page.
-- This rule assumes that [Success Criterion 2.1.2 No keyboard trap][sc212] only requires navigation in one direction (either forward or backward), not both, and not a specific one. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)), this rule may pass while the criterion is not satisfied.
 
 ## Accessibility Support
 
 There are no accessibility support issues known.
 
 ## Background
+
+This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
 
 ### Bibliography
 

@@ -69,7 +69,7 @@ This rule assumes that the [instrument][] to control the sound is visible and ac
 
 ## Accessibility Support
 
-Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
+Some major browsers do not automatically play the 'video' unless the 'video' is muted.
 
 ## Background
 

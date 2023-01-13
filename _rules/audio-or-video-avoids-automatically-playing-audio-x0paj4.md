@@ -65,15 +65,13 @@ For each test target, there is at least one [instrument][] in the same [web page
 
 This rule assumes that it is not sufficient for the [instrument][] to control the sound to be located on a different [web page][], or a different state of the same [web page][] to pass the rule. [Instruments][instrument] located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen reader users) since the autoplaying sound will interfere with their ability to find and activate the [instrument][]. If an [instrument][] external to the [web page][] is provided, this rule will fail but it is still possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
-This rule assumes that the [instrument][] to control the sound is visible and accessible in order to be effective and usable by all kinds of users. If the [instrument][] is hidden to some users, it is possible to pass this rule but still not satisfy [Success Criterion 1.4.2 Audio Control][sc142].
-
 ## Accessibility Support
 
 Some major browsers do not automatically play the 'video' unless the 'video' is muted. For these, the rule is never applicable. But, for UA that autoplay unmuted video, the rule is still applicable.
 
 ## Background
 
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. This means the [instrument][] to control the sound should be visible and accessible in order to be effective and usable by all kinds of users. If the [instrument][] is hidden to some users, it is possible to pass this rule but still not satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
 
 ### Bibliography
 

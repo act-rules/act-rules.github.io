@@ -67,7 +67,7 @@ This rule assumes that it is not sufficient for the [instrument][] to control th
 
 ## Accessibility Support
 
-Some major browsers do not automatically play the 'video' unless the 'video' is muted. For these, the rule is never applicable. But, for UA that autoplay unmuted video, the rule is still applicable.
+Some major browsers do not automatically play the 'video' unless the 'video' is muted. For these, the rule is never applicable. But, for UA that autoplay not muted video, the rule is still applicable.
 
 ## Background
 

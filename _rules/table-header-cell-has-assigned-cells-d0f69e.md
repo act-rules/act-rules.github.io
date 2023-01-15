@@ -26,12 +26,12 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any non-empty `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
+This rule applies to any [non-empty][] `th` element that is [included in the accessibility tree][], has a [semantic role][] of [rowheader][] or [columnheader][], and for which all of the following are true:
 
 - **in a table** the `th` element is a [descendant][] of a `table` element for which all of the following are true:
   - **visible** the `table` element is [visible][]; and
   - **minimum rows** the `table` element's [`rows` collection](https://html.spec.whatwg.org/multipage/tables.html#dom-table-rows) has 2 or more `tr` elements; and
-  - **non-empty data cell** the `table` element has at least one non-empty `td` element that is a [child][] of a `tr` element with the [`rowIndex`][rowindex] value of 1 or more if the `tr` element with the value of 0 has at least two `th` [children][child] or the value of 0 or more if the `tr` element with the value of 0 has one or less `th` [children][child].
+  - **non-empty data cell** the `table` element has at least one [non-empty][] `td` element that is a [child][] of a `tr` element with the [`rowIndex`][rowindex] value of 1 or more if the `tr` element with the value of 0 has at least two `th` [children][child] or the value of 0 or more if the `tr` element with the value of 0 has one or less `th` [children][child].
 - **no explicit role** none of the elements that make up the [table model][] have an [explicit semantic role][].
 
 ## Expectation
@@ -102,7 +102,7 @@ Each of the 2 `th` elements is assigned to the `td` element because this `td` el
 
 #### Passed Example 3
 
-Each of the 4 non-empty `th` elements is assigned to a `td` element, within the same `table` element.
+Each of the 4 [non-empty][] `th` elements is assigned to a `td` element, within the same `table` element.
 
 ```html
 <table>
@@ -371,7 +371,7 @@ This `table` element is not [visible][].
 
 #### Inapplicable Example 11
 
-This `table` element does not have a non-empty `td` element.
+This `table` element does not have a [non-empty][] `td` element.
 
 ```html
 <table>
@@ -388,7 +388,7 @@ This `table` element does not have a non-empty `td` element.
 
 #### Inapplicable Example 12
 
-There are no non-empty `th` elements in the `table` element.
+There are no [non-empty][] `th` elements in the `table` element.
 
 ```html
 <table>
@@ -404,6 +404,7 @@ There are no non-empty `th` elements in the `table` element.
 ```
 
 [attribute value]: #attribute-value 'Definition of attribute value'
+[non-empty]: #non-empty 'Definition of non-empty'
 [child]: https://dom.spec.whatwg.org/#concept-tree-child 'Definition of child'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [rowindex]: https://html.spec.whatwg.org/multipage/tables.html#dom-tr-rowindex 'Definition of rowIndex'

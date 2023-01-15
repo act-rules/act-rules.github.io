@@ -40,7 +40,7 @@ Each target element is [assigned][] to at least one `td` or `th` element.
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through the presentation with other cells within the same table. It excludes edge cases such as a table definition with only one header cell or a table definition with multiple headers and no other cells that would correspond to them. The rule fails in such scenarios, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
+This rule assumes that table header cells have a relationship conveyed through the presentation with other cells within the same table.
 
 ## Accessibility Support
 

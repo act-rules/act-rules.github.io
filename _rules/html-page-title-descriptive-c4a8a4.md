@@ -59,7 +59,7 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 
 ### Related rules
 
-- [HTML page has non-empty title](https://act-rules.github.io/rules/2779a5)
+- [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/)
 
 ### Bibliography
 

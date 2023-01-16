@@ -70,7 +70,7 @@ The HTML `area` element is both a link and non-text content. When this rule fail
 
 ### Related rules
 
-- [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+- [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/proposed/)
 
 ### Bibliography
 

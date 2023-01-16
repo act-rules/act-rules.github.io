@@ -56,7 +56,7 @@ For value type `URI`, this rule does not require that the destination URI exists
 
 ### Related rules
 
-- [ARIA state or property is permitted](https://act-rules.github.io/rules/5c01ea)
+- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/proposed/)
 
 ### Bibliography
 

@@ -60,7 +60,7 @@ This `div` element with a role of `dialog` has an `aria-modal` attribute which i
 
 #### Passed Example 3
 
-This `div` element with a role of `textbox` has multiple `aria-*` attributes which are defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `textbox` has multiple `aria-` attributes which are defined in [WAI-ARIA Specifications][].
 
 ```html
 <div
@@ -74,7 +74,7 @@ This `div` element with a role of `textbox` has multiple `aria-*` attributes whi
 
 #### Passed Example 4
 
-This `input` element with a role of `spinbutton` has multiple `aria-*` attributes specified which are all defined in [WAI-ARIA Specifications][].
+This `input` element with a role of `spinbutton` has multiple `aria-` attributes specified which are all defined in [WAI-ARIA Specifications][].
 
 ```html
 <label for="spinbutton">Enter a number between 0 and 100:</label>
@@ -93,17 +93,15 @@ This `input` element with a role of `spinbutton` has multiple `aria-*` attribute
 
 #### Failed Example 1
 
-This `li` element with a role of `menuitemcheckbox` has an `aria-*` attribute which is not defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `checkbox` has an `aria-not-checked` attribute which is not defined in [WAI-ARIA Specifications][].
 
 ```html
-<ul>
-	<li role="menuitemcheckbox" aria-not-checked="true">List Item</li>
-</ul>
+<div role="checkbox" aria-not-checked="true">All conditions are met</div>
 ```
 
 #### Failed Example 2
 
-This `div` element with a role of `searchbox` has an `aria-*` attribute (`aria-labelled`) which is not defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `searchbox` has an `aria-` attribute (`aria-labelled`) which is not defined in [WAI-ARIA Specifications][].
 
 ```html
 <span id="label">Birthday:</span>
@@ -116,7 +114,7 @@ This `div` element with a role of `searchbox` has an `aria-*` attribute (`aria-l
 
 #### Inapplicable Example 1
 
-This `canvas` element does not have an `aria-*` attribute specified.
+This `canvas` element does not have an `aria-` attribute specified.
 
 ```html
 <canvas> </canvas>

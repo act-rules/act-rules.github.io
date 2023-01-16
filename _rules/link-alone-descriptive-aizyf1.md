@@ -46,7 +46,7 @@ Each test target has an [accessible name][] which describes its purpose.
 
 ### Related rules
 
-- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
+- [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
 
 ### Bibliography
 

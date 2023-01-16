@@ -66,7 +66,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ### Related rules
 
-- [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+- [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/proposed/)
 
 ### Bibliography
 

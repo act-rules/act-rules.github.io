@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that the highest possible contrast of every text character with its background meets the enhanced contrast requirement.
 accessibility_requirements:
-  wcag20:1.4.6: # Contrast (Enhanced)
+  wcag20:1.4.6: # Contrast (Enhanced) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -20,6 +20,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.3: # Contrast (Minimum) (A)
+    secondary: true
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -65,6 +67,8 @@ Passing this rule does not mean that the text has sufficient color contrast. If 
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
+This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc143]. Because this rule is stricter, text that passes this rule will likely satisfy 1.4.3 Contrast (Minimum).
+
 ### Bibliography
 
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
@@ -103,13 +107,13 @@ This white text has a contrast ratio between 18:1 and 7:1 on the background imag
 
 ```html
 <style>
-p {
-	color: #FFF;
-	height: 50px;
-	padding-top: 15px;
-	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
-	text-shadow: 0px 0px 2px black;
-}
+	p {
+		color: #fff;
+		height: 50px;
+		padding-top: 15px;
+		background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+		text-shadow: 0px 0px 2px black;
+	}
 </style>
 <p>Black hole sun</p>
 ```
@@ -177,7 +181,7 @@ light gray background with a contrast ratio of 18.26:1
 #### Passed Example 10
 
 This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The text has the default browser text color on the default browser background color. By default, this is 
+The text has the default browser text color on the default browser background color. By default, this is
 black text on a white background with a contrast ratio of 21:1
 
 ```html
@@ -459,3 +463,4 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element
+[sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum

@@ -143,7 +143,7 @@ The `aria-controls` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 9
 
-The `aria-label` [property][] is [global][].. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
+The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
@@ -153,7 +153,7 @@ The `aria-label` [property][] is [global][].. It is allowed on any [semantic rol
 
 #### Passed Example 10
 
-This `button` element has an [explicit role][] of `none`. However because it is [focusable][] (by default), it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
+This `button` element has an [explicit role][] of `none`. However, because it is [focusable][] (by default), it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
 
 ```html
 <button role="none" aria-pressed="false">ACT rules are cool!</button>
@@ -171,7 +171,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] may not be used on a [semantic][ssemantic role]]  `button`.
+The `aria-sort` [property][] may not be used on a [semantic][semantic role]]  `button`.
 
 ```html
 <button aria-sort="">Sort by year</button>

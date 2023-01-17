@@ -101,7 +101,7 @@ This `div` element with a role of `checkbox` has an `aria-not-checked` attribute
 
 #### Failed Example 2
 
-This `div` element with a role of `searchbox` has an `aria-` attribute (`aria-labelled`) which is not defined in [WAI-ARIA Specifications][].
+This `div` element with a role of `searchbox` has an `aria-labelled` attribute (instead of `aria-labelledby`) which is not defined in [WAI-ARIA Specifications][].
 
 ```html
 <span id="label">Birthday:</span>

@@ -56,7 +56,7 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
 
-This rule only applies to elements who scroll content in the same document. Elements such as iframes that embed other documents may also be scrollable, but for them it is the embedded document that scrolls, not the content in the same document. Such scenarios are tested separately with rules such as [Iframe with negative tabindex has no interactive elements](https://act-rules.github.io/rules/akn7bn).
+This rule only applies to elements who scroll content in the same document. Elements such as iframes that embed other documents may also be scrollable, but for them it is the embedded document that scrolls, not the content in the same document. Such scenarios are tested separately with rules such as [Iframe with negative tabindex has no interactive elements](https://www.w3.org/WAI/standards-guidelines/act/rules/akn7bn/proposed/).
 
 ### Bibliography
 

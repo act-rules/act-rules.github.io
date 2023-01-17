@@ -64,7 +64,7 @@ Contrarily to `img` elements, an empty `alt` attribute does not make image butto
 
 ### Related rules
 
-- [Button has non-empty accessible name](https://act-rules.github.io/rules/97a4e1)
+- [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/)
 
 ### Bibliography
 

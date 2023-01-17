@@ -224,8 +224,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;">
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="https://act-rules.github.io/">Contact Us</a>
@@ -244,8 +244,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;">
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact Us</a>
@@ -264,8 +264,8 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/w3c-logo.png" alt="Chat" style="width:50%;">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;">
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<span
@@ -285,18 +285,18 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 
 These two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
+**I still have to update the svg to ensure that `<text>` is visible**.
+
 ```html
 <html lang="en">
 	<p>
-		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<a href="https://act-rules.github.io/" aria-label="ACT rules">
-				<circle cx="50" cy="40" r="35" />
+		<svg enable-background="new 0 0 264 120" viewBox="0 0 264 120" xmlns="http://www.w3.org/2000/svg">
+			<text>Contact us</text>
+			<a href="https://act-rules.github.io/" aria-label="Contact Us">
+				<path d="m212.0806 68.0717c-10.3917 10.3852-22.4311 20.3239-27.1905 15.5646-6.8075-6.8075-11.0088-12.7418-26.0285-.6696-15.0132 12.0657-3.4792 20.1139 3.1182 26.7047 7.6149 7.6149 36.0001.407 64.0571-27.6434 28.0504-28.057 35.2386-56.4422 27.6172-64.0571-6.5974-6.604-14.6062-18.1314-26.6719-3.1182-12.0723 15.0132-6.1444 19.2145.6761 26.0285 4.7397 4.7593-5.1925 16.7988-15.5777 27.1905z"/>
 			</a>
-
-			<a href="https://www.w3.org/community/act-r/">
-				<text x="50" y="90" text-anchor="middle">
-					ACT rules
-				</text>
+			<a href="https://www.w3.org/community/act-r/" aria-label="Contact Us">
+				<path d="m105 7.5h-90c-8.2576 0-15 6.7497-15 15v52.5c0 8.2498 6.7424 15 15 15h30l30 22.5v-22.5h30c8.2498 0 15-6.7502 15-15v-52.5c0-8.2503-6.7502-15-15-15zm-80.7903 52.5c-6.2132 0-11.255-5.0372-11.255-11.25 0-6.2132 5.0418-11.25 11.255-11.25 6.2128 0 11.245 5.0418 11.245 11.25 0 6.2077-5.0322 11.25-11.245 11.25zm35.7953 0c-6.2128 0-11.255-5.0372-11.255-11.25 0-6.2132 5.0423-11.25 11.255-11.25 6.2132 0 11.245 5.0368 11.245 11.25 0 6.2128-5.0317 11.25-11.245 11.25zm35.7958 0c-6.2132 0-11.2555-5.0372-11.2555-11.25 0-6.2132 5.0423-11.25 11.2555-11.25 6.2128 0 11.2445 5.0368 11.2445 11.25 0 6.2128-5.0318 11.25-11.2445 11.25z"/>
 			</a>
 		</svg>
 	</p>
@@ -312,8 +312,8 @@ These two HTML `a` elements with the same [accessible name][] and [context][prog
 	<p>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;">
+			<img src="/test-assets/shared/phone.jpg" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact Us</a>

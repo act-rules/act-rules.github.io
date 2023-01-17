@@ -43,7 +43,7 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 - the elements are [included in the accessibility tree][included in the accessibility tree]; and
 - the elements have [matching][] [accessible names][accessible name] that are not empty (`""`); and
 - the elements have the same [programmatically determined link context][]; and
-- the purpose of the elements is not [ambiguous to users in general][]. 
+- the purpose of the elements is not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). 
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].
 
@@ -54,7 +54,7 @@ When followed, the links in each set of target elements resolve to the [same res
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 
 ## Expectation 2
-Elements that are [inheriting semantic][] `link` nodes within each test target are distinguishable each other by some user. This means that this rule applies to links with identical accessible names and context that are not [ambiguous to users in general][], which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
+Elements that are [inheriting semantic][] `link` nodes within each test target are distinguishable each other by some user. This means that this rule applies to links with identical accessible names and context that are not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general), which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
 When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource).
 
@@ -79,6 +79,7 @@ This rule specifically targets links within the exact same context. Links with i
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
+- [Ambisuous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general)
 
 ## Test Cases
 

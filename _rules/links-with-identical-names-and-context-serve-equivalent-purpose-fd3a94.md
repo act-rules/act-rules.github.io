@@ -55,7 +55,7 @@ When followed, the links in each set of target elements resolve to the [same res
 ## Assumptions
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] and [context][programmatically determined link context] would not be ambiguous to users in general, which is the exception mentioned in [Success Criterion 2.4.4 Link Purpose (In Context)][sc244]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
-- This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
+- This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not accurately describe its purpose.
 - This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name and context but resolve to different resources without failing [Success Criterion 2.4.4 Link Purpose (In Context)][sc244] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Accessibility Support
@@ -217,15 +217,21 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 
 #### Failed Example 1
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context] but go to different resources.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They are visually distinguishable thanks to the relationships conveyed through CSS, but go to different resources.
 
 ```html
 <html lang="en">
-	<p>
-		We are on social media:
-		<a href="https://act-rules.github.io/">ACT rules</a>
-		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
-	</p>
+	<div>
+		<span style="text-align:center;">Contact us</span>
+		<span style="display:flex; justify-content:space-around;">
+			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+		</span>
+		<span style="display:flex; justify-content:space-around;">
+			<a href="https://act-rules.github.io/">Contact Us</a>
+			<a href="https://www.w3.org/community/act-r/">Contact Us</a>
+		</span>
+	</div>
 </html>
 ```
 
@@ -236,12 +242,15 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<div>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html"
-			>Contact us</a
-		>) and get in touch (
-		<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html"
-			>Contact us</a
-		>)
+		<span style="text-align:center;">Contact us</span>
+		<span style="display:flex; justify-content:space-around;">
+			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+		</span>
+		<span style="display:flex; justify-content:space-around;">
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact Us</a>
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact Us</a>
+		</span>
 	</div>
 </html>
 ```
@@ -252,19 +261,23 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 
 ```html
 <html lang="en">
-	<p>
-		Learn more (<span
+	<div>
+		<span style="text-align:center;">Contact us</span>
+		<span style="display:flex; justify-content:space-around;">
+			<img src="/test-assets/shared/w3c-logo.png" alt="Chat" style="width:50%;">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+		</span>
+		<span style="display:flex; justify-content:space-around;">
+			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'"
-			>Contact us</span
-		>) and get in touch (<span
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'">Contact Us</a>
+			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'"
-			>Contact us</span
-		>)
-	</p>
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'">Contact Us</a>
+		</span>
+	</div>
 </html>
 ```
 
@@ -297,12 +310,15 @@ These two HTML `a` elements with the same [accessible name][] and [context][prog
 ```html
 <html lang="en">
 	<p>
-		Learn more (<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html"
-			>Contact us</a
-		>) and get in touch (<a
-			href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html"
-			>Contact us</a
-		>)
+		<span style="text-align:center;">Contact us</span>
+		<span style="display:flex; justify-content:space-around;">
+			<img src="/test-assets/shared/w3c-logo.png" alt="Online" style="width:50%;">
+			<img src="/test-assets/shared/fireworks.jpg" alt="Phone" style="width:50%;">
+		</span>
+		<span style="display:flex; justify-content:space-around;">
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact Us</a>
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/redirect1.html">Contact Us</a>
+		</span>
 	</p>
 </html>
 ```

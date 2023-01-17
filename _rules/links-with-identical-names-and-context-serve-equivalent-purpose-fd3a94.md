@@ -56,10 +56,6 @@ When followed, the links in each set of target elements resolve to the [same res
 ## Expectation 2
 Elements that are [inheriting semantic][] `link` nodes within each test target are distinguishable each other by some user. This means that this rule applies to links with identical accessible names and context that are not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general), which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
-When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource).
-
-**Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
-
 ## Assumptions
 
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not accurately describe its purpose.

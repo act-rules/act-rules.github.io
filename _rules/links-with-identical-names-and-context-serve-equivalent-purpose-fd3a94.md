@@ -221,6 +221,20 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 ```html
 <html lang="en">
+	<p>
+		<h2>Contact us:</h2>
+		<a href="https://act-rules.github.io/" style="display:inline-block; background-image: url(images/chat.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px;">Contact Us</a>
+		<a href="https://www.w3.org/community/act-r/" style="display:inline-block; background-image: url(images/phone.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px; margin-left:40px;">Contact Us</a>
+	</p>
+</html>
+```
+
+#### Failed Example 2
+
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources.
+
+```html
+<html lang="en">
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
@@ -235,7 +249,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content.
 
@@ -255,7 +269,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content.
 
@@ -281,7 +295,7 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 These two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
@@ -290,7 +304,7 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 ```html
 <html lang="en">
 	<p>
-		<svg enable-background="new 0 0 264 120" viewBox="0 0 264 120" xmlns="http://www.w3.org/2000/svg">
+		<svg enable-background="new 0 0 264 120" viewBox="0 -20 264 140" xmlns="http://www.w3.org/2000/svg">
 			<text>Contact us</text>
 			<a href="https://act-rules.github.io/" aria-label="Contact Us">
 				<path d="m212.0806 68.0717c-10.3917 10.3852-22.4311 20.3239-27.1905 15.5646-6.8075-6.8075-11.0088-12.7418-26.0285-.6696-15.0132 12.0657-3.4792 20.1139 3.1182 26.7047 7.6149 7.6149 36.0001.407 64.0571-27.6434 28.0504-28.057 35.2386-56.4422 27.6172-64.0571-6.5974-6.604-14.6062-18.1314-26.6719-3.1182-12.0723 15.0132-6.1444 19.2145.6761 26.0285 4.7397 4.7593-5.1925 16.7988-15.5777 27.1905z"/>
@@ -303,7 +317,7 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 These two HTML `a` elements with the same [accessible name][] and [context][programmatically determined link context] resolve to the [same resource][] after redirect, but the redirect is not instant.
 

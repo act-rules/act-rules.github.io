@@ -299,8 +299,6 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 
 These two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
-**I still have to update the svg to ensure that `<text>` is visible**.
-
 ```html
 <html lang="en">
 	<p>

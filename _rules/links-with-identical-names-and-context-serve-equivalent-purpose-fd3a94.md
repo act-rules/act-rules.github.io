@@ -432,6 +432,20 @@ These two HTML `a` elements have the same [accessible name][] but different [pro
 
 #### Inapplicable Example 7
 
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but the second one is not [included in the accessibility tree][included in the accessibility tree].
+
+```html
+<html lang="en">
+	<p>
+		We are on social media:
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a aria-hidden="true" href="https://www.w3.org/community/act-r/">ACT rules</a>
+	</p>
+</html>
+```
+
+#### Inapplicable Example 8
+
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but are ambiguous to users in general.
 
 ```html

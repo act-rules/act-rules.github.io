@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the root element of the [web page](https://act-rules.github.io/glossary/#web-page-html), if it is an `html` element.
+This rule applies to the root element of the [web page](#web-page-html), if it is an `html` element.
 
 ## Expectation 1
 

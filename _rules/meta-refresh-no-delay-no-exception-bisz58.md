@@ -25,6 +25,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.2.1: # Timing Adjustable (A)
+    secondary: True
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -60,6 +62,8 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 ## Background
 
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+
+This rule is closely related to [success criterion 2.2.1 Time Adjustable][sc221]. Because this rule is stricter, `meta` elements that pass this rule satisfy 2.1.1 Time Adjustable.
 
 ### Bibliography
 
@@ -214,3 +218,4 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'
+[sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable

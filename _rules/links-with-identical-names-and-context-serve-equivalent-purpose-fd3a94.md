@@ -414,6 +414,20 @@ These two HTML `a` elements have the same [accessible name][] but different [pro
 <div><a href="https://www.w3.org/International/">Read more</a> about the W3C internationalization</div>
 ```
 
+#### Inapplicable Example 7
+
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but are ambiguous to users in general.
+
+```html
+<html lang="en">
+	<p>
+		We are on social media:
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
+	</p>
+</html>
+```
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [explicit role]: #explicit-role 'Definition of explicit role'

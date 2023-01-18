@@ -274,7 +274,6 @@ the `aria-hidden` attribute is not on an [HTML or SVG element][].
 <math aria-hidden="false"></math>
 ```
 
-[wai-aria specifications]: #wai-aria-specifications 'List of WAI-ARIA Specifications'
 [html or svg element]: #namespaced-element
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

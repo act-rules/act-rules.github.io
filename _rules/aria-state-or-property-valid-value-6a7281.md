@@ -34,7 +34,7 @@ This rule applies to any [WAI-ARIA 1.2 state or property](https://www.w3.org/TR/
 
 Each test target has a valid value according to its [WAI-ARIA 1.2 value type](https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value).
 
-For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or in the same [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element that specifies the target attribute.
+For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or in the same [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element that specifies the target attribute. Exception: if the element specifying the target has a role of `combobox` and an `aria-expanded` [attribute value][] of `false`, the `aria-controls` property is not consider as required (and its tokens do not need to match an existing `id`).
 
 For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
 
@@ -51,6 +51,12 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property which should exist is missing or has an unexpected value. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement. For example, the value of the `aria-errormessage` attribute on an `input` does not need to reference an `id` that exists within the same document, because an [HTML element](https://html.spec.whatwg.org/#htmlelement) with such and `id` may be created in response to an [event](https://dom.spec.whatwg.org/#event) that may or may not happen.
+
+While `aria-controls` is required on `combobox` in ARIA 1.2, the [WAI-ARIA authoring practice for combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#wai-aria-roles-states-and-properties-6) states (second bullet):
+
+> Note that `aria-controls` only needs to be set when the popup is visible.
+
+Additionally, the [ARIA 1.3 draft](https://w3c.github.io/aria/#combobox) also removed the need for `aria-controls` on closed `combobox`. Therefore, this rule considers that `aria-controls` is only required on open `combobox`.
 
 For value type `URI`, this rule does not require that the destination URI exists.
 

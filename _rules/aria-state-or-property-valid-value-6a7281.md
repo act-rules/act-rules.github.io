@@ -36,8 +36,6 @@ Each test target has a valid value according to its [WAI-ARIA 1.2 value type](ht
 
 For value types `ID Reference` and `ID Reference List` for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) at least one of the elements with the given ids exists in the same [document tree](https://dom.spec.whatwg.org/#document-trees) or in the same [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element that specifies the target attribute.
 
-For value type `URI` the value matches the [generic URI syntax](https://www.ietf.org/rfc/rfc3986.txt).
-
 ## Assumptions
 
 This rule catches values that are undefined in [WAI-ARIA Specifications][], and where the resulting behavior in user agents are also undefined in WAI-ARIA. This might lead to accessibility issues, if the intention was to use behavior defined in [WAI-ARIA Specifications][]. When values are used that do not have a defined behavior in [WAI-ARIA Specifications][], the HTML/SVG specification decides what default values should be used, since it is defined here what should happen when an invalid value is used for an attribute. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
@@ -51,8 +49,6 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property which should exist is missing or has an unexpected value. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 Only for [WAI-ARIA required properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given ids actually exists. For non-required properties, this is not a requirement. For example, the value of the `aria-errormessage` attribute on an `input` does not need to reference an `id` that exists within the same document, because an [HTML element](https://html.spec.whatwg.org/#htmlelement) with such and `id` may be created in response to an [event](https://dom.spec.whatwg.org/#event) that may or may not happen.
-
-For value type `URI`, this rule does not require that the destination URI exists.
 
 ### Related rules
 

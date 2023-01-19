@@ -119,7 +119,7 @@ The `aria-owns` [attribute value][] is a valid `ID Reference List` [value type][
 
 #### Passed Example 7
 
-The `aria-rowindex` [attribute value][] is a valid `integer` [value type][].
+The `aria-rowindex` [attribute value][] of 2 is a valid `integer` [value type][].
 
 ```html
 <div role="gridcell" aria-rowindex="2">Fred</div>
@@ -209,7 +209,7 @@ The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` [attribute values][attr
 
 #### Failed Example 6
 
-The `aria-live` [attribute value][] of `page` is not a valid `token`, because `page` is a token for `aria-live`.
+The `aria-live` [attribute value][] of `page` is not a valid `token`, because `page` is not a token for `aria-live`.
 
 ```html
 <div role="main" aria-live="page"></div>
@@ -217,7 +217,7 @@ The `aria-live` [attribute value][] of `page` is not a valid `token`, because `p
 
 #### Failed Example 7
 
-The `aria-relevant` [attribute value][] has the `text` and `always` tokens. The `always` token is not valid for the `aria-relevant` `token list`.
+The `aria-relevant` [attribute value][] has the two tokens `text` and `always`. The `always` token is not valid for the `aria-relevant` `token list`. In order to be a valid value, all tokens must be valid.
 
 ```html
 <div role="alert" aria-relevant="text always"></div>

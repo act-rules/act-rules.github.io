@@ -34,7 +34,10 @@ This rule applies to any [HTML or SVG element][] that is [included in the access
 
 ## Expectation
 
-For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
+For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless one of the following is true:
+
+- the state or property has a default value listed under [WAI-ARIA implicit value for role][]; or
+- the test target has a role of `combobox` and an `aria-expanded` state whose value is `false`, and the property is `aria-controls` (that is, `aria-controls` is not considered as required on non-expanded `combobox`, see [Background](#background) for rationales).
 
 ## Assumptions
 
@@ -53,6 +56,12 @@ This rule relies on browsers and assistive technologies to support leaving out [
 Omitting required ARIA properties is often the result of a developer error. When required properties are missing some browsers and assistive technologies will guess the property, or leave the element inaccessible. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
+
+While `aria-controls` is required on `combobox` in ARIA 1.2, the [WAI-ARIA authoring practice for combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#wai-aria-roles-states-and-properties-6) states (second bullet):
+
+> Note that `aria-controls` only needs to be set when the popup is visible.
+
+Additionally, the [ARIA 1.3 draft](https://w3c.github.io/aria/#combobox) also removed the need for `aria-controls` on closed `combobox`. Therefore, this rule considers that `aria-controls` is only required on open `combobox`.
 
 ### Bibliography
 

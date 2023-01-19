@@ -43,7 +43,7 @@ For each test target, the [computed][] value of its `letter-spacing` property is
 
 - This rule assumes that when inter-letters space is changed because of justification, the `letter-spacing` property is not changed. Therefore, whether a text is justified or not doesn't change the result of this rule. Note that justifying text is a failure of [Success Criterion 1.4.8 Visual Presentation][sc148].
 
-- The target text node expresses something in a human language written in a script that that uses the `letter-spacing` property.
+- The target text node expresses something in a human language written in a script that uses the `letter-spacing` property.
 
 ## Accessibility Support
 

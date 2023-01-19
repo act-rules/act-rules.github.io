@@ -41,7 +41,7 @@ For each test target, the [used][] value of its `line-height` property is at lea
 
 - No other style attributes are used to increase or decrease the distance between lines of text. For example, style attributes such as `position`, `padding`, and `margin` could be used to increase the distance between lines of text to meet [Success Criterion 1.4.12 Text Spacing][sc1412]. Oppositely, those style attributes could also be used to reduce the distance between lines of text. Thus, it is possible to pass this rule, but still fail [Success Criterion 1.4.12 Text Spacing][sc1412] due to other styling choices.
 
-- The text in the element express something in a human language written in a script that that uses the `line-height` property.
+- The text in the element express something in a human language written in a script that uses the `line-height` property.
 
 ## Accessibility Support
 

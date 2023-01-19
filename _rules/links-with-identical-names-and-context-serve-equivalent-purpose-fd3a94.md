@@ -329,7 +329,7 @@ These two HTML `a` elements with the same [accessible name][] and [context][prog
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
 			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;">
-			<img src="/test-assets/shared/phone.jpg" alt="Phone" style="width:50%;">
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact Us</a>

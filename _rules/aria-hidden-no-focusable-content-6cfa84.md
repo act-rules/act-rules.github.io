@@ -54,7 +54,7 @@ The 1 second time span introduced in the exception of the definition of [focusab
 
 ### Related rules
 
-- [Element with presentational children has no focusable content](https://act-rules.github.io/rules/307n5z)
+- [Element with presentational children has no focusable content](https://www.w3.org/WAI/standards-guidelines/act/rules/307n5z/proposed/)
 
 ### Bibliography
 

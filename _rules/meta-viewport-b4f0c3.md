@@ -252,7 +252,7 @@ This viewport `meta` element prevents users to scale content up to 200% because 
 </html>
 ```
 
-#### Failed Example 7
+#### Failed Example 6
 
 This viewport `meta` element prevents users to scale content up to 200% because it has `maximum-scale` set to `yes` which translates to 1.0.
 

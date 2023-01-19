@@ -53,9 +53,6 @@ When followed, the links in each set of target elements resolve to the [same res
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 
-## Expectation 2
-Elements that are [inheriting semantic][] `link` nodes within each test target are distinguishable each other by some user. This means that this rule applies to links with identical accessible names and context that are not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general), which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
-
 ## Assumptions
 
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not accurately describe its purpose.
@@ -70,6 +67,8 @@ There are no accessibility support issues known.
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
 This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
+
+Elements that are [inheriting semantic][] `link` nodes within each test target are distinguishable each other by some user. This means that this rule applies to links with identical accessible names and context that are not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general), which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
 ### Bibliography
 
@@ -227,8 +226,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		<h2>Contact us:</h2>
-		<a href="https://act-rules.github.io/" style="display:inline-block; background-image: url(images/chat.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px;">Contact Us</a>
-		<a href="https://www.w3.org/community/act-r/" style="display:inline-block; background-image: url(images/phone.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px; margin-left:40px;">Contact Us</a>
+		<a href="https://act-rules.github.io/" style="display:inline-block; background-image: url(/test-assets/shared/chat.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px;">Contact Us</a>
+		<a href="https://www.w3.org/community/act-r/" style="display:inline-block; background-image: url(/test-assets/shared/phone.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px; margin-left:40px;">Contact Us</a>
 	</p>
 </html>
 ```

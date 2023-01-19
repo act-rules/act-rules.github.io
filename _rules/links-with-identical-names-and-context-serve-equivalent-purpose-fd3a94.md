@@ -226,8 +226,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 <html lang="en">
 	<p>
 		<h2>Contact us:</h2>
-		<a href="https://act-rules.github.io/" style="display:inline-block; background-image: url(/test-assets/shared/chat.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px;">Contact Us</a>
-		<a href="https://www.w3.org/community/act-r/" style="display:inline-block; background-image: url(/test-assets/shared/phone.png); background-position: 0; background-repeat: no-repeat; background-size: 40px; padding: 20px 0 20px 50px; margin-left:40px;">Contact Us</a>
+		<a href="https://act-rules.github.io/" style="display:inline-block; background: url(/test-assets/shared/chat.png) 0 / 40px no-repeat; padding: 20px 0 20px 50px;">Contact Us</a>
+		<a href="https://www.w3.org/community/act-r/" style="display:inline-block; background: url(/test-assets/shared/phone.png) 0 / 40px no-repeat; padding: 20px 0 20px 50px; margin-left: 40px;">Contact Us</a>
 	</p>
 </html>
 ```

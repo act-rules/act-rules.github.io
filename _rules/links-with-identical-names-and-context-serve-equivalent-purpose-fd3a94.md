@@ -47,7 +47,7 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].
 
-## Expectation 1
+## Expectation
 
 When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource).
 

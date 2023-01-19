@@ -168,7 +168,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">

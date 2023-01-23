@@ -33,13 +33,21 @@ This rule applies to each `content` attribute on a `meta` element with a `name` 
 
 For each test target, the [attribute value][] does not have a `user-scalable` property with a value of `fixed`.
 
-The [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by parsing the specified value, then applying the [translations into `@viewport` descriptors][descriptor translation], notably [the translation for `user-scalable`](https://www.w3.org/TR/css-device-adapt-1/#user-scalable), and using the value obtained for `user-zoom`.
+For the purpose of this rule, the [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by:
+
+1. parsing the specified value for each key-value pair;
+2. applying the [translations into `@viewport` descriptors][descriptor translation];
+3. using the value of the corresponding `@viewport` descriptor, notably using the value obtained for the `user-zoom` descriptor from [the translation for `user-scalable`](https://www.w3.org/TR/css-device-adapt-1/#user-scalable).
 
 ## Expectation 2
 
 For each test target, the [attribute value][] does not have a `maximum-scale` property with a value less than 2.
 
-The [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by parsing the specified value, then applying the [translations into `@viewport` descriptors][descriptor translation], notably [the translation for `maximum-scale`](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale) (including dropping the key-value pair completely for invalid values), and using the value obtained for `max-zoom`.
+For the purpose of this rule, the [attribute value][] of the `content` attribute is a list of key-value pairs, obtained by:
+
+ 1. parsing the specified value for each key-value pair;
+ 2. applying the [translations into `@viewport` descriptors][descriptor translation];
+ 3. using the value of the corresponding `@viewport` descriptor  (including dropping the key-value pair completely for invalid values), notably using the value obtained for the `max-zoom` descriptor from [the translation for `maximum-scale`](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale).
 
 ## Assumptions
 

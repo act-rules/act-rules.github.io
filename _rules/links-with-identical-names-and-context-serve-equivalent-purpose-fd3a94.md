@@ -51,7 +51,7 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 For the links in each set of target elements, one of the following is true:
 
 - when followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource); or
-- the purpose of the links is not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). 
+- the purpose of the links is [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). 
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 

@@ -50,7 +50,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property which should exist is missing or has an unexpected value. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412]. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
 
-Only for [WAI-ARIA required properties](required) with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given IDs actually exists. For non-required properties, having the referenced element is optional. For example, `aria-errormessage` attribute on an `input` element may have a fixed value, but the element with the error message is only added to the page when an error actually occurred.
+Only for [WAI-ARIA required properties][] with value types `ID Reference` and `ID Reference List` is there a requirement that the elements with the given IDs actually exists. For non-required properties, having the referenced element is optional. For example, `aria-errormessage` attribute on an `input` element may have a fixed value, but the element with the error message is only added to the page when an error actually occurred.
 
 ### Related rules
 
@@ -301,7 +301,7 @@ the `aria-hidden` attribute is not on an [HTML or SVG element][].
 [html or svg element]: #namespaced-element
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value
-[required]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
+[wai-aria required properties]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
 [document tree]: https://dom.spec.whatwg.org/#document-trees
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-trees
 [value type]: https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value

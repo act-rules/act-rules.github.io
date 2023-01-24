@@ -149,7 +149,7 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 <label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 This `autocomplete` [attribute value][] only has the required token "current-password", followed by the optional "webauthn" token.
 

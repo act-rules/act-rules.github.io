@@ -151,7 +151,7 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 
 #### Passed Example 9
 
-This `autocomplete` [attribute value][] only has the required token "current-password", followed by the optional "webauthn" token.
+This `autocomplete` [attribute value][] has the required token "current-password", followed by the optional "webauthn" token.
 
 ```html
 <label>

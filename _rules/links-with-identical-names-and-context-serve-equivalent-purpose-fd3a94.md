@@ -42,14 +42,16 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 - the elements are in the same [web page (HTML)][]; and
 - the elements are [included in the accessibility tree][included in the accessibility tree]; and
 - the elements have [matching][] [accessible names][accessible name] that are not empty (`""`); and
-- the elements have the same [programmatically determined link context][]; and
-- the purpose of the elements is not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). 
+- the elements have the same [programmatically determined link context][].
 
 **Note:** The test target for this rule is the full set of link elements that share the same [matching][] [accessible name][] and [programmatically determined link context][].
 
 ## Expectation
 
-When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource).
+For the links in each set of target elements, one of the following is true:
+
+- when followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource); or
+- the purpose of the links is not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). 
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 
@@ -68,7 +70,7 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
 
-This rule applies to links with identical accessible names and context that are not [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general), which is the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
+Links that are [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general) are covered by the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
 ### Bibliography
 
@@ -212,6 +214,20 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 				<circle cx="50" cy="40" r="35" />
 			</a>
 		</svg>
+	</p>
+</html>
+```
+
+#### Passed Example 9
+
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but resolve to different resources. However, the purpose of these links is [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). Thus all readers are unsure about the destination and the person with a disability is not at any disadvantage.
+
+```html
+<html lang="en">
+	<p>
+		We are on social media:
+		<a href="https://act-rules.github.io/">ACT rules</a>
+		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 	</p>
 </html>
 ```
@@ -439,20 +455,6 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 		We are on social media:
 		<a href="https://act-rules.github.io/">ACT rules</a>
 		<a aria-hidden="true" href="https://www.w3.org/community/act-r/">ACT rules</a>
-	</p>
-</html>
-```
-
-#### Inapplicable Example 8
-
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but are ambiguous to users in general.
-
-```html
-<html lang="en">
-	<p>
-		We are on social media:
-		<a href="https://act-rules.github.io/">ACT rules</a>
-		<a href="https://www.w3.org/community/act-r/">ACT rules</a>
 	</p>
 </html>
 ```

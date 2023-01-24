@@ -34,7 +34,7 @@ This rule applies to any [WAI-ARIA state or property][] that has a non-empty (""
 
 Each test target has an [attribute value][] that is valid according to its [WAI-ARIA value type][value type], except if one of the following is true:
 
-- <dfn id="off6ek:id-reference">ID Reference</dfn>: For `ID Reference` value types an ID referenced elements is only required with [semantic][semantic role] `scrollbar` elements, and with [semantic][semantic role] `combobox` elements that have an `aria-expanded` [attribute value][] of `true`. The ID referenced element must exist in the same [document tree][] or [shadow tree][] as the test target's element.
+- <dfn id="off6ek:id-reference">ID Reference</dfn>: For `ID Reference` value types an ID referenced elements is only required for `aria-controls` with [semantic][semantic role] `scrollbar` elements, and with [semantic][semantic role] `combobox` elements that have an `aria-expanded` [attribute value][] of `true`. The ID referenced element must exist in the same [document tree][] or [shadow tree][] as the test target's element.
 
 - <dfn id="off6ek:id-reference-list">ID Reference List</dfn>: For `ID Reference List` value types, no ID referenced elements are required.
 
@@ -292,7 +292,7 @@ The `aria-checked` attribute does not have a value.
 
 #### Inapplicable Example 4
 
-the `aria-hidden` attribute is not on an [HTML or SVG element][].
+The `aria-hidden` attribute is not on an [HTML or SVG element][].
 
 ```xml
 <math aria-hidden="false"></math>

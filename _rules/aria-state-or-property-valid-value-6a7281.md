@@ -97,7 +97,7 @@ The `aria-expanded` [attribute value][] of `undefined` is allowed for the `true/
 The `aria-pressed` [attribute value][] of `mixed` is allowed for the `tristate` [value type][].
 
 ```html
-<div role="checkbox" aria-pressed="mixed">Partially checked checkbox</div>
+<div role="button" aria-pressed="mixed">Partially pressed button</div>
 ```
 
 #### Passed Example 5

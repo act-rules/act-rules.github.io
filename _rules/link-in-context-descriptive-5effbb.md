@@ -57,8 +57,8 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 ### Related rules
 
-- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
-- [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
+- [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
+- [Link is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/)
 
 ### Bibliography
 
@@ -213,8 +213,16 @@ The [programmatically determined link context][] (provided by the element refere
 ```html
 <h2 id="rule">Button has accessible name</h2>
 <ul>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#applicability" aria-describedby="rule">Applicability</a></li>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#expectation" aria-describedby="rule">Expectation</a></li>
+	<li>
+		<a href="https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/#applicability" aria-describedby="rule"
+			>Applicability</a
+		>
+	</li>
+	<li>
+		<a href="https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/#expectation" aria-describedby="rule"
+			>Expectation</a
+		>
+	</li>
 </ul>
 ```
 

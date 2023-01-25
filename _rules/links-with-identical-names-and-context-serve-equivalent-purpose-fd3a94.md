@@ -304,11 +304,11 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'">Contact Us</a>
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'">Contact Us</span>
 			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'">Contact Us</a>
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'">Contact Us</span>
 		</span>
 	</div>
 </html>

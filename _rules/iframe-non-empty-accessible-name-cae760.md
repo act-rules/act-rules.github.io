@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and that do not have an negative `tabindex` [attribute value][].
+This rule applies to `iframe` elements that are [included in the accessibility tree][] and that do not have a negative `tabindex` [attribute value][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -144,7 +144,7 @@ This `iframe` element has a negative `tabindex` [attribute value][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
-[attribute valiue]: #attribute-value 'Definition of Attribute value'
+[attribute value]: #attribute-value 'Definition of Attribute value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components

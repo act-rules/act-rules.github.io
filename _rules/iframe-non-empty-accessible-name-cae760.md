@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and that can be accessed by [sequential focus navigation][].
+This rule applies to `iframe` elements that are [included in the accessibility tree][] and that do not have an negative `tabindex` [attribute value][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -136,15 +136,16 @@ This `iframe` is not [included in the accessibility tree][] because of setting a
 
 #### Inapplicable Example 3
 
-This `iframe` element has a negative `tabindex` and therefore is not included in the [sequential focus navigation][].
+This `iframe` element has a negative `tabindex` [attribute value][].
 
 ```html
 <iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[accessible name and description computation]: https://www.w3.org/TR/accname
+[attribute valiue]: #attribute-value 'Definition of Attribute value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[whitespace]: #whitespace 'Definition of whitespace'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
-[accessible name and description computation]: https://www.w3.org/TR/accname
+[whitespace]: #whitespace 'Definition of whitespace'

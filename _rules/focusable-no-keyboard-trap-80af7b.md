@@ -41,16 +41,16 @@ This rule applies to any [HTML or SVG element][] that is [focusable][].
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is "passed":
 
-- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://act-rules.github.io/rules/a1b64e)
-- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://act-rules.github.io/rules/ebe86a)
+- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/a1b64e/proposed/)
+- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/ebe86a/proposed/)
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

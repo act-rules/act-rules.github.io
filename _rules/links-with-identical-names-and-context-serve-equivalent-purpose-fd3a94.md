@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -59,7 +60,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 

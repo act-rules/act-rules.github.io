@@ -54,7 +54,7 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
@@ -62,7 +62,7 @@ This rule checks that, if a `lang` attribute is used, its value is correct with 
 
 ### Related rules
 
-- [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
+- [_Element with `lang` Attribute Has Valid Language Tag_](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/)
 
 ### Bibliography
 

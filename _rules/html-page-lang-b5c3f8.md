@@ -51,8 +51,8 @@ There are no accessibility support issues known.
 
 ### Related rules
 
-- [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
-- [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/)
+- [HTML page language subtag matches default language](https://www.w3.org/WAI/standards-guidelines/act/rules/ucwvc8/proposed/)
 
 ### Bibliography
 

@@ -56,8 +56,8 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 
 ### Related rules
 
-- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
-- [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+- [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
+- [HTML page language subtag matches default language](https://www.w3.org/WAI/standards-guidelines/act/rules/ucwvc8/proposed/)
 
 ### Bibliography
 

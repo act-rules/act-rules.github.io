@@ -46,7 +46,7 @@ This rule considers an exception for "image buttons" (i.e., `input` elements wit
 
 ### Related rules
 
-- [Image button has non-empty accessible name](https://act-rules.github.io/rules/59796f)
+- [Image button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/59796f/)
 
 ### Bibliography
 

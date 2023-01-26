@@ -7,7 +7,7 @@ const pagesData = getMarkdownData(`./pages`, [
 /**
  * describe page helper
  * @param {String} groupName name of the `describe` block
- * @param {Function} runTests function callback of `describle` block, which executes per page
+ * @param {Function} runTests function callback of `describe` block, which executes per page
  */
 const describePage = (groupName, runTests) => {
 	const glossaryData = getMarkdownData(`./pages/glossary`)
@@ -19,7 +19,7 @@ const describePage = (groupName, runTests) => {
 		.reduce((flattened, element) => flattened.concat(element), [])
 
 	/**
-	 * Create arbitrary meta data that can be used in various tests
+	 * Create arbitrary metadata that can be used in various tests
 	 */
 	const metaData = { glossaryIds, glossaryKeys }
 

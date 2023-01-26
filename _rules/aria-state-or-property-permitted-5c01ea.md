@@ -43,7 +43,7 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 For each test target, one of the following is true:
 
 - **global**: the test target is a [global state or property][global]; or
-- **semantic Role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
+- **semantic role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
 ## Expectation 2
@@ -85,7 +85,7 @@ Assessing the value of the attribute is out of scope for this rule.
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] for a [semantic][semantic role] `button`, which is the [implicit role][] for `button` elements.
+The `aria-pressed` [state][] is [supported][] with `button`, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
@@ -93,7 +93,7 @@ The `aria-pressed` [state][] is [supported][] for a [semantic][semantic role] `b
 
 #### Passed Example 2
 
-The `aria-pressed` [state][] is [supported][] for the [semantic][semantic role] `button`, which is the [explicit role][] of this `div` element.
+The `aria-pressed` [state][] is [supported][] with `button`, which is the [explicit role][] of this `div` element.
 
 ```html
 <div role="button" aria-pressed="false">My button</div>
@@ -109,7 +109,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [property][] and thus [inherited][] for all [semantic role][].
+The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][].
 
 ```html
 <div role="button" aria-label="OK">✓</div>
@@ -149,7 +149,7 @@ The `aria-controls` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 9
 
-The `aria-label` [property][] is [global][] and thus [inherited][] for all [semantic role][], including the ones from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is also applicable to SVG elements.
+The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
@@ -159,7 +159,7 @@ The `aria-label` [property][] is [global][] and thus [inherited][] for all [sema
 
 #### Passed Example 10
 
-This `button` element has an [explicit role][] of `none`. However, it is [focusable][] (by default). Thus it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
+This `button` element has an [explicit role][] of `none`. However, because it is [focusable][] (by default), it has a [semantic role][] of `button` due to [Presentational Roles Conflict Resolution][]. The `aria-pressed` [state][] is [supported][] for the `button` role.
 
 ```html
 <button role="none" aria-pressed="false">ACT rules are cool!</button>
@@ -177,7 +177,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] is neither [inherited][], [supported][], nor [required][] for the [semantic][semantic role] `button`, which is the [implicit role][] for the `button` element.
+The `aria-sort` [property][] may not be used on a [semantic][semantic role]]  `button`.
 
 ```html
 <button aria-sort="">Sort by year</button>
@@ -185,7 +185,7 @@ The `aria-sort` [property][] is neither [inherited][], [supported][], nor [requi
 
 #### Failed Example 2
 
-The `aria-orientation` property may not be used on `audio` element, nor it can be used on `application` (the [semantic role][] for which [inherited][], [supported][], or [required][] [states][state] or [properties][property] are also applicable to `audio` element).
+The `aria-orientation` property may not be used on `audio` element, nor can it be used on `application` (the [semantic role][] for which [inherited][], [supported][], or [required][] [states][state] or [properties][property] are also applicable to `audio` element).
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>

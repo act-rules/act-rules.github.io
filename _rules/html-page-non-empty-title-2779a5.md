@@ -211,3 +211,4 @@ This `title` element is a child of an `svg` element.
 ```
 
 [html]: #namespaced-element
+[web page]: #web-page-html 'Definition of HTML web page'

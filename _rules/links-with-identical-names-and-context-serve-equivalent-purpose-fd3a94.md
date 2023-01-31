@@ -23,6 +23,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+    - Giacomo Petri
   previous_authors:
     - Anne Thyme Nørregaard
   funding:

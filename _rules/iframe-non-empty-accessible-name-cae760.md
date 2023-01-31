@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and that do not have a negative `tabindex` [attribute value][].
+This rule applies to `iframe` elements that are [included in the accessibility tree][] and do not have a negative `tabindex` [attribute value][].
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 

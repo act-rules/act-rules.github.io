@@ -96,7 +96,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="72001; https://w3.org" />
+	<meta http-equiv="refresh" content="30; https://w3.org" />
 </head>
 ```
 
@@ -104,11 +104,11 @@ The first valid `meta` element redirects immediately.
 
 #### Failed Example 1
 
-This `meta` element refreshes the page after 20 hours.
+This `meta` element refreshes the page after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="72001" />
+	<meta http-equiv="refresh" content="30" />
 </head>
 ```
 

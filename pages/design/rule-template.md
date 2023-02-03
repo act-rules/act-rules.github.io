@@ -21,7 +21,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-  aria11:anchor-name: # <Heading in WAI-ARIA>
+  aria12:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false
     failed: not satisfied

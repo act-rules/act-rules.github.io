@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that the highest possible contrast of every text character with its background meets the enhanced contrast requirement.
 accessibility_requirements:
-  wcag20:1.4.6: # Contrast (Enhanced)
+  wcag20:1.4.6: # Contrast (Enhanced) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -20,6 +20,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.3: # Contrast (Minimum) (A)
+    secondary: true
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -65,6 +67,8 @@ Passing this rule does not mean that the text has sufficient color contrast. If 
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
+This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc143]. Because this rule is stricter, text that passes this rule will likely satisfy 1.4.3 Contrast (Minimum).
+
 ### Bibliography
 
 - [Understanding Success Criterion 1.4.6: Contrast (Enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html)
@@ -103,13 +107,13 @@ This white text has a contrast ratio between 18:1 and 7:1 on the background imag
 
 ```html
 <style>
-p {
-	color: #FFF;
-	height: 50px;
-	padding-top: 15px;
-	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
-	text-shadow: 0px 0px 2px black;
-}
+	p {
+		color: #fff;
+		height: 50px;
+		padding-top: 15px;
+		background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+		text-shadow: 0px 0px 2px black;
+	}
 </style>
 <p>Black hole sun</p>
 ```
@@ -177,7 +181,7 @@ light gray background with a contrast ratio of 18.26:1
 #### Passed Example 10
 
 This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The text has the default browser text color on the default browser background color. By default, this is 
+The text has the default browser text color on the default browser background color. By default, this is
 black text on a white background with a contrast ratio of 21:1
 
 ```html
@@ -218,6 +222,16 @@ This 18pt large black text has a contrast ratio of 3.6:1 on the gray background.
 
 #### Failed Example 4
 
+This light gray text has a contrast ratio of 2.3:1 on the white background.
+
+```html
+<p style="color: #AAA; background: white;">
+	Some text in English
+</p>
+```
+
+#### Failed Example 5
+
 This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
@@ -226,7 +240,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 </p>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the background image.
 
@@ -238,7 +252,7 @@ This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the backgro
 </p>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the white background.
 
@@ -248,7 +262,7 @@ This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the whit
 </p>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 This black text with 60% opacity has a contrast ratio of 5.7:1 on the white background.
 
@@ -260,7 +274,7 @@ This black text with 60% opacity has a contrast ratio of 5.7:1 on the white back
 </div>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 This gray text has a contrast ratio of 5.7:1 on the white background in a shadow DOM tree.
 
@@ -272,7 +286,7 @@ This gray text has a contrast ratio of 5.7:1 on the white background in a shadow
 </script>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on the black and white background. The light gray text is compared to the white section of the background and the dark gray text is compared to the black section of the background.
 
@@ -290,7 +304,7 @@ This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on 
 </span>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
 
@@ -303,7 +317,7 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 </p>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 This text is part of a widget because it is a child of a `button` element. The button text has a contrast ratio of 6.4:1.
 
@@ -311,7 +325,7 @@ This text is part of a widget because it is a child of a `button` element. The b
 <button style="color: #555; background: #EEE;">My button!</button>
 ```
 
-#### Failed Example 12
+#### Failed Example 13
 
 This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
 The button text has a contrast
@@ -459,3 +473,4 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element
+[sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum

@@ -25,6 +25,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.2.1: # Timing Adjustable (A)
+    secondary: True
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -61,6 +63,8 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
 
+This rule is closely related to [success criterion 2.2.1 Time Adjustable][sc221]. Because this rule is stricter, `meta` elements that pass this rule satisfy 2.1.1 Time Adjustable.
+
 ### Bibliography
 
 - [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
@@ -92,7 +96,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="72001; https://w3.org" />
+	<meta http-equiv="refresh" content="30; https://w3.org" />
 </head>
 ```
 
@@ -100,11 +104,11 @@ The first valid `meta` element redirects immediately.
 
 #### Failed Example 1
 
-This `meta` element refreshes the page after 20 hours.
+This `meta` element refreshes the page after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="72001" />
+	<meta http-equiv="refresh" content="30" />
 </head>
 ```
 
@@ -214,3 +218,4 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'
+[sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable

@@ -39,7 +39,8 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
 3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
-4. A required token from the [correct autocomplete field][].
+4. A required token from the [correct autocomplete field][]; then
+5. An optional "webauthn" token.
 
 ## Assumptions
 
@@ -146,6 +147,17 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 
 ```html
 <label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
+```
+
+#### Passed Example 9
+
+This `autocomplete` [attribute value][] has the required token "current-password", followed by the optional "webauthn" token.
+
+```html
+<label>
+	Password
+	<input type="password" autocomplete="current-password webauthn" />
+</label>
 ```
 
 ### Failed

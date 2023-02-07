@@ -38,7 +38,7 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
-3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the next token is "email", "impp", "tel" or "tel-\*"; then
 4. A required token from the [correct autocomplete field][]; then
 5. An optional "webauthn" token.
 

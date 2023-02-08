@@ -117,7 +117,7 @@ The [accessible name][] together with the [accessible description][] describes t
 The [accessible name][] together with the [accessible description][] describes the purpose of the link.
 
 ```html
-<a href="#desc" aria-describedby="link-desk">More</a>
+<a href="#desc" aria-describedby="link-desc">More</a>
 
 <p id="link-desc" style="display: none">See the product's description.</p>
 

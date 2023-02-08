@@ -78,7 +78,7 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 #### Passed Example 1
 
-These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context] and resolve to the [same resource][].
+These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and resolve to the [same resource][].
 
 ```html
 <html lang="en">
@@ -92,7 +92,7 @@ These two HTML `a` elements have the same non-empty [accessible name][], empty [
 
 #### Passed Example 2
 
-These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][] and the same [context][programmatically determined link context], and resolve to the [same resource][] after an instant redirect.
+These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and resolve to the [same resource][] after an instant redirect.
 
 ```html
 <html lang="en">
@@ -107,7 +107,7 @@ These two HTML `a` elements have the same non-empty [accessible name][], empty [
 
 #### Passed Example 3
 
-These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][] and the same [context][programmatically determined link context], and resolve to identical resources.
+These two HTML `a` elements have the same non-empty [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and resolve to identical resources.
 
 ```html
 <html lang="en">
@@ -123,7 +123,7 @@ These two HTML `a` elements have the same non-empty [accessible name][], empty [
 
 #### Passed Example 4
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context], and resolve to pages that serve the same purpose because the content section is the same.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and resolve to pages that serve the same purpose because the content section is the same.
 
 ```html
 <html lang="en">
@@ -139,7 +139,7 @@ These two HTML `a` elements have the same [accessible name][], [accessible descr
 
 #### Passed Example 5
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context], and go to pages that fulfill the same purpose in relation to the link because they contain the same relevant information.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and go to pages that fulfill the same purpose in relation to the link because they contain the same relevant information.
 
 ```html
 <html lang="en">
@@ -154,7 +154,7 @@ These two HTML `a` elements have the same [accessible name][], [accessible descr
 
 #### Passed Example 6
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context], and go to pages that use different layouts but have the same purpose.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and go to pages that use different layouts but have the same purpose.
 
 ```html
 <html lang="en">
@@ -216,7 +216,7 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 
 #### Failed Example 1
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context] but go to different resources.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], and the same [context][programmatically determined link context], but go to different resources.
 
 ```html
 <html lang="en">
@@ -247,7 +247,7 @@ These two HTML `a` elements have the same [accessible name][], [accessible descr
 
 #### Failed Example 3
 
-These two HTML `span` elements have an [explicit role][] of link, same [accessible name][], [accessible description][] and [context][programmatically determined link context], but link to resources that offer different content.
+These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], the same [accessible description][], and the same [context][programmatically determined link context], but link to resources that offer different content.
 
 ```html
 <html lang="en">
@@ -269,7 +269,7 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 
 #### Failed Example 4
 
-These two SVG `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context] but link to different resources.
+These two SVG `a` elements have the same [accessible name][], the same [accessible description][], and the same [context][programmatically determined link context], but link to different resources.
 
 ```html
 <html lang="en">
@@ -291,7 +291,7 @@ These two SVG `a` elements have the same [accessible name][], [accessible descri
 
 #### Failed Example 5
 
-These two HTML `a` elements with the same [accessible name][], [accessible description][] and [context][programmatically determined link context] resolve to the [same resource][] after redirect, but the redirect is not instant.
+These two HTML `a` elements with the same [accessible name][], the same [accessible description][], and the same [context][programmatically determined link context], resolve to the [same resource][] after redirect, but the redirect is not instant.
 
 ```html
 <html lang="en">

@@ -5,13 +5,14 @@ rule_type: atomic
 description: |
   This rule checks that the accessible name of a link together with its context describes its purpose.
 accessibility_requirements:
-  wcag20:2.4.4: # Link Purpose (In Context)
+  wcag20:2.4.4: # Link Purpose (In Context) (A)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:2.4.9: # Link Purpose (Link Only)
+  wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -46,8 +47,6 @@ The [accessible name][] of each target element together with its [accessible des
 
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
 
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-
 ## Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
@@ -58,8 +57,8 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 
 ### Related rules
 
-- [Link has non-empty accessible name](https://act-rules.github.io/rules/c487ae)
-- [Link is descriptive](https://act-rules.github.io/rules/aizyf1)
+- [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
+- [Link is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/)
 
 ### Bibliography
 
@@ -236,8 +235,16 @@ The [programmatically determined link context][] (provided by the element refere
 ```html
 <h2 id="rule">Button has accessible name</h2>
 <ul>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#applicability" aria-describedby="rule">Applicability</a></li>
-	<li><a href="https://act-rules.github.io/rules/97a4e1#expectation" aria-describedby="rule">Expectation</a></li>
+	<li>
+		<a href="https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/#applicability" aria-describedby="rule"
+			>Applicability</a
+		>
+	</li>
+	<li>
+		<a href="https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/#expectation" aria-describedby="rule"
+			>Expectation</a
+		>
+	</li>
 </ul>
 ```
 

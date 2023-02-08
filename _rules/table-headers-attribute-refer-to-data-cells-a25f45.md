@@ -28,7 +28,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where the [`table`][] element is [visible][] and [included in the accessibility tree][].
+This rule applies to any `headers` attribute specified on a [`cell`][] within a [`table`][] element, where all of the following is true for the [`table`][] element:
+
+- The `table` is [visible][]; and
+- The `table` is [included in the accessibility tree][]; and
+- The `table` has a [semantic role][] of `table`, `grid` or `treegrid`.
 
 ## Expectation 1
 
@@ -46,7 +50,7 @@ Each target's [attribute value][] is a [set of space separated tokens][], and no
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -239,6 +243,26 @@ The `td` elements have a `headers` attribute referring to an ID that does not ex
 
 #### Failed Example 2
 
+The `td` elements have a `headers` attribute referring to an ID that exist in a separate `table`.
+
+```html
+<table>
+	<tr>
+		<th id="headOfColumn1">Projects</th>
+		<th id="headOfColumn2">Objective</th>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td headers="headOfColumn1">15%</td>
+		<td headers="headOfColumn2">10%</td>
+	</tr>
+</table>
+```
+
+#### Failed Example 3
+
 The `td` element has a `headers` attribute referring to its own ID.
 
 ```html
@@ -254,7 +278,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 </table>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
 
@@ -375,6 +399,16 @@ The `table` is not [included in the accessibility tree][].
 </table>
 ```
 
+#### Inapplicable Example 6
+
+This `table` doesn't have a role of `table`, `grid` or `treegrid`.
+
+```html
+<table role="region">
+	<td id="self" headers="self">World</td>
+</table>
+```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
@@ -383,3 +417,4 @@ The `table` is not [included in the accessibility tree][].
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'WCAG 2.1 success criterion 1.3.1 Info and Relationships'
+[semantic role]: #semantic-role 'Definition of semantic role'

@@ -9,7 +9,6 @@ const htmlHintRules = {
 	'attr-value-double-quotes': true,
 	'attr-no-duplication': true,
 	'tag-pair': true,
-	'empty-tag-not-self-closed': true,
 	'spec-char-escape': true,
 	'id-unique': true,
 	'src-not-empty': true,
@@ -28,6 +27,7 @@ const htmlHintRules = {
 	'space-tab-mixed-disabled': false,
 	'head-script-disabled': false,
 	'id-class-value': false,
+	'empty-tag-not-self-closed': false,
 }
 
 describeRule('testcases', ruleData => {
@@ -45,7 +45,7 @@ describeRule('testcases', ruleData => {
 		 */
 		htmlHintIgnore.forEach(ignoreRule => (rules[ignoreRule] = false))
 
-		const errors = htmlHint.default.verify(snippet, rules)
+		const errors = htmlHint.HTMLHint.verify(snippet, rules)
 
 		if (errors.length) {
 			console.log(`Rule Name: ${name} \n`)

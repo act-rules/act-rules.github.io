@@ -17,6 +17,7 @@
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
 - Iframe
+- iframes
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
@@ -84,6 +85,7 @@
 - iso # lowercase needed in reference list
 - RFC
 - rfc
+- webauthn
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -229,6 +231,7 @@
 - testability
 - focusability
 - unitless
+- luminance
 
 # Parts of Unicode
 - 000A
@@ -271,3 +274,9 @@
 # Color values
 - HSL
 - hsl
+
+# Variables used in definitions / descriptions
+- A-lum-max
+- A-lum-min
+- B-lum-max
+- B-lum-min

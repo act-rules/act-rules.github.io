@@ -49,28 +49,14 @@ This rule applies to any [programmatic label][] of an element which has one of t
 
 and where both the element and the [programmatic label][] are [visible][].
 
-**Note:** The list of applicable [semantic roles][semantic role] is derived by taking all the roles from [WAI-ARIA Specifications][] that:
-
-- inherit from the [abstract][] `input` or `select` role; and
-- do not have a [required context](https://www.w3.org/TR/wai-aria/#scope) role that itself inherits from one of those roles.
-
-**Note:** The `option` role is not part of the list of applicable roles, because it has a required context role that inherits from the `select` role. Furthermore, `option` does not meet the definition of a [User interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components). This means that [WCAG 2.1][wcag21] does not require it to have an [accessible name][].
-
-**Note:** [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
-
 ## Expectation
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
-
-**Note:** It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Headings and Labels][sc246].
-
-**Note:** Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Headings and Labels][sc246].
 
 ## Assumptions
 
 - This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
 - This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -78,9 +64,20 @@ Each test target, together with its [visual context][], describes the purpose of
 
 ## Background
 
+The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
+
+- inherit from the `input`, `menuitem` or `select` role, and
+- are form field controls (this notably excludes `menu`, `option` or `tree`).
+
+[Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
+
+It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Headings and Labels][sc246].
+
+Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Headings and Labels][sc246].
+
 ### Bibliography
 
-- [Accessible Rich Internet Applications (WAI-ARIA) 1.1][aria11]
+- [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
 - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
@@ -204,13 +201,13 @@ These `label` elements are [programmatic labels][programmatic label] of their re
 <html lang="en">
 	<fieldset>
 		<h2 style="position: absolute; top: -9999px; left: -9999px;">Shipping address</h2>
-		<label>Name: <input type="text" name="shipping-name" /></label>
-		<label>Street: <input type="text" name="shipping-street" /></label>
+		<label>Name: <input type="text" name="shipping-name"/></label>
+		<label>Street: <input type="text" name="shipping-street"/></label>
 	</fieldset>
-	<fieldset>		
+	<fieldset>
 		<h2 style="position: absolute; top: -9999px; left: -9999px;">Billing address</h2>
-		<label>Name: <input type="text" name="billing-name" /></label>
-		<label>Street: <input type="text" name="billing-street" /></label>
+		<label>Name: <input type="text" name="billing-name"/></label>
+		<label>Street: <input type="text" name="billing-street"/></label>
 	</fieldset>
 </html>
 ```
@@ -258,16 +255,15 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 ```html
 <html lang="en">
-	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" disabled role="none" /></label>
+	<label>First name: <input style="position: absolute; top: -9999px; left: -9999px;" disabled role="none"/></label>
 </html>
 ```
 
-[abstract]: https://www.w3.org/TR/wai-aria/#abstract_roles 'List of abstract roles'
 [accessible name]: #accessible-name 'Definition of accessible name'
-[aria11]: https://www.w3.org/TR/wai-aria-1.1/ 'Accessible Rich Internet Applications 1.1'
+[aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.2'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatic label]: #programmatic-label 'Definition of programmatic label'
 [sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Headings and Labels'
 [sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
@@ -277,5 +273,3 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 [usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'
 [visual context]: #visual-context 'Definition of visual context'
-[wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'
-[wcag21]: https://www.w3.org/TR/WCAG21/ 'Web Content Accessibility Guidelines 2.1'

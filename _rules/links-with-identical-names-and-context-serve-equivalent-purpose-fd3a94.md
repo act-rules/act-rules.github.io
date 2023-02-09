@@ -16,6 +16,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.1.1: # Non-text Content (A)
+    secondary: true
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: true
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -74,6 +78,8 @@ This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244],
 This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
 
 Links that are [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general) are covered by the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
+
+This rule contains Failed Examples that use background informative images without an alternative text to convey information. This leads also [success criterion 1.1.1 Non-text Content][sc111] to fail. Similarly, the visual position of the elements allows sighted users to disambiguate the target links thanks to their vertical alignment with the images above. This causes issues under [success criterion 1.3.1 Info and Relationships][sc131] as relationships conveyed visually are not programmatically determined.
 
 ### Bibliography
 

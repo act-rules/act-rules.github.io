@@ -79,7 +79,7 @@ This rule specifically targets links within the exact same context. Links with i
 
 Links that are [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general) are covered by the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
-This rule contains Failed Examples that use background informative images without an alternative text to convey information. This leads also [success criterion 1.1.1 Non-text Content][sc111] to fail. Similarly, the visual position of the elements allows sighted users to disambiguate the target links thanks to their vertical alignment with the images above. This causes issues under [success criterion 1.3.1 Info and Relationships][sc131] as relationships conveyed visually are not programmatically determined.
+Pages with links that are not [ambiguous to users in general][], but are ambiguous to some users are likely to fail [success criterion 1.3.1 Info and Relationships][sc131] is the disambiguation information is conveyed through presentation, but not visually. Moreover, when this information is non-text content, such a page is likely to fail [success criterion 1.1.1 Non-text Content][sc111]. Therefore, both these success criteria are secondary requirement for this rule.
 
 ### Bibliography
 

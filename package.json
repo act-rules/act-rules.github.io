@@ -122,7 +122,7 @@
 		}
 	],
 	"devDependencies": {
-		"act-tools": "github:act-rules/act-tools#main",
+		"act-tools": "github:act-rules/act-tools",
 		"aria-query": "^4.2.2",
 		"dictionary-en-us": "^2.2.1",
 		"fastmatter": "^2.1.1",

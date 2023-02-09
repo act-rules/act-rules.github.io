@@ -85,6 +85,7 @@
 - iso # lowercase needed in reference list
 - RFC
 - rfc
+- webauthn
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -273,9 +274,4 @@
 # Color values
 - HSL
 - hsl
-
-# Variables used in definitions / descriptions
-- A-lum-max
-- A-lum-min
-- B-lum-max
-- B-lum-min
+- 0000EE

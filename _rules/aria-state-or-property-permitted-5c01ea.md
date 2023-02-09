@@ -177,7 +177,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] may not be used on a [semantic][semantic role]] `button`.
+The `aria-sort` [property][] may not be used on a [semantic][semantic role] `button`.
 
 ```html
 <button aria-sort="">Sort by year</button>

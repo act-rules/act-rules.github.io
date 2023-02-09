@@ -284,8 +284,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;">
 		</span>
 		<span style="display:flex; justify-content:space-around;">
-			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html">Contact Us</a>
-			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html">Contact Us</a>
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=3">Contact Us</a>
+			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=4">Contact Us</a>
 		</span>
 	</div>
 </html>
@@ -307,11 +307,11 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/about/contact.html'">Contact Us</span>
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=1'">Contact Us</span>
 			<span
 			role="link"
 			tabindex="0"
-			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/admissions/contact.html'">Contact Us</span>
+			onclick="location='/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=2'">Contact Us</span>
 		</span>
 	</div>
 </html>

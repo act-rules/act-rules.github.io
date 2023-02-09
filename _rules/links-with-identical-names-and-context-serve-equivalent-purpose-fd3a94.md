@@ -51,8 +51,9 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 
 For each pair of links in each target set, one of the following is true:
 
-- either the links resolve to the [same resource][] or to [equivalent resources](#equivalent-resource); or
-- links resolve to different resources but there is no visual information within the content of the page to predict this behavior.
+- both links resolve to the [same resource][]; or 
+- both links resolve to [equivalent resources][]; or
+- there is no visual information within the content of the page to let users know that both links resolve to [non-equivalent resources][equivalent resources].
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 
@@ -252,7 +253,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 2
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
 
 ```html
 <html lang="en">
@@ -272,7 +273,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 3
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
 
 ```html
 <html lang="en">
@@ -292,7 +293,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 4
 
-These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content.
+These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
 
 ```html
 <html lang="en">

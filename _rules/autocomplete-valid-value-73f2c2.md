@@ -202,6 +202,46 @@ The `autocomplete` attribute value is on an `input` element that does not have a
 <label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
 ```
 
+#### Failed Example 6
+
+This `autocomplete` attribute does not contain any required token.
+
+```html
+<label>Address<input autocomplete="shipping"/></label>
+```
+
+#### Failed Example 7
+
+This `autocomplete` attribute contains two of the required tokens, but only one is allowed.
+
+```html
+<label>Address<input autocomplete="address-line1 address-line2"/></label>
+```
+
+#### Failed Example 8
+
+This `autocomplete` attribute contains a `work` modifier but no required token afterwards.
+
+```html
+<label>Email<input autocomplete="work"/></label>
+```
+
+#### Failed Example 9
+
+This `autocomplete` attribute contains an extra token after the allowed ones.
+
+```html
+<label>Password<input type="password" autocomplete="current-password webauthn invalid"/></label>
+```
+
+#### Failed Example 10
+
+This `autocomplete` attribute contains an extra token after the allowed ones.
+
+```html
+<label>Email<input autocomplete="email invalid"/></label>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

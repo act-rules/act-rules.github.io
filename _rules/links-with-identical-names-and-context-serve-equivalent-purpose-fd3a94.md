@@ -79,13 +79,15 @@ This rule specifically targets links within the exact same context. Links with i
 
 Links that are [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general) are covered by the exception mentioned in Success Criterion 2.4.4 Link Purpose (In Context). If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 
-Pages with links that are not [ambiguous to users in general][], but are ambiguous to some users are likely to fail [success criterion 1.3.1 Info and Relationships][sc131] is the disambiguation information is conveyed through presentation, but not visually. Moreover, when this information is non-text content, such a page is likely to fail [success criterion 1.1.1 Non-text Content][sc111]. Therefore, both these success criteria are secondary requirement for this rule.
+Pages with links that are not [ambiguous to users in general][], but are ambiguous to some users are likely to fail [success criterion 1.3.1 Info and Relationships][sc131] if the disambiguation information is conveyed through presentation, but not semantically. Moreover, when this information is non-text content, such a page is likely to fail [success criterion 1.1.1 Non-text Content][sc111]. Therefore, both these success criteria are secondary requirement for this rule.
 
 ### Bibliography
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 - [Ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) (secondary requirement)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) (secondary requirement)
 
 ## Test Cases
 

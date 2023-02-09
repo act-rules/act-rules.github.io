@@ -32,7 +32,7 @@ This rule applies to any [WAI-ARIA state or property][] that has a non-empty (""
 
 ## Expectation
 
-Each test target has an [attribute value][] that is valid according to its [WAI-ARIA value type][value type], except if one of the following is true:
+Each test target has an [attribute value][] that is valid according to its [WAI-ARIA value type][value type], except in the following instances:
 
 - <dfn id="off6ek:id-reference">ID Reference</dfn>: For `ID Reference` value types an ID referenced elements is only required for `aria-controls` with [semantic][semantic role] `scrollbar` elements, and with [semantic][semantic role] `combobox` elements that have an `aria-expanded` [attribute value][] of `true`. The ID referenced element must exist in the same [document tree][] or [shadow tree][] as the test target's element.
 
@@ -129,7 +129,7 @@ The `aria-rowindex` [attribute value][] of 2 is a valid `integer` [value type][]
 
 #### Passed Example 8
 
-The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` [attribute values][attribute value] are a valid for a `number` [value type][].
+The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` [attribute values][attribute value] are valid for a `number` [value type][].
 
 ```html
 <div role="spinbutton" aria-valuemin="1.0" aria-valuemax="2.0" aria-valuenow="1.5" aria-label="Select a value"></div>
@@ -145,7 +145,7 @@ The `aria-current` [attribute value][] of `page` is a valid `token` [value type]
 
 #### Passed Example 10
 
-The `aria-relevant` [attribute value][] has a `text` and `removals`. Both are valid tokens for a `aria-relevant` `token list` [value type][].
+The `aria-relevant` [attribute value][] has a `text` and `removals` tokens. Both are valid tokens for a `aria-relevant` `token list` [value type][].
 
 ```html
 <div role="alert" aria-relevant="text removals"></div>

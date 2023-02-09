@@ -464,6 +464,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
+[equivalent resource]: #equivalent-resource 'Definition of Equivalent Resource'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'

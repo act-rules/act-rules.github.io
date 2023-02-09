@@ -274,9 +274,4 @@
 # Color values
 - HSL
 - hsl
-
-# Variables used in definitions / descriptions
-- A-lum-max
-- A-lum-min
-- B-lum-max
-- B-lum-min
+- 0000EE

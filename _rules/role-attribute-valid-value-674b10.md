@@ -42,7 +42,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-There are no assumptions.
+This rule assumes that using the `role` attribute for any purpose other than to provide an ARIA [semantic role][] to the elements is invalid. These would fail [WCAG Technique: ARIA4 Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4).
 
 ## Accessibility Support
 

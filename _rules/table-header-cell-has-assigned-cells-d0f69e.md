@@ -44,8 +44,6 @@ This rule assumes that table header cells have a relationship conveyed through t
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 Some popular combinations of browsers and assistive technologies disregard the `headers` attribute depending on the structure of the `table` element.
 
 ## Background

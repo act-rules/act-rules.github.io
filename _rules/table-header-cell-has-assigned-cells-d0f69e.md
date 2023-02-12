@@ -40,7 +40,7 @@ Each target element is [assigned][] to at least one `td` or `th` element.
 
 ## Assumptions
 
-This rule assumes that table header cells have a relationship conveyed through the presentation with other cells within the same table.
+This rule assumes that table header cells have a relationship with other cells within the same table, conveyed through presentation .
 
 ## Accessibility Support
 

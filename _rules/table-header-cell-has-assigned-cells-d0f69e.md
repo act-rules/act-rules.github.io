@@ -50,7 +50,7 @@ Some popular combinations of browsers and assistive technologies disregard the `
 
 The [HTML specification](https://html.spec.whatwg.org/) contains the [internal algorithm for scanning and assigning header cells](https://html.spec.whatwg.org/multipage/tables.html#internal-algorithm-for-scanning-and-assigning-header-cells) which indicates that the `th` elements with a `scope` [attribute value][] of `auto`, and both a data cell in their row and one in their column are neither row header nor column header. However, some browsers give those `th` elements a table header role and this process is not standardized. One browser may evaluate such `th` elements as [rowheader][] whereas other browsers may evaluate the same `th` elements as [columnheader][]. This is likely not going to convey the relationship conveyed through presentation.
 
-This rule does not apply to tables and grids built using [WAI-ARIA 1.1][] [explicit semantic roles][explicit semantic role] as it is not clear how the process of assigning table headers works for such elements.
+This rule does not apply to tables and grids built using [WAI-ARIA 1.2][] [explicit semantic roles][explicit semantic role] as it is not clear how the process of assigning table headers works for such elements.
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
@@ -416,4 +416,4 @@ There are no [non-empty][] `th` elements in the `table` element.
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [table model]: https://html.spec.whatwg.org/multipage/tables.html#table-model 'Definition of table model'
 [sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
-[wai-aria 1.1]: https://www.w3.org/TR/wai-aria-1.1/ 'WAI-ARIA 1.1'
+[wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/ 'WAI-ARIA 1.2'

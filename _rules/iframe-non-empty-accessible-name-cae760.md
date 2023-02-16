@@ -17,13 +17,17 @@ acknowledgments:
   authors:
     - Jey Nandakumar
     - Wilco Fiers
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and do not have a negative `tabindex` [attribute value][].
+This rule applies to `iframe` elements that are [included in the accessibility tree][] and for which all of the following are true:
+- does not have a negative `tabindex` [attribute value][]; and
+- does not have a `role` [attribute value][] of `presentation`; and
+- does not have a `role` [attribute value][] of `none`.
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
@@ -37,11 +41,13 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
-
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
+  - Some browsers do not include `iframe` elements in the [sequential focus navigation][] if content of the `iframe` is in the [sequential focus navigation][], even if the `iframe` has a non-negative `tabindex` [attribute value][].
+  - Some browsers include `iframe` elements in the [sequential focus navigation][] unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value). This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard.
+
+Due to these inconsitencies, the applicability of this rule is scoped for `iframe` elements for which there is no indication of an attempt to remove them from accessibility consideration.
 
 ## Background
 
@@ -110,10 +116,8 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of [whitespace][] by the [accessible name computation][accessible name and description computation].
 
-**Note:**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
-
 ```html
-<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
+<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Inapplicable
@@ -140,6 +144,14 @@ This `iframe` element has a negative `tabindex` [attribute value][].
 
 ```html
 <iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+```
+
+#### Inapplicable Example 4
+
+This `iframe` element has a `role` [attribute value][] of `none`.
+
+```html
+<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

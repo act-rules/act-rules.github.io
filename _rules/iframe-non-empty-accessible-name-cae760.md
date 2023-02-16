@@ -47,7 +47,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
   - Some browsers do not include `iframe` elements in the [sequential focus navigation][] if content of the `iframe` is in the [sequential focus navigation][], even if the `iframe` has a non-negative `tabindex` [attribute value][].
   - Some browsers include `iframe` elements in the [sequential focus navigation][] unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value). This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard.
 
-Due to these inconsitencies, the applicability of this rule is scoped for `iframe` elements for which there is no indication of an attempt to remove them from accessibility consideration.
+Due to these inconsistencies, the applicability of this rule is scoped for `iframe` elements for which there is no indication of an attempt to remove them from accessibility consideration.
 
 ## Background
 

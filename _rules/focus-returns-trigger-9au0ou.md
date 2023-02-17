@@ -56,7 +56,36 @@ There are no accessibility support issues known.
 The button that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
 
 ```html
-Code needed!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Passed Example</title>
+		<script src="/test-assets/9au0ou/aria-apg-dialog.js"></script>
+		<script src="/test-assets/9au0ou/aria-apg-utils.js"></script>
+		<link href="/test-assets/9au0ou/aria-apg-dialog.css" rel="stylesheet" />
+		<link href="/test-assets/9au0ou/9au0ou.css" rel="stylesheet" />
+	</head>
+	<body>
+		<button type="button">Do nothing</button>
+		<button type="button" onclick="openDialog('dialog1', this)">Open modal dialog</button>
+		<button type="button">Do nothing</button>
+		<div id="dialog_layer" class="dialogs">
+			<div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true"
+					 class="hidden">
+				<h2 id="dialog1_label" class="dialog_label">Dialog title</h2>
+				<div class="dialog_form">Dialog content.</div>
+				<button type="button" class="close-button topright" aria-label="Close" title="Close" 
+						onclick="closeDialog(this)">
+					&times;
+				</button>
+				<div style="text-align: right;">
+					<button type="button" onclick="closeDialog(this)">Ok</button>
+					<button type="button" onclick="closeDialog(this)">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 ```
 
 #### Passed Example 2

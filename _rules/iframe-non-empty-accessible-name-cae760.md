@@ -25,9 +25,8 @@ acknowledgments:
 ## Applicability
 
 This rule applies to `iframe` elements that are [included in the accessibility tree][] and for which all of the following are true:
-- does not have a negative `tabindex` [attribute value][]; and
-- does not have a `role` [attribute value][] of `presentation`; and
-- does not have a `role` [attribute value][] of `none`.
+- the `iframe` does not have a negative `tabindex` [attribute value][]; and
+- the `iframe` does not have an [explicit semantic role][] of `presentation` or `none`.
 
 **Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 

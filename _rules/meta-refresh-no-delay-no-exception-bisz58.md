@@ -49,7 +49,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ is 0.
+For each target, the _time_ from the content [attribute value][] is 0. To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
 ## Assumptions
 

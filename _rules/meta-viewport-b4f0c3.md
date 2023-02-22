@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag21:1.4.10: # Reflow (AA)
-    secondary: True
+    secondary: true
 input_aspects:
   - DOM Tree
 acknowledgments:

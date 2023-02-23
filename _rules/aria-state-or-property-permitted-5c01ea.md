@@ -26,9 +26,9 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Trevor Bostic
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
+    - Trevor Bostic
   funding:
     - WAI-Tools
   assets:
@@ -219,5 +219,3 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

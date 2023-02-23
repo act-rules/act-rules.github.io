@@ -26,11 +26,11 @@ acknowledgments:
 
 This rule applies to any [HTML][] `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
 
-- <dfn id=73f2c2:toggle>toggle</dfn>: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
-- <dfn id=73f2c2:disabled>disabled</dfn>: the element is a [disabled element]; or
-- <dfn id=73f2c2:fixed-value>fixed value</dfn>: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
-- <dfn id=73f2c2:hidden>hidden</dfn>: the element is not [visible][], and not [included in the accessibility tree][]; or
-- <dfn id=73f2c2:static>static</dfn>: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
+- <dfn id="73f2c2:toggle">toggle</dfn>: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
+- <dfn id="73f2c2:disabled">disabled</dfn>: the element is a [disabled element]; or
+- <dfn id="73f2c2:fixed-value">fixed value</dfn>: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
+- <dfn id="73f2c2:hidden">hidden</dfn>: the element is not [visible][], and not [included in the accessibility tree][]; or
+- <dfn id="73f2c2:static">static</dfn>: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
 ## Expectation
 
@@ -274,7 +274,7 @@ This `input` element has a [fixed value](#73f2c2:fixed-value) due to its `type` 
 
 #### Inapplicable Example 9
 
-This `input` element is [hidden](#73f2c2:hidden) because of its `type` [attribute value][] of `hidden` (following standard [User Agent stylesheet recommendations](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements). Knowing the transaction amount may still be used in other fields, e.g. to suggest a card with sufficient balance; this is not tested by this rule.
+This `input` element is [hidden](#73f2c2:hidden) because of its `type` [attribute value][] of `hidden` (following standard [User Agent style sheet recommendations](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements). Knowing the transaction amount may still be used in other fields, e.g. to suggest a card with sufficient balance; this is not tested by this rule.
 
 ```html
 <input type="hidden" autocomplete="transaction-amount" value="100.00">

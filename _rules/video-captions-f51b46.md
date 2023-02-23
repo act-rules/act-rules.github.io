@@ -37,7 +37,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output).
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output) that is not only silence.
 
 ## Expectation
 
@@ -68,7 +68,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-A video element that has captions for all the audio baked into it.
+A video element that has open captions for all of the audio content.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
@@ -76,7 +76,7 @@ A video element that has captions for all the audio baked into it.
 
 #### Passed Example 2
 
-A video element with an associated track element that contain captions for all the audio.
+A video element with an associated track element that contains captions for all of the audio content.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>
@@ -96,7 +96,7 @@ A video element without any form of captions.
 
 #### Failed Example 2
 
-A video element with an associated track element that contain incorrect captions.
+A video element with an associated track element that contains incorrect captions. Specifically, the captions flip the role of the mouse and computer by saying, "Not being able to use your mouse because your computer doesn't work is frustrating." 
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>
@@ -106,7 +106,7 @@ A video element with an associated track element that contain incorrect captions
 
 #### Failed Example 3
 
-A video element with a text on the same page that described the audio in the video.
+A video element with text on the same page that describes the audio in the video.
 
 ```html
 <p>
@@ -119,7 +119,7 @@ A video element with a text on the same page that described the audio in the vid
 
 #### Failed Example 4
 
-A video element with an explicitly associated text on the same page that described the audio in the video.
+A video element with an explicitly associated text on the same page that describes the audio in the video.
 
 ```html
 <p id="text">

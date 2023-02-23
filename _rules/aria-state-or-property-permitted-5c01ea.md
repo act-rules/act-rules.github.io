@@ -26,6 +26,7 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Trevor Bostic
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
   funding:
@@ -46,10 +47,6 @@ For each test target, one of the following is true:
 - **semantic role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
-## Expectation 2
-
-No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
-
 ## Assumptions
 
 There are no assumptions.
@@ -59,8 +56,6 @@ There are no assumptions.
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ## Background
-
-The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
 
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
 
@@ -177,7 +172,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] may not be used on a [semantic][semantic role]]  `button`.
+The `aria-sort` [property][] may not be used on a [semantic][semantic role]  `button`.
 
 ```html
 <button aria-sort="">Sort by year</button>
@@ -189,14 +184,6 @@ The `aria-orientation` property may not be used on `audio` element, nor can it b
 
 ```html
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
-```
-
-#### Failed Example 3
-
-The `aria-label` property is [prohibited][] for an element with a `generic` role.
-
-```html
-<div aria-label="Bananas"></div>
 ```
 
 ### Inapplicable
@@ -232,6 +219,5 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
-[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'
 [sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
 [sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

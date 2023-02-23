@@ -28,12 +28,16 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
+This rule applies to any `iframe` element that is not [inert](#akn7bn:inert) and that [contains](#akn7bn:contain) at least one element for which all the following are true:
 
 - the element is [visible][]; and
 - the element is part of the [sequential focus navigation order][] of the `iframe`'s [document][].
 
 An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
+
+An `iframe` element is <dfn id="akn7bn:inert">inert</dfn> if:
+- it has an `inert` [attribute value][] of true; or
+- an element which is not the iframe itself and that is not [contained](#akn7bn:contain) in it behaves as a modal, making the iframe inoperable.
 
 ## Expectation
 
@@ -120,6 +124,27 @@ This `iframe` element contains a link that is not part of its [sequential focus 
 
 ```html
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 5
+
+This `iframe` element is [inert][] because of its own `inert` [attribute value][].
+
+```html
+<iframe inert srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 5
+
+This `iframe` element is [inert][] because of another element that behaves as a modal.
+
+```html
+<div style="width:100vw; height:100vh; position:absolute; left:0; top:0; background:#000; opacity: 0.8;"></div>
+<div role="dialog" aria-labelledby="modal-heading" aria-modal="true" tabindex="-1" style="width:calc(100% - 20vw); height:calc(100% - 20vh); margin-left:10vw; margin-top:10vh; position:absolute; left:0; top:0; background:#fff; z-index:1; padding:40px; box-sizing:border-box;">
+  <h2 id="modal-heading">Hello</h2>
+  <p>Hello World!</p>
+</div>
+<iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

@@ -134,7 +134,7 @@ This `iframe` element is [inert][] because of its own `inert` [attribute value][
 <iframe inert srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
 This `iframe` element is [inert][] because of another element that behaves as a modal.
 

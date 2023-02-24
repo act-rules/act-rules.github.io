@@ -136,7 +136,7 @@ This `iframe` element is [inert][] because of its own `inert` [attribute value][
 
 #### Inapplicable Example 6
 
-This `iframe` element is [inert][] because of another element that behaves as a modal.
+This `iframe` element is [inert][] because of another element that behaves as a [modal][].
 
 ```html
 <div style="width:100vw; height:100vh; position:absolute; left:0; top:0; background:#000; opacity: 0.8;"></div>
@@ -151,7 +151,7 @@ This `iframe` element is [inert][] because of another element that behaves as a 
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
-[modal-dialog]: #modal-dialog 'Definition of Modal dialog'
+[modal]: #modal-dialog 'Definition of Modal dialog'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'

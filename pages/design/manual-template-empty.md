@@ -1,7 +1,7 @@
 ---
 id:
 name:
-rule_type: composite
+rule_type: atomic
 description: |
   This rule checks ...
 accessibility_requirements: # Remove whatever is not applicable
@@ -27,14 +27,19 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-input_rules:
-  -  # Include the ID of the rule
+input_aspects:
+  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 acknowledgments:
   authors:
-    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+    -  # (full names as found in `contributors` property in `package.json` - if not yet listed, please have authors added to the list)
   previous_authors:
-    -  # (full names as found in `contributors` property in  `package.json` - if not yet listed, please have authors added to the list)
+    -  # (full names as found in `contributors` property in `package.json` - if not yet listed, please have authors added to the list)
 ---
+This is the template for the manual test rules. It matches the automation rules but there are parts that can be completed with help from other community members (like adding examples of code).
+
+For the starting section, and examples, complete what you feel comfortable with and then ask for help via emails to the chairs of the ACT Task Force and Community Group. Delete these instructions after the --- and before "## Applicability" (delete rows 38-42).
+
+Save the finished rule with the Title to display or success criterion aspect being tested.
 
 ## Applicability
 
@@ -42,10 +47,7 @@ This rule applies to any (??) element ...
 
 ## Expectation (1)
 
-For each test target, the outcome of (at least one of | all of | any of etc.) the following rules is (passed / failed / etc.):
-
-- [Rule name](relative_link_to_rule.html)
-- ...
+Each target element ...
 
 ## Assumptions
 
@@ -57,7 +59,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-- - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
 
 ## Test Cases
 

@@ -141,6 +141,7 @@
 - Yu
 - Sumei
 - Tuttle
+- lnik # intentional misspelling
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -275,3 +276,9 @@
 - HSL
 - hsl
 - 0000EE
+
+# Variables used in definitions / descriptions
+- A-lum-max
+- A-lum-min
+- B-lum-max
+- B-lum-min

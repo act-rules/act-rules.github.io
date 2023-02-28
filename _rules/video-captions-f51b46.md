@@ -96,7 +96,7 @@ A video element without any form of captions.
 
 #### Failed Example 2
 
-A video element with an associated track element that contains incorrect captions. Specifically, the captions flip the role of the mouse and computer by saying, "Not being able to use your mouse because your computer doesn't work is frustrating." 
+A video element with an associated track element that contains incorrect captions. Specifically, the captions flip the role of the mouse and computer by saying, "Not being able to use your mouse because your computer doesn't work is frustrating."
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>

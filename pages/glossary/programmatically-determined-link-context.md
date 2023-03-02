@@ -16,7 +16,7 @@ The _programmatically determined context_ of a link (or _programmatically determ
 - being a header cell [assigned][] to the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`; or
 - being referenced by an `aria-describedby` attribute of the link.
 
-This definition is based on the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).
+This definition is based on (but not equivalent to) the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG21/#dfn-programmatically-determined-link-context).
 
 This definition assumes that the HTML document with the link is a document using HTML according to the specification.
 

@@ -169,7 +169,7 @@ The `aria-expanded` [attribute value][] of `collapsed` is not valid for a `true/
 
 #### Failed Example 3
 
-The `aria-expanded` [attribute value][] of `horizontal` is not valid for a `tristate` [value type][].
+The `aria-pressed` [attribute value][] of `horizontal` is not valid for a `tristate` [value type][].
 
 ```html
 <div role="button" aria-pressed="horizontal">An other button</div>
@@ -227,12 +227,10 @@ Element has ARIA role, but no ARIA states or properties
 
 #### Inapplicable Example 3
 
-The `aria-checked` attribute does not have a value.
-
-**Note**: The HTML validator flags an `aria-checked` attribute with an empty value as an issue. However, since WAI-ARIA 1.1, `aria-checked` has a default value of `undefined`.
+The `aria-live` attribute does not have a value.
 
 ```html
-<div role="checkbox" aria-checked>Accept terms and conditions</div>
+<div role="alert" aria-live>Remember to be awesome!</div>
 ```
 
 #### Inapplicable Example 4

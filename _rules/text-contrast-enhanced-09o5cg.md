@@ -38,9 +38,8 @@ acknowledgments:
 
 This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **disabled widget**: the ancestor is a [inheriting semantic][] `widget` that is [disabled][]; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
-- **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
+- **disabled ancestor**: the ancestor is an [inheriting semantic][] `group` or `widget` that is [disabled][]; or
+- **disabled label**: the ancestor is used in the [accessible name][] of an [inheriting semantic][] `widget` that is [disabled][].
 
 ## Expectation
 
@@ -170,19 +169,15 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 
 #### Passed Example 9
 
-This text is part of a widget because it is a child of a `button` element. The text has the default
-browser button text color on the default browser button background color. By default, this is black text on a
-light gray background with a contrast ratio of 18.26:1
+This text has the [default user agent link text and background color](https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3), of `#0000EE` and white. This results in a contrast ratio of 9.39:1.
 
 ```html
-<button>My button!</button>
+<a href="https://w3c.org/">W3C</a>
 ```
 
 #### Passed Example 10
 
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The text has the default browser text color on the default browser background color. By default, this is
-black text on a white background with a contrast ratio of 21:1
+This text is using the default user agent text color and background color. By default, this is black text on a white background with a contrast ratio of 21:1
 
 ```html
 <div role="button">My button!</div>
@@ -222,6 +217,16 @@ This 18pt large black text has a contrast ratio of 3.6:1 on the gray background.
 
 #### Failed Example 4
 
+This light gray text has a contrast ratio of 2.3:1 on the white background.
+
+```html
+<p style="color: #AAA; background: white;">
+	Some text in English
+</p>
+```
+
+#### Failed Example 5
+
 This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
@@ -230,7 +235,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 </p>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the background image.
 
@@ -242,7 +247,7 @@ This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the backgro
 </p>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the white background.
 
@@ -252,7 +257,7 @@ This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the whit
 </p>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 This black text with 60% opacity has a contrast ratio of 5.7:1 on the white background.
 
@@ -264,7 +269,7 @@ This black text with 60% opacity has a contrast ratio of 5.7:1 on the white back
 </div>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 This gray text has a contrast ratio of 5.7:1 on the white background in a shadow DOM tree.
 
@@ -276,7 +281,7 @@ This gray text has a contrast ratio of 5.7:1 on the white background in a shadow
 </script>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on the black and white background. The light gray text is compared to the white section of the background and the dark gray text is compared to the black section of the background.
 
@@ -294,9 +299,9 @@ This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on 
 </span>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
-The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
+The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and is not only for aesthetic purposes, this is not considered [purely decorative][].
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -307,19 +312,17 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 </p>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
-This text is part of a widget because it is a child of a `button` element. The button text has a contrast ratio of 6.4:1.
+This text in a `button` element has a contrast ratio of 6.4:1.
 
 ```html
 <button style="color: #555; background: #EEE;">My button!</button>
 ```
 
-#### Failed Example 12
+#### Failed Example 13
 
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The button text has a contrast
-ratio of 6.4:1.
+This text in a [semantic button][semantic role] has a contrast ratio of 6.4:1.
 
 ```html
 <div role="button" style="color: #555; background: #EEE;">My button!</div>

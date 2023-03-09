@@ -27,7 +27,7 @@ acknowledgments:
 This rule applies to each `content` attribute for which all of the following are true:
 
 - the attribute is defined on a `meta` element with a `name` [attribute value][] of `viewport`; and
-- the [attribute value][] has either the `maximum-scale` or `user-scalable` key.
+- the [attribute value][] has at least one of the `maximum-scale` or `user-scalable` keys.
 
 For the purpose of this rule, the [attribute value][] of the `content` attribute is a list of key/value pairs.
 
@@ -35,7 +35,7 @@ For the purpose of this rule, the [attribute value][] of the `content` attribute
 
 For each test target's [attribute value][], at least one of the following is true:
 
-- the `user-scalable` key is not defined; or
+- the `user-scalable` key is not defined; orBB
 - the `user-scalable` key is paired with a value of `yes`, `device-width` or `device-height`; or
 - the `user-scalable` key is paired with a numeric value which is not in the range ]-1;1[.
 
@@ -90,7 +90,7 @@ This viewport `meta` element does not prevent user scaling because it has `user-
 <html>
 	<head>
 		<title>Simple page showing random text</title>
-		<meta name="viewport" content="user-scalable=yes" />
+		<meta name="viewport" content=B"user-scalable=yes" />
 	</head>
 	<body>
 		<p>

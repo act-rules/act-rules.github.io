@@ -35,11 +35,11 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -75,7 +75,7 @@ This `audio` element has native player controls and an external transcript.
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 </html>
 ```
 
@@ -86,7 +86,7 @@ This `audio` element has an `autoplay` attribute and an external transcript.
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 </html>
 ```
 
@@ -125,7 +125,7 @@ This `audio` element has native player controls and an incorrect external transc
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 </html>
 ```
 
@@ -136,7 +136,7 @@ This `audio` element has an `autoplay` attribute and an incorrect external trans
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 </html>
 ```
 

@@ -58,14 +58,14 @@ For each test target, the [known primary language tag][] of its `lang` attribute
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
 ### Related rules
 
-- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
-- [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
+- [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
+- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/proposed/)
 
 ### Bibliography
 

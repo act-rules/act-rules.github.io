@@ -30,5 +30,9 @@ ACT-R has conference calls every 4 weeks. If you are interested in becoming an a
 
 For info on how to use this GitHub repository, see the [ACT-Rules GitHub Guidelines](github-guidelines.md).
 
+## GitHub Automation
+
+This repository automatically pushes changes to rules to the [w3c/wcag-act-rules](https://github.com/w3c/wcag-act-rules/) repository. There is an "Approve rule" action available which can be triggered manually by an ACT Task Force facilitator, which will set a proposed rule to "approved".
+
 [wcag21]: https://www.w3.org/TR/WCAG21/
 [act-r]: https://www.w3.org/community/act-r/

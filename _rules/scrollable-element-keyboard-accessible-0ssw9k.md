@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -32,10 +33,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][] for which at least one of the following is true:
+This rule applies to any [HTML element][] that has [visible][] [children][] in the [flat tree][], and for which at least one of the following is true:
 
-- It has a [horizontal scroll distance][scrollable] greater than the [computed][] [left][padding-left] or [right padding][padding-right] of the element; or
-- It has a [vertical scroll distance][scrollable] greater than the [computed][] [top][padding-top] or [bottom padding][padding-bottom] of the element
+- the element has a [horizontal scroll distance][scrollable] greater than the [computed][] [left][padding-left] or [right padding][padding-right] of the element; or
+- the element has a [vertical scroll distance][scrollable] greater than the [computed][] [top][padding-top] or [bottom padding][padding-bottom] of the element.
 
 ## Expectation
 
@@ -54,6 +55,8 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 ## Background
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
+
+This rule only applies to elements who scroll content in the same document. Elements such as iframes that embed other documents may also be scrollable, but for them it is the embedded document that scrolls, not the content in the same document. Such scenarios are tested separately with rules such as [Iframe with negative tabindex has no interactive elements](https://www.w3.org/WAI/standards-guidelines/act/rules/akn7bn/proposed/).
 
 ### Bibliography
 
@@ -160,7 +163,7 @@ This [horizontally scrollable][scrollable] `section` element is not included in 
 
 #### Inapplicable Example 1
 
-This `section` element has a [computed][] [overflow][] of `visible`.
+This `section` element has a [computed][] [overflow][] of `visible`. Because of this its [scroll distance][scrollable] will be 0, regardless of the element's content.
 
 ```html
 <section style="height: 95px; width: 500px;">
@@ -246,7 +249,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 
 #### Inapplicable Example 6
 
-This `iframe` element is not a [scrollable element][scrollable].
+This `iframe` element is not a scrollable element, but instead contains a nested browsing context that is scrollable. These must be tested separately.
 
 ```html
 <iframe src="https://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>

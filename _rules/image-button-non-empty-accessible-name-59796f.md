@@ -54,13 +54,17 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 ## Accessibility Support
 
-There is a known combination of a popular browser and assistive technology that does not by default support `title` as an [accessible name][].
+_There are no major accessibility support issues known for this rule._
+
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
 
 ## Background
 
+Contrarily to `img` elements, an empty `alt` attribute does not make image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
+
 ### Related rules
 
-- [Button has non-empty accessible name](https://act-rules.github.io/rules/97a4e1)
+- [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/)
 
 ### Bibliography
 
@@ -92,8 +96,6 @@ The image button has an [accessible name][] through the `aria-label` attribute.
 #### Passed Example 3
 
 The image button has an [accessible name][] through the `title` attribute.
-
-**note**: The `title` attribute may not always be [accessibility supported](#accessibility-support).
 
 ```html
 <input type="image" src="/test-assets/shared/search-icon.svg" title="Search" />

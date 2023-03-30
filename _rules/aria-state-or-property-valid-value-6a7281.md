@@ -100,7 +100,7 @@ The `aria-pressed` [attribute value][] of `mixed` is allowed for the `tristate` 
 
 #### Passed Example 5
 
-The `aria-errormessage` [attribute value][] is an `ID Reference` [value type][]. Because `aria-errormessage` is not a required property for `textbox`, an element with a matching ID is not required.
+The `aria-errormessage` [attribute value][] is an `ID Reference` [value type][]. The presence of an element with a matching ID is not required by this rule.
 
 ```html
 <div role="textbox" aria-errormessage="my-error" aria-label="A textbox"></div>

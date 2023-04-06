@@ -32,7 +32,7 @@ This rule applies to any HTML element with an `aria-controls` attribute for whic
 
 ## Expectation
 
-Each test target's [attribute value][] an space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [document][document tree] or [shadow tree][].
+Each test target's `aria-controls` [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [document][document tree] or [shadow tree][].
 
 ## Assumptions
 
@@ -176,10 +176,18 @@ The `combobox` does not have an `aria-expanded` [attribute value][] of `true`.
 
 #### Inapplicable Example 2
 
-The `aria-controls` attribute is not required on a `button`.
+The `aria-controls` attribute is not required on a `button`. The reference is only required for `scrollbar` and for an expanded `combobox`.
 
 ```html
 <button aria-controls="my-modal">Open the modal</button>
+```
+
+#### Inapplicable Example 3
+
+The `button` does not have an `aria-controls` attribute.
+
+```html
+<button>Open the modal</button>
 ```
 
 [semantic]: #semantic-role 'Definition of Semantic Role'

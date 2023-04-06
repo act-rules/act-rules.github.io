@@ -17,7 +17,9 @@ describeRule('check if referenced test assets exists', ruleData => {
 	if (usedAssetPaths.length) {
 		test.each(usedAssetPaths)('%s', assetPath => {
 			const message = `Asset at path -> ${assetPath} does not exist`
-			expect(allTestAssetPaths.includes(assetPath), message).toBe(true)
+			// Crudely filtering out query parameters by removing the first question
+			// mark and everything after it, which is sufficient for our use case.
+			expect(allTestAssetPaths.includes(assetPath.replace(/\?.*/, '')), message).toBe(true)
 		})
 	}
 })

@@ -150,7 +150,7 @@ This `iframe` element has a negative `tabindex` [attribute value][].
 This `iframe` element has a `role` [attribute value][] of `none`.
 
 ```html
-<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
+<iframe src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

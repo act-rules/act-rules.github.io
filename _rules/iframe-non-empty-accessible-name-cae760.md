@@ -28,8 +28,6 @@ This rule applies to `iframe` elements that are [included in the accessibility t
 - the `iframe` does not have a negative `tabindex` [attribute value][]; and
 - the `iframe` does not have an [explicit semantic role][] of `presentation` or `none`.
 
-**Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
-
 ## Expectation
 
 Each target element has an [accessible name][] that is not empty (`""`).
@@ -49,6 +47,8 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 Due to these inconsistencies, the applicability of this rule is scoped for `iframe` elements for which there is no indication of an attempt to remove them from accessibility consideration.  Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
 
 ## Background
+
+**Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
 ### Bibliography
 

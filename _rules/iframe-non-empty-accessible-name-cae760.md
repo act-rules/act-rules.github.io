@@ -16,8 +16,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
-    - Wilco Fiers
     - Tom Brunet
+    - Wilco Fiers
   funding:
     - WAI-Tools
 ---

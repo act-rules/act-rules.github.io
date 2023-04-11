@@ -43,7 +43,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
-  - Some browsers do not include `iframe` elements in the [sequential focus navigation][] if content of the `iframe` is in the [sequential focus navigation][], even if the `iframe` has a non-negative `tabindex` [attribute value][].
+  - Some browsers instantly redirect focus from `iframe` elements  to the first focusable element inside that iframe. This redirect makes it appear as though the `iframe` never receives focus. This occurs even if the `iframe` has a non-negative `tabindex` [attribute value][].
   - Some browsers include `iframe` elements in the [sequential focus navigation][] unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value). This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard.
 
 Due to these inconsistencies, the applicability of this rule is scoped for `iframe` elements for which there is no indication of an attempt to remove them from accessibility consideration.

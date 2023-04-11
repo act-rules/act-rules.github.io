@@ -142,7 +142,7 @@ This `iframe` is not [included in the accessibility tree][] because of setting a
 This `iframe` element has a negative `tabindex` [attribute value][].
 
 ```html
-<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html" style="height: 250px"> </iframe>
 ```
 
 #### Inapplicable Example 4

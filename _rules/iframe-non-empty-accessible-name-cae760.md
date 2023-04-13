@@ -147,7 +147,7 @@ This `iframe` element has a negative `tabindex` [attribute value][].
 
 #### Inapplicable Example 4
 
-This `iframe` element has a `role` [attribute value][] of `none`.
+This `iframe` element has an [explicit semantic role][] of `none`.
 
 ```html
 <iframe src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>

@@ -48,7 +48,7 @@ Due to these inconsistencies, the applicability of this rule is scoped for `ifra
 
 ## Background
 
-**Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+The `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
 ### Bibliography
 

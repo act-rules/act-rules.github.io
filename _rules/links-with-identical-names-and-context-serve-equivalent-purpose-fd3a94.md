@@ -56,8 +56,8 @@ This rule applies to any set of two or more [HTML or SVG elements][] for which a
 For each pair of links in each target set, one of the following is true:
 
 - both links resolve to the [same resource][]; or 
-- both links resolve to [equivalent resources][]; or
-- there is no visual information within the content of the page to let users know that both links resolve to [non-equivalent resources][equivalent resources].
+- both links resolve to [equivalent resources][equivalent resource]; or
+- there is no visual information within the content of the page to let users know that both links resolve to [non-equivalent resources][equivalent resource].
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 

@@ -261,7 +261,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 2
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
 ```html
 <html lang="en">
@@ -281,7 +281,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 3
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
 ```html
 <html lang="en">
@@ -301,7 +301,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 4
 
-These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content. Their purpose is disambiguated for sighted users by the alignement of the links with the images above.
+These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
 ```html
 <html lang="en">

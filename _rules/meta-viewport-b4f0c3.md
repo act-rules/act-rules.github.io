@@ -16,6 +16,8 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Jean-Yves Moyen
+  previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
   funding:
@@ -35,9 +37,9 @@ For the purpose of this rule, the [attribute value][] of the `content` attribute
 
 For each test target's [attribute value][], at least one of the following is true:
 
-- the `user-scalable` key is not defined; or
-- the `user-scalable` key is paired with a value of `yes`, `device-width` or `device-height`; or
-- the `user-scalable` key is paired with a numeric value which is not in the range ]-1;1[.
+- `user-scalable` is not defined; or
+- `user-scalable` is `yes`, `device-width` or `device-height`; or
+- `user-scalable` is a number which is not between -1 and 1 (excluded).
 
 **Note:** This is equivalent to applying the [translations into a `@viewport` descriptors][descriptor translation] and not obtaining a value of `fixed` for the `user-zoom` descriptor from [the translation for `user-scalable`](https://www.w3.org/TR/css-device-adapt-1/#user-scalable).
 
@@ -45,10 +47,10 @@ For each test target's [attribute value][], at least one of the following is tru
 
 For each test target's [attribute value][], at least one of the following is true:
 
-- the `maximum-scale` key is not defined; or
-- the `maximum-scale` key is paired with a value of `device-width` or `device-height`; or
-- the `maximum-scale` key is paired with a negative numeric value; or
-- the `maximum-scale` key is paired with a numeric value of 2 or more.
+- `maximum-scale` is not defined; or
+- `maximum-scale` is `device-width` or `device-height`; or
+- `maximum-scale` is a negative number; or
+- `maximum-scale` is a number which is 2 or more.
 
 **Note:** This is equivalent to applying the [translations into a `@viewport` descriptors][descriptor translation] and not obtaining a value smaller than 2 for the `max-zoom` descriptor from [the translation for `maximum-scale`](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale).
 

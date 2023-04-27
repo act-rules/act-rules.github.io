@@ -12,11 +12,11 @@ accessibility_requirements: # Remove whatever is not applicable
     passed: further testing needed
     inapplicable: further testing needed
 input_aspects:
-  -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
+  - CSS Styling
+  - DOM tree
 acknowledgments:
   authors:
-    -  #  Chris Loiselle
-
+    -  Chris Loiselle
 ---
 
 ## Applicability

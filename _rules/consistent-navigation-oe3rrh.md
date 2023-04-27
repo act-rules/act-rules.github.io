@@ -6,28 +6,11 @@ description: |
   This rule checks whether Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
 
 accessibility_requirements: # Remove whatever is not applicable
-  wcag2.1: # Success Criterion 3.2.3 Consistent Navigatoin (AA)
-    forConformance: true | false
+  wcag2.1:3.2.3: # Consistent Navigation (AA)
+    forConformance: true
     failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  aria12:anchor-name: # <Heading in WAI-ARIA>
-    title: Title to display
-    forConformance: true | false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  wcag-technique:Xxx: # <Technique title>
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
-  using-aria:anchor-name: # <Heading in Using ARIA>
-    title: Title to display
-    forConformance: false
-    failed: not satisfied
-    passed: satisfied | further testing needed
-    inapplicable: satisfied | further testing needed
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   -  # (e.g. HTTP Messages, DOM Tree, CSS Styling, Accessibility Tree, Language, etc.,)
 acknowledgments:

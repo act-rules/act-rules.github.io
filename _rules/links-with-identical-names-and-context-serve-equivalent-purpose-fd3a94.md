@@ -65,7 +65,7 @@ For each pair of links in each target set, one of the following is true:
 
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not accurately describe its purpose.
 - This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name and context but resolve to different resources without failing [Success Criterion 2.4.4 Link Purpose (In Context)][sc244] (if said links are in separate [documents][document] or [shadow trees][shadow tree]).
-- This rule assumes that reading the URL as per hovering/focusing in a browser or invoking AT shortcuts isn't enough to disambiguate links. 
+- This rule assumes that reading the URL as per hovering/focusing in a browser or invoking an assistive technology shortcuts isn't enough to disambiguate links. 
 
 ## Accessibility Support
 

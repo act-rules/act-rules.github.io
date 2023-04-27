@@ -277,4 +277,3 @@ There is no [focusable][] element.
 [focusable]: #focusable 'Definition of focusable'
 [html or svg element]: #namespaced-element
 [sc212]: https://www.w3.org/TR/WCAG21/#no-keyboard-trap 'Success Criterion 2.1.2 No Keyboard Trap'
-

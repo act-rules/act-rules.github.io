@@ -10,6 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag21:1.4.10: # Reflow (AA)
+    secondary: true
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -54,6 +56,7 @@ This rule is designed specifically for [1.4.4 Resize text][sc144], which require
 ### Bibliography
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
+- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow)
 - [HTML Specification - The `meta` element][meta]
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]

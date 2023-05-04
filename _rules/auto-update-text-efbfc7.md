@@ -36,7 +36,7 @@ This rule applies to any [HTML element][] that has a [visible][] [text node][] a
 
 ## Expectation
 
-For each test target, either it is an [essential text change][], or there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve at least one of the following objectives:
+For each test target, the text change is a [non essential text change][] and there is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][], to achieve at least one of the following objectives:
 
 - pause and resume the change of the [visible text content][]; or
 - stop the change of the [visible text content][]; or
@@ -322,4 +322,3 @@ This `span` element with text content that automatically changes multiple times 
 [visible text content]: #visible-text-content 'Definition of visible text content'
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page'
-

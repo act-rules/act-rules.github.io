@@ -44,7 +44,7 @@ Elements with a [semantic role][] that has [presentational children][] will not 
 
 ### Related rules
 
-- [Element with aria-hidden has no focusable content](https://act-rules.github.io/rules/6cfa84)
+- [Element with aria-hidden has no focusable content](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/)
 
 ### Bibliography
 

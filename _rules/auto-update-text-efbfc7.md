@@ -309,7 +309,7 @@ This `span` element with text content that automatically changes multiple times 
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[essential text change]: #essential-text-change 'Definition of essential text change'
+[non essential text change]: #non-essential-text-change 'Definition of non-essential text change'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
 [g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186

@@ -26,11 +26,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [modal][] that when closed the [focus][] returns to the [trigger][].
+This rule applies to any [modal][] or item with the role of `dialog` + `aria-modal="true"` that when no longer visible, the [focus][] returns to the [instrument][] or [trigger][] that made the [modal][] visible.
 
 ## Expectation
 
-On closing the [modal][], the assistive technology [focus][] will return to the item in the owning document that triggered the [modal][].
+On exiting the [modal][] making it no longer visible, the assistive technology [focus][] will return to the item in the owning document that was used to make the [modal][] visible.
 
 ## Assumptions
 
@@ -53,7 +53,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-The button that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
+The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
 
 ```html
 <!DOCTYPE html>
@@ -90,7 +90,7 @@ The button that is activated to open the [modal][] gets the [focus][] returned t
 
 #### Passed Example 2
 
-The button that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
+The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
 
 ```html
 Code needed!
@@ -98,7 +98,7 @@ Code needed!
 
 #### Passed Example 3
 
-The button that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
+The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
 
 ```html
 Code needed!
@@ -106,7 +106,7 @@ Code needed!
 
 #### Passed Example 4
 
-The link that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
+The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
 
 ```html
 Code needed!
@@ -114,7 +114,7 @@ Code needed!
 
 #### Passed Example 5
 
-The link that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
+The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
 
 ```html
 Code needed!
@@ -122,7 +122,14 @@ Code needed!
 
 #### Passed Example 6
 
-The link that is activated to open the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
+The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
+
+```html
+Code needed!
+```
+
+#### Passed Example 7
+The page has a list of buttons that is activated to display a [modal][], the [focus][] is returned to the correct button on dismissing the modal.
 
 ```html
 Code needed!
@@ -131,28 +138,35 @@ Code needed!
 ### Failed
 
 #### Failed Example 1
-The button that is activated to open the [modal][] gets the [focus][] returned to the item after it when the [modal][] is dismissed.
+The button that is activated to display the [modal][] gets the [focus][] returned to the item after it when the [modal][] is dismissed.
 
 ```html
 Code needed!
 ```
 
 #### Failed Example 2
-The button that is activated to open the [modal][] gets the [focus][] returned to the start of the page when the modal is dismissed.
+The button that is activated to display the [modal][] gets the [focus][] returned to the start of the page when the modal is dismissed.
 
 ```html
 Code needed!
 ```
 
 #### Failed Example 3
-The link that is activated to open the [modal][] gets the [focus][] returned to the item after it when the [modal][] is dismissed.
+The link that is activated to display the [modal][] gets the [focus][] returned to the item after it when the [modal][] is dismissed.
 
 ```html
 Code needed!
 ```
 
 #### Failed Example 4
-The link that is activated to open the [modal][] gets the [focus][] returned to the start of the page when the modal is dismissed.
+The link that is activated to display the [modal][] gets the [focus][] returned to the start of the page when the modal is dismissed.
+
+```html
+Code needed!
+```
+
+#### Failed Example 5
+The page has a list of buttons that is activated to display a [modal][], the [focus][] is returned to the incorrect button on dismissing the modal.
 
 ```html
 Code needed!
@@ -171,3 +185,4 @@ Code needed!
 [focus]: #focus 'Definition of focus'
 [html]: #namespaced-element
 [modal]: https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/
+[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument'

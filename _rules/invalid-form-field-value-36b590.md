@@ -171,7 +171,7 @@ This `input` element has a [form field error indicator][] but its message does n
 <form>
 	<label for="age">Age (years)</label>
 	<input type="number" id="age" />
-	<span id="error">Please enter the correct text.</span><br />
+	<span id="error">Invalid value for age.</span><br />
 	<input type="button" value="Submit" />
 </form>
 ```

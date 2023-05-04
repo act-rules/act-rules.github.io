@@ -137,16 +137,10 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
-[attribute value]: #attribute-value 'Definition of attribute value'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
-[focusable]: #focusable 'Definition of focusable'
-[global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[inherited]: https://www.w3.org/TR/wai-aria-1.2/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[property]: https://www.w3.org/TR/wai-aria-1.2/#dfn-property 'Definition of ARIA Property'
-[required]: https://www.w3.org/TR/wai-aria-1.2/#requiredState 'Definition of Required ARIA States and Properties'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [state]: https://www.w3.org/TR/wai-aria-1.2/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'

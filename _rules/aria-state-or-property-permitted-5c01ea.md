@@ -39,7 +39,7 @@ acknowledgments:
 
 This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
-## Expectation 1
+## Expectation
 
 For each test target, one of the following is true:
 
@@ -172,7 +172,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Failed Example 1
 
-The `aria-sort` [property][] may not be used on a [semantic][semantic role]  `button`.
+The `aria-sort` [property][] may not be used on a [semantic][semantic role] `button`.
 
 ```html
 <button aria-sort="">Sort by year</button>

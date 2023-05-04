@@ -1,9 +1,9 @@
 ---
-id: 
+id:
 name: ARIA state or property is not prohibited
 rule_type: atomic
 description: |
-  This rule checks that WAI-ARIA states or properties are not prohibited for the element they are specified on. 
+  This rule checks that WAI-ARIA states or properties are not prohibited for the element they are specified on.
 accessibility_requirements:
   wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
     forConformance: false
@@ -26,9 +26,10 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Trevor Bostic
+  previous_authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
-    - Trevor Bostic
   funding:
     - WAI-Tools
   assets:
@@ -96,19 +97,24 @@ The `aria-pressed` [state][] is [supported][] with `button`, which is the [expli
 #### Failed Example 1
 
 The `aria-label` property is [prohibited](https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes) for an element with a generic role.
+
 ```html
 <div aria-label="Bananas"></div>
 ```
 
 #### Failed Example 2
-The `aria-labelledby` property is [prohibited](https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes) for an element with an emphasis role. 
+
+The `aria-labelledby` property is [prohibited](https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes) for an element with an emphasis role.
+
 ```html
 <label id="importance">A very important fruit</label>
 <p><em aria-labelledby="importance">Bananas</em> are a great fruit</p>
 ```
 
 #### Failed Example 3
+
 The `aria-roledescription` property is [prohibited](https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes) for an element with a generic role.
+
 ```html
 <div aria-roledescription="fruit"><p>Banana</p></div>
 ```

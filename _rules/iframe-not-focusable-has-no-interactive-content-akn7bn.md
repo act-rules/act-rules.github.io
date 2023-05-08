@@ -132,7 +132,36 @@ This `iframe` element is [inert][] because of its own `inert` [attribute value][
 
 #### Inapplicable Example 6
 
-This `iframe` element is [inert][] because of another element that behaves as a [modal][].
+Once "Privacy policy details" button is activated, the `iframe` element become [inert][] because of showModal() method that causes the `iframe` to be [blocked by a modal].
+
+```html
+<iframe srcdoc="<a href='/'>Home</a>"></iframe>
+<div>
+    <button id="ppDetails">Privacy policy details</button>
+</div>
+<dialog id="ppDialog" aria-labelledby="dialogLabel">
+    <h2 id="dialogLabel">Privacy Policy</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <button id="cancel">Cancel</button>
+</dialog>
+<script>
+    const ppDetails = document.getElementById("ppDetails");
+    const cancelButton = document.getElementById("cancel");
+    const dialog = document.getElementById("ppDialog");
+
+    ppDetails.addEventListener("click", () => {
+        dialog.showModal();
+    });
+
+    cancelButton.addEventListener("click", () => {
+        dialog.close();
+    });
+</script>
+```
+
+#### Inapplicable Example 7
+
+This `iframe` element is [inert][] because it is [blocked by a modal].
 
 ```html
 <div style="width:100vw; height:100vh; position:absolute; left:0; top:0; background:#000; opacity: 0.8;"></div>

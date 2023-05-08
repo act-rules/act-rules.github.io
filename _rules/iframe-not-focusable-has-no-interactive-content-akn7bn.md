@@ -176,7 +176,7 @@ This `iframe` element is [inert][] because it is [blocked by a modal].
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
-[inert]: #intert 'Definition of Inert'
+[inert]: #inert 'Definition of Inert'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'

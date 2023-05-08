@@ -28,17 +28,12 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that is not [inert](#akn7bn:inert) and that [contains](#akn7bn:contain) at least one element for which all the following are true:
+This rule applies to any `iframe` element that is not [inert][] and that [contains](#akn7bn:contain) at least one element for which all the following are true:
 
 - the element is [visible][]; and
 - the element is part of the [sequential focus navigation order][] of the `iframe`'s [document][].
 
 An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing context][] if its [owner document][] is the [container document][] of the [nested browsing context][].
-
-An `iframe` element is <dfn id="akn7bn:inert">inert</dfn> if:
-- it has an `inert` [attribute value][] of true; or
-- one of its ancestor elements has an `inert` [attribute value][] of true; or
-- it is [blocked by a modal](https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog).
 
 ## Expectation
 
@@ -152,7 +147,7 @@ This `iframe` element is [inert][] because of another element that behaves as a 
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
-[modal]: #modal-dialog 'Definition of Modal dialog'
+[inert]: #intert 'Definition of Inert'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'

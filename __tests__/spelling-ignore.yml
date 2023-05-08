@@ -204,6 +204,7 @@
 - reflow
 - Viewport
 - dom-meta-content
+- showModal
 
 # Unsure why the dictionary does not have these words
 - programmatically

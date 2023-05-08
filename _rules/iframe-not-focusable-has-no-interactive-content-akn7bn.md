@@ -38,7 +38,7 @@ An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing con
 An `iframe` element is <dfn id="akn7bn:inert">inert</dfn> if:
 - it has an `inert` [attribute value][] of true; or
 - one of its ancestor elements has an `inert` [attribute value][] of true; or
-- an element which is not the iframe itself and that is not [contained](#akn7bn:contain) in it behaves as a [modal][], making the iframe inoperable.
+- it is [blocked by a modal](https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog).
 
 ## Expectation
 

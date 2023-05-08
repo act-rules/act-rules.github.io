@@ -1,6 +1,6 @@
 ---
 title: Inert
-key: intert
+key: inert
 unambiguous: true
 objective: true
 input_aspects:

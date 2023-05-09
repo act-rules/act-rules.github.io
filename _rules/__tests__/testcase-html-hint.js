@@ -1,5 +1,5 @@
 const gfmCodeBlocks = require('gfm-code-blocks')
-const htmlhint = require('htmlhint')
+const htmlHint = require('htmlhint')
 const describeRule = require('../../test-utils/describe-rule')
 
 const htmlHintRules = {
@@ -45,7 +45,7 @@ describeRule('testcases', ruleData => {
 		 */
 		htmlHintIgnore.forEach(ignoreRule => (rules[ignoreRule] = false))
 
-		const errors = htmlhint.HTMLHint.verify(snippet, rules)
+		const errors = htmlHint.HTMLHint.verify(snippet, rules)
 
 		if (errors.length) {
 			console.log(`Rule Name: ${name} \n`)

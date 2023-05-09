@@ -171,7 +171,5 @@ These `input` elements are not [visible][].
 
 [form field error indicator]: #form-field-error-indicator 'Definition of Form Field Error Indicator'
 [html element]: #namespaced-element 'Definition of HTML Element'
-[input error]: https://www.w3.org/TR/WCAG21/#dfn-input-error 'Definition of input error from WCAG 2.1 success criterion 3.3.1 Error Identification'
-[programmatic label]: #programmatic-label 'Definition of programmatic label'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of Visible'

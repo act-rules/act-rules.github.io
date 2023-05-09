@@ -1,5 +1,5 @@
 ---
-id:
+id: yyw7k3
 name: ARIA state or property is not prohibited
 rule_type: atomic
 description: |

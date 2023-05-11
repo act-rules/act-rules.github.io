@@ -25,14 +25,14 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any HTML element with an `aria-controls` attribute for which one of the following is true:
+This rule applies to any `aria-controls` attribute defined on an [HTML element][namespaced element] for which one of the following is true:
 
 - <dfn>expanded combobox</dfn>: the element is a [semantic][] `combobox` with an `aria-expanded` [attribute value][] of `true`; or
 - <dfn>scrollbar</dfn>: the element is a [semantic][] `scrollbar`.
 
 ## Expectation
 
-Each test target's `aria-controls` [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [document][document tree] or [shadow tree][].
+Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [document][document tree] or [shadow tree][].
 
 ## Assumptions
 
@@ -176,7 +176,7 @@ The `combobox` does not have an `aria-expanded` [attribute value][] of `true`.
 
 #### Inapplicable Example 2
 
-The `aria-controls` attribute is not required on a `button`. The reference is only required for `scrollbar` and for an expanded `combobox`.
+This element with an `aria-controls` attribute is not a [semantic][] `scrollbar` nor `combobox`.
 
 ```html
 <button aria-controls="my-modal">Open the modal</button>

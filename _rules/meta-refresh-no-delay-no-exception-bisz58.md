@@ -26,7 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.2.1: # Timing Adjustable (A)
-    secondary: True
+    secondary: Because it allows no exceptions, this rule is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -62,8 +62,6 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 ## Background
 
 Because a refresh with a timing of 0 is effectively a redirect, it is exempt from this rule. Since refreshing the same page with a time of 0 can cause rapid screen flashes it is strongly recommended to avoid this.
-
-This rule is closely related to [success criterion 2.2.1 Time Adjustable][sc221]. Because this rule is stricter, `meta` elements that pass this rule satisfy 2.1.1 Time Adjustable.
 
 ### Bibliography
 

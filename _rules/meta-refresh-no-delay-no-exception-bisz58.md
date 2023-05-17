@@ -26,7 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.2.1: # Timing Adjustable (A)
-    secondary: Because it allows no exceptions, this rule is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: Because this rule allows no exceptions, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
 input_aspects:
   - DOM Tree
 acknowledgments:

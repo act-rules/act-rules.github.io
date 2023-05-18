@@ -431,7 +431,6 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
 [text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
 [sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
-[sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'

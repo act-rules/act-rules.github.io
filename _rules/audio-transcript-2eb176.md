@@ -20,6 +20,7 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+    - Helen Burge
   funding:
     - WAI-Tools
   assets:

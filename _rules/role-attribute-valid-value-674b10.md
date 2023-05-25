@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationship (A)
-    secondary: true
+    secondary: Because this rule does not ignore elements that do not require a role attribute, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: Because this rule does not ignore elements that do not require a role attribute, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
 input_aspects:
   - DOM Tree
   - CSS Styling

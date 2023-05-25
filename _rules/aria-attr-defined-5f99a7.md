@@ -6,9 +6,9 @@ description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.2.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: Because this rule does not ignore irrelevant ARIA properties, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: Because this rule does not ignore irrelevant ARIA properties, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -36,7 +36,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
+The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
 
 ### Bibliography
 

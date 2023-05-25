@@ -12,4 +12,8 @@ input_aspects:
 An [HTML or SVG element][] is inert if:
 - it has an `inert` [attribute value][] of true; or
 - one of its ancestor elements has an `inert` [attribute value][] of true; or
-- it is [blocked by a modal](https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog).
+- it is [blocked by a modal][].
+
+[HTML or SVG element]: #namespaced-element 'Definition of HTML or SVG element'
+[attribute value]: #attribute-value 'Definition of Attribute value'
+[blocked by a modal]: https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog

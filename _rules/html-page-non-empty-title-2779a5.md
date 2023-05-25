@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
+This rule applies to the root element of the [web page][], if it is an `html` element.
 
 ## Expectation 1
 
@@ -211,3 +211,4 @@ This `title` element is a child of an `svg` element.
 ```
 
 [html]: #namespaced-element
+[web page]: #web-page-html 'Definition of HTML web page'

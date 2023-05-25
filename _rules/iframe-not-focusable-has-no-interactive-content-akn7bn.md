@@ -127,15 +127,15 @@ This `iframe` element contains a link that is not part of its [sequential focus 
 This `iframe` element is [inert][] because of its own `inert` [attribute value][].
 
 ```html
-<iframe inert srcdoc="<a href='/'>Home</a>"></iframe>
+<iframe tabindex="-1" inert srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 #### Inapplicable Example 6
 
-Once "Privacy policy details" button is activated, the `iframe` element become [inert][] because of showModal() method that causes the `iframe` to be [blocked by a modal].
+Once the "Privacy policy details" button is activated, the `iframe` element becomes [inert][] because of the showModal() method, which causes the `iframe` to be [blocked by a modal].
 
 ```html
-<iframe srcdoc="<a href='/'>Home</a>"></iframe>
+<iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
 <div>
     <button id="ppDetails">Privacy policy details</button>
 </div>
@@ -161,7 +161,7 @@ Once "Privacy policy details" button is activated, the `iframe` element become [
 
 #### Inapplicable Example 7
 
-This `iframe` element is [inert][] because it is [blocked by a modal].
+This `iframe` element is [inert][] because it is [blocked by a modal][].
 
 ```html
 <div style="width:100vw; height:100vh; position:absolute; left:0; top:0; background:#000; opacity: 0.8;"></div>
@@ -173,6 +173,7 @@ This `iframe` element is [inert][] because it is [blocked by a modal].
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[blocked by a modal]: https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'

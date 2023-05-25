@@ -25,8 +25,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
-    - Wilco Fiers
     - Helen Burge
+    - Wilco Fiers
   funding:
     - WAI-Tools
   assets:

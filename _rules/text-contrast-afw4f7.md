@@ -346,7 +346,7 @@ This text not part of a [text node][].
 
 ```html
 <p>
-	<img scr="/test-assets/contrast/example.png" alt="example" />
+	<img src="/test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 

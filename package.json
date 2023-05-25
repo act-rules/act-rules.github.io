@@ -120,6 +120,10 @@
 			"name": "Wilco Fiers",
 			"url": "https://github.com/wilcofiers"
 		}
+				{
+			"name": "Helen Burge",
+			"url": "https://github.com/HelenBurge"
+		}
 	],
 	"devDependencies": {
 		"act-tools": "github:act-rules/act-tools",

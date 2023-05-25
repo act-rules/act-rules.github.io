@@ -35,7 +35,7 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `audio`
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visible][], either on the page or through a clearly labelled location.
+The auditory information of each test target is available through a text transcript. That text transcript is [visible][], either on the page or through a clearly labeled location.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 

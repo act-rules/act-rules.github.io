@@ -431,7 +431,7 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
-[larger scale text]: #large-scale-text 'Definition of Large scale text'
+[large scale text]: #large-scale-text 'Definition of Large scale text'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'

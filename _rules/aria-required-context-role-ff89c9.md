@@ -222,10 +222,10 @@ This `section` element with an [explicit role][] of `doc-abstract` has a role fr
 
 #### Inapplicable Example 4
 
-There is no element whose role has [required context role][] because the `header` role does not have one.
+There is no element whose role has [required context role][] because the `heading` role does not have one.
 
 ```html
-<div role="header" aria-level="1">Hello!</div>
+<div role="heading" aria-level="1">Hello!</div>
 <p>Welcome to my homepage!</p>
 ```
 

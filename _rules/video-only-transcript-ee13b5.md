@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    forConformance: true
+    secondary: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -20,6 +26,7 @@ acknowledgments:
   authors:
     - Brian Bors
     - Wilco Fiers
+    - Helen Burge
   funding:
     - WAI-Tools
   assets:
@@ -36,7 +43,7 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [visible][], and is either on the page or in a clearly labeled location.
 
 ## Assumptions
 
@@ -48,7 +55,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media). It is known that the user can set the browser to prevent autoplay. This rule assumes the browser has not been set to do this.
 
 ### Bibliography
 
@@ -183,5 +190,4 @@ This `video` element is not [visible][].
 </html>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'

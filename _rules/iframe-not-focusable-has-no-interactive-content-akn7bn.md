@@ -144,32 +144,12 @@ Once the "Privacy policy details" button is activated, the `iframe` element beco
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <button id="cancel">Cancel</button>
 </dialog>
-<script>
-    const ppDetails = document.getElementById("ppDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("ppDialog");
-
-    ppDetails.addEventListener("click", () => {
-        dialog.showModal();
-    });
-
-    cancelButton.addEventListener("click", () => {
-        dialog.close();
-    });
+<script>    
+			const dialog = document.getElementById("ppDialog");
+			window.addEventListener('load', function(event) {
+    			dialog.showModal();
+			});
 </script>
-```
-
-#### Inapplicable Example 7
-
-This `iframe` element is [inert][] because it is [blocked by a modal][].
-
-```html
-<div style="width:100vw; height:100vh; position:absolute; left:0; top:0; background:#000; opacity: 0.8;"></div>
-<div role="dialog" aria-labelledby="modal-heading" aria-modal="true" tabindex="-1" style="width:calc(100% - 20vw); height:calc(100% - 20vh); margin-left:10vw; margin-top:10vh; position:absolute; left:0; top:0; background:#fff; z-index:1; padding:40px; box-sizing:border-box;">
-  <h2 id="modal-heading">Hello</h2>
-  <p>Hello World!</p>
-</div>
-<iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

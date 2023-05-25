@@ -5,6 +5,12 @@ rule_type: atomic
 description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.
 accessibility_requirements:
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    forConformance: true
+    secondary: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -24,12 +30,12 @@ acknowledgments:
 
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
-- playing; or,
-- has a [play button][] that is [visible][] and [included in the accessibility tree][].
+- autoplaying; or,
+- has a [play button][] that is [visible][].
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visible][] and [included in the accessibility tree][], either on the page or through a link.
+The auditory information of each test target is available through a text transcript. That text transcript is [visible][], either on the page or through a clearly labelled location.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
 
@@ -42,6 +48,8 @@ There are no assumptions.
 There are no accessibility support issues known.
 
 ## Background
+
+It is known that the user can set the browser to prevent autoplay. This rule assumes the browser has not been set to do this.
 
 ### Bibliography
 
@@ -156,21 +164,6 @@ This `audio` element has native player controls and a [non-visible][visible] int
 </html>
 ```
 
-#### Failed Example 6
-
-This `audio` element has native player controls and an internal transcript that is not exposed to the accessibility tree.
-
-```html
-<html lang="en">
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<p aria-hidden="true">
-		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
-		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
-		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
-		postpone, and one which we intend to win, and the others, too.
-	</p>
-</html>
-```
 
 ### Inapplicable
 
@@ -194,6 +187,5 @@ This `audio` element has hidden native player controls.
 </html>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

@@ -40,7 +40,7 @@ htmlHintIgnore:
 This rule applies to the [document title][] of each [html web page][], except if one of the following is true:
 
 - The [html web page][] has no [document title][]; or
-- The [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
+- The [document title][] contains not only [whitespace](#whitespace) z[text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 

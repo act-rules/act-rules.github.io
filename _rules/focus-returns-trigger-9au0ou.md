@@ -30,7 +30,7 @@ This rule applies to any [modal][] or item with the role of `dialog` + `aria-mod
 
 ## Expectation
 
-On exiting the [modal][] making it no longer visible, the assistive technology [focus][] will return to the item in the owning document that was used to make the [modal][] visible.
+After the [modal][] is closed, the [instrument][] that was used to open it becomes [focused][].
 
 ## Assumptions
 

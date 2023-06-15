@@ -32,7 +32,7 @@ This rule applies to any `aria-controls` attribute defined on an [HTML element][
 
 ## Expectation
 
-Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [document][document tree] or [shadow tree][].
+Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree] 
 
 ## Assumptions
 
@@ -44,7 +44,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 ## Background
 
-This rule is written specifically for `aria-controls`, because it is the only [ID Reference List][] property that is [required by WAI-ARIA][]. The `aria-controls` property is only required by the `scrollbar` role, and by an expanded `combobox`. There are no [ID Reference][] properties that are required by WAI-ARIA for any role.
+This rule is written specifically for `aria-controls`, because it is the only [ID Reference List][] property that is [required by WAI-ARIA][]. The `aria-controls` property is only required by the `scrollbar` role and by an expanded `combobox`. There are no [ID Reference][] properties that are required by WAI-ARIA for any role.
 
 ### Bibliography
 
@@ -167,7 +167,7 @@ The `aria-controls` attribute of this expanded `combobox` references a `popup_li
 
 #### Inapplicable Example 1
 
-The `combobox` does not have an `aria-expanded` [attribute value][] of `true`.
+The `aria-controls` attribute is defined on a `combobox` which does not have an `aria-expanded` [attribute value][] of `true`.
 
 ```html
 <label for="tag_combo">Tag</label>
@@ -176,7 +176,7 @@ The `combobox` does not have an `aria-expanded` [attribute value][] of `true`.
 
 #### Inapplicable Example 2
 
-This element with an `aria-controls` attribute is not a [semantic][] `scrollbar` nor `combobox`.
+This `aria-controls` attribute is not defined on a [semantic][] `scrollbar` nor `combobox`.
 
 ```html
 <button aria-controls="my-modal">Open the modal</button>
@@ -184,7 +184,7 @@ This element with an `aria-controls` attribute is not a [semantic][] `scrollbar`
 
 #### Inapplicable Example 3
 
-The `button` does not have an `aria-controls` attribute.
+There is no `aria-controls` attribute.
 
 ```html
 <button>Open the modal</button>

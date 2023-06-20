@@ -170,6 +170,8 @@
 - isComposing
 - x1
 - y1
+- rowIndex
+- textContent
 
 # DOM Events
 - auxclick

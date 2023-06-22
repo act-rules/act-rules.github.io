@@ -142,7 +142,7 @@ The `aria-controls` attribute of this `scrollbar` references IDs of `content-1` 
 The `aria-controls` attribute of this expanded `combobox` references a `popup_listbox` ID. This `id` exists, but in a different DOM tree as the `combobox`.
 
 ```html
-<aria-listbox>
+<div id="aria-listbox">
 	<label for="tag_combo">Tag</label>
 	<input
 		type="text"
@@ -152,15 +152,18 @@ The `aria-controls` attribute of this expanded `combobox` references a `popup_li
 		aria-controls="popup_listbox"
 		aria-activedescendant="selected_option"
 	/>
-
-	<template shadowrootmode="open">
+</div>
+<script>
+	const ariaListbox = document.querySelector('#aria-listbox')
+	const shadowRoot = ariaListbox.attachShadow({ mode: 'open' })
+	shadowRoot.innerHTML = `
 		<slot></slot>
 		<ul role="listbox" id="popup_listbox">
 			<li role="option">Zebra</li>
 			<li role="option" id="selected_option">Zoom</li>
 		</ul>
-	</template>
-</aria-listbox>
+	`
+</script>
 ```
 
 ### Inapplicable

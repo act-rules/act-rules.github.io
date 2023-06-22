@@ -6,10 +6,7 @@ description: |
   This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
 accessibility_requirements:
   wcag20:1.4.2: # Audio Control (A)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: true
   wcag-text:cc5: # Non-interference due to mapping to 1.4.2
     title: WCAG Non-Interference
     forConformance: true
@@ -78,6 +75,8 @@ The native `video` and `audio` controls in several browser and assistive technol
 ## Background
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
+
+User agents do not always automatically play medias, even when an `autoplay` attribute is present. This is done precisely to avoid autoplaying media interrupting the user when they do not want to, especially when the media is likely to contain sound. The decision to respect the `autoplay` attribute or not depends on user settings and previous behavior (interaction with the site, …) Depending on the state of the user agent, failing this rule may cause [Success Criterion 1.4.2 Audio Control][sc142] to be not satisfied.
 
 ### Bibliography
 

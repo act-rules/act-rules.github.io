@@ -65,6 +65,10 @@
 			"url": "https://github.com/geirsf"
 		},
 		{
+			"name": "Giacomo Petri",
+			"url": "https://github.com/giacomo-petri"
+		},
+		{
 			"name": "Jean-Yves Moyen",
 			"url": "https://github.com/Jym77"
 		},
@@ -123,6 +127,10 @@
 		{
 			"name": "Wilco Fiers",
 			"url": "https://github.com/wilcofiers"
+		},
+		{
+			"name": "Helen Burge",
+			"url": "https://github.com/HelenBurge"
 		}
 	],
 	"devDependencies": {

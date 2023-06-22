@@ -16,6 +16,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
+    - Tom Brunet
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -23,9 +24,9 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and do not have a negative `tabindex` [attribute value][].
-
-**Note:** `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+This rule applies to `iframe` elements that are [included in the accessibility tree][] and for which all of the following are true:
+- the `iframe` does not have a negative `tabindex` [attribute value][]; and
+- the `iframe` does not have an [explicit semantic role][] of `presentation` or `none`.
 
 ## Expectation
 
@@ -37,13 +38,17 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 
 ## Accessibility Support
 
-- Some browsers include `iframe` elements in the [sequential focus navigation][]. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. When an `iframe` is removed from the accessibility tree, this rule is still applicable for those browsers, unless the `iframe` is explicitly removed from [sequential focus navigation][] (by having the `tabindex` attribute set to a negative value).
-
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
+  - Some browsers instantly redirect focus from `iframe` elements  to the first focusable element inside that iframe. This redirect makes it appear as though the `iframe` never receives focus. This occurs even if the `iframe` has a non-negative `tabindex` [attribute value][].
+  - Not all browsers redirect focus on `iframe` elements. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. This must not be circumvented by using a negative tabindex, as this will make the `iframe` completely inaccessible for keyboard navigation.
 
 ## Background
+
+The `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+
+Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe` elements for which there is an attempt to hide them from assistive technologies.  Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
 
 ### Bibliography
 
@@ -110,10 +115,8 @@ This `iframe` element has an empty (`""`) [accessible name][] because the `title
 
 This `iframe` element has an empty (`""`) [accessible name][] because the `title` attribute value is trimmed of [whitespace][] by the [accessible name computation][accessible name and description computation].
 
-**Note:**: Because `iframe` elements are part of [sequential focus navigation][], the [explicit semantic role](#explicit-role) of `none` will be ignored, due to the [Presentational Roles Conflict Resolution](https://www.w3.org/TR/wai-aria-1.1/#presentational-roles-conflict-resolution).
-
 ```html
-<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
+<iframe title=" " src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
 ```
 
 ### Inapplicable
@@ -139,7 +142,15 @@ This `iframe` is not [included in the accessibility tree][] because of setting a
 This `iframe` element has a negative `tabindex` [attribute value][].
 
 ```html
-<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html"> </iframe>
+<iframe tabindex="-1" src="/test-assets/SC4-1-2-frame-doc.html" style="height: 250px"> </iframe>
+```
+
+#### Inapplicable Example 4
+
+This `iframe` element has an [explicit semantic role][] of `none`.
+
+```html
+<iframe src="/test-assets/SC4-1-2-frame-doc.html" role="none"> </iframe>
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'

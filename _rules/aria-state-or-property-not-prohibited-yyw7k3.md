@@ -42,7 +42,7 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 ## Expectation
 
-No test target (i.e., state or property) is prohibited on the semantic role of the element on which it is specified.
+No test target is [prohibited](https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes) on the semantic role of the element on which it is specified.
 
 ## Assumptions
 
@@ -78,7 +78,7 @@ Assessing the value of the attribute is out of scope for this rule.
 
 #### Passed Example 1
 
-The `aria-pressed` [state][] is [supported][] with `button`, which is the [implicit role][] for `button` elements.
+The `aria-pressed` [state][] is [supported][] for the `button` role, which is the [implicit role][] for `button` elements.
 
 ```html
 <button aria-pressed="false">My button</button>
@@ -86,10 +86,19 @@ The `aria-pressed` [state][] is [supported][] with `button`, which is the [impli
 
 #### Passed Example 2
 
-The `aria-pressed` [state][] is [supported][] with `button`, which is the [explicit role][] of this `div` element.
+The `aria-pressed` [state][] is [supported][] for the `button` role, which is the [explicit role][] of this `div` element.
 
 ```html
 <div role="button" aria-pressed="false">My button</div>
+```
+
+#### Passed Example 3
+
+The `aria-labelledby` [property][] is [supported][] for the `textbox` role, which is the [implicit role][] for and `input` element with `type="text"`.
+
+```html
+<input name="searchtxt" type="text" aria-labelledby="searchbtn" />
+<input name="searchbtn" id="searchbtn" type="submit" value="Search" />
 ```
 
 ### Failed
@@ -141,6 +150,7 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[property]: https://www.w3.org/TR/wai-aria-1.2/#dfn-property 'Definition of Property'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [state]: https://www.w3.org/TR/wai-aria-1.2/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'

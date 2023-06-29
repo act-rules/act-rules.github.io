@@ -17,8 +17,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Audrey Maniez
+    - Helen Burge    
     - Jey Nandakumar
-    - Helen Burge
   funding:
     - WAI-Tools
 ---

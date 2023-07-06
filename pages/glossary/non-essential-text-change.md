@@ -9,13 +9,14 @@ input_aspects:
   - DOM tree
 ---
 
-A _non-essential text change_ occurs when the modification of the text content of an HTML element is not required for the purpose of providing context or live updated information to the user. A _non-essential text change_ usually occurs for one of the following purposes:
+A text change is considered non-essential if it occurs in any of the following scenarios:
 
-1. **Action Not Required** - Text changes on the page that does not require the immediate action of the user.
-2. **No Context Included** - Text changes on the page that do not provide any additional information on the context of the page or provide additional help to the user.
+- **Carousels**: The text change is part of a fixed set of slides that is updated as part of a carousel; or
+- **Rolling Ads**: The text change occurs when an ad replaced with another ad on a timer; or
+- **Article feed**: The text change is part of a feed in which new articles are added as they become available such as news articles or posts on a social media site. This does not include chat feeds; or
+- **Live data**: The text change is an update of a live event or part of live information such as the scores of a sports match, an exchange rate, and weather measurements; or
+- **Countdown timer**: A timer that counts down to an event that occurs at a predetermined time.
 
-Examples of a _non-essential text change_ would include:
+**Note**: Other scenarios in which a text change is not essential may exist, but are not covered by this definition. A text change is only "essential" when pausing, stopping or hiding it would fundamentally alter the meaning of information, or the functionality available on the page.
 
-    - Text changes that do not require immediate user action, such as stock ticker information, sport scores, or advertisements.
-    - "Rolling" updates containing information such as job postings or news article titles and links.
-    - A countdown timer to an event that does not cause a loss of opportunity for the user, such as a countdown to the start of a sporting event. An event like an auction, where timing is a key component, may not be considered a _non-essential text change_.
+**Note**: While pausing a live feed or live data does change the functionality, it is not a fundamental change. An equivalent alternative for live information would be information along with a particular date and time, to clearly distinguish it from live data. Similarly, a countdown timer is equivalent to providing the exact time at which the event occurs.

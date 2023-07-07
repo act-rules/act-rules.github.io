@@ -74,7 +74,7 @@ The `aria-controls` [attribute value][] of this `scrollbar` matches the `id` of 
 
 #### Passed Example 2
 
-The `aria-controls` [attribute value][] of this expanded `combobox` matches the `id` of the `main` element in the same document.
+The `aria-controls` [attribute value][] of this expanded `combobox` matches the `id` of the `ul` element in the same document.
 
 ```html
 <label for="tag_combo">Tag</label>

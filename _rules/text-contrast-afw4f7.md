@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.4.6: # Contrast (Enhanced) (AAA)
-    secondary: Because this success criterion has a higher minimum contrast, it is stricter than the rule. This is also why some passed examples do not satisfy this success criterion.
+secondary: This success criterion is **stricter** than this rule. This is because this criterion has a higher minimum contrast. This is why some of the passed examples may not satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree

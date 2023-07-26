@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: satisfied
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because browsers and assistive technologies will often fall back on a non-standard default value, which may be sufficient. This is why some of the failed examples may satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because browsers and assistive technologies will often fall back on a non-standard default value, which may be sufficient. This is why some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -50,7 +50,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
-Omitting required ARIA properties is often the result of a developer error. When required properties are missing some browsers and assistive technologies will guess the property, or leave the element inaccessible. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
+Omitting required ARIA properties is often the result of a developer error. When required properties are missing some browsers and assistive technologies will guess the property, or leave the element inaccessible.
 
 This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
 

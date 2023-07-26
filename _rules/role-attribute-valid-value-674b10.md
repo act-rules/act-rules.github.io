@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationship (A)
-    secondary: Because this rule does not ignore elements that do not require a role attribute, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. This is why some of the failed examples may satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: Because this rule does not ignore elements that do not require a role attribute, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. This is why some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -50,7 +50,7 @@ Older browsers do not support more than one token in the value for a role attrib
 
 ## Background
 
-Using an invalid role is often the result of a typo or other developer error. Unknown roles are ignored by browsers and assistive technologies, and the element's [implicit role][] is used. This often means that a role that should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Role, Value][sc412]. If the element's implicit semantics are sufficient to communicate its intent, an invalid role may not cause an accessibility issue.
+Using an invalid role is often the result of a typo or other developer error. Unknown roles are ignored by browsers and assistive technologies, and the element's [implicit role][] is used. This often means that a role that should exist is missing.
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. The rule applies to attributes containing at least one non-[ASCII whitespace][] character so that there is at least one token in the set.
 

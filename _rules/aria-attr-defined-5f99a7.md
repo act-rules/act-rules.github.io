@@ -6,9 +6,9 @@ description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.2.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: Because this rule does not ignore irrelevant ARIA properties, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: This success criterion is **less strict** than this rule. This is because does not ignore irrelevant ARIA properties. This is why some of the failed examples may not satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: Because this rule does not ignore irrelevant ARIA properties, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: This success criterion is **less strict** than this rule. This is because does not ignore irrelevant ARIA properties. This is why some of the failed examples may not satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:

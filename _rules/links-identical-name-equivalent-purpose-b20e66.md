@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 wcag20:2.4.4: # Link Purpose (In Context) (A)
-secondary: true
+secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider the context of the link. This is why some of the failed examples may not satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -56,8 +56,6 @@ When followed, the links in each set of target elements resolve to the [same res
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [inheriting semantic][] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
-
-This rule is closely related to [success criterion 2.4.4 Link Purpose (In Context)][sc244]. Because this rule is stricter, links that pass this rule satisfy 2.4.4 Link Purpose (In Context).
 
 ### Bibliography
 

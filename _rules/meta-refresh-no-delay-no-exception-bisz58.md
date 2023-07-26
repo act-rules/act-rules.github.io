@@ -26,7 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.2.1: # Timing Adjustable (A)
-    secondary: Because this rule allows no exceptions, it is stricter than this success criterion. Failing this rule often results in this success criterion being not satisfied.
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion allows redirects longer than 20 hours. This is why some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:

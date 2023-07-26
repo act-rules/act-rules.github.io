@@ -17,7 +17,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
-    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -27,7 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.1.1: # Non-text content (A)
-    secondary: true
+    secondary: This success criterion **partially overlaps** this rule. This is because the HTML`area` element count as both a link, and as non-text content. This is why some of the failed examples may not satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -65,8 +64,6 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 - Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
 
 ## Background
-
-The HTML `area` element is both a link and non-text content. When this rule fails on `area` elements [success criterion 1.1.1 Non-text content][sc111] is not satisfied.
 
 ### Related rules
 

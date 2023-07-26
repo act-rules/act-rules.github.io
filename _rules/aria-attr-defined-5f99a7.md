@@ -130,5 +130,3 @@ This `canvas` element does not have an `aria-` attribute specified.
 ```
 
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

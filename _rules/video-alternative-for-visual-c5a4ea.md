@@ -215,5 +215,3 @@ A video element that is not [visible][].
 
 [visible]: #visible 'Definition of visible'
 [sc123]: https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'
-[sc125]: https://www.w3.org/TR/WCAG21/#audio-description-prerecorded 'WCAG 2.1, Success Criterion 1.2.5 Audio Description (Prerecorded)'
-[sc128]: https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.8 Media Alternative (Prerecorded)'

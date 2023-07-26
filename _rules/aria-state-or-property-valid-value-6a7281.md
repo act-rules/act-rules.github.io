@@ -242,7 +242,5 @@ The `aria-hidden` attribute is not on an [HTML or SVG element][].
 ```
 
 [html or svg element]: #namespaced-element
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value
 [value type]: https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def

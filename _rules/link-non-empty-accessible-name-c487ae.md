@@ -362,4 +362,3 @@ This `a` element does not have the role of link because it does not have an `hre
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'
 [html element]: #namespaced-element
-[sc111]: https://www.w3.org/TR/WCAG21/#non-text-content

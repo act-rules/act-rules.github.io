@@ -182,10 +182,7 @@ This `role` attribute is specified on an element which is [programmatically hidd
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.2/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

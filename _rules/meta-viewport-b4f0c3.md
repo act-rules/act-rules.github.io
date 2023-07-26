@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag21:1.4.10: # Reflow (AA)
-    This success criterion **partially overlaps** this rule. This is because a page that cannot be zoomed up to 200% often does not reflow sufficiently either. This is why some of the failed examples may not satisfy this success criterion.
+    secondary: This success criterion **partially overlaps** this rule. This is because a page that cannot be zoomed up to 200% often does not reflow sufficiently either. This is why some of the failed examples may not satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:

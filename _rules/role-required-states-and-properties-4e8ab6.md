@@ -228,5 +228,3 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [html or svg element]: #namespaced-element
 [focusable]: #focusable
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

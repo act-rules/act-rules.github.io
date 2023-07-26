@@ -216,4 +216,3 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'
-[sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable

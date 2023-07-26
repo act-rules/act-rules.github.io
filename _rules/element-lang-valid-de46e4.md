@@ -71,13 +71,9 @@ There are differences in how assistive technologies handle unknown and invalid l
 This `article` element has a `lang` [attribute value][] which has a [known primary language tag][].
 
 ```html
-<html>
-	<body>
-		<article lang="en">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</article>
-	</body>
-</html>
+	<article lang="en">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</article>
 ```
 
 #### Passed Example 2
@@ -85,13 +81,9 @@ This `article` element has a `lang` [attribute value][] which has a [known prima
 This `blockquote` element has a `lang` [attribute value][] which has a [known primary language tag][]. The region section ("CH") in the value is ignored by the rule (and the definition of [known primary language tag][]).
 
 ```html
-<html>
-	<body>
-		<blockquote lang="fr-CH">
-			Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
-		</blockquote>
-	</body>
-</html>
+	<blockquote lang="fr-CH">
+		Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
+	</blockquote>
 ```
 
 #### Passed Example 3
@@ -99,13 +91,9 @@ This `blockquote` element has a `lang` [attribute value][] which has a [known pr
 This `p` element has a `lang` [attribute value][] which has a [known primary language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
-<html>
-	<body>
-		<p lang="en-US-GB">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</p>
-	</body>
-</html>
+	<p lang="en-US-GB">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</p>
 ```
 
 #### Passed Example 4
@@ -113,15 +101,11 @@ This `p` element has a `lang` [attribute value][] which has a [known primary lan
 This `div` element has a valid `lang` [attribute value][]. There is no [text inheriting its programmatic language][] from the `article` element, therefore its `lang` attribute is not considered by the rule.
 
 ```html
-<html>
-	<body>
-		<article lang="invalid">
-			<div lang="en">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</div>
-		</article>
-	</body>
-</html>
+	<article lang="invalid">
+		<div lang="en">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</div>
+	</article>
 ```
 
 #### Passed Example 5
@@ -129,13 +113,9 @@ This `div` element has a valid `lang` [attribute value][]. There is no [text inh
 This `div` element has a valid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
 
 ```html
-<html>
-	<body>
-		<div lang="EN">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-		</div>
-	</body>
-</html>
+	<div lang="EN">
+		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+	</div>
 ```
 
 ### Failed
@@ -145,13 +125,9 @@ This `div` element has a valid `lang` [attribute value][]. The [accessible name]
 This `article` element has a `lang` [attribute value][] which does not have a [known primary language tag][] because its primary language subtag does not exist in the [language subtag registry][].
 
 ```html
-<html>
-	<body>
-		<article lang="dutch">
-			Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
-		</article>
-	</body>
-</html>
+	<article lang="dutch">
+		Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
+	</article>
 ```
 
 #### Failed Example 2
@@ -159,13 +135,9 @@ This `article` element has a `lang` [attribute value][] which does not have a [k
 This `article` element has a `lang` [attribute value][] which has no [known primary language tag][].
 
 ```html
-<html>
-	<body>
-		<article lang="#!">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</article>
-	</body>
-</html>
+	<article lang="#!">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</article>
 ```
 
 #### Failed Example 3
@@ -173,13 +145,9 @@ This `article` element has a `lang` [attribute value][] which has no [known prim
 This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus has no [known primary language tag][].
 
 ```html
-<html>
-	<body>
-		<article lang="  ">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</article>
-	</body>
-</html>
+	<article lang="  ">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</article>
 ```
 
 #### Failed Example 4
@@ -187,15 +155,11 @@ This `article` element has a `lang` [attribute value][] which consists of only [
 The `lang` [attribute value][] does not have a valid language tag. The `lang` attribute must be valid because the content is [visible][].
 
 ```html
-<html>
-	<body>
-		<article lang="english">
-			<p aria-hidden="true">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</p>
-		</article>
-	</body>
-</html>
+	<article lang="english">
+		<p aria-hidden="true">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</p>
+	</article>
 ```
 
 #### Failed Example 5
@@ -203,15 +167,11 @@ The `lang` [attribute value][] does not have a valid language tag. The `lang` at
 The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
 
 ```html
-<html>
-	<body>
-		<article lang="English">
-			<p style="position: absolute; top: -9999px">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</p>
-		</article>
-	</body>
-</html>
+	<article lang="English">
+		<p style="position: absolute; top: -9999px">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</p>
+	</article>
 ```
 
 #### Failed Example 6
@@ -219,15 +179,11 @@ The `lang` [attribute value][] does not have a valid language tag, and its [desc
 This `div` element has an invalid `lang` [attribute value][]. There is no [text inheriting its programmatic language][] from the `article` element, therefore its `lang` attribute is not considered by the rule.
 
 ```html
-<html>
-	<body>
-		<article lang="en">
-			<div lang="invalid">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</div>
-		</article>
-	</body>
-</html>
+	<article lang="en">
+		<div lang="invalid">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</div>
+	</article>
 ```
 
 #### Failed Example 7
@@ -235,13 +191,9 @@ This `div` element has an invalid `lang` [attribute value][]. There is no [text 
 This `div` element has an invalid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
 
 ```html
-<html>
-	<body>
-		<div lang="invalid">
-			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-		</div>
-	</body>
-</html>
+	<div lang="invalid">
+		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+	</div>
 ```
 
 #### Failed Example 8
@@ -249,11 +201,8 @@ This `div` element has an invalid `lang` [attribute value][]. The [accessible na
 The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, which has no [known primary language tag][].
 
 ```html
-<html lang="en">
-	<body>
-		<p lang="eng">I love ACT rules!</p>
-	</body>
-</html>
+	<p lang="eng">I love ACT rules!</p>
+
 ```
 
 #### Failed Example 9
@@ -261,11 +210,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], which has no [known primary language tag][].
 
 ```html
-<html lang="lb">
-	<body>
-		<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
-	</body>
-</html>
+	<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
 ```
 
 ### Inapplicable
@@ -275,11 +220,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 There is no element with a lang attribute value which is a descendant of a body element.
 
 ```html
-<html lang="en">
-	<body>
-		They wandered into a strange Tiki bar on the edge of the small beach town.
-	</body>
-</html>
+	They wandered into a strange Tiki bar on the edge of the small beach town.
 ```
 
 #### Inapplicable Example 2
@@ -287,13 +228,9 @@ There is no element with a lang attribute value which is a descendant of a body 
 There is no element which is a descendant of a `body` element and has a non-empty `lang` [attribute value][].
 
 ```html
-<html lang="en">
-	<body>
-		<article lang="">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</article>
-	</body>
-</html>
+	<article lang="">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</article>
 ```
 
 #### Inapplicable Example 3
@@ -301,15 +238,11 @@ There is no element which is a descendant of a `body` element and has a non-empt
 There is no element with a [text node][] as a [descendant][] in the [flat tree][] that is either [visible][] or [included in the accessibility tree][].
 
 ```html
-<html lang="en">
-	<body>
-		<p lang="hidden">
-			<span style="display: none;">
-				They wandered into a strange Tiki bar on the edge of the small beach town.
-			</span>
-		</p>
-	</body>
-</html>
+	<p lang="hidden">
+		<span style="display: none;">
+			They wandered into a strange Tiki bar on the edge of the small beach town.
+		</span>
+	</p>
 ```
 
 #### Inapplicable Example 4
@@ -317,13 +250,9 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 There is no [text inheriting its programmatic language][] from this `div` element.
 
 ```html
-<html lang="en">
-	<body>
-		<div lang="invalid">
-			<img src="/test-assets/shared/fireworks.jpg" alt="" />
-		</div>
-	</body>
-</html>
+	<div lang="invalid">
+		<img src="/test-assets/shared/fireworks.jpg" alt="" />
+	</div>
 ```
 
 #### Inapplicable Example 5
@@ -331,11 +260,7 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
 
 ```html
-<html lang="en">
-	<body>
-		<div lang="invalid"></div>
-	</body>
-</html>
+	<div lang="invalid"></div>
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'

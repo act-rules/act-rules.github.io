@@ -145,9 +145,9 @@ This `article` element has a `lang` [attribute value][] which has no [known prim
 This `article` element has a `lang` [attribute value][] which consists of only [whitespace][] and thus has no [known primary language tag][].
 
 ```html
-	<article lang="  ">
-		They wandered into a strange Tiki bar on the edge of the small beach town.
-	</article>
+<article lang="  ">
+	They wandered into a strange Tiki bar on the edge of the small beach town.
+</article>
 ```
 
 #### Failed Example 4

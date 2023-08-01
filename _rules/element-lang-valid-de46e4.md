@@ -227,9 +227,9 @@ There is no element with a lang attribute value which is a descendant of a body 
 There is no element which is a descendant of a `body` element and has a non-empty `lang` [attribute value][].
 
 ```html
-	<article lang="">
-		They wandered into a strange Tiki bar on the edge of the small beach town.
-	</article>
+<article lang="">
+	They wandered into a strange Tiki bar on the edge of the small beach town.
+</article>
 ```
 
 #### Inapplicable Example 3

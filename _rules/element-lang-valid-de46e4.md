@@ -101,11 +101,11 @@ This `p` element has a `lang` [attribute value][] which has a [known primary lan
 This `div` element has a valid `lang` [attribute value][]. There is no [text inheriting its programmatic language][] from the `article` element, therefore its `lang` attribute is not considered by the rule.
 
 ```html
-	<article lang="invalid">
-		<div lang="en">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</div>
-	</article>
+<article lang="invalid">
+	<div lang="en">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</div>
+</article>
 ```
 
 #### Passed Example 5

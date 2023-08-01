@@ -125,9 +125,9 @@ This `div` element has a valid `lang` [attribute value][]. The [accessible name]
 This `article` element has a `lang` [attribute value][] which does not have a [known primary language tag][] because its primary language subtag does not exist in the [language subtag registry][].
 
 ```html
-	<article lang="dutch">
-		Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
-	</article>
+<article lang="dutch">
+	Zij liepen een vreemde Tiki bar binnen, aan de rand van een dorpje aan het strand.
+</article>
 ```
 
 #### Failed Example 2

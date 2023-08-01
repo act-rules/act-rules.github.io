@@ -249,9 +249,9 @@ There is no element with a [text node][] as a [descendant][] in the [flat tree][
 There is no [text inheriting its programmatic language][] from this `div` element.
 
 ```html
-	<div lang="invalid">
-		<img src="/test-assets/shared/fireworks.jpg" alt="" />
-	</div>
+<div lang="invalid">
+	<img src="/test-assets/shared/fireworks.jpg" alt="" />
+</div>
 ```
 
 #### Inapplicable Example 5

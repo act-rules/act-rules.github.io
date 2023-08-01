@@ -209,7 +209,7 @@ The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three let
 The `lang` [attribute value][] of this `p` element is a [grandfathered tag][grandfathered tags], which has no [known primary language tag][].
 
 ```html
-	<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
+<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
 ```
 
 ### Inapplicable

@@ -219,7 +219,7 @@ The `lang` [attribute value][] of this `p` element is a [grandfathered tag][gran
 There is no element with a lang attribute value which is a descendant of a body element.
 
 ```html
-	They wandered into a strange Tiki bar on the edge of the small beach town.
+<p>They wandered into a strange Tiki bar on the edge of the small beach town.</p>
 ```
 
 #### Inapplicable Example 2

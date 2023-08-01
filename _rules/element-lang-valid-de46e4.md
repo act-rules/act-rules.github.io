@@ -81,9 +81,9 @@ This `article` element has a `lang` [attribute value][] which has a [known prima
 This `blockquote` element has a `lang` [attribute value][] which has a [known primary language tag][]. The region section ("CH") in the value is ignored by the rule (and the definition of [known primary language tag][]).
 
 ```html
-	<blockquote lang="fr-CH">
-		Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
-	</blockquote>
+<blockquote lang="fr-CH">
+	Ils ont trouvé un étrange bar Tiki aux abords de la petite ville balnéaire.
+</blockquote>
 ```
 
 #### Passed Example 3

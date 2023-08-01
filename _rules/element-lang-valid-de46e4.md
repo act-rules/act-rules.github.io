@@ -191,9 +191,9 @@ This `div` element has an invalid `lang` [attribute value][]. There is no [text 
 This `div` element has an invalid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
 
 ```html
-	<div lang="invalid">
-		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-	</div>
+<div lang="invalid">
+	<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+</div>
 ```
 
 #### Failed Example 8

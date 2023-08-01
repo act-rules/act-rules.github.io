@@ -113,9 +113,9 @@ This `div` element has a valid `lang` [attribute value][]. There is no [text inh
 This `div` element has a valid `lang` [attribute value][]. The [accessible name][] of the image is [text inheriting its programmatic language][] from the `div` element.
 
 ```html
-	<div lang="EN">
-		<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-	</div>
+<div lang="EN">
+	<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
+</div>
 ```
 
 ### Failed

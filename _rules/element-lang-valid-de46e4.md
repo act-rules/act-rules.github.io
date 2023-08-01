@@ -71,9 +71,9 @@ There are differences in how assistive technologies handle unknown and invalid l
 This `article` element has a `lang` [attribute value][] which has a [known primary language tag][].
 
 ```html
-	<article lang="en">
-		They wandered into a strange Tiki bar on the edge of the small beach town.
-	</article>
+<article lang="en">
+	They wandered into a strange Tiki bar on the edge of the small beach town.
+</article>
 ```
 
 #### Passed Example 2

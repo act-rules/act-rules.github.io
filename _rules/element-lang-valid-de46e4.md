@@ -91,9 +91,9 @@ This `blockquote` element has a `lang` [attribute value][] which has a [known pr
 This `p` element has a `lang` [attribute value][] which has a [known primary language tag][], but a syntactically invalid region subtag which is ignored by the rule.
 
 ```html
-	<p lang="en-US-GB">
-		They wandered into a strange Tiki bar on the edge of the small beach town.
-	</p>
+<p lang="en-US-GB">
+	They wandered into a strange Tiki bar on the edge of the small beach town.
+</p>
 ```
 
 #### Passed Example 4

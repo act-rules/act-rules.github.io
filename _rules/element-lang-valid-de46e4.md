@@ -201,8 +201,7 @@ This `div` element has an invalid `lang` [attribute value][]. The [accessible na
 The `lang` [attribute value][] of this `p` element is an [iso 639.2][] three letters code, which has no [known primary language tag][].
 
 ```html
-	<p lang="eng">I love ACT rules!</p>
-
+<p lang="eng">I love ACT rules!</p>
 ```
 
 #### Failed Example 9

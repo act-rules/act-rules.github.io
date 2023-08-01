@@ -237,11 +237,11 @@ There is no element which is a descendant of a `body` element and has a non-empt
 There is no element with a [text node][] as a [descendant][] in the [flat tree][] that is either [visible][] or [included in the accessibility tree][].
 
 ```html
-	<p lang="hidden">
-		<span style="display: none;">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</span>
-	</p>
+<p lang="hidden">
+	<span style="display: none;">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</span>
+</p>
 ```
 
 #### Inapplicable Example 4

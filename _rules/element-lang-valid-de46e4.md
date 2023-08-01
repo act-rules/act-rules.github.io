@@ -155,11 +155,11 @@ This `article` element has a `lang` [attribute value][] which consists of only [
 The `lang` [attribute value][] does not have a valid language tag. The `lang` attribute must be valid because the content is [visible][].
 
 ```html
-	<article lang="english">
-		<p aria-hidden="true">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</p>
-	</article>
+<article lang="english">
+	<p aria-hidden="true">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</p>
+</article>
 ```
 
 #### Failed Example 5

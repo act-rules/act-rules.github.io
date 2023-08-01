@@ -167,11 +167,11 @@ The `lang` [attribute value][] does not have a valid language tag. The `lang` at
 The `lang` [attribute value][] does not have a valid language tag, and its [descendant][] is not [visible][] though it is still [included in the accessibility tree][].
 
 ```html
-	<article lang="English">
-		<p style="position: absolute; top: -9999px">
-			They wandered into a strange Tiki bar on the edge of the small beach town.
-		</p>
-	</article>
+<article lang="English">
+	<p style="position: absolute; top: -9999px">
+		They wandered into a strange Tiki bar on the edge of the small beach town.
+	</p>
+</article>
 ```
 
 #### Failed Example 6

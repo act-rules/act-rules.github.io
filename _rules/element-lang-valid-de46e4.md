@@ -259,7 +259,7 @@ There is no [text inheriting its programmatic language][] from this `div` elemen
 The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
 
 ```html
-	<div lang="invalid"></div>
+<div lang="invalid"></div>
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'

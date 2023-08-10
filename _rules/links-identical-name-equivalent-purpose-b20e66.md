@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 wcag20:2.4.4: # Link Purpose (In Context) (A)
-secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider the context of the link. This is why some of the failed examples may not satisfy this success criterion.
+secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider the context of the link. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree

@@ -11,9 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.2.4: # Interruptions (AAA)
-    secondary: This success criterion is **stricter** than this rule. This is because the rule allows redirects longer than 20 hours. This is why some of the passed examples may not satisfy this success criterion.
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows redirects longer than 20 hours. Some of the passed examples do not satisfy this success criterion.
   wcag20:3.2.5: # Change on Request (AAA)
-    secondary: This success criterion is **stricter** than this rule. This is because the rule allows redirects longer than 20 hours. This is why some of the passed examples may not satisfy this success criterion.
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows redirects longer than 20 hours. Some of the passed examples do not satisfy this success criterion.
   wcag-technique:G110: # Using an instant client-side redirect
     forConformance: false
     failed: not satisfied

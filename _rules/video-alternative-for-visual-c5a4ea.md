@@ -11,9 +11,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
-    secondary: This success criterion is **stricter** than this rule. This is because the rule allows a media alternative in place of audio description. This is why some of the passed examples may not satisfy this success criterion.
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows a media alternative in place of audio description. Some of the passed examples do not satisfy this success criterion.
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
-    secondary: This success criterion is **stricter** than this rule. This is because the rule allows audio description in place of a media alternative. This is why some of the passed examples may not satisfy this success criterion.
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows audio description in place of a media alternative. Some of the passed examples do not satisfy this success criterion.
   wcag-technique:G8: # Providing a movie with extended audio descriptions
     forConformance: false
     failed: not satisfied

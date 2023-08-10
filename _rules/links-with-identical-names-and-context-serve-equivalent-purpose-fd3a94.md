@@ -11,7 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
-    secondary: This success criterion is **stricter** than this rule. This is because the rule also considers the context of the link, in addition to the link text. This is why some of the passed examples may not satisfy this success criterion.
+    secondary: This success criterion is **more strict** than this rule. This is because the rule also considers the context of the link, in addition to the link text. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling

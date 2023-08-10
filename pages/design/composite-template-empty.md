@@ -10,6 +10,8 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
+    secondary: This success criterion is ... 
   aria12:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false

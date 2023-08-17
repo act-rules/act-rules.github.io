@@ -1,9 +1,9 @@
 ---
 id: 0ssw9k
-name: Scrollable element is included in the sequential focus navigation
+name: Scrollable content can be reached with sequential focus navigation
 rule_type: atomic
 description: |
-  This rule checks that scrollable elements can be reached with sequential focus navigation so that they can be scrolled by keyboard
+  This rule checks that scrollable elements or their descendants can be reached with sequential focus navigation so that they can be scrolled by keyboard
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true

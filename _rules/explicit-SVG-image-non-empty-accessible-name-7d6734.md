@@ -30,7 +30,7 @@ Each target element has an [accessible name][] that is not empty.
 
 ## Assumptions
 
-This rule assumes that the presence of one of the roles outlined in the applicability indicates the authors intent to include the element in the accessibility tree and thus convey information to the user about that element.
+This rule assumes that the presence of one of the roles outlined in the applicability indicates the author's intent to include the element in the accessibility tree and thus convey information to the user about that element.
 
 ## Accessibility Support
 

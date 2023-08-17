@@ -1,6 +1,6 @@
 ---
 id: j7zzqr
-name: ARIA role is permitted.
+name: ARIA role is permitted for the element.
 rule_type: atomic
 description: |
   This rule checks that WAI-ARIA roles are allowed for the element they are specified on.
@@ -11,12 +11,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: satisfied
-  wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
-  wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
-  wcag-technique:ARIA4: # Using a WAI-ARIA role to expose the role of a user interface component
-    secondary: true
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -27,11 +21,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] that is [included in the accessibility tree][] and has an [explicit semantic role][explicit role].
+This rule applies to any [HTML element][namespaced element] which has an [explicit semantic role][explicit role].
 
 ## Expectation
 
-For each test target, its [explicit semantic role][explicit role] is allowed on this element, according to [ARIA in HTML specifications][aria in html document conformance].
+For each test target, its [explicit semantic role][explicit role] is allowed on this element, according to the [ARIA in HTML specification][aria in html document conformance].
 
 ## Assumptions
 
@@ -43,9 +37,9 @@ There are no accessibility support issues known.
 
 ## Background
 
-The presence of an invalid role often implies that the programmatic role do not correspond to the one that is conveyed visually, or that the interactions provided by the elements do not match the ones expected for this role. Therefore, both [Success Criterion 1.3.1 Info and Relationships][sc131] and [Success Criterion 4.1.2 Name, Role, Value][sc412] are secondary requirements for this rule.
-
 [ARIA in HTML][aria in html document conformance] also defines the [implicit semantic role][implicit role] of each element. Setting the [explicit role][] as the same as the [implicit one][implicit role] is not recommended but nonetheless allowed. This rule doesn't use that in any of its test cases.
+
+This rules apply to every element, even if they are not [included in the accessibility tree][]. This is because the roles of `none` or `presentation` are only allowed on certain elements. If the rule was only looking at content [included in the accessibility tree][], it wouldn't flag incorrect use of these roles. 
 
 ### Related rules
 
@@ -54,9 +48,6 @@ The presence of an invalid role often implies that the programmatic role do not 
 ### Bibliography
 
 - [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
-- [Understanding SC 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [Technique ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4)
 
 ## Test Cases
 
@@ -78,6 +69,23 @@ This `h1` element has an [explicit role][] of `tab`, which is allowed
 <h1 role="tab">ACT rules</h1>
 ```
 
+#### Passed Example 3
+
+These `hr` elements have an [explicit role][] of `presentation`, which is allowed
+
+```html
+Fruits:
+<ul>
+  <li>Apple
+    <hr role="presentation"/>
+  </li>
+  <li>Banana
+    <hr role="presentation"/>
+  </li>
+  <li>Orange</li>
+</ul>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -86,6 +94,42 @@ This `button` element has an [explicit role][] of `heading`, which is not allowe
 
 ```html
 <button role="heading">ACT rules</button>
+```
+
+#### Failed Example 2
+
+This `aside` element has an [explicit role][] of `navigation`, which is not allowed.
+
+```html
+<aside role="navigation">
+  <a href="https://www.w3.org">W3C</a> <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/"> ACT rules</a>
+</aside>
+```
+
+#### Failed Example 3 
+
+These `h1` elements have an [explicit role][] of `listitem`, which is not allowed; the `div` element has an [explicit role][] of `list`, which is allowed.
+
+```html
+Fruits:
+<div role="list">
+  <h1 role="listitem">Apple</h1>
+  <h1 role="listitem">Banana</h1>
+  <h1 role="listitem">Orange</h1>
+</div>
+```
+
+#### Failed Example 4
+
+The first `li` element has an [explicit role][] of `presentation`, which is not allowed.
+
+```html
+Fruits:
+<ul>
+  <li role="presentation">Apple</li>
+  <li>Banana</li>
+  <li>Orange</li>
+</ul>
 ```
 
 ### Inapplicable
@@ -120,6 +164,4 @@ This `a` element does not have an [explicit semantic role][]:.
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[namespaced element]: #namespaced-element
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value
+[namespaced element]: #namespaced-element 'Definition of Namespaced Element'

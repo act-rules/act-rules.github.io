@@ -12,6 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -55,17 +56,17 @@ When followed, the links in each set of target elements resolve to the [same res
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] and [context][programmatically determined link context] would not be ambiguous to users in general, which is the exception mentioned in [Success Criterion 2.4.4 Link Purpose (In Context)][sc244]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
-- This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name and context but resolve to different resources without failing [Success Criterion 2.4.4 Link Purpose (In Context)][sc244] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
+- This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name and same context but resolve to different resources without failing [Success Criterion 2.4.4 Link Purpose (In Context)][sc244] (if said links are in separate [documents][document] or [shadow trees][shadow tree])
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
 This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
 
-This rule specifically targets links within the exact same context. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously was not really possible and was left out of this rule.
+There is a difference between two contexts being the *same* and being *identical*. This rule specifically targets links within the *same* context. The same context means exactly the same set of DOM nodes. Identical (but not the same) contexts might have a different set of DOM nodes, but those DOM nodes have equivalent content - such as text content, attribute values, and so on. This difference is similar to the difference in some programming languages between pointer equivalence and deep object equivalence. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously has been deemed infeasible at this time, and so has been left out of this rule.
 
 ### Bibliography
 
@@ -373,7 +374,7 @@ These two `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even if the contexts have identical content, they are not the same (the same elements).
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even though the two contexts in this example are *identical*, they are not the *same*. That is: even though they have equivalent content, they do not consist of the same DOM elements.
 
 ```html
 <html lang="en">

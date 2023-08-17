@@ -44,7 +44,7 @@ A mechanism is available to start the video and that the video element is not si
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

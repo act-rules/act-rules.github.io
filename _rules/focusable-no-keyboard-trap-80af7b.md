@@ -41,18 +41,20 @@ This rule applies to any [HTML or SVG element][] that is [focusable][].
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is "passed":
 
-- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://act-rules.github.io/rules/a1b64e)
-- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://act-rules.github.io/rules/ebe86a)
+- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/a1b64e/proposed/)
+- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/ebe86a/proposed/)
 
 ## Assumptions
 
-_There are currently no assumptions._
+There are no assumptions.
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
+
+This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
 
 ### Bibliography
 
@@ -149,13 +151,14 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 
 #### Failed Example 1
 
-This [focusable][] element creates a keyboard trap bringing focus to the `button`.
+This [focusable][] element creates a keyboard trap bringing focus to the `button`. Note that if one of the links is removed, the focus may jump to the browser UI before the timeout expires, at which point the `this.focus()` trap cannot trigger anymore.
 
 ```html
 <a href="#">Link 1</a>
 <button onblur="setTimeout(() => this.focus(), 10)">
 	Button1
 </button>
+<a href="#">Link 2</a>
 ```
 
 #### Failed Example 2
@@ -273,3 +276,4 @@ There is no [focusable][] element.
 
 [focusable]: #focusable 'Definition of focusable'
 [html or svg element]: #namespaced-element
+[sc212]: https://www.w3.org/TR/WCAG21/#no-keyboard-trap 'Success Criterion 2.1.2 No Keyboard Trap'

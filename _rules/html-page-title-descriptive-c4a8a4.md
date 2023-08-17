@@ -3,7 +3,7 @@ id: c4a8a4
 name: HTML page title is descriptive
 rule_type: atomic
 description: |
-  This rule checks that the first title in an HTML page describes the topic or purpose of that page.
+  This rule checks that the first title in an HTML web page describes the topic or purpose of that page.
 accessibility_requirements:
   wcag20:2.4.2: # Page Titled (A)
     forConformance: true
@@ -37,10 +37,10 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the first [HTML][] `title` element that
+This rule applies to the [document title][] of each [html web page][], except if one of the following is true:
 
-- is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the `html` element of a [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), and
-- contains [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
+- The [html web page][] has no [document title][]; or
+- The [document title][] contains only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 
@@ -48,7 +48,7 @@ The target element describes the topic or purpose of the overall content of the 
 
 ## Assumptions
 
-- A prerequisite for this rule is that Technique H25: Providing a title using the title element is used for living up to 2.4.2 Page Titled
+There are currently no assumptions.
 
 ## Accessibility Support
 
@@ -62,7 +62,7 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 
 ### Related rules
 
-- [HTML page has non-empty title](https://act-rules.github.io/rules/2779a5)
+- [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/)
 
 ### Bibliography
 
@@ -76,7 +76,7 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 
 #### Passed Example 1
 
-This `<title>` element describes the content of the document.
+This `title` element describes the content of the document.
 
 ```html
 <html lang="en">
@@ -93,7 +93,7 @@ This `<title>` element describes the content of the document.
 
 #### Passed Example 2
 
-This `<title>` element, the first of two, describes the content of the document.
+This `title` element, the first of two, describes the content of the document.
 
 ```html
 <html lang="en">
@@ -111,7 +111,7 @@ This `<title>` element, the first of two, describes the content of the document.
 
 #### Passed Example 3
 
-This `<title>` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `<head>` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
+This `title` element, which is within the `body`, describes the content of the document. Even though it is not placed within the `head` element, as expected [according to the HTML specification](https://html.spec.whatwg.org/#the-title-element), the rule still passes because the browser fixes it and it doesn't cause any known accessibility issues.
 
 ```html
 <html lang="en">
@@ -129,7 +129,7 @@ This `<title>` element, which is within the `body`, describes the content of the
 
 #### Failed Example 1
 
-This `<title>` element does not describe the content of the document.
+This `title` element does not describe the content of the document.
 
 ```html
 <html lang="en">
@@ -146,7 +146,7 @@ This `<title>` element does not describe the content of the document.
 
 #### Failed Example 2
 
-This `<title>` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `<title>` element.
+This `title` element, the first of two, does not describe the content of the document. Most browsers, and this rule, only look at the first `title` element.
 
 ```html
 <html lang="en">
@@ -158,6 +158,22 @@ This `<title>` element, the first of two, does not describe the content of the d
 		<p>
 			Clementines will be ready to harvest from late October through February.
 		</p>
+	</body>
+</html>
+```
+
+#### Failed Example 3
+
+This page has a generic [document title][]. The title contains the website name, but does not describe the page.
+
+```html
+<html lang="en">
+	<head>
+		<title>University of Arkham</title>
+	</head>
+	<body>
+		<h1>Search results for "accessibility" at the University of Arkham</h1>
+		<p>None</p>
 	</body>
 </html>
 ```
@@ -175,4 +191,5 @@ This `title` element is a child of an `svg` element.
 </svg>
 ```
 
-[html]: #namespaced-element
+[document title]: https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2 'HTML definition of Document Title'
+[html web page]: #web-page-html 'Definition of Web Page (HTML)'

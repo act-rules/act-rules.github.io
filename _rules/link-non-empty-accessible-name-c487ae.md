@@ -17,6 +17,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
+    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -25,6 +26,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.1.1: # Non-text content (A)
+    secondary: true
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -57,16 +60,17 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Accessibility Support
 
-- There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
 
 ## Background
 
+The HTML `area` element is both a link and non-text content. When this rule fails on `area` elements [success criterion 1.1.1 Non-text content][sc111] is not satisfied.
+
 ### Related rules
 
-- [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+- [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/proposed/)
 
 ### Bibliography
 
@@ -361,3 +365,4 @@ This `a` element does not have the role of link because it does not have an `hre
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [attribute value]: #attribute-value 'Definition of Attribute value'
 [html element]: #namespaced-element
+[sc111]: https://www.w3.org/TR/WCAG21/#non-text-content

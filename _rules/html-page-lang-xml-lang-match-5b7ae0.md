@@ -1,6 +1,6 @@
 ---
 id: 5b7ae0
-name: HTML page lang and xml:lang attributes have matching values
+name: DEPRECATED — HTML page lang and xml:lang attributes have matching values
 rule_type: atomic
 description: |
   This rule checks that both `lang` and `xml:lang` attributes on the root element of a non-embedded HTML page, have the same primary language subtag.
@@ -12,6 +12,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
+deprecated: |
+  This rule has been deprecated, as modern screen readers no longer use xml:lang when the lang attribute is given, regardless of which MIME type the page is served with. This rule is not maintained anymore and should not be used.
 acknowledgments:
   authors:
     - Jey Nandakumar

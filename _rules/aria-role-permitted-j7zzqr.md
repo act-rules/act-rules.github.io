@@ -160,7 +160,7 @@ This `a` element does not have an [explicit semantic role][]:.
 <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">All ACT rules</a>
 ```
 
-[aria in html document conformance]: https://www.w3.org/TR/html-aria/#docconformance 'ARIA is HTML, Document conformance requirements for use of ARIA attributes in HTML'
+[aria in html document conformance]: https://www.w3.org/TR/html-aria/#docconformance 'ARIA in HTML, Document conformance requirements for use of ARIA attributes in HTML'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

@@ -97,7 +97,7 @@ This button has [visible][] text that is contained within the [accessible name][
 
 #### Passed Example 5
 
-This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this example passes this rule because  characters in the text nodes used to express non-text content are not included in the Expectation, but it would need to meet SC 1.1.1 Non text content.
 
 ```html
 <button aria-label="close">X</button>
@@ -141,6 +141,22 @@ This link has [visible][] text with mathematical symbols, that does not match th
 
 ```html
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
+```
+
+#### Failed Example 4
+
+This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name. 
+
+```html
+<a href="#" aria-label="non-standard">nonstandard</a>
+```
+
+#### Failed Example 5
+
+This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name. 
+
+```html
+<a aria-label="Call 1 2 3. 4 5 6. 7 8 9 0." href="tel:1234567890">123.456.7890</a>
 ```
 
 ### Inapplicable

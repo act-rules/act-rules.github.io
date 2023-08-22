@@ -16,9 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationship (A)
-    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. This is why some of the failed examples may satisfy this success criterion.
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. Some of the failed examples may satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. This is why some of the failed examples may satisfy this success criterion.
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling

@@ -26,7 +26,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.1.1: # Non-text content (A)
-    secondary: This success criterion is **related** to this rule. This happens for HTML `area` elements which are both links and as non-text content. Most failed examples satisfy this success criterion.
+    secondary: This success criterion is **related** to this rule. This is because HTML `area` elements are both links and non-text content. Most failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree

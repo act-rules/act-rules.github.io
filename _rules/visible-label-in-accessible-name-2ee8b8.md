@@ -38,7 +38,7 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-For each target element, all and only the [text nodes][] in the [visible text content][] either match or are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+For each target element, all the [text nodes][] in the [visible text content][] match in sequence and are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -97,10 +97,10 @@ This button has [visible][] text that is contained within the [accessible name][
 
 #### Passed Example 5
 
-This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this example passes this rule because  characters in the text nodes used to express non-text content are not included in the Expectation, but it would need to meet SC 1.1.1 Non text content.
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
-<button aria-label="close">X</button>
+<button aria-label="anything">X</button>
 ```
 
 #### Passed Example 6

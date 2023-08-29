@@ -65,11 +65,11 @@ List all accessibility requirements that are not satisfied if one or more outcom
 
 Accessibility requirements should be listed as secondary if the requirement is related to the rule. There are four scenarios:
 
-1. The requirement is less strict than the rule. If this occurs, and some but not all failed examples of the rule pass the accessibility requirement, the following test should be used:
+1. The requirement is less strict than the rule. If this occurs, and some but not all failed examples of the rule pass the accessibility requirement, the following text should be used:
 
    > This success criterion is **less strict** than this rule. This is because {reason}. Some of the failed examples satisfy this success criterion.
 
-1. The requirement is more strict than the rule. If this occurs, and some but not all passed examples of the rule fail the accessibility requirement, the following test should be used:
+1. The requirement is more strict than the rule. If this occurs, and some but not all passed examples of the rule fail the accessibility requirement, the following text should be used:
 
    > secondary: This success criterion is **more strict** than this rule. This is because {reason}. Some of the passed examples do not satisfy this success criterion.
 

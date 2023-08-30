@@ -83,19 +83,11 @@ This `div` element with a role of `textbox` has multiple `aria-` attributes whic
 
 #### Passed Example 4
 
-This `input` element with a role of `spinbutton` has multiple `aria-` attributes specified which are all defined in [WAI-ARIA Specifications][].
+This `input` element with a type of `number` has multiple `aria-` attributes specified which are all defined in [WAI-ARIA Specifications][].
 
 ```html
 <label for="spinbutton">Enter a number between 0 and 100:</label>
-<input
-	id="spinbutton"
-	role="spinbutton"
-	aria-valuemax="100"
-	aria-valuemin="0"
-	aria-valuenow="25"
-	type="number"
-	value="25"
-/>
+<input id="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />
 ```
 
 ### Failed

@@ -6,9 +6,9 @@ description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.2.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -36,7 +36,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
+The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
 
 ### Bibliography
 
@@ -122,5 +122,3 @@ This `canvas` element does not have an `aria-` attribute specified.
 ```
 
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

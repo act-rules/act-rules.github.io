@@ -32,7 +32,7 @@ This rule applies to any `aria-controls` attribute defined on an [HTML element][
 
 ## Expectation
 
-Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree]
+Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree].
 
 ## Assumptions
 

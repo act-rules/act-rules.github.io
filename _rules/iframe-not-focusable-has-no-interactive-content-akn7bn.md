@@ -135,20 +135,22 @@ This `iframe` element is [inert][] because of its own `inert` [attribute value][
 Once the "Privacy policy details" button is activated, the `iframe` element becomes [inert][] because of the showModal() method, which causes the `iframe` to be [blocked by a modal].
 
 ```html
-<iframe tabindex="-1" srcdoc="<a href='/'>Home</a>"></iframe>
+<iframe id="myFrame" title="Links" srcdoc="<a href='/'>Home</a>"></iframe>
 <div>
-    <button id="ppDetails">Privacy policy details</button>
+	<button id="ppButton" onclick="openDialog()">Privacy policy details</button>
 </div>
 <dialog id="ppDialog" aria-labelledby="dialogLabel">
-    <h2 id="dialogLabel">Privacy Policy</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <button id="cancel">Cancel</button>
+	<h2 id="dialogLabel">Privacy Policy</h2>
+	<p>We store no data.</p>
+	<button id="cancel" onclick="ppDialog.close()">Cancel</button>
 </dialog>
-<script>    
-			const dialog = document.getElementById("ppDialog");
-			window.addEventListener('load', function(event) {
-    			dialog.showModal();
-			});
+<script>
+	const openDialog = () => {
+		ppDialog.showModal();
+		myFrame.tabIndex = '-1'
+	}
+	ppDialog.addEventListener('close', () => myFrame.tabIndex = 0)
+	window.addEventListener('DOMContentLoaded', openDialog);
 </script>
 ```
 

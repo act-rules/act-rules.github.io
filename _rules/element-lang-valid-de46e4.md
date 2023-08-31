@@ -184,7 +184,7 @@ This `article` element has a `lang` [attribute value][] which consists of only [
 
 #### Failed Example 4
 
-The `lang` [attribute value][] does not have a valid language tag. Even though its descendant `p` element is not [included in the accessibility tree][] due to the presence of the `aria-hidden="true"` attribute, the content of the `p` element is still [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
+The `lang` [attribute value][] does not have a valid language tag. Even though the `p` element is not [included in the accessibility tree][] due to the presence of the `aria-hidden="true"` attribute, it is [visible][]; therefore its content is [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
 
 ```html
 <html>
@@ -200,7 +200,7 @@ The `lang` [attribute value][] does not have a valid language tag. Even though i
 
 #### Failed Example 5
 
-The `lang` [attribute value][] does not have a valid language tag. Even though its descendant `p` element is not [visible][] due to the CSS properties set, the content of the `p` element is still [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
+The `lang` [attribute value][] does not have a valid language tag. Even though the `p` element is not [visible][] due to the being moved off-screen, it is [included in the accessibility tree][]; therefore its content is [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
 
 ```html
 <html>

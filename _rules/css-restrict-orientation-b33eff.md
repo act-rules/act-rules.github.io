@@ -17,6 +17,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---

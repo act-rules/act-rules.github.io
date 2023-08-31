@@ -14,6 +14,7 @@ const whitelist = [
 	/^#expectation(-[1-9][0-9]*)?$/,
 	/^#assumptions$/,
 	/^#accessibility-support$/,
+	/^#accessibility-requirements-mapping$/,
 	/^#background$/,
 	/^#test-cases$/,
 	/^#passed(-example-[1-9][0-9]*)?$/,

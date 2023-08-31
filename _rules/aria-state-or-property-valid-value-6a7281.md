@@ -52,7 +52,7 @@ This rule does not require the target of an `ID Reference` to exist. This is bec
 
 ### Related rules
 
-- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/proposed/)
+- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/)
 
 ### Bibliography
 

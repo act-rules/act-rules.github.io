@@ -41,8 +41,8 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `audio` e
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Audio` Element Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/2eb176/proposed/)
-- [`Audio` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/afb423/proposed/)
+- [`Audio` Element Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/2eb176/)
+- [`Audio` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/afb423/)
 
 ## Assumptions
 

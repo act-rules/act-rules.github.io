@@ -47,8 +47,8 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/proposed/)
-- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/proposed/)
+- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/)
+- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/)
 
 ## Assumptions
 

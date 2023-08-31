@@ -22,6 +22,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -36,7 +37,7 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation 1
 
-Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
+Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, which is a [`cell`][] of the same [`table`][] and is a `th` element.
 
 ## Expectation 2
 
@@ -110,14 +111,14 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 
 #### Passed Example 3
 
-The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
+The `headers` attribute on the data cells in the second row refers to a `th` element with a role of `columnheader` within the same `table`.
 
 ```html
 <table>
 	<thead>
 		<tr>
-			<td role="columnheader" id="header1">Projects</td>
-			<td role="columnheader" id="header2">Objective</td>
+			<th role="columnheader" id="header1">Projects</th>
+			<th role="columnheader" id="header2">Objective</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -280,7 +281,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 
 #### Failed Example 4
 
-The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
+The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which is not a [`cell`][] nor a `th` element.
 
 ```html
 <table>

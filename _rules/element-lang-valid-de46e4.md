@@ -200,7 +200,7 @@ The `lang` [attribute value][] does not have a valid language tag. Even though t
 
 #### Failed Example 5
 
-The `lang` [attribute value][] does not have a valid language tag. Even though the `p` element is not [visible][] due to the being moved off-screen, it is [included in the accessibility tree][]; therefore its content is [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
+The `lang` [attribute value][] does not have a valid language tag. Even though the `p` element is not [visible][] due to it being moved off-screen, it is [included in the accessibility tree][]; therefore its content is [text inheriting its programmatic language][] from the `article` element. Hence, the lang attribute must be valid.
 
 ```html
 <html>

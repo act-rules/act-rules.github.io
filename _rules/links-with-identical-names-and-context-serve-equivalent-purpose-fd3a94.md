@@ -125,7 +125,7 @@ These two HTML `a` elements have the same non-empty [accessible name][], empty [
 
 #### Passed Example 4
 
-These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and resolve to pages that serve the same purpose because the content section is the same.
+These two HTML `a` elements have the same [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and resolve to pages that serve the same purpose because the content section is the same.
 
 ```html
 <html lang="en">
@@ -141,7 +141,7 @@ These two HTML `a` elements have the same [accessible name][], the same [accessi
 
 #### Passed Example 5
 
-These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and go to pages that fulfill the same purpose in relation to the link because they contain the same relevant information.
+These two HTML `a` elements have the same [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and go to pages that fulfill the same purpose in relation to the link because they contain the same relevant information.
 
 ```html
 <html lang="en">
@@ -156,7 +156,7 @@ These two HTML `a` elements have the same [accessible name][], the same [accessi
 
 #### Passed Example 6
 
-These two HTML `a` elements have the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and go to pages that use different layouts but have the same purpose.
+These two HTML `a` elements have the same [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and go to pages that use different layouts but have the same purpose.
 
 ```html
 <html lang="en">
@@ -172,7 +172,7 @@ These two HTML `a` elements have the same [accessible name][], the same [accessi
 
 #### Passed Example 7
 
-These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], the same [accessible description][], the same [context][programmatically determined link context], and link to the [same resource][].
+These two HTML `span` elements have an [explicit role][] of link, the same [accessible name][], empty [accessible description][], the same [context][programmatically determined link context], and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -198,7 +198,7 @@ These two HTML `span` elements have an [explicit role][] of link, the same [acce
 
 #### Passed Example 8
 
-These two SVG `a` and HTML `a` elements have the same [accessible name][], same [accessible description][], same [context][programmatically determined link context] and link to the [same resource][].
+These two SVG `a` and HTML `a` elements have the same [accessible name][], empty [accessible description][], same [context][programmatically determined link context] and link to the [same resource][].
 
 ```html
 <html lang="en">
@@ -232,7 +232,7 @@ These two HTML `a` elements have the same [accessible name][], the same [accessi
 
 #### Failed Example 2
 
-These two HTML `a` elements have the same [accessible name][], [accessible description][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content.
 
 ```html
 <html lang="en">
@@ -359,7 +359,7 @@ These two HTML `a` elements have the same [accessible names][accessible name] bu
 
 #### Inapplicable Example 4
 
-These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
+These two HTML `a` elements have the same [accessible name][], , the same [accessible description][], and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context].
 
 ```html
 <html lang="en">
@@ -396,7 +396,7 @@ These two `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 6
 
-These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even though the two contexts in this example are *identical*, they are not the *same*. That is: even though they have equivalent content, they do not consist of the same DOM elements.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even though the two contexts in this example are *identical*, they are not the *same*. That is: even though they have equivalent content, they do not consist of the same DOM elements.
 
 ```html
 <html lang="en">
@@ -413,7 +413,7 @@ These two HTML `a` elements have the same [accessible name][] and link to the [s
 
 #### Inapplicable Example 7
 
-These two HTML `a` elements have the same [accessible name][] but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
+These two HTML `a` elements have the same [accessible name][], the same [accessible description][], but different [programmatically determined link contexts][programmatically determined link context] because the `div` elements place them in different display blocks.
 
 ```html
 <div><a href="https://www.w3.org/WAI/">Read more</a> about the W3C WAI</div>

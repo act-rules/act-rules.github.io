@@ -1,6 +1,6 @@
 ---
 id: f51b46
-name: Video element auditory content has captions
+name: '`video` element auditory content has captions'
 rule_type: atomic
 description: |
   This rule checks that captions are available for audio information in non-streaming `video` elements.
@@ -31,13 +31,11 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output) that is not only silence.
+This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output).
 
 ## Expectation
 
@@ -51,7 +49,7 @@ This rule assumes that the video element is used to play a video (for example, n
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 
@@ -68,7 +66,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-A video element that has open captions for all of the audio content.
+A video element that has captions for all the audio baked into it.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video-with-captions.mp4" controls></video>
@@ -76,7 +74,7 @@ A video element that has open captions for all of the audio content.
 
 #### Passed Example 2
 
-A video element with an associated track element that contains captions for all of the audio content.
+A video element with an associated track element that contain captions for all the audio.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>
@@ -96,7 +94,7 @@ A video element without any form of captions.
 
 #### Failed Example 2
 
-A video element with an associated track element that contains incorrect captions. Specifically, the captions flip the role of the mouse and computer by saying, "Not being able to use your mouse because your computer doesn't work is frustrating."
+A video element with an associated track element that contain incorrect captions.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>
@@ -106,7 +104,7 @@ A video element with an associated track element that contains incorrect caption
 
 #### Failed Example 3
 
-A video element with text on the same page that describes the audio in the video.
+A video element with a text on the same page that described the audio in the video.
 
 ```html
 <p>
@@ -119,7 +117,7 @@ A video element with text on the same page that describes the audio in the video
 
 #### Failed Example 4
 
-A video element with an explicitly associated text on the same page that describes the audio in the video.
+A video element with an explicitly associated text on the same page that described the audio in the video.
 
 ```html
 <p id="text">

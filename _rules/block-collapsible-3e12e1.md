@@ -36,11 +36,11 @@ For each [block of repeated content][] in each test target, which is before (in 
 
 ## Assumptions
 
-There are no assumptions.
+_No assumptions._
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

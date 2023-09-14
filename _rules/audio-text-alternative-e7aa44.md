@@ -1,9 +1,9 @@
 ---
 id: e7aa44
-name: Audio element content has text alternative
+name: '`audio` element content has text alternative'
 rule_type: composite
 description: |
-  This rule checks that `audio` elements have a text alternative available.
+  This rule checks if audio only elements have a text alternative available.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
@@ -18,6 +18,7 @@ accessibility_requirements:
 input_rules:
   - 2eb176
   - afb423
+  - 213x3x
 acknowledgments:
   authors:
     - Brian Bors
@@ -26,23 +27,24 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
 
-This rule applies to any [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
+This rule applies to any `audio` element that is:
 
-- has an `autoplay` [attribute value][] of true; or,
-- has a [play button][] that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
+- playing; or,
+- has a "play button" that is [visible][] and [included in the accessibility tree](#included-in-the-accessibility-tree).
+
+**Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Audio` Element Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/2eb176/proposed/)
-- [`Audio` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/afb423/proposed/)
+- [`Audio` Element Content Has Transcript](https://act-rules.github.io/rules/2eb176)
+- [`Audio` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/afb423)
+- [`Audio` Element Plays Live Content](https://act-rules.github.io/rules/213x3x)
 
 ## Assumptions
 
@@ -50,7 +52,7 @@ This rule assumes that the language of each test target can be correctly determi
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 
@@ -65,7 +67,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-This `audio` element has a play button, and there is a transcript of the audio.
+Audio with controls and internal transcript
 
 ```html
 <html lang="en">
@@ -81,7 +83,7 @@ This `audio` element has a play button, and there is a transcript of the audio.
 
 #### Passed Example 2
 
-This `audio` element has a play button, and the text on the page labels the audio as an alternative.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
 ```html
 <html lang="en">
@@ -98,15 +100,17 @@ This `audio` element has a play button, and the text on the page labels the audi
 </html>
 ```
 
-#### Passed Example 3
+### Failed
 
-This `audio` element autoplays, and there is a transcript of the audio.
+#### Failed Example 1
+
+Audio with controls and incorrect internal transcript
 
 ```html
 <html lang="en">
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p>
-		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
+		The above audio contains the following speech: We choose to go to the cheese in this decade and do the other things,
 		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
 		postpone, and one which we intend to win, and the others, too.
@@ -114,27 +118,9 @@ This `audio` element autoplays, and there is a transcript of the audio.
 </html>
 ```
 
-### Failed
-
-#### Failed Example 1
-
-This `audio` element has a play button but has an incorrect transcript.
-
-```html
-<html lang="en">
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<p>
-		The above audio contains the following speech: We are going to the North Pole in this decade with puppies, not
-		because they are easy, but because they are cute, because that goal will serve to organize and measure the best of
-		our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
-		postpone, and one which we intend to win, and the others, too.
-	</p>
-</html>
-```
-
 #### Failed Example 2
 
-This `audio` element autoplays but the text transcript is not [visible][] on the page.
+An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -147,7 +133,7 @@ This `audio` element autoplays but the text transcript is not [visible][] on the
 	<p>
 		You can also listen to the audio file below to hear the above part of the speech.
 	</p>
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay controls></audio>
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 </html>
 ```
 
@@ -155,7 +141,7 @@ This `audio` element autoplays but the text transcript is not [visible][] on the
 
 #### Inapplicable Example 1
 
-This `audio` element does not autoplay or have a play button.
+Audio without controls.
 
 ```html
 <html lang="en">
@@ -165,7 +151,7 @@ This `audio` element does not autoplay or have a play button.
 
 #### Inapplicable Example 2
 
-This `audio` element is labeled as an alternative by text on the same page, but the controls are not [visible][] on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -195,11 +181,9 @@ This `a` element links to an audio file, but there is no `audio` element on this
 		postpone, and one which we intend to win, and the others, too.
 	</p>
 	<p>
-		<a href="/test-assets/moon-audio/moon-speech.mp3">Download the speech as MP3</a>
+		<a href="/test-assets/moon-audio/moon-speech.mp3">Download the speach as MP3</a>
 	</p>
 </html>
 ```
 
-[attribute value]: #attribute-value 'Definition of Attribute Value'
-[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

@@ -1,6 +1,6 @@
 ---
 id: fd26cf
-name: Video element visual-only content is media alternative for text
+name: '`video` element visual-only content is media alternative for text'
 rule_type: atomic
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
@@ -16,8 +16,6 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -30,15 +28,20 @@ All the information contained in each target element is available as text (direc
 
 ## Expectation 2
 
-Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as a video alternative for text on the page.
+
+## Expectation 3
+
+The label (from expectation 2) is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 

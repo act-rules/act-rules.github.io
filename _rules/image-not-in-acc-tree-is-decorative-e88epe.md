@@ -59,7 +59,7 @@ Each test target is [purely decorative][].
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_No accessibility support issues known._
 
 ## Background
 
@@ -196,7 +196,7 @@ This `canvas` element which has no [semantic role][] and an empty (`""`) [access
 This `img` element is [included in the accessibility tree][] because the `alt` attribute is not empty (`""`).
 
 ```html
-<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 ```
 
 #### Inapplicable Example 2

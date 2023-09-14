@@ -16,8 +16,6 @@
 - xhtml
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
-- Iframe
-- iframes
 - feImage
 
 # Domain-specific words, Definitions & other allowed terms
@@ -85,8 +83,10 @@
 - iso # lowercase needed in reference list
 - RFC
 - rfc
-- webauthn
-- customizable
+- MediaStream
+- MediaStreamTrack
+- enable-blink-features=WebCodecs
+- MediaStreamInsertableStreams
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -142,7 +142,6 @@
 - Yu
 - Sumei
 - Tuttle
-- lnik # intentional misspelling
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -212,8 +211,6 @@
 - autofill
 - dismissible
 - implementers
-- implementor
-- implementors
 - presentational
 - backtick
 - camelCase
@@ -227,13 +224,12 @@
 - unicity
 - Menuitem
 - menuitems
+- broadcasted
 - namespaced-element
 - Namespaced
 - namespaceURI
 - testability
-- focusability
-- unitless
-- luminance
+- seekable
 
 # Parts of Unicode
 - 000A
@@ -251,8 +247,6 @@
 - TestSubject
 - earl:cantTell
 - getComputedPriority
-- isPartOf
-- scId
 
 # sizes
 - 1em
@@ -276,10 +270,3 @@
 # Color values
 - HSL
 - hsl
-- 0000EE
-
-# Variables used in definitions / descriptions
-- A-lum-max
-- A-lum-min
-- B-lum-max
-- B-lum-min

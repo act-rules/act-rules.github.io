@@ -1,6 +1,6 @@
 ---
 id: aaa1bf
-name: Audio or video element that plays automatically has no audio that lasts more than 3 seconds
+name: '`Audio` or `video` that plays automatically has no audio that lasts more than 3 seconds'
 rule_type: atomic
 description: |
   `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
@@ -21,9 +21,6 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
-  assets:
-    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
-    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -43,11 +40,11 @@ For each test target the total audio output does not last more than 3 seconds.
 
 ## Assumptions
 
-There are no assumptions.
+_There are currently no assumptions_
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

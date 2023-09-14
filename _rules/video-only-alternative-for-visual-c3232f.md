@@ -1,6 +1,6 @@
 ---
 id: c3232f
-name: Video element visual-only content has accessible alternative
+name: '`video` element visual-only content has accessible alternative'
 rule_type: composite
 description: |
   This rule checks that `video` elements without audio have an alternative available.
@@ -32,9 +32,6 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
-    - Web Accessibility Perspective videos by W3C WAI.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -49,9 +46,9 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual-Only Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/fd26cf/proposed/)
-- [`Video` Element Visual-Only Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/ee13b5/proposed/)
-- [`Video` Element Visual-Only Content Has Audio Track Alternative](https://www.w3.org/WAI/standards-guidelines/act/rules/d7ba54/proposed/)
+- [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf)
+- [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5)
+- [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54)
 
 ## Assumptions
 
@@ -76,7 +73,7 @@ The HTML `video` element can also have a `track` element that provides an audio 
 
 #### Passed Example 1
 
-This `video` element, which has no audio, has a text transcript available on the same page. Thus, it passes rule [`Video` Element Visual-Only Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/ee13b5/proposed/).
+This `video` element, which has no audio, has a text transcript available on the same page. Thus, it passes rule [`Video` Element Visual-Only Content Has Transcript](https://act-rules.github.io/rules/ee13b5).
 
 ```html
 <html lang="en">
@@ -92,7 +89,7 @@ Then he stops to scratch his bottom.</p>
 
 #### Passed Example 2
 
-This `video` element, which has no audio, has a separate audio track that describes the visual information. Thus, it passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://www.w3.org/WAI/standards-guidelines/act/rules/d7ba54/proposed/).
+This `video` element, which has no audio, has a separate audio track that describes the visual information. Thus, it passes rule [`Video` Element Visual-Only Content Has Audio Track Alternative](https://act-rules.github.io/rules/d7ba54).
 
 ```html
 <html lang="en">
@@ -109,7 +106,7 @@ This `video` element, which has no audio, has a separate audio track that descri
 
 #### Passed Example 3
 
-This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. Thus, it passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/fd26cf/proposed/).
+This `video` element, which has no audio, is a media alternative for the text in the page and labeled as such. Thus, it passes rule [`Video` Element Visual-Only Content Is Media Alternative For Text](https://act-rules.github.io/rules/fd26cf).
 
 ```html
 <html lang="en">

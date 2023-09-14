@@ -54,11 +54,11 @@ Each test target has an [accessible name][] that serves an equivalent purpose to
 
 ## Assumptions
 
-There are no assumptions.
+This rule assumes that the language of the [accessible name][] of each test target can be correctly determined (either programmatically or by analyzing the content).
 
 ## Accessibility Support
 
-Some popular browser / screen reader combinations do not pronounce the accessible names of `svg` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -79,17 +79,17 @@ This `img` element has an `alt` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" />
 </html>
 ```
 
 #### Passed Example 2
 
-This `svg` element has an `aria-label` attribute that describes the HTML5 logo image. 
+This `svg` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="HTML 5 logo" role="img">
+	<svg viewBox="0 0 512 512" aria-label="HTML 5">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -106,18 +106,15 @@ This `svg` element has an `aria-label` attribute that describes the HTML5 logo i
 
 #### Passed Example 3
 
-This `canvas` element has an `aria-label` attribute that describes the W3C logo image.
+This `canvas` element has an `aria-label` attribute that describes the image.
 
 ```html
 <html lang="en">
-	<canvas id="logo" width="72" height="48" aria-label="W3C logo"></canvas>
+	<canvas id="act" width="200" height="60" aria-label="ACT Rules!"></canvas>
 	<script>
-		const img = new Image()
-		img.src = '/test-assets/shared/w3c-logo.png'
-		img.onload = function() {
-			const ctx = document.querySelector('#logo').getContext('2d')
-			ctx.drawImage(img, 0, 0)
-		}
+		const ctx = document.querySelector('#act').getContext('2d')
+		ctx.font = '30px Arial'
+		ctx.fillText('ACT Rules!', 20, 40)
 	</script>
 </html>
 ```
@@ -130,17 +127,17 @@ This `img` element has an `alt` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM logo" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="ERCIM" />
 </html>
 ```
 
 #### Failed Example 2
 
-This `svg` element has an `aria-label` attribute that incorrectly describes the image (the `aria-label` is "W3C" but the actual image is the HTML5 logo).
+This `svg` element has an `aria-label` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
-	<svg viewBox="0 0 512 512" aria-label="W3C" role="img">
+	<svg viewBox="0 0 512 512" aria-label="W3C">
 		<path
 			d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"
 		/>
@@ -157,18 +154,15 @@ This `svg` element has an `aria-label` attribute that incorrectly describes the 
 
 #### Failed Example 3
 
-This `canvas` element has an `aria-label` attribute that incorrectly describes the image (the `aria-label` is "HTML5 logo" but the actual image is the W3C logo).
+This `canvas` element has an `aria-label` attribute that incorrectly describes the image.
 
 ```html
 <html lang="en">
-	<canvas id="logo" width="72" height="48" aria-label="HTML 5 logo"></canvas>
+	<canvas id="act" width="200" height="60" aria-label="HTML 5"></canvas>
 	<script>
-		const img = new Image()
-		img.src = '/test-assets/shared/w3c-logo.png'
-		img.onload = function() {
-			const ctx = document.querySelector('#logo').getContext('2d')
-			ctx.drawImage(img, 0, 0)
-		}
+		const ctx = document.querySelector('#act').getContext('2d')
+		ctx.font = '30px Arial'
+		ctx.fillText('ACT Rules!', 20, 40)
 	</script>
 </html>
 ```
@@ -189,7 +183,6 @@ This decorative `img` element has an empty (`""`) [accessible name][] because it
 
 ```html
 <html lang="en">
-	<p>Happy new year!</p>
 	<img src="/test-assets/shared/fireworks.jpg" role="presentation" />
 </html>
 ```
@@ -235,7 +228,7 @@ This `img` element is not [visible][].
 
 ```html
 <html lang="en">
-	<img src="/test-assets/shared/w3c-logo.png" alt="W3C logo" style="display:none" />
+	<img src="/test-assets/shared/w3c-logo.png" alt="W3C" style="display:none" />
 </html>
 ```
 
@@ -295,7 +288,6 @@ This is a `div` element with a background image. Background images must be teste
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[explicit semantic role]: #explicit-role
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG 2.1 definition of non-text content'

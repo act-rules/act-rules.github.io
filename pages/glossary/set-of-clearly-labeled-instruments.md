@@ -2,7 +2,7 @@
 title: Set of clearly labeled instruments
 key: set-of-clearly-labeled-instruments
 unambiguous: true
-objective: false
+objective: true
 ---
 
 A _set of clearly labeled instruments_ is a set of [instruments][instrument], where each [instrument][] is in the same [web page][] as the test target or can be found in a [clearly labeled location][] from that [web page][].

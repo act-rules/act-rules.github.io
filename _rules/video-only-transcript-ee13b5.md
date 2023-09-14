@@ -1,6 +1,6 @@
 ---
 id: ee13b5
-name: Video element visual-only content has transcript
+name: '`video` element visual-only content has transcript'
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
@@ -22,8 +22,6 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -36,15 +34,16 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available in a text transcript that is available either on the page or through a link. The text transcript needs to be [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 

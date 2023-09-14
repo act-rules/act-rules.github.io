@@ -10,8 +10,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-wcag20:2.4.4: # Link Purpose (In Context) (A)
-secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider the context of the link. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -49,6 +47,7 @@ When followed, the links in each set of target elements resolve to the [same res
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
@@ -386,7 +385,7 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 [matching]: #matching-characters 'Definition of matching characters'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [same resource]: #same-resource 'Definition of same resource'
-[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
+[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (link only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

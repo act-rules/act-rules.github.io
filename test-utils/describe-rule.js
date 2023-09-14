@@ -1,6 +1,5 @@
 const { contributors } = require('../package.json')
 const getMarkdownData = require('../utils/get-markdown-data')
-const getIds = require('../utils/get-ids')
 const rulesData = getMarkdownData(`./_rules`)
 
 /**
@@ -9,22 +8,13 @@ const rulesData = getMarkdownData(`./_rules`)
  * @param {Function} runTests function callback of `describe` block, which executes per rule
  */
 const describeRule = (groupName, runTests) => {
-	const glossaryData = getMarkdownData(`./pages/glossary`)
-	// The keys of all glossary items
-	const glossaryKeys = glossaryData.map(({ frontmatter }) => frontmatter.key)
-	// The `id` of all elements used in glossary items
-	const glossaryIds = glossaryData
-		.map(({ markdownAST }) => getIds(markdownAST))
-		.reduce((flattened, element) => flattened.concat(element), [])
-
 	/**
-	 * Create arbitrary metadata that can be used in various tests
+	 * Create arbitrary meta data that can be used in various tests
 	 */
 	const metaData = {
-		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),
 		contributors: contributors.map(contributor => contributor.name.toLowerCase()),
-		glossaryIds,
-		glossaryKeys,
+		atomicRuleIds: getRuleIdsOfRuleType(rulesData, 'atomic'),
+		glossaryKeys: getMarkdownData(`./pages/glossary`).map(({ frontmatter }) => frontmatter.key),
 	}
 
 	rulesData.forEach(ruleData => {

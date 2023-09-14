@@ -1,9 +1,9 @@
 ---
 id: 0ssw9k
-name: Scrollable element is keyboard accessible
+name: Scrollable content can be reached with sequential focus navigation
 rule_type: atomic
 description: |
-  This rule checks that scrollable elements can be scrolled by keyboard
+  This rule checks that scrollable elements or their descendants can be reached with sequential focus navigation so that they can be scrolled by keyboard
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true
@@ -12,7 +12,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
     forConformance: true
-    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

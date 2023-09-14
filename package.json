@@ -65,6 +65,10 @@
 			"url": "https://github.com/geirsf"
 		},
 		{
+			"name": "Giacomo Petri",
+			"url": "https://github.com/giacomo-petri"
+		},
+		{
 			"name": "Jean-Yves Moyen",
 			"url": "https://github.com/Jym77"
 		},
@@ -117,8 +121,16 @@
 			"url": "https://github.com/skotkjerra"
 		},
 		{
+			"name": "Tom Brunet",
+			"url": "https://github.com/tombrunet"
+		},
+		{
 			"name": "Wilco Fiers",
 			"url": "https://github.com/wilcofiers"
+		},
+		{
+			"name": "Helen Burge",
+			"url": "https://github.com/HelenBurge"
 		}
 	],
 	"devDependencies": {
@@ -152,7 +164,7 @@
 		"unified": "^9.2.1",
 		"unist-util-visit": "^2.0.3",
 		"vfile-reporter": "^6.0.2",
-		"zx": "^5.3.0"
+		"zx": "^7.2.1"
 	},
 	"keywords": [
 		"WCAG",

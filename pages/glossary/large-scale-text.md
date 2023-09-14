@@ -33,3 +33,5 @@ TRANSLATION NOTE
 In the case of Japanese full-width characters, 22 point or 18 point bold type is considered to be the "equivalent" size, based on the First Report of the Enlarged Textbook Promotion Council, "Chapter 2 Standards for Enlarged Textbooks." is reasonable.
 
 Where in particular, Japanese replaced "roman texts" with "half-width alphanumeric text" and they added explicitly a new requirement for "Japanese full-width characters".
+
+UNICODE standard: https://www.unicode.org/reports/tr11/tr11-31.html#Relation

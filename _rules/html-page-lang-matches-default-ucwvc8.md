@@ -58,14 +58,14 @@ For each test target, the [known primary language tag][] of its `lang` attribute
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
 ### Related rules
 
-- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
-- [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
+- [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
+- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/proposed/)
 
 ### Bibliography
 
@@ -104,7 +104,7 @@ This page has a `lang` [attribute value][] of `en` (English), which matches the 
 This page has a `lang` attribute value of `en` (English), which matches the [default language of the page][default page language]. The default language is English because all but a few words are English.
 
 ```html
-<html lang="en">
+<html lang="EN">
 	<head>
 		<title>Gelukkig</title>
 	</head>

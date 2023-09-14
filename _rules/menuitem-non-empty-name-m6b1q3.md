@@ -37,8 +37,6 @@ This rule assumes that all menuitems are [user interface components as defined b
 
 ## Accessibility Support
 
-In some assistive technologies, the `menuitem` role will only be announced in browsing mode. When they receive focus this role is not announced. Additionally, the `title` attribute is not a reliable way to provide an accessible name. Use `aria-label` instead.
-
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `menuitem` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
@@ -116,7 +114,7 @@ This element with the `menuitem` role has no [accessible name][] because it has 
 
 #### Failed Example 2
 
-This element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
+This off-screen element with the `menuitem` role has no [accessible name][] because it has no content or attribute that can provide it.
 
 ```html
 <html lang="en">

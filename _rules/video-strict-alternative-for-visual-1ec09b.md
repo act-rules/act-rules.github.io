@@ -1,6 +1,6 @@
 ---
 id: 1ec09b
-name: '`video` element visual content has strict accessible alternative'
+name: Video element visual content has strict accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have audio description.
@@ -34,6 +34,9 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -44,8 +47,8 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual Content Has Audio Description](https://act-rules.github.io/rules/1ea59c)
-- [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13)
+- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/proposed/)
+- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/proposed/)
 
 ## Assumptions
 

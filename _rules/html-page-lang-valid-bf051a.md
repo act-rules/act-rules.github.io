@@ -1,6 +1,6 @@
 ---
 id: bf051a
-name: HTML page `lang` attribute has valid language tag
+name: HTML page lang attribute has valid language tag
 rule_type: atomic
 description: |
   This rule checks that the `lang` attribute of the root element of a non-embedded HTML page has a language tag with a known primary language subtag.
@@ -48,7 +48,7 @@ For each test target, the `lang` attribute has a [known primary language tag][].
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
@@ -56,8 +56,8 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 
 ### Related rules
 
-- [HTML page has `lang` attribute](https://act-rules.github.io/rules/b5c3f8)
-- [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+- [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
+- [HTML page language subtag matches default language](https://www.w3.org/WAI/standards-guidelines/act/rules/ucwvc8/proposed/)
 
 ### Bibliography
 
@@ -75,7 +75,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 This `html` element has a `lang` attribute with a [known primary language tag][].
 
 ```html
-<html lang="fr"></html>
+<html lang="FR"></html>
 ```
 
 #### Passed Example 2

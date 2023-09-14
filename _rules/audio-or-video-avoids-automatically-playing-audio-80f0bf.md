@@ -1,6 +1,6 @@
 ---
 id: 80f0bf
-name: '`audio` or `video` avoids automatically playing audio'
+name: Audio or video element avoids automatically playing audio
 rule_type: composite
 description: |
   This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
@@ -40,6 +40,9 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -59,8 +62,8 @@ This rule applies to any `audio` or `video` element for which all the following 
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
-- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://www.w3.org/WAI/standards-guidelines/act/rules/4c31df/proposed/)
+- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://www.w3.org/WAI/standards-guidelines/act/rules/aaa1bf/proposed/)
 
 ## Assumptions
 
@@ -70,7 +73,7 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 ## Accessibility Support
 
-The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
+The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
 ## Background
 

@@ -1,6 +1,6 @@
 ---
 id: c5a4ea
-name: '`video` element visual content has accessible alternative'
+name: Video element visual content has accessible alternative
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have an alternative for the video content as audio or as text.
@@ -10,16 +10,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.2.5: # Audio Description (Prerecorded) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+  wcag20:1.2.5: # Audio Description (Prerecorded) (AA)
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows a media alternative in place of audio description. Some of the passed examples do not satisfy this success criterion.
   wcag20:1.2.8: # Media Alternative (Prerecorded) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows audio description in place of a media alternative. Some of the passed examples do not satisfy this success criterion.
   wcag-technique:G8: # Providing a movie with extended audio descriptions
     forConformance: false
     failed: not satisfied
@@ -50,6 +44,9 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Test Procedure
@@ -62,9 +59,9 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual Content Has Audio Description](https://act-rules.github.io/rules/1ea59c)
-- [`Video` Element Visual Content Has Transcript](https://act-rules.github.io/rules/1a02b0)
-- [`Video` Element Content Is Media Alternative For Text](https://act-rules.github.io/rules/ab4d13)
+- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/proposed/)
+- [`Video` Element Visual Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/1a02b0/proposed/)
+- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/proposed/)
 
 ## Assumptions
 
@@ -76,8 +73,6 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96) can not be relied upon to conform to [1.2.3: Audio Description or Media Alternative (Prerecorded)][sc123].
 
 ## Background
-
-This rule is designed specifically for [1.2.3 Audio Description or Media Alternative (Prerecorded)][sc123], which expects either audio description or a media alternative. If a video has neither, by definition it also fails for both [1.2.5 Audio Description (Prerecorded)][sc125] and [1.2.8 Media Alternative (Prerecorded)][sc128]. In order to adequately test the [expectation](#expectation) of this rule, some of the passed examples do not satisfy [1.2.5 Audio Description (Prerecorded)][sc125] or [1.2.8 Media Alternative (Prerecorded)][sc128].
 
 ### Bibliography
 
@@ -119,7 +114,7 @@ A video element with a link to a text transcript.
 
 #### Passed Example 3
 
-A video element that describes some of the text on the same page. The text on the page labels the video as an alternative.
+This video element describes some of the text on the same page. The text identifies the video as an alternative.
 
 ```html
 <html lang="en">
@@ -220,5 +215,3 @@ A video element that is not [visible][].
 
 [visible]: #visible 'Definition of visible'
 [sc123]: https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'
-[sc125]: https://www.w3.org/TR/WCAG21/#audio-description-prerecorded 'WCAG 2.1, Success Criterion 1.2.5 Audio Description (Prerecorded)'
-[sc128]: https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.8 Media Alternative (Prerecorded)'

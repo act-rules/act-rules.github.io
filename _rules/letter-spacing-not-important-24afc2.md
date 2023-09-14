@@ -1,6 +1,6 @@
 ---
 id: 24afc2
-name: Letter spacing in `style` attributes is not `!important`
+name: Letter spacing in style attributes is not !important
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `letter-spacing` by using `!important`, except if it's at least 0.12 times the font size.
@@ -43,7 +43,7 @@ For each test target, at least one of the following is true:
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [letter-spacing][] through [author origin][], this rule should not be used.
+While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration.
 
 ## Background
 

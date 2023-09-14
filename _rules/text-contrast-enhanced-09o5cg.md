@@ -5,7 +5,7 @@ rule_type: atomic
 description: |
   This rule checks that the highest possible contrast of every text character with its background meets the enhanced contrast requirement.
 accessibility_requirements:
-  wcag20:1.4.6: # Contrast (Enhanced)
+  wcag20:1.4.6: # Contrast (Enhanced) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -20,6 +20,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.4.3: # Contrast (Minimum) (A)
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion has a lower minimum contrast. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -36,13 +38,12 @@ acknowledgments:
 
 This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **widget**: the ancestor is a [inheriting semantic][] `widget`; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
-- **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
+- **disabled ancestor**: the ancestor is an [inheriting semantic][] `group` or `widget` that is [disabled][]; or
+- **disabled label**: the ancestor is used in the [accessible name][] of an [inheriting semantic][] `widget` that is [disabled][].
 
 ## Expectation
 
-For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 7:1 or 4.5:1 for [larger scale text][], except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
+For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 4.5:1 for [large scale text][] and 7.0:1 for other texts, except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
 
 ## Assumptions
 
@@ -61,9 +62,11 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 ## Background
 
-Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
+Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility when some but not all pixels have sufficient contrast, which is why passing this rule does not necessarily mean the corresponding success criterion is met.
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
+
+This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc143]. Because this rule is stricter, text that passes this rule will likely satisfy 1.4.3 Contrast (Minimum).
 
 ### Bibliography
 
@@ -99,14 +102,19 @@ This dark gray text has a contrast ratio between 12.6:1 and 7:1 on the white to 
 
 #### Passed Example 3
 
-This light gray text has a contrast ratio between 18:1 and 7:1 on the background image.
+This white text has a contrast ratio between 18:1 and 7:1 on the background image.
 
 ```html
-<p
-	style="color: #EEE; height:50px; padding-top:15px; background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');"
->
-	Black hole sun
-</p>
+<style>
+	p {
+		color: #fff;
+		height: 50px;
+		padding-top: 15px;
+		background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+		text-shadow: 0px 0px 2px black;
+	}
+</style>
+<p>Black hole sun</p>
 ```
 
 #### Passed Example 4
@@ -159,6 +167,22 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 </script>
 ```
 
+#### Passed Example 9
+
+This text has the [default user agent link text and background color](https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3), of `#0000EE` and white. This results in a contrast ratio of 9.39:1.
+
+```html
+<a href="https://w3c.org/">W3C</a>
+```
+
+#### Passed Example 10
+
+This text is using the default user agent text color and background color. By default, this is black text on a white background with a contrast ratio of 21:1
+
+```html
+<div role="button">My button!</div>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -193,6 +217,16 @@ This 18pt large black text has a contrast ratio of 3.6:1 on the gray background.
 
 #### Failed Example 4
 
+This light gray text has a contrast ratio of 2.3:1 on the white background.
+
+```html
+<p style="color: #AAA; background: white;">
+	Some text in English
+</p>
+```
+
+#### Failed Example 5
+
 This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 ```html
@@ -201,7 +235,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 </p>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the background image.
 
@@ -213,7 +247,7 @@ This light gray text has a contrast ratio between 1.4:1 and 4.7:1 on the backgro
 </p>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the white background.
 
@@ -223,7 +257,7 @@ This black text with 60% alpha channel has a contrast ratio of 5.7:1 on the whit
 </p>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 This black text with 60% opacity has a contrast ratio of 5.7:1 on the white background.
 
@@ -235,7 +269,7 @@ This black text with 60% opacity has a contrast ratio of 5.7:1 on the white back
 </div>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 This gray text has a contrast ratio of 5.7:1 on the white background in a shadow DOM tree.
 
@@ -247,7 +281,7 @@ This gray text has a contrast ratio of 5.7:1 on the white background in a shadow
 </script>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on the black and white background. The light gray text is compared to the white section of the background and the dark gray text is compared to the black section of the background.
 
@@ -265,9 +299,9 @@ This semi-transparent gray text has a contrast ratio between 2.6:1 and 5.4:1 on 
 </span>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
-The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
+The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 6.4:1. Because this provides information, and is not only for aesthetic purposes, this is not considered [purely decorative][].
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -276,6 +310,22 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 <p style="font-family: helvetica; background: #EEE; color: #555;">
 	The quick brown fox jumps over the lazy dog.
 </p>
+```
+
+#### Failed Example 12
+
+This text in a `button` element has a contrast ratio of 6.4:1.
+
+```html
+<button style="color: #555; background: #EEE;">My button!</button>
+```
+
+#### Failed Example 13
+
+This text in a [semantic button][semantic role] has a contrast ratio of 6.4:1.
+
+```html
+<div role="button" style="color: #555; background: #EEE;">My button!</div>
 ```
 
 ### Inapplicable
@@ -326,22 +376,6 @@ This text not part of a [text node][].
 
 #### Inapplicable Example 6
 
-This text is part of a widget because it is a child of a `button` element.
-
-```html
-<button>My button!</button>
-```
-
-#### Inapplicable Example 7
-
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-
-```html
-<div role="button">My button!</div>
-```
-
-#### Inapplicable Example 8
-
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element with `type="text"`.
 
 ```html
@@ -351,7 +385,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </label>
 ```
 
-#### Inapplicable Example 9
+#### Inapplicable Example 7
 
 This text is part of a label of a [disabled][] widget, because it is in an element that is referenced by `aria-labelledby` from an element with `role="textbox"`.
 
@@ -369,7 +403,7 @@ This text is part of a label of a [disabled][] widget, because it is in an eleme
 </div>
 ```
 
-#### Inapplicable Example 10
+#### Inapplicable Example 8
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in a `fieldset` element with the `disabled` attribute.
 
@@ -382,7 +416,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </fieldset>
 ```
 
-#### Inapplicable Example 11
+#### Inapplicable Example 9
 
 This text is part of a label of a [disabled][] widget, because it is in a `label` element that is the label for an `input` element in an element with `role="group"` with the `aria-disabled="true"` attribute.
 
@@ -395,6 +429,22 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 </div>
 ```
 
+#### Inapplicable Example 10
+
+This text is part of a [disabled][] widget because it is a child of a `button` element with the `disabled` attribute.
+
+```html
+<button style="color: #777; background: #EEE;" disabled>My button!</button>
+```
+
+#### Inapplicable Example 11
+
+This text is part of a [disabled][] widget because it is a child of an element with the `role` attribute set to `button` and with an `aria-disabled` attribute set to `true`.
+
+```html
+<div role="button" style="color: #777; background: #EEE;" aria-disabled="true">My button!</div>
+```
+
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [ancestor]: https://dom.spec.whatwg.org/#concept-shadow-including-ancestor 'DOM, ancestor, 2020/07/23'
 [assistive technology]: https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies 'WCAG definition of Assistive Technologies'
@@ -405,7 +455,7 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
-[larger scale text]: #large-scale-text 'Definition of Large scale text'
+[large scale text]: #large-scale-text 'Definition of Large scale text'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
@@ -416,3 +466,4 @@ This text is part of a label of a [disabled][] widget, because it is in a `label
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element
+[sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum

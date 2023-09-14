@@ -1,6 +1,6 @@
 ---
 id: bisz58
-name: '`meta` element has no refresh delay (no exception)'
+name: Meta element has no refresh delay (no exception)
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
@@ -25,6 +25,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.2.1: # Timing Adjustable (A)
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion allows redirects longer than 20 hours. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -47,7 +49,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ is 0.
+For each target, the _time_ from the content [attribute value][] is 0. To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
 ## Assumptions
 
@@ -58,6 +60,8 @@ For each test target, running the [shared declarative refresh steps][], given th
 Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ## Background
+
+Because a refresh with a timing of 0 is effectively a redirect, it is exempt from this rule. Since refreshing the same page with a time of 0 can cause rapid screen flashes it is strongly recommended to avoid this.
 
 ### Bibliography
 
@@ -90,7 +94,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
+	<meta http-equiv="refresh" content="30; https://w3.org" />
 </head>
 ```
 
@@ -108,32 +112,22 @@ This `meta` element refreshes the page after 30 seconds.
 
 #### Failed Example 2
 
-This `meta` element redirects the user after 30 seconds.
+This `meta` element redirects the user after 20 hours.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="30; URL='https://w3.org'" />
+	<meta http-equiv="refresh" content="72001; URL='https://w3.org'" />
 </head>
 ```
 
 #### Failed Example 3
 
-The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 5 seconds.
+The first `meta` element is not valid (because of the colon instead of a semi-colon in the `content` attribute), the second one redirects after 20 hours.
 
 ```html
 <head>
 	<meta http-equiv="refresh" content="0: https://w3.org" />
-	<meta http-equiv="refresh" content="5; https://w3.org" />
-</head>
-```
-
-#### Failed Example 4
-
-This `meta` element redirects the user after 20 hours.
-
-```html
-<head>
-	<meta http-equiv="refresh" content="72001; http://example.com" />
+	<meta http-equiv="refresh" content="72001; https://w3.org" />
 </head>
 ```
 
@@ -155,7 +149,7 @@ This `meta` element has no `http-equiv="refresh"` attribute.
 
 ```html
 <head>
-	<meta content="30" />
+	<meta content="72001" />
 </head>
 ```
 
@@ -185,7 +179,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="; 30" />
+	<meta http-equiv="refresh" content="; 72001" />
 </head>
 ```
 
@@ -205,7 +199,7 @@ This `meta` element has an invalid `content` attribute, and is therefore inappli
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="+5; http://w3.org" />
+	<meta http-equiv="refresh" content="+72001; http://w3.org" />
 </head>
 ```
 

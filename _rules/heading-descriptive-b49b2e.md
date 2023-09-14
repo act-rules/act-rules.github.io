@@ -27,28 +27,21 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic][semantic role] `heading` element that is either [visible][] or [included in the accessibility tree][].
+This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
 
-## Expectation 1
+## Expectation
 
-For each target element at least one of the following is true:
+Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][].
 
-- the target element is not [visible][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [visible][], and after the target element in tree order in the [flat tree][].
-
-## Expectation 2
-
-For each target element at least one of the following is true:
-
-- the target element is not [included in the accessibility tree][]; or
-- the target element describes the topic or purpose of the first [palpable content][] which is non-[decorative][], [included in the accessibility tree][], and after the target element in tree order in the [flat tree][].
+The order of elements is determined by the [flat tree][].
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
 
 ## Assumptions
 
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
-- This rule assumes that the [flat tree][] order is close to the reading order, as elements are rendered on the page. Due to positioning, it is possible to render a document in a order that greatly differ from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule assumes that the [flat tree][] order is close to the reading order, as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+
+This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from AT. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
 ## Accessibility Support
 
@@ -56,8 +49,11 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ## Background
 
+Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
+
 ### Bibliography
 
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130)
 - [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42)
@@ -70,7 +66,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of the following [palpable content][].
+Heading marked up with `h1` element that describes the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
@@ -81,7 +77,7 @@ Heading marked up with `h1` element that describes the topic or purpose of the f
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][].
+Heading marked up with `role="heading"` that describes the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
@@ -92,31 +88,20 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 #### Passed Example 3
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][], with a default aria-level assigned.
+Heading marked up with `h1` element with an image that describes the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
-	<span role="heading">Opening Hours</span>
+	<h1>
+		<img src="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
+	</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
 
 #### Passed Example 4
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of the following [palpable content][].
-
-```html
-<html lang="en">
-	<h1>
-		<img scr="/test-assets/descriptive-heading-b49b2e/opening_hours_icon.png" alt="Opening hours" />
-	</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Passed Example 5
-
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of the following [palpable content][].
+Heading marked up with `h1` element that is a single character that describes the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
@@ -134,33 +119,22 @@ Heading marked up with `h1` element that is a single character that describes th
 </html>
 ```
 
-#### Passed Example 6
+#### Passed Example 5
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [palpable content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that describes the topic or purpose of the following [perceivable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
 	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Opening Hours</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
-Heading marked up with `h1` element that describes the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 aria-hidden="true">Opening Hours</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Passed Example 8
-
-This heading describes the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
+This heading describes the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
 
 ```html
 <html lang="en">
@@ -174,7 +148,7 @@ This heading describes the first [palpable content][] after it (the first `p` el
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of the following [palpable content][].
+Heading marked up with `h1` element that does not describe the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
@@ -185,7 +159,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [palpable content][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][].
 
 ```html
 <html lang="en">
@@ -196,12 +170,12 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [palpable content][]. The heading is positioned off screen and is [included in the accessibility tree][].
+Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
-	<span role="heading" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-	<p style="position: absolute; top: -9999px; left: -9999px;">
+	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
+	<p>
 		We are open Monday through Friday from 10 to 16
 	</p>
 </html>
@@ -209,18 +183,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-Heading marked up with `h1` element that does not describe the topic or purpose of the following [palpable content][]. The heading is [visible][], but is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 aria-hidden="true">Weather</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Failed Example 5
-
-This heading does not describe the first [palpable content][] after it (the first `p` element). The next [palpable content][] (the second `p` element) is not considered by this rule.
+This heading does not describe the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
 
 ```html
 <html lang="en">
@@ -234,7 +197,7 @@ This heading does not describe the first [palpable content][] after it (the firs
 
 #### Inapplicable Example 1
 
-No heading.
+There is no heading.
 
 ```html
 <html lang="en">
@@ -244,18 +207,18 @@ No heading.
 
 #### Inapplicable Example 2
 
-Heading that is neither [visible][] to users, nor [included in the accessibility tree][].
+Heading is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
-	<h1 style="display: none;">Opening hours</h1>
+	<h1 hidden>Opening Hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
 </html>
 ```
 
 #### Inapplicable Example 3
 
-Empty heading marked up with `h1` is not [visible][].
+`h1` element has an empty [accessible name][].
 
 ```html
 <html lang="en">
@@ -265,7 +228,7 @@ Empty heading marked up with `h1` is not [visible][].
 
 #### Inapplicable Example 4
 
-Empty heading marked up with `role="heading"` is not [visible][].
+Semantic heading has an empty [accessible name][].
 
 ```html
 <html lang="en">
@@ -276,8 +239,10 @@ Empty heading marked up with `role="heading"` is not [visible][].
 [decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML definition of Palpable Content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships ' Success Criterion 1.3.1 Info and Relationships'
 [sc246]: https://www.w3.org/TR/WCAG21/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[perceivable content]: #perceivable-content 'Definition of perceivable content'

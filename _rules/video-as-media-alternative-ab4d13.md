@@ -1,6 +1,6 @@
 ---
 id: ab4d13
-name: '`video` element content is media alternative for text'
+name: Video element content is media alternative for text
 rule_type: atomic
 description: |
   This rule checks non-streaming `video` is a media alternative for text on the page.
@@ -16,6 +16,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - Web Accessibility Perspective videos by W3C WAI.
 ---
 
 ## Applicability
@@ -28,18 +30,15 @@ All the information contained in each test target is available as text that is [
 
 ## Expectation 2
 
-Each test target is labeled as a video alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
-
-**Note:** The term label does not refer to the `label` element.
+Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
 ## Assumptions
 
-- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 

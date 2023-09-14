@@ -25,13 +25,11 @@ acknowledgments:
 
 This rule applies to any [HTML or SVG element][] that is [focusable][].
 
-**Note:** This rule only applies to HTML and SVG. Thus, it is a partial check for WCAG 2.0 success criterion 2.1.2, which applies to all content.
-
 ## Expectation
 
-For each target element focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
+For each target element, focus can cycle to the browser UI by using [standard keyboard navigation](#standard-keyboard-navigation).
 
-**Note:** Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
+**Note:** It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
 ## Assumptions
 
@@ -40,9 +38,11 @@ For each target element focus can cycle to the browser UI by using [standard key
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
+
+This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
 
 ### Bibliography
 
@@ -56,7 +56,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-No trap for keyboard navigation.
+These [focusable][] elements do not create a trap for keyboard navigation.
 
 ```html
 <a href="#">Link 1</a> <button>Button1</button>
@@ -64,7 +64,7 @@ No trap for keyboard navigation.
 
 #### Passed Example 2
 
-Using `tabindex="1"`.
+This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="1">Text</div>
@@ -72,7 +72,7 @@ Using `tabindex="1"`.
 
 #### Passed Example 3
 
-Using `tabindex="-1"`.
+This element is made [focusable][] by the `tabindex` attribute, even if it is not part of the sequential focus navigation. It does not create a trap for keyboard navigation.
 
 ```html
 <div tabindex="-1">Text</div>
@@ -82,18 +82,19 @@ Using `tabindex="-1"`.
 
 #### Failed Example 1
 
-Keyboard trap one element.
+This [focusable][] element creates a keyboard trap bringing focus to the `button`. Note that if one of the links is removed, the focus may jump to the browser UI before the timeout expires, at which point the `this.focus()` trap cannot trigger anymore.
 
 ```html
 <a href="#">Link 1</a>
 <button onblur="setTimeout(() => this.focus(), 10)">
 	Button1
 </button>
+<a href="#">Link 2</a>
 ```
 
 #### Failed Example 2
 
-Keyboard trap group.
+These [focusable][] `button` elements create a keyboard trap preventing the last `button` to be reached using the keyboard.
 
 ```html
 <button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
@@ -109,7 +110,7 @@ Keyboard trap group.
 
 #### Failed Example 3
 
-A [focusable][] element between keyboard traps.
+This `button` element is between other `button` elements creating keyboard traps.
 
 ```html
 <button onblur="setTimeout(() => this.focus(), 10)">Button 1</button>
@@ -121,7 +122,7 @@ A [focusable][] element between keyboard traps.
 
 #### Inapplicable Example 1
 
-No [focusable][] element.
+There is no [focusable][] element.
 
 ```html
 <h1>Page 1</h1>
@@ -129,7 +130,7 @@ No [focusable][] element.
 
 #### Inapplicable Example 2
 
-Disabled element.
+There is no [focusable][] element.
 
 ```html
 <button type="button" disabled>Click Me!</button>
@@ -137,7 +138,7 @@ Disabled element.
 
 #### Inapplicable Example 3
 
-Hidden element using `display:none`.
+There is no [focusable][] element.
 
 ```html
 <button type="button" style="display:none;">Click Me!</button>
@@ -145,7 +146,7 @@ Hidden element using `display:none`.
 
 #### Inapplicable Example 4
 
-Hidden element using `visibility:hidden`.
+There is no [focusable][] element.
 
 ```html
 <a href="#" style="visibility:hidden;">Link 1</a> <button style="visibility:hidden;">Button1</button>
@@ -153,3 +154,4 @@ Hidden element using `visibility:hidden`.
 
 [focusable]: #focusable 'Definition of focusable'
 [html or svg element]: #namespaced-element
+[sc212]: https://www.w3.org/TR/WCAG21/#no-keyboard-trap 'Success Criterion 2.1.2 No Keyboard Trap'

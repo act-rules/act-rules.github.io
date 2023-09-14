@@ -17,6 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Audrey Maniez
+    - Helen Burge
     - Jey Nandakumar
   funding:
     - WAI-Tools
@@ -125,7 +126,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 ```html
 <table role="grid">
 	<thead>
-		<tr role="row">
+		<tr>
 			<td></td>
 			<th scope="col" role="columnheader">Breakfast</th>
 			<th scope="col" role="columnheader">Lunch</th>
@@ -133,7 +134,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 		</tr>
 	</thead>
 	<tbody>
-		<tr role="row">
+		<tr>
 			<th scope="row" role="rowheader">Day 1</th>
 			<td>8:00</td>
 			<td>13:00</td>

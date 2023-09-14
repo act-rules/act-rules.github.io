@@ -1,6 +1,6 @@
 ---
 id: b4f0c3
-name: '`meta` `viewport` allows for zoom'
+name: Meta viewport allows for zoom
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.
@@ -10,6 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag21:1.4.10: # Reflow (AA)
+    secondary: This success criterion is **related** to this rule. This is because a page that cannot be zoomed up to 200% often does not reflow sufficiently either. Most failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -22,22 +24,26 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to each `meta` element with a `name` attribute whose value is a [case-insensitive][] match for `viewport` and has a `content` attribute.
+This rule applies to each `content` attribute on a `meta` element with a `name` [attribute value][] of `viewport` for which at least one of the following is true:
 
-## Expectation
+- the `content` [attribute value][] has the `user-scalable` property; or
+- the `content` [attribute value][] has the `maximum-scale` property.
 
-For each test target, the `content` attribute, whose value is mapped to a list of property/value pairs in a user-agent specific manner, does not:
+## Expectation 1
 
-- specify the property `user-scalable` with a value of `no`; nor
-- specify the property `maximum-scale` with a value of less than 2.
+For each test target, the [attribute value][] does not have a `user-scalable` property with a value of `no`.
+
+## Expectation 2
+
+For each test target, the [attribute value][] does not have a `maximum-scale` property with a value less than 2.
 
 ## Assumptions
 
-If any of the following is false, this rule can fail while Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410] can still be satisfied:
+Pages for which any of the following is true may satisfy success criteria Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410], even if the rule results in a failed outcome.
 
-- The [page][] has [visible][] [content][].
-- There is no other [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content.
-- The [content][] is not by default rendered in a way that fits in an area of 320 by 256 [CSS pixels][], and needs to reflow to do so.
+- The [page][] has no [visible][] [content][]; or
+- There is another [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content; or
+- The [content][] does not need to reflow in order to fit in an area of 320 by 256 [CSS pixels][].
 
 ## Accessibility Support
 
@@ -45,11 +51,10 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 
 ## Background
 
-This rule is designed specifically for [1.4.4 Resize text][sc144], which requires that text can be resized up to 200%. Because text that can not be resized up to 200% can not fit in an area of 320 by 256 [CSS pixels][], this rule maps to [1.4.10 Reflow][sc1410] as well. All passed examples in this rule satisfy both success criteria.
-
 ### Bibliography
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
+- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow)
 - [HTML Specification - The `meta` element][meta]
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]
@@ -59,24 +64,6 @@ This rule is designed specifically for [1.4.4 Resize text][sc144], which require
 ### Passed
 
 #### Passed Example 1
-
-This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="width=device-width" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 2
 
 This viewport `meta` element does not prevent user scaling because it has `user-scalable` set to `yes`.
 
@@ -94,43 +81,25 @@ This viewport `meta` element does not prevent user scaling because it has `user-
 </html>
 ```
 
+#### Passed Example 2
+
+This viewport `meta` element allows users to scale content up to 200% because it has `maximum-scale` set to 2.0.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="maximum-scale=2.0" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
 #### Passed Example 3
-
-This viewport `meta` element allows users to scale content up to 600% because it has `maximum-scale` set to 6.0.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="maximum-scale=6.0" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 4
-
-This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` and `user-scalable` values.
-
-```html
-<html>
-	<head>
-		<title>Simple page showing random text</title>
-		<meta name="viewport" content="" />
-	</head>
-	<body>
-		<p>
-			Lorem ipsum
-		</p>
-	</body>
-</html>
-```
-
-#### Passed Example 5
 
 This viewport `meta` element does not prevent user scaling because it has `maximum-scale` set to -1 which results in this value being dropped.
 
@@ -260,12 +229,48 @@ This viewport `meta` element does not have a `content` attribute.
 </html>
 ```
 
-[case-insensitive]: https://infra.spec.whatwg.org/#ascii-case-insensitive 'ASCII case-insensitive'
+#### Inapplicable Example 3
+
+This viewport `meta` element does not specify the `maximum-scale` nor `user-scalable` values.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="width=device-width" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+This viewport `meta` element does not prevent user scaling because it does not specify the `maximum-scale` nor `user-scalable` values.
+
+```html
+<html>
+	<head>
+		<title>Simple page showing random text</title>
+		<meta name="viewport" content="" />
+	</head>
+	<body>
+		<p>
+			Lorem ipsum
+		</p>
+	</body>
+</html>
+```
+
 [content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
 [maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
 [meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
 [page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
+[attribute value]: #attribute-value 'Definition of attribute value'
 [visible]: #visible 'Definition of visible'
 [css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
 [sc144]: https://www.w3.org/TR/WCAG21/#resize-text 'WCAG 2.1 Success Criterion 1.4.4 Resize text'

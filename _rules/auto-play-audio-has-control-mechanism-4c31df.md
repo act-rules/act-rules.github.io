@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: '`audio` or `video` that plays automatically has a control mechanism'
+name: Audio or video element that plays automatically has a control mechanism
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -21,6 +21,9 @@ acknowledgments:
     - Bryn Anderson
   funding:
     - WAI-Tools
+  assets:
+    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
@@ -46,7 +49,7 @@ The [instrument][] to pause or stop or turn the audio volume off is [visible](#v
 
 ## Assumptions
 
-_There are currently no assumptions_
+There are no assumptions.
 
 ## Accessibility Support
 

@@ -1,6 +1,6 @@
 ---
 id: b5c3f8
-name: HTML page has `lang` attribute
+name: HTML page has lang attribute
 rule_type: atomic
 description: |
   This rule checks that an HTML page has a non-empty `lang` attribute.
@@ -45,14 +45,14 @@ The language of the page can be set by other methods than the `lang` attribute, 
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
+There are no accessibility support issues known.
 
 ## Background
 
 ### Related rules
 
-- [HTML page `lang` attribute has valid language tag](https://act-rules.github.io/rules/bf051a)
-- [HTML page language subtag matches default language](https://act-rules.github.io/rules/ucwvc8)
+- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/)
+- [HTML page language subtag matches default language](https://www.w3.org/WAI/standards-guidelines/act/rules/ucwvc8/proposed/)
 
 ### Bibliography
 
@@ -70,7 +70,11 @@ _There are no major accessibility support issues known for this rule._
 This `html` element has a `lang` attribute with a non-empty (`""`) value.
 
 ```html
-<html lang="en"></html>
+<html lang="en">
+	<body>
+		The quick brown fox jumps over the lazy dog.
+	</body>
+</html>
 ```
 
 ### Failed
@@ -80,7 +84,11 @@ This `html` element has a `lang` attribute with a non-empty (`""`) value.
 This `html` element does not have a `lang` attribute.
 
 ```html
-<html></html>
+<html>
+	<body>
+		The quick brown fox jumps over the lazy dog.
+	</body>
+</html>
 ```
 
 #### Failed Example 2
@@ -88,7 +96,11 @@ This `html` element does not have a `lang` attribute.
 This `html` element has a `lang` attribute with an empty (`""`) value.
 
 ```html
-<html lang=""></html>
+<html lang="">
+	<body>
+		The quick brown fox jumps over the lazy dog.
+	</body>
+</html>
 ```
 
 #### Failed Example 3
@@ -96,7 +108,11 @@ This `html` element has a `lang` attribute with an empty (`""`) value.
 This `html` element has a `lang` attribute whose value is only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 ```html
-<html lang=" "></html>
+<html lang=" ">
+	<body>
+		The quick brown fox jumps over the lazy dog.
+	</body>
+</html>
 ```
 
 #### Failed Example 4
@@ -104,7 +120,11 @@ This `html` element has a `lang` attribute whose value is only [ASCII whitespace
 This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 
 ```html
-<html xml:lang="en"></html>
+<html xml:lang="en">
+	<body>
+		The quick brown fox jumps over the lazy dog.
+	</body>
+</html>
 ```
 
 ### Inapplicable
@@ -114,7 +134,11 @@ This `html` element has no `lang` attribute, only a `xml:lang` attribute.
 This rule does not apply to an `svg` element.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg"></svg>
+<svg xmlns="http://www.w3.org/2000/svg" lang="en">
+    <text>
+        The quick brown fox jumps over the lazy dog.
+    </text>
+</svg>
 ```
 
 #### Inapplicable Example 2
@@ -122,7 +146,9 @@ This rule does not apply to an `svg` element.
 This rule does not apply to a `math` element.
 
 ```xml
-<math></math>
+<math lang="en">
+    The quick brown fox jumps over the lazy dog.
+</math>
 ```
 
 [attribute value]: #attribute-value

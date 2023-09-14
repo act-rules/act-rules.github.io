@@ -1,9 +1,9 @@
 ---
 id: 2eb176
-name: '`audio` element content has transcript'
+name: Audio element content has transcript
 rule_type: atomic
 description: |
-  Non-streaming `audio` elements must have a text alternative for all included auditory information.
+  This rule checks that `audio` elements have a transcript that includes all auditory information.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -16,6 +16,8 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
+  assets:
+    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -23,9 +25,7 @@ acknowledgments:
 This rule applies to every `audio` element that is:
 
 - playing; or,
-- has a "play button" that is [visible][] and [included in the accessibility tree][].
-
-**Note:** A play button is an interactive element that when activated, plays the audio.
+- has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
 
@@ -35,11 +35,11 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
+There are no assumptions.
 
 ## Accessibility Support
 
-There are no major accessibility support issues known for this rule.
+There are no accessibility support issues known.
 
 ## Background
 
@@ -54,7 +54,7 @@ There are no major accessibility support issues known for this rule.
 
 #### Passed Example 1
 
-Audio with controls and internal transcript
+This `audio` element has native player controls and an internal transcript.
 
 ```html
 <html lang="en">
@@ -70,23 +70,23 @@ Audio with controls and internal transcript
 
 #### Passed Example 2
 
-Audio with controls and external transcript
+This `audio` element has native player controls and an external transcript.
 
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 </html>
 ```
 
 #### Passed Example 3
 
-Audio with autoplay and external transcript
+This `audio` element has an `autoplay` attribute and an external transcript.
 
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
 </html>
 ```
 
@@ -94,7 +94,7 @@ Audio with autoplay and external transcript
 
 #### Failed Example 1
 
-Audio with controls and no transcript
+This `audio` element has native player controls and no transcript.
 
 ```html
 <html lang="en">
@@ -104,7 +104,7 @@ Audio with controls and no transcript
 
 #### Failed Example 2
 
-Audio with controls and incorrect internal transcript
+This `audio` element has native player controls and an incorrect internal transcript.
 
 ```html
 <html lang="en">
@@ -120,29 +120,29 @@ Audio with controls and incorrect internal transcript
 
 #### Failed Example 3
 
-Audio with controls and incorrect external transcript
+This `audio` element has native player controls and an incorrect external transcript.
 
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 </html>
 ```
 
 #### Failed Example 4
 
-Audio with autoplay and incorrect external transcript
+This `audio` element has an `autoplay` attribute and an incorrect external transcript.
 
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
-	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.txt">Transcript</a>
+	<a href="/test-assets/moon-audio/moon-speech-incorrect-transcript.html">Transcript</a>
 </html>
 ```
 
 #### Failed Example 5
 
-Audio with controls and [non-visible][visible] internal transcript
+This `audio` element has native player controls and a [non-visible][visible] internal transcript.
 
 ```html
 <html lang="en">
@@ -158,7 +158,7 @@ Audio with controls and [non-visible][visible] internal transcript
 
 #### Failed Example 6
 
-Audio with controls and internal transcript that is not exposed to the accessibility tree
+This `audio` element has native player controls and an internal transcript that is not exposed to the accessibility tree.
 
 ```html
 <html lang="en">
@@ -176,7 +176,7 @@ Audio with controls and internal transcript that is not exposed to the accessibi
 
 #### Inapplicable Example 1
 
-Audio without controls.
+This `audio` element has no native player controls.
 
 ```html
 <html lang="en">
@@ -186,7 +186,7 @@ Audio without controls.
 
 #### Inapplicable Example 2
 
-Audio with hidden controls.
+This `audio` element has hidden native player controls.
 
 ```html
 <html lang="en">
@@ -195,4 +195,5 @@ Audio with hidden controls.
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

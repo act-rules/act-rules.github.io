@@ -1,6 +1,6 @@
 ---
 id: 0va7u6
-name: HTML graphics contain no text
+name: HTML images contain no text
 rule_type: atomic
 description: |
   This rule checks that images of text are not used
@@ -10,7 +10,7 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.4.9: # Images of Text (No Exception) (AA)
+  wcag20:1.4.9: # Images of Text (No Exception) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -22,6 +22,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Carlos Duarte
+    - Wilco Fiers
   funding:
     - WAI-Tools
   assets:
@@ -32,29 +33,29 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [rendered image resources][] in a [web page][].
+This rule applies to any [image resources][rendered image resources] rendered in a [web page][].
 
 ## Expectation
 
-For each test target, at least one of the following is true:
+Each test target has no [visible][] [text][human language], except if at least one of the following is true:
 
-- **essential**: the [visible pixels][visible] of the test target contain text for which its presentation is [essential][]; or
-- **language**: the [visible pixels][visible] of the test target do not contain text expressing anything in a [human language][]; or
-- **significant**: the [visible pixels][visible] of the test target contain text and the text is not a significant part of the [visible pixels][visible] of the test target; or
-- **decoration**: the [embedded image][] the test target belongs to is [purely decorative][].
+- <dfn id="0va7u6:decorative">decorative</dfn>: The image with text is [purely decorative][]; or
+- <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
+- <dfn id="0va7u6:essential">essential</dfn>: Ensuring presentation of the text is [essential][].
 
 ## Assumptions
 
 - There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
 - The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
+- When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
 ## Accessibility Support
 
-_No accessibility support issues known._
+There are no accessibility support issues known.
 
 ## Background
 
-This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which includes exceptions to the images it applies to that are not part of [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. Therefore, some images that are inapplicable for this rule can be applicable to [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
+This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
 
 ### Bibliography
 
@@ -95,7 +96,7 @@ This image resource referenced by the `svg` element does not contain text.
 
 #### Passed Example 4
 
-This image resource referenced by the `object` element contains text, but it is not the most significant content.
+This image resource referenced by the `object` element contains text, but it is not the most [significant](#0va7u6:incidental) content.
 
 ```html
 <object data="/test-assets/0va7u6/times_square.jpg" title="Picture of Times Square, New York"></object>
@@ -103,7 +104,7 @@ This image resource referenced by the `object` element contains text, but it is 
 
 #### Passed Example 5
 
-This image resource referenced by the `img` element contains text, but its presentation is essential to convey the information.
+This image resource referenced by the `img` element contains text, but its presentation is [essential](#0va7u6:essential) to convey the information.
 
 ```html
 <p>
@@ -118,7 +119,7 @@ This image resource referenced by the `img` element contains text, but its prese
 
 #### Passed Example 6
 
-This image resource referenced by the `background-image` property of the `div` element contains a logo with text. Logotypes are considered an essential exception.
+This image resource referenced by the `background-image` property of the `div` element contains a logo with text. Logotypes are considered an [essential](#0va7u6:essential) exception.
 
 ```html
 <div
@@ -135,7 +136,7 @@ This image resource referenced by the `background-image` property of the `div` e
 
 #### Passed Example 7
 
-This image resource referenced by the `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [purely decorative][].
+This image resource referenced by the `img` element is an image of text (the book covers), but it is just meant to decorate the webpage of a book store, therefore it is [decorative](#0va7u6:decorative).
 
 ```html
 <img src="/test-assets/0va7u6/books.jpg" alt="" />
@@ -169,7 +170,7 @@ These image resources referenced by the `input` elements are images of text (the
 
 #### Failed Example 1
 
-This image resource referenced by the `img` element contains text for which the particular presentation is not essential.
+This image resource referenced by the `img` element contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <img
@@ -180,7 +181,7 @@ This image resource referenced by the `img` element contains text for which the 
 
 #### Failed Example 2
 
-This image resource referenced by the `input` element in the [Image Button][] contains text for which the particular presentation is not essential.
+This image resource referenced by the `input` element in the [Image Button][] contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <input type="image" src="/test-assets/0va7u6/button.jpg" alt="Press me" />
@@ -188,7 +189,7 @@ This image resource referenced by the `input` element in the [Image Button][] co
 
 #### Failed Example 3
 
-This image resource referenced by the `background-image` property of the `div` element contains text for which the particular presentation is not essential.
+This image resource referenced by the `background-image` property of the `div` element contains text for which the particular presentation is not [essential](#0va7u6:essential).
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
@@ -196,11 +197,25 @@ This image resource referenced by the `background-image` property of the `div` e
 
 #### Failed Example 4
 
-This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [purely decorative][].
+This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [decorative](#0va7u6:decorative).
 
 ```html
 <img src="/test-assets/0va7u6/welcome.png" alt="" />
 <p>Welcome to our website</p>
+```
+
+#### Failed Example 5
+
+This `img` element loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
+
+```html
+<img
+	alt="WCAG Rocks"
+	src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' height='20px' width='80px'>
+  <text x='0' y='15'>WCAG Rocks</text>
+</svg>"
+/>
 ```
 
 ### Inapplicable
@@ -226,8 +241,8 @@ This `svg` element does not have `image` element descendants.
 </svg>
 ```
 
-[embedded image]: #embedded-image 'Definition of Embedded Image'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential 'WCAG 2.1, Definition of essential'
+[essential]: #essential-text-presentation 'Definition of Essential (Text Presentation)'
+[insignificant]: #insignificant 'Definition of Insignificant'
 [human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'

@@ -464,34 +464,6 @@ This [HTML web page][] is passing rule [_Document has an instrument to move focu
 </html>
 ```
 
-#### Passed Example 13
-
-This [HTML web page][] is passing rule [_Document has heading for non-repeated content_][document has heading for main]. Note that it arguably does not pass [Technique H69: Providing heading elements at the beginning of each section of content][tech h69] because the `nav` element can be considered as a section of content and does not start with a heading.
-
-```html
-<html>
-	<head>
-		<title>The Three Kingdoms, Chapter 1</title>
-	</head>
-	<body>
-		<nav id="chapters-navigation">
-			<ol>
-				<li><a>Chapter 1</a></li>
-				<li><a href="/test-assets/bypass-blocks-cf77f2/chapter2.html">Chapter 2</a></li>
-			</ol>
-		</nav>
-
-		<div id="main">
-			<h1>Three Heroes Swear Brotherhood at a Feast in the Peach Garden</h1>
-			<p>
-				Unity succeeds division and division follows unity. One is bound to be replaced by the other after a long span
-				of time.
-			</p>
-		</div>
-	</body>
-</html>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -534,12 +506,12 @@ This [document][] is not an [HTML web page][].
 ```
 
 [block of content]: #block-of-content 'Definition of Block of Content'
-[block collapsible]: https://act-rules.github.io/rules/3e12e1 'Rule Block of Repeated Content is Collapsible'
+[block collapsible]: https://www.w3.org/WAI/standards-guidelines/act/rules/3e12e1/proposed/ 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has landmark]: https://act-rules.github.io/rules/b40fd1 'Rule Document Has a Landmark with Non-Repeated Content'
-[document has instrument to main]: https://act-rules.github.io/rules/ye5d6e 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
-[document has heading for main]: https://act-rules.github.io/rules/047fe0 'Rule Document Has Heading for Non-Repeated Content'
+[document has landmark]: https://www.w3.org/WAI/standards-guidelines/act/rules/b40fd1/proposed/ 'Rule Document Has a Landmark with Non-Repeated Content'
+[document has instrument to main]: https://www.w3.org/WAI/standards-guidelines/act/rules/ye5d6e/proposed/ 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
+[document has heading for main]: https://www.w3.org/WAI/standards-guidelines/act/rules/047fe0/proposed/ 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

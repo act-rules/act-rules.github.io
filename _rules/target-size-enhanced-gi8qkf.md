@@ -25,23 +25,18 @@ acknowledgments:
 
 This rule applies ta any [HTML element][namespaced element] for which all the following are true:
 
-> comment: focusing on element rather than widget feels more natural to talk about CSS boxes later.
-
 - the element is an [inheriting semantic][] `widget`; and
 - the element is [visible][]; and
-- the element can be [targeted by a pointer event][].
-  > comment: this may get tricky to properly define or test. Notably because we cannot access the list of events that can target an element, and empirical testing is not good due to stuff possibly happening in the back, or async, …
-  > Maybe it would be easier to restrict the list of widgets to those that are supposed to accept pointer events? E.g. `button` and `link` are normally stuff that can be clicked. OTOH, having them not clickable (and too small) is a failure of 1.3.1, not 2.5.5… 
+- the element [can be targeted by a pointer event][].
   
+Exception: not for `area` (due to weird shapes).
+Exception: not if a descendant is focusable (hard to define the clickable area).
+
 ## Expectation
 
 For each test target, at least one of the following is true:
 
-- the target element has a [border box][] width and height of at least 44 CSS pixels; or
-  > comment: picking the border box as (i) it seems clicking in the padding or border areas does activate `onclick` functions (clicking in margin doesn't); and (ii) this mostly corresponds to the `getBoundingClientRect` JS function, and 2.5.8 refers a lot to "bounding boxes", so it sounds like a good match
-- the target has a [programmatic label][]; or
-  > comment: this is a way to circumvent part of the "equivalent bit". Essentially, we say that if there is a programmatic label (which usually does the same as the widget), we don't try to look at it. We could also restrict this condition to "has a programmatic label of 44×44px" but that gets tricky when it is the combined sizes which is good enough.
-  > This could also be moved to Applicability if we don't try to look at the size of the label.
+- the target element has a [clickable area][] width and height of at least 44 CSS pixels; or
 - the target is part of [inline text][]; or
   > comment: I feel this is going to be difficult to define objectively, so it is better in Expectation for now. #1010 has some work in that direction that we can probably reuse: https://github.com/act-rules/act-rules.github.io/pull/1010/files#diff-32079a0602a5a909b242b4e0961e7c5ddd6b6f5c9906b216d5bf21cf2ba13a77R28-R29
 - the target is a [UI controlled component][].

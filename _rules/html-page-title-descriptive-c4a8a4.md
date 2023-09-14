@@ -37,7 +37,10 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the [document title][] of each [html web page][] if this [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
+This rule applies to the [document title][] of each [html web page][], except if one of the following is true:
+
+- The [html web page][] has no [document title][]; or
+- The [document title][] contains only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 
@@ -59,7 +62,7 @@ The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the
 
 ### Related rules
 
-- [HTML page has non-empty title](https://act-rules.github.io/rules/2779a5)
+- [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/)
 
 ### Bibliography
 
@@ -126,7 +129,7 @@ This `title` element, which is within the `body`, describes the content of the d
 
 #### Failed Example 1
 
-This `<title>` element does not describe the content of the document.
+This `title` element does not describe the content of the document.
 
 ```html
 <html lang="en">

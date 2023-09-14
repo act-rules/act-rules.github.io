@@ -25,6 +25,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:2.2.1: # Timing Adjustable (A)
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion allows redirects longer than 20 hours. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -47,7 +49,7 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 ## Expectation
 
-For each test target, running the [shared declarative refresh steps][], given the target's document, the value of the target's `content` attribute, and the target results in _time_ is 0.
+For each target, the _time_ from the content [attribute value][] is 0. To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
 ## Assumptions
 
@@ -59,7 +61,7 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
-Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+Because a refresh with a timing of 0 is effectively a redirect, it is exempt from this rule. Since refreshing the same page with a time of 0 can cause rapid screen flashes it is strongly recommended to avoid this.
 
 ### Bibliography
 
@@ -92,7 +94,7 @@ The first valid `meta` element redirects immediately.
 ```html
 <head>
 	<meta http-equiv="refresh" content="0; https://w3.org" />
-	<meta http-equiv="refresh" content="72001; https://w3.org" />
+	<meta http-equiv="refresh" content="30; https://w3.org" />
 </head>
 ```
 
@@ -100,11 +102,11 @@ The first valid `meta` element redirects immediately.
 
 #### Failed Example 1
 
-This `meta` element refreshes the page after 20 hours.
+This `meta` element refreshes the page after 30 seconds.
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="72001" />
+	<meta http-equiv="refresh" content="30" />
 </head>
 ```
 

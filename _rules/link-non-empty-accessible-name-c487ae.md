@@ -17,7 +17,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
     forConformance: true
-    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -26,6 +25,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.1.1: # Non-text content (A)
+    secondary: This success criterion is **related** to this rule. This is because HTML `area` elements are both links and non-text content. Most failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -66,7 +67,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ### Related rules
 
-- [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
+- [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/proposed/)
 
 ### Bibliography
 

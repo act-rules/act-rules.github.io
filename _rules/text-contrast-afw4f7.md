@@ -11,11 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.4.6: # Contrast (Enhanced) (AAA)
-    forConformance: true
-    secondary: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because this criterion has a higher minimum contrast. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -33,13 +29,12 @@ acknowledgments:
 
 This rule applies to any [visible][] character in a [text node][] that is a [child][] in the [flat tree][] of an [HTML element][], except if the [text node][] has an [ancestor][] in the [flat tree][] for which at least one of the following is true:
 
-- **disabled widget**: the ancestor is a [inheriting semantic][] `widget` that is [disabled][]; or
-- **disabled label**: the ancestor is used in the [accessible name][] of a [inheriting semantic][] `widget` that is [disabled][]; or
-- **disabled group**: the ancestor has a [semantic role][] of `group` and is [disabled][].
+- **disabled ancestor**: the ancestor is an [inheriting semantic][] `group` or `widget` that is [disabled][]; or
+- **disabled label**: the ancestor is used in the [accessible name][] of an [inheriting semantic][] `widget` that is [disabled][].
 
 ## Expectation
 
-For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 4.5:1 or 3.0:1 for [larger scale text][], except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
+For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 3.0:1 for [large scale text][] and 4.5:1 for other texts, except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
 
 ## Assumptions
 
@@ -58,9 +53,7 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 ## Background
 
-Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility, which is why this is out of scope for this rule.
-
-This rule is designed specifically for [1.4.3 Contrast (Minimum)][sc143], which has the expected contrast ratio of 4.5:1 (or 3:1 for large text). Because text that fails a contrast ratio of 4.5:1 also fails a contrast ratio of 7:1, this rule maps to [1.4.6 Contrast (Enhanced)][sc146] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [1.4.6 Contrast (Enhanced)][sc146].
+Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility when some but not all pixels have sufficient contrast, which is why passing this rule does not necessarily mean the corresponding success criterion is met.
 
 When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
 
@@ -103,13 +96,13 @@ This light gray text has a contrast ratio between 13:1 and 5:1 on the background
 
 ```html
 <style>
-p {
-	color: #CCC;
-	height: 50px;
-	padding-top: 15px;
-	background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
-	text-shadow: 0px 0px 2px black;
-}
+	p {
+		color: #ccc;
+		height: 50px;
+		padding-top: 15px;
+		background: #000 no-repeat -20px -20px url('/test-assets/contrast/black-hole.jpeg');
+		text-shadow: 0px 0px 2px black;
+	}
 </style>
 <p>Black hole sun</p>
 ```
@@ -176,19 +169,15 @@ This dark gray text has a contrast ratio of 12.6:1 on the white background in a 
 
 #### Passed Example 10
 
-This text is part of a widget because it is a child of a `button` element. The text has the default
-browser button text color on the default browser button background color. By default, this is black text on a
-light gray background with a contrast ratio of 18.26:1
+This text has the [default user agent link text and background color](https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3), of `#0000EE` and white. This results in a contrast ratio of 9.39:1.
 
 ```html
-<button>My button!</button>
+<a href="https://w3c.org/">W3C</a>
 ```
 
 #### Passed Example 11
 
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The text has the default browser text color on the default browser background color. By default, this is 
-black text on a white background with a contrast ratio of 21:1
+This text is using the default user agent text color and background color. By default, this is black text on a white background with a contrast ratio of 21:1
 
 ```html
 <div role="button">My button!</div>
@@ -282,7 +271,7 @@ This semi-transparent gray text has a contrast ratio between 2.3:1 and 4.2:1 on 
 
 #### Failed Example 8
 
-The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 3.85:1. Because this provides information, and not only for aesthetic purposes, this is not considered [purely decorative][].
+The first `p` element has a contrast ratio of 12.6:1. The second `p` element, which contains an example of the Helvetica font, has a contrast ratio of 3.85:1. Because this provides information, and is not only for aesthetic purposes, this is not considered [purely decorative][].
 
 ```html
 <p style="color: #333; background: #FFF;">
@@ -295,16 +284,15 @@ The first `p` element has a contrast ratio of 12.6:1. The second `p` element, wh
 
 #### Failed Example 9
 
-This text is part of a widget because it is a child of a `button` element. The button text has a contrast
-ratio of 3.85:1.
+This text in a `button` element has a contrast ratio of 3.85:1.
+
 ```html
 <button style="color: #777; background: #EEE;">My button!</button>
 ```
 
 #### Failed Example 10
 
-This text is part of a widget because it is a child of an element with the `role` attribute set to `button`.
-The button text has a contrast ratio of 3.85:1.
+This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 
 ```html
 <div role="button" style="color: #777; background: #EEE;">My button!</div>
@@ -352,7 +340,7 @@ This text not part of a [text node][].
 
 ```html
 <p>
-	<img scr="/test-assets/contrast/example.png" alt="example" />
+	<img src="/test-assets/contrast/example.png" alt="example" />
 </p>
 ```
 
@@ -437,13 +425,12 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [foreground colors]: #foreground-colors-of-text 'Definition of Foreground color of text'
 [highest possible contrast]: #highest-possible-contrast 'Definition of Highest possible contrast'
 [human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG 2.1, Human language'
-[larger scale text]: #large-scale-text 'Definition of Large scale text'
+[large scale text]: #large-scale-text 'Definition of Large scale text'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
 [purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
 [text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
 [sc143]: https://www.w3.org/TR/WCAG21/#contrast-minimum 'WCAG 2.1, Success criterion 1.4.3 Contrast (Minimum)'
-[sc146]: https://www.w3.org/TR/WCAG21/#contrast-enhanced 'WCAG 2.1, Success criterion 1.4.6 Contrast (Enhanced)'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'

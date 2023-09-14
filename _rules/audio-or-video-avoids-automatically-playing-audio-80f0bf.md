@@ -64,8 +64,8 @@ This rule applies to any `audio` or `video` element for which all the following 
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://act-rules.github.io/rules/4c31df)
-- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://act-rules.github.io/rules/aaa1bf)
+- [Audio Or Video That Plays Automatically Has A Control Mechanism](https://www.w3.org/WAI/standards-guidelines/act/rules/4c31df/proposed/)
+- [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://www.w3.org/WAI/standards-guidelines/act/rules/aaa1bf/proposed/)
 
 ## Assumptions
 

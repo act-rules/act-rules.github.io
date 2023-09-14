@@ -10,6 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag21:1.4.10: # Reflow (AA)
+    secondary: This success criterion is **related** to this rule. This is because a page that cannot be zoomed up to 200% often does not reflow sufficiently either. Most failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -49,11 +51,10 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 
 ## Background
 
-This rule is designed specifically for [1.4.4 Resize text][sc144], which requires that text can be resized up to 200%. Because text that can not be resized up to 200% can not fit in an area of 320 by 256 [CSS pixels][], this rule maps to [1.4.10 Reflow][sc1410] as well. All passed examples in this rule satisfy both success criteria.
-
 ### Bibliography
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
+- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow)
 - [HTML Specification - The `meta` element][meta]
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]

@@ -49,7 +49,7 @@ For each registered [device orientation event][device orientation] or [device mo
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 

@@ -1,9 +1,9 @@
 ---
 id: afb423
-name: Audio element content is media alternative for text
+name: '`audio` element content is media alternative for text'
 rule_type: atomic
 description: |
-  This rule checks that the `audio` element is a media alternative for text on the page.
+  This rule checks `audio` is a media alternative for text on the page.
 accessibility_requirements:
 input_aspects:
   - DOM Tree
@@ -16,8 +16,6 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability
@@ -25,7 +23,9 @@ acknowledgments:
 This rule applies to every `audio` element that is:
 
 - playing; or,
-- has a [play button][] that is [visible][] and [included in the accessibility tree][].
+- has a "play button" that is [visible][] and [included in the accessibility tree][].
+
+**Note:** A play button is an interactive element that when activated, plays the audio.
 
 ## Expectation 1
 
@@ -33,15 +33,17 @@ The auditory information of each test target is available as text (directly or v
 
 ## Expectation 2
 
-Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
+Each target element is labeled as an audio alternative for text on the page. This label is [visible][] and [included in the accessibility tree][].
+
+**Note:** The term label does not refer to the `label` element.
 
 ## Assumptions
 
-There are no assumptions.
+This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+There are no major accessibility support issues known for this rule.
 
 ## Background
 
@@ -55,7 +57,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative.
 
 ```html
 <html lang="en">
@@ -76,7 +78,7 @@ This `audio` element describes some of the text on the same page. The text on th
 
 #### Failed Example 1
 
-This `audio` element describes some of the text on the same page. The audio contains more information than the text does.
+An audio element that describes some of the text on the same page. The audio contains more information than the text does.
 
 ```html
 <html lang="en">
@@ -93,7 +95,7 @@ This `audio` element describes some of the text on the same page. The audio cont
 
 #### Failed Example 2
 
-This `audio` element describes some of the text on the same page. The text is not [visible][] on the page.
+An audio element that describes some of the text on the same page. The text is not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -112,7 +114,7 @@ This `audio` element describes some of the text on the same page. The text is no
 
 #### Failed Example 3
 
-This `audio` element describes some of the text on the same page. The text on the page does not label the audio as an alternative.
+An audio element that describes some of the text on the same page. The text on the page does not label the audio as an alternative.
 
 ```html
 <html lang="en">
@@ -128,7 +130,7 @@ This `audio` element describes some of the text on the same page. The text on th
 
 #### Failed Example 4
 
-This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible][] on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the label is not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -149,7 +151,7 @@ This `audio` element describes some of the text on the same page. The text on th
 
 #### Inapplicable Example 1
 
-This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but the controls are not [visible][] on the page.
 
 ```html
 <html lang="en">
@@ -168,7 +170,7 @@ This `audio` element describes some of the text on the same page. The text on th
 
 #### Inapplicable Example 2
 
-This `audio` element describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls.
+An audio element that describes some of the text on the same page. The text on the page labels the audio as an alternative but there are no controls.
 
 ```html
 <html lang="en">
@@ -187,5 +189,4 @@ This `audio` element describes some of the text on the same page. The text on th
 ```
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'

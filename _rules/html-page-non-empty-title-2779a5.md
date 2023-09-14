@@ -39,7 +39,7 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the root element of the [web page][], if it is an `html` element.
+This rule applies to the root element of the [web page](https://www.w3.org/TR/WCAG21/#dfn-web-page-s), if it is an `html` element.
 
 ## Expectation 1
 
@@ -53,11 +53,9 @@ For each target element, the first [HTML][] `title` element that is a [descendan
 
 This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the HTML 5.2 specification describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
 
-This rule assumes that the title of the page is not provided by a higher-level protocol. For example, the subject field of an email authored in HTML can provide a title without requiring a `title` element. In such a case, this rule will fail while [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) may still be satisfied.
-
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -65,7 +63,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 
 ### Related rules
 
-- [HTML page title is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/c4a8a4/proposed/)
+- [HTML page title is descriptive](https://act-rules.github.io/rules/c4a8a4)
 
 ### Bibliography
 
@@ -211,4 +209,3 @@ This `title` element is a child of an `svg` element.
 ```
 
 [html]: #namespaced-element
-[web page]: #web-page-html 'Definition of HTML web page'

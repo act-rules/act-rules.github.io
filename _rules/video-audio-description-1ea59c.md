@@ -1,6 +1,6 @@
 ---
 id: 1ea59c
-name: Video element visual content has audio description
+name: '`video` element visual content has audio description'
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all visual information also contained in the audio.
@@ -32,8 +32,6 @@ acknowledgments:
     - Wilco Fiers
   funding:
     - WAI-Tools
-  assets:
-    - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
 ---
 
 ## Applicability
@@ -46,7 +44,8 @@ The visual information of each test target is available through its audio, or th
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
 ## Accessibility Support
 

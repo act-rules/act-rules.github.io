@@ -6,7 +6,6 @@ const describePage = require('../test-utils/describe-page')
 const isUrl = require('is-url')
 const getMarkdownAstNodesOfType = require('../utils/get-markdown-ast-nodes-of-type')
 const uniqueArray = require('../utils/unique-array')
-const getIds = require('../utils/get-ids')
 
 const whitelist = [
 	/^description$/,
@@ -14,7 +13,6 @@ const whitelist = [
 	/^#expectation(-[1-9][0-9]*)?$/,
 	/^#assumptions$/,
 	/^#accessibility-support$/,
-	/^#accessibility-requirements-mapping$/,
 	/^#background$/,
 	/^#test-cases$/,
 	/^#passed(-example-[1-9][0-9]*)?$/,
@@ -47,10 +45,7 @@ describe(`Validate glossary references`, () => {
 	})
 })
 
-function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [], glossaryIds = [] }) {
-	// Get the value of all HTML `id` attributes in the file and in glossary
-	const htmlIds = getIds(markdownAST).concat(...glossaryIds)
-
+function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [] }) {
 	/**
 	 * get all links
 	 * -> eg: [Alpha](https://....) or [Beta](#semantic-role)
@@ -80,15 +75,9 @@ function validateGlossaryReferences({ markdownAST }, { glossaryKeys = [], glossa
 		return
 	}
 
-	/**
-	 * Check that each link (in page or in definitions list) is either a known glossary key
-	 * or an internal link to an HTML element in the page (including glossary) with an id.
-	 */
 	test.each(links)('%s', link => {
-		// Remove leading '#'
 		const key = link.substr(1)
-		// Is it a known key, or an HTML `id`?
-		const actual = glossaryKeys.includes(key) || htmlIds.includes(key)
+		const actual = glossaryKeys.includes(key)
 		const msg = `Glossary term - [#${key}] does not exist`
 		expect(actual, msg).toBe(true)
 	})

@@ -69,6 +69,3 @@ yarn.lock
 
 # Ignore JetBrains IDE file
 .idea
-
-# Tmp build directory
-wcag-act-rules-tmp/

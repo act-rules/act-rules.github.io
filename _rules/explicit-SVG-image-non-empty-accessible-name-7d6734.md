@@ -1,6 +1,6 @@
 ---
 id: 7d6734
-name: SVG element with explicit role has non-empty accessible name
+name: '`svg` element with explicit role has non-empty accessible name'
 rule_type: atomic
 description: |
   This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.
@@ -30,7 +30,7 @@ Each target element has an [accessible name][] that is not empty.
 
 ## Assumptions
 
-This rule assumes that the presence of one of the roles outlined in the applicability indicates the author's intent to include the element in the accessibility tree and thus convey information to the user about that element.
+This rule assumes that the presence of one of the roles outlined in the applicability indicates the authors intent to include the element in the accessibility tree and thus convey information to the user about that element.
 
 ## Accessibility Support
 

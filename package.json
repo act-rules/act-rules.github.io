@@ -65,10 +65,6 @@
 			"url": "https://github.com/geirsf"
 		},
 		{
-			"name": "Giacomo Petri",
-			"url": "https://github.com/giacomo-petri"
-		},
-		{
 			"name": "Jean-Yves Moyen",
 			"url": "https://github.com/Jym77"
 		},
@@ -121,38 +117,28 @@
 			"url": "https://github.com/skotkjerra"
 		},
 		{
-			"name": "Tom Brunet",
-			"url": "https://github.com/tombrunet"
-		},
-		{
 			"name": "Wilco Fiers",
 			"url": "https://github.com/wilcofiers"
-		},
-		{
-			"name": "Helen Burge",
-			"url": "https://github.com/HelenBurge"
 		}
 	],
 	"devDependencies": {
-		"act-tools": "github:act-rules/act-tools",
-		"aria-query": "^4.2.2",
+		"aria-query": "^4.0.2",
 		"dictionary-en-us": "^2.2.1",
 		"fastmatter": "^2.1.1",
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.2",
-		"htmlhint": "^1.1.4",
+		"htmlhint": "^0.11.0",
 		"husky": "^3.1.0",
 		"is-url": "^1.2.4",
-		"jest": "^27.5.1",
-		"jest-27-expect-message": "^1.1.0",
+		"jest": "^25.5.4",
+		"jest-expect-message": "^1.0.2",
 		"jest-extended": "^0.11.5",
-		"js-yaml": "^3.14.1",
+		"js-yaml": "^3.14.0",
 		"lint-staged": "^9.5.0",
-		"marked": "^4.0.10",
-		"moment": "^2.29.4",
+		"marked": "^0.7.0",
 		"prettier": "^1.19.1",
 		"remark-frontmatter": "^1.3.2",
-		"remark-parse": "^9.0.0",
+		"remark-parse": "^7.0.2",
 		"remove-markdown": "^0.3.0",
 		"retext": "^7.0.1",
 		"retext-english": "^3.0.4",
@@ -161,10 +147,9 @@
 		"retext-spell": "^3.0.0",
 		"retext-stringify": "^2.0.4",
 		"retext-syntax-urls": "^1.0.2",
-		"unified": "^9.2.1",
-		"unist-util-visit": "^2.0.3",
-		"vfile-reporter": "^6.0.2",
-		"zx": "^7.2.1"
+		"unified": "^8.4.2",
+		"unist-util-visit": "^2.0.2",
+		"vfile-reporter": "^6.0.0"
 	},
 	"keywords": [
 		"WCAG",
@@ -176,8 +161,7 @@
 	"scripts": {
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
-		"test": "jest --coverage",
-		"build:wai": "zx .github/scripts/wai-build.mjs"
+		"test": "jest --coverage"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -208,7 +192,7 @@
 		"verbose": false,
 		"setupFilesAfterEnv": [
 			"jest-extended",
-			"jest-27-expect-message"
+			"jest-expect-message"
 		],
 		"testPathIgnorePatterns": [
 			"<rootDir>/test-utils/",

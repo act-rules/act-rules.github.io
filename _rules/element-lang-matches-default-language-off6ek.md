@@ -35,10 +35,10 @@ htmlHintIgnore:
 
 This rule applies to any [HTML element][] with a `lang` attribute for which all the following are true:
 
-- <dfn id="off6ek:in-body">in body</dfn>: the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
-- <dfn id="off6ek:html">HTML</dfn>: the element is in a [document][] with a [content type][] of `text/html`; and
-- <dfn id="off6ek:valid-lang">Valid language</dfn>: the element's `lang` [attribute value][] has a [known primary language tag][]; and
-- <dfn id="off6ek:not-empty">Not empty</dfn>: there is some non-empty [text inheriting its programmatic language][] from the element which is neither empty nor only [whitespace][].
+- the element is an [inclusive descendant][] in the [flat tree][] of a `body` element; and
+- the element is in a [document][] with a [content type][] of `text/html`; and
+- the element's `lang` [attribute value][] has a [known primary language tag][]; and
+- there is some non-empty [text inheriting its programmatic language][] from the element.
 
 ## Expectation
 
@@ -50,11 +50,9 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 - This rule assumes that only [language tags][rfc 5646] with a [known primary language tag][] are enough to satisfy [Success Criterion 3.1.2 Language of Parts][sc312]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
-- This rule assumes that the text nodes contain text that express something in [human language][] and therefore need a correct programmatic language.
-
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_There are no major accessibility support issues known for this rule._
 
 ## Background
 
@@ -62,7 +60,7 @@ This rule checks that, if a `lang` attribute is used, its value is correct with 
 
 ### Related rules
 
-- [_Element with `lang` Attribute Has Valid Language Tag_](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/)
+- [_Element with `lang` Attribute Has Valid Language Tag_](https://act-rules.github.io/rules/de46e4)
 
 ### Bibliography
 
@@ -121,14 +119,14 @@ The second `p` element has `lang` attribute value of `nl` (Dutch), which matches
 This `div` element has a `lang` [attribute value][] of `en` (English), which matches its [most common language][]. The most common language is English because the accessible texts are English, and all other text is in a `p` element with a (correct) `lang` attribute value of `fr`.
 
 ```html
-<html lang="FR">
+<html lang="fr">
 	<head>
 		<title>Feu d'artifice du nouvel an</title>
 	</head>
 	<body>
-		<div lang="EN">
+		<div lang="en">
 			<img src="/test-assets/shared/fireworks.jpg" alt="Fireworks over Paris" />
-			<p lang="FR">
+			<p lang="fr">
 				Bonne année !
 			</p>
 		</div>
@@ -249,7 +247,7 @@ This `div` element has a `lang` attribute value of `fr` (French), which does not
 
 #### Inapplicable Example 1
 
-This document is not [HTML](#off6ek:html).
+There are no HTML elements in this document.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="en">
@@ -259,7 +257,7 @@ This document is not [HTML](#off6ek:html).
 
 #### Inapplicable Example 2
 
-There is no [descendant of a `body`](#off6ek:in-body) element with a `lang` attribute.
+There is no descendant of a `body` element with a `lang` attribute.
 
 ```html
 <html lang="en">
@@ -271,7 +269,21 @@ There is no [descendant of a `body`](#off6ek:in-body) element with a `lang` attr
 
 #### Inapplicable Example 3
 
-The first `p` element is [empty](#off6ek:not-empty) because the only [element inheriting its programmatic language][] is itself, and it has no text node child.
+This `p` element has an invalid language tag.
+
+```html
+<html lang="en">
+	<body>
+		<p lang="français">
+			I love ACT rules!
+		</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 4
+
+There is no [text inheriting its programmatic language][] from the first `p` element because it has no content.
 
 ```html
 <html lang="en">
@@ -282,9 +294,9 @@ The first `p` element is [empty](#off6ek:not-empty) because the only [element in
 </html>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example 5
 
-This `p` element is [empty](#off6ek:not-empty) because it has no content that is either [visible][] or [included in the accessibility tree][].
+There is no [text inheriting its programmatic language][] from this `p` element because it has no content that is either [visible][] or [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -294,14 +306,26 @@ This `p` element is [empty](#off6ek:not-empty) because it has no content that is
 </html>
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example 6
 
-The [text inheriting its programmatic language][] from this `div` element is only [whitespace][].
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `eng` [iso 639.2][] three letters code does not exist in the [language subtag registry][].
 
 ```html
 <html lang="en">
 	<body>
-		<div lang="invalid">&nbsp;</div>
+		<p lang="eng">I love ACT rules!</p>
+	</body>
+</html>
+```
+
+#### Inapplicable Example 7
+
+The `lang` [attribute value][] of this `p` element has no [known primary language tag][] because the `i-lox` [grandfathered tag][grandfathered tags] does not exist in the [language subtag registry][].
+
+```html
+<html lang="lb">
+	<body>
+		<p lang="i-lux">Lëtzebuerg ass e Land an Europa.</p>
 	</body>
 </html>
 ```
@@ -309,20 +333,18 @@ The [text inheriting its programmatic language][] from this `div` element is onl
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [content type]: https://dom.spec.whatwg.org/#concept-document-content-type 'DOM definition of Content Type'
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM definition of Document Element'
-[element inheriting its programmatic language]: #text-inheriting-language:element 'Definition of Element Inheriting its Programmatic Language from an Element'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8
-[html element]: #namespaced-element
-[human language]: https://www.w3.org/TR/WCAG21/#dfn-human-language-s 'WCAG definition of Human Language'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
 [most common language]: #most-common-element-language 'Definition of Common Language of an Element'
 [primary language]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.1 'Definition of primary language subtag'
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
-[text inheriting its programmatic language]: #text-inheriting-language:text 'Definition of Text Inheriting its Programmatic Language from an Element'
+[text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
 [sc312]: https://www.w3.org/TR/WCAG21/#language-of-parts 'Success Criterion 3.1.2 Language of Parts'
 [usc312]: https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html 'Understanding Success Criterion 3.1.2: Language of Parts'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'
+[language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 [visible]: #visible 'Definition of Visible'
-[whitespace]: #whitespace 'Definition of whitespace'
+[html element]: #namespaced-element

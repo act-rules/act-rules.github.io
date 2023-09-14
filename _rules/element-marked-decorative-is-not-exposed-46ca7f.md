@@ -30,7 +30,7 @@ Each target element either is not [included in the accessibility tree][] or has 
 
 ## Assumptions
 
-There are no assumptions.
+_There are currently no assumptions_
 
 ## Accessibility Support
 

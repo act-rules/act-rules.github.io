@@ -36,14 +36,15 @@ The rule name is its descriptive title. The agreed conventions for naming of rul
 
 - Be succinct, direct and declarative, and avoid unnecessary words, _e.g. an, the_.
 - Use declarative verbs, _e.g. has, have, is_.
-- Identify code as an element or attribute as appropriate, _e.g. title element, title attribute_.
-- Use sentence case, _e.g. "Heading is descriptive"_, including for code, _e.g. "Id attribute value is unique"_, or initials, _e.g. "HTML page has title"_.
-- Use singular tense so that necessary plurals stand out, _e.g. "Video element has captions"_.
+- Use back ticks to indicate words from code, _e.g. `label` v. Label_.
+- Identify code as an element or attribute as appropriate, _e.g. `title` element, `title` attribute_.
+- Use sentence case, _e.g. "Heading is descriptive"_, unless using code, _e.g. "`id` attribute value is unique"_, or initials, _e.g. "HTML page has title"_. Note: names starting with a backtick also need to be wrapped with quotes for the parser.
+- Use singular tense so that necessary plurals stand out, _e.g. "`video` element has captions"_.
 - Front load the applicable thing, _e.g. "Button has accessible name"_.
 - Refer to each applicable thing in a consistent way across rules, especially when related or checking the same applicable thing.
-- Describe the passing condition, _e.g. "Id attribute value is unique", rather than "page has no duplicate id attributes"_.
-- Do not use hyphens or dashes unless correct for code, _e.g. aria-\*_.
-- Do not use camelCase unless correct for code, _e.g. iframe not iFrame, feImage in SVG_.
+- Describe the passing condition, _e.g. "`id` attribute value is unique", rather than "page has no duplicate `id`s"_.
+- Do not use hyphens or dashes unless correct for code, _e.g. `aria-*`_.
+- Do not use camelCase unless correct for code, _e.g. `iframe` not iFrame, `feImage` in SVG_.
 - If unsure, refer to WCAG language used.
 - Aim to be unique, which should happen if title includes the applicable thing and passing condition.
 
@@ -62,23 +63,6 @@ The description is a short synopsis of what the rule does. This should be declar
 ### Accessibility requirements
 
 List all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. For example, this could be one or more WCAG success criteria, or a WAI-ARIA rule. Each requirement should indicate the associated conformance level, and map the implications of each outcome, such as "satisfied", "not satisfied", or "further testing needed".
-
-Accessibility requirements should be listed as secondary if the requirement is related to the rule. There are four scenarios:
-
-1. The requirement is less strict than the rule. If this occurs, and some but not all failed examples of the rule pass the accessibility requirement, the following text should be used:
-
-   > This success criterion is **less strict** than this rule. This is because {reason}. Some of the failed examples satisfy this success criterion.
-
-1. The requirement is more strict than the rule. If this occurs, and some but not all passed examples of the rule fail the accessibility requirement, the following text should be used:
-
-   > secondary: This success criterion is **more strict** than this rule. This is because {reason}. Some of the passed examples do not satisfy this success criterion.
-
-1. The requirement is related to, but different from the rule. This often happens when there is overlap between two accessibility requirements. If this occurs, and some but not all the failed examples of the rule fail the accessibility requirement, the following text should be used:
-   > This success criterion is **related** to this rule. This {is because / happens for} {reason}. Most failed examples satisfy this success criterion.
-
-1) Atomic rules used in composite rules should list the requirements from the composite rule as "more strict" secondary requirements.
-
-Secondary requirements are optional and are only necessary when a requirement fails some of the passed examples or passes some of the failed examples. If there are no such examples, it is generally not necessary to include secondary requirements.
 
 **Note**: When linking to WCAG or other sources that may have several versions, use the version number where the relevant requirement was first introduced.
 

@@ -1,6 +1,6 @@
 ---
 id: 9e45ec
-name: Word spacing in style attributes is not !important
+name: Word spacing in `style` attributes is not `!important`
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `word-spacing` by using `!important`, except if it's at least `0.16` times the font size.
@@ -43,7 +43,7 @@ For each test target, at least one of the following is true:
 
 ## Accessibility Support
 
-While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration.
+While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration. If accessibility support does not include assistive technologies that override [word-spacing][] through [author origin][], this rule should not be used.
 
 ## Background
 

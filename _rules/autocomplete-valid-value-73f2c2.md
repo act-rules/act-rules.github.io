@@ -1,6 +1,6 @@
 ---
 id: 73f2c2
-name: Autocomplete attribute has valid value
+name: '`autocomplete` attribute has valid value'
 rule_type: atomic
 description: |
   This rule checks that the HTML `autocomplete` attribute has a correct value.
@@ -26,11 +26,11 @@ acknowledgments:
 
 This rule applies to any [HTML][] `input`, `select` and `textarea` element with an `autocomplete` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace][], except if one or more of the following is true:
 
-- <dfn id="73f2c2:toggle">toggle</dfn>: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
-- <dfn id="73f2c2:disabled">disabled</dfn>: the element is a [disabled element]; or
-- <dfn id="73f2c2:fixed-value">fixed value</dfn>: the element is an `input` element with a `type` [attribute value][] of `button`, `checkbox`, `file`, `image`, `radio`, `reset` or `submit`; or
-- <dfn id="73f2c2:hidden">hidden</dfn>: the element is not [visible][], and not [included in the accessibility tree][]; or
-- <dfn id="73f2c2:static">static</dfn>: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
+- **toggle**: the `autocomplete` attribute consists of a single token that is an [ASCII case-insensitive][] match for the string `off` or the string `on`; or
+- **disabled**: the element is a [disabled element]; or
+- **fixed value**: the element is an `input` element with a `type` [attribute value][] of `hidden`, `button`, `submit` or `reset`; or
+- **hidden**: the element is not [visible][], and not [included in the accessibility tree][]; or
+- **static**: the element is not part of [sequential focus navigation][] and has a [semantic role][] that is not a [widget role][].
 
 ## Expectation
 
@@ -38,9 +38,8 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 
 1. An optional token that starts with "section-"; then
 2. An optional token of either "shipping" or "billing"; then
-3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the next token is "email", "impp", "tel" or "tel-\*"; then
-4. A required token from the [correct autocomplete field][]; then
-5. An optional "webauthn" token.
+3. An optional token of either "home", "work", "mobile", "fax" or "pager", only if the last token is "email", "impp", "tel" or "tel-\*"; then
+4. A required token from the [correct autocomplete field][].
 
 ## Assumptions
 
@@ -66,10 +65,6 @@ The intent of this rule is to ensure that the `autocomplete` attribute can be us
 Many browsers provide auto-filling suggestions even when the control's `type` [attribute value][] is not [appropriate][appropriate field name for the form control] for its `autocomplete` [attribute value][]. The same happens when the `autocomplete` property is queried. However, the `autocomplete` property is not programmatically identifiable if the requirements for the optional tokens are not met.
 
 The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
-
-The [fixed value](#73f2c2:fixed-value) condition in the Applicability is excluding `input` elements who do not consider the `autocomplete` attribute, based on their `type` [attribute value][]; `input` elements with a `type` [attribute value][] of `hidden` are excluded by the [hidden](#73f2c2:hidden) condition.
-
-On an `input` element with a `type` [attribute value][] of `hidden`, the autocomplete attribute wears the [autofill anchor mantle](https://html.spec.whatwg.org/#autofill-anchor-mantle), describing the meaning of the given value. In all other cases, it wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
 
 ### Bibliography
 
@@ -153,17 +148,6 @@ This `autocomplete` [attribute value][] only has the required token "bday-day". 
 <label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
 ```
 
-#### Passed Example 9
-
-This `autocomplete` [attribute value][] has the required token "current-password", followed by the optional "webauthn" token.
-
-```html
-<label>
-	Password
-	<input type="password" autocomplete="current-password webauthn" />
-</label>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -204,46 +188,6 @@ The `autocomplete` attribute value is on an `input` element that does not have a
 
 ```html
 <label>Username<input role="banner" tabindex="0" autocomplete="banner"/></label>
-```
-
-#### Failed Example 6
-
-This `autocomplete` attribute does not contain any required token.
-
-```html
-<label>Address<input autocomplete="shipping"/></label>
-```
-
-#### Failed Example 7
-
-This `autocomplete` attribute contains two of the required tokens, but only one is allowed.
-
-```html
-<label>Address<input autocomplete="address-line1 address-line2"/></label>
-```
-
-#### Failed Example 8
-
-This `autocomplete` attribute contains a `work` modifier but no required token afterwards.
-
-```html
-<label>Email<input autocomplete="work"/></label>
-```
-
-#### Failed Example 9
-
-This `autocomplete` attribute contains an extra token after the allowed ones.
-
-```html
-<label>Password<input type="password" autocomplete="current-password webauthn invalid"/></label>
-```
-
-#### Failed Example 10
-
-This `autocomplete` attribute contains an extra token after the allowed ones.
-
-```html
-<label>Email<input autocomplete="email invalid"/></label>
 ```
 
 ### Inapplicable
@@ -302,22 +246,6 @@ This `autocomplete` attribute is inapplicable because it has the `off` value.
 
 ```html
 <label>Friend's first name<input type="text" autocomplete="off"/></label>
-```
-
-#### Inapplicable Example 8
-
-This `input` element has a [fixed value](#73f2c2:fixed-value) due to its `type` [attribute value][] of `submit`. `autocomplete` does not apply to Submit buttons.
-
-```html
-<input type="submit" autocomplete="email" />
-```
-
-#### Inapplicable Example 9
-
-This `input` element is [hidden](#73f2c2:hidden) because of its `type` [attribute value][] of `hidden` (following standard [User Agent style sheet recommendations](https://html.spec.whatwg.org/multipage/rendering.html#hidden-elements). Knowing the transaction amount may still be used in other fields, e.g. to suggest a card with sufficient balance; this is not tested by this rule.
-
-```html
-<input type="hidden" autocomplete="transaction-amount" value="100.00" />
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'HTML ASCII whitespace 2020/08/12'

@@ -25,8 +25,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.1.1: # Non-text content (A)
-    secondary: This success criterion is **related** to this rule. This is because HTML `area` elements are both links and non-text content. Most failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -59,6 +57,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ## Accessibility Support
 
+- There are assistive technologies that do not support using the `title` attribute for an [accessible name][], or in which this feature can be disabled.
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
@@ -67,7 +66,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 ### Related rules
 
-- [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/proposed/)
+- [Link in context is descriptive](https://act-rules.github.io/rules/5effbb)
 
 ### Bibliography
 

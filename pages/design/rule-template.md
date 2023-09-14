@@ -16,14 +16,12 @@ rule_type: atomic
 description: |
   This rule checks ...
 accessibility_requirements:
-  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
+  wcag20:x.x.x: # (Name of Success Criterion)
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
-  wcag20:z.z.z: # <Name of Success Criterion> (A | AA | AAA)
-    secondary: This success criterion is ...
-  aria12:anchor-name: # <Heading in WAI-ARIA>
+  aria11:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false
     failed: not satisfied
@@ -59,11 +57,11 @@ Each target element ...
 
 ## Assumptions
 
-There are no assumptions.
+_No assumptions._
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_No accessibility support issues known._
 
 ## Background
 
@@ -179,11 +177,11 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 
 ## Assumptions
 
-There are no assumptions.
+_No assumptions._
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+_No accessibility support issues known._
 
 ## Background
 

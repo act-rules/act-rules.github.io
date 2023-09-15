@@ -37,7 +37,10 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the [document title][] of each [html web page][] if this [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
+This rule applies to the [document title][] of each [html web page][], except if one of the following is true:
+
+- The [html web page][] has no [document title][]; or
+- The [document title][] contains only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 
@@ -126,7 +129,7 @@ This `title` element, which is within the `body`, describes the content of the d
 
 #### Failed Example 1
 
-This `<title>` element does not describe the content of the document.
+This `title` element does not describe the content of the document.
 
 ```html
 <html lang="en">

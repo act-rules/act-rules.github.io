@@ -162,3 +162,4 @@ This `iframe` element has an [explicit semantic role][] of `none`.
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [whitespace]: #whitespace 'Definition of whitespace'
+[explicit semantic role]: #explicit-semantic-role 'Definition of explicit semantic role'

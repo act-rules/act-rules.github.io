@@ -26,4 +26,4 @@ Since there is no official WCAG definition of **equivalent size** for CJK charac
 >TRANSLATION NOTE  
 >In the case of Japanese full-width characters, 22 point or 18 point bold type is considered to be the "equivalent" size, based on the First Report of the Enlarged Textbook Promotion Council, "Chapter 2 Standards for Enlarged Textbooks." is reasonable."
 
-Assuming all CJK characters pose similar contrast challanges, we've extended the Japanese equivalent size definition to the whole CJK characters set defined in the [Unicode standard](https://unicode.org/charts/PDF/U4E00.pdf) within the range of 4E00–9FFF.
+Assuming all CJK characters pose similar contrast challanges, this definition extends the Japanese requirement to the whole CJK characters set included in the [Unicode standard](https://unicode.org/charts/PDF/U4E00.pdf) within the range of 4E00–9FFF.

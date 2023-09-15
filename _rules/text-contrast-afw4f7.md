@@ -336,7 +336,7 @@ This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 
 #### Failed Example 11
 
-This 16pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since for CJK languages, 16pt bold is not [large scale text][], the example fails the rule.
+This 14pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since 14pt bold is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 4.5:1.
 
 ```html
 <p style="color: #000; font-size:16pt; font-weight:700; background: #666;">
@@ -346,10 +346,10 @@ This 16pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray bac
 
 #### Failed Example 12
 
-This 20pt black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since for CJK languages, 20pt is not [large scale text][], the example fails the rule.
+This 18pt black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since 18pt is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 4.5:1.
 
 ```html
-<p style="color: #000; font-size:20pt; background: #666;">
+<p style="color: #000; font-size:18pt; background: #666;">
 	中国語、日本語、及び韓国語
 </p>
 ```

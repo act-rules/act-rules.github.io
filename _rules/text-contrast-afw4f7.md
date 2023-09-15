@@ -189,6 +189,36 @@ This text is using the default user agent text color and background color. By de
 <div role="button">My button!</div>
 ```
 
+#### Passed Example 12
+
+This 18pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background.
+
+```html
+<p style="color: #000; font-size:18pt; font-weight:700; background: #666;">
+	中国語、日本語、及び韓国語
+</p>
+```
+
+#### Passed Example 13
+
+This 22pt black Japanese text has a contrast ratio of 3.6:1 on the gray background.
+
+```html
+<p style="color: #000; font-size:22pt; font-weight:700; background: #666;">
+	中国語、日本語、及び韓国語
+</p>
+```
+
+#### Passed Example 14
+
+This 19pt black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since the characters composing the sentence are not included within the Unicode standard range of 4E00–9FFF, it's passing the rule.
+
+```html
+<p style="color: #000; font-size:22pt; font-weight:700; background: #666;">
+	「ロック・アンド・ロール」
+</p>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -302,6 +332,26 @@ This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 
 ```html
 <div role="button" style="color: #777; background: #EEE;">My button!</div>
+```
+
+#### Failed Example 11
+
+This 16pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since for CJK languages, 16pt bold is not [large scale text][], the example fails the rule.
+
+```html
+<p style="color: #000; font-size:18pt; font-weight:700; background: #666;">
+	中国語、日本語、及び韓国語
+</p>
+```
+
+#### Failed Example 12
+
+This 20pt black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since for CJK languages, 20pt is not [large scale text][], the example fails the rule.
+
+```html
+<p style="color: #000; font-size:22pt; font-weight:700; background: #666;">
+	中国語、日本語、及び韓国語
+</p>
 ```
 
 ### Inapplicable

@@ -17,7 +17,7 @@ For CJK (Chinese, Japanese and Korean) characters with a [computed](https://www.
 - at least 22 [points](https://www.w3.org/TR/css-values/#pt), or
 - at least 18 [points](https://www.w3.org/TR/css-values/#pt) and a [computed](https://www.w3.org/TR/css-cascade-3/#computed-value) [font weight](https://www.w3.org/TR/css-fonts-3/#font-weight-prop) CSS property of 700 or higher.
 
-Notes:
+**Notes:**  
 The WCAG definition of [large scale text](https://www.w3.org/TR/WCAG21/#dfn-large-scale) lacks clarity regarding the equivalent [font-size](https://www.w3.org/TR/css-fonts-3/#propdef-font-size) for CJK characters. According to WCAG:  
 >[large scale (text)](https://www.w3.org/TR/WCAG21/#dfn-large-scale): with at least 18 point or 14 point bold or font size that would yield equivalent size for Chinese, Japanese and Korean (CJK) fonts
 

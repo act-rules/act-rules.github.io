@@ -188,7 +188,7 @@ This text is using the default user agent text color and background color. By de
 This 18pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray background.
 
 ```html
-<p style="color: #000; font-size:18pt; font-weight:700; background: #777;">
+<p style="color: #000; font-size:18pt; font-weight:700; background: #777;" lang="ja">
 	中国語、日本語、及び韓国語
 </p>
 ```
@@ -198,7 +198,7 @@ This 18pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray bac
 This 22pt black Japanese text has a contrast ratio of 4.6:1 on the gray background.
 
 ```html
-<p style="color: #000; font-size:22pt; background: #777;">
+<p style="color: #000; font-size:22pt; background: #777;" lang="ja">
 	中国語、日本語、及び韓国語
 </p>
 ```
@@ -208,7 +208,7 @@ This 22pt black Japanese text has a contrast ratio of 4.6:1 on the gray backgrou
 This 18pt black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since the characters composing the sentence are not included within the Unicode standard range of 4E00–9FFF, it's passing the rule.
 
 ```html
-<p style="color: #000; font-size:18pt; background: #777;">
+<p style="color: #000; font-size:18pt; background: #777;" lang="ja">
 	「ロック・アンド・ロール」
 </p>
 ```
@@ -363,7 +363,7 @@ This text in a [semantic button][semantic role] has a contrast ratio of 6.4:1.
 This 16pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since 14pt bold is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 7:1.
 
 ```html
-<p style="color: #000; font-size:14pt; font-weight:700; background: #666;">
+<p style="color: #000; font-size:14pt; font-weight:700; background: #666;" lang="ja">
 	中国語、日本語、及び韓国語
 </p>
 ```
@@ -373,7 +373,7 @@ This 16pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray bac
 This 20pt black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since 18pt is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 7:1.
 
 ```html
-<p style="color: #000; font-size:18pt; background: #666;">
+<p style="color: #000; font-size:18pt; background: #666;" lang="ja">
 	中国語、日本語、及び韓国語
 </p>
 ```

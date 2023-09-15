@@ -506,12 +506,12 @@ This [document][] is not an [HTML web page][].
 ```
 
 [block of content]: #block-of-content 'Definition of Block of Content'
-[block collapsible]: https://www.w3.org/WAI/standards-guidelines/act/rules/3e12e1// 'Rule Block of Repeated Content is Collapsible'
+[block collapsible]: https://www.w3.org/WAI/standards-guidelines/act/rules/3e12e1/ 'Rule Block of Repeated Content is Collapsible'
 [block of repeated content]: #block-of-repeated-content 'Definition of Block of Repeated Content'
 [document]: https://dom.spec.whatwg.org/#concept-document 'DOM definition of Document'
-[document has landmark]: https://www.w3.org/WAI/standards-guidelines/act/rules/b40fd1// 'Rule Document Has a Landmark with Non-Repeated Content'
-[document has instrument to main]: https://www.w3.org/WAI/standards-guidelines/act/rules/ye5d6e// 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
-[document has heading for main]: https://www.w3.org/WAI/standards-guidelines/act/rules/047fe0// 'Rule Document Has Heading for Non-Repeated Content'
+[document has landmark]: https://www.w3.org/WAI/standards-guidelines/act/rules/b40fd1/ 'Rule Document Has a Landmark with Non-Repeated Content'
+[document has instrument to main]: https://www.w3.org/WAI/standards-guidelines/act/rules/ye5d6e/ 'Rule Document Has an Instrument to Move Focus to Non-Repeated Content'
+[document has heading for main]: https://www.w3.org/WAI/standards-guidelines/act/rules/047fe0/ 'Rule Document Has Heading for Non-Repeated Content'
 [focusable]: #focusable 'Definition of Focusable'
 [html web page]: #web-page-html 'Definition of Web Page (HTML)'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

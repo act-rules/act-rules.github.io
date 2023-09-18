@@ -15,7 +15,7 @@ Text nodes with a [computed](https://www.w3.org/TR/css-cascade-3/#computed-value
 
 
 **Exception**:  
-If the text nodes contain Unicode characters in the 4E00–9FFF range, these characters are:
+If the text nodes contain Unicode characters in the 4E00–9FFF range ([CJK Unified Ideographs](https://unicode.org/charts/PDF/U4E00.pdf)), these characters are:
 
 - at least 22 [points][], or
 - at least 18 [points][] and a [computed][] [font weight][] CSS property of 700 or higher.

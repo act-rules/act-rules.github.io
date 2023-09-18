@@ -241,6 +241,8 @@
 - 000B
 - 000C
 - 000D
+- 4E00
+- 9FFF
 
 # JSON attributes/ metadata/ methods
 - testcases

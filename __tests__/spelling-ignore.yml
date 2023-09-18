@@ -97,6 +97,7 @@
 - de-hello
 - 14pt
 - 18pt
+- 22pt
 - Helvetica
 - DeviceOrientation
 - fieldsets
@@ -123,6 +124,7 @@
 # Notes and acronyms
 - TODO
 - TBD
+- CJK
 
 # Tool and library names
 - axe-core

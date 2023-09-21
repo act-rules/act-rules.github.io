@@ -200,21 +200,7 @@ The applicability of this rule does not include elements with an <i>explicit</i>
 
 #### Inapplicable Example 4
 
-The applicability of this rule does not include hidden elements.  It only includes <i>presentational</i> elements (through roles with [presentational children][]).  These two terms - "hidden" and "presentational" - are often confused.  When an element is "hidden", that means that it is completely omitted from the accessibility tree.  When an element is "presentational", that means that its semantic role is omitted from the accessibility tree, but its content remains.
-
-The [ARIA 1.2 specification]https://www.w3.org/TR/wai-aria-1.2/#presentation) mentions this confusion:
-<ul>
-<li>
-<q>Many individuals erroneously consider role="presentation" to be synonymous with aria-hidden="true"</q>
-</li>
-<li>
-<q>... the presentation role causes a given element to be treated as having no role or to be removed from the accessibility tree, but does not cause the content contained within the element to be removed from the accessibility tree.</q>
-</li>
-</ul>
-
-Adding to this confusion is a third term: "decorative".  The words "decorative" and "presentational" are often used interchangeably, but that usage is inaccurate.  The word "decorative" often appears in a sentence such as "marking an image as decorative" - that is, by adding `alt=""` to an `<img>` element.  "Decorative" in that context <i>does</i> mean "hidden" - and "hidden", again, is different from "presentational" - so using "decorative" and "presentational" interchangeably is inaccurate.  At the time of writing (August 2023), the ACT definition of "[marked as decorative][]" unfortunately encourages this inaccurate usage: it states that <q>An element is marked as decorative if ... it has an explicit role of none or presentation</q>.
-
-At any rate: this example shows that this rule does not apply to hidden elements.
+This example shows that the applicability of this rule does not include hidden elements.  The applicability only includes presentational elements (through roles with [presentational children][]).  (The difference between "hidden" and "presentational" is discussed in the [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/#presentation)).  This example is inapplicable, but if it didn't have aria-hidden="true", then it would fail the rule. 
 
 ```html
 <button aria-hidden="true">
@@ -233,4 +219,3 @@ At any rate: this example shows that this rule does not apply to hidden elements
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/10/21'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [html or svg element]: #namespaced-element
-[marked as decorative]: /glossary/#marked-as-decorative

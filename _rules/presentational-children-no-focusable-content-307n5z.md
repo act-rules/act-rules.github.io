@@ -188,7 +188,7 @@ This `<a>` element has a `link` role, which does not have [presentational childr
 
 #### Inapplicable Example 3
 
-The applicability of this rule does not include elements with an <i>explicit</i> role of `presentation`.  Only <i>implicit</i> (through roles with [presentational children][]).  This example shows that. 
+The applicability of this rule does not include elements with an <i>explicit</i> role of `presentation`.  Only <i>implicit</i>, through roles with [presentational children][]. 
 
 ```html
 <ul>

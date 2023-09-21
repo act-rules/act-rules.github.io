@@ -180,7 +180,7 @@ None of the roles involved in this semantic table have [presentational children]
 
 #### Inapplicable Example 2
 
-This `<a>` element has a `link` role, which does not have [presentational children][].  So this element - perhaps surprisingly - does not fail this rule, because it's inapplicable.  This is the case even though it's invalid HTML.  Any time there's a link as the <i>outer</i> element, that will be inapplicable under this rule.  (If the elements were switched - that is, if the `<button>` element contained the `<a>` element - then that would fail this rule.)
+This `<a>` element has a `link` role, which does not have [presentational children][].  So this element does not fail this rule, because it's inapplicable. 
 
 ```html
 <a href="https://w3.org"><button>W3C Website</button></a>

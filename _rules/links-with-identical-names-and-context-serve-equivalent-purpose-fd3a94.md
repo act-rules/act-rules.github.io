@@ -17,9 +17,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.1.1: # Non-text Content (A)
-    secondary: true
+    secondary: This success criterion is mapped as a Secondary requirement because the SC applies only to non-text content. When links have visual information as context, a failed outcome for this rule may result in SC 1.1.1 Non-text Content being not satisfied.
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is mapped as a Secondary requirement because the SC applies to information and relationships conveyed through presentation. When links rely on visual cues for conveying information and/or relationships, and these cues are not programmatically determined or available in text, a failed outcome for this rule may result in SC 1.3.1 Info and Relationships being not satisfied.
 input_aspects:
   - DOM Tree
   - CSS Styling

@@ -12,9 +12,9 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: satisfied
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -46,7 +46,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 
 ## Background
 
-Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property which should exist is missing or has an unexpected value. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412]. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
+Using invalid ARIA attribute values is often the result of a typo or other developer error. These attributes are then either ignored, or a default value is assumed by browsers and assistive technologies. This often means that a state or property which should exist is missing or has an unexpected value. If the default value for invalid attribute values happens to match the author's intention for the value, there will not be an accessibility issue.
 
 This rule does not require the target of an `ID Reference` to exist. This is because referencing an element that does not exist, and not having the reference at all has the same end result. A common use case for using `ID Reference` for a non-existing ID is to use a static `aria-errormessage` on an `input` element, and to only insert the element with the error message if there is an actual error. There are some cases in which ID references are required. These are tested in a separate rule.
 
@@ -242,7 +242,5 @@ The `aria-hidden` attribute is not on an [HTML or SVG element][].
 ```
 
 [html or svg element]: #namespaced-element
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value
 [value type]: https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def

@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][] with one or more [visible][] [text node][] child, when all the following are true for the `word-spacing` property of the element:
+This rule applies to any [HTML element][] with one or more [visible][] [text node][] children, when all the following are true for the `word-spacing` property of the element:
 
 - the [specified][] value is [declared][] in a `style` attribute; and
 - the [computed][] value is [important][].

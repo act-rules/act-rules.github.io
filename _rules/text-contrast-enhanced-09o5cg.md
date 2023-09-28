@@ -195,11 +195,11 @@ This 18pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray bac
 
 #### Passed Example 12
 
-This 22pt black Japanese text has a contrast ratio of 4.6:1 on the gray background.
+This 22pt black Chinese text has a contrast ratio of 4.6:1 on the gray background.
 
 ```html
 <p style="color: #000; font-size:22pt; background: #777;" lang="ja">
-	中国語、日本語、及び韓国語
+	内容无障碍指南
 </p>
 ```
 
@@ -370,11 +370,11 @@ This 16pt bold black Japanese text has a contrast ratio of 4.6:1 on the gray bac
 
 #### Failed Example 15
 
-This 20pt black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since 18pt is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 7:1.
+This 20pt black Chinese text has a contrast ratio of 4.6:1 on the gray background. Since 18pt is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 7:1.
 
 ```html
 <p style="color: #000; font-size:18pt; background: #666;" lang="ja">
-	中国語、日本語、及び韓国語
+	内容无障碍指南
 </p>
 ```
 

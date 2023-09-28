@@ -10,6 +10,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+secondary_requirements:
+wcag20:1.3.1: # Info and Relationships (A)
   wcag-technique:H42: # Using h1-h6 to identify headings
     forConformance: false
     failed: not satisfied
@@ -40,7 +42,7 @@ There are no assumptions.
 
 ## Accessibility Support
 
-- Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends on the user agent, on how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed), and on the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
+- Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends on the user agent, on how the [accessible name][] was computed and on the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue because the same elements would have a [semantic role][] of `presentation` and be hidden for these users.
 
@@ -172,14 +174,6 @@ This `h1` element has an [explicit role][] of `none`. However, the [global][] [p
 ### Inapplicable
 
 #### Inapplicable Example 1
-
-There is no [semantic][semantic role] `heading` element.
-
-```html
-<div></div>
-```
-
-#### Inapplicable Example 2
 
 This `h1` element is not [included in the accessibility tree][].
 

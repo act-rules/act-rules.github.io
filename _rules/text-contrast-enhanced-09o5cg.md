@@ -205,7 +205,7 @@ This 22pt black Japanese text has a contrast ratio of 4.6:1 on the gray backgrou
 
 #### Passed Example 13
 
-This 18pt black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since the characters composing the sentence are not included within the Unicode standard range of 4E00–9FFF, it's passing the rule.
+This 18pt black Japanese text has a contrast ratio of 4.6:1 on the gray background. Since the characters composing the sentence are not included within the Unicode standard range of 4E00–9FFF, this is [large scale text][] and passes the rule.
 
 ```html
 <p style="color: #000; font-size:18pt; background: #777;" lang="ja">

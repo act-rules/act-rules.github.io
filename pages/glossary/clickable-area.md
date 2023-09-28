@@ -11,3 +11,6 @@ input_aspects:
 recursively: getBoundingClientRect(s) (rounding corners, ...) + overflowing text - obscuring content (in the same scroll layer, but different stacking context (absolute/relative positioning)) 
 
 also include explicit and implicit label.
+
+also need to consider parent clipping the element.
+also may consider CSS clipping.

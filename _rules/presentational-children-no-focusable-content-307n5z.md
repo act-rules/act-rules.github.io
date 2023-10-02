@@ -44,14 +44,13 @@ Elements with a [semantic role][] that has [presentational children][] will not 
 
 ### Related rules
 
-- [Element with aria-hidden has no focusable content](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/)
+- [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/)
 
 ### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
 - [WAI-ARIA 1.2 Presentational Children][presentational children]
-- [Element with aria-hidden has no focusable content](aria-hidden-no-focusable-content-6cfa84.md)
 
 ## Test Cases
 
@@ -200,7 +199,7 @@ The applicability of this rule does not include elements with an <i>explicit</i>
 
 #### Inapplicable Example 4
 
-This example shows that the applicability of this rule does not include hidden elements.  The applicability only includes presentational elements (through roles with [presentational children][]).  (The difference between "hidden" and "presentational" is discussed in the [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/#presentation)).  This example is inapplicable, but if it didn't have aria-hidden="true", then it would fail the rule. 
+This example shows that the applicability of this rule does not include hidden elements.  The applicability only includes presentational elements (through roles with [presentational children][]).  (The difference between "hidden" and "presentational" is discussed in the [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/#presentation)).  This example is inapplicable, but if it didn't have aria-hidden="true", then it would fail the rule.  This example (as it is, with aria-hidden) fails the related rule [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/).
 
 ```html
 <button aria-hidden="true">

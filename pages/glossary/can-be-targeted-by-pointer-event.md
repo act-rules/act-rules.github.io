@@ -8,4 +8,10 @@ input_aspects:
   - DOM tree
 ---
 
-focusable + non-obscured
+An element _can be targeted by pointer events_ when both the following conditions are true:
+
+- the element is [focusable][]; and
+- the element is [visible][]. <- not covered, even by transparent stuff…
+
+[focusable]: #focusable 'Definition of Focusable'
+[visible]: #visible ' Definition of Visible'

@@ -21,7 +21,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.4.3: # Contrast (Minimum) (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion has a lower minimum contrast. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree

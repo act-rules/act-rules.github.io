@@ -1,6 +1,6 @@
 ---
 id: 78fd32
-name: Line height in style attributes is not !important
+name: DEPRECATED - Line height in style attributes is not !important
 rule_type: atomic
 description: |
   This rule checks that the `style` attribute is not used to prevent adjusting `line-height` by using `!important`, except if it's at least 1.5 times the font size.
@@ -19,6 +19,8 @@ acknowledgments:
     - Jey Nandakumar
   funding:
     - WAI-Tools
+deprecated: |
+  This rule has been deprecated and superseded by Rule [Important letter spacing in style attributes is wide enough](https://act-rules.github.io/rules/fsy8c7). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

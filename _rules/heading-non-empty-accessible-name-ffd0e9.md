@@ -5,13 +5,9 @@ rule_type: atomic
 description: |
   This rule checks that each heading has a non-empty accessible name.
 accessibility_requirements:
-  wcag20:1.3.1: # Info and Relationships (A)
+  aria12:namecalculation:
+    title: ARIA 1.2,5.2.8 Accessible Name Calculation
     forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
-  wcag-technique:H42: # Using h1-h6 to identify headings
-    forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -22,6 +18,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+    - Wilco Fiers
   funding:
     - WAI-Tools
 ---

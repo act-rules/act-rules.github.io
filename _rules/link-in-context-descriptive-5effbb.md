@@ -52,7 +52,7 @@ The [accessible name][] of each target element together with its [programmatical
 ### Related rules
 
 - [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
-- [Link is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/proposed/)
+- [Link is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/)
 
 ### Bibliography
 

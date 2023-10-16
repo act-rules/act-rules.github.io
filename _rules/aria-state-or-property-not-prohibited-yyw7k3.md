@@ -60,6 +60,7 @@ Assessing the value of the attribute is out of scope for this rule.
 
 ### Related rules
 
+- [Element marked as decorative is not exposed](https://www.w3.org/WAI/standards-guidelines/act/rules/46ca7f/)
 - [ARIA state or property has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/proposed/)
 - [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/proposed/)
 

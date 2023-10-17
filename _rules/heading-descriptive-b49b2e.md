@@ -31,17 +31,15 @@ This rule applies to any [semantic][semantic role] `heading` element that is [in
 
 ## Expectation
 
-Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][].
+Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][]. The order of elements is determined by the [flat tree][].
 
-The order of elements is determined by the [flat tree][].
-
-**Note:** Headings do not need to be lengthy. A word, or even a single character, may suffice.
+**Note:** Headings do not need to be lengthy. A word, or even a single character, may sufficent.
 
 ## Assumptions
 
-This rule assumes that the [flat tree][] order is close to the reading order, as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
-This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from AT. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from assistive technologies. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
 ## Accessibility Support
 
@@ -66,7 +64,7 @@ Headings that are visible but not in the accessibility tree are a failure of [Su
 
 #### Passed Example 1
 
-Heading marked up with `h1` element that describes the topic or purpose of the following [perceivable content][].
+This `h1` heading element describes the topic of the following paragraph.
 
 ```html
 <html lang="en">
@@ -77,7 +75,7 @@ Heading marked up with `h1` element that describes the topic or purpose of the f
 
 #### Passed Example 2
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [perceivable content][].
+This heading marked up with an [explicit role][] of `heading` describes the topic of the following paragraph.
 
 ```html
 <html lang="en">
@@ -88,7 +86,7 @@ Heading marked up with `role="heading"` that describes the topic or purpose of t
 
 #### Passed Example 3
 
-Heading marked up with `h1` element with an image that describes the topic or purpose of the following [perceivable content][].
+This `h1` heading element with an image describes the topic of the following paragraph.
 
 ```html
 <html lang="en">
@@ -101,7 +99,7 @@ Heading marked up with `h1` element with an image that describes the topic or pu
 
 #### Passed Example 4
 
-Heading marked up with `h1` element that is a single character that describes the topic or purpose of the following [perceivable content][].
+This `h1` heading element has a single character text that describes the topic of the following description list.
 
 ```html
 <html lang="en">
@@ -121,7 +119,7 @@ Heading marked up with `h1` element that is a single character that describes th
 
 #### Passed Example 5
 
-Heading marked up with `role="heading"` that describes the topic or purpose of the following [perceivable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
+This heading marked up with an [explicit role][] of `heading` describes the topic of the following paragraph. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -148,7 +146,7 @@ This heading describes the first [perceivable content][] after it (the first `p`
 
 #### Failed Example 1
 
-Heading marked up with `h1` element that does not describe the topic or purpose of the following [perceivable content][].
+This `h1` heading element does not describes the topic of the following paragraph.
 
 ```html
 <html lang="en">
@@ -159,7 +157,7 @@ Heading marked up with `h1` element that does not describe the topic or purpose 
 
 #### Failed Example 2
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][].
+This heading marked up with an [explicit role][] of `heading` does not describe the topic of the following paragraph.
 
 ```html
 <html lang="en">
@@ -170,7 +168,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 3
 
-Heading marked up with `role="heading"` that does not describe the topic or purpose of the following [perceivable content][]. The heading is positioned off screen but is [included in the accessibility tree][].
+This heading marked up with an [explicit role][] of `heading` does not describe the topic of the following paragraph. The heading is positioned off screen but is [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -183,7 +181,7 @@ Heading marked up with `role="heading"` that does not describe the topic or purp
 
 #### Failed Example 4
 
-This heading does not describe the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
+This `h1` heading element does not describe the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
 
 ```html
 <html lang="en">
@@ -207,7 +205,7 @@ There is no heading.
 
 #### Inapplicable Example 2
 
-Heading is not [included in the accessibility tree][].
+This `h1` heading element is not [included in the accessibility tree][].
 
 ```html
 <html lang="en">
@@ -218,7 +216,7 @@ Heading is not [included in the accessibility tree][].
 
 #### Inapplicable Example 3
 
-`h1` element has an empty [accessible name][].
+This `h1` heading element has an empty [accessible name][].
 
 ```html
 <html lang="en">

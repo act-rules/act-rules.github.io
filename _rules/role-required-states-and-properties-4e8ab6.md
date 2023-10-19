@@ -38,9 +38,7 @@ For each test target, the [WAI-ARIA required states and properties][] for the ro
 
 ## Assumptions
 
-- The applicability of this rule is limited to [explicit semantic roles][explicit semantic role] based on an assumption that all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState) for the [implicit semantic role][] of the element.
-
-- The ARIA `role` is being used to comply to WCAG.
+- The ARIA `role` is being used to conform to WCAG.
 
 ## Accessibility Support
 
@@ -50,9 +48,9 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 ## Background
 
-Omitting required ARIA properties is often the result of a developer error. When required properties are missing some browsers and assistive technologies will guess the property, or leave the element inaccessible.
+Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications](#wai-aria-specifications), the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
 
-This rule is testing author built components, not user-agent built ones. Elements that keep their [implicit semantic role][] are mapped into conforming accessible objects, with all required properties, by user agents and are therefore not tested by this rule. Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
+This rule is testing author built components that specify [explicit semantic roles][explicit semantic role] and not components that keep their [implicit semantic role][]. For components that keep their [implicit semantic role][], all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState). Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings](https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings).
 
 ### Bibliography
 

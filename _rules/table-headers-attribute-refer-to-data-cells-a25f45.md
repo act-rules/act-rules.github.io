@@ -37,7 +37,7 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation 1
 
-Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, which is a [`cell`][] of the same [`table`][] and is a `th` element.
+Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, which is a `th` element of the same [`table`][].
 
 ## Expectation 2
 

@@ -161,6 +161,8 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: portrait) {
 				html {
 					transform: rotate(1.5708rad);
+                    width: min(100vw, 100vh);
+                    height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -236,6 +238,8 @@ A page where the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual
 			@media (orientation: portrait) {
 				html {
 					rotate: 90deg;
+                    width: min(100vw, 100vh);
+                    height: min(100vw, 100vh);
 				}
 			}
 		</style>

@@ -205,6 +205,7 @@
 - reflow
 - Viewport
 - dom-meta-content
+- showModal
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -260,6 +261,8 @@
 - 2px
 - 3px
 - 4px
+- 10px
+- 15px
 - 16px
 - 20px
 - 24px

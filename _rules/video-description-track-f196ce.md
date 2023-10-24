@@ -1,6 +1,6 @@
 ---
 id: f196ce
-name: DEPRECATED — Video element visual content has description track
+name: Video element visual content has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements are descriptive.

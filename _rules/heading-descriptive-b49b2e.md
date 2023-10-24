@@ -33,7 +33,7 @@ This rule applies to any [semantic][semantic role] `heading` element that is [in
 
 Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][]. The order of elements is determined by the [flat tree][].
 
-**Note:** Headings do not need to be lengthy. A word, or even a single character, may sufficent.
+**Note:** Headings do not need to be lengthy. A word, or even a single character, may be sufficient.
 
 ## Assumptions
 

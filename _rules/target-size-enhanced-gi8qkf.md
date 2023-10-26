@@ -226,7 +226,7 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 
 ```html
 <head>
-	<title>Inapplicable Example</title>
+	<title>Passed Example</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -285,6 +285,30 @@ This rotated button has a [clickable area][] of exactly 44×44px.
 ```
 
 > **Comment:** I'm not sure this is actually passing (or whether the target needs to be aligned with the axis). This might end up being a nightmare to check (because the bounding box, or the`getBoundingClientRect` is 61×61px). Do we want the rule to somehow exclude this as "weird shape"?
+
+### Passed Example
+
+This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
+
+```html
+<head>
+	<title>Passed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		.cover {
+			top: 0;
+			height: 60px;
+			width: 500px;
+			pointer-events: none;
+		}
+	</style>
+</head>
+<button onclick="alert('hello')" style="height: 50px">
+	Say Hello
+</button>
+
+<div class="cover bad highlight"></div>
+```
 
 #### Passed Example
 
@@ -415,7 +439,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 
 ```html
 <head>
-	<title>Inapplicable Example</title>
+	<title>Failed Example</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -532,15 +556,15 @@ This button cannot be [targeted by a click event][] because it is entirely obscu
 
 ```html
 <head>
-  <title>Inapplicable Example</title>
-  <link rel="stylesheet" href="/test-assets/target-size/highlight.css"
-<style>
-	.cover {
-		top: 0;
-		height: 50px;
-		width: 500px;
-	}
-</style>
+	<title>Inapplicable Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		.cover {
+			top: 0;
+			height: 50px;
+			width: 500px;
+		}
+	</style>
 </head>
 <button onclick="alert('hello')">
 	Say Hello

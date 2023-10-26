@@ -8,7 +8,7 @@ input_aspects:
   - DOM tree
 ---
 
-The _directly clickable area_ of a text node is the smallest rectangle that contains all its visible pixels.
+The _directly clickable area_ of a text node is the smallest rectangle that contains all its visible pixels. <- also needs to be `getBoundingClientRect`, which requires building a range.
 
 The _directly clickable area_ of an element is the result of calling `getBoundingClientRect` on it.
 

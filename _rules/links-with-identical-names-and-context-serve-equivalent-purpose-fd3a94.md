@@ -16,10 +16,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.1.1: # Non-text Content (A)
-    secondary: This success criterion is mapped as a Secondary requirement because the SC applies only to non-text content. When links have visual information as context, a failed outcome for this rule may result in SC 1.1.1 Non-text Content being not satisfied.
-  wcag20:1.3.1: # Info and Relationships (A)
-    secondary: This success criterion is mapped as a Secondary requirement because the SC applies to information and relationships conveyed through presentation. When links rely on visual cues for conveying information and/or relationships, and these cues are not programmatically determined or available in text, a failed outcome for this rule may result in SC 1.3.1 Info and Relationships being not satisfied.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -57,7 +53,7 @@ For each pair of links in each target set, one of the following is true:
 
 - both links resolve to the [same resource][]; or 
 - both links resolve to [equivalent resources][equivalent resource]; or
-- there is no visual information within the content of the page to let users know that both links resolve to [non-equivalent resources][equivalent resource].
+- there is no visual information within the [web page][] to let users know that both links resolve to [non-equivalent resources][equivalent resource].
 
 **Note**: Resolving the links includes potential redirects, if the redirects happen instantly.
 
@@ -247,6 +243,31 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 
 #### Failed Example 1
 
+These two HTML `a` elements have the same [accessible name][] and are nested within the same [context][programmatically determined link context], but go to different resources.
+
+```html
+<html lang="en">
+	<p>
+		To get in touch with us, you can either <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=1">contact us</a> via chat or <a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=2">contact us</a> by phone.
+	</p>
+</html>
+```
+
+#### Failed Example 2
+
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources.
+
+```html
+<html lang="en">
+	<p>W3C pages for ACT:</p>
+	<p><a href="https://act-rules.github.io/">ACT rules</a></p>
+	<p>Community group for ACT:</p>
+	<p><a href="https://www.w3.org/community/act-r/">ACT rules</a></p>
+</html>
+```
+
+#### Failed Example 3
+
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They are visually distinguishable thanks to the relationships conveyed through CSS, but go to different resources.
 
 ```html
@@ -259,7 +280,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Failed Example 2
+#### Failed Example 4
 
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but go to different resources. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
@@ -279,7 +300,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Failed Example 3
+#### Failed Example 5
 
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context]. They link to web pages that are similar, but have different information in their content. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
@@ -299,7 +320,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 </html>
 ```
 
-#### Failed Example 4
+#### Failed Example 6
 
 These two HTML `span` elements have an [explicit role][] of link, same [accessible name][] and [context][programmatically determined link context], but link to resources that offer different content. Their purpose is disambiguated for sighted users by the alignment of the links with the images above.
 
@@ -325,7 +346,7 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 </html>
 ```
 
-#### Failed Example 5
+#### Failed Example 7
 
 These two SVG `a` elements have the same [accessible name][] and [context][programmatically determined link context] but link to different resources.
 
@@ -345,7 +366,7 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 </html>
 ```
 
-#### Failed Example 6
+#### Failed Example 8
 
 These two HTML `a` elements with the same [accessible name][] and [context][programmatically determined link context] resolve to the [same resource][] after redirect, but the redirect is not instant.
 
@@ -483,5 +504,6 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 [sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
+[web page]: #web-page-html 'Definition of HTML web page'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
 [html or svg elements]: #namespaced-element

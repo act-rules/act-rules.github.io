@@ -1,6 +1,6 @@
 ---
 id: ac7dc6
-name: DEPRECATED — Video element visual-only content has description track
+name: Video element visual-only content has description track
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.

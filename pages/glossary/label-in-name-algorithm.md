@@ -8,6 +8,8 @@ input_aspects:
   - DOM tree
 ---
 
+To check whether an [element][] has <dfn>its label contained in its name</dfn>, follow this algorithm:
+
 Let 'label' be the [visible inner text][] of the target element.  Let 'name' be the [accessible name][] of the target element.  Both 'label' and 'name' are strings.
 
 Sub-algorithm to tokenize a string:
@@ -32,3 +34,4 @@ If the answer is "yes" (that is: the tokenized 'label' is a sublist of the token
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
+[element]: https://dom.spec.whatwg.org/#element

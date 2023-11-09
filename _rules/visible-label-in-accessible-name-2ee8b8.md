@@ -39,7 +39,7 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-For each target element, the [visible inner text][] is contained within the [accessible name][] of the target element according to the [label in name algorithm][].
+For the target element, the [visible inner text][] is contained within the [accessible name][] according to the [label in name algorithm][].
 
 ## Assumptions
 

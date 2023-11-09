@@ -28,7 +28,7 @@ Then do the check: is the tokenized 'label' a sublist of the tokenized 'name'?
     - It checks whether elements are consecutive or not. i.e. it checks for a substring, in the computer science sense of the term. Not a subsequence.
     - An empty list is a sublist of any list.
 
-If the answer is "yes" (i.e. the tokenized 'label' a sublist of the tokenized 'name'), then the target element passes the rule.  Otherwise, it fails the rule.
+If the answer is "yes" (that is: the tokenized 'label' is a sublist of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'

@@ -1,4 +1,12 @@
-# Visible inner text
+---
+title: Visible Inner Text
+key: visible-inner-text
+unambiguous: true
+objective: true
+input_aspects:
+  - CSS styling
+  - DOM tree
+---
 
 (The "visible inner text" defined here is similar to, but not the same as, [visible text content][].)
 
@@ -33,6 +41,6 @@ The <dfn>visible inner text</dfn> of any other node is the concatenation of the 
 [rendered]: https://html.spec.whatwg.org/#being-rendered
 [text node]: https://dom.spec.whatwg.org/#text
 [tree order]: https://dom.spec.whatwg.org/#concept-tree-order
-[visible]: ./visible.md
+[visible]: #visible
 [visible text content]: #visible-text-content
-[whitespace]: ./whitespace.md
+[whitespace]: #whitespace

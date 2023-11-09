@@ -18,7 +18,7 @@ The <dfn id="visible-inner-text:for-text">visible inner text of a [text node][]<
 -   otherwise, the visible inner text of the [text node][] is the empty string (`""`).
 
 
-The <dfn id="for-element">visible inner text of an [element][]</dfn> is:
+The <dfn id="visible-inner-text:for-element">visible inner text of an [element][]</dfn> is:
 -   if the [element][] is not [rendered][], its visible inner text is the empty string (`""`);
 -   if the [element][] is a [`<br>`][<br>] element, its visible inner text is a newline character (`"\n"`);
 -   if the [element][] is a [`<p>`][<p>] element, its visible inner text is the concatenation a newline character (`"\n"`) plus the visible inner text of its children (in [tree order][] in the [flat tree][]), plus a newline character (`"\n"`);

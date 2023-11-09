@@ -198,13 +198,6 @@ This passes because the [label in name algorithm][] effectively ignores all punc
 <button aria-label="💡 Submit 💡">>>> ** Submit ** <<<</button>
 ```
 
-#### Passed Example 15
-
-The "X" is non-text content.
-
-```html
-<button aria-label="Close">X</button>
-```
 
 
 

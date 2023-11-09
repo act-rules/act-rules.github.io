@@ -8,7 +8,7 @@ input_aspects:
   - DOM tree
 ---
 
-(The "visible inner text" defined here is similar to, but not the same as, [visible text content][].)
+(The "visible inner text" defined here is similar to, but not the same as, [visible text content][] and [innerText][https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute].)
 
 The <dfn>visible inner text of a node</dfn> depends on the kind of node. 
 

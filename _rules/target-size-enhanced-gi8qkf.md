@@ -19,6 +19,7 @@ acknowledgments:
   authors:
     - Jean-Yves Moyen
     - Wilco Fiers
+  test_assets: Map Image by <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm#query=map%20background&position=27&from_view=keyword&track=ais">Freepik</a>
 ---
 
 ## Applicability
@@ -31,7 +32,7 @@ This rule applies ta any [HTML element][namespaced element] for which all the fo
 
 Exception: not for `area` (due to weird shapes).
 Exception: not if a descendant is focusable (hard to define the clickable area).
-Exception: the target is a [UI controlled component][].
+Exception: the target is a [User Agent controlled component][].
 
 > comment: This is for the "User Agent Control" exception. The Understanding doc mentions days in a calendar widget. I somewhat intend to have this as a list of elements (or their descendants) which are known to correspond (e.g. `<input type="date">`) as it is fairly flexible and easy to define. This would, however let out cases where these components are re-sized by the author. But this is only false negatives, so I guess it's OK.
 
@@ -163,7 +164,7 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 
 This button, together with its padding and border, has a [clickable area][] of more than 44×44px. The solid green border shows the [clickable area][] while the dashed red one shows the inner text (without sizing nor padding).
 
-> **Comment:** The size here should be 45×45 (35 + 4*2 (padding) + 1*2 (borders)). However, when inspecting an element with Chrome, I only get a size of 44.87px. That's why I put the dimensions at 35px instead of the theoretical minimum of 34px.
+> **Comment:** The size here should be 45×45 (35 + 4*2 (padding) + 1*2 (borders)). However, when inspecting the element with Chrome, I only get a size of 44.87px. That's why I put the dimensions at 35px instead of the theoretical minimum of 34px.
 
 ```html
 <head>
@@ -284,7 +285,7 @@ This rotated button has a [clickable area][] of exactly 44×44px.
 <button id="target" onclick="alert('Hello')">Hello</button>
 ```
 
-> **Comment:** I'm not sure this is actually passing (or whether the target needs to be aligned with the axis). This might end up being a nightmare to check (because the bounding box, or the`getBoundingClientRect` is 61×61px). Do we want the rule to somehow exclude this as "weird shape"?
+> **Comment:** I'm not sure this is actually passing (or whether the target needs to be aligned with the axis). This might end up being a nightmare to check (because the bounding box, or the `getBoundingClientRect` is 61×61px). Do we want the rule to somehow exclude this as "weird shape"?
 
 ### Passed Example
 
@@ -312,13 +313,94 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 
 #### Passed Example
 
-These pins on the map have [essential size][]
+The pin (red circle) on this map has [essential size][] because it is important to pinpoint the exact location.
 
-> **Comment:** This example is going to be a bit annoying to write from scratch.
+```html
+<style>
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
+	}
+	.dot {
+		height: 15px;
+		width: 15px;
+		background-color: red;
+		border-radius: 50%;
+		display: inline-block;
+	}
+</style>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<a
+	class="dot"
+	style="position: absolute; top: 597px; left: 818px"
+	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
+></a>
+```
 
 #### Passed Example
 
-TODO: obscured by a scrollable element.
+This button has a 50×50px [clickable area][]. The `div` with a dashed red border is not obscuring it because it can be scrolled out of the way. The solid green lines hint at a 44×44px area inside the button.
+
+```html
+<head>
+	<title>Passed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		.cover {
+			position: relative;
+			left: 30px;
+			height: 100px;
+			width: 100px;
+			pointer-events: all;
+		}
+		#target {
+			height: 50px;
+			border-radius: 0;
+		}
+		.hlines {
+			top: 10px;
+			left: -10px;
+			width: 100px;
+			height: 44px;
+			border-left: none;
+			border-right: none;
+		}
+		.vlines {
+			top: -10px;
+			left: 9px;
+			width: 44px;
+			height: 100px;
+			border-top: none;
+			border-bottom: none;
+		}
+		.scroller {
+			z-index: 6;
+			position: absolute;
+			top: 0;
+			overflow-y: scroll;
+			height: 80px;
+			pointer-events: none;
+		}
+		.spacer {
+			height: 100px;
+		}
+	</style>
+</head>
+
+<div class="scroller">
+	<div class="cover bad"></div>
+	<div class="spacer"></div>
+</div>
+
+<button id="target" class="highlightable" onclick="alert('Hello')">
+	Say Hello
+</button>
+<div class="hlines good highlight"></div>
+<div class="vlines good highlight"></div>
+```
 
 ### Failed
 
@@ -431,7 +513,7 @@ This rotated button has a [clickable area][] of exactly 40×40px.
 <button id="target" onclick="alert('Hello')">Hello</button>
 ```
 
-> **Comment:** This might end up being a nightmare to check (because the bounding box, or the`getBoundingClientRect` is 56×56px). Do we want the rule to somehow exclude this as "weird shape"?
+> **Comment:** This might end up being a nightmare to check (because the bounding box, or the `getBoundingClientRect` is 56×56px). Do we want the rule to somehow exclude this as "weird shape"?
 
 #### Failed Example
 
@@ -483,11 +565,73 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 
 #### Failed Example
 
+This button only has a [clickable area][] of approximately 20×45px, because it is obscured by the `div` with a dashed red border. Even though the `div` is scrollable, it is not scrollable fully out of the way and always obscures the button. The solid green lines hint at how a 44×44px area would fit inside the button, but not inside the never obscured part.
+
+```html
+<head>
+	<title>Failed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		.cover {
+			position: relative;
+			left: 30px;
+			height: 100px;
+			width: 100px;
+			pointer-events: all;
+		}
+		#target {
+			height: 50px;
+			border-radius: 0;
+		}
+		.hlines {
+			top: 10px;
+			left: -10px;
+			width: 100px;
+			height: 44px;
+			border-left: none;
+			border-right: none;
+		}
+		.vlines {
+			top: -10px;
+			left: 9px;
+			width: 44px;
+			height: 100px;
+			border-top: none;
+			border-bottom: none;
+		}
+		.scroller {
+			z-index: 6;
+			position: absolute;
+			top: 0;
+			overflow-y: scroll;
+			height: 80px;
+			pointer-events: none;
+		}
+		.spacer {
+			height: 30px;
+		}
+	</style>
+</head>
+
+<div class="scroller">
+	<div class="cover bad"></div>
+	<div class="spacer"></div>
+</div>
+
+<button id="target" class="highlightable" onclick="alert('Hello')">
+	Say Hello
+</button>
+<div class="hlines good highlight"></div>
+<div class="vlines good highlight"></div>
+```
+
+#### Failed Example
+
 This button has a [clickable area][] (in light blue) of only 40×40px due to being clipped by the `clip-path` property.
 
 ```html
 <head>
-	<title>Inapplicable Example</title>
+	<title>Failed Example</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		#target {
@@ -536,7 +680,7 @@ This checkbox does not have its size adjusted by the author
 
 #### Inapplicable Example 4
 
-This checkbox cannot be [targeted by a click event][] because it is hidden. It is replaced with an on-screen clickable SVG.
+This checkbox cannot be [targeted by a pointer event][] because it is hidden. It is replaced with an on-screen clickable SVG.
 
 ```html
 
@@ -544,7 +688,7 @@ This checkbox cannot be [targeted by a click event][] because it is hidden. It i
 
 #### Inapplicable Example 5
 
-This checkbox cannot be [targeted by a click event][] because it is obscured by the modal.
+This checkbox cannot be [targeted by a pointer event][] because it is obscured by the modal.
 
 ```html
 
@@ -552,7 +696,7 @@ This checkbox cannot be [targeted by a click event][] because it is obscured by 
 
 #### Inapplicable Example
 
-This button cannot be [targeted by a click event][] because it is entirely obscured by the `div` element with a dashed red border.
+This button cannot be [targeted by a pointer event][] because it is entirely obscured by the `div` element with a dashed red border.
 
 ```html
 <head>
@@ -575,7 +719,7 @@ This button cannot be [targeted by a click event][] because it is entirely obscu
 
 #### Inapplicable Example
 
-This button has a [clickable area][] a bit below 29×22px (due to its rounded corners), but it is a [User Agent Controlled][] element.
+This button has a [clickable area][] a bit below 29×22px (due to its rounded corners), but it is a [User Agent Controlled component][].
 
 ```html
 <button onclick="alert('Hello')">Hi</button>
@@ -583,7 +727,7 @@ This button has a [clickable area][] a bit below 29×22px (due to its rounded co
 
 #### Inapplicable Example
 
-This input and its [programmatic label][] is a [User Agent Controlled][] element. The height of its [clickable area][] is only 37px.
+This input and its [programmatic label][] is a [User Agent Controlled component][]. The height of its [clickable area][] is only 37px.
 
 ```html
 <label id="label">
@@ -591,3 +735,16 @@ This input and its [programmatic label][] is a [User Agent Controlled][] element
 	<input id="input" />
 </label>
 ```
+
+[can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
+[clickable area]: #clickable-area 'Definition of Cliclkable Area'
+[essential target size]: #essential-target-size ' Definition of Essential Target Size'
+[explicit label]: #explicit-label 'Definition of Explicit Label'
+[implicit label]: #implicit-label 'Definition of Implicit Label'
+[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
+[inline text]: #inline-text 'Definition of Inline Text'
+[instrument]: #instrument 'Definition of Instrument'
+[namespaced element]: #namespaced-element 'Definition of Namespaced Element'
+[programmatic label]: #programmatic-abel 'Definition of Programmatic Label'
+[targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
+[user agent controlled component]: #ui-controlled-component 'Definition of UI Controlled Component'

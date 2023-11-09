@@ -248,7 +248,7 @@ This link has an [accessible name][] which contains a hyphen.  The [label in nam
 The rule has no special handling for acronyms or initialisms.
 
 ```html
-<a aria-label="WAVE" href="#">W A V E</a>
+<a aria-label="WCAG" href="#">W C A G</a>
 ```
 
 #### Failed Example 7 

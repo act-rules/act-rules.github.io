@@ -149,6 +149,14 @@ The [visible inner text][] is "Download specification".  The words "the" and "gi
 
 #### Passed Example 10
 
+The [visible inner text][] is "Download specification", which includes a space character between the two words due to the second clause of the definition of [visible inner text of a text node][].
+
+```html
+<a aria-label="Download specification" href="#"><span>Download</span><span id="space"> </span><span>specification</span></a>
+```
+
+#### Passed Example 11
+
 This example shows that the [visible inner text][] isn't always the same as the [innerText][https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute].  The visible inner text is "Download specification".  The innerText is 'Download \ngizmo\nspecification'.  This rule uses the visible inner text - not innerText.
 
 ```html
@@ -166,7 +174,7 @@ This example shows that the [visible inner text][] isn't always the same as the 
 <a aria-label="Download specification" href="#">Download <span class="visually-hidden">gizmo</span> specification</a>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 This example shows that the [label in name algorithm][] handles many kinds of whitespace.
 
@@ -174,7 +182,7 @@ This example shows that the [label in name algorithm][] handles many kinds of wh
 <a aria-label="compose email" href="#">compose &nbsp;&nbsp;<br> email</a>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 This example passes the rule because "YYYY-MM-DD" is in brackets.  Text in brackets is removed by the [label in name algorithm][], because its not normally spoken by speech-input users.  
 
@@ -182,7 +190,7 @@ This example passes the rule because "YYYY-MM-DD" is in brackets.  Text in brack
 <button aria-label="Search by date">Search by date (YYYY-MM-DD)</button>
 ```
 
-#### Passed Example 13
+#### Passed Example 14
 
 The passes for two reasons: 1) because the ellipsis ("…") is [non-text content][], and 2) because the ellipsis is neither a letter nor a digit and so is filtered out by the [label in name algorithm][].
 
@@ -190,7 +198,7 @@ The passes for two reasons: 1) because the ellipsis ("…") is [non-text content
 <button aria-label="Next">Next…</button>
 ```
 
-#### Passed Example 14
+#### Passed Example 15
 
 This passes because the [label in name algorithm][] effectively ignores all punctuation and emoji, in both the visible inner text and the accessible name, as long as they don't break up words.
 
@@ -383,6 +391,7 @@ This link has no [visible inner text][].
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
 [visible]: #visible 'Definition of visible'
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
+[visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
 [widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'

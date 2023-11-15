@@ -141,13 +141,23 @@ Similar to the previous example.
 
 #### Passed Example 9
 
+The [visible inner text][] of this link is "ACT" (with no spaces) because of the explicit styles of "display: inline" on the &lt;p&gt; elements and the absence of whitespace between the &lt;p&gt; elements.  The cases of "display: inline" and "display: block" are handled by the definition of [visible inner text of an element][].  This example shows that the definition agrees with the visual rendering done by the browser.
+
+```html
+<a href="#" aria-label="ACT">
+	<p style="display: inline">A</p><p style="display: inline">C</p><p style="display: inline">T</p>
+</a>
+```
+
+#### Passed Example 10
+
 The [visible inner text][] is "Download specification".  The words "the" and "gizmo" aren't part of it.    
 
 ```html
 <a aria-label="Download specification" href="#">Download <span style="visibility: hidden">the</span> <span style="display: none">gizmo</span> specification</a>
 ```
 
-#### Passed Example 10
+#### Passed Example 11
 
 The [visible inner text][] is "Download specification", which includes a space character between the two words due to the second clause of the definition of [visible inner text of a text node][].
 
@@ -155,7 +165,7 @@ The [visible inner text][] is "Download specification", which includes a space c
 <a aria-label="Download specification" href="#"><span>Download</span><span id="space"> </span><span>specification</span></a>
 ```
 
-#### Passed Example 11
+#### Passed Example 12
 
 This example shows that the [visible inner text][] isn't always the same as the [innerText][https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute].  The visible inner text is "Download specification".  The innerText is 'Download \ngizmo\nspecification'.  This rule uses the visible inner text - not innerText.
 
@@ -174,7 +184,7 @@ This example shows that the [visible inner text][] isn't always the same as the 
 <a aria-label="Download specification" href="#">Download <span class="visually-hidden">gizmo</span> specification</a>
 ```
 
-#### Passed Example 12
+#### Passed Example 13
 
 This example shows that the [label in name algorithm][] handles many kinds of whitespace.
 
@@ -182,7 +192,7 @@ This example shows that the [label in name algorithm][] handles many kinds of wh
 <a aria-label="compose email" href="#">compose &nbsp;&nbsp;<br> email</a>
 ```
 
-#### Passed Example 13
+#### Passed Example 14
 
 This example passes the rule because "YYYY-MM-DD" is in brackets.  Text in brackets is removed by the [label in name algorithm][], because its not normally spoken by speech-input users.  
 
@@ -190,7 +200,7 @@ This example passes the rule because "YYYY-MM-DD" is in brackets.  Text in brack
 <button aria-label="Search by date">Search by date (YYYY-MM-DD)</button>
 ```
 
-#### Passed Example 14
+#### Passed Example 15
 
 The passes for two reasons: 1) because the ellipsis ("…") is [non-text content][], and 2) because the ellipsis is neither a letter nor a digit and so is filtered out by the [label in name algorithm][].
 
@@ -198,7 +208,7 @@ The passes for two reasons: 1) because the ellipsis ("…") is [non-text content
 <button aria-label="Next">Next…</button>
 ```
 
-#### Passed Example 15
+#### Passed Example 16
 
 This passes because the [label in name algorithm][] effectively ignores all punctuation and emoji, in both the visible inner text and the accessible name, as long as they don't break up words.
 
@@ -392,6 +402,7 @@ This link has no [visible inner text][].
 [visible]: #visible 'Definition of visible'
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
+[visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
 [widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'

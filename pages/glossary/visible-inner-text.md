@@ -13,8 +13,8 @@ input_aspects:
 The <dfn>visible inner text of a node</dfn> depends on the kind of node. 
 
 The <dfn id="visible-inner-text:for-text">visible inner text of a [text node][]</dfn> is:
--   if the [text node][] is [visible][], its visible inner text is its [data][];
--   if the [text node][] is not-[visible][], [rendered][], and contains only [whitespace][], its visible inner text is the string `" "` (a single ASCII whitespace);
+-   if the [text node][] is [visible][], its visible inner text is its [data][] with whitespace normalized by replacing contiguous [whitespace][] with the string `" "` (a single ASCII whitespace);
+-   if the [text node][] is not [visible][], is [rendered][], and contains only [whitespace][], its visible inner text is the string `" "` (a single ASCII whitespace);
 -   otherwise, the visible inner text of the [text node][] is the empty string (`""`).
 
 

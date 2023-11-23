@@ -28,7 +28,7 @@ This rule applies ta any [HTML element][namespaced element] for which all the fo
 
 - the element is an [inheriting semantic][] `widget`; and
   > comment: role may be incorrectly set.
-- the element [can be targeted by a pointer event][].
+- the element is [focusable][].
 
 Exception: not for `area` (due to weird shapes).
 Exception: not if a descendant is focusable (hard to define the clickable area).
@@ -43,6 +43,9 @@ Exception: the target is a [User Agent controlled component][].
 For each test target, at least one of the following is true:
 
 - the target element has a [clickable area][] width and height of at least 44 CSS pixels; or
+- though scrolling, the element can be brought into viewport with a [clickable area][] width and height of at least 44 CSS pixels; or
+- the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
+  > Note: this is mostly for totally covered or off-screen elements. This should probably rather be handled in the Applicabilty and make these Inapplicable, but I'm not sure it can be done with the current definition…
 - the target is part of [inline text][]; or
   > comment: I feel this is going to be difficult to define objectively, so it is better in Expectation for now. #1010 has some work in that direction that we can probably reuse: https://github.com/act-rules/act-rules.github.io/pull/1010/files#diff-32079a0602a5a909b242b4e0961e7c5ddd6b6f5c9906b216d5bf21cf2ba13a77R28-R29 > https://github.com/act-rules/act-rules.github.io/blob/4b64bba6cb77a8d4dc0649c83c55372f513d979f/pages/glossary/rendered-on-a-line.md
 - The size is [essential target size][]
@@ -52,7 +55,11 @@ For each test target, at least one of the following is true:
 
 ## Assumptions
 
+- This rule assumes that [focusable][] `widget` are effectively clickable.
+
 ## Accessibility Support
+
+Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element.
 
 ## Background
 
@@ -740,6 +747,7 @@ This input and its [programmatic label][] is a [User Agent Controlled component]
 [clickable area]: #clickable-area 'Definition of Cliclkable Area'
 [essential target size]: #essential-target-size ' Definition of Essential Target Size'
 [explicit label]: #explicit-label 'Definition of Explicit Label'
+[focusable]: #focusable 'Definition of Focusable'
 [implicit label]: #implicit-label 'Definition of Implicit Label'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [inline text]: #inline-text 'Definition of Inline Text'

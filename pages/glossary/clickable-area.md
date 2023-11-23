@@ -2,20 +2,25 @@
 title: Clickable area
 key: clickable-area
 unambiguous: true
-objective: true
+objective: false
 input_aspects:
   - CSS styling
   - DOM tree
 ---
 
-The _directly clickable area_ of a text node is the smallest rectangle that contains all its visible pixels. <- also needs to be `getBoundingClientRect`, which requires building a range.
+The _directly clickable area_ of an element is the set of all viewport coordinates for which the element is the [topmost event target][]
 
-The _directly clickable area_ of an element is the result of calling `getBoundingClientRect` on it.
-
-The _clickable area_ of an element is the union of the directly clickable area of all its inclusive descendants, and the clickable area of its [implicit][implicit label] or [explicit label][].
+The _clickable area_ of an element is the union of its _directly clickable area_ and that of its [implicit][implicit label] or [explicit label][].
 
 > **Comment:** implicit label = `<label><input /></label>`, explicit label = `<label for="…">`.
 
+> Old attempt:
+> The _directly clickable area_ of a text node is the smallest rectangle that contains all its visible pixels. <- also needs to be `getBoundingClientRect`, which requires building a range.
+>
+> The _directly clickable area_ of an element is the result of calling `getBoundingClientRect` on it.
+>
+> The _clickable area_ of an element is the union of the directly clickable area of all its inclusive descendants, and the clickable area of its [implicit][implicit label] or [explicit label][].
+>
 > **Comment:** This is larger than the actual clickable area by omitting:
 >
 > - `border-radius`: the rounded corners are not clickable.
@@ -31,3 +36,5 @@ The _clickable area_ of an element is the union of the directly clickable area o
 >
 > also need to consider parent clipping the element.
 > also may consider CSS clipping.
+
+[topmost event target]: https://w3c.github.io/uievents/#topmost-event-target 'CSS definition of Topmost Event Target'

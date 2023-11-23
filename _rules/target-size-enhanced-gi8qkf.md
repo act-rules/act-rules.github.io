@@ -51,7 +51,6 @@ For each test target, at least one of the following is true:
 - The size is [essential target size][]
   > comment: this is always a bit tricky. I guess we can do as in #1916 and list cases that are considered essential (list can grow).
 - There is an [instrument][] to achieve an equivalent goal, with a 44×44px [clickable area][].
-  > comment: I think we can go in line of "there is no [instrument][] to achieve the same goal". That does leave quite a lot of fluffyness around the goal (which should normally be unambiguosly defined), but that is maybe OK for an Assumption?
 
 ## Assumptions
 

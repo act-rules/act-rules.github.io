@@ -1,6 +1,6 @@
 ---
 id: 5b7ae0
-name: DEPRECATED — HTML page lang and xml:lang attributes have matching values
+name: HTML page lang and xml:lang attributes have matching values
 rule_type: atomic
 description: |
   This rule checks that both `lang` and `xml:lang` attributes on the root element of a non-embedded HTML page, have the same primary language subtag.

@@ -27,6 +27,10 @@ htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'attr-no-duplication'
+deprecated: |
+  This rule has been deprecated because success criterion 4.1.1 has 
+  been removed in WCAG 2.2 and for WCAG 2.1 and 2.0 should be 
+  considered to always pass.
 ---
 
 ## Applicability

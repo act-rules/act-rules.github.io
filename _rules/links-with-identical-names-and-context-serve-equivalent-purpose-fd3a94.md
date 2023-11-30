@@ -11,11 +11,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
-    forConformance: true
-    secondary: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because the rule also considers the context of the link, in addition to the link text. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -64,9 +60,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-This rule is designed specifically for [2.4.4 Link Purpose (In Context)][sc244], which requires the purpose to be clear within the context of a link. Because links that do not have this, also are not clear without that context, this rule maps to [2.4.9 Link Purpose (Link only)][sc249] as well. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [2.4.9 Link Purpose (Link only)][sc249].
-
-There is a difference between two contexts being the *same* and being *identical*. This rule specifically targets links within the *same* context. The same context means exactly the same set of DOM nodes. Identical (but not the same) contexts might have a different set of DOM nodes, but those DOM nodes have equivalent content - such as text content, attribute values, and so on. This difference is similar to the difference in some programming languages between pointer equivalence and deep object equivalence. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously has been deemed infeasible at this time, and so has been left out of this rule.
+There is a difference between two contexts being the _same_ and being _identical_. This rule specifically targets links within the _same_ context. The same context means exactly the same set of DOM nodes. Identical (but not the same) contexts might have a different set of DOM nodes, but those DOM nodes have equivalent content - such as text content, attribute values, and so on. This difference is similar to the difference in some programming languages between pointer equivalence and deep object equivalence. Links with identical name that are in identical (but not the same) contexts also fail [2.4.4 Link Purpose (In Context)][sc244]. However, defining "identical context" unambiguously has been deemed infeasible at this time, and so has been left out of this rule.
 
 ### Bibliography
 
@@ -374,7 +368,7 @@ These two `span` elements do not have a [semantic role][] of link.
 
 #### Inapplicable Example 5
 
-These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even though the two contexts in this example are *identical*, they are not the *same*. That is: even though they have equivalent content, they do not consist of the same DOM elements.
+These two HTML `a` elements have the same [accessible name][] and link to the [same resource][] but different [programmatically determined link contexts][programmatically determined link context]. Even though the two contexts in this example are _identical_, they are not the _same_. That is: even though they have equivalent content, they do not consist of the same DOM elements.
 
 ```html
 <html lang="en">
@@ -407,7 +401,6 @@ These two HTML `a` elements have the same [accessible name][] but different [pro
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [same resource]: #same-resource 'Definition of same resource'
 [sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
-[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

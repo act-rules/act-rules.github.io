@@ -197,6 +197,7 @@ This link has no [visible text content][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[match characters]: #matching-characters 'Definition of matching characters'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'

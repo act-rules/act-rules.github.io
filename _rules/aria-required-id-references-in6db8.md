@@ -12,9 +12,9 @@ accessibility_requirements:
     passed: satisfied
     inapplicable: satisfied
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not check for alternatives which may be accessible. Some of the failed examples satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not check for alternatives which may be accessible. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -32,7 +32,7 @@ This rule applies to any `aria-controls` attribute defined on an [HTML element][
 
 ## Expectation
 
-Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree] 
+Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree].
 
 ## Assumptions
 

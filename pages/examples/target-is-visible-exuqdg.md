@@ -1,12 +1,11 @@
 ---
 id: exuqdg
 name: Target is visible
-rule_type: atomic
+rule_type: definition-test
 description: |
-  This rule test the visibility definition
-accessibility_requirements:
+  This rule test the "visible" definition
 input_aspects:
-  - CSSstyling
+  - CSS styling
   - DOM Tree
 acknowledgments:
   authors:

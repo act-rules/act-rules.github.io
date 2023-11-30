@@ -52,7 +52,8 @@ This rule does not require the target of an `ID Reference` to exist. This is bec
 
 ### Related rules
 
-- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/proposed/)
+- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/)
+- [ARIA required ID references exist](https://www.w3.org/WAI/standards-guidelines/act/rules/in6db8/)
 
 ### Bibliography
 
@@ -244,3 +245,4 @@ The `aria-hidden` attribute is not on an [HTML or SVG element][].
 [html or svg element]: #namespaced-element
 [value type]: https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def
+[attribute value]: #attribute-value

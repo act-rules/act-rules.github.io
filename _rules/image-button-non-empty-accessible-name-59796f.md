@@ -54,8 +54,6 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 ## Accessibility Support
 
-_There are no major accessibility support issues known for this rule._
-
 The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
 
 ## Background

@@ -159,7 +159,7 @@ This element with the `img` role contains an `<a>` element.  The `img` role has 
 
 #### Inapplicable Example 1
 
-None of the roles involved in this semantic table have [presentational children][].  (The roles are `table`, `row`, `cell`, `button`, and `link`, for the `<table>`, `<tr>`, `<td>`, `<button>`, and `<a>` elements, respectively.)  So this rule does not apply.
+The roles that build this semantic table structure (`table` for `<table>`, `row` for `<tr>`, and `cell` for `<td>`) do not have [presentational children][].  So this rule does not apply to them.  (This rule does apply to the `<button>` element within the table.  The `<button>` element passes the rule.)
 
 ```html
 <table>

@@ -42,7 +42,7 @@ This rule applies to elements with a [semantic role][] that defines its [childre
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
 
-This rule is often misunderstood as applying to elements with an <i>explicit</i> role of `presentation`.  In fact, this rule only applies to elements which have been given an <i>implicit</i> role of `presentation` through the [presentational children][] mechanism.
+This rule is often misunderstood as applying to elements with an <i>explicit</i> role of `presentation`.  In fact, this rule only applies to elements which have been given an <i>implicit</i> role of `presentation` through the [presentational children][] mechanism.  Similarly, this rule does not apply to elements with `aria-hidden="true"`.
 
 ### Related rules
 
@@ -186,17 +186,6 @@ This `<a>` element has a `link` role, which does not have [presentational childr
 ```html
 <a href="https://w3.org"><span tabindex="0">W3C Website</span></a>
 ```
-
-#### Inapplicable Example 3
-
-This example shows that the applicability of this rule does not include hidden elements.  The applicability only includes presentational elements (through roles with [presentational children][]).  (The difference between "hidden" and "presentational" is discussed in the [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/#presentation)).  This example is inapplicable, but if it didn't have aria-hidden="true", then it would fail the rule.  This example (as it is, with aria-hidden) fails the related rule [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/).
-
-```html
-<button aria-hidden="true">
-	<a href="#">inapplicable</a>
-</button>
-```
-
 
 [accessible name]: #accessible-name 'Definition of Accessible name'
 [attribute value]: #attribute-value 'Definition of Attribute value'

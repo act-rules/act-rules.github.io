@@ -179,10 +179,10 @@ The roles that build this semantic table structure (`table` for `<table>`, `row`
 
 #### Inapplicable Example 2
 
-This `<a>` element has a `link` role, which does not have [presentational children][].  So this element does not fail this rule, because it's inapplicable. 
+This `<a>` element has a `link` role, which does not have [presentational children][].  So this `<a>` element does not fail this rule, because it's inapplicable.  To have a "focusable element within a focusable element" like this is a bad practice, but this rule doesn't directly check for it.
 
 ```html
-<a href="https://w3.org"><button>W3C Website</button></a>
+<a href="https://w3.org"><span tabindex="0">W3C Website</span></a>
 ```
 
 #### Inapplicable Example 3

@@ -42,6 +42,8 @@ This rule applies to elements with a [semantic role][] that defines its [childre
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
 
+This rule is often misunderstood as applying to elements with an <i>explicit</i> role of `presentation`.  In fact, this rule only applies to elements which have been given an <i>implicit</i> role of `presentation` through the [presentational children][] mechanism.
+
 ### Related rules
 
 - [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/)
@@ -186,18 +188,6 @@ This `<a>` element has a `link` role, which does not have [presentational childr
 ```
 
 #### Inapplicable Example 3
-
-The applicability of this rule does not include elements with an <i>explicit</i> role of `presentation`.  Only <i>implicit</i>, through roles with [presentational children][]. 
-
-```html
-<ul>
-	<li role="presentation">
-		<a href="#">inapplicable</a>
-	</li>
-</ul>
-```
-
-#### Inapplicable Example 4
 
 This example shows that the applicability of this rule does not include hidden elements.  The applicability only includes presentational elements (through roles with [presentational children][]).  (The difference between "hidden" and "presentational" is discussed in the [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/#presentation)).  This example is inapplicable, but if it didn't have aria-hidden="true", then it would fail the rule.  This example (as it is, with aria-hidden) fails the related rule [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/).
 

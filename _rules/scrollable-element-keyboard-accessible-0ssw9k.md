@@ -1,9 +1,9 @@
 ---
 id: 0ssw9k
-name: Scrollable element is included in the sequential focus navigation
+name: Scrollable content can be reached with sequential focus navigation
 rule_type: atomic
 description: |
-  This rule checks that scrollable elements can be reached with sequential focus navigation so that they can be scrolled by keyboard
+  This rule checks that scrollable elements or their descendants can be reached with sequential focus navigation so that they can be scrolled by keyboard
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true
@@ -12,7 +12,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:2.1.3: # Keyboard (No Exceptions) (AAA)
     forConformance: true
-    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -56,7 +55,7 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 
 To ensure there is some element from which arrow keys can be used to control the scroll position, focus must be on or in a scrollable region. If scripts are used to prevent the keyboard events from reaching the scrollable region, this could still cause a keyboard accessibility issue. This must be tested separately.
 
-This rule only applies to elements who scroll content in the same document. Elements such as iframes that embed other documents may also be scrollable, but for them it is the embedded document that scrolls, not the content in the same document. Such scenarios are tested separately with rules such as [Iframe with negative tabindex has no interactive elements](https://www.w3.org/WAI/standards-guidelines/act/rules/akn7bn/proposed/).
+This rule only applies to elements who scroll content in the same document. Elements such as iframes that embed other documents may also be scrollable, but for them it is the embedded document that scrolls, not the content in the same document. Such scenarios are tested separately with rules such as [Iframe with negative tabindex has no interactive elements](https://www.w3.org/WAI/standards-guidelines/act/rules/akn7bn/).
 
 ### Bibliography
 

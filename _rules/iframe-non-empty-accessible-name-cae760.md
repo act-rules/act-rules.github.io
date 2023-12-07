@@ -24,9 +24,10 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to `iframe` elements that are [included in the accessibility tree][] and for which all of the following are true:
-- the `iframe` does not have a negative `tabindex` [attribute value][]; and
-- the `iframe` does not have an [explicit semantic role][] of `presentation` or `none`.
+This rule applies to `iframe` elements that are [included in the accessibility tree][] except if at least one of the following is true:
+
+- the `iframe` has a negative `tabindex` [attribute value][]; or
+- the `iframe` is [marked as decorative][].
 
 ## Expectation
 
@@ -41,14 +42,14 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
-  - Some browsers instantly redirect focus from `iframe` elements  to the first focusable element inside that iframe. This redirect makes it appear as though the `iframe` never receives focus. This occurs even if the `iframe` has a non-negative `tabindex` [attribute value][].
+  - Some browsers instantly redirect focus from `iframe` elements to the first focusable element inside that iframe. This redirect makes it appear as though the `iframe` never receives focus. This occurs even if the `iframe` has a non-negative `tabindex` [attribute value][].
   - Not all browsers redirect focus on `iframe` elements. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. This must not be circumvented by using a negative tabindex, as this will make the `iframe` completely inaccessible for keyboard navigation.
 
 ## Background
 
 The `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
 
-Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe` elements for which there is an attempt to hide them from assistive technologies.  Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
+Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe` elements for which there is an attempt to hide them from assistive technologies. Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
 
 ### Bibliography
 
@@ -157,6 +158,8 @@ This `iframe` element has an [explicit semantic role][] of `none`.
 [accessible name and description computation]: https://www.w3.org/TR/accname
 [attribute value]: #attribute-value 'Definition of Attribute value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[marked as decorative]: #marked-as-decorative 'Definition of Marked as Decorative'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
 [user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
 [whitespace]: #whitespace 'Definition of whitespace'
+[explicit semantic role]: #explicit-role 'Definition of explicit semantic role'

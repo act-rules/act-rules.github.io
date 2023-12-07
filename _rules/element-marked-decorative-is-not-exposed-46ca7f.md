@@ -142,11 +142,11 @@ This `img` element is not [marked as decorative][].
 
 [decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [focusable]: #focusable 'Definition of Focusable'
-[global aria attribute]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'List of Global ARIA States and Properties'
+[global aria attribute]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'List of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'
 [non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG definition of Non-text content'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc111]: https://www.w3.org/TR/WCAG22/#non-text-content 'Success Criterion 1.1.1: Non-text Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

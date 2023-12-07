@@ -302,6 +302,6 @@ This is a `div` element with a background image. Background images must be teste
 [completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
 [image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'
-[named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecalculation 'WAI-ARIA definition of Named from author'
+[named from author]: https://www.w3.org/TR/wai-aria-1.2/#namecalculation 'WAI-ARIA definition of Named from author'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM definition of ancestor, 2020/03/06'

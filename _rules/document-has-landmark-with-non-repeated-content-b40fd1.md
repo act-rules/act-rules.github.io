@@ -51,7 +51,7 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
-- [The `main` role](https://www.w3.org/TR/wai-aria-1.1/#main)
+- [The `main` role](https://www.w3.org/TR/wai-aria-1.2s/#main)
 
 ## Test Cases
 
@@ -267,7 +267,7 @@ This [document][] is not an [HTML web page][].
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inclusive descendant]: https://dom.spec.whatwg.org/#concept-tree-inclusive-descendant 'DOM definition of Inclusive Descendant'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
-[landmark]: https://www.w3.org/TR/wai-aria-1.1/#landmark_roles 'List of Landmark Roles'
+[landmark]: https://www.w3.org/TR/wai-aria-1.2/#landmark_roles 'List of Landmark Roles'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
 [sc241]: https://www.w3.org/TR/WCAG22/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'

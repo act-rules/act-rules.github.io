@@ -339,7 +339,7 @@ This `a` element is not a [semantic][semantic role] `link`, because it has no `h
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

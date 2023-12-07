@@ -427,7 +427,7 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [human language]: https://www.w3.org/TR/WCAG22/#dfn-human-language-s 'WCAG 2.2, Human language'
 [large scale text]: #large-scale-text 'Definition of Large scale text'
 [origins]: https://www.w3.org/TR/css3-cascade/#cascading-origins 'CSS 3, origin'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'WAI-ARIA, Presentational Roles Conflict Resolution'
 [purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.2, Purely decorative'
 [text node]: https://dom.spec.whatwg.org/#text 'DOM, text node, 2020/07/23'
 [sc143]: https://www.w3.org/TR/WCAG22/#contrast-minimum 'WCAG 2.2, Success criterion 1.4.3 Contrast (Minimum)'

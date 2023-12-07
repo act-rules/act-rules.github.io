@@ -227,5 +227,5 @@ This `button` element has an [explicit role][] of `none`; it is not [focusable][
 [focusable]: #focusable 'Definition of focusable'
 [html aam input button]: https://www.w3.org/TR/html-aam-1.0/#input-type-button-input-type-submit-and-input-type-reset 'HTML Accessibility API Mapping, reset and submit buttons'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

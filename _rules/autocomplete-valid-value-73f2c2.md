@@ -328,11 +328,11 @@ This `input` element is [hidden](#73f2c2:hidden) because of its `type` [attribut
 [disabled element]: #disabled-element 'Definition of Disabled Element'
 [html specification for autofill detail tokens]: https://html.spec.whatwg.org/#autofill-detail-tokens 'HTML Autofill Detail, 2020/08/12'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [sc135]: https://www.w3.org/TR/WCAG22/#identify-input-purpose 'WCAG 2.2 success criterion 1.3.5 Identify Input Purpose'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/08/12'
 [space separated]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'HTML Set of space separated tokens 2020/08/12'
 [visible]: #visible 'Definition of Visible'
-[widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'WAI-ARIA widget roles'
+[widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'WAI-ARIA widget roles'
 [html]: #namespaced-element

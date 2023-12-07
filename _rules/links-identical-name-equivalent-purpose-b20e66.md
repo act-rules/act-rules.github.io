@@ -384,7 +384,7 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [same resource]: #same-resource 'Definition of same resource'
 [sc249]: https://www.w3.org/TR/WCAG22/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'

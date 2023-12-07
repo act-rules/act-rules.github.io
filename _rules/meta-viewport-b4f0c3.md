@@ -59,7 +59,7 @@ For each test target's [attribute value][], at least one of the following is tru
 Pages for which any of the following is true may satisfy Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410], even if the rule results in a failed outcome.
 
 - The [page][] has no [visible][] [content][]; or
-- There is another [mechanism](https://www.w3.org/TR/WCAG21/#dfn-mechanism) available to resize the text content; or
+- There is another [mechanism](https://www.w3.org/TR/WCAG22/#dfn-mechanism) available to resize the text content; or
 - The [content][] does not need to reflow in order to fit in an area of 320 by 256 [CSS pixels][].
 
 ## Accessibility Support
@@ -72,8 +72,8 @@ The exact way the `content` attribute should be parsed (notably, for error handl
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text)
-- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow)
+- [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text)
+- [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow)
 - [HTML Specification - The `meta` element][meta]
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]
@@ -375,13 +375,13 @@ This viewport `meta` element does not prevent user scaling because it does not s
 ```
 
 [attribute value]: #attribute-value 'Definition of attribute value'
-[content]: https://www.w3.org/TR/WCAG21/#dfn-content 'content (Web content)'
+[content]: https://www.w3.org/TR/WCAG22/#dfn-content 'content (Web content)'
 [css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
 [descriptor translation]: https://www.w3.org/TR/css-device-adapt-1/#translate-meta-to-at-viewport 'Translations of the content attribute into @viewport descriptors'
 [meta]: https://html.spec.whatwg.org/#the-meta-element 'The meta element'
 [maximum-scale]: https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale 'The initial-scale, minimum-scale, and maximum-scale properties'
-[page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'Web page'
-[sc144]: https://www.w3.org/TR/WCAG21/#resize-text 'WCAG 2.1 Success Criterion 1.4.4 Resize text'
-[sc1410]: https://www.w3.org/TR/WCAG21/#reflow 'WCAG 2.1 Success Criterion 1.4.10 Reflow'
+[page]: https://www.w3.org/TR/WCAG22/#dfn-web-page-s 'Web page'
+[sc144]: https://www.w3.org/TR/WCAG22/#resize-text 'WCAG 2.1 Success Criterion 1.4.4 Resize text'
+[sc1410]: https://www.w3.org/TR/WCAG22/#reflow 'WCAG 2.1 Success Criterion 1.4.10 Reflow'
 [user-scalable]: https://www.w3.org/TR/css-device-adapt-1/#user-scalable 'The user-scalable property'
 [visible]: #visible 'Definition of visible'

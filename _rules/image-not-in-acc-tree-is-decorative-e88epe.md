@@ -49,7 +49,7 @@ This rule applies to any `img`, `canvas` or `svg` element that is [visible][] an
 
 Each test target is [purely decorative][].
 
-**Note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjacent to the image. This is a [conforming alternative version][] for the image. This fails the rule but meets [conformance requirement 1 of WCAG 2.1](https://www.w3.org/TR/WCAG21/#cc1).
+**Note**: It is relatively common for an informative image such as an icon to be marked up as decorative, if the text alternative is adjacent to the image. This is a [conforming alternative version][] for the image. This fails the rule but meets [conformance requirement 1 of WCAG 2.1](https://www.w3.org/TR/WCAG22/#cc1).
 
 ## Assumptions
 
@@ -65,8 +65,8 @@ There are no accessibility support issues known.
 
 ### Bibliography
 
-- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67.html)
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
+- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG22/Techniques/html/H67.html)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 
 ## Test Cases
 
@@ -311,9 +311,9 @@ This `img` element has an `src` attribute which will cause the [image request st
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [explicit semantic role]: #explicit-role 'Definition of Explicit semantic role'
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
-[success criterion 1.1.1 non-text content]: https://www.w3.org/TR/WCAG21/#non-text-content
-[conforming alternative version]: https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[success criterion 1.1.1 non-text content]: https://www.w3.org/TR/WCAG22/#non-text-content
+[conforming alternative version]: https://www.w3.org/TR/WCAG22/#dfn-conforming-alternate-version 'WCAG definition of Conforming alternative version'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS Scoping definition of Flat tree, working draft'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM definition of ancestor, 2020/03/06'
 [named from author]: https://www.w3.org/TR/wai-aria-1.1/#namecalculation 'WAI-ARIA definition of Named from author'

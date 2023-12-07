@@ -35,7 +35,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG21/#name-role-value). Unless the `iframe` is both removed from the accessibility tree and removed from [sequential focus navigation][], they usually are considered to be [user interface components][user interface component].
+If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG22/#name-role-value). Unless the `iframe` is both removed from the accessibility tree and removed from [sequential focus navigation][], they usually are considered to be [user interface components][user interface component].
 
 ## Accessibility Support
 
@@ -53,8 +53,8 @@ Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe`
 
 ### Bibliography
 
-- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
-- [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H64)
+- [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
 - [User interface component][]
 
 ## Test Cases
@@ -160,6 +160,6 @@ This `iframe` element has an [explicit semantic role][] of `none`.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as Decorative'
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation
-[user interface component]: https://www.w3.org/TR/WCAG21/#dfn-user-interface-components
+[user interface component]: https://www.w3.org/TR/WCAG22/#dfn-user-interface-components
 [whitespace]: #whitespace 'Definition of whitespace'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'

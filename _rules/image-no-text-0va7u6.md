@@ -243,11 +243,11 @@ This `svg` element does not have `image` element descendants.
 
 [essential]: #essential-text-presentation 'Definition of Essential (Text Presentation)'
 [insignificant]: #insignificant 'Definition of Insignificant'
-[human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
+[human language]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
 [rendered image resources]: #rendered-image-resource 'Definition of rendered image resource'
-[sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
-[sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
+[sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
+[sc1.4.9]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page (HTML)'

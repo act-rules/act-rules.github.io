@@ -32,7 +32,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-- The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components).
+- The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
 
 ## Accessibility Support
 
@@ -42,7 +42,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Background
 
-This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
+This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
 
 ### Related rules
 
@@ -51,9 +51,9 @@ This rule considers an exception for "image buttons" (i.e., `input` elements wit
 ### Bibliography
 
 - [HTML Accessibility API Mappings 1.0 (working draft), 5.2 `input type="button"`, `input type="submit"` and `input type="reset"`](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset)
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
-- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14)
-- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14)
+- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 
 ## Test Cases
 
@@ -183,7 +183,7 @@ This `button` element has an [explicit role][] of `none`. However, it is [focusa
 
 #### Inapplicable Example 1
 
-This `input` element has a `type` attribute set to `image`. These images are tested in a separate rule which also tests [success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content).
+This `input` element has a `type` attribute set to `image`. These images are tested in a separate rule which also tests [success criterion 1.1.1 Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content).
 
 ```html
 <input type="image" value="download" alt="Download" />
@@ -199,7 +199,7 @@ This `button` element does not need an [accessible name][] because it is not inc
 
 #### Inapplicable Example 3
 
-This `button` element has a `link` role. Links are tested in a separate rule which also tests [success criterion 2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context).
+This `button` element has a `link` role. Links are tested in a separate rule which also tests [success criterion 2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG22/#link-purpose-in-context).
 
 ```html
 <button role="link">take me somewhere</button>

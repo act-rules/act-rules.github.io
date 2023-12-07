@@ -55,8 +55,8 @@ Each document, including documents inside an `iframe`, has its own [sequential f
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
-- [WCAG Technique G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
+- [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
+- [WCAG Technique G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG22/Techniques/general/G202)
 
 ## Test Cases
 
@@ -146,11 +146,11 @@ Once the "Privacy policy details" button is activated, the `iframe` element beco
 </dialog>
 <script>
 	const openDialog = () => {
-		ppDialog.showModal();
+		ppDialog.showModal()
 		myFrame.tabIndex = '-1'
 	}
-	ppDialog.addEventListener('close', () => myFrame.tabIndex = 0)
-	window.addEventListener('DOMContentLoaded', openDialog);
+	ppDialog.addEventListener('close', () => (myFrame.tabIndex = 0))
+	window.addEventListener('DOMContentLoaded', openDialog)
 </script>
 ```
 
@@ -162,7 +162,7 @@ Once the "Privacy policy details" button is activated, the `iframe` element beco
 [inert]: #inert 'Definition of Inert'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
-[sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
+[sc211]: https://www.w3.org/TR/WCAG22/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation order]: https://html.spec.whatwg.org/multipage/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope
 [visible]: #visible 'Definition of visible'

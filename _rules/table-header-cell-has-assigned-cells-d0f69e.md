@@ -17,7 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Audrey Maniez
-    - Helen Burge    
+    - Helen Burge
     - Jey Nandakumar
   funding:
     - WAI-Tools
@@ -52,7 +52,7 @@ The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`
 ### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
-- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
+- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]
 
 ## Test Cases
@@ -355,5 +355,5 @@ This `th` element is part of a table which is not [included in the accessibility
 [rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[sc1.3.1]: https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [html element]: #namespaced-element

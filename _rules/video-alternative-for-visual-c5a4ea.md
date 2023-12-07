@@ -214,4 +214,4 @@ A video element that is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
-[sc123]: https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded 'WCAG 2.1, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'
+[sc123]: https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded 'WCAG 2.2, Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded)'

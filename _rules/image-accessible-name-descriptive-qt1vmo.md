@@ -298,7 +298,7 @@ This is a `div` element with a background image. Background images must be teste
 [explicit semantic role]: #explicit-role
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG 2.1 definition of non-text content'
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG 2.2 definition of non-text content'
 [completely available]: https://html.spec.whatwg.org/#img-all 'HTML definition of Completely available, 2020/03/06'
 [current request]: https://html.spec.whatwg.org/#current-request 'HTML definition of Current request, 2020/03/06'
 [image request state]: https://html.spec.whatwg.org/#img-req-state 'HTML definition of Image request state, 2020/03/06'

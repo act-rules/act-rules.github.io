@@ -162,7 +162,7 @@ Once the "Privacy policy details" button is activated, the `iframe` element beco
 [inert]: #inert 'Definition of Inert'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
-[sc211]: https://www.w3.org/TR/WCAG22/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'
+[sc211]: https://www.w3.org/TR/WCAG22/#keyboard 'WCAG 2.2 Success criterion 2.1.1 Keyboard'
 [sequential focus navigation order]: https://html.spec.whatwg.org/multipage/#sequential-focus-navigation 'HTML sequential focus navigation, 2020/12/18'
 [tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#tabindex-ordered-focus-navigation-scope
 [visible]: #visible 'Definition of visible'

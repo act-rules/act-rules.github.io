@@ -60,7 +60,7 @@ Not every role can be used on every element. Which ARIA roles may be used on whi
 
 - [List of WAI-ARIA Roles][wai-aria role]
 - [List of Graphics ARIA Roles](https://www.w3.org/TR/graphics-aria-1.0/#role_definitions)
-- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.2/#role_definitions)
+- [List of DPUB ARIA Roles](https://www.w3.org/TR/dpub-aria-1.1/#role_definitions)
 - [Specification of the `role` attribute][role attribute]
 - [WAI-ARIA 1.2 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.2/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.2/#introroles)

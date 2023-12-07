@@ -42,7 +42,7 @@ Each test target has at least one token which is a valid value corresponding to 
 
 ## Assumptions
 
-This rule assumes that using the `role` attribute for any purpose other than to provide an ARIA [semantic role][] to the elements is invalid. These would fail [WCAG Technique: ARIA4 Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4).
+There are no assumptions.
 
 ## Accessibility Support
 
@@ -54,7 +54,7 @@ Using an invalid role is often the result of a typo or other developer error. Un
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. The rule applies to attributes containing at least one non-[ASCII whitespace][] character so that there is at least one token in the set.
 
-Not every role should be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
+Not every role can be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
 
 ### Bibliography
 

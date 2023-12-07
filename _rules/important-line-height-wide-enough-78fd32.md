@@ -158,8 +158,8 @@ This `p` element has a [computed][] `line-height` of `15px`, 1.5 times its [comp
 This `p` element has a [computed][] `line-height` of 1.5 times its `font-size`; the `div` element has no [visible][] text node children.
 
 ```html
-<div style="letter-spacing: 1em !important">
-	<p style="letter-spacing: 1.5em !important; max-width: 200px;">
+<div style="line-height: 1em !important">
+	<p style="line-height: 1.5em !important; max-width: 200px;">
 		The toy brought back fond memories of being lost in the rain forest.
 	</p>
 </div>

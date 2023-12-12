@@ -45,8 +45,7 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 ## Assumptions
 
-- There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] might be satisfied.
-- The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] might be satisfied.
+- This rule assumes that there is no mechanism to change the rendering of text in image resources on the page, and that with CSS any requires presentation is achievable. For pages where this is not the case this rule can fail, even if [success criterion 1.4.5][sc1.4.5] may be satisfied.
 - When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
 ## Accessibility Support

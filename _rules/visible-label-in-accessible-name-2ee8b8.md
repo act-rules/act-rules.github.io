@@ -156,7 +156,7 @@ This link has [visible][] text does not match the [accessible name][] because th
 This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name. 
 
 ```html
-<a aria-label="Call 1 2 3. 4 5 6. 7 8 9 0." href="tel:1234567890">123.456.7890</a>
+<a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>
 ```
 
 ### Inapplicable

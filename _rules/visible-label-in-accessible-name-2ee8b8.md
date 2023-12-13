@@ -378,7 +378,7 @@ This email text field does not need to have its [visible inner text][] match the
 
 #### Inapplicable Example 3
 
-This `div` element does not have a widget role, so the [visible inner text][]t does not need to match the [accessible name][].
+This `div` element does not have a widget role, so the [visible inner text][] does not need to match the [accessible name][].
 
 ```html
 <div role="tooltip" aria-label="OK">Next</div>

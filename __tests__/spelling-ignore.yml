@@ -132,7 +132,7 @@
 - ozplayer
 - GitHub
 
-# Test case anamolies
+# Test case anomolies
 - brewitt-taylor
 - level2-frame1
 - level1-frame2
@@ -142,6 +142,9 @@
 - Sumei
 - Tuttle
 - lnik # intentional misspelling
+- ngizmo
+- nspecification
+- thelabel
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -233,6 +236,9 @@
 - focusability
 - unitless
 - luminance
+- substring
+- initialisms
+- sublist
 
 # Parts of Unicode
 - 000A

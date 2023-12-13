@@ -213,7 +213,7 @@ The passes for two reasons: 1) because the ellipsis ("…") is [non-text content
 This passes because the [label in name algorithm][] effectively ignores all punctuation and emoji, in both the visible inner text and the accessible name, as long as they don't break up words.
 
 ```html
-<button aria-label="💡 Submit 💡">>>> ** Submit ** <<<</button>
+<button aria-label="💡 Submit 💡">&gt;&gt;&gt; ** Submit ** &lt;&lt;&lt;</button>
 ```
 
 

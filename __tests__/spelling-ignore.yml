@@ -239,6 +239,9 @@
 - substring
 - initialisms
 - sublist
+- tokenize
+- tokenized
+- subsequence
 
 # Parts of Unicode
 - 000A

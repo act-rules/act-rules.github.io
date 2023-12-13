@@ -29,7 +29,6 @@ The <dfn id="visible-inner-text:for-element">visible inner text of an [element][
 The <dfn>visible inner text</dfn> of any other node is the concatenation of the visible inner text of its children (in [tree order][] in the [flat tree][]).
 
 [<br>]: https://html.spec.whatwg.org/#the-br-element
-[<p>]: https://html.spec.whatwg.org/#the-p-element
 [computed]: https://drafts.csswg.org/css-cascade/#computed
 [data]: https://dom.spec.whatwg.org/#concept-cd-data
 [display]: https://drafts.csswg.org/css2/#propdef-display

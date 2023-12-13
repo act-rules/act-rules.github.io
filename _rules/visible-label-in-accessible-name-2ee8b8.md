@@ -399,12 +399,9 @@ This link has no [visible inner text][].
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
-[visible]: #visible 'Definition of visible'
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
 [visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
-[whitespace]: #whitespace 'Definition of Whitespace'
 [widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
-[text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, 2020/08/18'
 [understand253]: https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html

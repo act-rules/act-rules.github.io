@@ -26,9 +26,10 @@ acknowledgments:
 
 This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
 
-Exception: not for `area` (due to weird shapes).
+Exception: not for `area` (due to weird shapes + often essential suze).
 Exception: not if a descendant is focusable (hard to define the clickable area).
 Exception: the target is a [User Agent controlled component][].
+Exception: the target is a [shape-shifted element][] (weird shape)
 
 > comment: This is for the "User Agent Control" exception. The Understanding doc mentions days in a calendar widget. I somewhat intend to have this as a list of elements (or their descendants) which are known to correspond (e.g. `<input type="date">`) as it is fairly flexible and easy to define. This would, however let out cases where these components are re-sized by the author. But this is only false negatives, so I guess it's OK.
 

@@ -24,11 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies ta any [HTML element][namespaced element] for which all the following are true:
-
-- the element is an [inheriting semantic][] `widget`; and
-  > comment: role may be incorrectly set.
-- the element is [focusable][].
+This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
 
 Exception: not for `area` (due to weird shapes).
 Exception: not if a descendant is focusable (hard to define the clickable area).

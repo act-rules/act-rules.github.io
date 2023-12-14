@@ -70,7 +70,7 @@ Hit testing isn't properly defined, and this has been an [issue in the CSS speci
 
 ### Passed
 
-#### Passed Example 1
+#### Passed Example
 
 This `link` has a [clickable area][] of approximately 210×55 pixels.
 
@@ -98,7 +98,7 @@ This button has a [clickable area][] of exactly 44×44 pixels.
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example 2
+#### Passed Example
 
 This `input` element, combined with its [implicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×48px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
@@ -117,7 +117,7 @@ This `input` element, combined with its [implicit label][] and its padding, has 
 </script>
 ```
 
-#### Passed Example 2
+#### Passed Example
 
 This `input` element, combined with its [explicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×45px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
@@ -407,7 +407,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 
 ### Failed
 
-#### Failed Example 1
+#### Failed Example
 
 This `button` has a [clickable area][] of only 35×35 pixels.
 
@@ -681,7 +681,7 @@ This checkbox does not have its size adjusted by the author
 </p>
 ```
 
-#### Inapplicable Example 4
+#### Inapplicable Example
 
 This checkbox cannot be [targeted by a pointer event][] because it is hidden. It is replaced with an on-screen clickable SVG.
 
@@ -689,7 +689,7 @@ This checkbox cannot be [targeted by a pointer event][] because it is hidden. It
 
 ```
 
-#### Inapplicable Example 5
+#### Inapplicable Example
 
 This checkbox cannot be [targeted by a pointer event][] because it is obscured by the modal.
 

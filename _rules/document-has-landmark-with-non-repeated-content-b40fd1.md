@@ -51,7 +51,7 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
-- [The `main` role](https://www.w3.org/TR/wai-aria-1.2s/#main)
+- [The `main` role](https://www.w3.org/TR/wai-aria-1.2/#main)
 
 ## Test Cases
 

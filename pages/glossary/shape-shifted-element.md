@@ -8,7 +8,9 @@ input_aspects:
   - DOM tree
 ---
 
-An element is _shape-shifted_ is the [computed value][] of it has an [inclusive ancestor][] in the [flat tree][] with any of its [shape-shifting properties][] different from the [initial value][] of that property.
+An element is _shape-shifted_ if it has an [inclusive ancestor][] in the [flat tree][] with any of its [shape-shifting properties][] whose [computed value][] is different from the [initial value][] of that property.
+
+> comment: shape-shifting an ancestor can shape-shifting the element, e.g. with `transform` or clipping. OTOH, this might be very trigger happy in considering everything inside a modal shape shifted just because the modal has rounded corners…
 
 The <dfn id="shape-shifted-element:properties">Shape-Shifting Properties</dfn> are the following CSS properties:
 

@@ -26,20 +26,16 @@ acknowledgments:
 
 This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
 
-Exception: not for `area` (due to weird shapes + often essential suze).
+Exception: the target is a [User Agent controlled component][] (WCAG exception).
+Exception: not for `area` element (due to weird shapes + often essential size).
 Exception: not if a descendant is focusable (hard to define the clickable area).
-Exception: the target is a [User Agent controlled component][].
-Exception: the target is a [shape-shifted element][] (weird shape)
-
-> comment: This is for the "User Agent Control" exception. The Understanding doc mentions days in a calendar widget. I somewhat intend to have this as a list of elements (or their descendants) which are known to correspond (e.g. `<input type="date">`) as it is fairly flexible and easy to define. This would, however let out cases where these components are re-sized by the author. But this is only false negatives, so I guess it's OK.
-
-> comment: Actually, "UA control" definition might be "one of these elements (`button`, …) (widgets elements); and none of these CSS property has a cascaded value with Author origin (`width`, `height`, …)"
+Exception: the target is a [shape-shifted element][] (weird shape).
 
 ## Expectation
 
 For each test target, at least one of the following is true:
 
-- the target element has a [clickable area][] width and height of at least 44 CSS pixels; or
+- the target element has a [clickable area][] containing a rectangle aligned with the screen border whose width and height are at least 44 CSS pixels; or
 - though scrolling, the element can be brought into viewport with a [clickable area][] width and height of at least 44 CSS pixels; or
 - the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
   > Note: this is mostly for totally covered or off-screen elements. This should probably rather be handled in the Applicabilty and make these Inapplicable, but I'm not sure it can be done with the current definition…
@@ -148,6 +144,7 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 			font-size: 50px;
 			overflow: visible;
 			white-space: nowrap;
+			border-radius: 0;
 		}
 	</style>
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
@@ -272,24 +269,6 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example
-
-This rotated button has a [clickable area][] of exactly 44×44px.
-
-```html
-<style>
-	#target {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
-		rotate: 45deg;
-	}
-</style>
-<button id="target" onclick="alert('Hello')">Hello</button>
-```
-
-> **Comment:** I'm not sure this is actually passing (or whether the target needs to be aligned with the axis). This might end up being a nightmare to check (because the bounding box, or the `getBoundingClientRect` is 61×61px). Do we want the rule to somehow exclude this as "weird shape"?
-
 ### Passed Example
 
 This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
@@ -329,7 +308,6 @@ The pin (red circle) on this map has [essential size][] because it is important 
 		height: 15px;
 		width: 15px;
 		background-color: red;
-		border-radius: 50%;
 		display: inline-block;
 	}
 </style>
@@ -443,21 +421,6 @@ This link only has a [clickable area][] of approximately 66×18 pixels, as shown
 
 #### Failed Example
 
-The [clickable area][] of this button only contains an approximately 35×35 pixels rectangle, due to its rounded corners.
-
-```html
-<style>
-	#target {
-		width: 44px;
-		height: 44px;
-		border-radius: 30%;
-	}
-</style>
-<button id="target" onclick="alert('hello')">Hello</button>
-```
-
-#### Failed Example
-
 This custom button has a [clickable area][] of approximately 18×20px, as shown by its dashed red border. Since it is not a native `button` element, it is not a [User Agent Controlled][] element.
 
 ```html
@@ -499,24 +462,6 @@ The `#small` button has a [clickable area][] of only 35×35px. The `#large` butt
 <button id="small" onclick="alert('Hello')">Hi</button>
 <button id="large" onclick="alert('Good-bye')">Bye</button>
 ```
-
-#### Failed Example
-
-This rotated button has a [clickable area][] of exactly 40×40px.
-
-```html
-<style>
-	#target {
-		width: 40px;
-		height: 40px;
-		border-radius: 0;
-		rotate: 45deg;
-	}
-</style>
-<button id="target" onclick="alert('Hello')">Hello</button>
-```
-
-> **Comment:** This might end up being a nightmare to check (because the bounding box, or the `getBoundingClientRect` is 56×56px). Do we want the rule to somehow exclude this as "weird shape"?
 
 #### Failed Example
 
@@ -628,31 +573,6 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 <div class="vlines good highlight"></div>
 ```
 
-#### Failed Example
-
-This button has a [clickable area][] (in light blue) of only 40×40px due to being clipped by the `clip-path` property.
-
-```html
-<head>
-	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
-	<style>
-		#target {
-			height: 50px;
-			width: 80px;
-			text-align: center;
-			clip-path: polygon(20px 0px, 20px 40px, 60px 40px, 60px 0px);
-			background-color: #0074d9;
-		}
-	</style>
-</head>
-<div id="target" role="button" onclick="alert('Hello')">
-	Hello
-</div>
-```
-
-> **Comment:** This is also going to be annoying to test. The bounding box / `getBoundingClientRect` is at 80×50px. And `clip-path` could have virtually any shape, making detecting a 44×44px rectangle inside very tricky (even more if the rectangles are allowed to be rotated…)
-
 - Link has insufficient size
 - This radio button with insufficient size has its size modified by the author
 
@@ -739,16 +659,73 @@ This input and its [programmatic label][] is a [User Agent Controlled component]
 </label>
 ```
 
+#### Inapplicable Example
+
+This button has been [shape-shifted][shape-shited element] by the `rotate` property.
+
+```html
+<style>
+	#target {
+		width: 44px;
+		height: 44px;
+		border-radius: 0;
+		rotate: 45deg;
+	}
+</style>
+<button id="target" onclick="alert('Hello')">Hello</button>
+```
+
+#### Inapplicable Example
+
+This button has been [shape-shifted][shape-shited element] by the `border-radius` property.
+
+```html
+<style>
+	#target {
+		width: 60px;
+		height: 60px;
+		border-radius: 30%;
+	}
+</style>
+<button id="target" onclick="alert('hello')">Hello</button>
+```
+
+#### Inapplicable Example
+
+This button has been [shape-shifted][shape-shited element] by the `clip-path` property.
+
+```html
+<head>
+	<title>Failed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		#target {
+			height: 50px;
+			width: 80px;
+			text-align: center;
+			clip-path: polygon(20px 0px, 20px 45px, 65px 45px, 65px 0px);
+			background-color: #0074d9;
+		}
+	</style>
+</head>
+<div id="target" role="button" onclick="alert('Hello')">
+	Hello
+</div>
+```
+
+> **Comment:** This is also going to be annoying to test. The bounding box / `getBoundingClientRect` is at 80×50px. And `clip-path` could have virtually any shape, making detecting a 44×44px rectangle inside very tricky (even more if the rectangles are allowed to be rotated…)
+
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [clickable area]: #clickable-area 'Definition of Cliclkable Area'
 [essential target size]: #essential-target-size ' Definition of Essential Target Size'
-[explicit label]: #explicit-label 'Definition of Explicit Label'
+[explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'
 [focusable]: #focusable 'Definition of Focusable'
-[implicit label]: #implicit-label 'Definition of Implicit Label'
+[implicit label]: #programmatic-label:implicit 'Definition of Implicit Label'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [inline text]: #inline-text 'Definition of Inline Text'
 [instrument]: #instrument 'Definition of Instrument'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [programmatic label]: #programmatic-abel 'Definition of Programmatic Label'
+[shape-shifted element]: #shape-shifted-element 'Definition of Shape-shifted Element'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [user agent controlled component]: #ui-controlled-component 'Definition of UI Controlled Component'

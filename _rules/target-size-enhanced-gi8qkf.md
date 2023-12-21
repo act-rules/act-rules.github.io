@@ -661,7 +661,7 @@ This input and its [programmatic label][] is a [User Agent Controlled component]
 
 #### Inapplicable Example
 
-This button has been [shape-shifted][shape-shited element] by the `rotate` property.
+This button has been [shape-shifted][shape-shifted element] by the `rotate` property.
 
 ```html
 <style>
@@ -677,7 +677,7 @@ This button has been [shape-shifted][shape-shited element] by the `rotate` prope
 
 #### Inapplicable Example
 
-This button has been [shape-shifted][shape-shited element] by the `border-radius` property.
+This button has been [shape-shifted][shape-shifted element] by the `border-radius` property.
 
 ```html
 <style>
@@ -692,7 +692,7 @@ This button has been [shape-shifted][shape-shited element] by the `border-radius
 
 #### Inapplicable Example
 
-This button has been [shape-shifted][shape-shited element] by the `clip-path` property.
+This button has been [shape-shifted][shape-shifted element] by the `clip-path` property.
 
 ```html
 <head>

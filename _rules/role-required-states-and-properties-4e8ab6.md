@@ -53,7 +53,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
 
-The way the attribute is [set][aria set] doesn't matter for this rule. As long as authors can rely on User Agents or Assistive Technologies to set the attribute, this won't create problems for users. As per [the First Rule of ARIA use][], authors should rely on [implicitly set][aria set implicit] attributes when possible.
+The way the attribute is [set][aria set] doesn't matter for this rule. As long as authors can rely on User Agents or Assistive Technologies to set the attribute, this won't create problems for users. As per the [First Rule of ARIA use][], authors should rely on [implicitly set][aria set implicit] attributes when possible.
 
 ### Bibliography
 
@@ -241,8 +241,6 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [first rule of aria use]: https://www.w3.org/TR/using-aria/#rule1 'First Rule of ARIA Use'
-[html aam]: https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings 'Specification of HTML attributes value mapping to ARIA states and properties'
-[implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in The Accessibility Tree'
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

@@ -9,7 +9,7 @@ input_aspects:
   - DOM tree
 ---
 
-An ARIA [state][aria state] or [property][aria property] is <dfn>set</dfn> on an [HTML element][namespaced element] when it has a value. This may happens in three ways:
+An ARIA [state][aria state] or [property][aria property] is <dfn>set</dfn> on an [HTML element][namespaced element] when it has a value. This may happen in three ways:
 
 - It is <dfn id="aria-attribute-set:explicit">explicitly set</dfn> if there is a corresponding `aria-*` HTML attribute on the element, whose value is valid for this ARIA [state][aria state] or [property][aria property].
 

@@ -31,11 +31,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][].
 
 ## Expectation
 
-For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
+For each test target, the [WAI-ARIA required states and properties][] for the role are [set][aria set] and not empty (`""`).
+
+The attributes may be [explicitly set][aria set explicit], [implicitly set][aria set implicit], or [set by default][aria set default].
 
 ## Assumptions
 
@@ -126,6 +128,28 @@ This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 </ul>
 ```
 
+#### Passed Example 7
+
+This `checkbox` has its required `aria-checked` property [implicitly set][aria set implicit].
+
+```html
+<label>
+	<input type="checkbox" />
+	Check me
+</label>
+```
+
+#### Passed Example 8
+
+This `menuitemcheckbox` has its required `aria-checked` property [implicitly set][aria set implicit].
+
+```html
+<label>
+	<input type="checkbox" role="menuitemcheckbox" />
+	Check me
+</label>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -205,20 +229,16 @@ This `div` does not have a [semantic role](#semantic-role).
 
 #### Inapplicable Example 2
 
-This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
-
-```html
-<input type="checkbox" role="checkbox" />
-```
-
-#### Inapplicable Example 3
-
 This `combobox` is not [included in the accessibility tree][] due to its styling, hiding it from everybody.
 
 ```html
 <div role="combobox" style="display:none;"></div>
 ```
 
+[aria set]: #aria-attribute-set 'Definition of ARIA Attribute Set'
+[aria set default]: #aria-attribute-set:default 'Definition of ARIA Attribute Set by Default'
+[aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
+[aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
 [html aam]: https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings 'Specification of HTML attributes value mapping to ARIA states and properties'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'

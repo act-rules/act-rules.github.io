@@ -3,13 +3,15 @@ id: exuqdg
 name: Target is visible
 rule_type: definition-test
 description: |
-  This rule test the "visible" definition
+  This rule tests the "visible" definition
 input_aspects:
   - CSS styling
   - DOM Tree
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  assets:
+    - The text of the examples is excerpt from the lyrics of the song "I'm the invisible man" (written by Brian May / Freddie Mercury / John Deacon / Roger Taylor).
 ---
 
 ## Applicability
@@ -30,7 +32,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-This "rule" does not check any accessibility requirement. It is meant to provide examples of the "[visible][]" definition in a programmatic and testable way, so that tool implementers can easily verify that they correctly implement the definition. This "rule" should not be used in any kind of audit and is only meant as a way for implementers to test part of their tools that are not directly tested by any of the true rules.
+This "rule" does not check any accessibility requirement. It is meant to provide examples of the "[visible][]" definition in a programmatic and testable way, so that tool implementers can easily verify that they correctly implement the definition. This "rule" should not be used in any kind of audit and is only meant as a way for implementers to test parts of their tools that are not directly tested by any of the actual rules.
 
 ## Test Cases
 

@@ -24,7 +24,7 @@ A text node containing Unicode characters in the 4E00–9FFF range ([CJK Unified
 The WCAG definition of [large scale text](https://www.w3.org/TR/WCAG21/#dfn-large-scale) includes an exception for CJK (Chinese, Japanese, and Korean) fonts. The Unicode range 4E00–9FFF includes these characters. The "equivalent size" numbers are not included in WCAG, and come from the [Unofficial Japanese Translation of WCAG 2.1](https://waic.jp/translations/WCAG21/#dfn-large-scale).  This translation offers the following insight (translated from Japanese to English to allow everyone understanding the specs):  
 
 > TRANSLATION NOTE  
-> In the case of Japanese full-width characters, 22 point or 18 point bold type is considered to be the "equivalent" size, based on the First Report of the Enlarged Textbook Promotion Council, "Chapter 2 Standards for Enlarged Textbooks." is reasonable.
+> In the case of Japanese full-width characters, 22 point or 18 point bold type is considered to be the "equivalent" size, based on the First Report of the Enlarged Textbook Promotion Council, "Chapter 2 Standards for Enlarged Textbooks."
 
 Assuming all CJK characters pose similar contrast challenges, this definition extends the Japanese requirement to the whole CJK characters set included in the [Unicode standard](https://unicode.org/charts/PDF/U4E00.pdf) within the range of 4E00–9FFF.
 

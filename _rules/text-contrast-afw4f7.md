@@ -142,9 +142,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 This text does not convey anything in human language.
 
 ```html
-<p style="color: #000; background: #666;">
-	----=====++++++++___________***********%%%%%%%%%%%±±±±@@@@@@@@
-</p>
+<button style="color: #666; background-color: #FFF" aria-label="Close">X</button>
 ```
 
 #### Passed Example 8

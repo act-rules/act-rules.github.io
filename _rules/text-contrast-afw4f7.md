@@ -139,7 +139,7 @@ This 14pt bold black text has a contrast ratio of 3.6:1 on the gray background.
 
 #### Passed Example 7
 
-Despite falling below the minimum contrast ratio, the content of the button ("X") does not convey anything in human language; as a result, it complies with this rule. However, 1.4.11 Non-Text Content should be examined for this non-text element.
+Despite falling below the minimum contrast ratio, the content of the button ("X") does not convey anything in human language; as a result, it complies with this rule. However, [Success Criterion 1.4.11 Non-Text Content][sc1411] should be examined for this non-text element.
 
 ```html
 <button style="color: #666; background-color: #000" aria-label="Close">X</button>
@@ -434,3 +434,4 @@ This text is part of a [disabled][] widget because it is a child of an element w
 [user origin]: https://www.w3.org/TR/css3-cascade/#cascade-origin-user 'CSS 3, user origin'
 [visible]: #visible 'Definition of Visible'
 [html element]: #namespaced-element
+[sc1411]: https://www.w3.org/TR/WCAG22/#non-text-contrast

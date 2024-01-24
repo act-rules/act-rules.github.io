@@ -41,12 +41,11 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 - <dfn id="0va7u6:decorative">decorative</dfn>: The image with text is [purely decorative][]; or
 - <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
-- <dfn id="0va7u6:essential">essential</dfn>: Ensuring presentation of the text is [essential][].
+- <dfn id="0va7u6:essential">essential</dfn>: The presentation of the text is [essential][].
 
 ## Assumptions
 
-- There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
-- The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
+- This rule assumes that there is no mechanism to change the rendering of text within image resources on the page. For pages that *do* provide such a mechanism, this rule might fail even if [SC 1.4.5 Images of Text][sc1.4.5] is satisfied.
 - When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
 ## Accessibility Support

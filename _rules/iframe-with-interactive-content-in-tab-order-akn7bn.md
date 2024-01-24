@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any `iframe` element that [contains](#akn7bn:contain) at least one element for which all the following are true:
+This rule applies to any `iframe` element that is not [inert][] and that [contains](#akn7bn:contain) at least one element for which all the following are true:
 
 - the element is [visible][]; and
 - the element is part of the [sequential focus navigation order][] of the `iframe`'s [document][].
@@ -122,10 +122,44 @@ This `iframe` element contains a link that is not part of its [sequential focus 
 <iframe tabindex="-1" srcdoc="<a href='/' tabindex='-1'>Home</a>"></iframe>
 ```
 
+#### Inapplicable Example 5
+
+This `iframe` element is [inert][] because of its own `inert` [attribute value][].
+
+```html
+<iframe tabindex="-1" inert srcdoc="<a href='/'>Home</a>"></iframe>
+```
+
+#### Inapplicable Example 6
+
+Once the "Privacy policy details" button is activated, the `iframe` element becomes [inert][] because of the showModal() method, which causes the `iframe` to be [blocked by a modal].
+
+```html
+<iframe id="myFrame" title="Links" srcdoc="<a href='/'>Home</a>"></iframe>
+<div>
+	<button id="ppButton" onclick="openDialog()">Privacy policy details</button>
+</div>
+<dialog id="ppDialog" aria-labelledby="dialogLabel">
+	<h2 id="dialogLabel">Privacy Policy</h2>
+	<p>We store no data.</p>
+	<button id="cancel" onclick="ppDialog.close()">Cancel</button>
+</dialog>
+<script>
+	const openDialog = () => {
+		ppDialog.showModal();
+		myFrame.tabIndex = '-1'
+	}
+	ppDialog.addEventListener('close', () => myFrame.tabIndex = 0)
+	window.addEventListener('DOMContentLoaded', openDialog);
+</script>
+```
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
+[blocked by a modal]: https://html.spec.whatwg.org/multipage/interaction.html#blocked-by-a-modal-dialog
 [container document]: https://html.spec.whatwg.org/#bc-container-document 'HTML browsing context container document, 2020/12/18'
 [document]: https://html.spec.whatwg.org/multipage/dom.html#document 'HTML definition of document'
 [flattened tabindex-ordered focus navigation scope]: https://html.spec.whatwg.org/multipage/interaction.html#flattened-tabindex-ordered-focus-navigation-scope 'HTML - Living Standard, 2022/07/08'
+[inert]: #inert 'Definition of Inert'
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'HTML nested browsing context, 2020/12/18'
 [owner document]: https://dom.spec.whatwg.org/#dom-node-ownerdocument 'DOM node owner document property, 2020/12/18'
 [sc211]: https://www.w3.org/TR/WCAG21/#keyboard 'WCAG 2.1 Success criterion 2.1.1 Keyboard'

@@ -1,6 +1,6 @@
 ---
 id: 9eb3f6
-name: DEPRECATED — Image filename is accessible name for image
+name: Image filename is accessible name for image
 rule_type: atomic
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
@@ -40,7 +40,7 @@ assets:
   - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
   - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 deprecated: |
-  This rule has been deprecated and superseded by Rule [Image accessible name is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/). This rule is not maintained anymore and should not be used.
+  This rule has been deprecated and superseded by Rule [Image accessible name is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

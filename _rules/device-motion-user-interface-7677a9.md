@@ -55,7 +55,7 @@ The [instruments][instrument] used to pass this rule (if any), must meet all lev
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.4: Motion Actuation][sc2.5.4]
-- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
+- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG22/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
 ## Test Cases
@@ -272,18 +272,18 @@ This [HTML document][] is not operable by device motion.
 <p>ACT-Rules</p>
 ```
 
-[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[accessibility supported]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation#dfn-accessibility-supported
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[essential]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html#dfn-essential
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
+[sc2.5.4]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

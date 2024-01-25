@@ -38,7 +38,7 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-For each target element, all [text nodes][] in the [visible text content][] either match or are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
+For each target element, all [text nodes][] in the [visible text content][] [match characters][] and are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Assumptions
 
@@ -97,10 +97,10 @@ This button has [visible][] text that is contained within the [accessible name][
 
 #### Passed Example 5
 
-This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
-<button aria-label="close">X</button>
+<button aria-label="anything">X</button>
 ```
 
 #### Passed Example 6
@@ -143,6 +143,22 @@ This link has [visible][] text with mathematical symbols, that does not match th
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
 ```
 
+#### Failed Example 4
+
+This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name. 
+
+```html
+<a href="#" aria-label="non-standard">nonstandard</a>
+```
+
+#### Failed Example 5
+
+This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name. 
+
+```html
+<a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -181,6 +197,7 @@ This link has no [visible text content][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
+[match characters]: #matching-characters 'Definition of matching characters'
 [non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG Definition of Non-text content'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'

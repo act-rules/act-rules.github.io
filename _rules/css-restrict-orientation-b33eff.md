@@ -17,6 +17,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -160,6 +161,8 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: portrait) {
 				html {
 					transform: rotate(1.5708rad);
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -203,11 +206,16 @@ This page appears rotated at a slight angle of 2.5 degrees for stylistic purpose
 		<style>
 			body {
 				transform: rotate(2.5deg);
+				padding: 2rem;
+				width: min(100vw, 100vh);
+				height: min(100vw, 100vh);
 			}
 
 			@media (orientation: landscape) {
 				body {
 					transform: rotate(92.5deg);
+					position: absolute;
+					right: 0px;
 				}
 			}
 		</style>
@@ -230,6 +238,8 @@ A page where the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual
 			@media (orientation: portrait) {
 				html {
 					rotate: 90deg;
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -315,6 +325,9 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			body {
 				transform: rotate(90deg);
+				width: calc(min(100vw, 100vh) - 2rem);
+				height: calc(min(100vw, 100vh) - 2rem);
+				padding: 1rem;
 			}
 		</style>
 	</head>

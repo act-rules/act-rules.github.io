@@ -78,7 +78,7 @@ This `heading` has the required `aria-level` property.
 This `checkbox` has the required `aria-checked` property.
 
 ```html
-<div role="checkbox" aria-checked="false"></div>
+<div role="checkbox" aria-checked="false" aria-labelledby="label"></div>
 <div id="label">Check me</div>
 ```
 

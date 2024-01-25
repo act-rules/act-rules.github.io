@@ -109,10 +109,12 @@ This `span` element is not visible because its text content has size 0.
 
 #### Failed Example 8
 
-This `span` element is not visible because it has the exact same color as its background.
+This `span` element is not visible because it has the exact same color as its background. Note that the `div` element, on the other hand, is visible as a blue rectangle on the (default) white background of the page.
 
 ```html
-<span id="target" style="color: #00F; background: #00F;">Feel something move</span>
+<div style="background: #00F;">
+	<span id="target" style="color: #00F;">Feel something move</span>
+</div>
 ```
 
 #### Failed Example 9

@@ -19,5 +19,5 @@ A [web page][] changes state when the [document's body][body] changes without a 
 [url]: https://url.spec.whatwg.org/#concept-url
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[text alternative]: https://www.w3.org/TR/WCAG21/#dfn-text-alternative 'Definition of text alternative'
+[text alternative]: https://www.w3.org/TR/WCAG22/#dfn-text-alternative 'Definition of text alternative'
 [web page]: #web-page-html 'Definition of web page'

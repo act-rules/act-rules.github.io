@@ -48,14 +48,14 @@ The list of roles in the applicability is derived by taking all the roles from [
 
 This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
-This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
+This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG22/Techniques/general/G162)" would be sufficient.
 
 ### Bibliography
 
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
-- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
-- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
-- [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG22/Techniques/html/H91)
+- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
+- [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/html/H65)
 
 ## Test Cases
 
@@ -138,7 +138,8 @@ These `menuitemcheckbox` elements have an [accessible name][] because its aria-l
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><span id="ketchup" aria-hidden="true">Ketchup</span
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><span id="ketchup" aria-hidden="true"
+		>Ketchup</span
 	><br />
 	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="mayonnaise" /><span id="mayonnaise" aria-hidden="true"
 		>Mayonnaise</span
@@ -261,5 +262,5 @@ This `select` element is not [included in the accessibility tree][] because it i
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of Visible'
-[label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'WCAG definition of Labels'
-[sc332]: https://www.w3.org/TR/WCAG21/#labels-or-instructions
+[label]: https://www.w3.org/TR/WCAG22/#dfn-labels 'WCAG definition of Labels'
+[sc332]: https://www.w3.org/TR/WCAG22/#labels-or-instructions

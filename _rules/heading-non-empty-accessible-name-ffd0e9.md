@@ -187,12 +187,12 @@ This `h1` element is not [included in the accessibility tree][].
 [accessible name]: #accessible-name 'Definition of accessible name'
 [accessible name and description computation]: https://www.w3.org/TR/accname
 [explicit role]: #explicit-role 'Definition of explicit role'
-[global]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'Definition of Global ARIA States and Properties'
+[global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [property]: https://www.w3.org/TR/wai-aria/#dfn-property 'Definition of ARIA Property'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[tech h42]: https://www.w3.org/WAI/WCAG21/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
-[usc131]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[tech h42]: https://www.w3.org/WAI/WCAG22/Techniques/html/H42 'Technique H42: Using h1-h6 to identify headings'
+[usc131]: https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [visible]: #visible 'Definition of visible'
 [html element]: #namespaced-element

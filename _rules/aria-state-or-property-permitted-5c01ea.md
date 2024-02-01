@@ -230,7 +230,7 @@ This `button` does not have any [explicitly set][aria set explicit] ARIA attribu
 [aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
 [aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[checked absent]: https://www.w3.org/TR/html-aam-1.0/#att-checked-absent 'HTML AAM, Attribute Checked absent'
+[checked absent]: https://www.w3.org/TR/html-aam-1.0/#att-checked-absent 'HTML Accessibility API Mappings, Attribute Checked absent'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'

@@ -86,7 +86,7 @@ This `checkbox` has the required `aria-checked` property [explicitly set][aria s
 
 #### Passed Example 3
 
-This `scrollbar` has the required properties `aria-controls` and `aria-valuenow` [explicitely set][aria set explicit]. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100 and are thus [set by default][aria set default].
+This `scrollbar` has the required properties `aria-controls` and `aria-valuenow` [explicitly set][aria set explicit]. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100 and are thus [set by default][aria set default].
 
 ```html
 <div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>

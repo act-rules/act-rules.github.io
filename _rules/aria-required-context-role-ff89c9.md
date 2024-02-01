@@ -59,7 +59,7 @@ Some user agents try to correct missing [required context roles][] or incorrect 
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Required Context Role][]
 
 ## Test Cases
@@ -251,8 +251,8 @@ There is no element with an [explicit role][] different from its [implicit role]
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [required context role]: https://www.w3.org/TR/wai-aria-1.2/#scope 'WAI ARIA definition of Required Context Role'
 [required context roles]: https://www.w3.org/TR/wai-aria-1.2/#scope 'WAI ARIA definition of Required Context Role'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
-[sc411]: https://www.w3.org/TR/WCAG21/#parsing 'Success Criterion 4.1.1 Parsing'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
+[sc411]: https://www.w3.org/TR/WCAG22/#parsing 'Success Criterion 4.1.1 Parsing'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [subclass role]: https://www.w3.org/TR/wai-aria-1.2/#subclassroles 'ARIA Specification of Subclass Role'
 [ul]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element 'HTML specification of the ul element'

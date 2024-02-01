@@ -43,6 +43,8 @@ The [accessible name][] of each target element together with its [accessible des
 
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
 
+- This rule assumes that "link text" as referred to in WCAG encompasses both the [accessible name][] and [description][accessible description] of the target element. 
+
 ## Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.

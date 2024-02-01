@@ -105,9 +105,22 @@ While optional, this can provide information on authors, previous authors, and o
 
 Applicability describes which (elements of) web pages should be tested using the rule. These elements are known as test targets. Applicability must be written in plain language, as well-formed grammatically correct sentences, so that it can be used by QA testers. Applicability must rely on well defined properties of the technologies that are tested. For instance, a rule may be applicable to all `video` elements, but it can not be applicable to all `object` elements used to show video, unless the term "video" is further defined.
 
-Use objective, unambiguous definitions within applicability. Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
+The applicability of a rule must be unambigious and should be written using objective statements and in plain language.Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. New in version 1.1 of the ACT rules format is the ability to write rules using a subjective applicability. For rules that include a subjectivity, it is preferred to include a list of features (either in line or as part of a defintion) that describes how an element should be evaluated for matching the accessibility (see the "Styled as a Heading" example in the  [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability)). Additionally, in the past exception statements have been included in the Expectation that can be placed in the applicability, this is the recommended approach when possible (see the "Subjectivity in Applicability vs Expectation" example below). As a reminder, the intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
 
 > _For example:_ A rule testing that page titles are descriptive should only apply to specific `title` elements and this could be stated as _"This rule applies to the first HTML `title` element that is a descendant of the `html` element of a web page, and contains children that are text nodes that are not only whitespace."_.
+
+### Subjectivity in Applicability vs Expectation Example
+
+The below section contains 2 approaches for writing an ACT rule for testing text contrast. For each example, both the applicability and expectation are included for clarity. Each of these examples follows the ACT rules format, but note that in the first example, the applicability is ended with the phrase "... except if the test target is part of a text node that is purely decorative or does not express anything in human language", while in the second example this phrase is appended to the expectation. Both of these approaches follow the normative ACT rules format and lead to valid ACT rules; however, we recommend including this text in the applicability when possible. When phrases such as this are included in the applicability, some test cases become inapplicable that would otherwise be passed if the phrase was included in the expectation. For example, for a smiling face emoji would be considered inapplicable when using the approach in Example 1, while in Example 2 the smiling face emoji would pass since it is considered an exception to the expectation.
+
+**Example 1 of Text Contrast**
+ - Applicability: This rule applies to any visible character in a text node that is a child in the flat tree of an HTML element, except if the test target is part of a text node that is purely decorative or does not express anything in human language.
+ - Expectation: For each test target, the highest possible contrast between the foreground colors and background colors is at least 3.0:1 for large scale text and 4.5:1 for other texts.
+
+**Example 2 of Text Contrast**
+ - Applicability: This rule applies to any visible character in a text node that is a child in the flat tree of an HTML element
+ - Expectation: For each test target, the highest possible contrast between the foreground colors and background colors is at least 3.0:1 for large scale text and 4.5:1 for other texts, except if the test target is part of a text node that is purely decorative or does not express anything in human language.
+
 
 For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 

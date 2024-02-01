@@ -175,14 +175,6 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 <label>Password<input type="password" aria-required="true"/></label>
 ```
 
-#### Passed Example 12
-
-This `button` has an [implicitly set][aria set implicit] `aria-checked` state since it uses an `input` element with a `type` [attribute value][] of `checkbox`.
-
-```html
-<input type="checkbox" role="button" />
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -227,9 +219,18 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
+#### Passed Example 12
+
+This `button` does not have any [explicitly set][aria set explicit] ARIA attribute. It has an [implicitly set][aria set implicit] `aria-checked` state, due to the [absence of a `checked` attribute][checked absent] on the `input` element with a `type` [attribute value][] of `checkbox`.
+
+````html
+```html <input type="checkbox" role="button" />
+````
+
 [aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
 [aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [attribute value]: #attribute-value 'Definition of attribute value'
+[checked absent]: https://www.w3.org/TR/html-aam-1.0/#att-checked-absent 'HTML AAM, Attribute Checked absent'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'

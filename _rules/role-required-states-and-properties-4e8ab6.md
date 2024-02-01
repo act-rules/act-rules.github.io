@@ -55,7 +55,7 @@ This rule is testing author built components that specify [explicit semantic rol
 
 ### Bibliography
 
-- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
@@ -78,7 +78,7 @@ This `heading` has the required `aria-level` property.
 This `checkbox` has the required `aria-checked` property.
 
 ```html
-<div role="checkbox" aria-checked="false"></div>
+<div role="checkbox" aria-checked="false" aria-labelledby="label"></div>
 <div id="label">Check me</div>
 ```
 

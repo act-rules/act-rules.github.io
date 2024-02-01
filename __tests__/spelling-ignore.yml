@@ -28,6 +28,7 @@
 - WCAG
 - WCAG2
 - WCAG21
+- WCAG22
 - CSS3
 - css # lowercase needed in reference list
 - UA
@@ -120,6 +121,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+- wai-aria-1.2
 
 # Notes and acronyms
 - TODO

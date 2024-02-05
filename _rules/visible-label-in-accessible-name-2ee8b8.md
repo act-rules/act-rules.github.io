@@ -396,6 +396,7 @@ This link has no [visible inner text][].
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
+[label in name algorithm]: #label-in-name-algorithm 'Definition of Label in Name Algorithm'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'

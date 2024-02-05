@@ -301,7 +301,15 @@ This button's accessible name contains the same tokens that are in the visible l
 <button aria-label="how are you"><span>you</span><span>how</span><span>are</span></button>
 ```
 
-#### Failed Example 11 
+#### Failed Example 11
+
+This button's accessible name contains the word "the" in the middle of it, which causes the sublist check of the [label in name algorithm][] (in particular: the "consecutive" requirement of that check) to fail.  So it fails the rule.
+
+```html
+<button aria-label="Download the specification">Download specification</button>
+```
+
+#### Failed Example 12 
 
 This link's accessible name contains the same digits that are in the visible label, and in the same order.  But they have different spaces and punctuation between them, so they are considered separate tokens.  So this fails the rule.
 
@@ -309,7 +317,7 @@ This link's accessible name contains the same digits that are in the visible lab
 <a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>
 ```
 
-#### Failed Example 12 
+#### Failed Example 13 
 
 This rule has no special handling which tries to guess when number have the same semantic meaning.  It operates on tokens only.
 
@@ -317,7 +325,7 @@ This rule has no special handling which tries to guess when number have the same
 <a href="#2021" aria-label="20 21">2021</a>
 ```
 
-#### Failed Example 13 
+#### Failed Example 14 
 
 Similar to the previous example.
 
@@ -325,7 +333,7 @@ Similar to the previous example.
 <a aria-label="fibonacci: 0 1 1 2 3 5 8 13 21 34">fibonacci: 0112358132134</a>
 ```
 
-#### Failed Example 14 
+#### Failed Example 15 
 
 This rule has no special handling for converting digits into words, or vice versa.
 
@@ -333,7 +341,7 @@ This rule has no special handling for converting digits into words, or vice vers
 <a href="#2021" aria-label="twenty twenty-one">two thousand twenty-one</a>
 ```
 
-#### Failed Example 15 
+#### Failed Example 16 
 
 (Same as above.)  This rule has no special handling for converting digits into words, or vice versa.
 
@@ -341,7 +349,7 @@ This rule has no special handling for converting digits into words, or vice vers
 <a aria-label="two zero two three" href="#">2 0 2 3</a>
 ```
 
-#### Failed Example 16 
+#### Failed Example 17 
 
 This rule has no special handling for digits that appear next to letters with no spaces in between.
 
@@ -349,7 +357,7 @@ This rule has no special handling for digits that appear next to letters with no
 <a aria-label="1a" href="#">1</a>
 ```
 
-#### Failed Example 17
+#### Failed Example 18
 
 The definition of [visible inner text][] doesn't treat text any differently if it's excluded from the accessibility tree with aria-hidden.  So this rule effectively ignores aria-hidden.  So this element fails the rule.
 

@@ -16,11 +16,13 @@ rule_type: atomic
 description: |
   This rule checks ...
 accessibility_requirements:
-  wcag20:x.x.x: # (Name of Success Criterion)
+  wcag20:x.x.x: # <Name of Success Criterion> (A | AA | AAA)
     forConformance: true | false
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
+  wcag20:z.z.z: # <Name of Success Criterion> (A | AA | AAA)
+    secondary: This success criterion is ...
   aria12:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false
@@ -65,11 +67,11 @@ There are no accessibility support issues known.
 
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
+- Links to Techniques for WCAG 2.2
+- Latest version: Techniques for WCAG 2.2 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases
@@ -185,11 +187,11 @@ There are no accessibility support issues known.
 
 ## Background
 
-- Links to Techniques for WCAG 2.0
-- Latest version: Techniques for WCAG 2.0 W3C Working Group Note 8 April 2014
+- Links to Techniques for WCAG 2.2
+- Latest version: Techniques for WCAG 2.2 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
 - Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.0 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
 
 ## Test Cases

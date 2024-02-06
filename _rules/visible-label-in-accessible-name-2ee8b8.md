@@ -63,7 +63,7 @@ The understanding document of [2.5.3 Label in Name][understand253] use the term 
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.3: Label in Name][understand253]
-- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
+- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG22/Techniques/general/G208)
 
 ## Test Cases
 
@@ -103,10 +103,10 @@ This button has [visible inner text][] that is contained within the [accessible 
 
 #### Passed Example 5
 
-The "X" is [non-text content][], so it doesn't need to be contained within the [accessible name][].
+This button has [visible inner text][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
-<button aria-label="close">X</button>
+<button aria-label="anything">X</button>
 ```
 
 #### Passed Example 6
@@ -279,7 +279,7 @@ The rule has no special handling for abbreviations.
 
 #### Failed Example 8
 
-This link has [visible inner text][] with mathematical symbols and is not contained within the [accessible name][] because the mathematical symbols are represented as English words (not digits) in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
+This link has [visible inner text][] with mathematical symbols and is not contained within the [accessible name][] because the mathematical symbols are represented as English words (not digits) in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name#mathematical-expressions-and-formulae).
 
 ```html
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
@@ -403,14 +403,14 @@ This link has no [visible inner text][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
 [label in name algorithm]: #label-in-name-algorithm 'Definition of Label in Name Algorithm'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG Definition of Non-text content'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
-[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
+[supports name from content]: https://www.w3.org/TR/wai-aria-1.2/#namefromcontent 'Definition of Supports name from content'
+[understand253]: https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
 [visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
-[widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
-[understand253]: https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html
+[widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'

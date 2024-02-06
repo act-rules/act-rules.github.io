@@ -1,6 +1,6 @@
 ---
 id: 9eb3f6
-name: DEPRECATED — Image filename is accessible name for image
+name: Image filename is accessible name for image
 rule_type: atomic
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
@@ -40,7 +40,7 @@ assets:
   - The picture of Nyhavn (Copenhagen) is authored by [Jorge Franganillo](https://500px.com/franganillo), licensed under the [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/deed.en) license.
   - The picture of bread is a public domain [picture by Bicanski](https://pixnio.com/media/bread-breakfast-fresh-homemade-wheat).
 deprecated: |
-  This rule has been deprecated and superseded by Rule [Image accessible name is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/proposed/). This rule is not maintained anymore and should not be used.
+  This rule has been deprecated and superseded by Rule [Image accessible name is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability
@@ -70,10 +70,10 @@ It is fairly common for content management systems (CMS) or other tools to defau
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG21/Techniques/failures/F30)
-- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94)
-- [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G95)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
+- [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG22/Techniques/failures/F30)
+- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG22/Techniques/general/G94)
+- [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG22/Techniques/general/G95)
 
 ## Test Cases
 
@@ -264,7 +264,7 @@ This `img` element has an [accessible name][] which is not equivalent to the fil
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image) 'Definition of the Image Button state'
 [image sources]: https://html.spec.whatwg.org/multipage/images.html#image-source 'Definition of image source'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content
 [semantic role]: #semantic-role 'Definition of semantic role'
 [source set]: https://html.spec.whatwg.org/multipage/images.html#source-set 'Definition of source set'
 [whitespace]: #whitespace 'Definition of whitespace'

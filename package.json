@@ -168,7 +168,7 @@
 		"unified": "^9.2.1",
 		"unist-util-visit": "^2.0.3",
 		"vfile-reporter": "^6.0.2",
-		"zx": "^5.3.0"
+		"zx": "^7.2.1"
 	},
 	"keywords": [
 		"WCAG",

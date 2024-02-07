@@ -103,7 +103,7 @@ This button has [visible inner text][] that is contained within the [accessible 
 
 #### Passed Example 5
 
-This button has [visible inner text][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
+This button has [visible inner text][] that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
 <button aria-label="anything">X</button>

@@ -177,6 +177,9 @@
 - x1
 - y1
 
+# HTML character references 
+- nbsp
+
 # DOM Events
 - auxclick
 - compostionend
@@ -252,6 +255,7 @@
 - 000B
 - 000C
 - 000D
+- 00A0
 
 # JSON attributes/ metadata/ methods
 - testcases

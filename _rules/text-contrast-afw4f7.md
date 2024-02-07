@@ -203,16 +203,6 @@ This 22pt black Chinese text has a contrast ratio of 3.6:1 on the gray backgroun
 </p>
 ```
 
-#### Passed Example 14
-
-This 18pt black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since the characters composing the sentence are not included within the Unicode standard range of 4E00–9FFF, this is [large scale text][] and passes the rule.
-
-```html
-<p style="color: #000; font-size:18pt; background: #666;" lang="ja">
-	「ロック・アンド・ロール」
-</p>
-```
-
 ### Failed
 
 #### Failed Example 1
@@ -326,26 +316,6 @@ This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 
 ```html
 <div role="button" style="color: #777; background: #EEE;">My button!</div>
-```
-
-#### Failed Example 11
-
-This 14pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background. Since 14pt bold is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 4.5:1.
-
-```html
-<p style="color: #000; font-size:16pt; font-weight:700; background: #666;" lang="ja">
-	中国語、日本語、及び韓国語
-</p>
-```
-
-#### Failed Example 12
-
-This 18pt black Chinese text has a contrast ratio of 3.6:1 on the gray background. Since 18pt is not [large scale text][] for the Unicode Standard with range 4E00–9FFF, the minimum contrast ratio requirement is 4.5:1.
-
-```html
-<p style="color: #000; font-size:18pt; background: #666;" lang="ja">
-	内容无障碍指南
-</p>
 ```
 
 ### Inapplicable

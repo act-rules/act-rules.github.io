@@ -20,18 +20,20 @@ Sub-algorithm to tokenize a string:
     - For b) Use the Unicode classes Letter, Mark, and "Number, Decimal Digit [Nd]". (This will exclude hyphens, punctuation, emoji, and more.)
 - Remove all characters that are within parentheses (AKA round brackets).
     - Ignore square brackets and braces.
-- Split the string into a list of strings, using a whitespace regular expression as the separator.
+- Split the string into a list of strings, using a greedy [whitespace][] regular expression as the separator.
     - This 'split' operation must:
-        - Effectively remove leading and trailing whitespace as a pre-processing step.
-        - If the string was all whitespace before this operation: result in an empty list.
+        - Effectively remove leading and trailing [whitespace][].
+        - If the input string contains nothing but [whitespace][] before this operation: return an empty list.
+		- A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered.  That includes the Unicode code point U+00A0 - the "No-Break Space" - which can be represented by the HTML named character reference `&nbsp;`.
 
 Then do the check: is the tokenized 'label' a sublist of the tokenized 'name'?
 - This 'sublist' check has these properties:
-    - It checks whether elements are consecutive or not. i.e. it checks for a substring, in the computer science sense of the term. Not a subsequence.
+    - It checks whether elements are consecutive or not.  That is: it checks for a substring, in the computer science sense of the term.  Not a subsequence.
     - An empty list is a sublist of any list.
 
 If the answer is "yes" (that is: the tokenized 'label' is a sublist of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [element]: https://dom.spec.whatwg.org/#element
+[visible inner text]: #visible-inner-text 'Definition of Visible inner text'
+[whitespace][]: #whitespace 'Definition of whitespace'

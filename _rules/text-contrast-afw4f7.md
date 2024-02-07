@@ -183,26 +183,6 @@ This text is using the default user agent text color and background color. By de
 <div role="button">My button!</div>
 ```
 
-#### Passed Example 12
-
-This 18pt bold black Japanese text has a contrast ratio of 3.6:1 on the gray background.
-
-```html
-<p style="color: #000; font-size:18pt; font-weight:700; background: #666;" lang="ja">
-	中国語、日本語、及び韓国語
-</p>
-```
-
-#### Passed Example 13
-
-This 22pt black Chinese text has a contrast ratio of 3.6:1 on the gray background.
-
-```html
-<p style="color: #000; font-size:22pt; font-weight:700; background: #666;" lang="ja">
-	内容无障碍指南
-</p>
-```
-
 ### Failed
 
 #### Failed Example 1

@@ -50,7 +50,7 @@ This rule assumes that [visual reference words][] are forms of information conve
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

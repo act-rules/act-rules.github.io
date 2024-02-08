@@ -59,7 +59,7 @@ Each test target is [purely decorative][].
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

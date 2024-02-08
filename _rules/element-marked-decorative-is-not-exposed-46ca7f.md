@@ -34,7 +34,8 @@ There are no assumptions.
 
 ## Accessibility Support
 
-Implementation of the [Presentational Roles Conflict Resolution][] differs slightly from one user agent to the other. Hence, some elements might be exposed by one user agent and not by another, and consequently might create accessibility issues only for some users. Nevertheless, triggering the conflict is a bad practice.
+- Implementation of the [Presentational Roles Conflict Resolution][] differs slightly from one user agent to the other. Hence, some elements might be exposed by one user agent and not by another, and consequently might create accessibility issues only for some users. Nevertheless, triggering the conflict is a bad practice.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

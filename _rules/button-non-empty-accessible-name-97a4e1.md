@@ -37,8 +37,8 @@ Each target element has an [accessible name][] that is not empty (`""`).
 ## Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 - Some elements have a role of `button` and a default accessible name defined by the [HTML Accessibility API Mapping][html aam input button], for example `input` elements whose `type` [attribute value][] is either `submit` or `reset`. This rule considers that these default names can be descriptive and therefore does not fail them.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

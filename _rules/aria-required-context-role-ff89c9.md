@@ -42,6 +42,7 @@ The rule assumes that the [explicit role][] of the applicable elements is approp
 - User agents do not all have the same accessibility tree. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
 - There exist some combination of popular browsers and assistive technologies who do not announce correctly relationships based on a mix of [implicit][implicit role] and [explicit][explicit role] roles.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

@@ -58,6 +58,7 @@ The purpose of a control is programmatically identifiable even when its `autocom
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
 - In some user agents, querying the value of the `autocomplete` property returns an empty string ("") even when the attribute was set according to the rule's expectations. It affects assistive technologies which rely on this property to personalize input fields collecting information about the user.
+- Certain `autocomplete` attribute values are appropriate only for specific form controls. However, despite some combinations of `autocomplete` attribute values and form controls not being allowed by HTML specifications, the input purpose is programmatically available, and autocomplete functions correctly. Thus, if the input possesses the suitable autocomplete value, it fulfills the [Success Criterion 1.3.5 Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose), regardless of the input type.
 
 ## Background
 
@@ -146,14 +147,6 @@ This `autocomplete` [attribute value][] list includes all allowed types of token
 ```
 
 #### Passed Example 8
-
-This `autocomplete` [attribute value][] only has the required token "bday-day". It remains programmatically identifiable even though it is inappropriate for the control's `type` [attribute value][] "tel".
-
-```html
-<label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
-```
-
-#### Passed Example 9
 
 This `autocomplete` [attribute value][] has the required token "current-password", followed by the optional "webauthn" token.
 

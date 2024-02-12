@@ -116,7 +116,7 @@ Each of these three [focusable][] elements has a blue square in front of it when
 	class="no-focus-default"
 	onfocus="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
 	onblur="toggleActivation('indicator-wcag'); toggleActivation('indicator-w3c')"
-	href="https://www.w3.org/TR/WCAG21/"
+	href="https://www.w3.org/TR/WCAG22/"
 	>WCAG</a
 >
 <span id="indicator-w3c" class="indicator solid"></span>
@@ -158,17 +158,17 @@ None of the [focusable][] elements in this document are part of [sequential focu
 
 ```html
 <a tabindex="-1" href="https://act-rules.github.io/">ACT rules</a>
-<a tabindex="-1" href="https://www.w3.org/TR/WCAG21/">WCAG</a>
+<a tabindex="-1" href="https://www.w3.org/TR/WCAG22/">WCAG</a>
 ```
 
 [focusable]: #focusable 'Definition of Focusable'
 [focused]: #focused 'Definition of Focused'
-[sc247]: https://www.w3.org/TR/WCAG21/#focus-visible 'Success Criterion 2.4.7 Focus Visible'
+[sc247]: https://www.w3.org/TR/WCAG22/#focus-visible 'Success Criterion 2.4.7 Focus Visible'
 [sc2411]: https://www.w3.org/TR/WCAG22/#focus-appearance 'Success Criterion 2.4.11 Focus Appearance'
 [sc2412]: https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum 'Success Criterion 2.4.12 Focus Not Obscured (Minimum)'
 [scrolling area]: https://drafts.csswg.org/cssom-view/#scrolling-area 'CSS specification of Scrolling Area'
 [sequential focus navigation]: https://html.spec.whatwg.org/#sequential-focus-navigation 'HTML specification of Sequential focus navigation'
-[usc247]: https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'
+[usc247]: https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html 'Understanding Success Criterion 2.4.7: Focus Visible'
 [usc2411]: https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html 'Understanding Success Criterion 2.4.11: Focus Appearance'
 [usc2412]: https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html 'Understanding Success Criterion 2.4.12: Focus Not Obscured (Minimum)'
 [viewport]: https://drafts.csswg.org/css2/#viewport 'CSS definition of Viewport'

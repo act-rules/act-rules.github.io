@@ -73,7 +73,7 @@ Pages with links that are not [ambiguous to users in general][], but are ambiguo
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+- [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 - [Ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general)
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) (secondary requirement)
@@ -494,7 +494,7 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 [matching]: #matching-characters 'Definition of matching characters'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of programmatically determined link context'
 [same resource]: #same-resource 'Definition of same resource'
-[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
+[sc244]: https://www.w3.org/TR/WCAG22/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page]: #web-page-html 'Definition of HTML web page'

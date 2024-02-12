@@ -47,15 +47,15 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 ## Background
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]. These extra requirements are left out of this rule, and should be tested separately.
-This rule allows [changes to the content][changes in content] when a [user interface component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) has focus to meet the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4]. As explained in the [Event dispatch and DOM event flow section](https://www.w3.org/TR/uievents/#event-flow) of the [UI Events Working Draft](https://www.w3.org/TR/uievents/), each [keyboard event][] is dispatched to an [event target][]. The [event target][] is the element that has focus. As such, the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4] is implied by saying that the [event target][] is an [inheriting semantic][] `widget`.
+This rule allows [changes to the content][changes in content] when a [user interface component](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components) has focus to meet the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4]. As explained in the [Event dispatch and DOM event flow section](https://www.w3.org/TR/uievents/#event-flow) of the [UI Events Working Draft](https://www.w3.org/TR/uievents/), each [keyboard event][] is dispatched to an [event target][]. The [event target][] is the element that has focus. As such, the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4] is implied by saying that the [event target][] is an [inheriting semantic][] `widget`.
 
 The "Turn off" and "Remap" requirements from [Success Criterion 2.1.4][sc2.1.4] are combined in the **disable/remap** item of the Expectation section. For the disable requirement, [changes in content][] that are made through [keyboard events][keyboard event] with a [printable character][] value for the `key` attribute and a `getModifierState` return value of `false` for each of the [valid modifier keys][] effectively need to be [blocked][blocked event] (in other words, turned off or disabled). The remap requirement unblocks the events if the `getModifierState` query returns `true` for at least one of the [valid modifier keys][]. Once the `getModifierState` returns `true` for at least one of the [valid modifier keys][] of a [keyboard event][], such [keyboard event][] is no longer applicable for the rule and it passes the "Remap" requirement from [Success Criterion 2.1.4][sc2.1.4].
 
 ### Bibliography
 
 - [Understanding Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]
-- [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)
-- [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)
+- [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG22/Techniques/general/G217)
+- [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG22/Techniques/failures/F99)
 
 ## Test Cases
 
@@ -378,6 +378,6 @@ This [HTML document][] has a [keyboard event][] [dispatched][] to an [event targ
 [legacy keyboard events]: https://www.w3.org/TR/uievents/#legacy-keyboardevent-events
 [printable character]: #printable-characters 'Definition of printable characters'
 [same key events]: #same-key-events 'Definition of same key events'
-[sc2.1.4]: https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html
+[sc2.1.4]: https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html
 [set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [valid modifier keys]: https://www.w3.org/TR/uievents-key/#keys-modifier 'Definition of modifier keys'

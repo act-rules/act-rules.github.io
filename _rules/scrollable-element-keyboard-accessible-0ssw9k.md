@@ -59,8 +59,8 @@ This rule only applies to elements who scroll content in the same document. Elem
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html)
-- [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202)
+- [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)
+- [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG22/Techniques/general/G202)
 
 ## Test Cases
 
@@ -92,7 +92,7 @@ This [scrollable][] `section` element contains a link that is included in [seque
 ```html
 <section style="height: 100px; width: 500px; overflow: scroll;">
 	<h1>
-		<a href="https://www.w3.org/TR/WCAG21/#abstract">
+		<a href="https://www.w3.org/TR/WCAG22/#abstract">
 			WCAG 2.1 Abstract
 		</a>
 	</h1>
@@ -186,7 +186,7 @@ This `section` element has a [scroll distance][scrollable] of 0 in both directio
 ```html
 <section style="height: 95px; width: 500px; overflow: auto;">
 	<p>
-		<a href="https://www.w3.org/TR/WCAG21/#abstract">
+		<a href="https://www.w3.org/TR/WCAG22/#abstract">
 			WCAG 2.1 Abstract
 		</a>
 	</p>
@@ -199,7 +199,7 @@ This `section` element is not [scrollable][] because it has a [computed][] [over
 
 ```html
 <h1>
-	<a href="https://www.w3.org/TR/WCAG21/#abstract">
+	<a href="https://www.w3.org/TR/WCAG22/#abstract">
 		WCAG 2.1 Abstract
 	</a>
 </h1>
@@ -251,7 +251,7 @@ This `section` element has a [horizontal scroll distance][scrollable] that is le
 This `iframe` element is not a scrollable element, but instead contains a nested browsing context that is scrollable. These must be tested separately.
 
 ```html
-<iframe src="https://www.w3.org/TR/WCAG21/#abstract" width="500" height="200"></iframe>
+<iframe src="https://www.w3.org/TR/WCAG22/#abstract" width="500" height="200"></iframe>
 ```
 
 [visible]: #visible
@@ -268,6 +268,6 @@ This `iframe` element is not a scrollable element, but instead contains a nested
 [padding-right]: https://www.w3.org/TR/CSS22/box.html#propdef-padding-right
 [padding-top]: https://www.w3.org/TR/CSS22/box.html#propdef-padding-top
 [padding-bottom]: https://www.w3.org/TR/CSS22/box.html#propdef-padding-bottom
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration
-[success criterion 2.1.1 keyboard]: https://www.w3.org/TR/WCAG21/#keyboard
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration
+[success criterion 2.1.1 keyboard]: https://www.w3.org/TR/WCAG22/#keyboard
 [html element]: #namespaced-element

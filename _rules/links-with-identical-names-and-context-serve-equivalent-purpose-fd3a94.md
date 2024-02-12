@@ -221,7 +221,7 @@ These two SVG `a` and HTML `a` elements have the same [accessible name][], same 
 
 #### Passed Example 9
 
-These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but resolve to different resources. However, the purpose of these links is [ambiguous to users in general](https://www.w3.org/TR/WCAG21/#dfn-ambiguous-to-users-in-general). Thus all readers are unsure about the destination and the person with a disability is not at any disadvantage.
+These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but resolve to different resources. However, the purpose of these links is [ambiguous to users in general](https://www.w3.org/TR/WCAG22/#dfn-ambiguous-to-users-in-general). Thus all readers are unsure about the destination and the person with a disability is not at any disadvantage.
 
 ```html
 <html lang="en">

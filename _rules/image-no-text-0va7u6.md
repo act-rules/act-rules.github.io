@@ -12,7 +12,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:1.4.9: # Images of Text (No Exception) (AAA)
     forConformance: true
-    secondary: true
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
@@ -42,12 +41,11 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 - <dfn id="0va7u6:decorative">decorative</dfn>: The image with text is [purely decorative][]; or
 - <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
-- <dfn id="0va7u6:essential">essential</dfn>: Ensuring presentation of the text is [essential][].
+- <dfn id="0va7u6:essential">essential</dfn>: The presentation of the text is [essential][].
 
 ## Assumptions
 
-- There is no mechanism to change the rendered text in the image resource. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
-- The specific presentation of the text rendered in the image resource can be achieved through formatted text. Otherwise, the rule might fail while [SC 1.4.5 Images of Text][sc1.4.5] and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9] might be satisfied.
+- This rule assumes that there is no mechanism to change the rendering of text within image resources on the page. For pages that *do* provide such a mechanism, this rule might fail even if [SC 1.4.5 Images of Text][sc1.4.5] is satisfied.
 - When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
 ## Accessibility Support
@@ -56,7 +54,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5] which includes exceptions to the images it applies to that are not part of [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. Therefore, some images that are inapplicable for this rule can be applicable to [SC 1.4.9 Images of Text (No Exception)][sc1.4.9].
+This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
 
 ### Bibliography
 
@@ -210,10 +208,13 @@ This image resource referenced by the `img` element contains text that provides 
 This `img` element loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
 
 ```html
-<img alt="WCAG Rocks" src="data:image/svg+xml;utf8,
+<img
+	alt="WCAG Rocks"
+	src="data:image/svg+xml;utf8,
 <svg xmlns='http://www.w3.org/2000/svg' height='20px' width='80px'>
   <text x='0' y='15'>WCAG Rocks</text>
-</svg>" />
+</svg>"
+/>
 ```
 
 ### Inapplicable
@@ -241,11 +242,11 @@ This `svg` element does not have `image` element descendants.
 
 [essential]: #essential-text-presentation 'Definition of Essential (Text Presentation)'
 [insignificant]: #insignificant 'Definition of Insignificant'
-[human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
+[human language]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.2, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.2, Purely decorative'
 [rendered image resources]: #rendered-image-resource 'Definition of rendered image resource'
-[sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
-[sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
+[sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
+[sc1.4.9]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page (HTML)'

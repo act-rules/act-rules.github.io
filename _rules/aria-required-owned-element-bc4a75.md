@@ -77,12 +77,12 @@ This element with the `list` role only owns elements with the `listitem` role. T
 
 #### Passed Example 2
 
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `gridcell` role. The `row` role is one of the [required owned elements][] for `grid`, and `gridcell` is one of the [required owned elements][] for `row`.
 
 ```html
 <table role="grid">
 	<tr role="row">
-		<td role="cell">Item 1</td>
+		<td role="gridcell">Item 1</td>
 	</tr>
 </table>
 ```

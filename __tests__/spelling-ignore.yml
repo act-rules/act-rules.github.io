@@ -209,6 +209,11 @@
 - dom-meta-content
 - showModal
 
+# Javascript identifiers
+- clientRects
+- getBoundingClientRect
+- getClientRects
+
 # Unsure why the dictionary does not have these words
 - programmatically
 - personalization
@@ -237,6 +242,7 @@
 - focusability
 - unitless
 - luminance
+- checkboxes # this seems tè be the correct plural
 
 # Parts of Unicode
 - 000A
@@ -271,6 +277,13 @@
 - 25px
 - 30px
 - 32px
+- 35px
+- 41px
+- 44px
+- 45px
+- 48px
+- 50px
+- 54px
 
 # Language codes
 - da

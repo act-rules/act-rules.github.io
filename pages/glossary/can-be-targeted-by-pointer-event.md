@@ -12,8 +12,8 @@ An element _can be targeted by pointer events_ when all the following conditions
 
 - the element is a [semantic `widget`][semantic role]; and
 - the element is [focusable][]; and
-- the element's [border box][] intersects the viewport; and
-- the element's [border box][] is not entirely covered by the [border boxes][] of elements with greater `z-index` and `pointer-events: auto` CSS properties.
+- the element [computed value][] of the `pointer-events` CSS property is `auto`; and
+- through scrolling, it is possible to have parts of the element's [border box][] which intersect the viewport and are not entirely covered by the [border boxes][] of elements with greater [computed][computed value] `z-index` and a [computed][computed value] `pointer-events` of `auto`.
 
 #### Background
 
@@ -24,14 +24,13 @@ This definition tries to capture which HTML elements can actually react to point
 
 As a consequence, this definition has these two known limitations:
 
-- Not all HTML elements that can actually be targeted by a pointer event match this definition. For example, an author may build custom buttons without giving them an appropriate role or making them [focusable][]; or content overflowing the [border box][] is clickable. Elements that can actually be targeted by pointer events but do not match this definition likely fail either [Success Criterion 4.1.2 Name, Role, Value][sc412] or [Success Criterion 2.1.1 Keyboard][sc211].
+- Not all HTML elements that can actually be targeted by a pointer event match this definition. For example, an author may build custom buttons without giving them an appropriate role or making them [focusable][]; or content overflowing the [border box][] of an element is clickable, but that element might not match the definition if the [border box][] is off-screen. Elements that can actually be targeted by pointer events but do not match this definition likely fail either [Success Criterion 4.1.2 Name, Role, Value][sc412] or [Success Criterion 2.1.1 Keyboard][sc211].
 - Not all HTML elements that match this definition can actually be targeted by a pointer event. For example, when the actual clickable area does not cover the full [border box][] and is entirely covered by other elements, or when the element has an event handler that does nothing. Elements that match this definition but cannot actually be targeted by pointer events likely fail [Success Criterion 2.5.6 Concurrent Input Mechanisms][sc256].
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
-[clickable area]: #clickable-area 'Definition of Clickable Area'
+[computed value]: https://www.w3.org/TR/css-cascade-3/#computed 'CSS definition of Computed Value'
 [focusable]: #focusable 'Definition of Focusable'
 [sc211]: https://www.w3.org/TR/WCAG22/#keyboard 'Success Criterion 2.1.1 Keyboard'
 [sc256]: https://www.w3.org/TR/WCAG22/#concurrent-input-mechanisms 'Success Criterion 2.5.6 Concurrent Input Mechanisms'
 [sc412]: https://www.w3.org/TR/WCAG22/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[visible]: #visible ' Definition of Visible'

@@ -10,59 +10,52 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag22:2.5.8: # Target Size (Minimum)
-    secondary: true
+  wcag22:2.5.8: # Target Size (Minimum) (AA)
+    secondary: 'This success criterion is **less strict** than this rule. This is because this criterion has a lower size requirement. Some of the failed examples may satisfy this success criterion.'
 input_aspects:
   - DOM Tree
   - CSS Styling
 acknowledgments:
   authors:
     - Jean-Yves Moyen
-    - Wilco Fiers
-  test_assets: Map Image by <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm#query=map%20background&position=27&from_view=keyword&track=ais">Freepik</a>
+  test_assets: Map Image by <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Freepik</a>
 ---
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
-
-Exception: the target is a [User Agent controlled component][] (WCAG exception).
-Exception: not for `area` element (due to weird shapes + often essential size).
-Exception: not if a descendant is focusable (hard to define the clickable area).
-Exception: the target is a [shape-shifted element][] (weird shape).
+This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][], unless the target is a [User Agent controlled component][].
 
 ## Expectation
 
 For each test target, at least one of the following is true:
 
-- the target element has a [clickable area][] containing a rectangle aligned with the screen border whose width and height are at least 44 CSS pixels; or
-- though scrolling, the element can be brought into viewport with a [clickable area][] width and height of at least 44 CSS pixels; or
+- though scrolling, the element can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
 - the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
-  > Note: this is mostly for totally covered or off-screen elements. This should probably rather be handled in the Applicabilty and make these Inapplicable, but I'm not sure it can be done with the current definition…
-- the target is part of [inline text][]; or
-  > comment: I feel this is going to be difficult to define objectively, so it is better in Expectation for now. #1010 has some work in that direction that we can probably reuse: https://github.com/act-rules/act-rules.github.io/pull/1010/files#diff-32079a0602a5a909b242b4e0961e7c5ddd6b6f5c9906b216d5bf21cf2ba13a77R28-R29 > https://github.com/act-rules/act-rules.github.io/blob/4b64bba6cb77a8d4dc0649c83c55372f513d979f/pages/glossary/rendered-on-a-line.md
-- The size is [essential target size][]
-  > comment: this is always a bit tricky. I guess we can do as in #1916 and list cases that are considered essential (list can grow).
-- There is an [instrument][] to achieve an equivalent goal, with a 44×44px [clickable area][].
+- the target is part of [rendered on a line][]; or
+- The size has [essential target size][]
+- There is an [instrument][] to achieve an equivalent goal on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
 
 ## Assumptions
 
-- This rule assumes that [focusable][] `widget` are effectively clickable.
+- This rule assumes that [focusable][] `widget` are effectively clickable. If a widget is [focusable][] without being clickable, it may fail this rule while [Success Criterion 2.5.5 Target Size (enhanced)][sc255] is satisfied.
 
 ## Accessibility Support
 
-Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element.
+Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element. As of February 2023, the ACT rules Community Group is not aware of actual cases resulting in significantly different [clickable areas][clickable area].
 
 ## Background
 
+While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with "weird" clickable shape, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contain a large enough [horizontal rectangle][]. In order to allow automated tools to have consistent implementation of the rule, it does not contains such test cases, notably all Failed test cases have a [border box][] which is too small.
+
 ### Bibliography
 
-- [Understanding Success Criterion](#)
-- [Technique](#)
+- [Understanding Success Criterion 2.5.5: Target Size (enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
 
 ## Test Cases
 
 > **Note:** Several examples draw borders around some of the elements or texts. This is purely for aesthetic purpose and to clearly show the [clickable areas][clickable area] that are not obvious. These borders are solid green when showing good cases, or relevant areas; and dashed red when showing bad cases, or irrelevant areas.
+
+> **Note:** Several examples illustrate overlapping and partially obscured content with fully transparent `div` (with a dashed red border), in order to still show the underlying target. This often results in very "artificial" examples where in real page the overlapping element would not be transparent and would actually hide the target.
 
 ### Passed
 
@@ -96,6 +89,8 @@ This button has a [clickable area][] of exactly 44×44 pixels.
 
 #### Passed Example
 
+> TODO: the input is UA controlled, this needs to change.
+
 This `input` element, combined with its [implicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×48px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
 ```html
@@ -114,6 +109,8 @@ This `input` element, combined with its [implicit label][] and its padding, has 
 ```
 
 #### Passed Example
+
+> TODO: the input is UA controlled, this needs to change.
 
 This `input` element, combined with its [explicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×45px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
@@ -164,8 +161,6 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 
 This button, together with its padding and border, has a [clickable area][] of more than 44×44px. The solid green border shows the [clickable area][] while the dashed red one shows the inner text (without sizing nor padding).
 
-> **Comment:** The size here should be 45×45 (35 + 4*2 (padding) + 1*2 (borders)). However, when inspecting the element with Chrome, I only get a size of 44.87px. That's why I put the dimensions at 35px instead of the theoretical minimum of 34px.
-
 ```html
 <head>
 	<title>Passed Example</title>
@@ -190,15 +185,15 @@ This button, together with its padding and border, has a [clickable area][] of m
 
 #### Passed Example
 
-These links are part [inlined text][].
+These links are [rendered on a line][].
 
 ```html
-<p style="font-size: 15px">
-	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for <a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44 <a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels.
+<p>
+	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a>.
 </p>
 ```
-
-> **Comment:** The `font-size` is needed to avoid making them User Agent Controlled…
 
 #### Passed Example
 
@@ -295,7 +290,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 
 #### Passed Example
 
-The pin (red circle) on this map has [essential size][] because it is important to pinpoint the exact location.
+The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
 
 ```html
 <style>
@@ -383,6 +378,44 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 <div class="vlines good highlight"></div>
 ```
 
+#### Passed Example
+
+The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
+
+```html
+<style>
+	#target {
+		width: 60px;
+		height: 60px;
+		border-radius: 30%;
+	}
+</style>
+<button id="target" onclick="alert('hello')">Hello</button>
+```
+
+#### Passed Example
+
+This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
+
+```html
+<head>
+	<title>Failed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		#target {
+			height: 50px;
+			width: 80px;
+			text-align: center;
+			clip-path: polygon(20px 0px, 20px 45px, 65px 45px, 65px 0px);
+			background-color: #0074d9;
+		}
+	</style>
+</head>
+<div id="target" role="button" onclick="alert('Hello')">
+	Hello
+</div>
+```
+
 ### Failed
 
 #### Failed Example
@@ -421,7 +454,7 @@ This link only has a [clickable area][] of approximately 66×18 pixels, as shown
 
 #### Failed Example
 
-This custom button has a [clickable area][] of approximately 18×20px, as shown by its dashed red border. Since it is not a native `button` element, it is not a [User Agent Controlled][] element.
+This custom button has a [clickable area][] of approximately 18×20px, as shown by its dashed red border.
 
 ```html
 <head>
@@ -432,6 +465,8 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 ```
 
 #### Failed Example
+
+> TODO: make it not UA-controlled.
 
 This input, together with its [implicit label][] and its padding has a [clickable area][] whose height is below 41px.
 
@@ -573,14 +608,69 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 <div class="vlines good highlight"></div>
 ```
 
-- Link has insufficient size
-- This radio button with insufficient size has its size modified by the author
+#### Failed Example
+
+> TODO: This radio button with insufficient size has its size modified by the author
+
+#### Failed Example
+
+The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
+
+```html
+<style>
+	#target {
+		width: 24px;
+		height: 24px;
+		border-radius: 0;
+		rotate: 45deg;
+	}
+</style>
+<button id="target" onclick="alert('Hello')">Hi</button>
+```
+
+#### Failed Example
+
+The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
+
+```html
+<style>
+	#target {
+		width: 40px;
+		height: 40px;
+		border-radius: 30%;
+	}
+</style>
+<button id="target" onclick="alert('hello')">Hello</button>
+```
+
+#### Failed Example
+
+The [clickable area][] of this button only contains a 25×45px [horizontal rectangle][].
+
+```html
+<head>
+	<title>Failed Example</title>
+	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<style>
+		#target {
+			height: 50px;
+			width: 40px;
+			text-align: center;
+			clip-path: polygon(10px 0px, 10px 45px, 35px 45px, 10px 0px);
+			background-color: #0074d9;
+		}
+	</style>
+</head>
+<div id="target" role="button" onclick="alert('Hello')">
+	Hello
+</div>
+```
 
 ### Inapplicable
 
 #### Inapplicable Example
 
-These `input` elements and `button` are `disabled`.
+These `input` elements and `button` are `disabled` and therefore not [focusable][].
 
 ```html
 <fieldset disabled>
@@ -592,7 +682,7 @@ These `input` elements and `button` are `disabled`.
 
 #### Inapplicable Example
 
-This checkbox does not have its size adjusted by the author
+This checkbox is an [User-Agent controlled component][].
 
 ```html
 <p id="accept">
@@ -603,23 +693,7 @@ This checkbox does not have its size adjusted by the author
 
 #### Inapplicable Example
 
-This checkbox cannot be [targeted by a pointer event][] because it is hidden. It is replaced with an on-screen clickable SVG.
-
-```html
-
-```
-
-#### Inapplicable Example
-
-This checkbox cannot be [targeted by a pointer event][] because it is obscured by the modal.
-
-```html
-
-```
-
-#### Inapplicable Example
-
-This button cannot be [targeted by a pointer event][] because it is entirely obscured by the `div` element with a dashed red border.
+This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
 
 ```html
 <head>
@@ -640,92 +714,17 @@ This button cannot be [targeted by a pointer event][] because it is entirely obs
 <div class="cover bad highlight"></div>
 ```
 
-#### Inapplicable Example
-
-This button has a [clickable area][] a bit below 29×22px (due to its rounded corners), but it is a [User Agent Controlled component][].
-
-```html
-<button onclick="alert('Hello')">Hi</button>
-```
-
-#### Inapplicable Example
-
-This input and its [programmatic label][] is a [User Agent Controlled component][]. The height of its [clickable area][] is only 37px.
-
-```html
-<label id="label">
-	Given Name<br />
-	<input id="input" />
-</label>
-```
-
-#### Inapplicable Example
-
-This button has been [shape-shifted][shape-shifted element] by the `rotate` property.
-
-```html
-<style>
-	#target {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
-		rotate: 45deg;
-	}
-</style>
-<button id="target" onclick="alert('Hello')">Hello</button>
-```
-
-#### Inapplicable Example
-
-This button has been [shape-shifted][shape-shifted element] by the `border-radius` property.
-
-```html
-<style>
-	#target {
-		width: 60px;
-		height: 60px;
-		border-radius: 30%;
-	}
-</style>
-<button id="target" onclick="alert('hello')">Hello</button>
-```
-
-#### Inapplicable Example
-
-This button has been [shape-shifted][shape-shifted element] by the `clip-path` property.
-
-```html
-<head>
-	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
-	<style>
-		#target {
-			height: 50px;
-			width: 80px;
-			text-align: center;
-			clip-path: polygon(20px 0px, 20px 45px, 65px 45px, 65px 0px);
-			background-color: #0074d9;
-		}
-	</style>
-</head>
-<div id="target" role="button" onclick="alert('Hello')">
-	Hello
-</div>
-```
-
-> **Comment:** This is also going to be annoying to test. The bounding box / `getBoundingClientRect` is at 80×50px. And `clip-path` could have virtually any shape, making detecting a 44×44px rectangle inside very tricky (even more if the rectangles are allowed to be rotated…)
-
+[border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[clickable area]: #clickable-area 'Definition of Cliclkable Area'
+[clickable area]: #clickable-area 'Definition of Clickable Area'
 [essential target size]: #essential-target-size ' Definition of Essential Target Size'
 [explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'
 [focusable]: #focusable 'Definition of Focusable'
+[horizontal rectangle]: #horizontal-rectangle 'Definition of Horizontal Rectangle'
 [implicit label]: #programmatic-label:implicit 'Definition of Implicit Label'
-[inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
-[inline text]: #inline-text 'Definition of Inline Text'
-[instrument]: #instrument 'Definition of Instrument'
+[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
-[programmatic label]: #programmatic-abel 'Definition of Programmatic Label'
-[shape-shifted element]: #shape-shifted-element 'Definition of Shape-shifted Element'
+[rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
+[sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[user agent controlled component]: #ui-controlled-component 'Definition of UI Controlled Component'
+[user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

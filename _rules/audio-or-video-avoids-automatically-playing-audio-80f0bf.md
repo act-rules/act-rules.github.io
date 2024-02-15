@@ -75,6 +75,8 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
+User agents do not always automatically play media, even when an `autoplay` attribute is present. This is done to avoid autoplaying media interrupting the user when they do not want to, especially when the media is likely to contain sound. The decision to respect the `autoplay` attribute or not depends on user settings and previous behavior (interaction with the site). Therefore, some media files may fail this rule but satisfy [Success Criterion 1.4.2 Audio Control][sc142] on some combination of User Agent and user settings. The rule considers that the presence of the `autoplay` attribute is an indication of the author intention to have automatically playing media, and therefore requires the author to provide a mechanism to control the sound.
+
 ## Background
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.

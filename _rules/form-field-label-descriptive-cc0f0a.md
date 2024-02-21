@@ -47,16 +47,17 @@ This rule applies to any [programmatic label][] of an element which has one of t
 - `switch`
 - `textbox`
 
-and where both the element and the [programmatic label][] are [visible][].
+## Expectation 1
 
-## Expectation
+Each test target has a [programmatic label][].
 
-Each test target, together with its [visual context][], describes the purpose of the associated element.
+## Expectation 2
+
+Each programmatic label from Expectation 1, together with its [visual context][], describes the purpose of the associated element and where both the element and the [programmatic label][] are [visible][].
 
 ## Assumptions
 
-- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
-- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
+This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
 
 ## Accessibility Support
 

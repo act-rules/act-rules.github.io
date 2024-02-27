@@ -57,8 +57,8 @@ This rule does not require the target of an `ID Reference` to exist. This is bec
 
 ### Bibliography
 
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+- [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [WAI-ARIA 1.2, Definitions of States and Properties](https://www.w3.org/TR/wai-aria-1.2/#state_prop_def)
 - [WAI-ARIA 1.2, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)

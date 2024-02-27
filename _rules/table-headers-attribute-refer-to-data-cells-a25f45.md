@@ -57,9 +57,9 @@ There are no accessibility support issues known.
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
-- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
+- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
+- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG22/Techniques/failures/F90)
 
 * `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 * `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
@@ -417,5 +417,5 @@ This `table` doesn't have a role of `table`, `grid` or `treegrid`.
 [set of space separated tokens]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'WCAG 2.1 success criterion 1.3.1 Info and Relationships'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'WCAG 2.2 success criterion 1.3.1 Info and Relationships'
 [semantic role]: #semantic-role 'Definition of semantic role'

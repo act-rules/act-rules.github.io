@@ -36,7 +36,7 @@ Each test target only [owns][] elements with a [semantic role][] from the [requi
 
 ## Assumptions
 
-If the [explicit semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
+If the [explicit semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships).
 
 ## Accessibility Support
 
@@ -55,7 +55,7 @@ The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][w
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.2/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element)
 
@@ -76,12 +76,12 @@ This element with the `list` role only owns elements with the `listitem` role. T
 
 #### Passed Example 2
 
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `gridcell` role. The `row` role is one of the [required owned elements][] for `grid`, and `gridcell` is one of the [required owned elements][] for `row`.
 
 ```html
 <table role="grid">
 	<tr role="row">
-		<td role="cell">Item 1</td>
+		<td role="gridcell">Item 1</td>
 	</tr>
 </table>
 ```

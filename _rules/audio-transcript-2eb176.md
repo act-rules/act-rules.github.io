@@ -42,7 +42,7 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-That if a transcript is present it is [included in the accessibility tree][].
+This rule assumes that if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 

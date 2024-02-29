@@ -21,10 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] which has an [explicit semantic role][explicit role] and for which at least one of the following is true:
-
-- the element is [included in the accessibility tree][]; or
-- the element has an [explicit semantic role][] of `presentation` or `none`.
+This rule applies to any [HTML element][namespaced element] which has an [explicit semantic role][explicit role] and is not [programmatically hidden][].
 
 ## Expectation
 
@@ -44,7 +41,7 @@ Each element also has an [implicit semantic role][implicit role] defined in the 
 
 This rule does not check specifically whether the [explicit role][] is deprecated, or whether it is the special `generic` role that should not be used by authors. These are not conformance requirement, or are checked by other rules.
 
-The roles of `none` or `presentation` are only allowed on certain elements. Therefore this rule also check these elements, even though they are not necessarily [included in the accessibility tree][]. Many of the elements for which `presentation` is not allowed are interactive elements where the role would anyway be ignored due to the [presentational roles conflict resolution][].
+This rule only check for elements that are not [programmatically hidden][]. Elements that are [programmatically hidden][], e.g. due to a CSS `display:none`, must still have valid roles in order to conform to [ARIA in HTML][aria in html document conformance]. However, these won't cause any actual accessibility issues as long as they stay hidden. This rule only checks a snapshot of a page in a given state; if interacting with the page reveals such an element without fixing its role, that could create an accessibility issue for the user. Examples only show [programmatically hidden][] element with a correct role.
 
 ### Related rules
 
@@ -68,10 +65,12 @@ This `a` element with an `href` attribute has an [explicit role][] of `button`, 
 
 #### Passed Example 2
 
-This `h1` element has an [explicit role][] of `tab`, which is allowed
+This `h1` element has an [explicit role][] of `tab`, which is allowed. The `div` element also has an allowed role (of `tablist`).
 
 ```html
-<h1 role="tab">ACT rules</h1>
+<div role="tablist">
+	<h1 role="tab">ACT rules</h1>
+</div>
 ```
 
 #### Passed Example 3
@@ -125,7 +124,9 @@ Fruits:
 This `h1` element has an [explicit role][] of `tab`, which is allowed. The `btn` token is not a valid role and is therefore ignored.
 
 ```html
-<h1 role="btn tab">ACT rules</h1>
+<div role="tablist">
+	<h1 role="btn tab">ACT rules</h1>
+</div>
 ```
 
 #### Passed Example 7
@@ -172,7 +173,7 @@ Fruits:
 
 #### Failed Example 4
 
-This `a` element with an `href` attribute has an [explicit role][] of `presentation`, which is not allowed. Since the element is focusable, the [presentational roles conflict resolution][] would trigger, and the explicit role is ignored.
+This `a` element with an `href` attribute has an [explicit role][] of `presentation`, which is not allowed. Note that since the element is focusable, the [presentational roles conflict resolution][] would trigger, and the explicit role is ignored.
 
 ```html
 <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/" role="presentation">All ACT rules</a>
@@ -229,24 +230,24 @@ This `a` element does not have an [explicit semantic role][]:.
 
 #### Inapplicable Example 3
 
-This `button` element is not [included in the accessibility tree][].
+This `button` element is [programmatically hidden][].
 
 ```html
-<button role="list" style="display:none;">Click me</button>
+<button role="link" style="display:none;">Click me</button>
 ```
 
 #### Inapplicable Example 4
 
-This `h1` element is not [included in the accessibility tree][].
+This `h1` element is [programmatically hidden][].
 
 ```html
-<h1 role="listitem" aria-hidden="true">ACT rules</h1>
+<h1 role="heading" aria-hidden="true">ACT rules</h1>
 ```
 
 [aria in html document conformance]: https://www.w3.org/TR/html-aria/#docconformance 'ARIA in HTML, Document conformance requirements for use of ARIA attributes in HTML'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [html aam:roles]: https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings 'HTML Accessibility API Mappings, Element Role Mappings'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution in ARIA 1.2'
+[programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'

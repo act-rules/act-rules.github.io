@@ -31,7 +31,7 @@ For each test target, at least one of the following is true:
 
 - though scrolling, the element can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
 - the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
-- the target is part of [rendered on a line][]; or
+- the target is [rendered on a line][]; or
 - The size has [essential target size][]
 - There is an [instrument][] to achieve an equivalent goal on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
 
@@ -45,7 +45,7 @@ Hit testing isn't properly defined, and this has been an [issue in the CSS speci
 
 ## Background
 
-While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with "weird" clickable shape, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contain a large enough [horizontal rectangle][]. In order to allow automated tools to have consistent implementation of the rule, it does not contains such test cases, notably all Failed test cases have a [border box][] which is too small.
+While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with "weird" clickable shape, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contain a large enough [horizontal rectangle][]. In order to allow automated tools to have a consistent implementation of this rule, it does not contain such test cases, notably all Failed test cases have a [border box][] which is too small.
 
 ### Bibliography
 
@@ -59,7 +59,7 @@ While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], app
 
 ### Passed
 
-#### Passed Example
+#### Passed Example 1
 
 This `link` has a [clickable area][] of approximately 210×55 pixels.
 
@@ -72,7 +72,7 @@ This `link` has a [clickable area][] of approximately 210×55 pixels.
 <a id="target" href="https://www.w3.org/WAI/standards-guidelines/act/rules/">ACT rules</a>
 ```
 
-#### Passed Example
+#### Passed Example 2
 
 This button has a [clickable area][] of exactly 44×44 pixels.
 
@@ -87,53 +87,49 @@ This button has a [clickable area][] of exactly 44×44 pixels.
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example
-
-> TODO: the input is UA controlled, this needs to change.
+#### Passed Example 3
 
 This `input` element, combined with its [implicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×48px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 3</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
 <label id="label" style="padding: 6px 0;" class="highlightable">
 	Given Name<br />
-	<input id="input" />
+	<input id="input" style="width: 200px" />
 </label>
 <script>
 	highlightRect(document.getElementById('label').firstChild)
 </script>
 ```
 
-#### Passed Example
-
-> TODO: the input is UA controlled, this needs to change.
+#### Passed Example 4
 
 This `input` element, combined with its [explicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×45px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 4</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
 <label for="input" id="label" style="padding: 6px 0;" class="highlightable"> Given Name<br /> </label>
-<input id="input" />
+<input id="input" style="width: 200px" />
 <script>
 	highlightRect(document.getElementById('label').firstChild)
 </script>
 ```
 
-#### Passed Example
+#### Passed Example 5
 
 This button has a clickable area of approximately 212×54px due to the overflowing text being clickable. The `div` element is only here to visually display the clickable area of the text.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 5</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		#target {
@@ -157,13 +153,13 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 </body>
 ```
 
-#### Passed Example
+#### Passed Example 6
 
 This button, together with its padding and border, has a [clickable area][] of more than 44×44px. The solid green border shows the [clickable area][] while the dashed red one shows the inner text (without sizing nor padding).
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 6</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		#target {
@@ -183,7 +179,7 @@ This button, together with its padding and border, has a [clickable area][] of m
 </body>
 ```
 
-#### Passed Example
+#### Passed Example 7
 
 These links are [rendered on a line][].
 
@@ -195,7 +191,7 @@ These links are [rendered on a line][].
 </p>
 ```
 
-#### Passed Example
+#### Passed Example 8
 
 The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
 
@@ -216,13 +212,13 @@ The `#small` button has a [clickable area][] of only 35×35px, but there is an [
 <button id="large" onclick="alert('Hello')">Hello</button>
 ```
 
-#### Passed Example
+#### Passed Example 9
 
 This button has a [clickable area][] containing a 44×44px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 44×44px rectangle delimited by prolonging the solid green lines.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 9</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -264,13 +260,13 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 <div class="vlines good highlight"></div>
 ```
 
-### Passed Example
+#### Passed Example 10
 
 This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 10</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -288,7 +284,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 <div class="cover bad highlight"></div>
 ```
 
-#### Passed Example
+#### Passed Example 11
 
 The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
 
@@ -316,13 +312,13 @@ Location of ACT rules headquarters:
 ></a>
 ```
 
-#### Passed Example
+#### Passed Example 12
 
 This button has a 50×50px [clickable area][]. The `div` with a dashed red border is not obscuring it because it can be scrolled out of the way. The solid green lines hint at a 44×44px area inside the button.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Passed Example 12</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -378,7 +374,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example
+#### Passed Example 13
 
 The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
 
@@ -393,7 +389,7 @@ The [clickable area][] of this button contains a 44×44px [horizontal rectangle]
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example
+#### Passed Example 14
 
 This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
 
@@ -418,7 +414,7 @@ This button has been clipped, leaving a [clickable area][] containing a 45×45px
 
 ### Failed
 
-#### Failed Example
+#### Failed Example 1
 
 This `button` has a [clickable area][] of only 35×35 pixels.
 
@@ -433,13 +429,13 @@ This `button` has a [clickable area][] of only 35×35 pixels.
 <button id="target" onclick="alert('hello')">Hi</button>
 ```
 
-#### Failed Example
+#### Failed Example 2
 
 This link only has a [clickable area][] of approximately 66×18 pixels, as shown by its border.
 
 ```html
 <head>
-	<title>Passed Example</title>
+	<title>Failed Example 2</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		#target {
@@ -452,32 +448,30 @@ This link only has a [clickable area][] of approximately 66×18 pixels, as shown
 </body>
 ```
 
-#### Failed Example
+#### Failed Example 3
 
 This custom button has a [clickable area][] of approximately 18×20px, as shown by its dashed red border.
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 3</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 </head>
 <span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
 ```
 
-#### Failed Example
-
-> TODO: make it not UA-controlled.
+#### Failed Example 4
 
 This input, together with its [implicit label][] and its padding has a [clickable area][] whose height is below 41px.
 
 ```html
 <label id="label" style="padding: 2px 0;">
 	Given Name<br />
-	<input id="input" />
+	<input id="input" style="width: 200px" />
 </label>
 ```
 
-#### Failed Example
+#### Failed Example 5
 
 The `#small` button has a [clickable area][] of only 35×35px. The `#large` button has a [clickable area][] of 44×44px, but it does not achieve the same objective.
 
@@ -498,13 +492,13 @@ The `#small` button has a [clickable area][] of only 35×35px. The `#large` butt
 <button id="large" onclick="alert('Good-bye')">Bye</button>
 ```
 
-#### Failed Example
+#### Failed Example 6
 
 This button only has a [clickable area][] of approximately 20×45px, because it is obscured by the `div` with a dashed red border. The solid green lines hint at how a 44×44px area would fit inside the button, but not inside the non-obscured part.
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 6</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -546,13 +540,13 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 <div class="vlines good highlight"></div>
 ```
 
-#### Failed Example
+#### Failed Example 7
 
 This button only has a [clickable area][] of approximately 20×45px, because it is obscured by the `div` with a dashed red border. Even though the `div` is scrollable, it is not scrollable fully out of the way and always obscures the button. The solid green lines hint at how a 44×44px area would fit inside the button, but not inside the never obscured part.
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 7</title>
 	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
 	<style>
 		.cover {
@@ -608,11 +602,25 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 <div class="vlines good highlight"></div>
 ```
 
-#### Failed Example
+#### Failed Example 8
 
-> TODO: This radio button with insufficient size has its size modified by the author
+These radio buttons have their size modified by the author and are therefore not [User-Agent controlled components][]. Their [clickable area][] is too small.
 
-#### Failed Example
+```html
+<style>
+	input[type='radio'] {
+		width: 20px;
+		height: 20px;
+	}
+</style>
+<fieldset>
+	<legend>Pick a color (required)</legend>
+	<label><input type="radio" name="color" value="blue" />Blue</label>
+	<label><input type="radio" name="color" value="yellow" />Yellow</label>
+</fieldset>
+```
+
+#### Failed Example 9
 
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
@@ -628,7 +636,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('Hello')">Hi</button>
 ```
 
-#### Failed Example
+#### Failed Example 10
 
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
@@ -643,7 +651,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Failed Example
+#### Failed Example 11
 
 The [clickable area][] of this button only contains a 25×45px [horizontal rectangle][].
 
@@ -668,7 +676,7 @@ The [clickable area][] of this button only contains a 25×45px [horizontal recta
 
 ### Inapplicable
 
-#### Inapplicable Example
+#### Inapplicable Example 1
 
 These `input` elements and `button` are `disabled` and therefore not [focusable][].
 
@@ -680,7 +688,7 @@ These `input` elements and `button` are `disabled` and therefore not [focusable]
 </fieldset>
 ```
 
-#### Inapplicable Example
+#### Inapplicable Example 2
 
 This checkbox is an [User-Agent controlled component][].
 
@@ -691,7 +699,7 @@ This checkbox is an [User-Agent controlled component][].
 </p>
 ```
 
-#### Inapplicable Example
+#### Inapplicable Example 3
 
 This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
 

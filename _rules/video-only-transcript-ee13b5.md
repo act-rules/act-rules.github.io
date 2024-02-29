@@ -47,7 +47,7 @@ The visual information of each test target is available through a text transcrip
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). That if a transcript is present it is [included in the accessibility tree][].
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). This rule also assumes that if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 

@@ -47,7 +47,7 @@ The visual information of each test target is available through a text transcrip
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). That if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 
@@ -55,7 +55,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media). It is known that the user can set the browser to prevent autoplay. This rule assumes the browser has not been set to do this.
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media). 
 
 ### Bibliography
 
@@ -191,3 +191,4 @@ This `video` element is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

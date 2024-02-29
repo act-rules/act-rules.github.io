@@ -219,13 +219,13 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
-#### Passed Example 12
+#### Inapplicable Example 3
 
 This `button` does not have any [explicitly set][aria set explicit] ARIA attribute. It has an [implicitly set][aria set implicit] `aria-checked` state, due to the [absence of a `checked` attribute][checked absent] on the `input` element with a `type` [attribute value][] of `checkbox`.
 
-````html
-```html <input type="checkbox" role="button" />
-````
+`````html
+````html ```html <input type="checkbox" role="button" />
+`````
 
 [aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
 [aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'

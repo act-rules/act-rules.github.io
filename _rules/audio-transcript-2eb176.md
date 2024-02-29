@@ -31,7 +31,7 @@ acknowledgments:
 
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
 
-- autoplaying; or,
+- [autoplaying](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay); or,
 - has a [play button][] that is [visible][].
 
 ## Expectation
@@ -42,7 +42,7 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-There are no assumptions.
+That if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 
@@ -190,3 +190,4 @@ This `audio` element has hidden native player controls.
 
 [play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -11,13 +11,13 @@ input_aspects:
 
 An ARIA [state][aria state] or [property][aria property] is <dfn>set</dfn> on an [HTML element][namespaced element] when it has a value. This may happen in three ways:
 
-- It is <dfn id="aria-attribute-set:explicit">explicitly set</dfn> if there is a corresponding `aria-*` HTML attribute on the element. The [value][html attribute value] as written in the HTML code may or may not be valid for this ARIA [state][aria state] or [property][aria property] and therefore the attribute may or may not have an [attribute value][]
+- It is <dfn id="aria-attribute-set:explicit">explicitly set</dfn> if there is a corresponding `aria-*` HTML attribute on the element. If the [value][html attribute value] as written in the HTML code is not valid for this ARIA [state][aria state] or [property][aria property] and then the attribute is set but does not have an [attribute value][].
 
   For example, `aria-label` is explicitly set on `<button aria-label="Next page">Next</button>`; and `aria-checked` is explicitly set on `<input type="checkbox" aria-checked="yes" />`, even though it does not have an [attribute value][].
 
 - It is <dfn id="aria-attribute-set:implicit">implicitly set</dfn> if there is no corresponding `aria-*` HTML attribute on the element, but the element or one of its HTML attribute has an [ARIA attribute mapping][aria attribute mapping] setting this ARIA attribute.
 
-  For example, `aria-checked` is implicitly set both on `<input type="checkbox" checked />` (through the [presence of the HTML attribute `checked`][checked present]) and `<input type="checkbox" />` (through its [absence][checked absent]); however, it is not set on `<input type="text" />` given that the mapping for `checked` doesn't apply when the `input` element is not of type `checkbox` or `radio`.
+  For example, `aria-checked` is implicitly set both on `<input type="checkbox" checked />` (through the [presence of the HTML attribute `checked`][checked present]) and `<input type="checkbox" />` (through its [absence][checked absent]). It is not set on `<input type="text" />` given that the mapping for `checked` doesn't apply when the `input` element is not of type `checkbox` or `radio`.
 
 - It is <dfn id="aria-attribute-set:default">set by default</dfn> if there is no corresponding `aria-*` HTML attribute on the element, and either the element has an [semantic role][] that has a default value for this ARIA [state][aria state] or [property][aria property] or the attribute itself has a default value.
 

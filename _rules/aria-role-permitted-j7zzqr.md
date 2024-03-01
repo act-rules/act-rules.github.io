@@ -41,7 +41,7 @@ Each element also has an [implicit semantic role][implicit role] defined in the 
 
 This rule does not check specifically whether the [explicit role][] is deprecated, or whether it is the special `generic` role that should not be used by authors. These are not conformance requirement, or are checked by other rules.
 
-This rule only check for elements that are not [programmatically hidden][]. Elements that are [programmatically hidden][], e.g. due to a CSS `display:none`, must still have valid roles in order to conform to [ARIA in HTML][aria in html document conformance]. However, these won't cause any actual accessibility issues as long as they stay hidden. This rule only checks a snapshot of a page in a given state; if interacting with the page reveals such an element without fixing its role, that could create an accessibility issue for the user. Examples only show [programmatically hidden][] element with a correct role.
+This rule only check for elements that are not [programmatically hidden][]. Elements that are [programmatically hidden][], e.g. due to a CSS `display:none`, must still have valid roles in order to conform to [ARIA in HTML][aria in html document conformance]. However, as long as the elements with the errant roles remain programmatically hidden, they are not expected to cause accessibility issues. This rule only checks a snapshot of a page in a given state; if interacting with the page programmatically exposes an element with an errant role that this rule previously ignored, the new state of the page should be reevaluated to ensure it still passes this rule, and that an accessibility issue has not been introduced to users. Examples only show [programmatically hidden][] elements with a correct role.
 
 ### Related rules
 

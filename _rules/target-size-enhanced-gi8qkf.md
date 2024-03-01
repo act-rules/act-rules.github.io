@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][], unless the target is a [User Agent controlled component][].
+This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
 
 ## Expectation
 
@@ -32,7 +32,8 @@ For each test target, at least one of the following is true:
 - though scrolling, the element can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
 - the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
 - the target is [rendered on a line][]; or
-- The size has [essential target size][]
+- the target is a [User Agent controlled component][]; or
+- The size has [essential target size][]; or
 - There is an [instrument][] to achieve an equivalent goal on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
 
 ## Assumptions
@@ -193,6 +194,45 @@ These links are [rendered on a line][].
 
 #### Passed Example 8
 
+This checkbox is an [User-Agent controlled component][].
+
+```html
+<p id="accept">
+	<input aria-labelledby="accept" type="checkbox" />
+	I agree with the terms and conditions.
+</p>
+```
+
+#### Passed Example 9
+
+The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
+
+```html
+<style>
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
+	}
+	.dot {
+		height: 15px;
+		width: 15px;
+		background-color: red;
+		display: inline-block;
+	}
+</style>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<a
+	class="dot"
+	style="position: absolute; top: 597px; left: 818px"
+	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
+></a>
+```
+
+#### Passed Example 10
+
 The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
 
 ```html
@@ -212,7 +252,7 @@ The `#small` button has a [clickable area][] of only 35×35px, but there is an [
 <button id="large" onclick="alert('Hello')">Hello</button>
 ```
 
-#### Passed Example 9
+#### Passed Example 11
 
 This button has a [clickable area][] containing a 44×44px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 44×44px rectangle delimited by prolonging the solid green lines.
 
@@ -260,7 +300,7 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example 10
+#### Passed Example 12
 
 This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
 
@@ -284,35 +324,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 <div class="cover bad highlight"></div>
 ```
 
-#### Passed Example 11
-
-The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
-
-```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-	.dot {
-		height: 15px;
-		width: 15px;
-		background-color: red;
-		display: inline-block;
-	}
-</style>
-
-Location of ACT rules headquarters:
-<div class="map"></div>
-<a
-	class="dot"
-	style="position: absolute; top: 597px; left: 818px"
-	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
-></a>
-```
-
-#### Passed Example 12
+#### Passed Example 13
 
 This button has a 50×50px [clickable area][]. The `div` with a dashed red border is not obscuring it because it can be scrolled out of the way. The solid green lines hint at a 44×44px area inside the button.
 
@@ -374,7 +386,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example 13
+#### Passed Example 14
 
 The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
 
@@ -389,7 +401,7 @@ The [clickable area][] of this button contains a 44×44px [horizontal rectangle]
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example 14
+#### Passed Example 15
 
 This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
 
@@ -689,17 +701,6 @@ These `input` elements and `button` are `disabled` and therefore not [focusable]
 ```
 
 #### Inapplicable Example 2
-
-This checkbox is an [User-Agent controlled component][].
-
-```html
-<p id="accept">
-	<input aria-labelledby="accept" type="checkbox" />
-	I agree with the terms and conditions.
-</p>
-```
-
-#### Inapplicable Example 3
 
 This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
 

@@ -135,7 +135,7 @@
 - ozplayer
 - GitHub
 
-# Test case anamolies
+# Test case anomolies
 - brewitt-taylor
 - level2-frame1
 - level1-frame2
@@ -145,6 +145,9 @@
 - Sumei
 - Tuttle
 - lnik # intentional misspelling
+- ngizmo
+- nspecification
+- thelabel
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
@@ -173,6 +176,9 @@
 - isComposing
 - x1
 - y1
+
+# HTML character references 
+- nbsp
 
 # DOM Events
 - auxclick
@@ -237,12 +243,19 @@
 - focusability
 - unitless
 - luminance
+- substring
+- initialisms
+- sublist
+- tokenize
+- tokenized
+- subsequence
 
 # Parts of Unicode
 - 000A
 - 000B
 - 000C
 - 000D
+- 00A0
 
 # JSON attributes/ metadata/ methods
 - testcases

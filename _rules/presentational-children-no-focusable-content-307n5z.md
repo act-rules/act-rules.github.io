@@ -165,16 +165,16 @@ None of the roles that build this semantic table structure (`table` for `<table>
 
 ```html
 <table>
-		<thead>
-				<tr>
-						<th><a href="#">link in table header cell - no problem</a></th>
-				</tr>
-		</thead>
-		<tbody>
-				<tr>
-						<td><a href="#">link in table data cell - no problem</a></td>
-				</tr>
-		</tbody>
+	<thead>
+		<tr>
+			<th><a href="#">link in table header cell - no problem</a></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="#">link in table data cell - no problem</a></td>
+		</tr>
+	</tbody>
 </table>
 ```
 

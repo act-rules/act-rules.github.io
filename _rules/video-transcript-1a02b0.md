@@ -24,6 +24,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+    - Helen Burge
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -41,19 +42,21 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [visible][], and is either on the page or in a clearly labeled location.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). The rule also assumes that if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 
 There are no accessibility support issues known.
 
 ## Background
+
+It is known that the user can set the browser to prevent autoplay. This rule assumes the browser has not been set to do this.
 
 ### Bibliography
 
@@ -144,6 +147,5 @@ A video element that is not [visible][].
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 </html>
 ```
-
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

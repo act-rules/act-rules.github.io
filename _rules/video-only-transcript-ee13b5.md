@@ -10,6 +10,12 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    forConformance: true
+    secondary: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -19,6 +25,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+    - Helen Burge
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -36,11 +43,11 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [visible][], and is either on the page or in a clearly labeled location.
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). This rule also assumes that if a transcript is present it is [included in the accessibility tree][].
 
 ## Accessibility Support
 
@@ -48,7 +55,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media). 
 
 ### Bibliography
 
@@ -183,5 +190,5 @@ This `video` element is not [visible][].
 </html>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

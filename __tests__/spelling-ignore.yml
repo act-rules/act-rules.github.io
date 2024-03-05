@@ -28,6 +28,7 @@
 - WCAG
 - WCAG2
 - WCAG21
+- WCAG22
 - CSS3
 - css # lowercase needed in reference list
 - UA
@@ -86,6 +87,7 @@
 - RFC
 - rfc
 - webauthn
+- customizable
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -119,6 +121,7 @@
 - multipage
 - attr-input-type
 - wai-aria-1.1
+- wai-aria-1.2
 
 # Notes and acronyms
 - TODO
@@ -204,6 +207,7 @@
 - reflow
 - Viewport
 - dom-meta-content
+- showModal
 
 # Unsure why the dictionary does not have these words
 - programmatically
@@ -259,6 +263,8 @@
 - 2px
 - 3px
 - 4px
+- 10px
+- 15px
 - 16px
 - 20px
 - 24px

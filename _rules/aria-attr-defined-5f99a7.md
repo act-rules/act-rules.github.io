@@ -6,9 +6,9 @@ description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.2.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
 acknowledgments:
@@ -36,15 +36,15 @@ There are no accessibility support issues known.
 
 ## Background
 
-The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Rule Value][sc412].
+The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
 
 ### Bibliography
 
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
 - [WAI ARIA Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#supportedState)
-- [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG21/Techniques/general/G108)
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
+- [G108: Using markup features to expose the name and role](https://www.w3.org/WAI/WCAG22/Techniques/general/G108)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
 ## Test Cases
@@ -83,19 +83,11 @@ This `div` element with a role of `textbox` has multiple `aria-` attributes whic
 
 #### Passed Example 4
 
-This `input` element with a role of `spinbutton` has multiple `aria-` attributes specified which are all defined in [WAI-ARIA Specifications][].
+This `input` element with a type of `number` has multiple `aria-` attributes specified which are all defined in [WAI-ARIA Specifications][].
 
 ```html
 <label for="spinbutton">Enter a number between 0 and 100:</label>
-<input
-	id="spinbutton"
-	role="spinbutton"
-	aria-valuemax="100"
-	aria-valuemin="0"
-	aria-valuenow="25"
-	type="number"
-	value="25"
-/>
+<input id="spinbutton" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" type="number" value="25" />
 ```
 
 ### Failed
@@ -130,5 +122,3 @@ This `canvas` element does not have an `aria-` attribute specified.
 ```
 
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA specifications'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

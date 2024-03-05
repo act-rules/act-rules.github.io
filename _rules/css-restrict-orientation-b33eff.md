@@ -17,6 +17,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -28,11 +29,11 @@ This rule applies to any [HTML element][] that is [visible](#visible) and has on
 - the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual-transforms) property; or
 - the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
-	- [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
-	- [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
-	- [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
-	- [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
-	- [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
+  - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
+  - [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
+  - [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
+  - [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
+  - [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
 
 **Note:** These specific [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) are of interest to this rule as they have the potential to affect the [rotation](https://www.w3.org/TR/css-transforms-2/#Rotate3dDefined) of a given element.
 
@@ -48,7 +49,7 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 This rule does not consider and may produce incorrect results for:
 
-- Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
+- Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG22/#dfn-essential).
 - The existence of any control on the page that can change the orientation on demand.
 - Scripts are not used to adjust the CSS orientation lock.
 
@@ -60,7 +61,7 @@ There are no accessibility support issues known.
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+- [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG22/Understanding/orientation.html)
 - [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
 - [CSS Transforms Module Level 2](https://www.w3.org/TR/css-transforms-2)
 - [CSS3 Media Queries](https://www.w3.org/TR/css3-mediaqueries/)
@@ -160,6 +161,8 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: portrait) {
 				html {
 					transform: rotate(1.5708rad);
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -203,11 +206,16 @@ This page appears rotated at a slight angle of 2.5 degrees for stylistic purpose
 		<style>
 			body {
 				transform: rotate(2.5deg);
+				padding: 2rem;
+				width: min(100vw, 100vh);
+				height: min(100vw, 100vh);
 			}
 
 			@media (orientation: landscape) {
 				body {
 					transform: rotate(92.5deg);
+					position: absolute;
+					right: 0px;
 				}
 			}
 		</style>
@@ -230,6 +238,8 @@ A page where the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual
 			@media (orientation: portrait) {
 				html {
 					rotate: 90deg;
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -315,6 +325,9 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			body {
 				transform: rotate(90deg);
+				width: calc(min(100vw, 100vh) - 2rem);
+				height: calc(min(100vw, 100vh) - 2rem);
+				padding: 1rem;
 			}
 		</style>
 	</head>

@@ -308,16 +308,16 @@ This `span` element with text content that automatically changes multiple times 
 [activation]: https://html.spec.whatwg.org/#activation
 [child]: https://dom.spec.whatwg.org/#concept-tree-child
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
-[content]: https://www.w3.org/TR/WCAG21/#dfn-content
+[content]: https://www.w3.org/TR/WCAG22/#dfn-content
 [descendant]: https://dom.spec.whatwg.org/#concept-tree-descendant
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html#dfn-essential
+[essential]: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html#dfn-essential
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[f16]: https://www.w3.org/WAI/WCAG21/Techniques/failures/F16
-[g186]: https://www.w3.org/WAI/WCAG21/Techniques/general/G186
+[f16]: https://www.w3.org/WAI/WCAG22/Techniques/failures/F16
+[g186]: https://www.w3.org/WAI/WCAG22/Techniques/general/G186
 [html document]: https://dom.spec.whatwg.org/#html-document
 [html element]: #namespaced-element
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[sc 2.2.2]: https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide
+[sc 2.2.2]: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide
 [text node]: https://dom.spec.whatwg.org/#text
 [user interaction]: #user-interaction 'Definition of user interaction'
 [visible text content]: #visible-text-content 'Definition of visible text content'

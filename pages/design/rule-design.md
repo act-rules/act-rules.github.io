@@ -109,18 +109,21 @@ The applicability of a rule must be unambigious and should be written using obje
 
 > _For example:_ A rule testing that page titles are descriptive should only apply to specific `title` elements and this could be stated as _"This rule applies to the first HTML `title` element that is a descendant of the `html` element of a web page, and contains children that are text nodes that are not only whitespace."_.
 
-### Subjectivity in Applicability vs Expectation Example
+### Subjectivity in Applicability vs Expectation Examples
 
-The below section contains 2 approaches for writing an ACT rule for testing text contrast. For each example, both the applicability and expectation are included for clarity. Each of these examples follows the ACT rules format, but note that in the first example, the applicability is ended with the phrase "... except if the test target is part of a text node that is purely decorative or does not express anything in human language", while in the second example this phrase is appended to the expectation. Both of these approaches follow the normative ACT rules format and lead to valid ACT rules; however, we recommend including this text in the applicability when possible. When phrases such as this are included in the applicability, some test cases become inapplicable that would otherwise be passed if the phrase was included in the expectation. For example, for a smiling face emoji would be considered inapplicable when using the approach in Example 1, while in Example 2 the smiling face emoji would pass since it is considered an exception to the expectation.
+With the development of ACT Rules format 1.1, subjectivity is now allowed in both the Applicability and the Expectation. However, depending on the rule, it can be difficult to know if a subjective phrase belongs in the Subjectivity or the Expectation. While we will continue to rely on the best judgment of the rule authors, most S.C. contain language suggesting where the subjectivity be placed. Lastly, at the bottom of this section we provide some concrete examples of each of the cases below to help illustrate our point. 
 
-**Example 1 of Text Contrast**
- - Applicability: This rule applies to any visible character in a text node that is a child in the flat tree of an HTML element, except if the test target is part of a text node that is purely decorative or does not express anything in human language.
- - Expectation: For each test target, the highest possible contrast between the foreground colors and background colors is at least 3.0:1 for large scale text and 4.5:1 for other texts.
+When determining the placement of subjectivity in an ACT rule, the main question to answer is whether the S.C. would apply to some given content or if the content would satisfy the criteria via a normatively stated exception. For example, 
+ - For S.C. 1.4.3 Contrast Minimum, non-text content or text that is not expressing something in human language (like an emoji) is not evaluated by the S.C. and so should not be applicable in an ACT rule for 1.4.3
+ - For S.C. 1.4.3 Contrast Minimum, logos are a normative exception to the S.C., so they should be included as a passed exception to the Expectation for an ACT rule testing 1.4.3.
+ - For S.C. 2.5.5 Target Size (Enhanced), a link inside of a paragraph of text and a pin on a map would fit the normative exceptions of "Inline" and "Essential" respectively, and so should be included as a passed exception in the Expectation. 
+ - For S.C. 3.3.1: Error Identification, a page should not be applicable for an ACT rule until a form field error indicator exists, thus the presence of a form field error indicator should included in the rule's applicability.
 
-**Example 2 of Text Contrast**
- - Applicability: This rule applies to any visible character in a text node that is a child in the flat tree of an HTML element
- - Expectation: For each test target, the highest possible contrast between the foreground colors and background colors is at least 3.0:1 for large scale text and 4.5:1 for other texts, except if the test target is part of a text node that is purely decorative or does not express anything in human language.
+When making these determinations, it maybe helpful to consider the following circumstances:
+ - If there was a page with only the content in question, would you expect it to be passed or inapplicable for an ACT rule. Passing would inidicate the subjectivity belongs in the Expectation while inapplicable suggests it belongs in the Applicability.
+ - Does the formulation of applicability and expectation lead to test cases that pass that should be inapplicable? If so, subjectivity likely needs to be added to the Applicability (possibility moved from the Expectation to the Applicability)
 
+As a final reminder, the end goal of allowing subjectivity in the applicability is allow the writing of rules that were previously impossible and to prevent rules from creating passed test cases that are inapplicable to the S.C. the rule is intended to test. 
 
 For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 

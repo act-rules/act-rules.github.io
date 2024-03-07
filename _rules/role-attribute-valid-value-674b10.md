@@ -171,10 +171,26 @@ This `role` attribute is only [ASCII whitespace][].
 
 #### Inapplicable Example 5
 
-This `role` attribute is specified on an element which is [programmatically hidden][].
+This `role` attributes is specified on an element which is [programmatically hidden][].
 
 ```html
 <div aria-hidden="true" role="banner">Some Content</div>
+```
+
+#### Inapplicable Example 6
+
+This `role` attributes is specified on an element which is [programmatically hidden][].
+
+```html
+<div hidden role="banner">Some Content</div>
+```
+
+#### Inapplicable Example 7
+
+This `role` attributes is specified on an element which is [programmatically hidden][].
+
+```html
+<div hidden="until-found" role="banner">Some Content</div>
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'

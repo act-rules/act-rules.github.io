@@ -1,15 +1,12 @@
 ---
-id: gi8qkf
+id: 8iacb5
 name:
 rule_type: atomic
 description: |
-  This rule checks that elements that can receive pointer events have a size of at least 44×44 pixels, are inline, are user agent controlled, or have essential size.
+  This rule checks that elements that can receive pointer events have a size of at least 44×44 pixels.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: 'This success criterion is **less strict** than this rule. This is because the rule does not consider exceptions of the criterion. Some of the failed examples may satisfy this success criterion.'
   wcag22:2.5.8: # Target Size (Minimum) (AA)
     secondary: 'This success criterion is **less strict** than this rule. This is because this criterion has a lower size requirement. Some of the failed examples may satisfy this success criterion.'
 input_aspects:
@@ -27,14 +24,7 @@ This rule applies to any [HTML element][namespaced element] which [can be target
 
 ## Expectation
 
-For each test target, at least one of the following is true:
-
-- though scrolling, the element can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
-- the element has an empty [clickable area][], and its [clickable area][] cannot be made non-empty through scrolling; or
-- the target is [rendered on a line][]; or
-- the target is a [User Agent controlled component][]; or
-- The size has [essential target size][]; or
-- There is an [instrument][] to achieve an equivalent goal on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
+For each test target the element can be brought into viewport though scrolling and have a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
 
 ## Assumptions
 
@@ -182,78 +172,6 @@ This button, together with its padding and border, has a [clickable area][] of m
 
 #### Passed Example 7
 
-These links are [rendered on a line][].
-
-```html
-<p>
-	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for
-	<a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44
-	<a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a>.
-</p>
-```
-
-#### Passed Example 8
-
-This checkbox is an [User-Agent controlled component][].
-
-```html
-<p id="accept">
-	<input aria-labelledby="accept" type="checkbox" />
-	I agree with the terms and conditions.
-</p>
-```
-
-#### Passed Example 9
-
-The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
-
-```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-	.dot {
-		height: 15px;
-		width: 15px;
-		background-color: red;
-		display: inline-block;
-	}
-</style>
-
-Location of ACT rules headquarters:
-<div class="map"></div>
-<a
-	class="dot"
-	style="position: absolute; top: 597px; left: 818px"
-	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
-></a>
-```
-
-#### Passed Example 10
-
-The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
-
-```html
-<style>
-	#small {
-		width: 35px;
-		height: 35px;
-		border-radius: 0;
-	}
-	#large {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
-	}
-</style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Hello')">Hello</button>
-```
-
-#### Passed Example 11
-
 This button has a [clickable area][] containing a 44×44px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 44×44px rectangle delimited by prolonging the solid green lines.
 
 ```html
@@ -300,7 +218,7 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example 12
+#### Passed Example 8
 
 This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
 
@@ -324,7 +242,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 <div class="cover bad highlight"></div>
 ```
 
-#### Passed Example 13
+#### Passed Example 9
 
 This button has a 50×50px [clickable area][]. The `div` with a dashed red border is not obscuring it because it can be scrolled out of the way. The solid green lines hint at a 44×44px area inside the button.
 
@@ -386,7 +304,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 <div class="vlines good highlight"></div>
 ```
 
-#### Passed Example 14
+#### Passed Example 10
 
 The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
 
@@ -401,7 +319,7 @@ The [clickable area][] of this button contains a 44×44px [horizontal rectangle]
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example 15
+#### Passed Example 11
 
 This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
 
@@ -616,24 +534,6 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 
 #### Failed Example 8
 
-These radio buttons have their size modified by the author and are therefore not [User-Agent controlled components][]. Their [clickable area][] is too small.
-
-```html
-<style>
-	input[type='radio'] {
-		width: 20px;
-		height: 20px;
-	}
-</style>
-<fieldset>
-	<legend>Pick a color (required)</legend>
-	<label><input type="radio" name="color" value="blue" />Blue</label>
-	<label><input type="radio" name="color" value="yellow" />Yellow</label>
-</fieldset>
-```
-
-#### Failed Example 9
-
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
 ```html
@@ -648,7 +548,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('Hello')">Hi</button>
 ```
 
-#### Failed Example 10
+#### Failed Example 9
 
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
@@ -663,7 +563,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Failed Example 11
+#### Failed Example 10
 
 The [clickable area][] of this button only contains a 25×45px [horizontal rectangle][].
 
@@ -726,14 +626,10 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
-[essential target size]: #essential-target-size ' Definition of Essential Target Size'
 [explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'
 [focusable]: #focusable 'Definition of Focusable'
 [horizontal rectangle]: #horizontal-rectangle 'Definition of Horizontal Rectangle'
 [implicit label]: #programmatic-label:implicit 'Definition of Implicit Label'
-[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
-[rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

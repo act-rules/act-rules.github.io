@@ -42,7 +42,7 @@ This rule applies to elements with a [semantic role][] that defines its [childre
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
 
-This rule is often misunderstood as applying to elements with an <i>explicit</i> role of `presentation`.  In fact, this rule only applies to elements which have been given an <i>implicit</i> role of `presentation` through the [presentational children][] mechanism.  Similarly, this rule does not apply to elements with `aria-hidden="true"`.
+This rule is often misunderstood as applying to elements with an _explicit_ role of `presentation`.  In fact, this rule only applies to elements which have been given an _implicit_ role of `presentation` through the [presentational children][] mechanism.  Similarly, this rule does not apply to elements with `aria-hidden="true"`.
 
 ### Related rules
 

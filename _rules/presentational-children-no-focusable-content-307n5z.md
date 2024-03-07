@@ -139,7 +139,7 @@ This element with the `menuitemcheckbox` role has a checkbox as a child. Because
 
 #### Failed Example 4
 
-This element with the `tab` role contains an `<a>` element.  The `tab` role has [presentational children][].  The `a` element is included in [sequential focus navigation][].  So the element with the `tab` role fails the rule.  (This tablist implementation is non-functional for users.  It's not meant to function - it's only meant to show roles.)
+This element with the `tab` role contains an `a` element.  The `tab` role has [presentational children][].  The `a` element is included in [sequential focus navigation][].  So the element with the `tab` role fails the rule.  (This tablist implementation is non-functional for users.  It's not meant to function - it's only meant to show roles.)
 
 ```html
 <ul role="tablist">

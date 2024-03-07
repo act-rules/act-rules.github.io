@@ -680,13 +680,13 @@ The [clickable area][] of this button only contains a 25×45px [horizontal recta
 			height: 50px;
 			width: 40px;
 			text-align: center;
-			clip-path: polygon(10px 0px, 10px 45px, 35px 45px, 10px 0px);
+			clip-path: polygon(10px 0px, 10px 45px, 35px 45px, 35px 0px);
 			background-color: #0074d9;
 		}
 	</style>
 </head>
 <div id="target" role="button" onclick="alert('Hello')">
-	Hello
+	Hi
 </div>
 ```
 

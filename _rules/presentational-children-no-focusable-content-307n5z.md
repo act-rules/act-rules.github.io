@@ -96,7 +96,7 @@ This element with the `menuitemcheckbox` role has an `input` element as a descen
 
 #### Passed Example 4
 
-This `<button>` element has an `<a>` element as a [child][].  The `<a>` element has no `href` attribute, so it isn't included in [sequential focus navigation][].  So this `<button>` element passes the rule.
+This `<button>` element has an `a` element as a [child][].  The `a` element has no `href` attribute, so it isn't included in [sequential focus navigation][].  So this `button` element passes the rule.
 
 ```html
 <button><a>button/link</a></button>

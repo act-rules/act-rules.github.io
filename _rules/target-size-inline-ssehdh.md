@@ -1,6 +1,6 @@
 ---
 id: ssehdh
-name:
+name: Interactive component is inline
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events are inline.

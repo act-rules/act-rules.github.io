@@ -1,6 +1,6 @@
 ---
 id: 8iacb5
-name:
+name: Interactive component has strict enhanced size
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events have a size of at least 44×44 pixels.

@@ -1,6 +1,6 @@
 ---
 id: vcup8d
-name:
+name: Interactive component has size controlled by User Agent
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events have a size controlled by the user agent.

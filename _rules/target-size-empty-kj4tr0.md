@@ -1,6 +1,6 @@
 ---
 id: kj4tr0
-name:
+name: Interactive component has no clickable area
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events have an actual size reduced to 0.

@@ -1,6 +1,6 @@
 ---
 id: yvb1xu
-name:
+name: Interactive component has equivalent control with enhanced size
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events have an equivalent control with a size of at least 44×44 pixels.

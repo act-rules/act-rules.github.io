@@ -1,6 +1,6 @@
 ---
 id: dppn1b
-name:
+name: Interactive component has essential size
 rule_type: atomic
 description: |
   This rule checks that elements that can receive pointer events have essential size.
@@ -153,7 +153,7 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
-[essential target size]: #essential-target-size ' Definition of Essential Target Size'
+[essential target size]: #essential-target-size 'Definition of Essential Target Size'
 [focusable]: #focusable 'Definition of Focusable'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'

@@ -151,7 +151,7 @@ This element with the `tab` role contains an `a` element.  The `tab` role has [p
 
 #### Failed Example 5
 
-This element with the `img` role contains an `<a>` element.  The `img` role has [presentational children][].  The `<a>` element is included in [sequential focus navigation][].  So the element with the `img` role fails the rule.
+This element with the `img` role contains an `a` element.  The `img` role has [presentational children][].  The `a` element is included in [sequential focus navigation][].  So the element with the `img` role fails the rule.
 
 ```html
 <span role="img" aria-label="some ASCII art">****** This ASCII art ******* <a href="#">contains a link.</a></span>

@@ -1,9 +1,9 @@
 ---
-id: dppn1b
+id: ssehdh
 name:
 rule_type: atomic
 description: |
-  This rule checks that elements that can receive pointer events have essential size.
+  This rule checks that elements that can receive pointer events are inline.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
     secondary: 'This success criterion is **less strict** than this rule. This is because the rule does not consider the size of the elements. Some of the failed examples may satisfy this success criterion.'
@@ -15,7 +15,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
-  test_assets: <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Map Image by Freepik</a>; <a href="https://www.flaticon.com/free-icons/zoom" title="zoom icons">Zoom icon created by Freepik - Flaticon</a>
+  test_assets: Map Image by <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Freepik</a>
 ---
 
 ## Applicability
@@ -24,7 +24,7 @@ This rule applies to any [HTML element][namespaced element] which [can be target
 
 ## Expectation
 
-Each test target has [essential target size][].
+Each test target is [rendered on a line][].
 
 ## Assumptions
 
@@ -47,61 +47,21 @@ Hit testing isn't properly defined, and this has been an [issue in the CSS speci
 
 #### Passed Example 1
 
-The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
+These links are [rendered on a line][].
 
 ```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-	.dot {
-		height: 15px;
-		width: 15px;
-		background-color: red;
-		display: inline-block;
-	}
-</style>
-
-Location of ACT rules headquarters:
-<div class="map"></div>
-<a
-	class="dot"
-	style="position: absolute; top: 597px; left: 818px"
-	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
-></a>
+<p>
+	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a>.
+</p>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The "Zoom in" image button in the top-right corner of this map does not have [essential size][].
-
-```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-</style>
-
-Location of ACT rules headquarters:
-<div class="map"></div>
-<input
-	type="image"
-	src="/test-assets/target-size/zoom.png"
-	style="position: absolute; top: 35px; left: 1230px; height: 20px; width: 20px;"
-	alt="Zoom in"
-	onclick="alert('Zooming…')"
-/>
-```
-
-#### Failed Example 2
-
-This `button` does not have [essential size][].
+This `button` is not [rendered on a line][].
 
 ```html
 <style>
@@ -152,10 +112,9 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 ```
 
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[clickable area]: #clickable-area 'Definition of Clickable Area'
-[essential target size]: #essential-target-size ' Definition of Essential Target Size'
 [focusable]: #focusable 'Definition of Focusable'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
+[rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
 [sc258]: https://www.w3.org/TR/WCAG22/#target-size-minimum 'Success Criterion 2.5.8 Target Size (minimum)'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'

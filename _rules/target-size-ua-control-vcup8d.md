@@ -38,6 +38,7 @@ Hit testing isn't properly defined, and this has been an [issue in the CSS speci
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.5: Target Size (enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
+- [Understanding Success Criterion 2.5.8: Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
 
 ## Test Cases
 

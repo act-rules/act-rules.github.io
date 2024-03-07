@@ -1,9 +1,9 @@
 ---
-id: yvb1xu
+id: dppn1b
 name:
 rule_type: atomic
 description: |
-  This rule checks that elements that can receive pointer events have an equivalent control with a size of at least 44×44 pixels.
+  This rule checks that elements that can receive pointer events have essential size.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
     secondary: 'This success criterion is **less strict** than this rule. This is because the rule does not consider the size of the elements. Some of the failed examples may satisfy this success criterion.'
@@ -15,6 +15,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jean-Yves Moyen
+  test_assets: <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Map Image by Freepik</a>; <a href="https://www.flaticon.com/free-icons/zoom" title="zoom icons">Zoom icon created by Freepik - Flaticon</a>
 ---
 
 ## Applicability
@@ -23,19 +24,17 @@ This rule applies to any [HTML element][namespaced element] which [can be target
 
 ## Expectation
 
-For each test target, at least one of the following, there is an [instrument][] to achieve an equivalent goal on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
+Each test target has [essential target size][].
 
 ## Assumptions
 
-- This rule assumes that [focusable][] `widget` are effectively clickable. If a widget is [focusable][] without being clickable, it may fail this rule while [Success Criterion 2.5.5 Target Size (enhanced)][sc255] is satisfied.
+- This rule assumes that [focusable][] `widget` are effectively clickable. If a widget is [focusable][] without being clickable, it may fail this rule while [Success Criterion 2.5.5 Target Size (enhanced)][sc255] and [Success Criterion 2.5.8 Target Size (minimum)][sc258] are satisfied.
 
 ## Accessibility Support
 
 Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element. As of February 2023, the ACT rules Community Group is not aware of actual cases resulting in significantly different [clickable areas][clickable area].
 
 ## Background
-
-While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], consider targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with "weird" clickable shape, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contain a large enough [horizontal rectangle][]. In order to allow automated tools to have a consistent implementation of this rule, it does not contain such test cases, notably all Failed test cases have a [border box][] which is too small.
 
 ### Bibliography
 
@@ -47,51 +46,61 @@ While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], con
 
 #### Passed Example 1
 
-The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
+The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
 
 ```html
 <style>
-	#small {
-		width: 35px;
-		height: 35px;
-		border-radius: 0;
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
 	}
-	#large {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
+	.dot {
+		height: 15px;
+		width: 15px;
+		background-color: red;
+		display: inline-block;
 	}
 </style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Hello')">Hello</button>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<a
+	class="dot"
+	style="position: absolute; top: 597px; left: 818px"
+	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
+></a>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The `#small` button has a [clickable area][] of only 35×35px. The `#large` button has a [clickable area][] of 44×44px, but it does not achieve the same objective.
+The "Zoom in" image button in the top-right corner of this map does not have [essential size][].
 
 ```html
 <style>
-	#small {
-		width: 35px;
-		height: 35px;
-		border-radius: 0;
-	}
-	#large {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
 	}
 </style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Good-bye')">Bye</button>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<input
+	type="image"
+	src="/test-assets/target-size/zoom.png"
+	style="position: absolute; top: 35px; left: 1230px; height: 20px; width: 20px;"
+	alt="Zoom in"
+	onclick="alert('Zooming…')"
+/>
 ```
 
 #### Failed Example 2
 
-This `button` does not have any [instrument][] to achieve the same objective.
+This `button` does not have [essential size][].
 
 ```html
 <style>
@@ -141,12 +150,11 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 <div class="cover bad highlight"></div>
 ```
 
-[border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
+[essential target size]: #essential-target-size ' Definition of Essential Target Size'
 [focusable]: #focusable 'Definition of Focusable'
-[horizontal rectangle]: #horizontal-rectangle 'Definition of Horizontal Rectangle'
-[instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
+[sc258]: https://www.w3.org/TR/WCAG22/#target-size-minimum 'Success Criterion 2.5.8 Target Size (minimum)'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'

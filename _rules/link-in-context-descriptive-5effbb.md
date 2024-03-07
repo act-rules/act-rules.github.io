@@ -35,13 +35,15 @@ This rule applies to any [inheriting semantic][] `link` for which all the follow
 
 ## Expectation
 
-The [accessible name][] of each target element together with its [programmatically determined link context][] describes the purpose of the link.
+The [accessible name][] of each target element together with its [accessible description][] and [programmatically determined link context][] describes the purpose of the link.
 
 ## Assumptions
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail success criteria [2.4.4 Link Purpose (In Context)][sc244] or [2.4.9 Link Purpose (Link only)][sc249].
+
+- This rule assumes that "link text" as referred to in WCAG encompasses both the [accessible name][] and [description][accessible description] of the target element. 
 
 ## Accessibility Support
 
@@ -97,6 +99,28 @@ The [accessible name][] describes the purpose of the link.
 
 #### Passed Example 3
 
+The [accessible name][] together with the [accessible description][] describes the purpose of the link.
+
+```html
+<a href="#desc" title="See the product's description">More</a>
+
+<p id="desc">This product consists of several web pages.</p>
+```
+
+#### Passed Example 4
+
+The [accessible name][] together with the [accessible description][] describes the purpose of the link.
+
+```html
+<a href="#desc" aria-describedby="link-desc">More</a>
+
+<p id="link-desc" style="display: none">See the product's description.</p>
+
+<p id="desc">This product consists of several web pages.</p>
+```
+
+#### Passed Example 5
+
 The [accessible name][] (from the link's text), together with its [programmatically determined link context][] (available from the text in the closest `p` ancestor), describes the purpose of the link.
 
 ```html
@@ -105,7 +129,7 @@ The [accessible name][] (from the link's text), together with its [programmatica
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 4
+#### Passed Example 6
 
 The [accessible name][] (from the link's text) describes the purpose of the link.
 
@@ -115,7 +139,7 @@ The [accessible name][] (from the link's text) describes the purpose of the link
 <p id="desc">This product consists of several web pages.</p>
 ```
 
-#### Passed Example 5
+#### Passed Example 7
 
 The [programmatically determined link context][] (provided by the ancestor with a role of `listitem` and text "Ulysses") and the [accessible name][] (from the link's text) describe the purpose of the links.
 
@@ -136,7 +160,7 @@ The [programmatically determined link context][] (provided by the ancestor with 
 </ul>
 ```
 
-#### Passed Example 6
+#### Passed Example 8
 
 The [programmatically determined link context][] (provided by the table header [assigned](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells) to the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
@@ -157,7 +181,7 @@ The [programmatically determined link context][] (provided by the table header [
 </table>
 ```
 
-#### Passed Example 7
+#### Passed Example 9
 
 The [accessible name][] describes the purpose of the link.
 
@@ -179,7 +203,7 @@ The [accessible name][] describes the purpose of the link.
 </main>
 ```
 
-#### Passed Example 8
+#### Passed Example 10
 
 The [programmatically determined link context][] (provided by the cell containing the link) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
@@ -200,7 +224,7 @@ The [programmatically determined link context][] (provided by the cell containin
 </table>
 ```
 
-#### Passed Example 9
+#### Passed Example 11
 
 The [programmatically determined link context][] (provided by the element referenced by the `aria-describedby` attribute) and the [accessible name][] (from the link's text) describe the purpose of the links.
 
@@ -338,6 +362,7 @@ This `a` element is not a [semantic][semantic role] `link`, because it has no `h
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
+[accessible description]: #accessible-description 'Definition of Accessible Description'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatically determined link context]: #programmatically-determined-link-context 'Definition of Programmatically Determined Link Context'

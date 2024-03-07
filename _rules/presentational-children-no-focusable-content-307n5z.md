@@ -161,7 +161,7 @@ This element with the `img` role contains an `a` element.  The `img` role has [p
 
 #### Inapplicable Example 1
 
-None of the roles that build this semantic table structure (`table` for `<table>`, `row` for `<tr>`, `columnheader` for `<th>`, and `cell` for `<td>`) have [presentational children][].  So this rule does not apply to them.
+None of the roles that build this semantic table structure (`table` for `table`, `row` for `tr`, `columnheader` for `th`, and `cell` for `td`) have [presentational children][].  So this rule does not apply to them.
 
 ```html
 <table>

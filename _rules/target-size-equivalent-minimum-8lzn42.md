@@ -3,7 +3,7 @@ id: 8lzn42
 name: Interactive component has equivalent control with minimum size
 rule_type: atomic
 description: |
-  This rule checks that elements that can receive pointer events have an equivalent control with a size of at least 24×24 pixels.
+  This rule checks that elements that can receive pointer events have an equivalent control which have a size of at least 24×24 pixels, are inline, are user agent controlled, or have essential size.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
     secondary: 'This success criterion is **related** to this rule. This is because the rule does not consider exceptions of the criterion; at the same time the success criterion has a larger size requirements. Some of the failed examples may satisfy this success criterion; some of the passed examples do not satisfy it.'
@@ -26,11 +26,11 @@ This rule applies to any [HTML element][namespaced element] which [can be target
 For each test target, there is an [instrument][] to achieve an equivalent goal on the same page, and
 at least one of the following is true for this [instrument][]:
 
-- through scrolling, the [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 24 CSS pixels; or
-- the [instrument][] has enough [spacing][]; or
-- the [instrument][] is [rendered on a line][]; or
-- the [instrument][] is a [User Agent controlled component][]; or
-- the [instrument][] has [essential target size][].
+- <dfn id="8lzn42:size">size</dfn>: through scrolling, the [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 24 CSS pixels; or
+- <dfn id="8lzn42-spacing">spacing</dfn>: the [instrument][] has a [clickable area][] with [spacing][] of at least 24px to the [clickable area][] of every other test target; or
+- <dfn id="8lzn42-inline">inline</dfn>: the [instrument][] is [rendered on a line][]; or
+- <dfn id="8lzn42-ua">user agent</dfn>: the [instrument][] is a [User Agent controlled component][]; or
+- <dfn id="8lzn42-essential">essential</dfn>: the [instrument][] has [essential target size][].
 
 ## Assumptions
 
@@ -48,22 +48,84 @@ While the rule, and [Success Criterion 2.5.8 Target Size (minimum)][sc258], cons
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.5.5: Target Size (enhanced)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
+- [Understanding Success Criterion 2.5.8: Target Size (minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
 
 ## Test Cases
+
+> **Note:** Due to the [spacing](#8lzn42:spacing) condition, all targets illustrating a Failed condition must also be too close from another button. Therefore, most Failed test cases contain `.placeholder` buttons whose only role is to ensure th [spacing](#8lzn42:spacing) condition is not met for the true targets. These `.placeholder` buttons pass the rule (by having another `.placeholder` button with sufficient size to pass the rule) since they are irrelevant to what the Example illustrates. Passed test cases contain similar button to ensure that they only pass for one reason.
 
 ### Passed
 
 #### Passed Example 1
 
-The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
+Both buttons have an [instrument][] to achieve the same function with a 24×24px [clickable area][] (namely, the other button).
+
+```html
+<style>
+	.target {
+		width: 24px;
+		height: 24px;
+		border-radius: 0;
+		padding: 0;
+	}
+</style>
+<button class="target" onclick="alert('Hello')">Hi</button>
+<button class="target" onclick="alert('Hello')">Hi</button>
+```
+
+### Failed
+
+#### Failed Example 1
+
+None of these buttons has an [instrument][] to achieve the same objective.
 
 ```html
 <style>
 	#small {
-		width: 35px;
-		height: 35px;
+		width: 22px;
+		height: 22px;
 		border-radius: 0;
+		padding: 0;
+	}
+	#large {
+		width: 30px;
+		height: 30px;
+		border-radius: 0;
+		padding: 0;
+	}
+</style>
+<button id="small" onclick="alert('Hello')">Hi</button>
+<button id="large" onclick="alert('Good-bye')">Bye</button>
+```
+
+#### Failed Example 2
+
+Both buttons have an [instrument][] to achieve the same function, but not with a large enough [clickable area][].
+
+```html
+<style>
+	.target {
+		width: 20px;
+		height: 20px;
+		border-radius: 0;
+		padding: 0;
+	}
+</style>
+<button class="target" onclick="alert('Hello')">Hi</button>
+<button class="target" onclick="alert('Hello')">Hi</button>
+```
+
+#### Failed Example 3
+
+The `#small` button has an [instrument][] to achieve the same objective with a 44×44px [clickable area][] (namely, the `#large` button). The `#large` button doesn't.
+
+```html
+<style>
+	#small {
+		width: 24px;
+		height: 24px;
+		border-radius: 0;
+		padding: 0;
 	}
 	#large {
 		width: 44px;
@@ -75,56 +137,20 @@ The `#small` button has a [clickable area][] of only 35×35px, but there is an [
 <button id="large" onclick="alert('Hello')">Hello</button>
 ```
 
-### Failed
-
-#### Failed Example 1
-
-The `#small` button has a [clickable area][] of only 35×35px. The `#large` button has a [clickable area][] of 44×44px, but it does not achieve the same objective.
-
-```html
-<style>
-	#small {
-		width: 35px;
-		height: 35px;
-		border-radius: 0;
-	}
-	#large {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
-	}
-</style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Good-bye')">Bye</button>
-```
-
-#### Failed Example 2
+#### Failed Example 4
 
 This `button` does not have any [instrument][] to achieve the same objective.
 
 ```html
 <style>
 	#target {
-		width: 35px;
-		height: 35px;
+		width: 24px;
+		height: 24px;
 		border-radius: 0;
+		padding: 0;
 	}
 </style>
 <button id="target" onclick="alert('hello')">Hi</button>
-```
-
-### Inapplicable
-
-#### Inapplicable Example 1
-
-These `input` elements and `button` are `disabled` and therefore not [focusable][].
-
-```html
-<fieldset disabled>
-	<label>First name <input /></label><br />
-	<label>Last name <input /></label><br />
-	<button>submit</button>
-</fieldset>
 ```
 
 #### Inapplicable Example 2

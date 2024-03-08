@@ -6,7 +6,7 @@ description: |
   This rule checks that elements that can receive pointer events have a size of at least 24×24 pixels.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
-    secondary: 'This success criterion is **related** to this rule. This is because the rule does not consider exceptions of the criterion; at the same time the success criterion requires has a larger size requirements. Some of the failed examples may satisfy this success criterion; some of the passed examples do not satisfy it.'
+    secondary: 'This success criterion is **related** to this rule. This is because the rule does not consider exceptions of the criterion; at the same time the success criterion has a larger size requirements. Some of the failed examples may satisfy this success criterion; some of the passed examples do not satisfy it.'
   wcag22:2.5.8: # Target Size (Minimum) (AA)
     secondary: 'This success criterion is **less strict** than this rule. This is because the rule does not consider exceptions of the criterion. Some of the failed examples may satisfy this success criterion.'
 input_aspects:
@@ -23,7 +23,7 @@ This rule applies to any [HTML element][namespaced element] which [can be target
 
 ## Expectation
 
-For each test target the element can be brought into viewport though scrolling and have a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 24 CSS pixels.
+Each test target can be brought into viewport though scrolling and have a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 24 CSS pixels.
 
 ## Assumptions
 

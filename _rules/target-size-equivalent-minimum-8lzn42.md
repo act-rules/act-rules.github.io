@@ -6,7 +6,7 @@ description: |
   This rule checks that elements that can receive pointer events have an equivalent control with a size of at least 24×24 pixels.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
-    secondary: 'This success criterion is **more strict** than this rule.  This is because this criterion has a larger size requirement. Some of the passed examples do not this success criterion.'
+    secondary: 'This success criterion is **related** to this rule. This is because the rule does not consider exceptions of the criterion; at the same time the success criterion has a larger size requirements. Some of the failed examples may satisfy this success criterion; some of the passed examples do not satisfy it.'
   wcag22:2.5.8: # Target Size (Minimum) (AA)
     secondary: 'This success criterion is **less strict** than this rule.  This is because the rule does not consider the size of the elements. Some of the failed examples may satisfy this success criterion.'
 input_aspects:

@@ -14,7 +14,7 @@ A text node is large scale text if at least one of the following is true:
 - the text node [computed][] [font-size][] is at least 14 [points][] and has a [computed][] [font weight][] of 700 or higher.
 
 
-**Background:**  
+#### Background
 In the domain of languages such as Chinese, Japanese, and Korean (CJK languages), encompassing the Unicode character range from 4E00 to 9FFF ([CJK Unified Ideographs](https://unicode.org/charts/PDF/U4E00.pdf)), it becomes crucial to acknowledge the intricate nuances in their typographic requirements. Despite sharing a common Unicode spectrum, each CJK language and its corresponding country may exhibit distinct typographic preferences and standards.
 
 Particularly noteworthy is the lack of uniformity in defining text sizes as either large or small within the following ranges:

@@ -43,34 +43,31 @@ While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], con
 
 ## Test Cases
 
+> **Note:** In order for a page to pass this rule, all targets need a large enough equivalent [instrument][], including the targets that are large enough themselves.
+
 ### Passed
 
 #### Passed Example 1
 
-The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
+Both buttons have an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the other button).
 
 ```html
 <style>
-	#small {
-		width: 35px;
-		height: 35px;
-		border-radius: 0;
-	}
-	#large {
+	.target {
 		width: 44px;
 		height: 44px;
 		border-radius: 0;
 	}
 </style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Hello')">Hello</button>
+<button class="target" onclick="alert('Hello')">Hi</button>
+<button class="target" onclick="alert('Hello')">Hello</button>
 ```
 
 ### Failed
 
 #### Failed Example 1
 
-The `#small` button has a [clickable area][] of only 35×35px. The `#large` button has a [clickable area][] of 44×44px, but it does not achieve the same objective.
+None of these buttons has an [instrument][] to achieve the same objective.
 
 ```html
 <style>
@@ -90,6 +87,43 @@ The `#small` button has a [clickable area][] of only 35×35px. The `#large` butt
 ```
 
 #### Failed Example 2
+
+Both buttons have an [instrument][] to achieve the same function, but not with a large enough [clickable area][].
+
+```html
+<style>
+	.target {
+		width: 40px;
+		height: 40px;
+		border-radius: 0;
+	}
+</style>
+<button class="target" onclick="alert('Hello')">Hi</button>
+<button class="target" onclick="alert('Hello')">Hello</button>
+```
+
+#### Failed Example 3
+
+The `#small` button has an [instrument][] to achieve the same objective with a 44×44px [clickable area][] (namely, the `#large` button). The `#large` button doesn't. Note that this case satisfies [Success Criterion 2.5.5 Target Size (enhanced)][sc255] because the `#large` button is already large enough and doesn't require an equivalent [instrument][].
+
+```html
+<style>
+	#small {
+		width: 35px;
+		height: 35px;
+		border-radius: 0;
+	}
+	#large {
+		width: 44px;
+		height: 44px;
+		border-radius: 0;
+	}
+</style>
+<button id="small" onclick="alert('Hello')">Hi</button>
+<button id="large" onclick="alert('Hello')">Hello</button>
+```
+
+#### Failed Example 4
 
 This `button` does not have any [instrument][] to achieve the same objective.
 

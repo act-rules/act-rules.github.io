@@ -86,21 +86,23 @@ Both buttons have an [instrument][] to achieve the same function satisfying the 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 </head>
-<style>
-	.target {
-		width: 20px;
-		height: 20px;
-		border-radius: 0;
-		padding: 0;
-		margin: 10px;
-	}
-</style>
-<button id="btn1" class="target highlightable" onclick="alert('Hello')">Hi</button>
-<button id="btn2" class="target highlightable" onclick="alert('Hello')">Hi</button>
-<script>
-	highlightCircle(document.getElementById('btn1'))
-	highlightCircle(document.getElementById('btn2'))
-</script>
+<body>
+	<style>
+		.target {
+			width: 20px;
+			height: 20px;
+			border-radius: 0;
+			padding: 0;
+			margin: 10px;
+		}
+	</style>
+	<button id="btn1" class="target highlightable" onclick="alert('Hello')">Hi</button>
+	<button id="btn2" class="target highlightable" onclick="alert('Hello')">Hi</button>
+	<script>
+		highlightCircle(document.getElementById('btn1'))
+		highlightCircle(document.getElementById('btn2'))
+	</script>
+</body>
 ```
 
 #### Passed Example 3
@@ -108,43 +110,42 @@ Both buttons have an [instrument][] to achieve the same function satisfying the 
 The first link has an equivalent [instrument][] that satisfies the [essential condition][] (namely, the second link). The second link has an equivalent [instrument][] that satisfies the [inline condition][] (namely, the first link).
 
 ```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-	.dot {
-		height: 15px;
-		width: 15px;
-		background-color: red;
-		display: inline-block;
-	}
-	.placeholder {
-		background-color: transparent;
-		border: dashed 2px black;
-		padding: 0;
-		position: absolute;
-	}
-</style>
-
-Find the <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">ACT rules headquarters</a> on the map below:
-<div class="map"></div>
-<a
-	class="dot"
-	style="position: absolute; top: 597px; left: 818px"
-	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
-></a>
-<button
-	class="placeholder"
-	style="top: 597px; left: 833px; width: 24px; height: 24px"
-	onclick="alert('Placeholder button blocking the spacing of adjacent link')"
-></button>
-<button
-	class="placeholder"
-	style="top: 25px; left: 65px; width: 150px; height: 24px"
-	onclick="alert('Placeholder button blocking the spacing of adjacent link')"
-></button>
+<head>
+	<title>Passed Example 3</title>
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
+	<style>
+		.map {
+			background-image: url('/test-assets/target-size/map-background.jpg');
+			width: 1250px;
+			height: 1250px;
+		}
+		.dot {
+			height: 15px;
+			width: 15px;
+			background-color: red;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	Find the <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/">ACT rules headquarters</a> on the map below:
+	<div class="map"></div>
+	<a
+		class="dot"
+		style="position: absolute; top: 597px; left: 818px"
+		href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
+	></a>
+	<button
+		class="placeholder"
+		style="top: 597px; left: 833px; width: 24px; height: 24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent link')"
+	></button>
+	<button
+		class="placeholder"
+		style="top: 25px; left: 65px; width: 150px; height: 24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent link')"
+	></button>
+</body>
 ```
 
 #### Passed Example 4
@@ -251,11 +252,13 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 		}
 	</style>
 </head>
-<button onclick="alert('hello')">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')">
+		Say Hello
+	</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'

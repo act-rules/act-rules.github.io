@@ -104,11 +104,11 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 		}
 	</style>
 </head>
-<button onclick="alert('hello')">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')">Say Hello</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'

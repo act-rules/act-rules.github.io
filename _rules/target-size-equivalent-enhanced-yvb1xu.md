@@ -168,11 +168,11 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 		}
 	</style>
 </head>
-<button onclick="alert('hello')">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')">Say Hello</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'

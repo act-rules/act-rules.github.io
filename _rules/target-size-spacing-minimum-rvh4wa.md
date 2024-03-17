@@ -65,16 +65,18 @@ Both buttons have a [clickable area][] with [spacing][] of at least 24px to the 
 		}
 	</style>
 </head>
-<button id="button1" class="highlightable" onclick="alert('Hello')">
-	Hello world
-</button>
-<button id="button2" class="highlightable" onclick="alert('Good bye')">
-	Farewell
-</button>
-<script>
-	highlightCircle(document.getElementById('button1'))
-	highlightCircle(document.getElementById('button2'))
-</script>
+<body>
+	<button id="button1" class="highlightable" onclick="alert('Hello')">
+		Hello world
+	</button>
+	<button id="button2" class="highlightable" onclick="alert('Good bye')">
+		Farewell
+	</button>
+	<script>
+		highlightCircle(document.getElementById('button1'))
+		highlightCircle(document.getElementById('button2'))
+	</script>
+</body>
 ```
 
 #### Passed Example 2
@@ -93,12 +95,14 @@ Since there is only one test target, it doesn't require to be spaced from anythi
 		}
 	</style>
 </head>
-<button id="button" class="highlightable" onclick="alert('Hello')">
-	Hello world
-</button>
-<script>
-	highlightCircle(document.getElementById('button'))
-</script>
+<body>
+	<button id="button" class="highlightable" onclick="alert('Hello')">
+		Hello world
+	</button>
+	<script>
+		highlightCircle(document.getElementById('button'))
+	</script>
+</body>
 ```
 
 ### Failed
@@ -119,17 +123,19 @@ None of these button has [spacing][] of at least 24px to the other. Both of the 
 		}
 	</style>
 </head>
-<button id="button1" class="highlightable" onclick="alert('Hello')">
-	Hello world
-</button>
-<br />
-<button id="button2" class="highlightable" onclick="alert('Good bye')">
-	Bye
-</button>
-<script>
-	highlightCircle(document.getElementById('button1'), ['bad'])
-	highlightCircle(document.getElementById('button2'), ['bad'])
-</script>
+<body>
+	<button id="button1" class="highlightable" onclick="alert('Hello')">
+		Hello world
+	</button>
+	<br />
+	<button id="button2" class="highlightable" onclick="alert('Good bye')">
+		Bye
+	</button>
+	<script>
+		highlightCircle(document.getElementById('button1'), ['bad'])
+		highlightCircle(document.getElementById('button2'), ['bad'])
+	</script>
+</body>
 ```
 
 #### Failed Example 2
@@ -148,17 +154,19 @@ None of these button has [spacing][] of at least 24px to the other. The two 24px
 		}
 	</style>
 </head>
-<button id="button1" class="highlightable" onclick="alert('Hello')">
-	Hello
-</button>
-<div style="height: 2.5px"></div>
-<button id="button2" class="highlightable" onclick="alert('Good bye')">
-	Bye
-</button>
-<script>
-	highlightCircle(document.getElementById('button1'), ['bad'])
-	highlightCircle(document.getElementById('button2'), ['bad'])
-</script>
+<body>
+	<button id="button1" class="highlightable" onclick="alert('Hello')">
+		Hello
+	</button>
+	<div style="height: 2.5px"></div>
+	<button id="button2" class="highlightable" onclick="alert('Good bye')">
+		Bye
+	</button>
+	<script>
+		highlightCircle(document.getElementById('button1'), ['bad'])
+		highlightCircle(document.getElementById('button2'), ['bad'])
+	</script>
+</body>
 ```
 
 #### Failed Example 3
@@ -177,17 +185,19 @@ The second button has [spacing][] of less than 24px to the first button. The 24p
 		}
 	</style>
 </head>
-<button id="button1" class="highlightable" onclick="alert('Hello')">
-	Hello World
-</button>
-<br />
-<button id="button2" class="highlightable" onclick="alert('Hello')">
-	Hi
-</button>
-<script>
-	highlightCircle(document.getElementById('button1'))
-	highlightCircle(document.getElementById('button2'), ['bad'])
-</script>
+<body>
+	<button id="button1" class="highlightable" onclick="alert('Hello')">
+		Hello World
+	</button>
+	<br />
+	<button id="button2" class="highlightable" onclick="alert('Hello')">
+		Hi
+	</button>
+	<script>
+		highlightCircle(document.getElementById('button1'))
+		highlightCircle(document.getElementById('button2'), ['bad'])
+	</script>
+</body>
 ```
 
 ### Inapplicable
@@ -220,11 +230,11 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 		}
 	</style>
 </head>
-<button onclick="alert('hello')">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')">Say Hello</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'

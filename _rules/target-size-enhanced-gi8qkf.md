@@ -102,13 +102,15 @@ This `input` element, combined with its [implicit label][] and its padding, has 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
-<label id="label" style="padding: 6px 0;" class="highlightable">
-	Given Name<br />
-	<input id="input" style="width: 200px" />
-</label>
-<script>
-	highlightRect(document.getElementById('label').firstChild)
-</script>
+<body>
+	<label id="label" style="padding: 6px 0;" class="highlightable">
+		Given Name<br />
+		<input id="input" style="width: 200px" />
+	</label>
+	<script>
+		highlightRect(document.getElementById('label').firstChild)
+	</script>
+</body>
 ```
 
 #### Passed Example 4
@@ -121,11 +123,13 @@ This `input` element, combined with its [explicit label][] and its padding, has 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
-<label for="input" id="label" style="padding: 6px 0;" class="highlightable"> Given Name<br /> </label>
-<input id="input" style="width: 200px" />
-<script>
-	highlightRect(document.getElementById('label').firstChild)
-</script>
+<body>
+	<label for="input" id="label" style="padding: 6px 0;" class="highlightable"> Given Name<br /> </label>
+	<input id="input" style="width: 200px" />
+	<script>
+		highlightRect(document.getElementById('label').firstChild)
+	</script>
+</body>
 ```
 
 #### Passed Example 5
@@ -295,13 +299,15 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 		}
 	</style>
 </head>
-<button id="target" class="highlightable" onclick="alert('Hello')">
-	Say Hello
-</button>
+<body>
+	<button id="target" class="highlightable" onclick="alert('Hello')">
+		Say Hello
+	</button>
 
-<div class="cover bad"></div>
-<div class="hlines good highlight"></div>
-<div class="vlines good highlight"></div>
+	<div class="cover bad"></div>
+	<div class="hlines good highlight"></div>
+	<div class="vlines good highlight"></div>
+</body>
 ```
 
 #### Passed Example 12
@@ -321,11 +327,13 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 		}
 	</style>
 </head>
-<button onclick="alert('hello')" style="height: 50px">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')" style="height: 50px">
+		Say Hello
+	</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 #### Passed Example 13
@@ -377,17 +385,18 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 		}
 	</style>
 </head>
+<body>
+	<div class="scroller">
+		<div class="cover bad"></div>
+		<div class="spacer"></div>
+	</div>
 
-<div class="scroller">
-	<div class="cover bad"></div>
-	<div class="spacer"></div>
-</div>
-
-<button id="target" class="highlightable" onclick="alert('Hello')">
-	Say Hello
-</button>
-<div class="hlines good highlight"></div>
-<div class="vlines good highlight"></div>
+	<button id="target" class="highlightable" onclick="alert('Hello')">
+		Say Hello
+	</button>
+	<div class="hlines good highlight"></div>
+	<div class="vlines good highlight"></div>
+</body>
 ```
 
 #### Passed Example 14
@@ -423,9 +432,11 @@ This button has been clipped, leaving a [clickable area][] containing a 45×45px
 		}
 	</style>
 </head>
-<div id="target" role="button" onclick="alert('Hello')">
-	Hello
-</div>
+<body>
+	<div id="target" role="button" onclick="alert('Hello')">
+		Hello
+	</div>
+</body>
 ```
 
 ### Failed
@@ -473,7 +484,9 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 	<title>Failed Example 3</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
-<span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
+<body>
+	<span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
+</body>
 ```
 
 #### Failed Example 4
@@ -547,13 +560,15 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 		}
 	</style>
 </head>
-<button id="target" class="highlightable" onclick="alert('Hello')">
-	Say Hello
-</button>
+<body>
+	<button id="target" class="highlightable" onclick="alert('Hello')">
+		Say Hello
+	</button>
 
-<div class="cover bad"></div>
-<div class="hlines good highlight"></div>
-<div class="vlines good highlight"></div>
+	<div class="cover bad"></div>
+	<div class="hlines good highlight"></div>
+	<div class="vlines good highlight"></div>
+</body>
 ```
 
 #### Failed Example 7
@@ -605,17 +620,18 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 		}
 	</style>
 </head>
+<body>
+	<div class="scroller">
+		<div class="cover bad"></div>
+		<div class="spacer"></div>
+	</div>
 
-<div class="scroller">
-	<div class="cover bad"></div>
-	<div class="spacer"></div>
-</div>
-
-<button id="target" class="highlightable" onclick="alert('Hello')">
-	Say Hello
-</button>
-<div class="hlines good highlight"></div>
-<div class="vlines good highlight"></div>
+	<button id="target" class="highlightable" onclick="alert('Hello')">
+		Say Hello
+	</button>
+	<div class="hlines good highlight"></div>
+	<div class="vlines good highlight"></div>
+</body>
 ```
 
 #### Failed Example 8
@@ -685,9 +701,11 @@ The [clickable area][] of this button only contains a 25×45px [horizontal recta
 		}
 	</style>
 </head>
-<div id="target" role="button" onclick="alert('Hello')">
-	Hi
-</div>
+<body>
+	<div id="target" role="button" onclick="alert('Hello')">
+		Hi
+	</div>
+</body>
 ```
 
 ### Inapplicable
@@ -720,11 +738,13 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 		}
 	</style>
 </head>
-<button onclick="alert('hello')">
-	Say Hello
-</button>
+<body>
+	<button onclick="alert('hello')">
+		Say Hello
+	</button>
 
-<div class="cover bad highlight"></div>
+	<div class="cover bad highlight"></div>
+</body>
 ```
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'

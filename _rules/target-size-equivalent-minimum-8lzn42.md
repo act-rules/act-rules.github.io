@@ -151,9 +151,26 @@ The first link has an equivalent [instrument][] that satisfies the [essential co
 #### Passed Example 4
 
 ```html
-<input type="checkbox" /> I agree with the following terms and conditions.
-<p><b>Terms and conditions:</b> We reserve the right to delete your account without notice.</p>
-<input type="checkbox" /> I agree with the previous terms and conditions.
+<head>
+	<title>Passed Example 4</title>
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
+</head>
+<div style="margin-top: 30px">
+	<input type="checkbox" /> I agree with the following terms and conditions.
+	<p><b>Terms and conditions:</b> We reserve the right to delete your account without notice.</p>
+	<input type="checkbox" /> I agree with the previous terms and conditions.
+</div>
+
+<button
+	class="placeholder"
+	style="top: 10px; left: 5px; width: 24px; height:24px"
+	onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
+></button>
+<button
+	class="placeholder"
+	style="top: 115px; left: 5px; width: 24px; height:24px"
+	onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
+></button>
 ```
 
 ### Failed
@@ -183,19 +200,43 @@ None of these buttons has an [instrument][] to achieve the same objective.
 
 #### Failed Example 2
 
-Both buttons have an [instrument][] to achieve the same function, but not with a large enough [clickable area][].
+Both `.target` buttons have an [instrument][] to achieve the same function, but not satisfying any of the conditions.
 
 ```html
-<style>
-	.target {
-		width: 20px;
-		height: 20px;
-		border-radius: 0;
-		padding: 0;
-	}
-</style>
-<button class="target" onclick="alert('Hello')">Hi</button>
-<button class="target" onclick="alert('Hello')">Hi</button>
+<head>
+	<title>Passed Example 4</title>
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
+	<script src="/test-assets/target-size/highlight-circle.js"></script>
+	<style>
+		.target {
+			width: 18px;
+			height: 18px;
+			border-radius: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<button class="target highlightable" id="btn1" onclick="alert('Hello')">Hi</button>
+	<div style="height:50px"></div>
+	<button class="target highlightable" id="btn2" onclick="alert('Hello')">Hi</button>
+
+	<script>
+		highlightCircle(document.getElementById('btn1'), ['bad'])
+		highlightCircle(document.getElementById('btn2'), ['bad'])
+	</script>
+
+	<button
+		class="placeholder"
+		style="top:27px; left:8px; height: 24px; width:24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent button')"
+	></button>
+	<button
+		class="placeholder"
+		style="top:52px; left:8px; height: 24px; width:24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent button')"
+	></button>
+</body>
 ```
 
 #### Failed Example 3
@@ -203,21 +244,44 @@ Both buttons have an [instrument][] to achieve the same function, but not with a
 The `#small` button has an [instrument][] to achieve the same objective with a 44×44px [clickable area][] (namely, the `#large` button). The `#large` button doesn't.
 
 ```html
-<style>
-	#small {
-		width: 24px;
-		height: 24px;
-		border-radius: 0;
-		padding: 0;
-	}
-	#large {
-		width: 44px;
-		height: 44px;
-		border-radius: 0;
-	}
-</style>
-<button id="small" onclick="alert('Hello')">Hi</button>
-<button id="large" onclick="alert('Hello')">Hello</button>
+<head>
+	<title>Passed Example 4</title>
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
+	<script src="/test-assets/target-size/highlight-circle.js"></script>
+	<style>
+		#small {
+			width: 18px;
+			height: 18px;
+			border-radius: 0;
+			padding: 0;
+		}
+		#large {
+			width: 44px;
+			height: 44px;
+			border-radius: 0;
+		}
+	</style>
+</head>
+<body>
+	<button id="small" class="highlightable" onclick="alert('Hello')">Hi</button>
+	<div style="height: 50px"></div>
+	<button id="large" onclick="alert('Hello')">Hello</button>
+
+	<script>
+		highlightCircle(document.getElementById('small'), ['bad'])
+	</script>
+	<button
+		class="placeholder"
+		style="top:27px; left: 8px; width: 24px; height: 24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent button')"
+	></button>
+
+	<button
+		class="placeholder"
+		style="top:0px; left: 27px; width: 24px; height: 24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent button')"
+	></button>
+</body>
 ```
 
 #### Failed Example 4
@@ -236,7 +300,9 @@ This `button` does not have any [instrument][] to achieve the same objective.
 <button id="target" onclick="alert('hello')">Hi</button>
 ```
 
-#### Inapplicable Example 2
+### Inapplicable Examples
+
+#### Inapplicable Example 1
 
 This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
 

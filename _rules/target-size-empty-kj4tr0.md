@@ -134,7 +134,7 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 ```html
 <head>
 	<title>Inapplicable Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			top: 0;

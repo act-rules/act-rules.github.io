@@ -99,7 +99,7 @@ This `input` element, combined with its [implicit label][] and its padding, has 
 ```html
 <head>
 	<title>Passed Example 3</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
 <label id="label" style="padding: 6px 0;" class="highlightable">
@@ -118,7 +118,7 @@ This `input` element, combined with its [explicit label][] and its padding, has 
 ```html
 <head>
 	<title>Passed Example 4</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-rect.js"></script>
 </head>
 <label for="input" id="label" style="padding: 6px 0;" class="highlightable"> Given Name<br /> </label>
@@ -135,7 +135,7 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 ```html
 <head>
 	<title>Passed Example 5</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
 			width: 20px;
@@ -165,7 +165,7 @@ This button, together with its padding and border, has a [clickable area][] of m
 ```html
 <head>
 	<title>Passed Example 6</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
 			width: 35px;
@@ -263,7 +263,7 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 ```html
 <head>
 	<title>Passed Example 9</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			position: absolute;
@@ -311,7 +311,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 ```html
 <head>
 	<title>Passed Example 10</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			top: 0;
@@ -335,7 +335,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 ```html
 <head>
 	<title>Passed Example 12</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			position: relative;
@@ -412,7 +412,7 @@ This button has been clipped, leaving a [clickable area][] containing a 45×45px
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
 			height: 50px;
@@ -452,7 +452,7 @@ This link only has a [clickable area][] of approximately 66×18 pixels, as shown
 ```html
 <head>
 	<title>Failed Example 2</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
 			line-height: 50px;
@@ -471,7 +471,7 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 ```html
 <head>
 	<title>Failed Example 3</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
 <span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
 ```
@@ -515,7 +515,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 ```html
 <head>
 	<title>Failed Example 6</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			position: absolute;
@@ -563,7 +563,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 ```html
 <head>
 	<title>Failed Example 7</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			position: relative;
@@ -674,7 +674,7 @@ The [clickable area][] of this button only contains a 25×45px [horizontal recta
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
 			height: 50px;
@@ -711,7 +711,7 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 ```html
 <head>
 	<title>Inapplicable Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			top: 0;

@@ -56,7 +56,7 @@ Both buttons have a [clickable area][] with [spacing][] of at least 24px to the 
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
 		button {
@@ -84,7 +84,7 @@ Since there is only one test target, it doesn't require to be spaced from anythi
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
 		button {
@@ -110,7 +110,7 @@ None of these button has [spacing][] of at least 24px to the other. Both of the 
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
 		button {
@@ -139,7 +139,7 @@ None of these button has [spacing][] of at least 24px to the other. The two 24px
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
 		button {
@@ -168,7 +168,7 @@ The second button has [spacing][] of less than 24px to the first button. The 24p
 ```html
 <head>
 	<title>Failed Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
 		button {
@@ -211,7 +211,7 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 ```html
 <head>
 	<title>Inapplicable Example</title>
-	<link rel="stylesheet" href="/test-assets/target-size/highlight.css" />
+	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
 			top: 0;

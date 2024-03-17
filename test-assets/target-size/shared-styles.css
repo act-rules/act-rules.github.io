@@ -14,3 +14,10 @@
 	position: relative;
 	z-index: 5;
 }
+
+.placeholder {
+	background-color: transparent;
+	border: dashed 2px black;
+	padding: 0;
+	position: absolute;
+}

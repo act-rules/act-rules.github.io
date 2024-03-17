@@ -150,6 +150,8 @@ The first link has an equivalent [instrument][] that satisfies the [essential co
 
 #### Passed Example 4
 
+Both checkboxes have an [instrument][] to achieve the same function satisfying the [user agent condition][] (namely, the other checkbox).
+
 ```html
 <head>
 	<title>Passed Example 4</title>
@@ -303,6 +305,18 @@ This `button` does not have any [instrument][] to achieve the same objective.
 ### Inapplicable Examples
 
 #### Inapplicable Example 1
+
+These `input` elements and `button` are `disabled` and therefore not [focusable][].
+
+```html
+<fieldset disabled>
+	<label>First name <input /></label><br />
+	<label>Last name <input /></label><br />
+	<button>submit</button>
+</fieldset>
+```
+
+#### Inapplicable Example 2
 
 This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
 

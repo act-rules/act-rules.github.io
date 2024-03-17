@@ -302,7 +302,7 @@ This `button` does not have any [instrument][] to achieve the same objective.
 <button id="target" onclick="alert('hello')">Hi</button>
 ```
 
-### Inapplicable Examples
+### Inapplicable
 
 #### Inapplicable Example 1
 

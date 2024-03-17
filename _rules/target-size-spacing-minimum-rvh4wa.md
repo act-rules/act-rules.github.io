@@ -244,5 +244,5 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 [horizontal rectangle]: #horizontal-rectangle 'Definition of Horizontal Rectangle'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [sc258]: https://www.w3.org/TR/WCAG22/#target-size-minimum 'Success Criterion 2.5.8 Target Size (minimum)'
-[spacing]: #area-spacing 'Definition of Spacing'
+[spacing]: #spacing 'Definition of Spacing'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'

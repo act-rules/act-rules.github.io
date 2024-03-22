@@ -1,0 +1,21 @@
+.close-button {
+	padding: 0.3rem;
+	margin: 0.3rem;
+	/*
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap
+	*/
+}
+
+.topright {
+	position: absolute;
+	right: 0;
+	top: 0
+}

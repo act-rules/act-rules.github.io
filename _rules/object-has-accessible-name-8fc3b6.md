@@ -42,9 +42,9 @@ _There are currently no assumptions_
 
 ## Accessibility Support
 
-Some screen readers announce `object` elements even if they do not have an accessible name, while other skip the element. If an `object` is used to render decorative content, to ensure it is [marked as decorative][] and can be ignored by all major screen readers a presentational role is necessary.
-
-The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
+- Some screen readers announce `object` elements even if they do not have an accessible name, while other skip the element. If an `object` is used to render decorative content, to ensure it is [marked as decorative][] and can be ignored by all major screen readers a presentational role is necessary.
+- The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

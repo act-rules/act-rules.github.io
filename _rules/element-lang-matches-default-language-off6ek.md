@@ -54,7 +54,7 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

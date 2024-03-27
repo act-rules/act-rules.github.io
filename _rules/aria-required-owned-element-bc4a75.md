@@ -44,6 +44,7 @@ If the [explicit semantic role][] on the target element is incorrectly used, and
 - `aria-owns` has limited support in some user agents.
 - Assistive technologies are not consistent in how they handle situations where a [required owned element][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
 - Some user agents treat the value of `aria-busy` as case-sensitive.
+- `aria-busy` exists but, currently, is not widely supported, so the rule ignores it.
 
 ## Background
 

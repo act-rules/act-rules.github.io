@@ -61,6 +61,10 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 
 ## Background
 
+The `meta http-equiv="refresh"` directive is an HTML tag used to instruct browsers to automatically refresh or reload a web page after a specified time interval. This can be useful for updating content dynamically or redirecting users to another page.
+
+The `content` attribute in the `meta http-equiv="refresh"` directive is used to define the time interval, in seconds, after which the browser should automatically refresh or reload the web page. For example, `content="5"` would instruct the browser to refresh the page every 5 seconds. Careful consideration of the refresh interval is crucial to ensure optimal user experience and accessibility, particularly for individuals who may require more time to consume or interact with web content.
+
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
 
 ### Bibliography

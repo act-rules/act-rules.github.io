@@ -398,7 +398,7 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
 <body>
-	<span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
+	<span class="bad" role="button" onclick="alert('Hello')">Hi</span>
 </body>
 ```
 

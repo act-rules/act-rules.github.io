@@ -64,8 +64,8 @@ These radio buttons have their size modified by the author and are therefore not
 ```html
 <style>
 	input[type='radio'] {
-		width: 20px;
-		height: 20px;
+		width: 1em;
+		height: 1em;
 	}
 </style>
 <fieldset>

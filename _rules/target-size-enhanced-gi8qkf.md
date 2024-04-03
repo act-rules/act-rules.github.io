@@ -485,7 +485,7 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
 <body>
-	<span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
+	<span class="bad" role="button" onclick="alert('Hello')">Hi</span>
 </body>
 ```
 
@@ -761,9 +761,9 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
 [target size enhanced]: https://www.w3.org/WAI/standards-guidelines/act/rules/8iacb5/ 'Rule Interactive component has strict enhanced size'
 [target size empty]: https://www.w3.org/WAI/standards-guidelines/act/rules/kj4tr0/ 'Rule Interactive component has no clickable area'
+[target size equivalent enhanced]: https://www.w3.org/WAI/standards-guidelines/act/rules/yvb1xu/ 'Rule Interactive component has equivalent control with enhanced size'
+[target size essential]: https://www.w3.org/WAI/standards-guidelines/act/rules/dppn1b/ 'Rule Interactive component has essential size'
 [target size inline]: https://www.w3.org/WAI/standards-guidelines/act/rules/ssehdh/ 'Rule Interactive component is inline'
 [target size user agent]: https://www.w3.org/WAI/standards-guidelines/act/rules/vcup8d/ 'Rule Interactive component has size controlled by User Agent'
-[target size essential]: https://www.w3.org/WAI/standards-guidelines/act/rules/dppn1b/ 'Rule Interactive component has essential size'
-[target size equivalent enhanced]: https://www.w3.org/WAI/standards-guidelines/act/rules/yvb1xu/ 'Rule Interactive component has equivalent control with enhanced size'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

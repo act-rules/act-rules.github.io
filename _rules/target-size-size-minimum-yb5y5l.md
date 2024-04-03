@@ -175,11 +175,11 @@ This button, together with its padding and border, has a [clickable area][] of m
 
 #### Passed Example 7
 
-This button has a [clickable area][] containing a 44×44px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 24×24px rectangle delimited by prolonging the solid green lines.
+This button has a [clickable area][] containing a 24×24px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 24×24px rectangle delimited by prolonging the solid green lines.
 
 ```html
 <head>
-	<title>Passed Example 9</title>
+	<title>Passed Example 7</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
@@ -229,7 +229,7 @@ This button has a [clickable area][] of roughly 73×30px. The `div` element with
 
 ```html
 <head>
-	<title>Passed Example 10</title>
+	<title>Passed Example 8</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
@@ -255,7 +255,7 @@ This button has a 30×30px [clickable area][]. The `div` with a dashed red borde
 
 ```html
 <head>
-	<title>Passed Example 12</title>
+	<title>Passed Example 9</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
@@ -333,7 +333,7 @@ This button has been clipped, leaving a [clickable area][] containing a 25×25px
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Passed Example 11</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
@@ -399,7 +399,7 @@ This custom button has a [clickable area][] of approximately 18×20px, as shown 
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
 <body>
-	<span class="highlight bad" role="button" onclick="alert('Hello')">Hi</span>
+	<span class="bad" role="button" onclick="alert('Hello')">Hi</span>
 </body>
 ```
 
@@ -432,7 +432,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 
 ```html
 <head>
-	<title>Failed Example 6</title>
+	<title>Failed Example 5</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
@@ -482,7 +482,7 @@ This button only has a [clickable area][] of approximately 20×40px, because it 
 
 ```html
 <head>
-	<title>Failed Example 7</title>
+	<title>Failed Example 6</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		.cover {
@@ -546,10 +546,12 @@ The [clickable area][] of this button does not contain a 24×24px [horizontal re
 ```html
 <style>
 	#target {
-		width: 24px;
-		height: 24px;
+		width: 15px;
+		height: 15px;
+		font-size: 10px;
 		border-radius: 0;
 		rotate: 45deg;
+		padding: 0;
 	}
 </style>
 <button id="target" onclick="alert('Hello')">Hi</button>
@@ -573,15 +575,15 @@ The [clickable area][] of this button does not contain a 24×24px [horizontal re
 
 #### Failed Example 9
 
-The [clickable area][] of this button only contains a 20×45px [horizontal rectangle][].
+The [clickable area][] of this button only contains a 20×20px [horizontal rectangle][].
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 9</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<style>
 		#target {
-			height: 50px;
+			height: 20px;
 			width: 40px;
 			text-align: center;
 			clip-path: polygon(10px 0px, 10px 45px, 30px 45px, 30px 0px);

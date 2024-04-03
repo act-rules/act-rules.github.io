@@ -43,7 +43,7 @@ While the rule, and [Success Criterion 2.5.8 Target Size (minimum)][sc258], appl
 
 ## Test Cases
 
-> **Note:** All example draw a [spacing][] circle of 24px diameter below the target to visually show it. These circles are solid green for good cases, and dashed red for bad cases.
+> **Note:** All examples draw a [spacing][] circle of 24px diameter below the target to visually show it. These circles are solid green for good cases, and dashed red for bad cases.
 
 > **Note:** Several examples draw borders around some of the elements or texts. This is purely for aesthetic purpose and to clearly show the [clickable areas][clickable area] that are not obvious. These borders are solid green when showing good cases, or relevant areas; and dashed red when showing bad cases, or irrelevant areas.
 
@@ -55,7 +55,7 @@ Both buttons have a [clickable area][] with [spacing][] of at least 24px to the 
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Passed Example 1</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
@@ -85,7 +85,7 @@ Since there is only one test target, it doesn't require to be spaced from anythi
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Passed Example 2</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
@@ -113,7 +113,7 @@ None of these button has [spacing][] of at least 24px to the other. Both of the 
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 1</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
@@ -144,7 +144,7 @@ None of these button has [spacing][] of at least 24px to the other. The two 24px
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 2</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>
@@ -175,7 +175,7 @@ The second button has [spacing][] of less than 24px to the first button. The 24p
 
 ```html
 <head>
-	<title>Failed Example</title>
+	<title>Failed Example 3</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 	<script src="/test-assets/target-size/highlight-circle.js"></script>
 	<style>

@@ -53,7 +53,7 @@ When the equivalent [instrument][] satisfies the [size condition][] and has a [c
 
 ## Test Cases
 
-> **Note:** Several test cases have `.placeholder` buttons whose only role is to ensure the [spacing condition][] is not met for the true targets. These `.placeholder` buttons pass the rule (by having another `.placeholder` button with sufficient size to pass the rule). These `.placeholder` buttons are irrelevant to the examples and never mentioned in the descriptions.
+> **Note:** Several test cases have `.placeholder` buttons whose only role is to ensure that the [spacing condition][] is not met for the true targets. These `.placeholder` buttons pass the rule (by having another `.placeholder` button with sufficient size to pass the rule). These `.placeholder` buttons are irrelevant to the examples and never mentioned in the descriptions.
 
 > **Note:** Several test cases show the circle relevant for the [spacing condition][]. These circles are solid green when the [spacing condition][] is satisfied, and dashed red when it is not. The circles are not part of the actual test cases, and are only shown to help understand the [spacing condition][].
 
@@ -157,22 +157,24 @@ Both checkboxes have an [instrument][] to achieve the same function satisfying t
 	<title>Passed Example 4</title>
 	<link rel="stylesheet" href="/test-assets/target-size/shared-styles.css" />
 </head>
-<div style="margin-top: 30px">
-	<input type="checkbox" /> I agree with the following terms and conditions.
-	<p><b>Terms and conditions:</b> We reserve the right to delete your account without notice.</p>
-	<input type="checkbox" /> I agree with the previous terms and conditions.
-</div>
+<body>
+	<div style="margin-top: 30px">
+		<input type="checkbox" /> I agree with the following terms and conditions.
+		<p><b>Terms and conditions:</b> We reserve the right to delete your account without notice.</p>
+		<input type="checkbox" /> I agree with the previous terms and conditions.
+	</div>
 
-<button
-	class="placeholder"
-	style="top: 10px; left: 5px; width: 24px; height:24px"
-	onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
-></button>
-<button
-	class="placeholder"
-	style="top: 115px; left: 5px; width: 24px; height:24px"
-	onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
-></button>
+	<button
+		class="placeholder"
+		style="top: 10px; left: 5px; width: 24px; height:24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
+	></button>
+	<button
+		class="placeholder"
+		style="top: 115px; left: 5px; width: 24px; height:24px"
+		onclick="alert('Placeholder button blocking the spacing of adjacent checkbox')"
+	></button>
+</body>
 ```
 
 ### Failed

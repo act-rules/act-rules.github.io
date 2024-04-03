@@ -646,7 +646,7 @@ This button has been clipped, leaving a [clickable area][] containing a 45×45px
 </body>
 ```
 
-### Failed (TODO, add .placeholder to avoid spacing.)
+### Failed
 
 #### Failed Example 1
 

@@ -145,7 +145,7 @@ This link has [visible][] text with mathematical symbols, that does not match th
 
 #### Failed Example 4
 
-This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name. 
+This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name.
 
 ```html
 <a href="#" aria-label="non-standard">nonstandard</a>
@@ -153,7 +153,7 @@ This link has [visible][] text does not match the [accessible name][] because th
 
 #### Failed Example 5
 
-This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name. 
+This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name.
 
 ```html
 <a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>

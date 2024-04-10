@@ -289,8 +289,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;" />
-			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;" />
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="max-width:50px;" />
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="max-width:50px;" />
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a
@@ -315,8 +315,8 @@ These two HTML `a` elements have the same [accessible name][] and [context][prog
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;" />
-			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;" />
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="max-width:50px;" />
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="max-width:50px;" />
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=3"
@@ -339,8 +339,8 @@ These two HTML `span` elements have an [explicit role][] of link, same [accessib
 	<div>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;" />
-			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;" />
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="max-width:50px;" />
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="max-width:50px;" />
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<span
@@ -367,7 +367,7 @@ These two SVG `a` elements have the same [accessible name][] and [context][progr
 ```html
 <html lang="en">
 	<p>
-		<svg enable-background="new 0 0 264 120" viewBox="0 -20 264 140" xmlns="http://www.w3.org/2000/svg">
+		<svg enable-background="new 0 0 264 120" viewBox="0 -20 264 140" xmlns="http://www.w3.org/2000/svg" style="max-width:150px">
 			<text>Contact us</text>
 			<a
 				href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/contact-us.html?page=1"
@@ -399,8 +399,8 @@ These two HTML `a` elements with the same [accessible name][] and [context][prog
 	<p>
 		<span style="text-align:center;">Contact us</span>
 		<span style="display:flex; justify-content:space-around;">
-			<img src="/test-assets/shared/chat.png" alt="Chat" style="width:50%;" />
-			<img src="/test-assets/shared/phone.png" alt="Phone" style="width:50%;" />
+			<img src="/test-assets/shared/chat.png" alt="Chat" style="max-width:50px;" />
+			<img src="/test-assets/shared/phone.png" alt="Phone" style="max-width:50px;" />
 		</span>
 		<span style="display:flex; justify-content:space-around;">
 			<a href="/test-assets/links-with-identical-names-serve-equivalent-purpose-b20e66/index.html">Contact Us</a>

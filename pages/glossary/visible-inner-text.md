@@ -20,6 +20,8 @@ The <dfn id="visible-inner-text:for-text">visible inner text of a [text node][]<
 
 The <dfn id="visible-inner-text:for-element">visible inner text of an [element][]</dfn> is:
 -   if the [element][] is not [rendered][], its visible inner text is the empty string (`""`);
+-   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width greater than 0, its visible inner text is an ASCII space character (`" "`);
+-   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width of 0, its visible inner text is the empty string (`""`);
 -   if the [element][] is a [`<br>`][<br>] element, its visible inner text is a newline character (`"\n"`);
 -   if the [computed][] [`display`][display] property of the [element][] has an [outer display type][] of `block`, or an [inner display type][] of `table-caption`, the visible inner text of the [element][] is the concatenation of a newline character (`"\n"`) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus a newline character (`"\n"`);
 -   if the [computed][] [`display`][display] property of the [element][] has an [inner display type][] of `table-cell` or `table-row`, the visible inner text of the [element][] is the concatenation of an ASCII space character (`" "`) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus an ASCII space character (`" "`);
@@ -28,6 +30,7 @@ The <dfn id="visible-inner-text:for-element">visible inner text of an [element][
 
 The <dfn>visible inner text</dfn> of any other node is the concatenation of the visible inner text of its children (in [tree order][] in the [flat tree][]).
 
+[bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box
 [<br>]: https://html.spec.whatwg.org/#the-br-element
 [computed]: https://drafts.csswg.org/css-cascade/#computed
 [data]: https://dom.spec.whatwg.org/#concept-cd-data

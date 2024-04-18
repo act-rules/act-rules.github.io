@@ -135,7 +135,7 @@
 - ozplayer
 - GitHub
 
-# Test case anamolies
+# Test case anomalies
 - brewitt-taylor
 - level2-frame1
 - level1-frame2
@@ -237,6 +237,7 @@
 - focusability
 - unitless
 - luminance
+- checkboxes # this seems to be the correct plural
 - disambiguated
 
 # Parts of Unicode

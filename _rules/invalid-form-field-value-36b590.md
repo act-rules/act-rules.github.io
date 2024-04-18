@@ -84,9 +84,9 @@ A single test target can be related to multiple [form field error indicators][fo
 
 ### Bibliography
 
-- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification)
-- [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84)
-- [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85)
+- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification)
+- [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG22/Techniques/general/G84)
+- [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG22/Techniques/general/G85)
 
 ## Test Cases
 
@@ -242,9 +242,9 @@ There are no elements with any of the required [semantic roles][semantic role].
 [aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [form field error indicator]: #form-field-error-indicator
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
-[presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content
+[presentation]: https://www.w3.org/TR/WCAG22/#dfn-presentation
 [semantic role]: #semantic-role 'Definition of semantic role'
-[text]: https://www.w3.org/TR/WCAG21/#dfn-text
+[text]: https://www.w3.org/TR/WCAG22/#dfn-text
 [visible]: #visible 'Definition of visible'
 [html element]: #namespaced-element

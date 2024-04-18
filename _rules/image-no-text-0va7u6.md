@@ -45,7 +45,7 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 ## Assumptions
 
-- This rule assumes that there is no mechanism to change the rendering of text within image resources on the page. For pages that *do* provide such a mechanism, this rule might fail even if [SC 1.4.5 Images of Text][sc1.4.5] is satisfied.
+- This rule assumes that there is no mechanism to change the rendering of text within image resources on the page. For pages that _do_ provide such a mechanism, this rule might fail even if [SC 1.4.5 Images of Text][sc1.4.5] is satisfied.
 - When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
 ## Accessibility Support
@@ -242,11 +242,11 @@ This `svg` element does not have `image` element descendants.
 
 [essential]: #essential-text-presentation 'Definition of Essential (Text Presentation)'
 [insignificant]: #insignificant 'Definition of Insignificant'
-[human language]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.1, Definition of human language'
+[human language]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html#dfn-human-language 'WCAG 2.2, Definition of human language'
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.2, Purely decorative'
 [rendered image resources]: #rendered-image-resource 'Definition of rendered image resource'
-[sc1.4.5]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text
-[sc1.4.9]: https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception
+[sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
+[sc1.4.9]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page (HTML)'

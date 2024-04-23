@@ -12,7 +12,7 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     forConformance: true
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the video may be a media alternative for text. Some of the failed examples satisfy this success criterion.
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed

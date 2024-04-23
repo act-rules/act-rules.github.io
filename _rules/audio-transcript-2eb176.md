@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
+This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
 - [autoplaying](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay); or,
 - has a [play button][] that is [visible][].

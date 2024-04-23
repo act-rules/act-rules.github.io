@@ -56,7 +56,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-It is known that the user can set the browser to prevent autoplay. This rule assumes the browser has not been set to do this.
+Some major browsers do not automatically play the 'video' unless the 'video' is muted. For these, the rule is never applicable. But for browsers that autoplay not muted video, the rule is still applicable.
 
 ### Bibliography
 

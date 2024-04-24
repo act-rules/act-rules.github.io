@@ -296,6 +296,16 @@ This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 <div role="button" style="color: #777; background: #EEE;">My button!</div>
 ```
 
+#### Failed Example 11
+
+This black text has a contrast ratio between 4.11:1 and 4.17:1 on gray background with white text shadow on it.
+
+```html
+<p style="color: #000; background: #676767; text-shadow: white 0 0 40px">
+	Some text in a human language
+</p>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

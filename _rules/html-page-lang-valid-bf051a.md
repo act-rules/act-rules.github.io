@@ -147,7 +147,7 @@ These examples are not normative and not require for consistent implementations.
 
 #### Inapplicable Example 1
 
-This `html` element has an empty `lang` attribute. It is not applicable for this rule, but nonetheless fails [Success Criterion 3.1.1 Language of Page][sc311]. It also fails rule [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/).
+This `html` element has an empty `lang` attribute. It is not applicable for this rule, but nonetheless fails [Success Criterion 3.1.1 Language of Page][sc311]. It also fails rule [HTML page has lang attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/).
 
 ```html
 <html lang="">

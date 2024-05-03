@@ -107,8 +107,8 @@ This `video` element has a non-visible text transcript available on the same pag
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <p style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.
@@ -153,8 +153,8 @@ This `video` element has a text transcript available on the same page, but the t
 ```html
 <html lang="en">
 <video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yaws, and then starts walking.

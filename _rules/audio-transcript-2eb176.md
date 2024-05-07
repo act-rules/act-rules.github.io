@@ -6,11 +6,7 @@ description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
-    forConformance: true
     secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the audio may be a media alternative for text. Some of the failed examples satisfy this success criterion.
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -164,7 +160,6 @@ This `audio` element has native player controls and a [non-visible][visible] int
 	</p>
 </html>
 ```
-
 
 ### Inapplicable
 

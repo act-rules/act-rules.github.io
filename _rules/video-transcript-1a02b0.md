@@ -11,6 +11,10 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag-technique:G69: # Providing an alternative for time based media
+    forConformance: false
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -143,5 +147,6 @@ A video element that is not [visible][].
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
 </html>
 ```
+
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

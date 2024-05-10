@@ -49,7 +49,7 @@ The [accessible name and description computation][] suggests that if an `aria-la
 
 ## Background
 
-The applicability of this rule is limited to elements that have an [explicit semantic role][] that is not identical to their [implicit semantic role][]. Both [WAI-ARIA 1.2][wai-aria 1.2] and [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance) discourage authors from using ARIA when the host language provides a fetaure with equivalent role semantics and values.
+The applicability of this rule is limited to elements that have an [explicit semantic role][] that is not identical to their [implicit semantic role][]. Both [WAI-ARIA 1.2][wai-aria 1.2] and [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance) discourage authors from using ARIA when the host language provides a feature with equivalent role semantics and values.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<table role="table">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 

@@ -31,7 +31,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][aria 1.2] [explicit semantic role][] that requires an [accessible name][] either from the [author](https://www.w3.org/TR/wai-aria-1.2/#namefromauthor) or the [content](https://www.w3.org/TR/wai-aria-1.2/#namefromcontent), unless the element [implicit semantic role][] matches its [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][wai-aria 1.2] [explicit semantic role][] that requires an [accessible name][] either from the [author](https://www.w3.org/TR/wai-aria-1.2/#namefromauthor) or the [content](https://www.w3.org/TR/wai-aria-1.2/#namefromcontent), unless the element [implicit semantic role][] matches its [explicit semantic role][].
 
 ## Expectation
 
@@ -43,13 +43,13 @@ There are no assumptions.
 
 ## Accessibility Support
 
-Elements with [explicit semantic role][] of `heading` and with no [accessible name][] seem to be consistently ignored by assistive technologies. Nonetheless, in the context of this rule, they fail since [WAI-ARIA 1.2][aria 1.2] mandates the presence of an [accessible name][].
+Elements with [explicit semantic role][] of `heading` and with no [accessible name][] seem to be consistently ignored by assistive technologies. Nonetheless, in the context of this rule, they fail since [WAI-ARIA 1.2][wai-aria 1.2] mandates the presence of an [accessible name][].
 
 The [accessible name and description computation][] suggests that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case (ultimately defaulting to the content).
 
 ## Background
 
-The applicability of this rule is limited to elements that have an [explicit semantic role][] that is not identical to their [implicit semantic role][]. Both [WAI-ARIA 1.2][aria 1.2] and [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance) discourage authors from using ARIA when the host language provides a fetaure with equivalent role semantics and values.
+The applicability of this rule is limited to elements that have an [explicit semantic role][] that is not identical to their [implicit semantic role][]. Both [WAI-ARIA 1.2][wai-aria 1.2] and [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance) discourage authors from using ARIA when the host language provides a fetaure with equivalent role semantics and values.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<table role="table">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
@@ -57,7 +57,7 @@ Elements subjected to the [Presentational Roles Conflict Resolution][] are not c
 
 ### Bibliography
 
-- [WAI-ARIA 1.2][aria 1.2]
+- [WAI-ARIA 1.2][wai-aria 1.2]
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)

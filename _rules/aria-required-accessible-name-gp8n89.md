@@ -71,7 +71,7 @@ Elements subjected to the [Presentational Roles Conflict Resolution][] are not c
 The `div` element with role `button` has an [accessible name][] provided by its content.
 
 ```html
-<div role="button" tabindex="0">Submit</button>
+<div role="button" tabindex="0">Submit</div>
 ```
 
 #### Passed Example 2
@@ -125,7 +125,7 @@ This `div` element with role `heading` is not [visible][], but is still [include
 The `div` element with role `link` has an [accessible name][] provided by its content.
 
 ```html
-<div role="link" tabindex="0" onclick="location.href='https://act-rules.github.io/'">ACT Rules</button>
+<div role="link" tabindex="0" onclick="location.href='https://act-rules.github.io/'">ACT Rules</div>
 ```
 
 ### Failed
@@ -173,7 +173,7 @@ The `dialog` role accept an [accessible name][] only from the author and not fro
 The `div` element with role `heading` doesn't an [accessible name][] due to the empty `aria-label` [attribute value][].
 
 ```html
-  <div role="heading" aria-level="1" aria-label="">Terms</h1>
+  <div role="heading" aria-level="1" aria-label="">Terms</div>
 ```
 
 #### Failed Example 6
@@ -206,7 +206,7 @@ This `div` element with role `button` is not [visible][], but is still [included
 The `div` element with role `link` has an empty [accessible name][].
 
 ```html
-<div role="link" tabindex="0" onclick="location.href='https://act-rules.github.io/'"></button>
+<div role="link" tabindex="0" onclick="location.href='https://act-rules.github.io/'"></div>
 ```
 
 ### Inapplicable

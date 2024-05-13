@@ -175,7 +175,7 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 #### Passed Example 12
 
-This `div` element has an [explicit role][] of `switch`; the `aria-required` [property][] is [inherited][] from the `checkbox` superclass role.
+This `div` element has an [explicit role][] of `switch`; the `aria-required` [property][] is [inherited][] from the `checkbox` [superclass](https://www.w3.org/TR/wai-aria-1.2/#superclassrole) role.
 
 ```html
 <div role="switch" aria-checked="false" tabindex="0" aria-required="true">

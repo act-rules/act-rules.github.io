@@ -109,7 +109,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][].
+The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][], except where specifically prohibited.
 
 ```html
 <div role="button" aria-label="OK">✓</div>
@@ -149,7 +149,7 @@ The `aria-controls` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 9
 
-The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
+The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], except where specifically prohibited, including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
@@ -171,6 +171,29 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 ```html
 <label>Password<input type="password" aria-required="true"/></label>
+```
+
+#### Passed Example 12
+
+This `div` element has an [explicit role][] of `switch`; the `aria-required` [property][] is [inherited][] from the `checkbox` superclass role.
+
+```html
+<div role="switch" aria-checked="false" tabindex="0" aria-required="true">
+	<span class="label">Notifications</span>
+	<span class="switch" style="position: relative; display: inline-block; top: 6px; border: 2px solid black; border-radius: 12px; height: 20px; width: 40px;">
+		<span style="position: absolute; top: 2px; left: 2px; display: inline-block; border: 2px solid black; border-radius: 8px; height: 12px; width: 12px; background: black;"></span>
+	</span>
+	<span class="on" aria-hidden="true" style="display: none;">On</span>
+	<span class="off" aria-hidden="true">Off</span>
+</div>
+```
+
+#### Passed Example 13
+
+This `div` element has an [explicit role][] of `separator`. The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` [properties][property] are [supported][] for the `separator` role when the element is [focusable][].
+
+```html
+<div role="separator" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">My separator</div>
 ```
 
 ### Failed
@@ -197,6 +220,24 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 
 ```html
 <div aria-label="Bananas"></div>
+```
+
+#### Failed Example 4
+
+The `aria-label` property is [prohibited][] for an element with a `paragraph` role.
+
+```html
+<div role="paragraph" aria-label="Bananas"></div>
+```
+
+#### Failed Example 5
+
+The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties are not [supported][] for an element with a `separator` role that is not [focusable][].
+
+```html
+<div>ACT rules are cool!</div>
+<div style="border: 1px solid #000;" role="separator" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<div>ACT rules are useful!</div>
 ```
 
 ### Inapplicable

@@ -46,7 +46,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-Some major browsers do not automatically play the 'video' unless the 'video' is muted. For these, the rule is never applicable. But for browsers that autoplay not muted video, the rule is still applicable.
+Some major browsers do not automatically play the 'video' unless it is muted, which makes the rule inapplicable in these browsers. The rule stil applies to browsers that autoplay not muted 'video'.
 
 ### Bibliography
 

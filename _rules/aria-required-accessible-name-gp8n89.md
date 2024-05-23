@@ -11,6 +11,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: satisfied
     inapplicable: satisfied
+  wcag20:1.1.1: # Non-text Content (A)
+    secondary: This success criterion is **related** to this rule. This is because elements assigned the ARIA role of `img` or `image` necessitate an accessible name according to WCAG standards. Some of the examples that either pass or fail overlap with this success criterion.
   wcag20:1.3.1: # Info and Relationships (A)
     secondary: This success criterion is **less strict** than this rule. Unlike WCAG, which might not mandate accessible names for certain elements like table elements, this rule requires them. Consequently, some of the failed examples satisfy this success criterion.
   wcag20:2.4.4: # Link Purpose (In Context) (A)

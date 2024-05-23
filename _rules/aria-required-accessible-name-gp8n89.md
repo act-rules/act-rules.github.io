@@ -60,7 +60,10 @@ Elements subjected to the [Presentational Roles Conflict Resolution][] are not c
 
 - [WAI-ARIA 1.2][wai-aria 1.2]
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [Understanding Success Criterion 2.4.4 Link Purpose (In Context)]([https://www.w3.org/WAI/WCAG22/Understanding/name-role-value](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html))
+- [Understanding Success Criterion 2.4.9 Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 
 ## Test Cases

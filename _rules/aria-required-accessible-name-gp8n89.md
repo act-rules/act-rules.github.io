@@ -32,7 +32,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][wai-aria 1.2] [explicit semantic role][] that requires an [accessible name][] either from the [author](https://www.w3.org/TR/wai-aria-1.2/#namefromauthor) or the [content](https://www.w3.org/TR/wai-aria-1.2/#namefromcontent), unless the element [implicit semantic role][] matches its [explicit semantic role][].
+Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately. 
 
 ## Expectation
 

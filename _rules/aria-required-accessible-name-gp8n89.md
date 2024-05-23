@@ -54,7 +54,7 @@ The applicability of this rule is limited to elements that have an [explicit sem
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<table role="table">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-Elements subjected to the [Presentational Roles Conflict Resolution][] are not covered by this rule, since their [explicit semantic role][] of `none` or `presentation` do not require an accessible name. However, if the [Presentational Roles Conflict Resolution][] is invoked, although the rule doesn't apply, an accessible name might still be necessary.
+Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
 
 ### Bibliography
 

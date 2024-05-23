@@ -185,4 +185,3 @@ This `audio` element has hidden native player controls.
 
 [play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

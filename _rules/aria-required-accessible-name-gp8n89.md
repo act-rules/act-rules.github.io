@@ -108,7 +108,7 @@ The `div` element with role `dialog` has an [accessible name][] provided by the 
 The `div` element with role `heading` has an [accessible name][] provided by its content.
 
 ```html
-  <h1>Terms</h1>
+  <div role="heading" aria-level="1">Terms</div>
 ```
 
 #### Passed Example 6

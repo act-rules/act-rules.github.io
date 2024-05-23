@@ -93,8 +93,8 @@ The `div` element with role `img` has an [accessible name][] provided by the `ar
 The `div` element with role `checkbox` has an [accessible name][] provided thanks to the `aria-labelledby` attribute.
 
 ```html
-<div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="passed-example-3"></div>
-<div id="passed-example-3">I agree with terms and conditions</div>
+<div role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="pass-agree-tc"></div>
+<div id="pass-agree-tc">I agree with terms and conditions</div>
 ```
 
 #### Passed Example 4
@@ -102,8 +102,8 @@ The `div` element with role `checkbox` has an [accessible name][] provided thank
 The `div` element with role `dialog` has an [accessible name][] provided by the `aria-labelledby` attribute.
 
 ```html
-<div role="dialog" aria-modal="true" tabindex="-1" aria-labelledby="passed-example-4">
-  <h1 id="passed-example-4">Terms</h1>
+<div role="dialog" aria-modal="true" tabindex="-1" aria-labelledby="pass-terms">
+  <h1 id="pass-terms">Terms</h1>
   <p>These are our terms.</p>
 </div>
 ```
@@ -185,8 +185,8 @@ The `div` element with role `heading` has an empty [accessible name][] due to th
 The `div` element with role `heading` has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
-<span id="failed-example-3"></span>
-<div role="heading" aria-level="1" aria-labelledby="failed-example-3">ACT Rules</div>
+<span id="fail-heading"></span>
+<div role="heading" aria-level="1" aria-labelledby="fail-heading">ACT Rules</div>
 ```
 
 #### Failed Example 7

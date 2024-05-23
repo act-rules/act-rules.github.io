@@ -48,7 +48,7 @@ The visual information of each test target is available through a text transcrip
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster). The rule also assumes that if a transcript is present it is [included in the accessibility tree][].
+Transcripts need to be available for all users, not just sighted users in order to satisfy WCAG. This rule does not test this, and it needs to be tested separately.
 
 ## Accessibility Support
 
@@ -149,4 +149,3 @@ A video element that is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

@@ -23,7 +23,6 @@ input_aspects:
   - Accessibility Tree
   - CSS styling
   - DOM Tree
-  - ARIA
 acknowledgments:
   authors:
     - Giacomo Petri

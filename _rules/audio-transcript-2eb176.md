@@ -38,7 +38,7 @@ The auditory information of each test target is available through a text transcr
 
 ## Assumptions
 
-This rule assumes that if a transcript is present it is [included in the accessibility tree][].
+Transcripts need to be available for all users, not just sighted users in order to satisfy WCAG. This rule does not test this, and it needs to be tested separately.
 
 ## Accessibility Support
 

@@ -14,11 +14,11 @@ accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     secondary: This success criterion is **less strict** than this rule. Unlike WCAG, which might not mandate accessible names for certain elements like table elements, this rule requires them. Consequently, some of the failed examples satisfy this success criterion.
   wcag20:2.4.4: # Link Purpose (In Context) (A)
-    secondary: This success criterion is **related** to this rule. This is because elements assigned the ARIA role of `link` necessitate an accessible name according to WCAG standards. Some of the examples that both passed and failed overlap with this success criterion.
+    secondary: This success criterion is **related** to this rule. This is because elements assigned the ARIA role of `link` necessitate an accessible name according to WCAG standards. Some of the examples that either pass or fail overlap with this success criterion.
   wcag20:2.4.9: # Link Purpose (Link Only) (AAA)
-    secondary: This success criterion is **related** to this rule. This is because elements assigned the ARIA role of `link` necessitate an accessible name according to WCAG standards. Some of the examples that both passed and failed overlap with this success criterion.
+    secondary: This success criterion is **related** to this rule. This is because elements assigned the ARIA role of `link` necessitate an accessible name according to WCAG standards. Some of the examples that either pass or fail overlap with this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: This success criterion is **related** to this rule. This is because elements assigned an ARIA role corresponding to a user interface component necessitate an accessible name according to WCAG standards. Some of the examples that both passed and failed overlap with this success criterion.
+    secondary: This success criterion is **related** to this rule. This is because elements assigned an ARIA role corresponding to a user interface component necessitate an accessible name according to WCAG standards. Some of the examples that either pass or fail overlap with this success criterion.
 input_aspects:
   - Accessibility Tree
   - CSS styling
@@ -159,7 +159,7 @@ The `div` element with role `checkbox` doesn't have an [accessible name][].
 
 #### Failed Example 4
 
-The `dialog` role accept an [accessible name][] only from the author and not from its content. Therefore, the `div` element with role `dialog` doesn't have an [accessible name][].
+The `dialog` role accepts an [accessible name][] only from the author and not from its content. Therefore, the `div` element with role `dialog` doesn't have an [accessible name][].
 
 ```html
 <div role="dialog" aria-modal="true" tabindex="-1">
@@ -170,7 +170,7 @@ The `dialog` role accept an [accessible name][] only from the author and not fro
 
 #### Failed Example 5
 
-The `div` element with role `heading` doesn't an [accessible name][] due to the empty `aria-label` [attribute value][].
+The `div` element with role `heading` has an empty [accessible name][] due to the empty `aria-label` [attribute value][].
 
 ```html
   <div role="heading" aria-level="1" aria-label="">Terms</div>

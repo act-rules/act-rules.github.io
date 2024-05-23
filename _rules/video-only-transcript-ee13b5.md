@@ -103,7 +103,7 @@ This `video` element, which has no audio, has a non-visible text transcript avai
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+<p style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">This video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
@@ -151,7 +151,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+<p style="text-indent: -9999px;">This video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
@@ -167,7 +167,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+<p aria-hidden="true">This video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>

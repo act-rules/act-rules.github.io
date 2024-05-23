@@ -181,7 +181,7 @@ The `div` element with role `heading` has an empty [accessible name][] given by 
 
 ```html
 <span id="failed-example-3"></span>
-<h1 aria-labelledby="failed-example-3">ACT Rules</h1>
+<div role="heading" aria-level="1" aria-labelledby="failed-example-3">ACT Rules</div>
 ```
 
 #### Failed Example 7

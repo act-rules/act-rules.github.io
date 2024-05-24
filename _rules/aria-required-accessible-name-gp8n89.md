@@ -32,7 +32,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][wai-aria 1.2] [explicit semantic role][] that requires an [accessible name][] either from the [author](https://www.w3.org/TR/wai-aria-1.2/#namefromauthor) or the [content](https://www.w3.org/TR/wai-aria-1.2/#namefromcontent), unless the element [implicit semantic role][] matches its [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][wai-aria 1.2] [semantic role][] that requires an [accessible name][] either from the [author](https://www.w3.org/TR/wai-aria-1.2/#namefromauthor) or the [content](https://www.w3.org/TR/wai-aria-1.2/#namefromcontent), unless the element has a presentational [explicit semantic role][] leading to a conflict resolved by [Presentational Roles Conflict Resolution][].
 
 ## Expectation
 
@@ -44,15 +44,15 @@ There are no assumptions.
 
 ## Accessibility Support
 
-Elements with [explicit semantic role][] of `heading` and with no [accessible name][] seem to be consistently ignored by assistive technologies. Nonetheless, in the context of this rule, they fail since [WAI-ARIA 1.2][wai-aria 1.2] mandates the presence of an [accessible name][].
+Elements with a [semantic role][] of `heading` and with no [accessible name][] seem to be consistently ignored by assistive technologies. Nonetheless, in the context of this rule, they fail since [WAI-ARIA 1.2][wai-aria 1.2] mandates the presence of an [accessible name][].
 
 The [accessible name and description computation][] suggests that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case (ultimately defaulting to the content).
 
 ## Background
 
-The applicability of this rule is limited to elements that have an [explicit semantic role][] that is not identical to their [implicit semantic role][]. Both [WAI-ARIA 1.2][wai-aria 1.2] and [ARIA in HTML](https://www.w3.org/TR/html-aria/#docconformance) discourage authors from using ARIA when the host language provides a feature with equivalent role semantics and values.
+Although this ARIA rule mandates authors to ensure an [accessible name][] for each [HTML or SVG element][] [included in the accessibility tree][] and possessing a [WAI-ARIA 1.2][wai-aria 1.2] [semantic role][] requiring an [accessible name][], it does not automatically constitute a WCAG accessibility violation.
 
-An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<table role="table">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
+For instance, consider a `search` landmark comprising a `form` element with a search label, search input, and search submit button. According to ARIA specifications, both the `search` role and the `form` role necessitate an [accessible name][]. However, adhering strictly to this rule may lead to repetitive announcements by assistive technologies like screen readers, overwhelming users. Therefore, while this might technically breach ARIA specs, it does not necessarily translate to a violation of WCAG accessibility standards.
 
 Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
 
@@ -72,13 +72,21 @@ Elements subjected to the [Presentational Roles Conflict Resolution][] are not p
 
 #### Passed Example 1
 
+This `button` element with an [implicit semantic role] of `button` has an [accessible name][] provided by its content.
+
+```html
+<button>Submit</button>
+```
+
+#### Passed Example 2
+
 The `div` element with role `button` has an [accessible name][] provided by its content.
 
 ```html
 <div role="button" tabindex="0">Submit</div>
 ```
 
-#### Passed Example 2
+#### Passed Example 3
 
 The `div` element with role `img` has an [accessible name][] provided by the `aria-label` [attribute value][].
 
@@ -88,7 +96,7 @@ The `div` element with role `img` has an [accessible name][] provided by the `ar
 </div>
 ```
 
-#### Passed Example 3
+#### Passed Example 4
 
 The `div` element with role `checkbox` has an [accessible name][] provided thanks to the `aria-labelledby` attribute.
 
@@ -97,7 +105,7 @@ The `div` element with role `checkbox` has an [accessible name][] provided thank
 <div id="pass-agree-tc">I agree with terms and conditions</div>
 ```
 
-#### Passed Example 4
+#### Passed Example 5
 
 The `div` element with role `dialog` has an [accessible name][] provided by the `aria-labelledby` attribute.
 
@@ -108,7 +116,7 @@ The `div` element with role `dialog` has an [accessible name][] provided by the 
 </div>
 ```
 
-#### Passed Example 5
+#### Passed Example 6
 
 The `div` element with role `heading` has an [accessible name][] provided by its content.
 
@@ -116,7 +124,7 @@ The `div` element with role `heading` has an [accessible name][] provided by its
   <div role="heading" aria-level="1">Terms</div>
 ```
 
-#### Passed Example 6
+#### Passed Example 7
 
 This `div` element with role `heading` is not [visible][], but is still [included in the accessibility tree][]. It has a non-empty [accessible name][] provided by its content.
 
@@ -124,7 +132,7 @@ This `div` element with role `heading` is not [visible][], but is still [include
 <div role="heading" aria-level="1" style="position: absolute; left: -9999px">ACT rules</div>
 ```
 
-#### Passed Example 7
+#### Passed Example 8
 
 The `div` element with role `link` has an [accessible name][] provided by its content.
 
@@ -144,6 +152,14 @@ The `div` element with role `button` doesn't have an [accessible name][].
 
 #### Failed Example 2
 
+This `button` element with an [implicit semantic role] of `button` doesn't have an [accessible name][].
+
+```html
+<button></button>
+```
+
+#### Failed Example 3
+
 The `div` element with role `img` doesn't have an [accessible name][].
 
 ```html
@@ -152,7 +168,7 @@ The `div` element with role `img` doesn't have an [accessible name][].
 </div>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `div` element with role `checkbox` doesn't have an [accessible name][].
 
@@ -161,7 +177,7 @@ The `div` element with role `checkbox` doesn't have an [accessible name][].
 <div>I agree with terms and conditions</div>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 The `dialog` role accepts an [accessible name][] only from the author and not from its content. Therefore, the `div` element with role `dialog` doesn't have an [accessible name][].
 
@@ -172,7 +188,7 @@ The `dialog` role accepts an [accessible name][] only from the author and not fr
 </div>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 The `div` element with role `heading` has an empty [accessible name][] due to the empty `aria-label` [attribute value][].
 
@@ -180,7 +196,7 @@ The `div` element with role `heading` has an empty [accessible name][] due to th
   <div role="heading" aria-level="1" aria-label="">Terms</div>
 ```
 
-#### Failed Example 6
+#### Failed Example 7
 
 The `div` element with role `heading` has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
@@ -189,7 +205,7 @@ The `div` element with role `heading` has an empty [accessible name][] given by 
 <div role="heading" aria-level="1" aria-labelledby="fail-heading">ACT Rules</div>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 The `div` element with role `button` has an empty [accessible name][] because the `value` attribute does not count in the computation of the [accessible name][].
 
@@ -197,7 +213,7 @@ The `div` element with role `button` has an empty [accessible name][] because th
 <div role="button" value="test"></div>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 This `div` element with role `button` is not [visible][], but is still [included in the accessibility tree][]. It doesn't have an [accessible name][], therefore failing the rule.
 
@@ -205,7 +221,7 @@ This `div` element with role `button` is not [visible][], but is still [included
 <div role="button" style="position: absolute; left: -9999px" tabindex="0"></div>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 The `div` element with role `link` has an empty [accessible name][].
 
@@ -217,51 +233,26 @@ The `div` element with role `link` has an empty [accessible name][].
 
 #### Inapplicable Example 1
 
-This `button` element has no [explicit semantic role][].
-
-```html
-<button>Submit</button>
-```
-
-#### Inapplicable Example 2
-
-This `div` element is not [included in the accessibility tree][], hence its [explicit semantic role][] is not relevant.
+This `div` element is not [included in the accessibility tree][], hence its [semantic role][] is not relevant.
 
 ```html
 <div role="button" style="display:none;"></div>
 ```
 
-#### Inapplicable Example 3
+#### Inapplicable Example 2
 
-This `table` element has an [explicit semantic role][] of `table`, that is identical to its [implicit semantic role][].
-
-```html
-<table role="table">
-  <thead>
-    <tr>
-      <th>Table Header 1</th>
-      <th>Table Header 2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Some content 1</td>
-      <td>Some content 2</td>
-    </tr>
-    <tr>
-      <td>Some content 3</td>
-      <td>Some content 4</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### Inapplicable Example 4
-
-This `div` element has an [explicit semantic role][] of `group`, which does not require an [accessible name][].
+This `div` element has an [semantic role][] of `group`, which does not require an [accessible name][].
 
 ```html
 <div role="group">Some content</div>
+```
+
+#### Inapplicable Example 3
+
+This `button` element has an [explicit semantic role][] of `none`. leading to a conflict resolved by [Presentational Roles Conflict Resolution][], which is not covered by this rule.
+
+```html
+<button role="none">submit</button>
 ```
 
 <!-- Boundary example for future improvement -->
@@ -275,8 +266,9 @@ This `button` element has an [explicit semantic role][] of `none`. Although the 
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [attribute value]: #attribute-value 'Definition of attribute value'
-[explicit semantic role]: #explicit-role 'Definition of Explicit Role'
+[semantic role]: #semantic-role 'Definition of Semantic Role'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Role'
+[explicit semantic role]: #explicit-role 'Definition of Explicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/

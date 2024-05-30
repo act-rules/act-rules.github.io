@@ -48,7 +48,7 @@ The visual information of each test target is available through a text transcrip
 
 ## Assumptions
 
-Transcripts need to be available for all users, not just sighted users in order to satisfy WCAG. This rule does not test this, and it needs to be tested separately.
+In order to satisfy WCAG, transcripts need to be available for all users, not just sighted users. This rule does not test this, and it needs to be tested separately.
 
 ## Accessibility Support
 

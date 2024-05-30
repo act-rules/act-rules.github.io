@@ -187,3 +187,4 @@ This `video` element is not [visible][].
 ```
 
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

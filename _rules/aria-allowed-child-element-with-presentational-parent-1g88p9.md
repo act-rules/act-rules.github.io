@@ -69,7 +69,7 @@ The `li` elements inherit the presentational role from their `ul` parent element
 The `tr` and `td` elements inherit the presentational role from their `table` ancestor element with an [explicit semantic role][] of `presentation`.
 
 ```html
-<table role='presentation'>
+<table role="presentation">
   <tbody>
     <tr>
       <td>ACT Rules</td>
@@ -114,7 +114,7 @@ The `li` elements inherit the presentational role from their `ul` parent element
 The `td` elements inherit the presentational role from their `table` ancestor element with an [explicit semantic role][] of `presentation`, but the author forced its [explicit semantic role][] with `cell`.
 
 ```html
-<table role='presentation'>
+<table role="presentation">
   <tbody>
     <tr>
       <td role="cell">ACT Rules</td>

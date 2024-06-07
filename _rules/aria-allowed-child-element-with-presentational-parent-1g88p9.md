@@ -160,8 +160,8 @@ The `a` elements with a semantic role of `link` are not [allowed child element](
 
 ```html
 <ul role="presentation">
-  <a href="https://www.w3.org/TR/WCAG22/">WCAG</button>
-  <a href="https://w3c.github.io/aria/">ARIA</button>
+  <a href="https://www.w3.org/TR/WCAG22/">WCAG</a>
+  <a href="https://w3c.github.io/aria/">ARIA</a>
 </ul>
 ```
 

@@ -42,6 +42,8 @@ There are no accessibility support issues known.
 
 While user agents consistently handle elements undergoing [Presentational Roles Conflict Resolution][], authors bear the responsibility of preventing such conflicts.
 
+If the presentational role is inherited and the element has global WAI-ARIA states or properties, user agents maintain its presentational role regardless of any global ARIA state or property.
+
 ### Bibliography
 
 - [WAI-ARIA 1.2 - Presentational Roles Conflict Resolution][Presentational Roles Conflict Resolution]
@@ -168,8 +170,6 @@ The `td` element inherits the presentational role from its `table` ancestor elem
 ```
 
 [explicit semantic role]: #explicit-role 'Definition of Explicit Role'
-[inherited semantic role]: https://w3c.github.io/aria/#presentational-role-inheritance
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [html or svg element]: #namespaced-element

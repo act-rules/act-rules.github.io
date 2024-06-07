@@ -90,7 +90,7 @@ The `button` element with role attribute value `presentation` is [focusable][].
 
 #### Failed Example 2
 
-The `button` element with role attribute value `none` is not tabbable but still [focusable][].
+The `button` element with role attribute value `none` is not reachable via keyboard but still [focusable][].
 
 ```html
 <button role="none" tabindex="-1">Submit</button>

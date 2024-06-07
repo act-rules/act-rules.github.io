@@ -65,7 +65,7 @@ The `button` element with role `none` is not [focusable][].
 The `img` element with role `presentation` is not [focusable][].
 
 ```html
-<img role="presentation" src="" alt="">
+<img role="presentation" src="/test-assets/shared/w3c-logo.png" alt="">
 ```
 
 #### Passed Example 3

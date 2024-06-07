@@ -136,5 +136,4 @@ This `button` element with role `none` is not included in the accessibility tree
 [inherited semantic role]: https://w3c.github.io/aria/#presentational-role-inheritance
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [html or svg element]: #namespaced-element

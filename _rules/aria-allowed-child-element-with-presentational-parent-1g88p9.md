@@ -1,5 +1,5 @@
 ---
-id: gp1889
+id: 1g88p9
 name: ARIA allowed child element of another element with presentational role
 rule_type: atomic
 description: |

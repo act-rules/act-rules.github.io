@@ -126,6 +126,7 @@
 # Notes and acronyms
 - TODO
 - TBD
+- CJK
 
 # Tool and library names
 - axe-core
@@ -237,12 +238,16 @@
 - focusability
 - unitless
 - luminance
+- disambiguated
 
 # Parts of Unicode
 - 000A
 - 000B
 - 000C
 - 000D
+- 4E00
+- 9FFF
+- 4E00–9FFF
 
 # JSON attributes/ metadata/ methods
 - testcases

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>About - Chat with us</title>
+		<style>
+			body {
+				background: #fff;
+				color: #000;
+			}
+			a {
+				color: #000;
+			}
+			.sr-only {
+				position: absolute;
+				left: -10000px;
+				top: auto;
+				width: 1px;
+				height: 1px;
+				overflow: hidden;
+			}
+			.breadcrumb ol {
+				list-style-type: none;
+				padding: 0;
+			}
+			.breadcrumb ol li {
+				display: inline;
+			}
+			.breadcrumb li + li::before {
+				display: inline-block;
+				margin: 0 0.25em;
+				transform: rotate(15deg);
+				border-right: 0.1em solid currentcolor;
+				height: 0.8em;
+				content: '';
+			}
+			.contactus-nav {
+				border: 1px solid #999;
+				padding: 0;
+			}
+			.contactus-nav h2 {
+				background: #eee;
+				margin: 0;
+				padding: 10px;
+			}
+			.contactus-nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			.contactus-nav ul li {
+				padding: 0 5px;
+			}
+			.contactus-nav ul li a {
+				display: block;
+				border-bottom: 1px solid #ccc;
+				padding: 10px;
+			}
+			.contactus-nav ul li:last-child a {
+				border-bottom: 0;
+			}
+			.contactus-nav,
+			.content {
+			}
+			.flex {
+				display: flex;
+				align-content: flex-start;
+				justify-content: flex-start;
+				gap: 60px;
+			}
+			.arrow {
+				border: solid black;
+				border-width: 0 3px 3px 0;
+				display: inline-block;
+				padding: 3px;
+				margin-right: 10px;
+			}
+
+			.right {
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section aria-labelledby="heading-chat" id="page1" style="display:none;">
+				<h1 id="heading-chat">Chat With Us</h1>
+				<p>Chat is available</p>
+				<p>24 hours / 7-days a week</p>
+				<button>Chat Now</button>
+			</section>
+			<section aria-labelledby="heading-call" id="page2" style="display:none;">
+				<h1 id="heading-call">Call Us</h1>
+				<h2>You call us from inside the EU</h2>
+				<p>From Monday to Friday</p>
+				<p>
+					<span class="sr-only">from </span>9:00 <span aria-hidden="true">-</span><span class="sr-only">to</span> 18:00
+					CET
+				</p>
+				<p><a href="tel:0000000000">0000000000</a></p>
+				<h2>You call us from outside the EU</h2>
+				<p>From Monday to Friday</p>
+				<p>
+					<span class="sr-only">from </span>9:00 <span aria-hidden="true">-</span><span class="sr-only">to</span> 18:00
+					CET
+				</p>
+				<p><a href="tel:0000000000">0000000000</a></p>
+				<h2>We call you (for free)</h2>
+				<p>From Monday to Friday</p>
+				<p>
+					<span class="sr-only">from </span>9:00 <span aria-hidden="true">-</span><span class="sr-only">to</span> 18:00
+					CET
+				</p>
+				<p>Text "call me" plus your country code & number to</p>
+				<p><a href="tel:0000000000">0000000000</a></p>
+			</section>
+			<div id="page3" style="display:none;">
+				<nav aria-label="breadcrumbs" class="breadcrumb">
+					<ol>
+						<li>
+							<a href="#">Services</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>Chat</li>
+					</ol>
+				</nav>
+				<div class="flex">
+					<nav aria-label="contact us" class="contactus-nav">
+						<h2>Services</h2>
+						<ul>
+							<li>
+								<a href="?page3" aria-current="page"><i class="arrow right" aria-hidden="true"></i>Chat</a>
+							</li>
+							<li><a href="?page4">Call</a></li>
+							<li><a href="#">Email</a></li>
+						</ul>
+					</nav>
+					<section aria-labelledby="heading-call" class="content">
+						<h1 id="heading-call">Contact Us</h1>
+						<p>We're happy to help you!</p>
+						<p>Chat is available</p>
+						<p>24 hours / 7-days a week</p>
+						<button>Chat Now</button>
+					</section>
+				</div>
+			</div>
+			<div id="page4" style="display:none;">
+				<nav aria-label="breadcrumbs" class="breadcrumb">
+					<ol>
+						<li>
+							<a href="#">Services</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>Call</li>
+					</ol>
+				</nav>
+				<div class="flex">
+					<nav aria-label="contact us" class="contactus-nav">
+						<h2>Services</h2>
+						<ul>
+							<li><a href="?page3">Chat</a></li>
+							<li>
+								<a href="?page4" aria-current="page"><i class="arrow right" aria-hidden="true"></i>Call</a>
+							</li>
+							<li><a href="#">Email</a></li>
+						</ul>
+					</nav>
+					<section aria-labelledby="heading-call" class="content">
+						<h1 id="heading-call">Contact Us</h1>
+						<p>We're happy to help you!</p>
+						<p>You can call us from Monday to Friday</p>
+						<p>
+							<span class="sr-only">from </span>9:00 <span aria-hidden="true">-</span
+							><span class="sr-only">to</span> 18:00 CET
+						</p>
+						<p><a href="tel:0000000000">0000000000</a></p>
+					</section>
+				</div>
+			</div>
+		</main>
+		<script>
+			var urlParams = new URLSearchParams(window.location.search)
+			var page = urlParams.get('page')
+			if (page == '60e950cff70bf1ec60a702086748ab4dec361514') {
+				page = '1'
+			} else if (page == 'c1d4e0f067462f4b28716f028d9213a25eb82f28') {
+				page = '2'
+			}
+			document.getElementById('page' + page).style.display = 'block'
+		</script>
+	</body>
+</html>

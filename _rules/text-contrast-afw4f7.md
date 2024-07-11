@@ -298,12 +298,12 @@ This text in a [semantic button][semantic role] has a contrast ratio of 3.85:1.
 
 #### Failed Example 11
 
-This black text has a contrast ratio between 4.11:1 and 4.17:1 on gray background with white text shadow on it.
+The grey text has a contrast between 2.7:1 and 2.9:1 against the grey text shadow.
 
 ```html
-<p style="color: #000; background: #676767; text-shadow: white 0 0 40px">
-	Some text in a human language
-</p>
+<p style="color: #666; text-shadow: #aaa 2px 2px 4px, #aaa -2px 2px 4px, #aaa 2px -2px 4px, #aaa -2px -2px 4px;">
+    Some text in a human language
+  </p>
 ```
 
 ### Inapplicable

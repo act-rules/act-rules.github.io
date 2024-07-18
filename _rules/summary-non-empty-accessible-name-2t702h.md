@@ -46,6 +46,8 @@ This rule is only applicable to `summary` elements that the browser will use as 
 
 If the `summary` element is not included in the accessibility tree, but is still included in sequential focus navigation, this can result in accessibility issues not tested by this rule. This is covered under [Element with aria-hidden has no content in sequential focus navigation][6cfa84].
 
+Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [HTML in ARIA](https://www.w3.org/TR/html-aria/#docconformance#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
+
 ### Bibliography
 
 - [HTML Accessibility API Mappings 1.0 (working draft), 5.2 `input type="button"`, `input type="submit"` and `input type="reset"`](https://www.w3.org/TR/html-aam/#input-type-button-input-type-submit-and-input-type-reset)

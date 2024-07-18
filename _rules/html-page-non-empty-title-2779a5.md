@@ -210,7 +210,7 @@ This page does not have a title because the shadow root is not a [descendant](ht
 		</template>
 		<script>
       			const host = document.querySelector("body");
-      			const shadow = host.attachShadow({ mode: "closed" });
+      			const shadow = host.attachShadow({ mode: "open" });
       			const template = document.getElementById("shadow-element");
 
       			shadow.appendChild(template.content);

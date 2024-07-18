@@ -102,6 +102,18 @@ This `summary` element has an [accessible name][] because of its text content. I
 </details>
 ```
 
+#### Passed Example 5
+
+This first `summary` element has an [accessible name][] because of its text content. The second `summary` element is inapplicable because only the first `summary` element will be used as a control for the `details` element.
+
+```html
+<details>
+	<summary>Opening times</summary>
+	<summary></summary>
+	<p>This is a website. We are available 24/7.</p>
+</details>
+```
+
 ### Failed
 
 #### Failed Example 1

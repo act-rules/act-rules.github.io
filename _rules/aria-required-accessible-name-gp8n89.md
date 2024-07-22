@@ -192,10 +192,10 @@ The `dialog` role accepts an [accessible name][] only from the author and not fr
 
 #### Failed Example 6
 
-The `div` element with role `heading` has an empty [accessible name][] due to the empty `aria-label` [attribute value][].
+The `div` element with role `heading` has an empty [accessible name][] due to the `display: none` CSS property set to its content.
 
 ```html
-  <div role="heading" aria-level="1" aria-label="">Terms</div>
+  <div role="heading" aria-level="1"><span style="display: none">Terms</span></div>
 ```
 
 #### Failed Example 7

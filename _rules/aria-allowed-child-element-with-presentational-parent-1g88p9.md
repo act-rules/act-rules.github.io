@@ -24,7 +24,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][], is an [allowed child element](https://w3c.github.io/aria/#mustContain) of another element with an [explicit semantic role][] of `none` or `presentation`.
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][], is an [allowed child element](https://www.w3.org/TR/wai-aria-1.3/#mustContain) of another element with an [explicit semantic role][] of `none` or `presentation`.
 
 ## Expectation
 

@@ -54,7 +54,7 @@ The [accessible name and description computation][] suggests that if an `aria-la
 
 Although this ARIA rule mandates authors to ensure an [accessible name][] for each [HTML or SVG element][] [included in the accessibility tree][] and possessing a [WAI-ARIA 1.2][wai-aria 1.2] [semantic role][] requiring an [accessible name][], it does not automatically constitute a WCAG accessibility violation.
 
-For instance, consider a `search` landmark comprising a `form` element with a search label, search input, and search submit button. According to ARIA specifications, both the `search` role and the `form` role necessitate an [accessible name][]. However, adhering strictly to this rule may lead to repetitive announcements by assistive technologies like screen readers, overwhelming users. Therefore, while this might technically breach ARIA specs, it does not necessarily translate to a violation of WCAG accessibility standards.
+For instance, consider a `search` landmark comprising an element with the `form` role, a search label, a search input, and a search submit button. According to ARIA specifications, the `searchbox` role necessitate an [accessible name][]. However, adhering strictly to this rule may lead to repetitive announcements by assistive technologies like screen readers, overwhelming users. Therefore, while this might technically breach ARIA specs, it does not necessarily translate to a violation of WCAG accessibility standards.
 
 Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
 

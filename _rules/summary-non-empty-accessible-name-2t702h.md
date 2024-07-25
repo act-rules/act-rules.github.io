@@ -21,11 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to HTML `summary` elements where all of the following are true:
-
-- the element is [included in the accessibility tree][]; and
-- the element's [DOM tree][] parent is an HTML `details` element; and
-- the element is the first `summary` element of its siblings; and
+This rule applies to HTML `summary` elements [included in the accessibility tree][] that works as the [summary button for its parent `details` element][details summary].
 - the element has no [explicit role][], or the [explicit role][] is ignored due to a [presentational role conflict][].
 
 ## Expectation
@@ -46,7 +42,7 @@ This rule is only applicable to `summary` elements that the browser will use as 
 
 If the `summary` element is not included in the accessibility tree, but is still included in sequential focus navigation, this can result in accessibility issues not tested by this rule. This is covered under [Element with aria-hidden has no content in sequential focus navigation][6cfa84].
 
-Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [HTML in ARIA](https://www.w3.org/TR/html-aria/#docconformance#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
+Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [HTML in ARIA](https://www.w3.org/TR/html-aria/#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
 
 ### Bibliography
 
@@ -191,5 +187,6 @@ This `summary` element is hidden to everyone.
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
+[details summary]: https://html.spec.whatwg.org/multipage/interactive-elements.html#summary-for-its-parent-details ' HTML 5 definition of summary for its parent details'
 [97a4e1]: https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/
 [6cfa84]: https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/

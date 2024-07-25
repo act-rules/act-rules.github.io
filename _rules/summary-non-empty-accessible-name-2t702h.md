@@ -161,7 +161,7 @@ This `summary` element is not a direct child of a `details` element and so will 
 
 #### Inapplicable Example 3
 
-This `summary` element has an explicit semantic role of `button`. These are tested under [Button has non-empty accessible name][97a4e1] instead.
+This `summary` element has an explicit semantic role of `button`. These are tested under [Button has non-empty accessible name][97a4e1] instead. Note that while this example does not fail WCAG, [ARIA in HTML](https://www.w3.org/TR/html-aria/#dfn-no-role) does not allow overriding the role of a [summary for its parent details][details summary].
 
 ```html
 <details>

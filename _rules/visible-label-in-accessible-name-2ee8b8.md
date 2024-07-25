@@ -45,7 +45,9 @@ For the target element, the [visible inner text][] is contained within the [acce
 
 This rule assumes that the [visible inner text][] is equal to the [label][https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#dfn-label] in most cases (enough cases to be useful) even though "label" is not precisely defined at this point in history.
 
-This rule assumes that neither the label nor the [visible inner text][] are rearranged with CSS in some way so that they appear to the user in a different order than they do in the DOM.
+This rule assumes that neither the label nor the [visible inner text][] are rearranged with CSS so that they appear to the user in a different order than they appear in the DOM.
+
+This rule assumes that for any word which appears in both the accessible name and the visible label, the same spelling and hyphenation is used in both places.  For example: if "non-negative" is used in the accessible name and "nonnegative" is used in the visible label, that would violate this assumption.  Or if "color" is used in the accessible name and "colour" is used in the visible label, that would also violate this assumption.
 
 This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
 

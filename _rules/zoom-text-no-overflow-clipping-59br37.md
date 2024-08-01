@@ -85,7 +85,7 @@ This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 
 #### Passed Example 2
 
-This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. This fulfills expectation 1. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].```
+This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. This fulfills expectation 1. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px;">
@@ -97,7 +97,7 @@ This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` a
 
 #### Passed Example 3
 
-This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. A link to a full version of the poem is also provided.  Similarly to Passed Example 2: strictly speaking, the link to a full version is not necessary to pass the rule.  This example passes the rule because the way it uses `line-height` causes it to pass Expectation 2.  The link to a full version _is_ necessary to pass the success criterion.
+This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. This fulfills expectation 2. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <style>

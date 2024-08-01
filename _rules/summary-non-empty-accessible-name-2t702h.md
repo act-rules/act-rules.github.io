@@ -37,7 +37,7 @@ The rule assumes that all `summary` elements are [user interface components as d
 
 ## Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+There is a difference in how user agents expose the triangle indicating the control's expand state. As a result, some user agents include the triangle in the accessible name of the summary element.
 
 ## Background
 

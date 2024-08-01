@@ -29,7 +29,7 @@ This rule applies to HTML `summary` elements for which all the following is true
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`).
+Each target element has an [accessible name][] that is not empty (`""`), nor just the name of the marker pseudo element.
 
 ## Assumptions
 

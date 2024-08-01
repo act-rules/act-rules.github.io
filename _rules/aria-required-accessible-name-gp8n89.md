@@ -200,11 +200,11 @@ The `div` element with role `heading` has an empty [accessible name][] due to th
 
 #### Failed Example 7
 
-The `div` element with role `heading` has an empty [accessible name][] given by its `aria-labelledby` attribute.
+The `button` element has an empty [accessible name][] given by its `aria-labelledby` attribute.
 
 ```html
 <span id="fail-heading"></span>
-<div role="heading" aria-level="1" aria-labelledby="fail-heading">ACT Rules</div>
+<button aria-labelledby="fail-heading">Submit</button>
 ```
 
 #### Failed Example 8

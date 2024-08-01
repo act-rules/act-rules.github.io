@@ -29,7 +29,7 @@ This rule applies to HTML `summary` elements for which all the following is true
 
 ## Expectation
 
-Each target element has an [accessible name][] that is not empty (`""`), nor just the name of the marker pseudo element.
+Each target element has an [accessible name][] that is not empty (`""`), nor just the name of the `::marker` pseudo element.
 
 ## Assumptions
 
@@ -119,7 +119,7 @@ This first `summary` element has an [accessible name][] because of its text cont
 
 #### Failed Example 1
 
-This `summary` element has no [accessible name][] because it has no content or attribute that can provide it.
+This `summary` element has no [accessible name][], or an accessible name with just the `::marker` pseudo element, because it has no content or attribute that can provide it.
 
 ```html
 <details>
@@ -135,6 +135,18 @@ This `summary` element has an [explicit role][] of `none`. However, it is [focus
 ```html
 <details>
 	<summary role="none"></summary>
+	<p>This is a website. We are available 24/7.</p>
+</details>
+```
+
+#### Failed Example 3
+
+This first `summary` element has no [accessible name][] because it is empty. The second `summary` element is inapplicable because only the first `summary` element will be used as a control for the `details` element.
+
+```html
+<details>
+	<summary></summary>
+	<summary>Opening times</summary>
 	<p>This is a website. We are available 24/7.</p>
 </details>
 ```

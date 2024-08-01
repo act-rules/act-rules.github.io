@@ -87,38 +87,38 @@ use [standard keyboard navigation](#standard-keyboard-navigation) using the Esca
 ```html
 <div>Main page content with <a href="#">some link</a></div>
 <div aria-hidden="true">
-	<a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
-		>Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
-	>
+    <a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
+    >
 </div>
 <div
-	id="sampleModal"
-	role="dialog"
-	aria-label="Sample Modal"
-	aria-modal="true"
-	style="border: solid black 1px; padding: 1rem;"
+    id="sampleModal"
+    role="dialog"
+    aria-label="Sample Modal"
+    aria-modal="true"
+    style="border: solid black 1px; padding: 1rem;"
 >
-	<label>First and last name <input id="dialogFirst"/></label><br />
-	<button id="closeButton">Close button</button>
+    <label>First and last name <input id="dialogFirst"/></label><br />
+    <button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
-	<a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
-		>Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
-	>
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
+    >
 </div>
 <script>
     window.addEventListener('load', () => {
         document.getElementById('dialogFirst').focus();
     })
-	document.getElementById('sentinelBefore').addEventListener('focus', () => {
-		document.getElementById('closeButton').focus()
-	})
-	document.getElementById('sentinelAfter').addEventListener('focus', () => {
-		document.getElementById('dialogFirst').focus()
-	})
-	document.getElementById('closeButton').addEventListener('click', () => {
-		document.getElementById('sampleModal').style.display = 'none'
-	})
+    document.getElementById('sentinelBefore').addEventListener('focus', () => {
+        document.getElementById('closeButton').focus()
+    })
+    document.getElementById('sentinelAfter').addEventListener('focus', () => {
+        document.getElementById('dialogFirst').focus()
+    })
+    document.getElementById('closeButton').addEventListener('click', () => {
+        document.getElementById('sampleModal').style.display = 'none'
+    })
     document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
         if (evt.key === "Escape") {
             document.getElementById('sampleModal').style.display = 'none';    

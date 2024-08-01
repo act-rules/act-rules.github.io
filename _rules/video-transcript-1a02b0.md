@@ -56,7 +56,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-Some major browsers do not automatically play the 'video' unless it is muted, which makes the rule inapplicable in these browsers. The rule still applies to browsers that autoplay an audible 'video'.
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time-based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media). 
 
 ### Bibliography
 

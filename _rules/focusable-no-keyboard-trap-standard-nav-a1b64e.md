@@ -67,7 +67,7 @@ These [focusable][] elements do not create a trap for keyboard navigation.
 This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
-<div tabindex="1">Text</div>
+<div role="button" tabindex="1">Text</div>
 ```
 
 #### Passed Example 3

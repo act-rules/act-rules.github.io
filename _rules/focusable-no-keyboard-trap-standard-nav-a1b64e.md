@@ -107,9 +107,9 @@ use [standard keyboard navigation](#standard-keyboard-navigation) using the Esca
 	>
 </div>
 <script>
-  window.addEventListener('load', () => {
-    document.getElementById('dialogFirst').focus();
-  })
+    window.addEventListener('load', () => {
+        document.getElementById('dialogFirst').focus();
+    })
 	document.getElementById('sentinelBefore').addEventListener('focus', () => {
 		document.getElementById('closeButton').focus()
 	})
@@ -119,11 +119,11 @@ use [standard keyboard navigation](#standard-keyboard-navigation) using the Esca
 	document.getElementById('closeButton').addEventListener('click', () => {
 		document.getElementById('sampleModal').style.display = 'none'
 	})
-  document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
-    if (evt.key === "Escape") {
-      document.getElementById('sampleModal').style.display = 'none';    
-    }
-  })
+    document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") {
+            document.getElementById('sampleModal').style.display = 'none';    
+        }
+    })
 </script>
 ```
 

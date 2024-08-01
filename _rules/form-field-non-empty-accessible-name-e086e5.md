@@ -10,6 +10,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **more strict** than this rule. This is because 1.3.1 Info and Relationship requires that information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text, while 4.1.2 Name, Role, Value only requires an accessible name.
+  wcag20:2.5.3: # Label in Name (A)
+    secondary: This success criterion is **more strict** than this rule. This is because 2.5.3 Label in Name requires that if a label is visible, the accessible name contains the label that is presented visually, while 4.1.2 Name, Role, Value only requires an accessible name.
 input_aspects:
   - Accessibility Tree
   - CSS styling

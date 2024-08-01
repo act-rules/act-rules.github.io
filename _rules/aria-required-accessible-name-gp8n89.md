@@ -257,14 +257,6 @@ This `button` element has an [explicit semantic role][] of `none`. leading to a 
 <button role="none">submit</button>
 ```
 
-<!-- Boundary example for future improvement -->
-<!--#### Inapplicable Example 5
-
-This `button` element has an [explicit semantic role][] of `none`. Although the [Presentational Roles Conflict Resolution][] requires the author to provide an [accessible name][], the [explicit semantic role][] does not require an [accessible name][] for this rule.
-
-```html
-<button role="none"></button>
-```-->
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [attribute value]: #attribute-value 'Definition of attribute value'

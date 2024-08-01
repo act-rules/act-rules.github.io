@@ -257,7 +257,6 @@ This `button` element has an [explicit semantic role][] of `none`. leading to a 
 <button role="none">submit</button>
 ```
 
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [attribute value]: #attribute-value 'Definition of attribute value'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

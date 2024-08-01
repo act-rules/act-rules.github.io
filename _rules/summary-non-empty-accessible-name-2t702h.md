@@ -25,7 +25,7 @@ This rule applies to HTML `summary` elements for which all the following is true
 
 - the element is  [included in the accessibility tree][]; and
 - the element works as the [summary button for its parent `details` element][details summary]; and
-- the element has no [explicit role][], or the [explicit role][] is ignored due to a [presentational role conflict].[].
+- the element has no [explicit role][], or the [explicit role][] is ignored due to a [presentational role conflict][].
 
 ## Expectation
 
@@ -33,11 +33,11 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 ## Assumptions
 
-- The rule assumes that all `summary` elements are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
+The rule assumes that all `summary` elements are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
 
 ## Accessibility Support
 
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ## Background
 
@@ -45,13 +45,14 @@ This rule is only applicable to `summary` elements that the browser will use as 
 
 If the `summary` element is not included in the accessibility tree, but is still included in sequential focus navigation, this can result in accessibility issues not tested by this rule. This is covered under [Element with aria-hidden has no content in sequential focus navigation][6cfa84].
 
-Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [HTML in ARIA](https://www.w3.org/TR/html-aria/#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
+Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
 
 ### Bibliography
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
+- [Summary element entry for ARIA in HTML](https://www.w3.org/TR/html-aria/#el-summary)
 
 ## Test Cases
 
@@ -163,7 +164,7 @@ This `summary` element is not a direct child of a `details` element and so will 
 
 #### Inapplicable Example 3
 
-This `summary` element has an explicit semantic role of `button`. These are tested under [Button has non-empty accessible name][97a4e1] instead. Note that while this example does not fail WCAG, [ARIA in HTML](https://www.w3.org/TR/html-aria/#dfn-no-role) does not allow overriding the role of a [summary for its parent details][details summary].
+This `summary` element has an explicit semantic role of `button`. These are tested under [Button has non-empty accessible name][97a4e1] instead. Note that while this example does not fail WCAG, under [ARIA in HTML](https://www.w3.org/TR/html-aria/#dfn-no-role) it is not allowed to override the role of a [summary for its parent details][details summary].
 
 ```html
 <details>

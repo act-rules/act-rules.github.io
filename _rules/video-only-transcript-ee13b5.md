@@ -12,6 +12,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the video may be a media alternative for text. Some of the failed examples satisfy this success criterion.
+ wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **more strict** than this rule. This is because the rule is not intended to test this requirement. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -92,6 +94,22 @@ This `video` element, which has no audio, has a transcript which conveys informa
 </html>
 ```
 
+#### Passed Example 3
+
+This `video` element, which has no audio, has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+<video controls>
+  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+</video>
+<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yawns, and then starts walking.
+Then he stops to scratch his bottom.</p>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -135,22 +153,6 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yawns, and then starts walking.
-Then he stops to scratch his bottom.</p>
-</html>
-```
-
-#### Failed Example 4
-
-This `video` element, which has no audio, has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-<video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
-</video>
-<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>

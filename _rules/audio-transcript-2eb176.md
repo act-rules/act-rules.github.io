@@ -7,6 +7,8 @@ description: |
 accessibility_requirements:
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the audio may be a media alternative for text. Some of the failed examples satisfy this success criterion.
+ wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **more strict** than this rule. This is because the rule is not intended to test this requirement. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -27,7 +29,7 @@ acknowledgments:
 
 This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
-- the element has an `autoplay` [attribute value][] of `true`; or
+- the element has an [autoplay][] [attribute value][] of `true`; or
 - the element has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
@@ -46,7 +48,7 @@ There are no accessibility support issues known.
 
 ## Background
 
-Some major browsers do not automatically play the 'video' unless it is muted, which makes the rule inapplicable in these browsers. The rule still applies to browsers that autoplay an audible 'video'.
+Some major browsers do not automatically play the 'video' unless it is muted, which makes the rule inapplicable in these browsers. The rule still applies to browsers that [autoplay][] an audible 'video'.
 
 ### Bibliography
 
@@ -86,7 +88,7 @@ This `audio` element has native player controls and an external transcript.
 
 #### Passed Example 3
 
-This `audio` element has an `autoplay` attribute and an external transcript.
+This `audio` element has an [autoplay][] attribute and an external transcript.
 
 ```html
 <html lang="en">
@@ -152,7 +154,7 @@ This `audio` element has native player controls and an incorrect external transc
 
 #### Failed Example 4
 
-This `audio` element has an `autoplay` attribute and an incorrect external transcript.
+This `audio` element has an [autoplay][] attribute and an incorrect external transcript.
 
 ```html
 <html lang="en">
@@ -202,3 +204,4 @@ This `audio` element has hidden native player controls.
 [play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[autoplay]: #autoplay 'Definition of autoplay'

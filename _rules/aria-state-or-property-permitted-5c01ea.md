@@ -230,16 +230,6 @@ The `aria-label` property is [prohibited][] for an element with a `paragraph` ro
 <div role="paragraph" aria-label="Bananas"></div>
 ```
 
-#### Failed Example 5
-
-The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` properties are not [supported][] for an element with a `separator` role that is not [focusable][].
-
-```html
-<div>ACT rules are cool!</div>
-<div style="border: 1px solid #000;" role="separator" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-<div>ACT rules are useful!</div>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

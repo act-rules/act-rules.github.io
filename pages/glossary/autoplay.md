@@ -6,7 +6,7 @@ objective: true
 
 ---
 
-An `audio` or `video` element _autoplays_ if the included media starts playing without the user interacting with the element.
+An `audio` or `video` element _autoplays_ if the included media starts playing without the user activating a control.
 
 #### Accessibility Support
 

@@ -207,7 +207,7 @@
 	"jest": {
 		"verbose": false,
 		"setupFilesAfterEnv": [
-			"jest-extended",
+			"jest-extended/all",
 			"jest-27-expect-message"
 		],
 		"testPathIgnorePatterns": [

@@ -2,7 +2,8 @@
 title: Autoplay
 key: Autoplay
 unambiguous: true
-objective: false
+objective: true
+
 ---
 
 An `audio` or `video` element _autoplays_ if the included media starts playing without the user interacting with the element.

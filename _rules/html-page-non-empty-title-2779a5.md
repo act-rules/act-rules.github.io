@@ -90,12 +90,16 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that serves as the title for the page and the `iframe` since the `iframe` does not have its own.
+This page has a `title` element that serves as the title for the page. This rule doesn't take into account HTML pages embedded into the target document.
 
 ```html
 <html>
-	<title>This page gives a title to an iframe</title>
-	<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<head>
+		<title>This page gives a title to an iframe</title>
+	</head>
+	<body>
+		<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	</body>
 </html>
 ```
 

@@ -130,7 +130,7 @@ This `summary` element has no [accessible name][], or an accessible name with ju
 
 #### Failed Example 2
 
-This `summary` element has an [explicit role][] of `none`. However, it is [focusable][] (by default) which causes [Presentational Roles Conflict Resolution][]. It fails because it has an empty [accessible name][].
+This `summary` element has an [explicit role][] of `none`. However, it is [focusable][] (by default) which causes [Presentational Roles Conflict Resolution][presentational roles conflict]. It fails because it has an empty [accessible name][].
 
 ```html
 <details>
@@ -200,7 +200,7 @@ This `summary` element is hidden to everyone.
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [details summary]: https://html.spec.whatwg.org/multipage/interactive-elements.html#summary-for-its-parent-details ' HTML 5 definition of summary for its parent details'
 [97a4e1]: https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/
 [6cfa84]: https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/

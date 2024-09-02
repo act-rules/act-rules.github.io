@@ -25,7 +25,7 @@ This rule applies to HTML `summary` elements for which all the following is true
 
 - the element is [included in the accessibility tree][]; and
 - the element works as the [summary button for its parent `details` element][details summary]; and
-- the element has no [explicit role][], or the [explicit role][] is ignored due to a [presentational role conflict][].
+- the element has no [explicit role][], or the [explicit role][] is ignored due to a [presentational role conflict][presentational roles conflict].
 
 ## Expectation
 

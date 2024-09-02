@@ -21,7 +21,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to HTML `summary` elements for which all the following is true:
+This rule applies to HTML `summary` elements for which all the following are true:
 
 - the element is [included in the accessibility tree][]; and
 - the element works as the [summary button for its parent `details` element][details summary]; and

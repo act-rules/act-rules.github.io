@@ -202,6 +202,27 @@ This page has a `title` element that only contains a separator character.
 </html>
 ```
 
+#### Failed Example 6
+
+This page does not have a title because the shadow root is not a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element).
+
+```html
+<html>
+	<body>
+		<template id="shadow-element">
+			<title>This is the page title</title>
+		</template>
+		<script>
+      			const host = document.querySelector("body");
+      			const shadow = host.attachShadow({ mode: "open" });
+      			const template = document.getElementById("shadow-element");
+
+      			shadow.appendChild(template.content);
+    		</script>
+	</body>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

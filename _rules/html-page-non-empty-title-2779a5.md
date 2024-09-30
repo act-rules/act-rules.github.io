@@ -51,7 +51,7 @@ For each target element, the first [HTML][] `title` element that is a [descendan
 
 ## Assumptions
 
-This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG22/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the HTML 5.2 specification describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
+This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG22/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the [HTML specification](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
 
 This rule assumes that the title of the page is not provided by a higher-level protocol. For example, the subject field of an email authored in HTML can provide a title without requiring a `title` element. In such a case, this rule will fail while [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG22/#page-titled) may still be satisfied.
 
@@ -90,12 +90,16 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that serves as the title for the page and the `iframe` since the `iframe` does not have its own.
+This page has a `title` element that serves as the title for the page. This rule doesn't take into account HTML pages embedded into the target document.
 
 ```html
 <html>
-	<title>This page gives a title to an iframe</title>
-	<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<head>
+		<title>This page gives a title to an iframe</title>
+	</head>
+	<body>
+		<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	</body>
 </html>
 ```
 

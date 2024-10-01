@@ -10,6 +10,7 @@
 - https
 - wai-aria
 - validator
+- 8lzn42
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -88,6 +89,7 @@
 - rfc
 - webauthn
 - customizable
+- ua #lowercase needed in reference list
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete
@@ -136,7 +138,7 @@
 - ozplayer
 - GitHub
 
-# Test case anamolies
+# Test case anomalies
 - brewitt-taylor
 - level2-frame1
 - level1-frame2
@@ -210,6 +212,11 @@
 - dom-meta-content
 - showModal
 
+# Javascript identifiers
+- clientRects
+- getBoundingClientRect
+- getClientRects
+
 # Unsure why the dictionary does not have these words
 - programmatically
 - personalization
@@ -238,6 +245,7 @@
 - focusability
 - unitless
 - luminance
+- checkboxes # this seems to be the correct plural
 - disambiguated
 - grey
 
@@ -272,11 +280,20 @@
 - 10px
 - 15px
 - 16px
+- 18px
 - 20px
 - 24px
 - 25px
 - 30px
 - 32px
+- 35px
+- 40px
+- 41px
+- 44px
+- 45px
+- 48px
+- 50px
+- 54px
 
 # Language codes
 - da

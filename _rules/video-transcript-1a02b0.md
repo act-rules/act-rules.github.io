@@ -24,6 +24,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+    - Helen Burge
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -41,19 +42,21 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [visible][], and is either on the page or in a clearly labeled location.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+If a transcript is present, it is assumed it is in the accessibility tree. In order to satisfy WCAG, transcripts need to be available for all users, not just sighted users. This rule does not test this, and it needs to be tested separately.
 
 ## Accessibility Support
 
 There are no accessibility support issues known.
 
 ## Background
+
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time-based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media). 
 
 ### Bibliography
 
@@ -145,5 +148,4 @@ A video element that is not [visible][].
 </html>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [visible]: #visible 'Definition of visible'

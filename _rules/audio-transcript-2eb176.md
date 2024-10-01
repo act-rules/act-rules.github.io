@@ -5,6 +5,10 @@ rule_type: atomic
 description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.
 accessibility_requirements:
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the audio may be a media alternative for text. Some of the failed examples satisfy this success criterion.
+ wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **more strict** than this rule. This is because the rule is not intended to test this requirement. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -13,6 +17,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Brian Bors
+    - Helen Burge
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -22,26 +27,28 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element that is:
+This rule applies to every [non-streaming](#non-streaming-media-element) `audio` element for which at least one of the following is true:
 
-- playing; or,
-- has a [play button][] that is [visible][] and [included in the accessibility tree][].
+- the element has an [autoplay][] [attribute value][] of `true`; or
+- the element has a [play button][] that is [visible][] and [included in the accessibility tree][].
 
 ## Expectation
 
-The auditory information of each test target is available through a text transcript. That text transcript is [visible][] and [included in the accessibility tree][], either on the page or through a link.
+The auditory information of each test target is available through a text transcript. That text transcript is [visible][], either on the page or through a [clearly labeled location][].
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
 ## Assumptions
 
-There are no assumptions.
+If a transcript is present, it is assumed it is in the accessibility tree. In order to satisfy WCAG, transcripts need to be available for all users, not just sighted users. This rule does not test this, and it needs to be tested separately.
 
 ## Accessibility Support
 
 There are no accessibility support issues known.
 
 ## Background
+
+Some major browsers do not automatically play the 'video' unless it is muted, which makes the rule inapplicable in these browsers. The rule still applies to browsers that [autoplay][] an audible 'video'.
 
 ### Bibliography
 
@@ -81,12 +88,28 @@ This `audio` element has native player controls and an external transcript.
 
 #### Passed Example 3
 
-This `audio` element has an `autoplay` attribute and an external transcript.
+This `audio` element has an [autoplay][] attribute and an external transcript.
 
 ```html
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" autoplay></audio>
 	<a href="/test-assets/moon-audio/moon-speech-transcript.html">Transcript</a>
+</html>
+```
+
+#### Passed Example 4
+
+This `audio` element has native player controls and an internal transcript that is not exposed to the accessibility tree.
+
+```html
+<html lang="en">
+	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
+	<p aria-hidden="true">
+		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
+		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
+		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
+		postpone, and one which we intend to win, and the others, too.
+	</p>
 </html>
 ```
 
@@ -131,7 +154,7 @@ This `audio` element has native player controls and an incorrect external transc
 
 #### Failed Example 4
 
-This `audio` element has an `autoplay` attribute and an incorrect external transcript.
+This `audio` element has an [autoplay][] attribute and an incorrect external transcript.
 
 ```html
 <html lang="en">
@@ -148,22 +171,6 @@ This `audio` element has native player controls and a [non-visible][visible] int
 <html lang="en">
 	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
 	<p style="text-indent: -9999px;">
-		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
-		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
-		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
-		postpone, and one which we intend to win, and the others, too.
-	</p>
-</html>
-```
-
-#### Failed Example 6
-
-This `audio` element has native player controls and an internal transcript that is not exposed to the accessibility tree.
-
-```html
-<html lang="en">
-	<audio src="/test-assets/moon-audio/moon-speech.mp3" controls></audio>
-	<p aria-hidden="true">
 		The above audio contains the following speech: We choose to go to the moon in this decade and do the other things,
 		not because they are easy, but because they are hard, because that goal will serve to organize and measure the best
 		of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to
@@ -194,6 +201,7 @@ This `audio` element has hidden native player controls.
 </html>
 ```
 
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [play button]: #play-button 'Definition of play button'
 [visible]: #visible 'Definition of visible'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[autoplay]: #autoplay 'Definition of autoplay'

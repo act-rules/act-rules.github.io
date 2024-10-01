@@ -10,6 +10,9 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **related** to this rule. This is because the absence of a transcript means that information conveyed through visual means in the video-only content remains inaccessible to certain users, thus creating inequality in communication.
+
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -36,11 +39,12 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [included in the accessibility tree][], and is either on the page or linked.
 
 ## Assumptions
 
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- Users who are not visually impaired can comprehend the contents of the video through visual cues and information presented visually.
 
 ## Accessibility Support
 
@@ -61,7 +65,7 @@ A "text transcript" in the context of this rule is defined in WCAG 2 as an [alte
 
 #### Passed Example 1
 
-This `video` element, which has no audio, has a text transcript available on the same page.
+This `video` element, which has no audio, has a visible text transcript available on the same page.
 
 ```html
 <html lang="en">
@@ -86,6 +90,22 @@ This `video` element, which has no audio, has a transcript which conveys informa
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
+```
+
+#### Passed Example 3
+
+This `video` element, which has no audio, has a non-visible text transcript available on the same page.
+
+```html
+<html lang="en">
+<video controls>
+  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
+</video>
+<p style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">This video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yawns, and then starts walking.
+Then he stops to scratch his bottom.</p>
 </html>
 ```
 
@@ -131,7 +151,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p style="text-indent: -9999px;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+<p style="text-indent: -9999px;">This video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>
@@ -147,7 +167,7 @@ This `video` element, which has no audio, has a text transcript available on the
   <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
   <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
 </video>
-<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+<p aria-hidden="true">This video shows a giant fat rabbit climbing out of a hole in the ground.
 He stretches, yawns, and then starts walking.
 Then he stops to scratch his bottom.</p>
 </html>

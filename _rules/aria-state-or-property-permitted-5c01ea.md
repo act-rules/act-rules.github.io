@@ -36,7 +36,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
+This rule applies to any [WAI-ARIA state or property][] that is [explicitly set][aria set explicit] on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
 ## Expectation 1
 
@@ -63,6 +63,8 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
 
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
+
+This rule only applies to [explicitly set][aria set explicit] attributes since these have been provided by authors and using the wrong one is therefore an author issue. If an [implicitly set][aria set implicit] attribute is incorrect, this is not necessarily an author error, e.g., it can be the result of re-purposing an existing element.
 
 Assessing the value of the attribute is out of scope for this rule.
 
@@ -217,7 +219,18 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 <div role="button" aria-sort="" style="display:none;"></div>
 ```
 
+#### Inapplicable Example 3
+
+This `button` does not have any [explicitly set][aria set explicit] ARIA attribute. It has an [implicitly set][aria set implicit] `aria-checked` state, due to the [absence of a `checked` attribute][checked absent] on the `input` element with a `type` [attribute value][] of `checkbox`.
+
+```html
+<input type="checkbox" role="button" />
+```
+
+[aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
+[aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [attribute value]: #attribute-value 'Definition of attribute value'
+[checked absent]: https://www.w3.org/TR/html-aam-1.0/#att-checked-absent 'HTML Accessibility API Mappings, Attribute Checked absent'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'

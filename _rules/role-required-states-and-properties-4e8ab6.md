@@ -31,11 +31,13 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has an [explicit semantic role][], except if the element has an [implicit semantic role][] that is identical to the [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][].
 
 ## Expectation
 
-For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
+For each test target, the [WAI-ARIA required states and properties][] for the role are [set][aria set] and not empty (`""`).
+
+The attributes may be [explicitly set][aria set explicit], [implicitly set][aria set implicit], or [set by default][aria set default].
 
 ## Assumptions
 
@@ -51,7 +53,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
 
-This rule is testing author built components that specify [explicit semantic roles][explicit semantic role] and not components that keep their [implicit semantic role][]. For components that keep their [implicit semantic role][], all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState). Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings][html aam].
+The way the attribute is [set][aria set] doesn't matter for this rule. As long as authors can rely on User Agents or Assistive Technologies to set the attribute, this won't create problems for users. As per the [First Rule of ARIA use][], authors should rely on [implicitly set][aria set implicit] attributes when possible.
 
 ### Bibliography
 
@@ -65,7 +67,7 @@ This rule is testing author built components that specify [explicit semantic rol
 
 #### Passed Example 1
 
-This `heading` has the required `aria-level` property.
+This `heading` has the required `aria-level` property [explicitly set][aria set explicit].
 
 ```html
 <div role="heading" aria-level="1">
@@ -75,7 +77,7 @@ This `heading` has the required `aria-level` property.
 
 #### Passed Example 2
 
-This `checkbox` has the required `aria-checked` property.
+This `checkbox` has the required `aria-checked` property [explicitly set][aria set explicit].
 
 ```html
 <div role="checkbox" aria-checked="false" aria-labelledby="label"></div>
@@ -84,7 +86,7 @@ This `checkbox` has the required `aria-checked` property.
 
 #### Passed Example 3
 
-This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
+This `scrollbar` has the required properties `aria-controls` and `aria-valuenow` [explicitly set][aria set explicit]. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100 and are thus [set by default][aria set default].
 
 ```html
 <div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>
@@ -93,7 +95,7 @@ This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`
 
 #### Passed Example 4
 
-These `option` nodes do not need the required `aria-selected` property because it has a default value of `false`.
+These `option` nodes have the required `aria-selected` property [set by default][aria set default].
 
 ```html
 <div id="label">Tags</div>
@@ -105,7 +107,7 @@ These `option` nodes do not need the required `aria-selected` property because i
 
 #### Passed Example 5
 
-This `separator` is not a `widget` because it is not [focusable][]. The `separator` role only requires the `aria-valuenow` property when the element is focusable.
+This `separator` is not a `widget` because it is not [focusable][]. The `separator` role does not have any required property when the element is not focusable.
 
 ```html
 <p>My first HTML</p>
@@ -115,7 +117,7 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 #### Passed Example 6
 
-This `combobox` has the required properties `aria-controls` and `aria-expanded`.
+This `combobox` has the required properties `aria-controls` and `aria-expanded` [explicitly set][aria set explicit].
 
 ```html
 <label for="tag_combo">Tag</label>
@@ -126,11 +128,41 @@ This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 </ul>
 ```
 
+#### Passed Example 7
+
+This `checkbox` has its required `aria-checked` property [implicitly set][aria set implicit].
+
+```html
+<label>
+	<input type="checkbox" />
+	Check me
+</label>
+```
+
+#### Passed Example 8
+
+This `menuitemcheckbox` has its required `aria-checked` property [implicitly set][aria set implicit].
+
+```html
+<label>
+	<input type="checkbox" role="menuitemcheckbox" />
+	Check me
+</label>
+```
+
+#### Passed Example 9
+
+This `iframe` element is [included in the accessibility tree][], even without a role, and therefore has no [WAI-ARIA required states and properties][].
+
+```html
+<iframe srcdoc="<div>ACT rules are awesome!</div>" title="ACT rules" />
+```
+
 ### Failed
 
 #### Failed Example 1
 
-This `heading` does not have the required `aria-level` property. Prior to [WAI-ARIA 1.2][] the `heading` role had an implicit default `aria-level` value of `2`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `heading` does not have the required `aria-level` property. Prior to [WAI-ARIA 1.2][] the `heading` role had a default `aria-level` value of `2`. As of WAI-ARIA 1.2 this property must be [explicitly set][aria set explicit].
 
 ```html
 <div role="heading">
@@ -140,7 +172,7 @@ This `heading` does not have the required `aria-level` property. Prior to [WAI-A
 
 #### Failed Example 2
 
-This `switch` does not have the required `aria-checked` property. Prior to [WAI-ARIA 1.2][] the `switch` role had an implicit default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `switch` does not have the required `aria-checked` property. Prior to [WAI-ARIA 1.2][] the `switch` role had a default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be [explicitly set][aria set explicit].
 
 ```html
 <div role="switch">
@@ -150,7 +182,7 @@ This `switch` does not have the required `aria-checked` property. Prior to [WAI-
 
 #### Failed Example 3
 
-This `checkbox` does not have the required property `aria-checked`. Prior to [WAI-ARIA 1.2][] the `checkbox` had an implicit default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `checkbox` does not have the required property `aria-checked`. Prior to [WAI-ARIA 1.2][] the `checkbox` role had a default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be [explicitly set][aria set explicit].
 
 ```html
 <div role="checkbox" aria-labelledby="label"></div>
@@ -169,7 +201,7 @@ This `separator` does not have the required `aria-valuenow` property. This is re
 
 #### Failed Example 5
 
-This `combobox` does not have the required `aria-expanded` property. Prior to [WAI-ARIA 1.2][] the `combobox` had an implicit default `aria-expanded` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `combobox` does not have the required `aria-expanded` property. Prior to [WAI-ARIA 1.2][] the `combobox` had a default `aria-expanded` value of `false`. As of WAI-ARIA 1.2 this property must be [explicitly set][aria set explicit].
 
 ```html
 <label for="tag_combo">Tag</label>
@@ -197,7 +229,7 @@ This `combobox` uses `aria-owns` instead of using the required `aria-controls` p
 
 #### Inapplicable Example 1
 
-This `div` does not have a [semantic role](#semantic-role).
+This `div` is not [included in the accessibility tree][] due to its role of `generic`.
 
 ```html
 <div>Some Content</div>
@@ -205,23 +237,18 @@ This `div` does not have a [semantic role](#semantic-role).
 
 #### Inapplicable Example 2
 
-This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
-
-```html
-<input type="checkbox" role="checkbox" />
-```
-
-#### Inapplicable Example 3
-
 This `combobox` is not [included in the accessibility tree][] due to its styling, hiding it from everybody.
 
 ```html
 <div role="combobox" style="display:none;"></div>
 ```
 
+[aria set]: #aria-attribute-set 'Definition of ARIA Attribute Set'
+[aria set default]: #aria-attribute-set:default 'Definition of ARIA Attribute Set by Default'
+[aria set explicit]: #aria-attribute-set:explicit 'Definition of ARIA Attribute Set Explicitly'
+[aria set implicit]: #aria-attribute-set:implicit 'Definition of ARIA Attribute Set Implicitly'
 [explicit semantic role]: #explicit-role 'Definition of explicit semantic role'
-[html aam]: https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings 'Specification of HTML attributes value mapping to ARIA states and properties'
-[implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
+[first rule of aria use]: https://www.w3.org/TR/using-aria/#rule1 'First Rule of ARIA Use'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in The Accessibility Tree'
 [wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'

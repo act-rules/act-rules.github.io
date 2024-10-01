@@ -1,6 +1,6 @@
 ---
 id: 4c31df
-name: Audio or video element that plays automatically has a control mechanism
+name: DEPRECATED — Audio or video element that plays automatically has a control mechanism
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -28,6 +28,8 @@ htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'title-require'
+deprecated: |
+  This rule has been deprecated and superceded by Rule [`audio` or `video` avoids automatically playing audio](https://act-rules.github.io/rules/x0paj4). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

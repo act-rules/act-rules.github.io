@@ -1,6 +1,6 @@
 ---
 id: aaa1bf
-name: Audio or video element that plays automatically has no audio that lasts more than 3 seconds
+name: DEPRECATED — Audio or video element that plays automatically has no audio that lasts more than 3 seconds
 rule_type: atomic
 description: |
   `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
@@ -24,6 +24,8 @@ acknowledgments:
   assets:
     - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
     - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
+deprecated: |
+  This rule has been deprecated and superceded by Rule [`audio` or `video` avoids automatically playing audio](https://act-rules.github.io/rules/x0paj4). This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

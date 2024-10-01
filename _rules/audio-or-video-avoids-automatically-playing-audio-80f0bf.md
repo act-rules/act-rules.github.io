@@ -1,6 +1,6 @@
 ---
 id: 80f0bf
-name: Audio or video element avoids automatically playing audio
+name: DEPRECATED - Audio or video element avoids automatically playing audio
 rule_type: composite
 description: |
   This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
@@ -43,6 +43,8 @@ acknowledgments:
   assets:
     - Rabbit video is © copyright 2008, Blender Foundation / [www.bigbuckbunny.org](https://www.bigbuckbunny.org)
     - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
+deprecated: |
+  This rule has been deprecated and superceded by Rule [`audio` or `video` avoids automatically playing audio](https://act-rules.github.io/rules/x0paj4). This rule is not maintained anymore and should not be used.
 htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)

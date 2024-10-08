@@ -239,6 +239,23 @@ There is no element with an [explicit role][] different from its [implicit role]
 </ul>
 ```
 
+<details>
+<sumary>## Boundary Examples</sumary>
+
+These examples are not normative and not require for consistent implementations. They illustrate limitations and boundaries of the rule. Passed and Inapplicable examples in this category are likely to fail the rule's accessibility requirement, showing how the rule is only a partial test. Testing tools and methodologies are encouraged to be more clever than the rule, and to report the correct outcome for these examples. Therefore, they are not required for consistent implementation.
+
+### Inapplicable Examples
+
+#### Inapplicable Example 1
+
+This `li` element has an [explicit role][] identical to its [implicit role][] and therefore is not applicable. This nonetheless doesn't follow ARIA specifications since the resulting `listitem` does not have the required context role of `list`.
+
+```html
+<li role="listitem">List item 1</li>
+```
+
+</details>
+
 [accessibility tree]: https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility 'Definition of accessibility tree'
 [aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/ 'WAI ARIA 1.2 specifications'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'

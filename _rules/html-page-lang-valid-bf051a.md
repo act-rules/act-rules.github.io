@@ -138,6 +138,27 @@ This rule does not apply to `svg` elements.
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
 ```
 
+<details>
+<sumary>## Boundary Examples</sumary>
+
+These examples are not normative and not require for consistent implementations. They illustrate limitations and boundaries of the rule. Passed and Inapplicable examples in this category are likely to fail the rule's accessibility requirement, showing how the rule is only a partial test. Testing tools and methodologies are encouraged to be more clever than the rule, and to report the correct outcome for these examples. Therefore, they are not required for consistent implementation.
+
+### Inapplicable Examples
+
+#### Inapplicable Example 1
+
+This `html` element has an empty `lang` attribute. It is not applicable for this rule, but nonetheless fails [Success Criterion 3.1.1 Language of Page][sc311]. It also fails rule [HTML page has lang attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/).
+
+```html
+<html lang="">
+	<body>
+		I love ACT rules.
+	</body>
+</html>
+```
+
+</details>
+
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8
 [iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
 [region subtag]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.4 'Definition of region subtag'

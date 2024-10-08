@@ -270,6 +270,30 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 <a href="/"> Next<span class="mobile-hidden">: Web Content Accessibility Guidelines 2.1</span> </a>
 ```
 
+<details>
+<sumary>## Boundary Examples</sumary>
+
+These examples are not normative and not require for consistent implementations. They illustrate limitations and boundaries of the rule. Passed and Inapplicable examples in this category are likely to fail the rule's accessibility requirement, showing how the rule is only a partial test. Testing tools and methodologies are encouraged to be more clever than the rule, and to report the correct outcome for these examples. Therefore, they are not required for consistent implementation.
+
+### Inapplicable Examples
+
+#### Inapplicable Example 1
+
+None of these [text nodes][text node] has an [ancestor][] with `overflow: hidden` or `clip`. On a viewport of 640 by 512 pixels, the texts overlap and become unreadable, thus this fails [Success Criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG22/#resize-text). This rule only detects clipping, not overlapping.
+
+```html
+<div style="overflow: visible; height: 1.5em; font-size: 16px;">
+	Once upon a midnight dreary, while I pondered, weak and weary, Over many a quaint and curious volume of forgotten
+	lore. While I nodded, nearly napping, suddenly there came a tapping.
+</div>
+<div>
+	As of some one gently rapping, rapping at my chamber door. “’Tis some visitor,” I muttered, “tapping at my chamber
+	door— Only this and nothing more.”
+</div>
+```
+
+</details>
+
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'DOM ancestor, 2020/02/13'
 [bounding box]: https://www.w3.org/TR/css-ui-3/#valdef-box-sizing-border-box

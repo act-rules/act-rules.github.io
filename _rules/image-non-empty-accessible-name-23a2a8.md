@@ -243,6 +243,23 @@ This `img` element is hidden with `visibility: hidden`.
 </div>
 ```
 
+<details>
+<sumary>## Boundary Examples</sumary>
+
+These examples are not normative and not require for consistent implementations. They illustrate limitations and boundaries of the rule. Passed and Inapplicable examples in this category are likely to fail the rule's accessibility requirement, showing how the rule is only a partial test. Testing tools and methodologies are encouraged to be more clever than the rule, and to report the correct outcome for these examples. Therefore, they are not required for consistent implementation.
+
+### Passed Examples
+
+#### Passed Example 1
+
+This `img` element has a non-empty [accessible name][]. The name is not descriptive and therefore the image fails [Success Criterion 1.1.1 Non-text content][sc111], but this rule only check for existence of a name. This `img` also fails rule [Image accessible name is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/qt1vmo/).
+
+```html
+<img alt="Neil Armstrong walking on the Moon" src="/test-assets/shared/w3c-logo.png" />
+```
+
+</details>
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'

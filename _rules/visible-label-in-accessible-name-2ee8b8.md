@@ -196,6 +196,25 @@ This link has no [visible text content][].
 </a>
 ```
 
+<details>
+<sumary>## Boundary Examples</sumary>
+
+These examples are not normative and not require for consistent implementations. They illustrate limitations and boundaries of the rule. Passed and Inapplicable examples in this category are likely to fail the rule's accessibility requirement, showing how the rule is only a partial test. Testing tools and methodologies are encouraged to be more clever than the rule, and to report the correct outcome for these examples. Therefore, they are not required for consistent implementation.
+
+### Passed Examples
+
+#### Passed Example 1
+
+These buttons have text nodes that qualify as [non-text content][] and therefore pass this rule. The accessible names are not descriptive, thus they fail [Success Criterion 1.1.1 Non-Text Content](https://www.w3.org/WAI/WCAG22/#non-text-content).
+
+```html
+<button aria-label="Save">&lt;</button>
+<button aria-label="Close">&gt;</button>
+<button aria-label="Hello world">X</button>
+```
+
+</details>
+
 [accessible name]: #accessible-name 'Definition of accessible name'
 [match characters]: #matching-characters 'Definition of matching characters'
 [non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG Definition of Non-text content'

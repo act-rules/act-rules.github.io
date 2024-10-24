@@ -39,7 +39,7 @@ This rule applies to any [HTML element][] that has [visible][] [children][] in t
 
 ## Expectation
 
-Each test target is either included in [sequential focus navigation][] or has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][].
+Each test target is either included in [sequential focus navigation][] or has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][], unless the test target is [inert][].
 
 ## Assumptions
 
@@ -106,6 +106,46 @@ This [scrollable][] `section` element contains a link that is included in [seque
 		will also often make Web content more usable to users in general.
 	</p>
 </section>
+```
+
+#### Passed Example 3
+
+This [scrollable][] `section` element is [inert][] because of the modal dialog, so neither the `section` nor its [descendant][] elements are included in [sequential focus navigation][].
+
+```html
+<style>
+	dialog:-internal-dialog-in-top-layer::backdrop {
+    		background: rgba(1, 1, 1, 0.8);
+	}
+</style>
+<section style="height: 100px; width: 500px; overflow: scroll;" tabindex="0">
+	<h1>WCAG 2.1 Abstract</h1>
+	<p>
+		Web Content Accessibility Guidelines (WCAG) 2.1 covers a wide range of recommendations for making Web content more
+		accessible. Following these guidelines will make content more accessible to a wider range of people with
+		disabilities, including accommodations for blindness and low vision, deafness and hearing loss, limited movement,
+		speech disabilities, photosensitivity, and combinations of these, and some accommodation for learning disabilities
+		and cognitive limitations; but will not address every user need for people with these disabilities. These guidelines
+		address accessibility of web content on desktops, laptops, tablets, and mobile devices. Following these guidelines
+		will also often make Web content more usable to users in general.
+		<button id="ppButton" onclick="openDialog()">Read more about WCAG 2.2</button>
+	</p>
+</section>
+<dialog id="ppDialog" aria-labelledby="dialogLabel">
+	<h2 id="dialogLabel">WCAG 2.2</h2>
+	<p>
+		<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>
+	</p>
+	<button id="cancel" onclick="ppDialog.close()">Cancel</button>
+</dialog>
+<script>
+	const openDialog = () => {
+		ppDialog.showModal();
+		myFrame.tabIndex = '-1'
+	}
+	ppDialog.addEventListener('close', () => myFrame.tabIndex = 0)
+	window.addEventListener('DOMContentLoaded', openDialog);
+</script>
 ```
 
 ### Failed

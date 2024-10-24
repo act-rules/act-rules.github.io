@@ -1,6 +1,7 @@
 ---
 id: 5c01ea
 name: ARIA state or property is permitted
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
@@ -50,14 +51,6 @@ For each test target, one of the following is true:
 
 No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
-
 ## Background
 
 The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
@@ -65,6 +58,14 @@ The presence of prohibited ARIA attributes is often the result of a developer us
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
 
 Assessing the value of the attribute is out of scope for this rule.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ### Related rules
 

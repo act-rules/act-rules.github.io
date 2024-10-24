@@ -1,6 +1,7 @@
 ---
 id: 6cfa84
 name: Element with aria-hidden has no content in sequential focus navigation
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that elements with an `aria-hidden` attribute do not contain elements that are part of the sequential focus navigation and focusable.
@@ -34,14 +35,6 @@ This rule applies to any element with an `aria-hidden` [attribute value][] of `t
 
 None of the target elements has an [inclusive descendant][] in the [flat tree][] that are [focusable][] and part of the [sequential focus navigation][].
 
-## Assumptions
-
-Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden elements that were not [focusable][] or part of the [sequential focus navigation][] become [focusable][] and part of the [sequential focus navigation][].
-
-## Accessibility Support
-
-Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
-
 ## Background
 
 Using `aria-hidden="false"` on a descendant of an element with `aria-hidden="true"` [**does not** expose that element](https://www.w3.org/TR/wai-aria-1.2/#aria-hidden). `aria-hidden="true"` hides itself and all its content from assistive technologies.
@@ -51,6 +44,14 @@ By adding `aria-hidden="true"` to an element, content authors ensure that assist
 An element with an `aria-hidden` attribute set to `true` that is also part of the [sequential focus navigation][] may cause confusion for users of assistive technologies because the element can be reached via [sequential focus navigation][], but it should be hidden and not [included in the accessibility tree][].
 
 The 1 second time span introduced in the exception of the definition of [focusable][] is an arbitrary limit which is not included in WCAG. Given that scripts can manage the focus state of elements, testing the focused state of an element consistently would be impractical without a time limit.
+
+### Assumptions
+
+Interacting with the page does not result in changing the `aria-hidden` [attribute value][] of target elements. An example of such a situation would be when closing a modal dialog makes previously hidden elements that were not [focusable][] or part of the [sequential focus navigation][] become [focusable][] and part of the [sequential focus navigation][].
+
+### Accessibility Support
+
+Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 
 ### Related rules
 

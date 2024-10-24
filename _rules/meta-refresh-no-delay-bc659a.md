@@ -1,6 +1,7 @@
 ---
 id: bc659a
 name: Meta element has no refresh delay
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
@@ -50,15 +51,6 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 For each target, the _time_ from the content [attribute value][] is either 0 or more than 72000 (20 hours). To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
-## Assumptions
-
-- This rule assumes no functionality was provided by the website for the user to adjust the timer.
-- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG22/#dfn-essential), which is listed as a valid exception to [2.2.1 Time Adjustable][sc221].
-
-## Accessibility Support
-
-Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
-
 ## Background
 
 The `meta http-equiv="refresh"` directive is an HTML tag used to instruct browsers to automatically refresh or reload a web page after a specified time interval. This can be useful for updating content dynamically or redirecting users to another page.
@@ -66,6 +58,15 @@ The `meta http-equiv="refresh"` directive is an HTML tag used to instruct browse
 The `content` attribute in the `meta http-equiv="refresh"` directive is used to define the time interval, in seconds, after which the browser should automatically refresh or reload the web page. For example, `content="5"` would instruct the browser to refresh the page every 5 seconds. Careful consideration of the refresh interval is crucial to ensure optimal user experience and accessibility, particularly for individuals who may require more time to consume or interact with web content.
 
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
+
+### Assumptions
+
+- This rule assumes no functionality was provided by the website for the user to adjust the timer.
+- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG22/#dfn-essential), which is listed as a valid exception to [2.2.1 Time Adjustable][sc221].
+
+### Accessibility Support
+
+Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ### Bibliography
 

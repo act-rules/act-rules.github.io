@@ -1,6 +1,7 @@
 ---
 id: 674b10
 name: Role attribute has valid value
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
@@ -40,14 +41,6 @@ This rule applies to any `role` attribute for which all the following are true:
 
 Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][].
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
-
 ## Background
 
 Using an invalid role is often the result of a typo or other developer error. Unknown roles are ignored by browsers and assistive technologies, and the element's [implicit role][] is used. This often means that a role that should exist is missing.
@@ -55,6 +48,14 @@ Using an invalid role is often the result of a typo or other developer error. Un
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. The rule applies to attributes containing at least one non-[ASCII whitespace][] character so that there is at least one token in the set.
 
 Not every role can be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
 
 ### Bibliography
 

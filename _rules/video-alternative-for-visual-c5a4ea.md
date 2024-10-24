@@ -1,6 +1,7 @@
 ---
 id: c5a4ea
 name: Video element visual content has accessible alternative
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have an alternative for the video content as audio or as text.
@@ -49,8 +50,6 @@ acknowledgments:
     - Web Accessibility Perspective videos by W3C WAI.
 ---
 
-## Test Procedure
-
 ## Applicability
 
 This rule applies to every [non-streaming](#non-streaming-media-element) `video` element that is [visible][], where the video contains audio.
@@ -63,16 +62,16 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 - [`Video` Element Visual Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/1a02b0/)
 - [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/)
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
 The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/html/H96) can not be relied upon to conform to [1.2.3: Audio Description or Media Alternative (Prerecorded)][sc123].
-
-## Background
 
 ### Bibliography
 

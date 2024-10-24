@@ -1,6 +1,7 @@
 ---
 id: 23a2a8
 name: Image has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each image either has a non-empty accessible name or is marked up as decorative.
@@ -46,17 +47,17 @@ This rule applies to [HTML][] `img` elements and [HTML elements][html] that are 
 
 Each target element has an [accessible name][] that is not empty (`""`), or has a [semantic role][] of `none` or `presentation`.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 - There are several popular browsers that do not treat images with an empty `alt` attribute (`alt=""`) as having a role of `presentation` but instead add the `img` element to the accessibility tree with a [semantic role][] of either `img` or `graphic`.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `img` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Images can have their role set to `presentation` through an empty `alt` attribute. [Presentational Roles Conflict Resolution][] does not specify what to do if such an image is [focusable][] (it only specifies what to do in case of explicit `role="none"` or `role="presentation"`). Some browsers expose these images and some don't. Thus, this rule may fail for technologies that expose these without creating an accessibility issue for users of other technologies.
-
-## Background
 
 ### Bibliography
 

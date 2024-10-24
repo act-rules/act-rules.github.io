@@ -1,6 +1,7 @@
 ---
 id: 307n5z
 name: Element with presentational children has no focusable content
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that elements with a role that makes its children presentational do not contain focusable elements.
@@ -28,19 +29,19 @@ This rule applies to any [HTML or SVG element][] with a [semantic role][] that d
 
 None of the target elements have [descendants][] in the [flat tree][] that are part of [sequential focus navigation][].
 
-## Assumptions
-
-This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criterion 4.1.2.
-
-## Accessibility Support
-
-Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
-
 ## Background
 
 This rule applies to elements with a [semantic role][] that defines its [children][child] to be [presentational children][], which are all of the following: `button`, `checkbox`, `img`, `meter`, `menuitemcheckbox`, `menuitemradio`, `option`, `progressbar`, `radio`, `scrollbar`, `separator`, `slider`, `switch`, and `tab`.
 
 Elements with a [semantic role][] that has [presentational children][] will not have any descendants in the accessibility tree. If any of those descendants are included in [sequential focus navigation][], this causes the focus to land on an element that has no corresponding node in the [accessibility tree][]. The result is that there is no programmatic name or role available for assistive technologies. There are other problems that can come from [presentational children][] too. These must be tested separately.
+
+### Assumptions
+
+This rule assumes that elements that are part of [sequential focus navigation][] do not immediately blur, or move focus to another element. Such elements will fail this rule, but may still satisfy success criterion 4.1.2.
+
+### Accessibility Support
+
+Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
 
 ### Related rules
 

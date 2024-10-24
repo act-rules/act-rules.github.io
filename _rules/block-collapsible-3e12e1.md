@@ -1,6 +1,7 @@
 ---
 id: 3e12e1
 name: Block of repeated content is collapsible
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that repeated blocks of content are collapsible
@@ -34,15 +35,15 @@ For each [block of repeated content][] in each test target, which is before (in 
 - there exists an [instrument][] to make all nodes in this [block][] not [visible][]; and
 - there exists an [instrument][] to remove all nodes in this [block][] from the [accessibility tree][included in the accessibility tree].
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 Usually the same [instrument][] removes both [visibility][visible] and [inclusion in the accessibility tree][included in the accessibility tree] of a [block of repeated content][]. That [instrument][] may remove all [blocks of repeated content][block of repeated content]. If there is no [block of repeated content][] before the non-repeated content the rule passes.
 

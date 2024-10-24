@@ -1,6 +1,7 @@
 ---
 id: 0va7u6
 name: HTML images contain no text
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that images of text are not used
@@ -43,18 +44,18 @@ Each test target has no [visible][] [text][human language], except if at least o
 - <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
 - <dfn id="0va7u6:essential">essential</dfn>: The presentation of the text is [essential][].
 
-## Assumptions
+## Background
+
+This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
+
+### Assumptions
 
 - This rule assumes that there is no mechanism to change the rendering of text within image resources on the page. For pages that _do_ provide such a mechanism, this rule might fail even if [SC 1.4.5 Images of Text][sc1.4.5] is satisfied.
 - When used in HTML, the SVG `<text>` element is not considered to be an image of text. This is because like any other element in HTML, SVG `<text>` can be adjusted through custom style sheets. This does not apply for SVG text that is in a separate file, and displayed through, for example, the `img` element.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
-
-This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
 
 ### Bibliography
 

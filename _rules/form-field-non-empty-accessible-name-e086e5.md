@@ -1,6 +1,7 @@
 ---
 id: e086e5
 name: Form field has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each form field element has a non-empty accessible name.
@@ -34,15 +35,6 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-- Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
@@ -53,6 +45,15 @@ The list of roles in the applicability is derived by taking all the roles from [
 This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG22/Techniques/general/G162)" would be sufficient.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+- Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ### Bibliography
 

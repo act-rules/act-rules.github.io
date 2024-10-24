@@ -1,6 +1,7 @@
 ---
 id: c487ae
 name: Link has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each link has a non-empty accessible name.
@@ -53,17 +54,17 @@ This rule applies to any [HTML element][] that is an [inheriting semantic][] `li
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 The rule assumes that all links are [user interface components](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components) as defined by WCAG 2. When the link role is used on elements that do not behave as links, failing this rule might not mean that the success criteria are failed.
 
-## Accessibility Support
+### Accessibility Support
 
 - For `area` elements that have an `href` attribute, but are not nested inside a `map` element, there are differences between browsers and assistive technology on if the `area` is [included in the accessibility tree][].
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 - Accessibility support for some elements inheriting the semantic role of `link` (e.g. elements with `doc-*` attributes) may vary depending on the assistive technology in use.
-
-## Background
 
 ### Related rules
 

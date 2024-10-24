@@ -1,6 +1,7 @@
 ---
 id: ucwvc8
 name: HTML page language subtag matches default language
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the primary language subtag of the page language matches the default language of the page
@@ -44,7 +45,9 @@ This rule applies to any [document element][] if it is an `html` element for whi
 
 For each test target, the [known primary language tag][] of its `lang` attribute matches the [default page language][] of the test target.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page) is still satisfied.
 
@@ -56,11 +59,9 @@ For each test target, the [known primary language tag][] of its `lang` attribute
 
 - This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Related rules
 

@@ -1,6 +1,7 @@
 ---
 id: akn7bn
 name: Iframe with interactive elements is not excluded from tab-order
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements which contain an interactive (tabbable) element are not excluded from sequential focus navigation.
@@ -39,19 +40,19 @@ An element is <dfn id="akn7bn:contain">contained</dfn> in a [nested browsing con
 
 The test target does not have a negative number as a `tabindex` [attribute value][].
 
-## Assumptions
-
-This rule assumes that interactive content inside `iframe` elements is used to provide functionality. If the interactive content does not provide functionality, for example a button that does nothing when clicked, [success criterion 2.1.1][sc211] may be satisfied, even if the rule is failed.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 Setting the `tabindex` attribute of an `iframe` element to a negative value effectively excludes its content from the tab-order of the page. A `button` may be in the tab-order of an `iframe`, but if the `iframe` itself is taken from the tab-order, the `button` is effectively keyboard inaccessible.
 
 Each document, including documents inside an `iframe`, has its own [sequential focus navigation order][]. These focus orders are combined to get the page's global tab-order (called the [flattened tabindex-ordered focus navigation scope][]). For an `iframe` with a negative tabindex, its sequential focus navigation order is not included in the page's global tab-order (as a consequence for the rules to build the [tabindex-ordered focus navigation scope][]).
+
+### Assumptions
+
+This rule assumes that interactive content inside `iframe` elements is used to provide functionality. If the interactive content does not provide functionality, for example a button that does nothing when clicked, [success criterion 2.1.1][sc211] may be satisfied, even if the rule is failed.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 

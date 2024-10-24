@@ -1,6 +1,7 @@
 ---
 id: e7aa44
 name: Audio element content has text alternative
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that `audio` elements have a text alternative available.
@@ -44,15 +45,15 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 - [`Audio` Element Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/2eb176/)
 - [`Audio` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/afb423/)
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

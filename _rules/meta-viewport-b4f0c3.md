@@ -1,6 +1,7 @@
 ---
 id: b4f0c3
 name: Meta viewport allows for zoom
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `meta` element retains the user agent ability to zoom.
@@ -54,7 +55,9 @@ For each test target's [attribute value][], at least one of the following is tru
 
 **Note:** This is equivalent to applying the [translations into a `@viewport` descriptors][descriptor translation] and not obtaining a value smaller than 2 for the `max-zoom` descriptor from [the translation for `maximum-scale`](https://www.w3.org/TR/css-device-adapt-1/#min-scale-max-scale).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 Pages for which any of the following is true may satisfy Success Criteria [1.4.4 Resize text][sc144] and [1.4.10 Reflow][sc1410], even if the rule results in a failed outcome.
 
@@ -62,13 +65,11 @@ Pages for which any of the following is true may satisfy Success Criteria [1.4.4
 - There is another [mechanism](https://www.w3.org/TR/WCAG22/#dfn-mechanism) available to resize the text content; or
 - The [content][] does not need to reflow in order to fit in an area of 320 by 256 [CSS pixels][].
 
-## Accessibility Support
+### Accessibility Support
 
 Desktop browsers ignore the viewport `meta` element, and most modern mobile browsers either ignore it by default or have an accessibility option which will allow zooming. This rule is not relevant for desktop browsers, nor for most modern mobile browsers. Only users with older mobile browsers can experience issues tested by this rule.
 
 The exact way the `content` attribute should be parsed (notably, for error handling) is not fully specified. CSS specification includes a [non-normative parsing algorithm](https://www.w3.org/TR/css-device-adapt-1/#parsing-algorithm). Different user agents may behave differently in some cases.
-
-## Background
 
 ### Bibliography
 

@@ -1,6 +1,7 @@
 ---
 id: de46e4
 name: Element with lang attribute has valid language tag
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that a non-empty `lang` attribute of an element in the page has a language tag with a known primary language subtag.
@@ -39,7 +40,9 @@ This rule applies to any [HTML element][] with a `lang` [attribute value][] that
 
 For each test target, the `lang` [attribute value][] has a [known primary language tag][].
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the `lang` [attribute value][] is used to indicate the language of a section of the content. If the `lang` [attribute value][] is used for something else (for example to indicate the programming language of a `code` element), the content may still conform to WCAG despite failing this rule.
 
@@ -49,11 +52,9 @@ For each test target, the `lang` [attribute value][] has a [known primary langua
 
 - This rule assumes that the text nodes contain text that express something in [human language][] and therefore need a correct programmatic language.
 
-## Accessibility Support
+### Accessibility Support
 
 There are differences in how assistive technologies handle unknown and invalid language tags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
-
-## Background
 
 ### Bibliography
 

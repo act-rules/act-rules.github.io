@@ -1,6 +1,7 @@
 ---
 id: 09o5cg
 name: Text has enhanced contrast
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the highest possible contrast of every text character with its background meets the enhanced contrast requirement.
@@ -45,7 +46,15 @@ This rule applies to any [visible][] character in a [text node][] that is a [chi
 
 For each test target, the [highest possible contrast][] between the [foreground colors][] and [background colors][] is at least 4.5:1 for [large scale text][] and 7.0:1 for other texts, except if the test target is part of a [text node][] that is [purely decorative][] or does not express anything in [human language][].
 
-## Assumptions
+## Background
+
+Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility when some but not all pixels have sufficient contrast, which is why passing this rule does not necessarily mean the corresponding success criterion is met.
+
+When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
+
+This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc143]. Because this rule is stricter, text that passes this rule will likely satisfy 1.4.3 Contrast (Minimum).
+
+### Assumptions
 
 - [Success criterion 1.4.6 Contrast (Enhanced)][sc146] has exceptions for "incidental" text, which includes inactive user interface components and decorative texts. The rule assumes that [text nodes][text node] that should be ignored are [disabled][] or hidden from assistive technologies. If this isn't the case, the text node could fail this rule while the success criterion could still be satisfied.
 
@@ -55,18 +64,10 @@ For each test target, the [highest possible contrast][] between the [foreground 
 
 - The definition of [disabled element][disabled] assumes that when the `aria-disabled` attribute is specified on an element, this element has also been disabled for users that do not rely on [assistive technology][]. If this is not the case, that definition may produce incorrect results and in consequence this rule might be Inapplicable to some text nodes that still require a good contrast ratio.
 
-## Accessibility Support
+### Accessibility Support
 
 - Different browsers have different levels of support for CSS. This can cause contrast issues in one browser that do not appear in another. Because of that, this rule can produce different results depending on the browser that is used. For example, a text that is positioned using CSS transform may be on a different background in a browser that does not support CSS transform.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
-## Background
-
-Passing this rule does not mean that the text has sufficient color contrast. If all background pixels have a low contrast with all foreground pixels, the success criterion is guaranteed to not be satisfied. When some pixels have sufficient contrast, and others do not, legibility should be considered. There is no clear method for determining legibility when some but not all pixels have sufficient contrast, which is why passing this rule does not necessarily mean the corresponding success criterion is met.
-
-When the text color or background color is not specified in the web page, colors from other [origins][] will be used. Testers must ensure colors are not affected by styles from a [user origin][], such as a custom style sheet. Contrast issues caused by specifying the text color but not the background or vice versa, must be tested separately from this rule.
-
-This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc143]. Because this rule is stricter, text that passes this rule will likely satisfy 1.4.3 Contrast (Minimum).
 
 ### Bibliography
 

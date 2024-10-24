@@ -1,6 +1,7 @@
 ---
 id: 36b590
 name: Error message describes invalid form field value
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that text error messages provided when the user completes a form field with invalid values or using an invalid format, identify the cause of the error or how to fix the error.
@@ -61,14 +62,6 @@ Each test target either has no [form field error indicators][form field error in
 
 in [text][] that is [included in the accessibility tree][] or included in the [accessible name][] or [accessible description][] of the test target.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
@@ -81,6 +74,14 @@ This rule does not test [form field error indicators][form field error indicator
 A single [form field error indicator][] can be related to multiple test targets. For example, an error message at the top of a form can list all the form fields that are required and are empty.
 
 A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 

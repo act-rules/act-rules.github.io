@@ -1,6 +1,7 @@
 ---
 id: ffd0e9
 name: Heading has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each heading has a non-empty accessible name.
@@ -31,21 +32,21 @@ This rule applies to any [HTML element][] that is a [semantic][semantic role] `h
 
 Each test target has a non-empty (`""`) [accessible name][].
 
-## Assumptions
+## Background
+
+Completely empty headings (e.g., `<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 - Some assistive technologies may hide headings with empty [accessible name][] from the users. This depends on the user agent, on how the [accessible name][] was computed (the [accessible name and description computation][] is not clear concerning which characters should be trimmed), and on the assistive technology itself. Hence, there are cases where the outcome of this rule is _failed_, but users of certain assistive technology and browser combinations will not experience an issue.
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue because the same elements would have a [semantic role][] of `presentation` and be hidden for these users.
 
 - The [accessible name and description computation][] suggests that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case (ultimately defaulting to the content).
-
-## Background
-
-Completely empty headings (e.g., `<h1></h1>`) seem to be consistently ignored by assistive technologies. However, they fail [Technique H42: Using h1-h6 to identify headings][tech h42] (by using heading markup for content which is not heading). Moreover, they may be rendered on screen (by breaking flow content, or because of custom styling), thus causing concerns for sighted users. Therefore, this rule also fails on these.
 
 ### Bibliography
 

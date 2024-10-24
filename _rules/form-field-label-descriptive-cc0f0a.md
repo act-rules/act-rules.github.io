@@ -1,6 +1,7 @@
 ---
 id: cc0f0a
 name: Form field label is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that labels describe the purpose of form field elements.
@@ -53,15 +54,6 @@ and where both the element and the [programmatic label][] are [visible][].
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
-## Assumptions
-
-- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
-- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
-
-## Accessibility Support
-
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
@@ -74,6 +66,15 @@ The list of applicable [semantic roles][semantic role] is derived by taking all 
 It is possible for an element to have an [accessible name][] but still have a non-descriptive `label` element (and even a non-descriptive [label][]). In that case, it would pass [Success Criterion 4.1.2: Name, Role and Value][sc412] but still fail this rule and [Success Criterion 2.4.6: Headings and Labels][sc246].
 
 Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Headings and Labels][sc246].
+
+### Assumptions
+
+- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
+- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
+
+### Accessibility Support
+
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ### Bibliography
 

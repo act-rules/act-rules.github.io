@@ -1,6 +1,7 @@
 ---
 id: 1ea59c
 name: Video element visual content has audio description
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all visual information also contained in the audio.
@@ -44,15 +45,15 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 The visual information of each test target is available through its audio, or through an audio description track.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility Support
+### Accessibility Support
 
 There are only a few implementations of video players (without third party technologies) that support audio description tracks at the time of writing.
-
-## Background
 
 ### Bibliography
 

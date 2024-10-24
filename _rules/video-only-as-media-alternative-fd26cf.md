@@ -1,6 +1,7 @@
 ---
 id: fd26cf
 name: Video element visual-only content is media alternative for text
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks non-streaming silent `video` is a media alternative for text on the page.
@@ -32,17 +33,17 @@ All the information contained in each target element is available as text (direc
 
 Each target element is labeled as a video alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-## Assumptions
-
-A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 The term [label](https://www.w3.org/TR/WCAG22/#dfn-labels) used in expectations 2 and 3 does not refer to the `label` element.
+
+### Assumptions
+
+A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 

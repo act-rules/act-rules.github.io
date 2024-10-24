@@ -1,6 +1,7 @@
 ---
 id: m6b1q3
 name: Menuitem has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each element with a `menuitem` role has a non-empty accessible name.
@@ -31,15 +32,15 @@ This rule applies to [HTML elements][] that is a [semantic][semantic role] `menu
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that all menuitems are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components). If an element has a role of `menuitem` that would not be perceived as a single control by users, [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG22/#name-role-value) would not apply and so failing this rule would not result in a conformance issue.
 
-## Accessibility Support
+### Accessibility Support
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `menuitem` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
-## Background
 
 ### Bibliography
 

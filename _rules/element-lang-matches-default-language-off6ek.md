@@ -1,6 +1,7 @@
 ---
 id: off6ek
 name: HTML element language subtag matches language
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the primary language subtag of an element matches its default language
@@ -44,7 +45,11 @@ This rule applies to any [HTML element][] with a `lang` attribute for which all 
 
 For each test target, the [primary language][] of its `lang` [attribute value][] is a [most common language][] of the test target.
 
-## Assumptions
+## Background
+
+This rule checks that, if a `lang` attribute is used, its value is correct with respect to the content. This rule does not check whether a `lang` attribute should have been used or not. Especially, this rule does not check when `lang` attributes are missing. This must be tested separately and it is therefore possible to pass this rule without satisfying [Success Criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG22/#language-of-parts).
+
+### Assumptions
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even on [language tags][rfc 5646] that do not conform to the [RFC 5646][] syntax.
 
@@ -52,13 +57,9 @@ For each test target, the [primary language][] of its `lang` [attribute value][]
 
 - This rule assumes that the text nodes contain text that express something in [human language][] and therefore need a correct programmatic language.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
-
-This rule checks that, if a `lang` attribute is used, its value is correct with respect to the content. This rule does not check whether a `lang` attribute should have been used or not. Especially, this rule does not check when `lang` attributes are missing. This must be tested separately and it is therefore possible to pass this rule without satisfying [Success Criterion 3.1.2 Language of Parts](https://www.w3.org/TR/WCAG22/#language-of-parts).
 
 ### Related rules
 

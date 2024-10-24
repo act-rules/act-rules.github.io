@@ -1,6 +1,7 @@
 ---
 id: 9eb3f6
 name: Image filename is accessible name for image
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that image elements that use their source filename as their accessible name do so without loss of information to the user.
@@ -56,17 +57,17 @@ When comparing [accessible name][] and [filename][], difference in letter casing
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][]. If there are several [image sources][], then the [accessible name][] must accurately describe all of them.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 It is fairly common for content management systems (CMS) or other tools to default the alt-text of an image to its filename if no alt-text is provided. However, these names are usually not descriptive (often due to the presence of the file extension). This rule uses this heuristic to pinpoint cases where the [accessible name][] should be looked at by human testers. This rule does not automatically decide in which case a filename is correct (notably, it does not automatically decide whether adding the file extension is acceptable).
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 

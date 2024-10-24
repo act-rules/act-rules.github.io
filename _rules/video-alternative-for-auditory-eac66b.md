@@ -1,6 +1,7 @@
 ---
 id: eac66b
 name: Video element auditory content has accessible alternative
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that `video` elements have an alternative for information conveyed through audio.
@@ -49,16 +50,16 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 - [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/)
 - [`Video` Element Auditory Content Has Captions](https://www.w3.org/WAI/standards-guidelines/act/rules/f51b46/)
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the video element is used to play synchronized media (video with audio), and that there is a mechanism to start the media.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

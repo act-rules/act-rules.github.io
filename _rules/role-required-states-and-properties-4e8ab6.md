@@ -1,6 +1,7 @@
 ---
 id: 4e8ab6
 name: Element with role attribute has required states and properties
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that elements that have an explicit role also specify all required states and properties.
@@ -37,21 +38,21 @@ This rule applies to any [HTML or SVG element][] that is [included in the access
 
 For each test target, the [WAI-ARIA required states and properties][] for the role are set and not empty (`""`), unless the state or property has a default value listed under [WAI-ARIA implicit value for role][].
 
-## Assumptions
-
-- The ARIA `role` is being used to conform to WCAG.
-
-## Accessibility Support
-
-This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties][] when a [WAI-ARIA implicit value for role][] is specified in [WAI-ARIA Specifications][].
-
-**Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
-
 ## Background
 
 Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
 
 This rule is testing author built components that specify [explicit semantic roles][explicit semantic role] and not components that keep their [implicit semantic role][]. For components that keep their [implicit semantic role][], all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState). Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings][html aam].
+
+### Assumptions
+
+- The ARIA `role` is being used to conform to WCAG.
+
+### Accessibility Support
+
+This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties][] when a [WAI-ARIA implicit value for role][] is specified in [WAI-ARIA Specifications][].
+
+**Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ### Bibliography
 

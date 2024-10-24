@@ -1,6 +1,7 @@
 ---
 id: 4b1c6c
 name: Iframe elements with identical accessible names have equivalent purpose
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.
@@ -35,17 +36,17 @@ This rule applies to any set of any two or more `iframe` elements which:
 
 The `iframe` elements in each set of target elements embed the [same resource][] or [equivalent resources](#equivalent-resource).
 
-## Assumptions
-
-This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
-
-## Accessibility Support
-
-This rule assumes that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without failing [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
-
 ## Background
 
 When determining if target elements embed the same resource, resolving the embedded resource includes any redirects that are instant.
+
+### Assumptions
+
+This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
+
+### Accessibility Support
+
+This rule assumes that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without failing [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
 
 ### Bibliography
 

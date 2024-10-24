@@ -1,6 +1,7 @@
 ---
 id: 2779a5
 name: HTML page has non-empty title
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that a non-embedded HTML page has a non-empty title.
@@ -49,19 +50,19 @@ Each target element has at least one [descendant](https://dom.spec.whatwg.org/#c
 
 For each target element, the first [HTML][] `title` element that is a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element) has [children](https://dom.spec.whatwg.org/#concept-tree-child) that are [text nodes](https://dom.spec.whatwg.org/#text) that are not only [whitespace](#whitespace).
 
-## Assumptions
+## Background
+
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG22/#dfn-web-page-s) according to the definition in WCAG.
+
+### Assumptions
 
 This rule assumes that [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG22/#page-titled) does not require that a document only has one `title` element, nor that it is a child of the `head` element of a document. While this is invalid in HTML, the [HTML specification](https://html.spec.whatwg.org/multipage/dom.html#the-title-element-2) describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG. Regardless of whether this is required by 2.4.2 Page Titled, failing this rule means the success criterion is not satisfied.
 
 This rule assumes that the title of the page is not provided by a higher-level protocol. For example, the subject field of an email authored in HTML can provide a title without requiring a `title` element. In such a case, this rule will fail while [Success Criterion 2.4.2 Page Titled](https://www.w3.org/TR/WCAG22/#page-titled) may still be satisfied.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
-
-This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG22/#dfn-web-page-s) according to the definition in WCAG.
 
 ### Related rules
 
@@ -213,12 +214,12 @@ This page does not have a title because the shadow root is not a [descendant](ht
 			<title>This is the page title</title>
 		</template>
 		<script>
-      			const host = document.querySelector("body");
-      			const shadow = host.attachShadow({ mode: "open" });
-      			const template = document.getElementById("shadow-element");
+			const host = document.querySelector('body')
+			const shadow = host.attachShadow({ mode: 'open' })
+			const template = document.getElementById('shadow-element')
 
-      			shadow.appendChild(template.content);
-    		</script>
+			shadow.appendChild(template.content)
+		</script>
 	</body>
 </html>
 ```

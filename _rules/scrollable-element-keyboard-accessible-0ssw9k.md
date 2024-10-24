@@ -305,6 +305,7 @@ This `iframe` element is not a scrollable element, but instead contains a nested
 [sequential focus navigation]: https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation 'HTML sequential focus navigation, 2020/04/03'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'CSS draft, flat tree, 2020/04/03'
 [computed]: https://www.w3.org/TR/css-cascade-3/#computed-value
+[inert]: #inert 'Definition of Inert'
 [overflow]: https://www.w3.org/TR/CSS22/visufx.html#overflow
 [padding]: https://www.w3.org/TR/CSS22/box.html#propdef-padding
 [padding-left]: https://www.w3.org/TR/CSS22/box.html#propdef-padding-left

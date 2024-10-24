@@ -48,7 +48,7 @@ For each target element focus can cycle to the browser UI by using the method ad
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+Some browsers have settings that will immediately cycle focus back to the web document. This fulfills the expectation because focus can cycle to the browser UI and the browser UI cycles focus back to the web document.
 
 ## Background
 

@@ -17,6 +17,7 @@ acknowledgments:
     - Malin Øvrebø
     - Shadi Abou-Zahra
     - Stein Erik Skotkjerra
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -38,7 +39,7 @@ For each target element, focus can cycle to the browser UI by using [standard ke
 
 ## Accessibility Support
 
-There are no accessibility support issues known.
+Some browsers have settings that will immediately cycle focus back to the web document. This fulfills the expectation because focus can cycle to the browser UI and the browser UI cycles focus back to the web document.
 
 ## Background
 
@@ -67,7 +68,7 @@ These [focusable][] elements do not create a trap for keyboard navigation.
 This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
-<div tabindex="1">Text</div>
+<div role="button" tabindex="1">Text</div>
 ```
 
 #### Passed Example 3
@@ -76,6 +77,54 @@ This element is made [focusable][] by the `tabindex` attribute, even if it is no
 
 ```html
 <div tabindex="-1">Text</div>
+```
+
+#### Passed Example 4
+
+While the elements with id "sentinelBefore" and "sentinelAfter" contain focus to the contents of the div with name "Sample Modal", focus is not trapped since the user can
+use [standard keyboard navigation](#standard-keyboard-navigation) using the Escape key or by activating the "Close button" to dismiss the modal
+
+```html
+<div>Main page content with <a href="#">some link</a></div>
+<div aria-hidden="true">
+    <a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
+    >
+</div>
+<div
+    id="sampleModal"
+    role="dialog"
+    aria-label="Sample Modal"
+    aria-modal="true"
+    style="border: solid black 1px; padding: 1rem;"
+>
+    <label>First and last name <input id="dialogFirst"/></label><br />
+    <button id="closeButton">Close button</button>
+</div>
+<div aria-hidden="true">
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
+    >
+</div>
+<script>
+    window.addEventListener('load', () => {
+        document.getElementById('dialogFirst').focus();
+    })
+    document.getElementById('sentinelBefore').addEventListener('focus', () => {
+        document.getElementById('closeButton').focus()
+    })
+    document.getElementById('sentinelAfter').addEventListener('focus', () => {
+        document.getElementById('dialogFirst').focus()
+    })
+    document.getElementById('closeButton').addEventListener('click', () => {
+        document.getElementById('sampleModal').style.display = 'none'
+    })
+    document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") {
+            document.getElementById('sampleModal').style.display = 'none';    
+        }
+    })
+</script>
 ```
 
 ### Failed

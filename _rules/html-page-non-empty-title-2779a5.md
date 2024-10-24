@@ -90,12 +90,16 @@ This page has a `title` element with content.
 
 #### Passed Example 2
 
-This page has a `title` element that serves as the title for the page and the `iframe` since the `iframe` does not have its own.
+This page has a `title` element that serves as the title for the page. This rule doesn't take into account HTML pages embedded into the target document.
 
 ```html
 <html>
-	<title>This page gives a title to an iframe</title>
-	<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	<head>
+		<title>This page gives a title to an iframe</title>
+	</head>
+	<body>
+		<iframe src="/test-assets/sc2-4-2-title-page-without-title.html"></iframe>
+	</body>
 </html>
 ```
 
@@ -195,6 +199,27 @@ This page has a `title` element that only contains a separator character.
 ```html
 <html>
 	<title> </title>
+</html>
+```
+
+#### Failed Example 6
+
+This page does not have a title because the shadow root is not a [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) of the [document element](https://dom.spec.whatwg.org/#document-element).
+
+```html
+<html>
+	<body>
+		<template id="shadow-element">
+			<title>This is the page title</title>
+		</template>
+		<script>
+      			const host = document.querySelector("body");
+      			const shadow = host.attachShadow({ mode: "open" });
+      			const template = document.getElementById("shadow-element");
+
+      			shadow.appendChild(template.content);
+    		</script>
+	</body>
 </html>
 ```
 

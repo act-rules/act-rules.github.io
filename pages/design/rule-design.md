@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format 1.1](https://www.w3.org/TR/act-rules-format/):
+The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format](https://www.w3.org/TR/act-rules-format/):
 
 1. **[Rule properties](#rule-properties)**: Define the test subject and its environment. Includes identifier, name, type and description, as well as other meta data.
 

@@ -39,7 +39,10 @@ This rule applies to any [HTML element][] that has [visible][] [children][] in t
 
 ## Expectation
 
-Each test target is either included in [sequential focus navigation][] or has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][], unless the test target is [inert][].
+For each target element, at least one of the following is true: 
+- the element is included in [sequential focus navigation][]; or 
+- the element has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][]; or
+- the element is [inert][].
 
 ## Assumptions
 

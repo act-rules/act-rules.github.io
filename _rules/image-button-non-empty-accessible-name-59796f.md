@@ -54,7 +54,7 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 ## Accessibility Support
 
-The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first defined attribute, even if the attribute has an empty value. Some user agents and assistive technologies also ignore empty attributes.
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first defined attribute, even if the attribute has an empty value. In contrast, some user agents and assistive technologies ignore empty attributes.
 
 ## Background
 

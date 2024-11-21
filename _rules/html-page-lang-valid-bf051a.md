@@ -1,6 +1,7 @@
 ---
 id: bf051a
 name: HTML page lang attribute has valid language tag
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `lang` attribute of the root element of a non-embedded HTML page has a language tag with a known primary language subtag.
@@ -38,7 +39,9 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 For each test target, the `lang` attribute has a [known primary language tag][].
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page).
 
@@ -46,11 +49,9 @@ For each test target, the `lang` attribute has a [known primary language tag][].
 
 - This rule assumes that only [known primary language tags][known primary language tag] are enough to satisfy [Success Criterion 3.1.1 Language of Page][sc311]; this notably excludes [grandfathered tags][] and [ISO 639.2][] three-letters codes, both having poor support in assistive technologies.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG22/#dfn-web-page-s) according to the definition in WCAG.
 

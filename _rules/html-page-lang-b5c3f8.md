@@ -1,6 +1,7 @@
 ---
 id: b5c3f8
 name: HTML page has lang attribute
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that an HTML page has a non-empty `lang` attribute.
@@ -39,15 +40,15 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 Each test target has a `lang` [attribute value][] that is neither empty (`""`) nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page).
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Related rules
 

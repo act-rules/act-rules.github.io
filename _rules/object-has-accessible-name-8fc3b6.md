@@ -1,6 +1,7 @@
 ---
 id: 8fc3b6
 name: Object element rendering non-text content has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `object` element rendering non-text content has a non-empty accessible name.
@@ -36,16 +37,6 @@ This rule applies to any `object` element for which all the following are true:
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
-
-_There are currently no assumptions_
-
-## Accessibility Support
-
-Some screen readers announce `object` elements even if they do not have an accessible name, while other skip the element. If an `object` is used to render decorative content, to ensure it is [marked as decorative][] and can be ignored by all major screen readers a presentational role is necessary.
-
-The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
-
 ## Background
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
@@ -55,6 +46,16 @@ Non-supported media formats make screen readers render the text content of the e
 `Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
 
 When the object resource is not loaded, the fallback content is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video."
+
+### Assumptions
+
+_There are currently no assumptions_
+
+### Accessibility Support
+
+Some screen readers announce `object` elements even if they do not have an accessible name, while other skip the element. If an `object` is used to render decorative content, to ensure it is [marked as decorative][] and can be ignored by all major screen readers a presentational role is necessary.
+
+The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
 
 ### Bibliography
 

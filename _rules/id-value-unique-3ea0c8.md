@@ -1,6 +1,7 @@
 ---
 id: 3ea0c8
 name: Id attribute value is unique
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
@@ -43,15 +44,15 @@ This rule applies to any `id` attribute whose value is not an empty string (`""`
 
 The value of the attribute is unique across all other `id` attributes specified on [HTML or SVG elements][html or svg element] that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

@@ -1,6 +1,7 @@
 ---
 id: c4a8a4
 name: HTML page title is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the first title in an HTML web page describes the topic or purpose of that page.
@@ -46,19 +47,19 @@ This rule applies to the [document title][] of each [html web page][], except if
 
 The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).
 
-## Assumptions
-
-There are currently no assumptions.
-
-## Accessibility Support
-
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
-
 ## Background
 
 The `title` elements of embedded documents, such as those in `iframe`, `object`, or `svg` elements, are not applicable because those are not web pages according to the definition in WCAG.
 
 The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the-title-element) requires documents to only have one `title` element; and `title` elements to be children of the `head` element of a document. However, current HTML specification also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
+
+### Assumptions
+
+There are currently no assumptions.
+
+### Accessibility Support
+
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ### Related rules
 

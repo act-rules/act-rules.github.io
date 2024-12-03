@@ -1,6 +1,7 @@
 ---
 id: ffbc54
 name: No keyboard shortcut uses only printable characters
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that if keyboard shortcuts are implemented using only printable characters, then there is a mechanism to disable the shortcut, or to remap the shortcut to use one or more non-printable character keys, or the shortcut for a user interface component is only available when that component has focus.
@@ -35,21 +36,21 @@ For each test target at least one of the following is true:
 - **disable/remap**: there is at least one [set of clearly labeled instruments][] to [block events][blocked event] that use the [same key][same key events] as the test target and whose `getModifierState` method returns `false` for each of the [valid modifier keys][]; or
 - **focus**: the [event target][] is an [inheriting semantic][] `widget`.
 
-## Assumptions
-
-- If there are ways to disable the result of [keyboard events][keyboard event] that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
-- After being disabled, the event remains disabled until being re-enabled again. If the event is re-enabled through other non-user controlled means (e.g. a timeout) then this rule may pass while [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4] is not satisfied.
-
-## Accessibility Support
-
-Currently [keyboard events][keyboard event] only support the types `keydown` and `keyup`. [Keyboard events][keyboard event] of type `keypressed` are considered [legacy keyboard events][] and are thus ignored by this rule.
-
 ## Background
 
 The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4]. These extra requirements are left out of this rule, and should be tested separately.
 This rule allows [changes to the content][changes in content] when a [user interface component](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components) has focus to meet the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4]. As explained in the [Event dispatch and DOM event flow section](https://www.w3.org/TR/uievents/#event-flow) of the [UI Events Working Draft](https://www.w3.org/TR/uievents/), each [keyboard event][] is dispatched to an [event target][]. The [event target][] is the element that has focus. As such, the "Active only on focus" requirement from [Success Criterion 2.1.4][sc2.1.4] is implied by saying that the [event target][] is an [inheriting semantic][] `widget`.
 
 The "Turn off" and "Remap" requirements from [Success Criterion 2.1.4][sc2.1.4] are combined in the **disable/remap** item of the Expectation section. For the disable requirement, [changes in content][] that are made through [keyboard events][keyboard event] with a [printable character][] value for the `key` attribute and a `getModifierState` return value of `false` for each of the [valid modifier keys][] effectively need to be [blocked][blocked event] (in other words, turned off or disabled). The remap requirement unblocks the events if the `getModifierState` query returns `true` for at least one of the [valid modifier keys][]. Once the `getModifierState` returns `true` for at least one of the [valid modifier keys][] of a [keyboard event][], such [keyboard event][] is no longer applicable for the rule and it passes the "Remap" requirement from [Success Criterion 2.1.4][sc2.1.4].
+
+### Assumptions
+
+- If there are ways to disable the result of [keyboard events][keyboard event] that do not require the user to interact with the web page (e.g. a setting at the operating system level), failing this rule might not be a failure of the success criterion.
+- After being disabled, the event remains disabled until being re-enabled again. If the event is re-enabled through other non-user controlled means (e.g. a timeout) then this rule may pass while [Success Criterion 2.1.4: Character Key Shortcuts][sc2.1.4] is not satisfied.
+
+### Accessibility Support
+
+Currently [keyboard events][keyboard event] only support the types `keydown` and `keyup`. [Keyboard events][keyboard event] of type `keypressed` are considered [legacy keyboard events][] and are thus ignored by this rule.
 
 ### Bibliography
 

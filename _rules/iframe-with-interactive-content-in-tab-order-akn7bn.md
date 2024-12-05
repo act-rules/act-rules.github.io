@@ -4,7 +4,7 @@ name: Iframe with interactive elements is not excluded from tab-order
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that `iframe` elements which contain an interactive (tabbable) element are not excluded from sequential focus navigation.
+  This rule checks that `iframe` elements which contain keyboard focusable elements are not excluded from sequential focus navigation.
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
     forConformance: true

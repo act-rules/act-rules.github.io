@@ -50,7 +50,7 @@ The [MIME type][] of the resource embedded in the `data` attribute impacts how t
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
-When the object resource is not loaded, the fallback content is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video.". When screen readers encounter an unsupported media format they will also use the fallback content instead of other attributes.
+When the object resource is not loaded, the fallback content, if present, is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video.". When screen readers encounter an unsupported media format they will also use the fallback content instead of other attributes.
 
 ### Bibliography
 

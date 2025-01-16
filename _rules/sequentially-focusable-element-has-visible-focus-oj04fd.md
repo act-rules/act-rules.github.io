@@ -1,6 +1,7 @@
 ---
 id: oj04fd
 name: Element in sequential focus order has visible focus
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each element in sequential focus order has some visible focus indication.
@@ -28,14 +29,6 @@ The rule applies to any element which is part of [sequential focus navigation][]
 
 For each target element, there is at least one device pixel inside the [scrolling area][] of the [viewport][] whose [HSL color value](https://www.w3.org/TR/css-color-3/#hsl-color) is different when the element is [focused][] from when it is not.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 Default styling in user agents provides a focus indication for focusable elements (even those that are not focusable by default), as shown in Passed Examples 1 and 2. Many examples in this rule need to **remove** that indicator in order to illustrate various situations. This is bad practice and should normally be avoided.
@@ -43,6 +36,14 @@ Default styling in user agents provides a focus indication for focusable element
 WCAG 2.0 and 2.1 do not have any requirement of how big or small focus indicator should be, or how far or near from the [focusable][] element it should be. Thus it is possible to pass this rule and [Success Criterion 2.4.7 Focus Visible][sc247] with barely perceptible changes at the other end of the page. That would however still be an accessibility issue. WCAG 2.2 includes [Success Criterion 2.4.11 Focus Appearance][sc2411] and [Success Criterion 2.4.12 Focus Not Obscured (Minimum)][sc2412] specifying how big the focus indicator should be. All Passed Examples in this rule satisfy those success criteria.
 
 WCAG does not require that the focus indicator for each [focusable][] element is unique in appearance. Therefore, this rule can pass even if several focus indicators are identical. Such a situation may nonetheless cause confusion and all examples in this rule avoid it.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 

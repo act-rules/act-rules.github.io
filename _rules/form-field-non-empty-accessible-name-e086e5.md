@@ -32,7 +32,7 @@ acknowledgments:
 This rule applies to any element that is [included in the accessibility tree](#included-in-the-accessibility-tree) and for which one of the following is true:
 
 - the element has one of the following [semantic roles][]: `checkbox`, `combobox` (`select` elements), `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`; or
-- the element is an `input` with no [semantic role][] and a `type` [attribute value][] of `color`, `date`, `datetime-local`, `month`, `password`, `time`, or `week`.
+- the element is an `input` with no [semantic role][] and a `type` [attribute value][] of `color`, `date`, `datetime-local`, `file`, `month`, `password`, `time`, or `week`.
 
 ## Expectation
 

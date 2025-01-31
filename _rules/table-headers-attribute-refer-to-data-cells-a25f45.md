@@ -371,7 +371,7 @@ The `table` is not [visible][] in page.
 The rule applies only to `headers` attribute within a `table` element.
 
 ```html
-<div role="table">
+<div role="table" aria-label="Projects status">
 	<div role="row">
 		<div role="columnheader" id="header1">Projects</div>
 		<div role="columnheader" id="header2">Exams</div>

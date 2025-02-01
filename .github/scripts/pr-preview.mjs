@@ -1,8 +1,9 @@
 #!/usr/bin/env zx
 import 'zx/globals';
-import { config, cloneWcagActRules, commitAndPush } from './commons.mjs'
+import { config, cloneWcagActRules, createOrCheckoutBranch, commitAndPush } from './commons.mjs'
 
 await cloneWcagActRules(config);
+await createOrCheckoutBranch({ tmpDir }, branchName); 
 await generateProposedRulePages(config);
 await generateTestCases(config);
 const commitMessage = (await $`git log -1 --pretty=%B`).stdout;

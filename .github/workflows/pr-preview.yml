@@ -19,14 +19,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Checkout wcag-act-rules repo
-        uses: actions/checkout@v4
-        with:
-          path: 'wcag-act-rules-tmp'
-      - name: Checkout or create PR branch
-        run: |
-          cd wcag-act-rules-tmp
-          git checkout -b ${{ github.event.pull_request.head.ref }}
-          cd ..
       - name: Build and deploy WAI update
-        run: npm run pr:preview
+        env:
+          branch_name: ${{ github.event.pull_request.head.ref }}
+        run: npm run build:wai

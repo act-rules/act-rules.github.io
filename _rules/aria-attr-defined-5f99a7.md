@@ -1,6 +1,6 @@
 ---
 id: 5f99a7
-name: ARIA attribute is defined in WAI-ARIA
+name: Daniel attribute is defined in WAI-ARIA
 rules_format: 1.1
 rule_type: atomic
 description: |

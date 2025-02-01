@@ -80,7 +80,7 @@ This element with the `list` role only owns elements with the `listitem` role. T
 This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `gridcell` role. The `row` role is one of the [required owned elements][] for `grid`, and `gridcell` is one of the [required owned elements][] for `row`.
 
 ```html
-<table role="grid">
+<table role="grid" aria-label="grid name">
 	<tr role="row">
 		<td role="gridcell">Item 1</td>
 	</tr>

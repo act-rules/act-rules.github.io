@@ -8,6 +8,8 @@ export const config = {
   testAssetsDir: `./test-assets/`,
 }
 
+export const branchName = process.env.BRANCH_NAME || 'main';
+
 export async function cloneWcagActRules({ tmpDir }) {
   await $`rm -rf ${tmpDir}`;
   await $`git clone \
@@ -19,7 +21,6 @@ export async function cloneWcagActRules({ tmpDir }) {
 }
 
 export async function createOrCheckoutBranch({ tmpDir }, branchName) {
-    branchName = process.env.BRANCH_NAME || 'main';
   assert(branchName, 'branchName must be defined');
   cd(tmpDir);
   try {

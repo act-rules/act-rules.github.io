@@ -22,4 +22,4 @@ jobs:
       - name: Build and deploy WAI update
         env:
           branch_name: ${{ github.event.pull_request.head.ref }}
-        run: npm run build:wai
+        run: npm run pr:preview

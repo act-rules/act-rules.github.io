@@ -21,7 +21,7 @@ export async function cloneWcagActRules({ tmpDir }) {
 }
 
 export async function createOrCheckoutBranch({ tmpDir }, branchName) {
-  branchName = process.env.branch_name
+  branchName = process.env.branch_name || 'main'
   assert(branchName, 'branchName must be defined');
   cd(tmpDir);
   try {

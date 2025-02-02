@@ -22,11 +22,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
-      - name: Configure git
-        run: |
-          git config --global url."https://daniel-montalvo:wcag-act-rules:${{ secrets.PAT_TOKEN }}@github.com".insteadOf "https://github.com"
-          git config --global user.name "daniel-montalvo"
-          git config --global user.email "users.noreply@github.com"
       - name: Build and deploy WAI update
         run: npm run pr:preview
       - name: Comment on PR with preview link

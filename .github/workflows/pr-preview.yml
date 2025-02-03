@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       branch_name: ${{ github.event.pull_request.head.ref }}
-      GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

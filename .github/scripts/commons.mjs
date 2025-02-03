@@ -8,7 +8,7 @@ export const config = {
   testAssetsDir: `./test-assets/`,
 }
 
-export const branchName = process.env.BRANCH_NAME || 'main';
+export const branchName = process.env.BRANCH_NAME ?? 'main';
 
 export async function cloneWcagActRules({ tmpDir }) {
   await $`rm -rf ${tmpDir}`;

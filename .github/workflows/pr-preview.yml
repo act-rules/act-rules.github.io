@@ -6,10 +6,7 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     permissions:
-        pull-requests: write
-    env:
-      branch_name: ${{ github.event.pull_request.head.ref }}
-      GH_TOKEN: ${{ github.token }}
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,6 +29,12 @@ jobs:
           git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
       - name: Build and deploy WAI update
         run: npm run pr:preview
+        env:
+          branch_name: ${{ github.event.pull_request.head.ref }}
+          GH_TOKEN: ${{ github.token }}
       - name: Comment on PR with preview link
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Preview ready at https://deploy-preview-${{ env.branch_name }}--wai-wcag-act-rules.netlify.app"
+        env:
+          branch_name: ${{ github.event.pull_request.head.ref }}
+          GH_TOKEN: ${{ github.token }}

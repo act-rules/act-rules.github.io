@@ -15,7 +15,7 @@ export async function cloneWcagActRules({ tmpDir }) {
   await $`git clone \
     --no-single-branch \
     --branch main \
-    https://github.com/daniel-montalvo/wcag-act-rules.git ${tmpDir} \
+    https://github.com/w3c/wcag-act-rules.git ${tmpDir} \
     --depth 1
   `;
 }

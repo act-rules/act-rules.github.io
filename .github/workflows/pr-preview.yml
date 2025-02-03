@@ -5,6 +5,8 @@ on:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
+    permissions:
+        pull-requests: write
     env:
       branch_name: ${{ github.event.pull_request.head.ref }}
       GH_TOKEN: ${{ github.token }}

@@ -34,4 +34,4 @@ jobs:
         run: npm run pr:preview
       - name: Comment on PR with preview link
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "Preview ready at https://deploy-preview-${branch_name}--wai-wcag-act-rules.netlify.app"
+          gh pr comment ${{ github.event.pull_request.number }} --body "Preview ready at https://deploy-preview-${{ env.branch_name }}--wai-wcag-act-rules.netlify.app"

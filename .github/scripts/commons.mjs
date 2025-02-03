@@ -21,7 +21,6 @@ export async function cloneWcagActRules({ tmpDir }) {
 }
 
 export async function createOrCheckoutBranch({ tmpDir }, branchName) {
-  branchName = process.env.branch_name || 'main'
   cd(tmpDir);
   try {
     await $`git checkout ${branchName}`;

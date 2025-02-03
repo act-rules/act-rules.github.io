@@ -207,7 +207,7 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 This `div` element has no [WAI-ARIA state or property][].
 
 ```html
-<div role="region" aria-label="Region name">A region of content</div>
+<div role="group">A group of content</div>
 ```
 
 #### Inapplicable Example 2

@@ -14,7 +14,7 @@ A _User-Agent Controlled Component_ is an [HTML element][namespace element] for 
 - the [computed values][] of the element's `height` and `width` CSS properties do not depend on content provided by the author; and
 - the [computed values][] of the element's `height` and `width` CSS properties do not depend on any CSS property with a [cascaded value][] with "Author" [origin][].
 
-#### Examples
+#### Examples of User-Agent Controlled Components
 
 Typically, radio buttons or checkboxes are User-Agent controlled, until an author does change their dimensions.
 

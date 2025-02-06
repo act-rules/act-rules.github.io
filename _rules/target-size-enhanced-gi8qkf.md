@@ -29,28 +29,29 @@ acknowledgments:
 
 This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
 
+- [Interactive component has no clickable area][target size empty]; or
+- [Interactive component is inline][target size inline]; or
+- [Interactive component has size controlled by User Agent][target size user agent]; or
+- [Interactive component has essential size][target size essential]; or
+
 ## Expectation
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
 - [Interactive component has strict enhanced size][target size enhanced]; or
-- [Interactive component has no clickable area][target size empty]; or
-- [Interactive component is inline][target size inline]; or
-- [Interactive component has size controlled by User Agent][target size user agent]; or
-- [Interactive component has essential size][target size essential]; or
 - [Interactive component has equivalent control with enhanced size][target size equivalent enhanced].
-
-## Assumptions
-
-- This rule assumes that [focusable][] `widget` are effectively clickable. If a widget is [focusable][] without being clickable, it may fail this rule while [Success Criterion 2.5.5 Target Size (enhanced)][sc255] is satisfied.
-
-## Accessibility Support
-
-Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element. As of February 2024, the ACT rules Community Group is not aware of actual cases resulting in significantly different [clickable areas][clickable area].
 
 ## Background
 
 While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with "weird" clickable shape, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contain a large enough [horizontal rectangle][]. In order to allow automated tools to have a consistent implementation of this rule, it does not contain such test cases, notably all Failed test cases have a [border box][] which is too small.
+
+### Assumptions
+
+- This rule assumes that [focusable][] `widget` are effectively clickable. If a widget is [focusable][] without being clickable, it may fail this rule while [Success Criterion 2.5.5 Target Size (enhanced)][sc255] is satisfied.
+
+### Accessibility Support
+
+Hit testing isn't properly defined, and this has been an [issue in the CSS specification](https://github.com/w3c/csswg-drafts/issues/2325) for years. Therefore, different User Agents may perform it differently, resulting in different [clickable areas][clickable area] for the same element. As of February 2025, the ACT rules Community Group is not aware of actual cases resulting in significantly different [clickable areas][clickable area].
 
 ### Bibliography
 

@@ -1,3 +1,11 @@
+---
+name: Accessibility support template
+about: Issue for tracking accessibility support on ACT Rules
+title: ''
+labels: ['accessibility support']
+assignees: ''
+---
+
 ## Accessibility support
 
 (( Put the accessibility support item here ))

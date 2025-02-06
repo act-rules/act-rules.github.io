@@ -56,13 +56,13 @@ The `div` element is not [labelable][]. Therefore, it is not a [labeled control]
 <div id="bond">My name is Bond. James Bond.</div>
 ```
 
-## aria-labelledby on div
+## aria-labelledby on aside
 
-The `span` element is referenced by the `aria-labelledby` attribute on the `div` element. Therefore, the `span` element is a programmatic label of the `div` element. Note that the `aria-labelledby` attribute works on any element, not just on the [labelable][] elements.
+The `span` element is referenced by the `aria-labelledby` attribute on the `aside` element. Therefore, the `span` element is a programmatic label of the `div` element. Note that the `aria-labelledby` attribute works on any element, not just on the [labelable][] elements.
 
 ```html
 <span id="label_fname">Full name:</span>
-<div aria-labelledby="label_fname">My name is Bond. James Bond.</div>
+<aside aria-labelledby="label_fname">My name is Bond. James Bond.</aside>
 ```
 
 [programmatic label]: /glossary/#programmatic-label

@@ -1,6 +1,7 @@
 ---
 id: a1b64e
 name: Focusable element has no keyboard trap via standard navigation
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks if it is possible to use standard keyboard navigation to navigate through all content on a web page without becoming trapped in any element.
@@ -17,6 +18,7 @@ acknowledgments:
     - Malin Øvrebø
     - Shadi Abou-Zahra
     - Stein Erik Skotkjerra
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -31,18 +33,18 @@ For each target element, focus can cycle to the browser UI by using [standard ke
 
 **Note:** It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
-## Assumptions
+## Background
+
+This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
+
+### Assumptions
 
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 - The Browser UI is part of the focus navigation cycle of the page.
 
-## Accessibility Support
+### Accessibility Support
 
-There are no accessibility support issues known.
-
-## Background
-
-This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
+Some browsers have settings that will immediately cycle focus back to the web document. This fulfills the expectation because focus can cycle to the browser UI and the browser UI cycles focus back to the web document.
 
 ### Bibliography
 
@@ -67,7 +69,7 @@ These [focusable][] elements do not create a trap for keyboard navigation.
 This element is made [focusable][] by the `tabindex` attribute. It does not create a trap for keyboard navigation.
 
 ```html
-<div tabindex="1">Text</div>
+<div role="button" tabindex="1">Text</div>
 ```
 
 #### Passed Example 3
@@ -76,6 +78,54 @@ This element is made [focusable][] by the `tabindex` attribute, even if it is no
 
 ```html
 <div tabindex="-1">Text</div>
+```
+
+#### Passed Example 4
+
+While the elements with id "sentinelBefore" and "sentinelAfter" contain focus to the contents of the div with name "Sample Modal", focus is not trapped since the user can
+use [standard keyboard navigation](#standard-keyboard-navigation) using the Escape key or by activating the "Close button" to dismiss the modal
+
+```html
+<div>Main page content with <a href="#">some link</a></div>
+<div aria-hidden="true">
+    <a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
+    >
+</div>
+<div
+    id="sampleModal"
+    role="dialog"
+    aria-label="Sample Modal"
+    aria-modal="true"
+    style="border: solid black 1px; padding: 1rem;"
+>
+    <label>First and last name <input id="dialogFirst"/></label><br />
+    <button id="closeButton">Close button</button>
+</div>
+<div aria-hidden="true">
+    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
+        >Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
+    >
+</div>
+<script>
+    window.addEventListener('load', () => {
+        document.getElementById('dialogFirst').focus();
+    })
+    document.getElementById('sentinelBefore').addEventListener('focus', () => {
+        document.getElementById('closeButton').focus()
+    })
+    document.getElementById('sentinelAfter').addEventListener('focus', () => {
+        document.getElementById('dialogFirst').focus()
+    })
+    document.getElementById('closeButton').addEventListener('click', () => {
+        document.getElementById('sampleModal').style.display = 'none'
+    })
+    document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
+        if (evt.key === "Escape") {
+            document.getElementById('sampleModal').style.display = 'none';    
+        }
+    })
+</script>
 ```
 
 ### Failed

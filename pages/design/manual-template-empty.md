@@ -1,6 +1,7 @@
 ---
 id:
 name:
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks ...
@@ -52,17 +53,29 @@ This rule applies to any (??) element ...
 
 Each target element ...
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
+### Related Rules
+
+<!-- This section is optional -->
+
+- [rule name here](./abc123)
+
+### Bibliography
+
+<!-- This section is optional -->
+
+- [link here](#)
 
 ## Test Cases
 

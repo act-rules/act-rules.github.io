@@ -21,4 +21,4 @@ Examples of text for which the presentation is essential include:
 4. A bar chart, diagram, or maps with place names
 5. An image showing a font, or showing the difference between font-weights
 
-**Note:** WCAG includes a generic definition of "[essential](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html#dfn-essential)". 
+**Note:** WCAG includes a generic definition of "[essential](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html#dfn-essential)".

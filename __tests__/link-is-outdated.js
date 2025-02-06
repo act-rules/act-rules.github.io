@@ -14,10 +14,14 @@ const uniqueArray = require('../utils/unique-array')
  * Map of bad links vs their recommendations
  */
 const badLinksAndRecommendations = {
-	'://www.w3.org/TR/WCAG20/': 'Use WCAG 2.1 reference- https://www.w3.org/WAI/WCAG21/',
-	'://www.w3.org/TR/UNDERSTANDING-WCAG20/': 'Use WCAG 2.1 reference - https://www.w3.org/WAI/WCAG21/Understanding/',
-	'://www.w3.org/TR/WCAG20-TECHS/': 'Use WCAG 2.1 reference - https://www.w3.org/WAI/WCAG21/Techniques/',
-	'://www.w3.org/TR/wai-aria-1.0/': 'Use ARIA 1.1 reference - https://www.w3.org/TR/wai-aria-1.1/',
+	'://www.w3.org/TR/WCAG20/': 'Use WCAG 2.2 reference- https://www.w3.org/WAI/WCAG22/',
+	'://www.w3.org/TR/WCAG21/': 'Use WCAG 2.2 reference- https://www.w3.org/WAI/WCAG22/',
+	'://www.w3.org/TR/UNDERSTANDING-WCAG20/': 'Use WCAG 2.2 reference - https://www.w3.org/WAI/WCAG22/Understanding/',
+	'://www.w3.org/WAI/WCAG21/Understanding/': 'Use WCAG 2.2 reference- ://www.w3.org/WAI/WCAG22/Understanding/',
+	'://www.w3.org/TR/WCAG20-TECHS/': 'Use WCAG 2.2 reference - https://www.w3.org/WAI/WCAG22/Techniques/',
+	'://www.w3.org/WAI/WCAG21/Techniques/': 'Use WCAG 2.2 reference - https://www.w3.org/WAI/WCAG22/Techniques/',
+	'://www.w3.org/TR/wai-aria-1.0/': 'Use ARIA 1.2 reference - https://www.w3.org/TR/wai-aria-1.2/',
+	'://www.w3.org/TR/wai-aria-1.1/': 'Use ARIA 1.2 reference - https://www.w3.org/TR/wai-aria-1.2/',
 	'://www.w3.org/TR/dom41/': 'Use http://dom.spec.whatwg.org',
 	'://www.w3.org/TR/html/': 'Use http://html.spec.whatwg.org',
 	'://www.w3.org/TR/html52/': 'Use http://html.spec.whatwg.org',

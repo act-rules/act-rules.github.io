@@ -1,6 +1,7 @@
 ---
 id: bc4a75
 name: ARIA required owned elements
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that an element with an explicit semantic role has at least one of its required owned elements.
@@ -34,17 +35,6 @@ Each test target only [owns][] elements with a [semantic role][] from the [requi
 
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element). See more in the [owned by][] definition.
 
-## Assumptions
-
-If the [explicit semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships).
-
-## Accessibility Support
-
-- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
-- `aria-owns` has limited support in some user agents.
-- Assistive technologies are not consistent in how they handle situations where a [required owned element][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
-- Some user agents treat the value of `aria-busy` as case-sensitive.
-
 ## Background
 
 Some [required owned elements][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [required owned elements][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
@@ -53,9 +43,20 @@ The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][w
 
 **Note:** [Subclass roles](https://www.w3.org/TR/wai-aria-1.2/#subclassroles) of [required owned elements][] are not automatically included as possible [required owned elements][]. For example, the `treeitem` role is not a [required owned elements][] for [`list`](https://www.w3.org/TR/wai-aria-1.2/#list), even though `treeitem` is a [subclass role](https://www.w3.org/TR/wai-aria-1.2/#subclassroles) of `listitem`.
 
+### Assumptions
+
+If the [explicit semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships).
+
+### Accessibility Support
+
+- User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
+- `aria-owns` has limited support in some user agents.
+- Assistive technologies are not consistent in how they handle situations where a [required owned element][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
+- Some user agents treat the value of `aria-busy` as case-sensitive.
+
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.2/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element)
 
@@ -76,12 +77,12 @@ This element with the `list` role only owns elements with the `listitem` role. T
 
 #### Passed Example 2
 
-This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `cell` role. The `row` role is one of the [required owned elements][] for `grid`, and `cell` is one of the [required owned elements][] for `row`.
+This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `gridcell` role. The `row` role is one of the [required owned elements][] for `grid`, and `gridcell` is one of the [required owned elements][] for `row`.
 
 ```html
 <table role="grid">
 	<tr role="row">
-		<td role="cell">Item 1</td>
+		<td role="gridcell">Item 1</td>
 	</tr>
 </table>
 ```

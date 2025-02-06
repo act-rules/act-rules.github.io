@@ -1,6 +1,7 @@
 ---
 id: 46ca7f
 name: Element marked as decorative is not exposed
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that elements marked as decorative either are not included in the accessibility tree, or have a presentational role.
@@ -28,14 +29,6 @@ This rule applies to any element which is [marked as decorative][].
 
 Each target element either is not [included in the accessibility tree][] or has a [semantic role][] of `none` or `presentation`.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Implementation of the [Presentational Roles Conflict Resolution][] differs slightly from one user agent to the other. Hence, some elements might be exposed by one user agent and not by another, and consequently might create accessibility issues only for some users. Nevertheless, triggering the conflict is a bad practice.
-
 ## Background
 
 Elements are normally [marked as decorative][] to convey the intention of the author that they are [pure decoration][decorative] and thus shouldn't be exposed to assistive technologies. On the other hand, elements that are [focusable][] are important to know for anybody and should be exposed to assistive technologies; and elements that are defining any [global ARIA attribute][] indicate an intention to communicate something to the assistive technologies (through the `aria-*` attribute). When an element is both [marked as decorative][] and either [focusable][] or defining a [global ARIA attribute][], a conflict arises between these two intentions. The [conflict is resolved][presentational roles conflict resolution] by exposing the element.
@@ -43,6 +36,14 @@ Elements are normally [marked as decorative][] to convey the intention of the au
 Whenever such a conflict occurs, this indicates at the very least mismatching intentions. Such a conflict should be avoided.
 
 When these conflicts arise on [decorative][] [non-text content][], this is also a failure of [Success Criterion 1.1.1: Non-text Content][sc111] because [decorative][] [non-text content][] must be implemented in a way that allows assistive technologies to ignore it. When these conflicts arise on text content, or on content which is not [decorative][], this is not a failure of WCAG. Therefore this rule is not mapping to any specific WCAG Success Criterion, and is not an accessibility requirement for WCAG.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Implementation of the [Presentational Roles Conflict Resolution][] differs slightly from one user agent to the other. Hence, some elements might be exposed by one user agent and not by another, and consequently might create accessibility issues only for some users. Nevertheless, triggering the conflict is a bad practice.
 
 ## Test Cases
 
@@ -140,13 +141,13 @@ This `img` element is not [marked as decorative][].
 <img src="/test-assets/shared/w3c-logo.png" aria-label="W3C logo" />
 ```
 
-[decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [focusable]: #focusable 'Definition of Focusable'
-[global aria attribute]: https://www.w3.org/TR/wai-aria-1.1/#global_states 'List of Global ARIA States and Properties'
+[global aria attribute]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'List of Global ARIA States and Properties'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [marked as decorative]: #marked-as-decorative 'Definition of Marked as decorative'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG definition of Non-text content'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[sc111]: https://www.w3.org/TR/WCAG21/#non-text-content 'Success Criterion 1.1.1: Non-text Content'
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG definition of Non-text content'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc111]: https://www.w3.org/TR/WCAG22/#non-text-content 'Success Criterion 1.1.1: Non-text Content'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

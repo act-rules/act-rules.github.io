@@ -27,10 +27,11 @@ await updateRuleVersionsYaml(config, argv.ruleId);
 await approveTestCaseJson(config, argv.ruleId);
 await commitAndPush(config, `Set ${argv.ruleId} to approved`);
 
-async function generateApprovedRulePages({ tmpDir, rulesDir, glossaryDir }, ruleId) {
+async function generateApprovedRulePages({ tmpDir, rulesDir, glossaryDir, testAssetsDir }, ruleId) {
   await $`node ./node_modules/act-tools/dist/cli/rule-transform.js \
   --rulesDir "${rulesDir}" \
   --glossaryDir "${glossaryDir}" \
+  --testAssetsDir "${testAssetsDir}" \
   --outDir "${tmpDir}" \
   --ruleIds "${ruleId}"
   `;

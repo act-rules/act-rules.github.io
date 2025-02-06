@@ -1,6 +1,7 @@
 ---
 id: 7d6734
 name: SVG element with explicit role has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.
@@ -28,11 +29,13 @@ This rule applies to any [SVG element][] with an [explicit semantic role][explic
 
 Each target element has an [accessible name][] that is not empty.
 
-## Assumptions
+## Background
 
-This rule assumes that the presence of one of the roles outlined in the applicability indicates the authors intent to include the element in the accessibility tree and thus convey information to the user about that element.
+### Assumptions
 
-## Accessibility Support
+This rule assumes that the presence of one of the roles outlined in the applicability indicates the author's intent to include the element in the accessibility tree and thus convey information to the user about that element.
+
+### Accessibility Support
 
 The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings][] is inconsistent.
 
@@ -42,16 +45,14 @@ Browser and assistive technology support for SVG `<title>` and `<desc>` elements
 
 Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
+- [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 - [SVG Accessibility API Mappings (working draft)][svg accessibility api mappings]
 - [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/)
-- [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4)
-- [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6)
-- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA10)
+- [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA4)
+- [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6)
+- [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA10)
 
 ## Test Cases
 

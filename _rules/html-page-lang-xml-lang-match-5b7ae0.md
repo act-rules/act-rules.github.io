@@ -1,6 +1,7 @@
 ---
 id: 5b7ae0
 name: HTML page lang and xml:lang attributes have matching values
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that both `lang` and `xml:lang` attributes on the root element of a non-embedded HTML page, have the same primary language subtag.
@@ -12,6 +13,8 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - DOM Tree # The tree that HTML is parsed into.
+deprecated: |
+  This rule has been deprecated, as modern screen readers no longer use xml:lang when the lang attribute is given, regardless of which MIME type the page is served with. This rule is not maintained anymore and should not be used.
 acknowledgments:
   authors:
     - Jey Nandakumar
@@ -34,9 +37,13 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 For each test target, the values of the [primary language subtags][], if any exist, for the `lang` and `xml:lang` attributes are the same.
 
-## Assumptions
+## Background
 
-- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG22/#dfn-web-page-s) according to the definition in WCAG.
+
+### Assumptions
+
+- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page).
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
@@ -44,17 +51,13 @@ For each test target, the values of the [primary language subtags][], if any exi
 
 - The rule assumes that having `lang` and `xml:lang` attributes with matching [primary language subtags][] but non-matching [language tags](https://www.rfc-editor.org/rfc/rfc5646.html#section-2) overall, will not cause accessibility issues. This is not necessarily the case for all languages. One notable case is the [language tags](https://www.rfc-editor.org/rfc/rfc5646.html#section-2) for Cantonese (`zh-yue`) and Mandarin (`zh-cmn`) where the [primary language subtags][] match, but the [extended language subtags][] don't. Such a case would not fail this rule, but could lead to accessibility issues.
 
-## Accessibility Support
+### Accessibility Support
 
 Since most assistive technologies will consistently use `lang` over `xml:lang` when both are used, violation of this rule may not necessarily be a violation of WCAG 2. Only when there are inconsistencies between assistive technologies as to which attribute is used to determine the language does this lead to a violation of SC 3.1.1.
 
-## Background
-
-This rule is only applicable to non-embedded HTML pages. HTML pages embedded into other documents, such as through `iframe` or `object` elements are not applicable because they are not [web pages](https://www.w3.org/TR/WCAG21/#dfn-web-page-s) according to the definition in WCAG.
-
 ### Bibliography
 
-- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
+- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG22/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
@@ -176,6 +179,6 @@ This rule does not apply to `html` elements with an empty (`""`) `xml:lang` attr
 [nested browsing context]: https://html.spec.whatwg.org/#nested-browsing-context 'Definition of nested browsing context'
 [primary language subtags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.1 'Definition of primary language subtag'
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
-[sc311]: https://www.w3.org/TR/WCAG21/#language-of-page 'Success Criterion 3.1.1 Language of Page'
+[sc311]: https://www.w3.org/TR/WCAG22/#language-of-page 'Success Criterion 3.1.1 Language of Page'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top-level browsing context'
 [known primary language tag]: #known-primary-language-tag 'Definition of Known Primary Language Tag'

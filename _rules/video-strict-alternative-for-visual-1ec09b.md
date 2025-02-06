@@ -1,6 +1,7 @@
 ---
 id: 1ec09b
 name: Video element visual content has strict accessible alternative
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that `video` elements with audio have audio description.
@@ -47,26 +48,26 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
 
-- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/proposed/)
-- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/proposed/)
+- [`Video` Element Visual Content Has Audio Description](https://www.w3.org/WAI/standards-guidelines/act/rules/1ea59c/)
+- [`Video` Element Content Is Media Alternative For Text](https://www.w3.org/WAI/standards-guidelines/act/rules/ab4d13/)
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
-The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/html/H96) can not be relied upon to conform to [1.2.5: Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-prerecorded).
-
-## Background
+The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/html/H96) can not be relied upon to conform to [1.2.5: Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG22/#audio-description-prerecorded).
 
 ### Bibliography
 
-- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
-- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G78)
-- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G173)
-- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG21/Techniques/general/G8)
+- [Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html)
+- [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G78)
+- [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G173)
+- [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G8)
 
 ## Test Cases
 

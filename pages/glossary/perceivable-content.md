@@ -23,7 +23,7 @@ This definition assumes that elements with a [semantic role][] of `none` or `pre
 
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [palpable content]: https://html.spec.whatwg.org/multipage/dom.html#palpable-content 'HTML specification of palpable content'
-[pure decoration]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG definition of pure decoration'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1: Info and Relationship'
+[pure decoration]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of pure decoration'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'Success Criterion 1.3.1: Info and Relationship'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of visible'

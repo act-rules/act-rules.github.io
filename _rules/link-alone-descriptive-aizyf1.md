@@ -1,6 +1,7 @@
 ---
 id: aizyf1
 name: Link is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the accessible name of a link describes its purpose.
@@ -33,16 +34,16 @@ This rule applies to any [inheriting semantic][] `link` for which all the follow
 
 Each test target has an [accessible name][] which describes its purpose.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the purpose of the link is not ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the link is ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the link out of context.
 - This rule assumes that all [semantic][semantic role] `link` elements are used as links. An element marked up as a link, but that does not behave as a link would not fail [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249].
 
-## Accessibility Support
+### Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
-## Background
 
 ### Related rules
 
@@ -51,11 +52,11 @@ Each test target has an [accessible name][] which describes its purpose.
 ### Bibliography
 
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
-- [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91)
-- [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30)
-- [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24)
-- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
-- [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
+- [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG22/Techniques/general/G91)
+- [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H30)
+- [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG22/Techniques/html/H24)
+- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7)
+- [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA8)
 
 ## Test Cases
 
@@ -219,8 +220,8 @@ There is no [inheriting semantic][] `link` in this document (`a` element without
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
-[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
-[usc249]: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'
+[sc249]: https://www.w3.org/TR/WCAG22/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
+[usc249]: https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html 'Understanding Success Criterion 2.4.9: Link Purpose (Link Only)'

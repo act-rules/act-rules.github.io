@@ -1,4 +1,4 @@
-# Sets a rule to "approved" in the wcag-act-rules repository in a given branch. 
+# Sets a rule to "approved" in the wcag-act-rules repository in a given branch.
 name: Set a rule to approved
 on:
   workflow_dispatch:
@@ -14,12 +14,11 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Check user permission
         uses: 74th/workflow-permission-action@1.0.0
         with:
           listfile: .github/workflows/chair-accounts.md
-
-      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -39,4 +38,4 @@ jobs:
           git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
           git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
       - name: Set rule to approved
-        run: npx zx .github/scripts/wai-build.mjs --ruleId ${{ github.event.inputs.ruleId }}" --branch ${{ github.event.inputs.branch }}"
+        run: npx zx .github/scripts/approve-rule.mjs --ruleId "${{ github.event.inputs.ruleId }}" --branch "${{ github.event.inputs.branch }}"

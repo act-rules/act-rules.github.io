@@ -1,6 +1,7 @@
 ---
 id: c249d5
 name: Device motion based changes to the content can be disabled
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that it is possible to disable any changes to the content of the web page resulting from device motion based events.
@@ -37,7 +38,11 @@ For each registered [device orientation event][device orientation] or [device mo
 - **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][] within a 1 minute time span of the [event firing][event firing]; or
 - **disabled:** There is at least one [set of clearly labeled instruments][] to [block the event][blocked event][] for at least 1 minute.
 
-## Assumptions
+## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Assumptions
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [Success Criterion 2.5.4: Motion Actuation][sc2.5.4].
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [Success Criterion 2.5.4: Motion Actuation][sc2.5.4].
@@ -47,18 +52,14 @@ For each registered [device orientation event][device orientation] or [device mo
 - This rule assumes that the changes happen within a 1 minute time span after the [event][] [firing][] and therefore the comparison between the page before and after the [event][] [firing][] can be made at any time after that time span elapses. If there are changes after this time span, they may not be detected as [changes in content][] and the rule may pass but [Success Criterion 2.5.4: Motion Actuation][sc2.5.4] is not satisfied. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG.
 - After being disabled, the event remains disabled until being re-enabled again. If the event is re-enabled through other non-user controlled means (e.g. a timeout) then this rule may pass while [Success Criterion 2.5.4: Motion Actuation][sc2.5.4] is not satisfied.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
-
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. These extra requirements are left out of this rule, and should be tested separately.
 
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.4: Motion Actuation][sc2.5.4]
-- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
+- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG22/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
 ## Test Cases
@@ -212,12 +213,12 @@ This [HTML document][] is not operable by device motion.
 <p>ACT-Rules</p>
 ```
 
-[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[accessibility supported]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation#dfn-accessibility-supported
 [blocked event]: #blocked-event 'Definition of blocked event'
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[essential]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html#dfn-essential
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [event firing]: https://dom.spec.whatwg.org/#concept-event-fire
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
@@ -225,7 +226,7 @@ This [HTML document][] is not operable by device motion.
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
-[sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
+[sc2.5.4]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html
 [set of clearly labeled instruments]: #set-of-clearly-labeled-instruments 'Definition of set of clearly labeled instruments'
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

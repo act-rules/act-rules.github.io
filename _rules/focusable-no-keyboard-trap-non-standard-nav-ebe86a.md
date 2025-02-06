@@ -1,6 +1,7 @@
 ---
 id: ebe86a
 name: Focusable element has no keyboard trap via non-standard navigation
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks if it is possible to use non-standard keyboard navigation to navigate through content where focus is trapped when using standard ways of keyboard navigation.
@@ -41,22 +42,22 @@ For each target element focus can cycle to the browser UI by using the method ad
 
 **Note:** Cycling back to the browser UI can be done both by moving forward through the tab order and by moving backwards. It is not possible to fulfill this expectation by using browser specific shortcuts to return to the browser UI.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - It is not possible to use unmodified arrow or tab keys, or other standard exit methods to move focus away.
 - The focus order in keyboard navigation is cyclical, not linear, meaning that the focus order will cycle to the first/last element when it moves away from the last/first element.
 
-## Accessibility Support
+### Accessibility Support
 
-There are no accessibility support issues known.
-
-## Background
+Some browsers have settings that will immediately cycle focus back to the web document. This fulfills the expectation because focus can cycle to the browser UI and the browser UI cycles focus back to the web document.
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
-- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG22/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG22/Techniques/failures/F10)
 
 ## Test Cases
 

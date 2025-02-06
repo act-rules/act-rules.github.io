@@ -1,6 +1,7 @@
 ---
 id: ye5d6e
 name: Document has an instrument to move focus to non-repeated content
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that there is an instrument to move focus to non-repeated content in the page
@@ -42,19 +43,19 @@ This rule applies to any [HTML web page][].
 
 For each test target, there exists at least one [instrument][] inside it to move focus [just before][] a node of [non-repeated content after repeated content][].
 
-## Assumptions
-
-This rule assumes that there is at least one [block of repeated content][] before the non-repeated content, and therefore [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] will require a link to the non-repeated content in order to skip this [block of repeated content][]. If there is no [block of repeated content][] before the non-repeated content, then it is possible to fail this rule but still pass [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 The intention of this rule is that focus is moved to the main area of content of a document. However, defining the main area of content in a non-ambiguous way is not really doable. Therefore, the rule takes a more lenient position and only requires to move focus to some non-repeated content. Additional conditions on this destination were considered and rejected when writing the rule since it might be acceptable, for example, to skip the first heading of the main area of content if it has the exact same content as the `title` element of the document. Therefore, it is possible to pass this rule but still fail the related techniques and violate [Success Criterion 2.4.1 Bypass blocks][sc241].
 
 While it is clear that a "skip link" is a valid way to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241], it is less clear how "deep" in the page such a skip link could be. Notably, [Technique G124: Adding links at the top of the page to each area of the content][tech g124] is listing valid cases where it could be fairly "deep" if the page has many areas of the content. Rather than trying to fix an arbitrary value (e.g. "the skip link must be among the first 5 focusable elements"), or trying to figure out some condition on what precedes it, this rule only checks its existence. It is clear that if no "skip link" is provided, then another way to bypass blocks of repeated content must be found. However, it is possible to pass this rule without satisfying [Success Criterion 2.4.1 Bypass blocks][sc241] if the skip link is too far away from the start of the page.
+
+### Assumptions
+
+This rule assumes that there is at least one [block of repeated content][] before the non-repeated content, and therefore [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123] will require a link to the non-repeated content in order to skip this [block of repeated content][]. If there is no [block of repeated content][] before the non-repeated content, then it is possible to fail this rule but still pass [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123].
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 
@@ -411,8 +412,8 @@ This [document][] is not an [HTML web page][].
 [navigation landmark]: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_navigation 'WAI-ARIA authoring practices, Navigation Landmark'
 [non-repeated content after repeated content]: #non-repeated-content 'Definition of Non-Repeated Content after Repeated Content'
 [perceivable content]: #perceivable-content 'Definition of Perceivable Content'
-[sc241]: https://www.w3.org/TR/WCAG21/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
-[tech g1]: https://www.w3.org/WAI/WCAG21/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
-[tech g123]: https://www.w3.org/WAI/WCAG21/Techniques/general/G123 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
-[tech g124]: https://www.w3.org/WAI/WCAG21/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
+[sc241]: https://www.w3.org/TR/WCAG22/#bypass-blocks 'Success Criterion 2.4.1 Bypass Blocks'
+[tech g1]: https://www.w3.org/WAI/WCAG22/Techniques/general/G1 'Technique G1: Adding a Link at the Top of each Page that Goes Directly to the Main Content Area'
+[tech g123]: https://www.w3.org/WAI/WCAG22/Techniques/general/G123 'Technique G123: Adding a Link at the Beginning of a Block of Repeated Content to Go to the End of the Block'
+[tech g124]: https://www.w3.org/WAI/WCAG22/Techniques/general/G124 'Technique G124: Adding Links at the Top of the Page to each Area of the Content'
 [visible]: #visible 'Definition of Visible'

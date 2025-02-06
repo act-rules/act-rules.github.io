@@ -1,6 +1,7 @@
 ---
 id: f51b46
 name: Video element auditory content has captions
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that captions are available for audio information in non-streaming `video` elements.
@@ -20,6 +21,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider that the video may be a media alternative for text. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -41,26 +44,26 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG21/#dfn-captions).
+For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG22/#dfn-captions).
 
 **Note:** Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded)
-- [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G93)
-- [G87: Providing closed captions](https://www.w3.org/WAI/WCAG21/Techniques/general/G87)
-- [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG21/Techniques/html/H95)
+- [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
+- [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G93)
+- [G87: Providing closed captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G87)
+- [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG22/Techniques/html/H95)
 
 ## Test Cases
 

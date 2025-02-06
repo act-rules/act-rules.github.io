@@ -1,6 +1,7 @@
 ---
 id: 9bd38c
 name: Content has alternative for visual reference
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that when content is identified through a visual reference, there are also non-visual references identifying the same content.
@@ -44,14 +45,6 @@ For each test target, either it contains none of the [visual reference words][],
 - **accessible words**: each [visual reference word][] in the test target is included in the [accessible name][] of the identified content; or
 - **no instruction**: the test target does not give instructions about it through the use of any of the [visual reference words][].
 
-## Assumptions
-
-This rule assumes that [visual reference words][] are forms of information conveyed through visual presentation. Therefore, failing this rule fails [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Visual presentation is not limited to CSS and includes images such as the image of a circle with text.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 [Visual reference words][] that can be interpreted with the non-sensory meaning include, in English, expressions like "right after this" where "right" is a [visual reference word][] used with the meaning "immediately"; or words like "below" that is often used with the meaning "further in reading order".
@@ -60,12 +53,20 @@ The rule doesn't require the non-visual characteristic description to be include
 
 The identified web content does not have to be positioned on the same web page and doesn't need to be linked to from the tested web page.
 
+### Assumptions
+
+This rule assumes that [visual reference words][] are forms of information conveyed through visual presentation. Therefore, failing this rule fails [Success Criterion 1.3.3 Sensory Characteristics][sc133]. Visual presentation is not limited to CSS and includes images such as the image of a circle with text.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
 ### Bibliography
 
-- [WCAG 2.1 - Understanding Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
-- [G96: Providing textual identification of items that otherwise rely only on sensory information to be understood](https://www.w3.org/WAI/WCAG21/Techniques/general/G96)
-- [F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG21/Techniques/failures/F14)
-- [F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information](https://www.w3.org/WAI/WCAG21/Techniques/failures/F26)
+- [WCAG 2.2 - Understanding Success Criterion 1.3.3: Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html)
+- [G96: Providing textual identification of items that otherwise rely only on sensory information to be understood](https://www.w3.org/WAI/WCAG22/Techniques/general/G96)
+- [F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG22/Techniques/failures/F14)
+- [F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F26)
 
 ## Test Cases
 
@@ -492,13 +493,13 @@ This document contains no [text node][] that is either [visible][] or [included 
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
-[sc133]: https://www.w3.org/TR/WCAG21/#sensory-characteristics 'Success Criterion 1.3.3 Sensory Characteristics'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
+[sc133]: https://www.w3.org/TR/WCAG22/#sensory-characteristics 'Success Criterion 1.3.3 Sensory Characteristics'
 [text node]: https://dom.spec.whatwg.org/#text 'Specification of Text Node'
 [visible]: #visible 'Definition of Visible'
 [visible text content]: #visible-text-content 'Definition of Visible Text Content'
 [visual reference words]: #visual-reference-words 'Definition of Visual Reference Words'
 [visual reference word]: #visual-reference-words 'Definition of Visual Reference Words'
-[text]: https://www.w3.org/TR/WCAG21/#dfn-text 'WCAG definition of Text'
-[web content]: https://www.w3.org/TR/WCAG21/#dfn-content 'WCAG definition of Web Content'
-[web page]: https://www.w3.org/TR/WCAG21/#dfn-web-page-s 'WCAG definition of Web Page'
+[text]: https://www.w3.org/TR/WCAG22/#dfn-text 'WCAG definition of Text'
+[web content]: https://www.w3.org/TR/WCAG22/#dfn-content 'WCAG definition of Web Content'
+[web page]: https://www.w3.org/TR/WCAG22/#dfn-web-page-s 'WCAG definition of Web Page'

@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format 1.0](https://www.w3.org/TR/act-rules-format/):
+The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format](https://www.w3.org/TR/act-rules-format/):
 
 1. **[Rule properties](#rule-properties)**: Define the test subject and its environment. Includes identifier, name, type and description, as well as other meta data.
 
@@ -10,11 +10,11 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 3. **[Expectations](#expectations)**: Assert what must be true about the target elements, in order for them to pass the rule.
 
-4. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
+4. **[Background](#background)**: Provide information on relevant resources referenced when developing the rule.
 
-5. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
+5. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
 
-6. **[Background](#background)**: Provide information on relevant resources referenced when developing the rule.
+6. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
 
 7. **[Test cases](#test-cases)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 
@@ -62,6 +62,23 @@ The description is a short synopsis of what the rule does. This should be declar
 ### Accessibility requirements
 
 List all accessibility requirements that are not satisfied if one or more outcomes of a rule fails. For example, this could be one or more WCAG success criteria, or a WAI-ARIA rule. Each requirement should indicate the associated conformance level, and map the implications of each outcome, such as "satisfied", "not satisfied", or "further testing needed".
+
+Accessibility requirements should be listed as secondary if the requirement is related to the rule. There are four scenarios:
+
+1. The requirement is less strict than the rule. If this occurs, and some but not all failed examples of the rule pass the accessibility requirement, the following text should be used:
+
+   > This success criterion is **less strict** than this rule. This is because {reason}. Some of the failed examples satisfy this success criterion.
+
+1. The requirement is more strict than the rule. If this occurs, and some but not all passed examples of the rule fail the accessibility requirement, the following text should be used:
+
+   > secondary: This success criterion is **more strict** than this rule. This is because {reason}. Some of the passed examples do not satisfy this success criterion.
+
+1. The requirement is related to, but different from the rule. This often happens when there is overlap between two accessibility requirements. If this occurs, and some but not all the failed examples of the rule fail the accessibility requirement, the following text should be used:
+   > This success criterion is **related** to this rule. This {is because / happens for} {reason}. Most failed examples satisfy this success criterion.
+
+1) Atomic rules used in composite rules should list the requirements from the composite rule as "more strict" secondary requirements.
+
+Secondary requirements are optional and are only necessary when a requirement fails some of the passed examples or passes some of the failed examples. If there are no such examples, it is generally not necessary to include secondary requirements.
 
 **Note**: When linking to WCAG or other sources that may have several versions, use the version number where the relevant requirement was first introduced.
 
@@ -112,7 +129,7 @@ Many accessibility evaluations (especially automated tools) make assumptions abo
 
 While most assumptions relate to the rule itself, there are some assumptions that apply at other stages of the evaluation:
 
-- It is assumed that the tested web page is the one that has to conform to WCAG 2.1 and that there is no [conforming alternative version](https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version).
+- It is assumed that the tested web page is the one that has to conform to WCAG 2.2 and that there is no [conforming alternative version](https://www.w3.org/TR/WCAG22/#dfn-conforming-alternate-version).
 
 - It is assumed that the following technologies are accessibility supported: HTML, CSS, WAI-ARIA, ... (See also WCAG-ACT-RULES-CG's [explanation on Accessibility Support](accessibility-support.html)).
 

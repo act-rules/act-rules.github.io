@@ -1,6 +1,7 @@
 ---
 id: b20e66
 name: Links with identical accessible names have equivalent purpose
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that links with identical accessible names resolve to the same resource or equivalent resources.
@@ -11,7 +12,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
 wcag20:2.4.4: # Link Purpose (In Context) (A)
-secondary: true
+secondary: This success criterion is **less strict** than this rule. This is because the rule does not consider the context of the link. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - DOM Tree
@@ -45,24 +46,22 @@ This rule applies to any set of any two or more [HTML or SVG elements][] for whi
 
 When followed, the links in each set of target elements resolve to the [same resource][] or to [equivalent resources](#equivalent-resource). Resolving the links includes potential redirects, if the redirects happen instantly.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the purpose of the links with identical [accessible names][accessible name] would not be ambiguous to users in general when seen in context on the web page, which is the exception mentioned in [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249]. If the links are ambiguous to users in general, users of assistive technologies are not at a disadvantage when viewing the links out of context, e.g. on a list of links in a screen reader, which makes it more of a general user experience concern than an accessibility issue.
 - This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of a link can only accurately describe one resource (notably, homonyms alone are not used as link names). Thus, if two or more links have the same [accessible name][] but resolve to different resources, at least one of them does not describe its purpose.
 
-## Accessibility Support
+### Accessibility Support
 
 - This rule assumes that assistive technologies are exposing all links on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its links, then it is possible for two links to have identical name but resolve to different resources without failing [Success Criterion 2.4.9 Link Purpose (Link Only)][sc249] (if said links are in separate [documents][document] or [shadow trees][shadow tree]).
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [inheriting semantic][] `link` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-## Background
-
-This rule is closely related to [success criterion 2.4.4 Link Purpose (In Context)][sc244]. Because this rule is stricter, links that pass this rule satisfy 2.4.4 Link Purpose (In Context).
-
 ### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
-- [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html)
+- [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 
 ## Test Cases
@@ -352,7 +351,7 @@ These `a` and `area` elements have no `href` attribute. Thus they are not links 
 
 These links have different [accessible names][accessible name]. The rule only applies to identical [accessible names][accessible name], not to identical link destinations.
 
-**Note:** It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
+**Note:** It is a best practice for [Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html) that identical links have identical [accessible names][accessible name]. This is however not a requirement.
 
 ```html
 <html lang="en">
@@ -386,10 +385,9 @@ These `span` elements do not have a [semantic role][] of `link`. They are not va
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [light tree]: https://dom.spec.whatwg.org/#concept-light-tree 'Definition of light tree'
 [matching]: #matching-characters 'Definition of matching characters'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [same resource]: #same-resource 'Definition of same resource'
-[sc249]: https://www.w3.org/TR/WCAG21/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
-[sc244]: https://www.w3.org/TR/WCAG21/#link-purpose-in-context 'Success Criterion 2.4.4: Link Purpose (In Context)'
+[sc249]: https://www.w3.org/TR/WCAG22/#link-purpose-link-only 'Success Criterion 2.4.9: Link Purpose (Link Only)'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [shadow tree]: https://dom.spec.whatwg.org/#shadow-tree 'Definition of shadow tree'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'

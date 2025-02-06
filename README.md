@@ -12,7 +12,7 @@ For more information, see [ACT Overview - What is ACT](https://www.w3.org/WAI/GL
 
 ## Write rules, not tools
 
-An ACT rule is a unambiguous description of what the results of accessibility test tools and methodologies be when running a conformance test for the [Web Content Accessibility Guidelines][wcag21]. The rules are written without a specific implementation in mind. The goal is not to create an accessibility test tool. Instead we aim to harmonize between existing tools, and improve their transparency and the overall quality of their results.
+An ACT rule is a unambiguous description of what the results of accessibility test tools and methodologies be when running a conformance test for the [Web Content Accessibility Guidelines][wcag22]. The rules are written without a specific implementation in mind. The goal is not to create an accessibility test tool. Instead we aim to harmonize between existing tools, and improve their transparency and the overall quality of their results.
 
 If you want to know more about us, visit our website at: [www.w3.org/community/act-r][act-r].
 
@@ -34,5 +34,5 @@ For info on how to use this GitHub repository, see the [ACT-Rules GitHub Guideli
 
 This repository automatically pushes changes to rules to the [w3c/wcag-act-rules](https://github.com/w3c/wcag-act-rules/) repository. There is an "Approve rule" action available which can be triggered manually by an ACT Task Force facilitator, which will set a proposed rule to "approved".
 
-[wcag21]: https://www.w3.org/TR/WCAG21/
+[wcag22]: https://www.w3.org/TR/WCAG22/
 [act-r]: https://www.w3.org/community/act-r/

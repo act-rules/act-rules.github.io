@@ -1,6 +1,7 @@
 ---
 id: 4c31df
 name: Audio or video element that plays automatically has a control mechanism
+rules_format: 1.1
 rule_type: atomic
 description: |
   audio or video that plays automatically must have a control mechanism.
@@ -47,21 +48,21 @@ For each test target, there is at least one [instrument][] in the same [web page
 
 The [instrument][] to pause or stop or turn the audio volume off is [visible](#visible), has an [accessible name](#accessible-name) that is not only [whitespace](#whitespace), and is [included in the accessibility tree](#included-in-the-accessibility-tree).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
-- [Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG21/Techniques/failures/F93)
-- [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](https://www.w3.org/WAI/WCAG21/Techniques/general/G170)
+- [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html)
+- [Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG22/Techniques/failures/F93)
+- [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](https://www.w3.org/WAI/WCAG22/Techniques/general/G170)
 
 ## Test Cases
 
@@ -267,8 +268,8 @@ The `src` file of this `video` element has no audio output.
 
 ```html
 <video autoplay>
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video-with-incorrect-voiceover.webm" type="video/webm" />
+	<source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/silent.webm" type="video/webm" />
 </video>
 ```
 

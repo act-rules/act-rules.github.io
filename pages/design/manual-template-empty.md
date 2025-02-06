@@ -1,6 +1,7 @@
 ---
 id:
 name:
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks ...
@@ -10,6 +11,8 @@ accessibility_requirements: # Remove whatever is not applicable
     failed: not satisfied
     passed: satisfied | further testing needed
     inapplicable: satisfied | further testing needed
+  wcag20:z.z.z: # <Name of Success Criterion> (A | AA | AAA)
+    secondary: This success criterion is ...
   aria12:anchor-name: # <Heading in WAI-ARIA>
     title: Title to display
     forConformance: true | false
@@ -50,17 +53,29 @@ This rule applies to any (??) element ...
 
 Each target element ...
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
+### Related Rules
+
+<!-- This section is optional -->
+
+- [rule name here](./abc123)
+
+### Bibliography
+
+<!-- This section is optional -->
+
+- [link here](#)
 
 ## Test Cases
 

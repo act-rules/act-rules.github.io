@@ -1,6 +1,7 @@
 ---
 id: d0f69e
 name: Table header cell has assigned cells
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each table header has assigned cells in a table element.
@@ -17,6 +18,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Audrey Maniez
+    - Helen Burge
     - Jey Nandakumar
   funding:
     - WAI-Tools
@@ -35,23 +37,23 @@ This rule applies to any [HTML element][] with a [semantic][semantic role] [rowh
 
 Each target element is [assigned][] to at least one element with an [inheriting semantic][] [cell][].
 
-## Assumptions
-
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
-
-## Accessibility Support
-
-- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
 
+### Assumptions
+
+This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
+
+### Accessibility Support
+
+- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+
 ### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
-- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
+- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]
 
 ## Test Cases
@@ -125,7 +127,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 ```html
 <table role="grid">
 	<thead>
-		<tr role="row">
+		<tr>
 			<td></td>
 			<th scope="col" role="columnheader">Breakfast</th>
 			<th scope="col" role="columnheader">Lunch</th>
@@ -133,7 +135,7 @@ Each of the 4 `th` elements has an assigned `td` element, within the same `table
 		</tr>
 	</thead>
 	<tbody>
-		<tr role="row">
+		<tr>
 			<th scope="row" role="rowheader">Day 1</th>
 			<td>8:00</td>
 			<td>13:00</td>
@@ -346,13 +348,13 @@ This `th` element is part of a table which is not [included in the accessibility
 [inheriting semantic]: #inheriting-semantic 'Definition of Inheriting Semantic Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [assigned]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
-[cell]: https://www.w3.org/TR/wai-aria-1.1/#cell 'ARIA cell role'
+[cell]: https://www.w3.org/TR/wai-aria-1.2/#cell 'ARIA cell role'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[table]: https://www.w3.org/TR/wai-aria-1.1/#table 'ARIA table role'
-[grid]: https://www.w3.org/TR/wai-aria-1.1/#grid 'ARIA grid role'
-[columnheader]: https://www.w3.org/TR/wai-aria-1.1/#columnheader 'ARIA columnheader role'
-[rowheader]: https://www.w3.org/TR/wai-aria-1.1/#rowheader 'ARIA rowheader role'
+[table]: https://www.w3.org/TR/wai-aria-1.2/#table 'ARIA table role'
+[grid]: https://www.w3.org/TR/wai-aria-1.2/#grid 'ARIA grid role'
+[columnheader]: https://www.w3.org/TR/wai-aria-1.2/#columnheader 'ARIA columnheader role'
+[rowheader]: https://www.w3.org/TR/wai-aria-1.2/#rowheader 'ARIA rowheader role'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[sc1.3.1]: https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc1.3.1]: https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html 'Understanding Success Criterion 1.3.1: Info and Relationships'
 [html element]: #namespaced-element

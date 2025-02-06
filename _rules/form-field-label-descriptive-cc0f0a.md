@@ -1,6 +1,7 @@
 ---
 id: cc0f0a
 name: Form field label is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that labels describe the purpose of form field elements.
@@ -53,15 +54,6 @@ and where both the element and the [programmatic label][] are [visible][].
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
-## Assumptions
-
-- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
-- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
-
-## Accessibility Support
-
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
@@ -75,14 +67,23 @@ It is possible for an element to have an [accessible name][] but still have a no
 
 Having a [label][] which is not included in the [accessible name][] is a violation of [Success Criterion 2.5.3: Label in Name][sc253] but not of this rule nor of [Success Criterion 2.4.6: Headings and Labels][sc246].
 
+### Assumptions
+
+- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
+- This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
+
+### Accessibility Support
+
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+
 ### Bibliography
 
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
 - [Understanding Success Criterion 4.1.2: Name, Role and Value][usc412]
-- [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)
-- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
-- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16)
+- [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G131)
+- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
+- [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 
 ## Test Cases
 
@@ -262,14 +263,14 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.2'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'Definition of label'
+[label]: https://www.w3.org/TR/WCAG22/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [programmatic label]: #programmatic-label 'Definition of programmatic label'
-[sc246]: https://www.w3.org/WAI/WCAG21/#headings-and-labels.html 'Success Criterion 2.4.6: Headings and Labels'
-[sc253]: https://www.w3.org/WAI/WCAG21/label-in-name 'Success Criterion 2.5.3: Label in Name'
-[sc412]: https://www.w3.org/WAI/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
+[sc246]: https://www.w3.org/WAI/WCAG22/#headings-and-labels.html 'Success Criterion 2.4.6: Headings and Labels'
+[sc253]: https://www.w3.org/WAI/WCAG22/label-in-name 'Success Criterion 2.5.3: Label in Name'
+[sc412]: https://www.w3.org/WAI/WCAG22/#name-role-value 'Success Criterion 4.1.2: Name, Role and Value'
 [semantic role]: #semantic-role 'Definition of semantic role'
-[usc246]: https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Headings and Labels'
-[usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
+[usc246]: https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html 'Understanding SC 2.4.6: Headings and Labels'
+[usc412]: https://www.w3.org/WAI/WCAG22/Understanding/name-role-value 'Understanding SC 4.1.2: Name, Role and Value'
 [visible]: #visible 'Definition of visible'
 [visual context]: #visual-context 'Definition of visual context'

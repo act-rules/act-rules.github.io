@@ -1,6 +1,7 @@
 ---
 id: 80af7b
 name: Focusable element has no keyboard trap
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks for keyboard traps. This includes use of both standard and non-standard keyboard navigation to navigate through all content without becoming trapped.
@@ -41,26 +42,26 @@ This rule applies to any [HTML or SVG element][] that is [focusable][].
 
 For each test target, the [outcome](#outcome) of at least one of the following rules is "passed":
 
-- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/a1b64e/proposed/)
-- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/ebe86a/proposed/)
-
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
+- [Focusable Element Has No Keyboard Trap Via Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/a1b64e/)
+- [Focusable Element Has No Keyboard Trap Via Non-Standard Navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/ebe86a/)
 
 ## Background
 
 This rule only requires navigation in one direction (either forward or backward), not both, and not a specific one. It is clear that not being able to escape a focus trap in any direction is a failure of [Success Criterion 2.1.2 No keyboard trap][sc212]. However, it is less clear that being able to escape in only one direction is enough to satisfy it. If [Success Criterion 2.1.2 No keyboard trap][sc212] requires the possibility to escape the trap in a specific way (e.g. forward [standard keyboard navigation](#standard-keyboard-navigation)) or in both directions, this rule may pass while the criterion is not satisfied.
 
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
 ### Bibliography
 
-- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21)
-- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)
+- [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
+- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG22/Techniques/general/G21)
+- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG22/Techniques/failures/F10)
 
 ## Test Cases
 
@@ -276,4 +277,4 @@ There is no [focusable][] element.
 
 [focusable]: #focusable 'Definition of focusable'
 [html or svg element]: #namespaced-element
-[sc212]: https://www.w3.org/TR/WCAG21/#no-keyboard-trap 'Success Criterion 2.1.2 No Keyboard Trap'
+[sc212]: https://www.w3.org/TR/WCAG22/#no-keyboard-trap 'Success Criterion 2.1.2 No Keyboard Trap'

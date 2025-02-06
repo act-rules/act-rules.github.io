@@ -1,6 +1,7 @@
 ---
 id: 3ea0c8
 name: Id attribute value is unique
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that all `id` attribute values on a single page are unique.
@@ -27,6 +28,10 @@ htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'id-unique'
+deprecated: |
+  This rule has been deprecated because success criterion 4.1.1 has 
+  been removed in WCAG 2.2 and for WCAG 2.1 and 2.0 should be 
+  considered to always pass.
 ---
 
 ## Applicability
@@ -39,20 +44,20 @@ This rule applies to any `id` attribute whose value is not an empty string (`""`
 
 The value of the attribute is unique across all other `id` attributes specified on [HTML or SVG elements][html or svg element] that exist within the same [document tree](https://dom.spec.whatwg.org/#document-trees) or [shadow tree](https://dom.spec.whatwg.org/#shadow-trees) as the element on which the applicable `id` attribute is specified.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing)
-- [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93)
+- [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG22/Understanding/parsing)
+- [H93: Ensuring that id attributes are unique on a Web page](https://www.w3.org/WAI/WCAG22/Techniques/html/H93)
 
 ## Test Cases
 

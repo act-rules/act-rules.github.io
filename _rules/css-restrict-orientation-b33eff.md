@@ -1,6 +1,7 @@
 ---
 id: b33eff
 name: Orientation of the page is not restricted using CSS transforms
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms
@@ -17,6 +18,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -28,11 +30,11 @@ This rule applies to any [HTML element][] that is [visible](#visible) and has on
 - the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual-transforms) property; or
 - the CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-transform) property with any of the below [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions):
 
-	- [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
-	- [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
-	- [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
-	- [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
-	- [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
+  - [rotate](https://www.w3.org/TR/css-transforms/#funcdef-transform-rotate)
+  - [rotate3d](https://www.w3.org/TR/css-transforms-2/#funcdef-rotate3d)
+  - [rotateZ](https://www.w3.org/TR/css-transforms-2/#funcdef-rotatez)
+  - [matrix](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
+  - [matrix3d](https://www.w3.org/TR/css-transforms-2/#funcdef-matrix3d)
 
 **Note:** These specific [transformation functions](https://www.w3.org/TR/css-transforms/#transform-functions) are of interest to this rule as they have the potential to affect the [rotation](https://www.w3.org/TR/css-transforms-2/#Rotate3dDefined) of a given element.
 
@@ -44,23 +46,23 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 **Note:** Imagine the display of a smartphone with cartoon figure at its center. With this example, if a user turns the smartphone a quarter turn, that is a partial move from one orientation to the other, the user would expect that the cartoon figure continues to remain facing upwards. The smartphone accomplishes this by rotating the contents of its display a quarter turn to counter the users change in orientation. In effect, the cartoon figure has remained in place and its rotation relative from one orientation to the other is 0 degrees. Now imagine that a developer facilitated this rotation of the cartoon figure by a quarter turn _only_ when the smartphone starts from one orientation and not the other; its rotation relative from one orientation to the other would then be 90 degrees and it would appear stuck, or locked, as the user moves between orientations. What the developer has done is effectively counter the smartphone's attempt at countering the user's change in orientation.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule does not consider and may produce incorrect results for:
 
-- Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG21/#dfn-essential).
+- Elements for which a particular display orientation is [essential](https://www.w3.org/TR/WCAG22/#dfn-essential).
 - The existence of any control on the page that can change the orientation on demand.
 - Scripts are not used to adjust the CSS orientation lock.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+- [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG22/Understanding/orientation.html)
 - [CSS Transforms Module Level 1](https://www.w3.org/TR/css-transforms/#funcdef-transform-matrix)
 - [CSS Transforms Module Level 2](https://www.w3.org/TR/css-transforms-2)
 - [CSS3 Media Queries](https://www.w3.org/TR/css3-mediaqueries/)
@@ -160,6 +162,8 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 			@media (orientation: portrait) {
 				html {
 					transform: rotate(1.5708rad);
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -203,11 +207,16 @@ This page appears rotated at a slight angle of 2.5 degrees for stylistic purpose
 		<style>
 			body {
 				transform: rotate(2.5deg);
+				padding: 2rem;
+				width: min(100vw, 100vh);
+				height: min(100vw, 100vh);
 			}
 
 			@media (orientation: landscape) {
 				body {
 					transform: rotate(92.5deg);
+					position: absolute;
+					right: 0px;
 				}
 			}
 		</style>
@@ -230,6 +239,8 @@ A page where the CSS [rotate](https://www.w3.org/TR/css-transforms-2/#individual
 			@media (orientation: portrait) {
 				html {
 					rotate: 90deg;
+					width: min(100vw, 100vh);
+					height: min(100vw, 100vh);
 				}
 			}
 		</style>
@@ -315,6 +326,9 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 		<style>
 			body {
 				transform: rotate(90deg);
+				width: calc(min(100vw, 100vh) - 2rem);
+				height: calc(min(100vw, 100vh) - 2rem);
+				padding: 1rem;
 			}
 		</style>
 	</head>

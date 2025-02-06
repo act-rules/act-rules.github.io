@@ -1,6 +1,7 @@
 ---
 id: c4a8a4
 name: HTML page title is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the first title in an HTML web page describes the topic or purpose of that page.
@@ -37,19 +38,14 @@ htmlHintIgnore:
 
 ## Applicability
 
-This rule applies to the [document title][] of each [html web page][] if this [document title][] contains not only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
+This rule applies to the [document title][] of each [html web page][], except if one of the following is true:
+
+- The [html web page][] has no [document title][]; or
+- The [document title][] contains only [whitespace](#whitespace) [text nodes](https://dom.spec.whatwg.org/#text).
 
 ## Expectation
 
 The target element describes the topic or purpose of the overall content of the [document](https://dom.spec.whatwg.org/#concept-document).
-
-## Assumptions
-
-There are currently no assumptions.
-
-## Accessibility Support
-
-- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
 
 ## Background
 
@@ -57,15 +53,23 @@ The `title` elements of embedded documents, such as those in `iframe`, `object`,
 
 The [HTML specification - The `title` element](https://html.spec.whatwg.org/#the-title-element) requires documents to only have one `title` element; and `title` elements to be children of the `head` element of a document. However, current HTML specification also describes what should happen in case of multiple titles, and titles outside the `head` element. Because of this, neither of these validation issues causes a conformance problem for WCAG.
 
+### Assumptions
+
+There are currently no assumptions.
+
+### Accessibility Support
+
+- This rule assumes that browsers only recognize the first `title` element if multiple `title` elements are present in the [document](https://dom.spec.whatwg.org/#concept-document). Testing shows that this in general is the case. Therefore the scope of this rule is limited to only checking the first `title` element in a document.
+
 ### Related rules
 
 - [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/)
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.4.2: Page titled](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-- [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G88)
-- [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG21/Techniques/html/H25)
+- [Understanding Success Criterion 2.4.2: Page titled](https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html)
+- [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG22/Techniques/general/G88)
+- [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG22/Techniques/html/H25)
 
 ## Test Cases
 
@@ -126,7 +130,7 @@ This `title` element, which is within the `body`, describes the content of the d
 
 #### Failed Example 1
 
-This `<title>` element does not describe the content of the document.
+This `title` element does not describe the content of the document.
 
 ```html
 <html lang="en">

@@ -1,6 +1,7 @@
 ---
 id: afb423
 name: Audio element content is media alternative for text
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `audio` element is a media alternative for text on the page.
@@ -35,19 +36,19 @@ The auditory information of each test target is available as text (directly or v
 
 Each target element is labeled as an audio alternative for text on the page by content that is [visible][] and [included in the accessibility tree][].
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
+- [Understanding SC 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
 
 ## Test Cases
 

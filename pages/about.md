@@ -13,9 +13,9 @@ ACT-R is not set up to remove differences or impose changes on accessibility tes
 
 ## Why it matters
 
-Accessibility compliance is becoming a legal requirement all around the world. This makes it increasingly important for organizations to understand exactly what they need to do to be compliant. Accessibility requirements such as WCAG 2.1 are often written in technology agnostic language. Interpretation exactly what those requirements mean for a specific technology requires interpretation. This interpretation can be different between different testers, between different organizations and in different regions around the world.
+Accessibility compliance is becoming a legal requirement all around the world. This makes it increasingly important for organizations to understand exactly what they need to do to be compliant. Accessibility requirements such as WCAG 2.2 are often written in technology agnostic language. Interpretation exactly what those requirements mean for a specific technology requires interpretation. This interpretation can be different between different testers, between different organizations and in different regions around the world.
 
-Knowing the interpretation that will be used to assess compliance to legal requirements is essential for organizations. Without this it is impossible for them to know whether or not they can be sued or fined. For those operating in different countries, consistency of that interpretation is also important. Inconsistent interpretations can lead to an overload of requirements, possibly even mutually exclusive requirements. The principle is simple, a website that is considered to conform to WCAG 2.1 Level AA in the US, should also be compliant in the EU.
+Knowing the interpretation that will be used to assess compliance to legal requirements is essential for organizations. Without this it is impossible for them to know whether or not they can be sued or fined. For those operating in different countries, consistency of that interpretation is also important. Inconsistent interpretations can lead to an overload of requirements, possibly even mutually exclusive requirements. The principle is simple, a website that is considered to conform to WCAG 2.2 Level AA in the US, should also be compliant in the EU.
 
 ## Who We Are
 

@@ -95,14 +95,17 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 		 */
 		const accRequirementValues = Object.values(accessibility_requirements)
 		test.each(accRequirementValues)('has expected keys for accessibility requirement: `%p`', accReq => {
-			if (accReq.secondary) {
-				expect(accReq.secondary).toBeTrue()
-				return
-			}
-
+			expect(accReq).not.toBeNull()
+			expect(typeof accReq).toBe('object')
 			const keys = Object.keys(accReq).sort()
-			expect(keys.length).toBeGreaterThanOrEqual(4)
-			expect(keys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed'])
+
+			if (keys.includes('secondary')) {
+				expect(keys.length).toBe(1)
+				expect(typeof accReq.secondary).toBe('string')
+			} else {
+				expect(keys.length).toBeGreaterThanOrEqual(4)
+				expect(keys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed'])
+			}
 		})
 	}
 }

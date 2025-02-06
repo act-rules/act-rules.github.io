@@ -8,10 +8,11 @@ await generateTestCases(config);
 const commitMessage = (await $`git log -1 --pretty=%B`).stdout;
 await commitAndPush(config, commitMessage);
 
-async function generateProposedRulePages({ tmpDir, rulesDir, glossaryDir }) {
+async function generateProposedRulePages({ tmpDir, rulesDir, glossaryDir, testAssetsDir }) {
   await $`node ./node_modules/act-tools/dist/cli/rule-transform.js \
   --rulesDir "${rulesDir}" \
   --glossaryDir "${glossaryDir}" \
+  --testAssetsDir "${testAssetsDir}" \
   --outDir "${tmpDir}" \
   --proposed
   `;

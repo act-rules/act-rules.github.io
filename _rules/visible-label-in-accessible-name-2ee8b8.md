@@ -1,6 +1,7 @@
 ---
 id: 2ee8b8
 name: Visible label is part of accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that interactive elements labeled through content have their visible label as part of their accessible name.
@@ -38,15 +39,7 @@ This rule applies to any element for which all the following is true:
 
 ## Expectation
 
-For each target element, all [text nodes][] in the [visible text content][] either match or are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
-
-## Assumptions
-
-This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
-
-## Accessibility Support
-
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+For each target element, all [text nodes][] in the [visible text content][] [match characters][] and are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
 ## Background
 
@@ -54,10 +47,18 @@ This rule applies to elements with a [widget role][] that [support name from con
 
 The understanding document of [2.5.3 Label in Name][understand253] use the term "symbolic text characters" to refer to a type of [non-text content][] that uses text characters as symbols, such as using "x" to mean "close". This rule considers them as "characters expressing non-text content". Unicode emojis are another example of characters expressing non-text content, although these are not "symbolic text characters".
 
+### Assumptions
+
+This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
+
+### Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.3: Label in Name][understand253]
-- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)
+- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG22/Techniques/general/G208)
 
 ## Test Cases
 
@@ -97,10 +98,10 @@ This button has [visible][] text that is contained within the [accessible name][
 
 #### Passed Example 5
 
-This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][].
+This button has [visible][] text that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
-<button aria-label="close">X</button>
+<button aria-label="anything">X</button>
 ```
 
 #### Passed Example 6
@@ -137,10 +138,26 @@ This button has [visible][] text that is only partially contained within the [ac
 
 #### Failed Example 3
 
-This link has [visible][] text with mathematical symbols, that does not match the [accessible name][] because the mathematical symbols were written out in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name#mathematical-expressions-and-formulae).
+This link has [visible][] text with mathematical symbols, that does not match the [accessible name][] because the mathematical symbols were written out in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name#mathematical-expressions-and-formulae).
 
 ```html
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
+```
+
+#### Failed Example 4
+
+This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name.
+
+```html
+<a href="#" aria-label="non-standard">nonstandard</a>
+```
+
+#### Failed Example 5
+
+This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name.
+
+```html
+<a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>
 ```
 
 ### Inapplicable
@@ -181,13 +198,14 @@ This link has no [visible text content][].
 ```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content 'WCAG Definition of Non-text content'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.1/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[match characters]: #matching-characters 'Definition of matching characters'
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG Definition of Non-text content'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic role'
-[supports name from content]: https://www.w3.org/TR/wai-aria-1.1/#namefromcontent 'Definition of Supports name from contents'
+[supports name from content]: https://www.w3.org/TR/wai-aria-1.2/#namefromcontent 'Definition of Supports name from contents'
 [visible]: #visible 'Definition of visible'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [whitespace]: #whitespace 'Definition of Whitespace'
-[widget role]: https://www.w3.org/TR/wai-aria-1.1/#widget_roles 'Definition of Widget role'
+[widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'
 [text nodes]: https://dom.spec.whatwg.org/#text 'DOM text, 2020/08/18'
-[understand253]: https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html
+[understand253]: https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html

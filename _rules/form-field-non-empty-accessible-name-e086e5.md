@@ -1,6 +1,7 @@
 ---
 id: e086e5
 name: Form field has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each form field element has a non-empty accessible name.
@@ -10,6 +11,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **more strict** than this rule. This is because 1.3.1 Info and Relationship requires that information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text, while 4.1.2 Name, Role, Value only requires an accessible name.
+  wcag20:2.5.3: # Label in Name (A)
+    secondary: This success criterion is **more strict** than this rule. This is because 2.5.3 Label in Name requires that if a label is visible, the accessible name contains the label that is presented visually, while 4.1.2 Name, Role, Value only requires an accessible name.
 input_aspects:
   - Accessibility Tree
   - CSS styling
@@ -30,15 +35,6 @@ This rule applies to any element that is [included in the accessibility tree](#i
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-- Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The list of roles in the applicability is derived by taking all the roles from [WAI-ARIA Specifications](#wai-aria-specifications) that:
@@ -48,14 +44,23 @@ The list of roles in the applicability is derived by taking all the roles from [
 
 This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately.
 
-This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162)" would be sufficient.
+This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG22/Techniques/general/G162)" would be sufficient.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+- Several assistive technologies have a functionality to list all form fields on a page, including the `disabled` ones. Therefore this rule is still applicable to `disabled` form fields. If an assistive technology consistently ignores `disabled` form fields in all its interactions, then it is possible to have a `disabled` form field with no accessible name without creating accessibility issues for the user.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ### Bibliography
 
-- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value)
-- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91)
-- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44)
-- [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65)
+- [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG22/Techniques/html/H91)
+- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
+- [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/html/H65)
 
 ## Test Cases
 
@@ -138,7 +143,8 @@ These `menuitemcheckbox` elements have an [accessible name][] because its aria-l
 ```html
 <p id="dip">Add one or more dip:</p>
 <div role="menu" aria-labelledby="dip">
-	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><span id="ketchup" aria-hidden="true">Ketchup</span
+	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="ketchup" /><span id="ketchup" aria-hidden="true"
+		>Ketchup</span
 	><br />
 	<input type="checkbox" role="menuitemcheckbox" aria-labelledby="mayonnaise" /><span id="mayonnaise" aria-hidden="true"
 		>Mayonnaise</span
@@ -261,5 +267,5 @@ This `select` element is not [included in the accessibility tree][] because it i
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [semantic roles]: #semantic-role 'Definition of semantic role'
 [visible]: #visible 'Definition of Visible'
-[label]: https://www.w3.org/TR/WCAG21/#dfn-labels 'WCAG definition of Labels'
-[sc332]: https://www.w3.org/TR/WCAG21/#labels-or-instructions
+[label]: https://www.w3.org/TR/WCAG22/#dfn-labels 'WCAG definition of Labels'
+[sc332]: https://www.w3.org/TR/WCAG22/#labels-or-instructions

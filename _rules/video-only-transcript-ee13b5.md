@@ -1,6 +1,7 @@
 ---
 id: ee13b5
 name: Video element visual-only content has transcript
+rules_format: 1.1
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have all visual information available in a transcript.
@@ -38,22 +39,22 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
 
-## Assumptions
+## Background
+
+A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
+
+### Assumptions
 
 A mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
-A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG21/#dfn-alternative-for-time-based-media).
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded)
-- [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG21/Techniques/general/G159)
+- [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
+- [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG22/Techniques/general/G159)
 
 ## Test Cases
 

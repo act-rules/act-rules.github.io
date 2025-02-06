@@ -1,6 +1,7 @@
 ---
 id: 36b590
 name: Error message describes invalid form field value
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that text error messages provided when the user completes a form field with invalid values or using an invalid format, identify the cause of the error or how to fix the error.
@@ -61,14 +62,6 @@ Each test target either has no [form field error indicators][form field error in
 
 in [text][] that is [included in the accessibility tree][] or included in the [accessible name][] or [accessible description][] of the test target.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][] roles that:
@@ -82,11 +75,19 @@ A single [form field error indicator][] can be related to multiple test targets.
 
 A single test target can be related to multiple [form field error indicators][form field error indicator]. For example, a text field can have a red border around it, an error icon adjacent to it, an error message below it, and another error message at the top of the form. All of these are error indicators for the same form field.
 
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
 ### Bibliography
 
-- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification)
-- [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84)
-- [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85)
+- [Understanding Success Criterion 3.3.1: Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification)
+- [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG22/Techniques/general/G84)
+- [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG22/Techniques/general/G85)
 
 ## Test Cases
 
@@ -242,9 +243,9 @@ There are no elements with any of the required [semantic roles][semantic role].
 [aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
 [form field error indicator]: #form-field-error-indicator
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
-[presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content
+[presentation]: https://www.w3.org/TR/WCAG22/#dfn-presentation
 [semantic role]: #semantic-role 'Definition of semantic role'
-[text]: https://www.w3.org/TR/WCAG21/#dfn-text
+[text]: https://www.w3.org/TR/WCAG22/#dfn-text
 [visible]: #visible 'Definition of visible'
 [html element]: #namespaced-element

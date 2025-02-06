@@ -1,6 +1,7 @@
 ---
 id: 4b1c6c
 name: Iframe elements with identical accessible names have equivalent purpose
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that `iframe` elements with identical accessible names embed the same resource or equivalent resources.
@@ -35,22 +36,22 @@ This rule applies to any set of any two or more `iframe` elements which:
 
 The `iframe` elements in each set of target elements embed the [same resource][] or [equivalent resources](#equivalent-resource).
 
-## Assumptions
-
-This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
-
-## Accessibility Support
-
-This rule assumes that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without failing [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
-
 ## Background
 
 When determining if target elements embed the same resource, resolving the embedded resource includes any redirects that are instant.
 
+### Assumptions
+
+This rule assumes that, within the context of the test subject, the description provided by the [accessible name][] of an `iframe` can only accurately describe one resource (notably, homonyms alone are not used as `iframe` names). Thus, if two or more `iframe` elements have the same [accessible name][] but embed different resources, at least one of them does not describe its purpose.
+
+### Accessibility Support
+
+This rule assumes that assistive technologies are exposing all `iframe` elements on the page in the same way no matter which [document tree](https://dom.spec.whatwg.org/#document-trees) they are in. If an assistive technology requires the user to "enter" an `iframe` or a [shadow tree][] before exposing its content (notably nested `iframe`), then it is possible for two `iframe` to have identical name but embed different resources without failing [Success Criterion 4.1.2: Name, Role, Value][sc412] (if said `iframe` are in separate [documents][document] or [shadow trees][shadow tree])
+
 ### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
-- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64)
+- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value][usc412]
 
 ## Test Cases
@@ -363,9 +364,9 @@ These `iframe` elements are not [included in the accessibility tree][], because 
 [document]: https://dom.spec.whatwg.org/#concept-document 'Definition of document'
 [document tree]: https://dom.spec.whatwg.org/#document-trees 'Definition of document tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value 'Success Criterion 4.1.2: Name, Role, Value'
+[sc412]: https://www.w3.org/TR/WCAG22/#name-role-value 'Success Criterion 4.1.2: Name, Role, Value'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'Definition of top level browsing context'
-[usc412]: https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
+[usc412]: https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html 'Understanding Success Criterion 4.1.2: Name, Role, Value'
 [web page (html)]: #web-page-html 'Definition of web page (HTML)'
 [same resource]: #same-resource 'Definition of same resource'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'

@@ -10,4 +10,4 @@ Content that is neither [purely decorative][], nor required for understanding th
 
 **Example**: A picture of New York's Time Square may include taxis, a famous pizza restaurant, and theater advertisements, etc. None of these are purely decorative. They provide clues as to where the picture was taken. But neither are any of these required to understand the picture as a whole. Even if the picture itself is significant, the taxis in the picture are not.
 
-[purely decorative]: https://www.w3.org/TR/WCAG21/#dfn-pure-decoration 'WCAG 2.1, Purely decorative'
+[purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.2, Purely decorative'

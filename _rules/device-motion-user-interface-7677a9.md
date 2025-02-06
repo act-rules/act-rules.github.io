@@ -1,6 +1,7 @@
 ---
 id: 7677a9
 name: Device motion based changes to the content can also be created from the user interface
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that changes to the content of a web page that result from device motion events can also be caused by user interface components.
@@ -37,25 +38,25 @@ For each registered [device orientation event][device orientation] or [device mo
 - **no changes:** The registered event does not cause [changes to the content][changes in content] of the [web page][]; or
 - **same result:** There is at least one set of [instruments][instrument], where each [instrument][] is in the same [web page][] of the registered event or can be found in a [clearly labeled location][] from that [web page][], causing the same [changes in content][] as the event.
 
-## Assumptions
+## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Assumptions
 
 - The motion to operate the device is not used through an [accessibility supported][] interface, which is listed as a valid exception to [Success Criterion 2.5.4: Motion Actuation][sc2.5.4].
 - The motion is not [essential][] for the functionality it triggers, which is listed as a valid exception to [Success Criterion 2.5.4: Motion Actuation][sc2.5.4].
 - This rule assumes that there are no changes in the content of the [web page][] caused by another [event][]. If this is not the case, changes may be attributed to the wrong [event][] and the rule may fail while [Success Criterion 2.5.4: Motion Actuation][sc2.5.4] is still satisfied.
 - This rule assumes that the changes happen within a 1 minute time span after the [event][] [firing][] and therefore the comparison between the page before and after the [event][] [firing][] can be made at any time after that time span elapses. If there are changes after this time span, they may not be detected as [changes in content][] and the rule may pass but [Success Criterion 2.5.4: Motion Actuation][sc2.5.4] is not satisfied. The arbitrary 1 minute time span, selected so that testing this rule would not be impractical, is not included in WCAG.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
-
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.5.4: Motion Actuation][sc2.5.4]. These extra requirements are left out of this rule, and should be tested separately.
 
 ### Bibliography
 
 - [Understanding Success Criterion 2.5.4: Motion Actuation][sc2.5.4]
-- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html)
+- [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG22/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
 ## Test Cases
@@ -272,18 +273,18 @@ This [HTML document][] is not operable by device motion.
 <p>ACT-Rules</p>
 ```
 
-[accessibility supported]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation#dfn-accessibility-supported
+[accessibility supported]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation#dfn-accessibility-supported
 [changes in content]: #changes-in-content 'Definition of changes in content'
 [clearly labeled location]: #clearly-labeled-location 'Definition of clearly labeled location'
 [device motion]: https://www.w3.org/TR/orientation-event/#devicemotion 'Definition of device motion event'
 [device orientation]: https://www.w3.org/TR/orientation-event/#deviceorientation 'Definition of device orientation event'
-[essential]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html#dfn-essential
+[essential]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html#dfn-essential
 [event]: https://dom.spec.whatwg.org/#concept-event 'Definition of event'
 [event listener]: https://dom.spec.whatwg.org/#concept-event-listener
 [event listener list]: https://dom.spec.whatwg.org/#eventtarget-event-listener-list
 [firing]: https://dom.spec.whatwg.org/#concept-event-fire 'Definition of event firing'
 [html document]: https://dom.spec.whatwg.org/#concept-document
 [instrument]: #instrument-to-achieve-an-objective 'Definition of instrument to achieve an objective'
-[sc2.5.4]: https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html
+[sc2.5.4]: https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html
 [web page]: #web-page-html 'Definition of web page'
 [window object]: https://html.spec.whatwg.org/multipage/window-object.html#dom-window

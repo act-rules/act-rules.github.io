@@ -1,6 +1,7 @@
 ---
 id: a25f45
 name: Headers attribute specified on a cell refers to cells in the same table element
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `headers` attribute on a cell refer to other cells in the same `table` element.
@@ -42,23 +43,23 @@ Each target's [attribute value][] is a [set of space separated tokens][]. Each t
 
 Each target's [attribute value][] is a [set of space separated tokens][], and none of these tokens is the `id` of the element on which the test target is specified.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - This rule assumes that the `headers` attribute is only used to identify table headers. If other information is included in the `headers` attribute, the rule may fail on issues that are not accessibility concerns. For example, if `headers` is used to include information for scripts, this rule may not be accurate.
 - This rule assumes that the `headers` attribute is required to express the relationship between data and table header cells in the same `table`. If the browser [computes an adequate fallback header][] for cells that have the `headers` [attribute value][] that does not correspond to the `id` of any one cell in the same `table`, success Criterion [1.3.1 Info and Relationships][sc131] may be satisfied even if this rule failed.
 - This rule assumes that the id values on the `headers` attribute are unique.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H43)
-- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG21/Techniques/failures/F90)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
+- [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
+- [F90: Incorrectly associating table headers and content via the headers and id attributes](https://www.w3.org/WAI/WCAG22/Techniques/failures/F90)
 
 * `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 * `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
@@ -416,5 +417,5 @@ This `table` doesn't have a role of `table`, `grid` or `treegrid`.
 [set of space separated tokens]: https://html.spec.whatwg.org/#set-of-space-separated-tokens 'Space separated tokens'
 [`table`]: https://html.spec.whatwg.org/#concept-table 'Definition of table'
 [computes an adequate fallback header]: https://html.spec.whatwg.org/multipage/tables.html#header-and-data-cell-semantics 'Forming relationships between data cells and header cells'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'WCAG 2.1 success criterion 1.3.1 Info and Relationships'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'WCAG 2.2 success criterion 1.3.1 Info and Relationships'
 [semantic role]: #semantic-role 'Definition of semantic role'

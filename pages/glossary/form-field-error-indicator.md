@@ -15,6 +15,6 @@ Any [text][], or [non-text content][], or an element that has [presentation][] i
 
 **Note**: An error indicator can be a separate element in the page, but it can also be part of a form control. For example a red outline on a form control is often used to indicate an error. Not all red outlines are indicators of an error though. This depends on the presentation of the form control in relation to other elements on the page.
 
-[non-text content]: https://www.w3.org/TR/WCAG21/#dfn-non-text-content
-[presentation]: https://www.w3.org/TR/WCAG21/#dfn-presentation
-[text]: https://www.w3.org/TR/WCAG21/#dfn-text
+[non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content
+[presentation]: https://www.w3.org/TR/WCAG22/#dfn-presentation
+[text]: https://www.w3.org/TR/WCAG22/#dfn-text

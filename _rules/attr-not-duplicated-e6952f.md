@@ -1,6 +1,7 @@
 ---
 id: e6952f
 name: Attribute is not duplicated
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.
@@ -27,6 +28,10 @@ htmlHintIgnore:
   # https://www.npmjs.com/package/htmlhint
   # (used with `npm test` to ensure validity of code snippets)
   - 'attr-no-duplication'
+deprecated: |
+  This rule has been deprecated because success criterion 4.1.1 has 
+  been removed in WCAG 2.2 and for WCAG 2.1 and 2.0 should be 
+  considered to always pass.
 ---
 
 ## Applicability
@@ -39,19 +44,19 @@ This rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#
 
 For each test target, there are no duplicated [attributes](https://www.w3.org/TR/html5/syntax.html#elements-attributes).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
-
 ### Bibliography
 
-- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H94)
+- [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG22/Techniques/html/H94)
 
 ## Test Cases
 

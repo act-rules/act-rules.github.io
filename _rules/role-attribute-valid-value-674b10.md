@@ -1,6 +1,7 @@
 ---
 id: 674b10
 name: Role attribute has valid value
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `role` attribute has a valid value.
@@ -16,9 +17,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationship (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. Some of the failed examples may satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: true
+    secondary: This success criterion is **less strict** than this rule. This is because the success criterion can be satisfied by an element's implicit role when the explicit role is incorrect. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -40,21 +41,21 @@ This rule applies to any `role` attribute for which all the following are true:
 
 Each test target has at least one token which is a valid value corresponding to a non-abstract role from [WAI-ARIA Specifications][].
 
-## Assumptions
-
-This rule assumes that using the `role` attribute for any purpose other than to provide an ARIA [semantic role][] to the elements is invalid. These would fail [WCAG Technique: ARIA4 Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4).
-
-## Accessibility Support
-
-Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
-
 ## Background
 
-Using an invalid role is often the result of a typo or other developer error. Unknown roles are ignored by browsers and assistive technologies, and the element's [implicit role][] is used. This often means that a role that should exist is missing. This can cause issues under [success criterion 1.3.1 Info and Relationships][sc131] or [4.1.2 Name, Role, Value][sc412]. If the element's implicit semantics are sufficient to communicate its intent, an invalid role may not cause an accessibility issue.
+Using an invalid role is often the result of a typo or other developer error. Unknown roles are ignored by browsers and assistive technologies, and the element's [implicit role][] is used. This often means that a role that should exist is missing.
 
 The `role` attribute is a set of [space separated tokens][]. Having a [whitespace](#whitespace) separated list of more than one token in the value of the role attribute is used for what is known as _fallback roles_. If the first token is not accessibility supported (or valid), the next one will be used for determining the [semantic role][] of the element, and so forth. The rule applies to attributes containing at least one non-[ASCII whitespace][] character so that there is at least one token in the set.
 
-Not every role should be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
+Not every role can be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
 
 ### Bibliography
 
@@ -182,10 +183,7 @@ This `role` attribute is specified on an element which is [programmatically hidd
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationship'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [space separated tokens]: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#space-separated-tokens 'Definition of space separated tokens'
 [wai-aria role]: https://www.w3.org/TR/wai-aria-1.2/#role_definitions 'List of WAI-ARIA roles'
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
-[sc131]: https://www.w3.org/TR/WCAG21/#info-and-relationships
-[sc412]: https://www.w3.org/TR/WCAG21/#name-role-value

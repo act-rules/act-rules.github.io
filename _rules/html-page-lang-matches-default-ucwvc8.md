@@ -1,6 +1,7 @@
 ---
 id: ucwvc8
 name: HTML page language subtag matches default language
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the primary language subtag of the page language matches the default language of the page
@@ -44,11 +45,13 @@ This rule applies to any [document element][] if it is an `html` element for whi
 
 For each test target, the [known primary language tag][] of its `lang` attribute matches the [default page language][] of the test target.
 
-## Assumptions
+## Background
 
-- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page) is still satisfied.
+### Assumptions
 
-- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page).
+- This rule assumes that the default human language of a page, as described in WCAG 2, can be determined by counting the number of words used in each language. If the default language needs to be derived in some other way (such as frequency analysis, mutual information based distance, …), this rule may fail while [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page) is still satisfied.
+
+- The language of the page can be set by other methods than the `lang` attribute, for example using HTTP headers or the `meta` element. These methods are not supported by all assistive technologies. This rule assumes that these other methods are insufficient to satisfying [Success Criterion 3.1.1: Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page).
 
 - This rule assumes that user agents and assistive technologies can programmatically determine [known primary language tags][known primary language tag] even if these do not conform to the [RFC 5646][] syntax.
 
@@ -56,21 +59,19 @@ For each test target, the [known primary language tag][] of its `lang` attribute
 
 - This rule assumes that `iframe` title elements are not exposed to assistive technologies and so does not consider them as part of the [default page language][].
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Related rules
 
 - [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
-- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/proposed/)
+- [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/)
 
 ### Bibliography
 
-- [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
-- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57)
+- [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html)
+- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG22/Techniques/html/H57)
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
@@ -329,6 +330,6 @@ The `lang` [attribute value][] of this page is a [grandfathered tag][grandfather
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8
 [iso 639.2]: https://www.loc.gov/standards/iso639-2/php/code_list.php 'ISO 639.2: Codes for the Representation of Names of Languages'
 [rfc 5646]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.1
-[sc311]: https://www.w3.org/TR/WCAG21/#language-of-page 'Success Criterion 3.1.1 Language of Page'
+[sc311]: https://www.w3.org/TR/WCAG22/#language-of-page 'Success Criterion 3.1.1 Language of Page'
 [top-level browsing context]: https://html.spec.whatwg.org/#top-level-browsing-context 'HTML top-level browsing context, as of 2020/06/05'
 [known primary language tag]: #known-primary-language-tag

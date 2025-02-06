@@ -1,6 +1,7 @@
 ---
 id: bc659a
 name: Meta element has no refresh delay
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the `meta` element is not used for delayed redirecting or refreshing.
@@ -11,17 +12,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:2.2.4: # Interruptions (AAA)
-    forConformance: true
-    secondary: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows redirects longer than 20 hours. Some of the passed examples do not satisfy this success criterion.
   wcag20:3.2.5: # Change on Request (AAA)
-    forConformance: true
-    secondary: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because the rule allows redirects longer than 20 hours. Some of the passed examples do not satisfy this success criterion.
   wcag-technique:G110: # Using an instant client-side redirect
     forConformance: false
     failed: not satisfied
@@ -58,27 +51,29 @@ This rule applies to the first `meta` element in a document for which all the fo
 
 For each target, the _time_ from the content [attribute value][] is either 0 or more than 72000 (20 hours). To determine the _time_, run the [shared declarative refresh steps][] on the `meta` element as described in the [HTML refresh state](https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh).
 
-## Assumptions
-
-- This rule assumes no functionality was provided by the website for the user to adjust the timer.
-- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG21/#dfn-essential), which is listed as a valid exception to [2.2.1 Time Adjustable][sc221].
-
-## Accessibility Support
-
-Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
-
 ## Background
+
+The `meta http-equiv="refresh"` directive is an HTML tag used to instruct browsers to automatically refresh or reload a web page after a specified time interval. This can be useful for updating content dynamically or redirecting users to another page.
+
+The `content` attribute in the `meta http-equiv="refresh"` directive is used to define the time interval, in seconds, after which the browser should automatically refresh or reload the web page. For example, `content="5"` would instruct the browser to refresh the page every 5 seconds. Careful consideration of the refresh interval is crucial to ensure optimal user experience and accessibility, particularly for individuals who may require more time to consume or interact with web content.
 
 Because a refresh with a timing of 0 is a redirect, it is exempt from this rule. Since this can cause rapid screen flashes it is strongly recommended to avoid this.
 
-This rule is designed specifically for [2.2.1 Timing Adjustable][sc221], which can be satisfied if the time limit is over 20 hours long. All pages that fail this because of a "refresh" `meta` element also do not satisfy [3.2.5 Change on Request][sc325]. In order to adequately test the [expectation](#expectation), some of the passed examples do not satisfy [3.2.5 Change on Request][sc325].
+### Assumptions
+
+- This rule assumes no functionality was provided by the website for the user to adjust the timer.
+- This rule assumes that the refresh was not [essential](https://www.w3.org/TR/WCAG22/#dfn-essential), which is listed as a valid exception to [2.2.1 Time Adjustable][sc221].
+
+### Accessibility Support
+
+Not all major web browsers parse the value of the `content` attribute in the same way. Some major browsers, when they are unable to parse the value, default to a 0 seconds delay, whereas others will not redirect at all. This can cause some pages to be inapplicable for this rule, while still having a redirect in a minority of web browsers.
 
 ### Bibliography
 
-- [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
-- [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG21/Understanding/interruptions.html)
-- [Understanding Success Criterion 3.2.5: Change on Request](https://www.w3.org/WAI/WCAG21/Understanding/change-on-request.html)
-- [G110: Using an instant client-side redirect](https://www.w3.org/WAI/WCAG21/Techniques/general/G110)
+- [Understanding Success Criterion 2.2.1: Timing Adjustable](https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html)
+- [Understanding Success Criterion 2.2.4: Interruptions](https://www.w3.org/WAI/WCAG22/Understanding/interruptions.html)
+- [Understanding Success Criterion 3.2.5: Change on Request](https://www.w3.org/WAI/WCAG22/Understanding/change-on-request.html)
+- [G110: Using an instant client-side redirect](https://www.w3.org/WAI/WCAG22/Techniques/general/G110)
 - [H76: Using meta refresh to create an instant client-side redirect](https://www.w3.org/TR/WCAG-TECHS/H76.html)
 - [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
 - [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](https://www.w3.org/TR/WCAG-TECHS/F41.html)
@@ -281,6 +276,5 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [meta refresh]: https://html.spec.whatwg.org/#attr-meta-http-equiv-refresh 'HTML specification of the meta refresh State'
-[sc221]: https://www.w3.org/TR/WCAG21/#timing-adjustable 'WCAG 2.1 Success Criterion 2.2.1 Timing Adjustable'
-[sc325]: https://www.w3.org/TR/WCAG21/#change-on-request 'WCAG 2.1 Success Criterion 3.2.5 Change on Request'
+[sc221]: https://www.w3.org/TR/WCAG22/#timing-adjustable 'WCAG 2.2 Success Criterion 2.2.1 Timing Adjustable'
 [shared declarative refresh steps]: https://html.spec.whatwg.org/#shared-declarative-refresh-steps 'HTML specification of the Shared Declarative Refresh Steps'

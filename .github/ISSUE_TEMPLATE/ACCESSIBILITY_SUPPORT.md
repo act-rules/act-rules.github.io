@@ -1,6 +1,6 @@
 ## Accessibility support
 
-(( Put the accessibility support item here ))
+(( Put the accessibility support text here. Rules may have more than one item, create an issue for each item. ))
 
 ## ACT Rules
 

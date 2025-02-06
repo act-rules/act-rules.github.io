@@ -8,13 +8,15 @@ input_aspects:
   - DOM tree
 ---
 
+> Comment: I do not believe this definition correctly captures the "inline" exception of 2.5.5/2.5.8 currently. Please disregard this for now and review the global structure.
+
 All nodes that generate an [inline box][] that are part of a [line box][] are considered _rendered on a line_. These are _line rendering nodes_.
 
-Any [flat tree][] [descendants][] of line rendering nodes are also considered part of a line if one of its [clientRects][] overlaps with the position of the [line box][], and if all the following is true for each [ancestor][] in the [flat tree][] up to the line rendering node:
+Any [flat tree][] [descendants][] of line rendering nodes is also considered part of a line if one of its [clientRects][] overlaps with the position of the [line box][], and if all the following is true for each [ancestor][] in the [flat tree][] up to the line rendering node:
 
 - the ancestor is an [inline box][]; and
 - the ancestor is not [floating][]; and
-- the ancestor does not have an [absolute][] or [fixed][] position.
+- the ancestor does not have an [absolute][] or [fixed][] `position`.
 
 [absolute]: https://drafts.csswg.org/css-position-3/#valdef-position-absolute 'Definition of absolute'
 [ancestor]: https://dom.spec.whatwg.org/#concept-tree-ancestor 'Definition of ancestor'

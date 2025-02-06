@@ -1,9 +1,9 @@
 ---
 id: gi8qkf
 name: Interactive component has enhanced size
-rule_type: composite
+rule_type: atomic
 description: |
-  This rule checks that elements that can receive pointer events have a size of at least 44×44 pixels, are inline, are user agent controlled, or have essential size.
+  This rule checks that elements that can receive pointer events have a size of at least 44×44 pixels, unless they are inline, are user agent controlled, or have essential size.
 accessibility_requirements:
   wcag21:2.5.5: # Target size (enhanced) (AAA)
     forConformance: true
@@ -12,34 +12,30 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag22:2.5.8: # Target Size (Minimum) (AA)
     secondary: 'This success criterion is **less strict** than this rule. This is because this criterion has a lower size requirement. Some of the failed examples may satisfy this success criterion.'
-input_rules:
-  - 8iacb5
-  - dppn1b
-  - kj4tr0
-  - ssehdh
-  - vcup8d
-  - yvb1xu
+input_aspects:
+  - DOM Tree
+  - CSS Styling
 acknowledgments:
   authors:
     - Jean-Yves Moyen
-  test_assets: Map Image by <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Freepik</a>
+  test_assets: <a href="https://www.freepik.com/free-vector/black-white-town-navigation-map_5663353.htm">Map Image</a> designed by Freepik; <a href="https://www.flaticon.com/free-icons/zoom-out">Zoom-out icon</a> and <a href="https://www.flaticon.com/free-icons/zoom-in">Zoom in icon</a> created by Rizki Ahmad Fauzi - Flaticon
 ---
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][].
+This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][], except when one of the following is true:
 
-- [Interactive component has no clickable area][target size empty]; or
-- [Interactive component is inline][target size inline]; or
-- [Interactive component has size controlled by User Agent][target size user agent]; or
-- [Interactive component has essential size][target size essential]; or
+- the element has a [totally empty clickable area][]; or
+- the element is [rendered on a line]; or
+- the element is [User Agent controlled][user agent controlled component]; or
+- the element has [essential size][].
 
 ## Expectation
 
-For each test target, the [outcome](#outcome) of at least one of the following rules is passed:
+For each target element, at least one of the following is true:
 
-- [Interactive component has strict enhanced size][target size enhanced]; or
-- [Interactive component has equivalent control with enhanced size][target size equivalent enhanced].
+- the element can be brought into viewport though scrolling with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
+- there is an [instrument][] to achieve an equivalent goal as the target element on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
 
 ## Background
 
@@ -67,7 +63,7 @@ Hit testing isn't properly defined, and this has been an [issue in the CSS speci
 
 #### Passed Example 1
 
-This `link` has a [clickable area][] of approximately 210×55 pixels and thus passes [Interactive component has strict enhanced size][target size enhanced].
+This `link` has a [clickable area][] of approximately 210×55 pixels.
 
 ```html
 <style>
@@ -80,7 +76,7 @@ This `link` has a [clickable area][] of approximately 210×55 pixels and thus pa
 
 #### Passed Example 2
 
-This button has a [clickable area][] of exactly 44×44 pixels and thus passes [Interactive component has strict enhanced size][target size enhanced].
+This button has a [clickable area][] of exactly 44×44 pixels.
 
 ```html
 <style>
@@ -95,7 +91,7 @@ This button has a [clickable area][] of exactly 44×44 pixels and thus passes [I
 
 #### Passed Example 3
 
-This `input` element, combined with its [implicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×48px and thus passes [Interactive component has strict enhanced size][target size enhanced]. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
+This `input` element, combined with its [implicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×48px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
 ```html
 <head>
@@ -116,7 +112,7 @@ This `input` element, combined with its [implicit label][] and its padding, has 
 
 #### Passed Example 4
 
-This `input` element, combined with its [explicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×45px and thus passes [Interactive component has strict enhanced size][target size enhanced]. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
+This `input` element, combined with its [explicit label][] and its padding, has a [clickable area][] containing a rectangle of approximately 81×45px. Note that this rectangle has to intersect both the `input` element itself, and the text of the label (within the solid green border), as none of the individual components are enough.
 
 ```html
 <head>
@@ -135,7 +131,7 @@ This `input` element, combined with its [explicit label][] and its padding, has 
 
 #### Passed Example 5
 
-This button has a clickable area of approximately 212×54px due to the overflowing text being clickable, and thus passes [Interactive component has strict enhanced size][target size enhanced]. The `div` element is only here to visually display the clickable area of the text.
+This button has a clickable area of approximately 212×54px due to the overflowing text being clickable. The `div` element is only here to visually display the clickable area of the text.
 
 ```html
 <head>
@@ -165,7 +161,7 @@ This button has a clickable area of approximately 212×54px due to the overflowi
 
 #### Passed Example 6
 
-This button, together with its padding and border, has a [clickable area][] of more than 44×44px and thus passes [Interactive component has strict enhanced size][target size enhanced]. The solid green border shows the [clickable area][] while the dashed red one shows the inner text (without sizing nor padding).
+This button, together with its padding and border, has a [clickable area][] of more than 44×44px. The solid green border shows the [clickable area][] while the dashed red one shows the inner text (without sizing nor padding).
 
 ```html
 <head>
@@ -191,58 +187,7 @@ This button, together with its padding and border, has a [clickable area][] of m
 
 #### Passed Example 7
 
-These links are [rendered on a line][] and thus pass [Interactive component is inline][target size inline].
-
-```html
-<p>
-	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for
-	<a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44
-	<a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a>.
-</p>
-```
-
-#### Passed Example 8
-
-This checkbox is an [User Agent controlled component][] and thus passes [Interactive component has size controlled by User Agent][target size user agent].
-
-```html
-<p id="accept">
-	<input aria-labelledby="accept" type="checkbox" />
-	I agree with the terms and conditions.
-</p>
-```
-
-#### Passed Example 9
-
-The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location. Thus it passes [Interactive component has essential size][target size essential].
-
-```html
-<style>
-	.map {
-		background-image: url('/test-assets/target-size/map-background.jpg');
-		width: 1250px;
-		height: 1250px;
-	}
-	.dot {
-		height: 15px;
-		width: 15px;
-		background-color: red;
-		display: inline-block;
-	}
-</style>
-
-Location of ACT rules headquarters:
-<div class="map"></div>
-<a
-	class="dot"
-	style="position: absolute; top: 597px; left: 818px"
-	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
-></a>
-```
-
-#### Passed Example 10
-
-The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button). Thus, the `#small` button passes [Interactive component has equivalent control with enhanced size][target size equivalent enhanced].
+The `#small` button has a [clickable area][] of only 35×35px, but there is an [instrument][] to achieve the same function with a 44×44px [clickable area][] (namely, the `#large` button).
 
 ```html
 <style>
@@ -261,7 +206,7 @@ The `#small` button has a [clickable area][] of only 35×35px, but there is an [
 <button id="large" onclick="alert('Hello')">Hello</button>
 ```
 
-#### Passed Example 11
+#### Passed Example 8
 
 This button has a [clickable area][] containing a 44×44px rectangle. Even though it is partially obscured by the dashed red `div`, its remaining [clickable area][] contains a 44×44px rectangle delimited by prolonging the solid green lines.
 
@@ -311,7 +256,7 @@ This button has a [clickable area][] containing a 44×44px rectangle. Even thoug
 </body>
 ```
 
-#### Passed Example 12
+#### Passed Example 9
 
 This button has a [clickable area][] of roughly 73×50px. The `div` element with a dashed red border does not obscure it because of its `pointer-events: none` CSS property that let the clicks go through.
 
@@ -337,7 +282,7 @@ This button has a [clickable area][] of roughly 73×50px. The `div` element with
 </body>
 ```
 
-#### Passed Example 13
+#### Passed Example 10
 
 This button has a 50×50px [clickable area][]. The `div` with a dashed red border is not obscuring it because it can be scrolled out of the way. The solid green lines hint at a 44×44px area inside the button.
 
@@ -400,7 +345,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 </body>
 ```
 
-#### Passed Example 14
+#### Passed Example 11
 
 The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
 
@@ -415,7 +360,7 @@ The [clickable area][] of this button contains a 44×44px [horizontal rectangle]
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Passed Example 15
+#### Passed Example 12
 
 This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
 
@@ -655,6 +600,47 @@ These radio buttons have their size modified by the author and are therefore not
 
 #### Failed Example 9
 
+The zoom buttons do not have [essential size][]; they are too small. The pin (red square) on this map has [essential size][].
+
+```html
+<style>
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
+	}
+	.zoom {
+		position: absolute;
+		left: 1230px;
+		height: 20px;
+		width: 20px;
+		background-color: white;
+		border: 1px solid red;
+	}
+</style>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<input
+	type="image"
+	class="zoom"
+	src="/test-assets/target-size/zoom-in.png"
+	style="top: 35px;"
+	alt="Zoom in"
+	onclick="alert('Zooming in.')"
+/>
+<input
+	type="image"
+	class="zoom"
+	src="/test-assets/target-size/zoom-out.png"
+	style="top: 56px;"
+	alt="Zoom out"
+	onclick="alert('Zooming out.')"
+/>
+```
+
+#### Failed Example 10
+
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
 ```html
@@ -669,7 +655,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('Hello')">Hi</button>
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
 
@@ -684,7 +670,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 The [clickable area][] of this button only contains a 25×45px [horizontal rectangle][].
 
@@ -748,6 +734,74 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 </body>
 ```
 
+#### Inapplicable Example 3
+
+This button has a [totally empty clickable area][] because it is moved off-screen and cannot be scrolled to.
+
+```html
+<style>
+	#target {
+		width: 44px;
+		height: 18px;
+		border-radius: 0;
+		position: absolute;
+		left: -9999px;
+	}
+</style>
+<button id="target" onclick="alert('hello')">Hello</button>
+```
+
+#### Inapplicable Example 4
+
+These links are [rendered on a line][].
+
+```html
+<p>
+	The size of the <a href="https://www.w3.org/TR/WCAG21/#dfn-target">target</a> for
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-pointer-inputs">pointer inputs</a> is at least 44 by 44
+	<a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a>.
+</p>
+```
+
+#### Inapplicable Example 5
+
+This checkbox is an [User Agent controlled component][].
+
+```html
+<p id="accept">
+	<input aria-labelledby="accept" type="checkbox" />
+	I agree with the terms and conditions.
+</p>
+```
+
+#### Inapplicable Example 6
+
+The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
+
+```html
+<style>
+	.map {
+		background-image: url('/test-assets/target-size/map-background.jpg');
+		width: 1250px;
+		height: 1250px;
+	}
+	.dot {
+		height: 15px;
+		width: 15px;
+		background-color: red;
+		display: inline-block;
+	}
+</style>
+
+Location of ACT rules headquarters:
+<div class="map"></div>
+<a
+	class="dot"
+	style="position: absolute; top: 597px; left: 818px"
+	href="https://www.w3.org/WAI/standards-guidelines/act/rules/"
+></a>
+```
+
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
 [can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
@@ -760,11 +814,6 @@ This button cannot be [targeted by a pointer event][] because it is entirely cov
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
-[target size enhanced]: https://www.w3.org/WAI/standards-guidelines/act/rules/8iacb5/ 'Rule Interactive component has strict enhanced size'
-[target size empty]: https://www.w3.org/WAI/standards-guidelines/act/rules/kj4tr0/ 'Rule Interactive component has no clickable area'
-[target size equivalent enhanced]: https://www.w3.org/WAI/standards-guidelines/act/rules/yvb1xu/ 'Rule Interactive component has equivalent control with enhanced size'
-[target size essential]: https://www.w3.org/WAI/standards-guidelines/act/rules/dppn1b/ 'Rule Interactive component has essential size'
-[target size inline]: https://www.w3.org/WAI/standards-guidelines/act/rules/ssehdh/ 'Rule Interactive component is inline'
-[target size user agent]: https://www.w3.org/WAI/standards-guidelines/act/rules/vcup8d/ 'Rule Interactive component has size controlled by User Agent'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
+[totally empty clickable area]: #clickable-area:empty 'Definition of Totally Empty Clickable Area'
 [user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

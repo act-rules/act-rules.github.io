@@ -1,6 +1,7 @@
 ---
 id: 7d6734
 name: SVG element with explicit role has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each SVG image element that is explicitly included in the accessibility tree has a non-empty accessible name.
@@ -28,11 +29,13 @@ This rule applies to any [SVG element][] with an [explicit semantic role][explic
 
 Each target element has an [accessible name][] that is not empty.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that the presence of one of the roles outlined in the applicability indicates the author's intent to include the element in the accessibility tree and thus convey information to the user about that element.
 
-## Accessibility Support
+### Accessibility Support
 
 The [HTML Accessibility API Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) specify that the `<svg>` element has an implicit role of `graphics-document`. However browser support for the `graphics-document` role and the [SVG Accessibility API Mappings][] is inconsistent.
 
@@ -41,8 +44,6 @@ This rule is limited to the explicit use of roles, as a clear indication that co
 Browser and assistive technology support for SVG `<title>` and `<desc>` elements is currently inconsistent. Using WAI ARIA in combination with the `img` role for non-decorative `<svg>` elements significantly improves accessibility browser support.
 
 Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
-
-## Background
 
 ### Bibliography
 

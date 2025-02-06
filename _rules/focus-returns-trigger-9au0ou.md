@@ -26,11 +26,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [modal][] or item with the role of `dialog` + `aria-modal="true"` that when no longer visible, the [focus][] returns to the [instrument][] or [trigger][] that made the [modal][] visible.
+This rule applies to any element with a semantic role of dialog or alertdialog that is not visible.
 
 ## Expectation
 
-After the [modal][] is closed, the [instrument][] that was used to open it becomes [focused][].
+The element that has the focus when the target element becomes visible is the same element that receives focus when the target element stops being visible.
 
 ## Assumptions
 

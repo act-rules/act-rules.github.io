@@ -185,4 +185,3 @@ Code needed!
 [focus]: #focus 'Definition of focus'
 [html]: #namespaced-element
 [modal]: https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/
-[instrument]: #instrument-to-achieve-an-objective 'Definition of instrument'

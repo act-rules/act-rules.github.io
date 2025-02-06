@@ -183,5 +183,4 @@ Code needed!
 
 [trigger]: #trigger 'Definition of trigger'
 [focus]: #focus 'Definition of focus'
-[html]: #namespaced-element
 [modal]: https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/

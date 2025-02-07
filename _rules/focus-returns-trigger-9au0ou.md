@@ -104,9 +104,9 @@ The link that is activated to display the [modal][] gets the [focus][] returned 
 		<link href="/test-assets/9au0ou/9au0ou.css" rel="stylesheet" />
 	</head>
 	<body>
-		<a href=#>Do nothing</a>
+		<a href="#">Do nothing</a>
 		<a href="javascript:openDialog('dialog1', this)">Open modal dialog</a>
-		<a href=#>Do nothing</a>
+		<a href="#">Do nothing</a>
 		<div id="dialog_layer" class="dialogs">
 			<div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true"
 					 class="hidden">

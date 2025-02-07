@@ -42,7 +42,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to [captions](https://www.w3.org/TR/WCAG22/#dfn-captions) provided for a [non-streaming](#non-streaming-media-element) `video` element that is [visible][]where the video contains [audio](#audio-output).
+This rule applies to [captions](https://www.w3.org/TR/WCAG22/#dfn-captions) provided for a [non-streaming](#non-streaming-media-element) `video` element that is [visible][] where the video contains [audio](#audio-output).
 
 ## Expectation
 

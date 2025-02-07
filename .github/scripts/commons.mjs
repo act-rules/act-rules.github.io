@@ -20,7 +20,7 @@ export async function cloneWcagActRules({ tmpDir }) {
   `;
 }
 
-export async function createOrCheckoutBranch({ tmpDir }, branchName) {
+export async function createOrCheckoutBranch({ tmpDir }) {
   cd(tmpDir);
   try {
     await $`git checkout ${branchName}`;

@@ -54,13 +54,13 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
+The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, Ok or cancel button in the modal.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Passed Example</title>
+		<title>Passed Example 1</title>
 		<script src="/test-assets/9au0ou/aria-apg-dialog.js"></script>
 		<script src="/test-assets/9au0ou/aria-apg-utils.js"></script>
 		<link href="/test-assets/9au0ou/aria-apg-dialog.css" rel="stylesheet" />
@@ -91,49 +91,39 @@ The button that is activated to display the [modal][] gets the [focus][] returne
 
 #### Passed Example 2
 
-The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
+The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, Ok or cancel button in the modal.
 
 ```html
-Code needed!
-```
-
-#### Passed Example 3
-
-The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
-
-```html
-Code needed!
-```
-
-#### Passed Example 4
-
-The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the close button in the modal.
-
-```html
-Code needed!
-```
-
-#### Passed Example 5
-
-The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key.
-
-```html
-Code needed!
-```
-
-#### Passed Example 6
-
-The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the cancel button.
-
-```html
-Code needed!
-```
-
-#### Passed Example 7
-The page has a list of buttons that is activated to display a [modal][], the [focus][] is returned to the correct button on dismissing the modal.
-
-```html
-Code needed!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Passed Example 2</title>
+		<script src="/test-assets/9au0ou/aria-apg-dialog.js"></script>
+		<script src="/test-assets/9au0ou/aria-apg-utils.js"></script>
+		<link href="/test-assets/9au0ou/aria-apg-dialog.css" rel="stylesheet" />
+		<link href="/test-assets/9au0ou/9au0ou.css" rel="stylesheet" />
+	</head>
+	<body>
+		<a href=#>Do nothing</a>
+		<a href="javascript:openDialog('dialog1', this)">Open modal dialog</a>
+		<a href=#>Do nothing</a>
+		<div id="dialog_layer" class="dialogs">
+			<div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true"
+					 class="hidden">
+				<h2 id="dialog1_label" class="dialog_label">Dialog title</h2>
+				<div class="dialog_form">Dialog content.</div>
+				<button type="button" class="close-button topright" aria-label="Close" title="Close" 
+						onclick="closeDialog(this)">
+					&times;
+				</button>
+				<div style="text-align: right;">
+					<button type="button" onclick="closeDialog(this)">Ok</button>
+					<button type="button" onclick="closeDialog(this)">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 ```
 
 ### Failed
@@ -142,14 +132,84 @@ Code needed!
 The button that is activated to display the [modal][] gets the [focus][] returned to the item after it when the [modal][] is dismissed.
 
 ```html
-Code needed!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Failed Example 1</title>
+		<script src="test-assets/9au0ou/aria-apg-dialog.js"></script>
+		<script src="test-assets/9au0ou/aria-apg-utils.js"></script>
+		<script>
+
+			addEventListener('DOMContentLoaded', (event) => {
+				document.getElementById('dialog1').on_close_via_escape_key = () => { 
+					document.getElementById('donothingbutton2').focus();
+				};
+			});
+
+		</script>
+		<link href="test-assets/9au0ou/aria-apg-dialog.css" rel="stylesheet">
+		<link href="test-assets/9au0ou/9au0ou.css" rel="stylesheet">
+	</head>
+	<body>
+		<button id="donothingbutton1" class="top-level-button" type="button">Do nothing</button><br><br>
+		<button class="top-level-button" type="button" onclick="openDialog('dialog1', this)">Open modal dialog</button><br><br>
+		<button id="donothingbutton2" class="top-level-button" type="button">Do nothing</button><br><br>
+		<div id="dialog_layer" class="dialogs">
+			<div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
+				<div class="dialog_form">For this test: use any button, or the escape key, to close the dialog.</div>
+				<button type="button" class="close-button topright" aria-label="Close" title="Close" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">
+					×
+				</button>
+				<div style="text-align: right;">
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">Ok</button>
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 ```
 
 #### Failed Example 2
 The button that is activated to display the [modal][] gets the [focus][] returned to the start of the page when the modal is dismissed.
 
 ```html
-Code needed!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Failed Example 2</title>
+		<script src="test-assets/9au0ou/aria-apg-dialog.js"></script>
+		<script src="test-assets/9au0ou/aria-apg-utils.js"></script>
+		<script>
+
+			addEventListener('DOMContentLoaded', (event) => {
+				document.getElementById('dialog1').on_close_via_escape_key = () => { 
+					document.getElementById('donothingbutton1').focus();
+				};
+			});
+
+		</script>
+		<link href="test-assets/9au0ou/aria-apg-dialog.css" rel="stylesheet">
+		<link href="test-assets/9au0ou/9au0ou.css" rel="stylesheet">
+	</head>
+	<body>
+		<button id="donothingbutton1" class="top-level-button" type="button">Do nothing</button><br><br>
+		<button class="top-level-button" type="button" onclick="openDialog('dialog1', this)">Open modal dialog</button><br><br>
+		<button id="donothingbutton2" class="top-level-button" type="button">Do nothing</button><br><br>
+		<div id="dialog_layer" class="dialogs">
+			<div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
+				<div class="dialog_form">For this test: use any button, or the escape key, to close the dialog.</div>
+				<button type="button" class="close-button topright" aria-label="Close" title="Close" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">
+					×
+				</button>
+				<div style="text-align: right;">
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">Ok</button>
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 ```
 
 #### Failed Example 3

@@ -30,17 +30,17 @@ This rule applies to any two pages within a given set of pages.
 
 For each target, navigational mechanisms that are present on both pages appear in the same relative order.
 
-## Assumptions
-
-"Same relative order" means that secondary navigation items may be in between the link items on some pages. They can be present without affecting the outcome of this test.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+
+### Assumptions
+
+"Same relative order" means that secondary navigation items may be in between the link items on some pages. They can be present without affecting the outcome of this test.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ## Test Cases
 

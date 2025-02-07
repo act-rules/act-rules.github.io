@@ -22,6 +22,7 @@ acknowledgments:
   authors:
     -  Helen Burge
   previous_authors:
+    -  Helen Burge
 ---
 
 ## Applicability

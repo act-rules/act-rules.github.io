@@ -19,11 +19,11 @@ An ARIA [state][aria state] or [property][aria property] is <dfn>set</dfn> on an
 
   For example, `aria-checked` is implicitly set both on `<input type="checkbox" checked />` (through the [presence of the HTML attribute `checked`][checked present]) and `<input type="checkbox" />` (through its [absence][checked absent]). It is not set on `<input type="text" />` given that the mapping for `checked` doesn't apply when the `input` element is not of type `checkbox` or `radio`.
 
-- It is <dfn id="aria-attribute-set:default">set by default</dfn> if there is no corresponding `aria-*` HTML attribute on the element, and either the element has an [semantic role][] that has a default value for this ARIA [state][aria state] or [property][aria property] or the attribute itself has a default value.
+- It is <dfn id="aria-attribute-set:default">set by default</dfn> if there is no corresponding `aria-*` HTML attribute on the element, and either the element has a [semantic role][] that has a default value for this ARIA [state][aria state] or [property][aria property] or the attribute itself has a default value.
 
   For example, `aria-haspopup` is set by default on `<div role="combobox"></div>` through the role of `combobox`.
 
-#### Background
+#### Background for ARIA attribute set
 
 For explicitly set attributes, this definition only looks at the value written in the HTML code, without considering its validity. Attributes that are explicitly set with an invalid value are author errors that are detected by the rule [Role attribute has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/), and authors should not rely on invalid value to have forbidden attributes discarded from roles not allowing it.
 

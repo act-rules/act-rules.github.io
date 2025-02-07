@@ -132,6 +132,10 @@
 			"name": "Helen Burge",
 			"url": "https://github.com/HelenBurge"
 		}
+		{
+			"name": "Dan Tripp",
+			"url": "https://github.com/dan-tripp-siteimprove"
+		}
 	],
 	"devDependencies": {
 		"act-tools": "github:act-rules/act-tools",

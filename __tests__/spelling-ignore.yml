@@ -14,6 +14,7 @@
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
 - xhtml
+- XHTML
 - DOCTYPE
 - iFrame # used to demonstrate bad spelling
 - Iframe

@@ -182,5 +182,5 @@ TBC
 Code needed!
 ```
 
-[focus]: #focus 'Definition of focus'
+[focus]: #focused 'Definition of focused'
 [modal]: https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/

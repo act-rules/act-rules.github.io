@@ -54,7 +54,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, Ok or cancel button in the modal.
+The button that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, OK or cancel button in the modal.
 
 ```html
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ The button that is activated to display the [modal][] gets the [focus][] returne
 					&times;
 				</button>
 				<div style="text-align: right;">
-					<button type="button" onclick="closeDialog(this)">Ok</button>
+					<button type="button" onclick="closeDialog(this)"></button>
 					<button type="button" onclick="closeDialog(this)">Cancel</button>
 				</div>
 			</div>
@@ -91,7 +91,7 @@ The button that is activated to display the [modal][] gets the [focus][] returne
 
 #### Passed Example 2
 
-The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, Ok or cancel button in the modal.
+The link that is activated to display the [modal][] gets the [focus][] returned to it when the [modal][] is dismissed using the escape key or activating close, OK or cancel button in the modal.
 
 ```html
 <!DOCTYPE html>
@@ -117,7 +117,7 @@ The link that is activated to display the [modal][] gets the [focus][] returned 
 					&times;
 				</button>
 				<div style="text-align: right;">
-					<button type="button" onclick="closeDialog(this)">Ok</button>
+					<button type="button" onclick="closeDialog(this)">OK</button>
 					<button type="button" onclick="closeDialog(this)">Cancel</button>
 				</div>
 			</div>
@@ -161,7 +161,7 @@ The button that is activated to display the [modal][] gets the [focus][] returne
 					×
 				</button>
 				<div style="text-align: right;">
-					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">Ok</button>
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">OK</button>
 					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton2').focus();">Cancel</button>
 				</div>
 			</div>
@@ -203,7 +203,7 @@ The button that is activated to display the [modal][] gets the [focus][] returne
 					×
 				</button>
 				<div style="text-align: right;">
-					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">Ok</button>
+					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">OK</button>
 					<button type="button" onclick="closeDialog(this); document.getElementById('donothingbutton1').focus();">Cancel</button>
 				</div>
 			</div>

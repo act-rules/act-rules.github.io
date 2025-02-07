@@ -1,6 +1,7 @@
 ---
 id:
 name:
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks ...
@@ -49,17 +50,29 @@ For each test target, the outcome of (at least one of | all of | any of etc.) th
 - [Rule name](relative_link_to_rule.html)
 - ...
 
-## Assumptions
+## Background
+
+- (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 
-## Background
+### Related Rules
 
-- - (e.g. WCAG Techniques or links with background information mentioned in Applicability, Expectations or Assumptions)
+<!-- This section is optional -->
+
+- [rule name here](./abc123)
+
+### Bibliography
+
+<!-- This section is optional -->
+
+- [link here](#)
 
 ## Test Cases
 

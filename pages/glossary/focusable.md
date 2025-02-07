@@ -13,7 +13,7 @@ An element is _focusable_ if one or both of the following are true:
 - the element is part of [sequential focus navigation][]; or
 - the element has a [tabindex value][] that is not null.
 
-**Exception**: Elements that lose focus during a period of up to 1 second after gaining focus, without the user interacting with the page the element is on, are not considered _focusable_.
+**Exception**: Elements that lose focus and do not regain focus during a period of up to 1 second after gaining focus, without the user interacting with the page the element is on, are not considered _focusable_.
 
 Notes:
 

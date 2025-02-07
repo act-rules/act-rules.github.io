@@ -1,6 +1,7 @@
 ---
 id: 73f2c2
 name: Autocomplete attribute has valid value
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the HTML `autocomplete` attribute has a correct value.
@@ -42,34 +43,34 @@ Each test target's `autocomplete` [attribute value][] is a [space separated][] l
 4. A required token from the [correct autocomplete field][]; then
 5. An optional "webauthn" token.
 
-## Assumptions
-
-The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG22/#input-purposes) and collect information about the user.
-
-If the `autocomplete` attribute is used to describe "custom" taxonomy, for example using the custom autocomplete value "banner" (`<input type="text" autocomplete="banner" />`), success Criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
-
-The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success criterion [1.3.5 Identify Input Purpose][sc135].
-
-The purpose of a control is programmatically identifiable even when its `autocomplete` [attribute value][] is not an [appropriate field name for the form control][].
-
-## Accessibility Support
-
-- While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-- Some user agents treat the value of the `aria-disabled` attribute as case-sensitive.
-- In some user agents, querying the value of the `autocomplete` property returns an empty string ("") even when the attribute was set according to the rule's expectations. It affects assistive technologies which rely on this property to personalize input fields collecting information about the user.
-
 ## Background
 
 The intent of this rule is to ensure that the `autocomplete` attribute can be used to support personalization. Many users may find it easier to fill out forms if those can be styled or laid out in a way that is familiar to them. Assistive technologies can do this when a form control is marked up in such a way that its purpose can be understood. For instance, assistive technologies could add familiar icons and colors to different fields, making it easier for the user to understand what the form does.
 
 Many browsers provide auto-filling suggestions even when the control's `type` [attribute value][] is not [appropriate][appropriate field name for the form control] for its `autocomplete` [attribute value][]. The same happens when the `autocomplete` property is queried. However, the `autocomplete` property is not programmatically identifiable if the requirements for the optional tokens are not met.
 
-The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success Criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
+The auto-completing feature of the `autocomplete` attribute benefits many users, but it is not required to satisfy success criterion [1.3.5 Identify Input Purpose][sc135]. Setting `autocomplete="off"` on the element's [form owner](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-owner) prevents the user agent from completing it, but it does not prevent the `autocomplete` [attribute value][] from being programmatically identifiable.
 
-The [fixed value](#73f2c2:fixed-value) condition in the Applicability is excluding `input` elements who do not consider the `autocomplete` attribute, based on their `type` [attribute value][]; `input` elements with a `type` [attribute value][] of `hidden` are excluded by the [hidden](#73f2c2:hidden) condition.
+The [fixed value](#73f2c2:fixed-value) condition in the Applicability is excluding `input` elements that do not consider the `autocomplete` attribute, based on their `type` [attribute value][]; `input` elements with a `type` [attribute value][] of `hidden` are excluded by the [hidden](#73f2c2:hidden) condition.
 
 On an `input` element with a `type` [attribute value][] of `hidden`, the autocomplete attribute wears the [autofill anchor mantle](https://html.spec.whatwg.org/#autofill-anchor-mantle), describing the meaning of the given value. In all other cases, it wears the [autofill expectation mantle](https://html.spec.whatwg.org/#autofill-expectation-mantle).
+
+### Assumptions
+
+The `autocomplete` attribute is used on form fields that correspond to [Input Purposes for User Interface Components](https://www.w3.org/TR/WCAG22/#input-purposes) and collect information about the user.
+
+If the `autocomplete` attribute is used to describe "custom" taxonomy, for example using the custom autocomplete value "banner" (`<input type="text" autocomplete="banner" />`), success criterion [1.3.5 Identify Input Purpose][sc135] may be satisfied even if this rule failed.
+
+The `aria-disabled` state is used on `input` elements which are not part of [sequential focus navigation][] and are not otherwise [operable](https://www.w3.org/TR/wai-aria-1.2/#dfn-operable). If this is not the case, this rule may be inapplicable on elements that are still operable and require a valid `autocomplete` attribute to satisfy success criterion [1.3.5 Identify Input Purpose][sc135].
+
+The purpose of a control is programmatically identifiable even when its `autocomplete` [attribute value][] is not an [appropriate field name for the form control][].
+
+### Accessibility Support
+
+- While `autocomplete` is a promising technique for supporting personalization in HTML, support for this in assistive technologies is fairly limited.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+- In some user agents, querying the value of the `autocomplete` property returns an empty string ("") even when the attribute was set according to the rule's expectations. It affects assistive technologies which rely on this property to personalize input fields collecting information about the user.
+- Authors may assign inappropriate `autocomplete` attribute values. Moreover, HTML specifications restrict certain `autocomplete` attribute values to specific form controls. Mismatches between `autocomplete` attribute values and form control types may or may not lead to a failure of [success criterion 1.3.5 Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose). However, this rule focuses exclusively on validating valid `autocomplete` attribute values, disregarding their contextual appropriateness.
 
 ### Bibliography
 
@@ -146,14 +147,6 @@ This `autocomplete` [attribute value][] list includes all allowed types of token
 ```
 
 #### Passed Example 8
-
-This `autocomplete` [attribute value][] only has the required token "bday-day". It remains programmatically identifiable even though it is inappropriate for the control's `type` [attribute value][] "tel".
-
-```html
-<label>Birthday day<input name="bdayday" type="tel" autocomplete="bday-day"/></label>
-```
-
-#### Passed Example 9
 
 This `autocomplete` [attribute value][] has the required token "current-password", followed by the optional "webauthn" token.
 

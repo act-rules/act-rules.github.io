@@ -1,6 +1,7 @@
 ---
 id: 2ee8b8
 name: Visible label is part of accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that interactive elements labeled through content have their visible label as part of their accessible name.
@@ -40,19 +41,19 @@ This rule applies to any element for which all the following is true:
 
 For each target element, all [text nodes][] in the [visible text content][] [match characters][] and are contained within the [accessible name][] of this target element, except for characters in the [text nodes][] used to express [non-text content][]. Leading and trailing [whitespace][] and difference in case sensitivity should be ignored.
 
-## Assumptions
-
-This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
-
-## Accessibility Support
-
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 This rule applies to elements with a [widget role][] that [support name from content][supports name from content]. This includes the following: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 The understanding document of [2.5.3 Label in Name][understand253] use the term "symbolic text characters" to refer to a type of [non-text content][] that uses text characters as symbols, such as using "x" to mean "close". This rule considers them as "characters expressing non-text content". Unicode emojis are another example of characters expressing non-text content, although these are not "symbolic text characters".
+
+### Assumptions
+
+This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
+
+### Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ### Bibliography
 
@@ -145,7 +146,7 @@ This link has [visible][] text with mathematical symbols, that does not match th
 
 #### Failed Example 4
 
-This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name. 
+This link has [visible][] text does not match the [accessible name][] because there is a hyphen in the accessible name.
 
 ```html
 <a href="#" aria-label="non-standard">nonstandard</a>
@@ -153,7 +154,7 @@ This link has [visible][] text does not match the [accessible name][] because th
 
 #### Failed Example 5
 
-This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name. 
+This link has [visible][] text does not match the [accessible name][] because there are extra spaces in the accessible name.
 
 ```html
 <a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>

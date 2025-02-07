@@ -21,9 +21,9 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
+This rule applies to any two pages within a given set of pages.
 
-Applies to all technologies. This technique relates to 3.2.3: Consistent Navigation (Failure).
+**Note:** the set of pages is the test subject for the rule.
 
 
 ## Expectation 

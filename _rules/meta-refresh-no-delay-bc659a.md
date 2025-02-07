@@ -198,7 +198,7 @@ This page will not refresh because it lacks a `http-equiv` attribute.
 
 #### Inapplicable Example 3
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -211,7 +211,7 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 #### Inapplicable Example 4
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -224,7 +224,7 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 #### Inapplicable Example 5
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -237,7 +237,7 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 #### Inapplicable Example 6
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -250,7 +250,7 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 #### Inapplicable Example 7
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>
@@ -263,7 +263,7 @@ This 'meta' element contains an invalid `content` attribute and will not refresh
 
 #### Inapplicable Example 8
 
-This 'meta' element contains an invalid `content` attribute and will not refresh the page.
+This `meta` element contains an invalid `content` attribute and will not refresh the page.
 
 ```html
 <head>

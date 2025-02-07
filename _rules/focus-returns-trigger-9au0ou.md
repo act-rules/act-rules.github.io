@@ -21,8 +21,10 @@ input_aspects:
 acknowledgments:
   authors:
     -  Helen Burge
+    -  Daniel Tripp
   previous_authors:
     -  Helen Burge
+    -  Daniel Tripp
 ---
 
 ## Applicability

@@ -1,6 +1,7 @@
 ---
 id: 2t702h
 name: Summary element has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `summary` element has a non-empty accessible name.
@@ -31,14 +32,6 @@ This rule applies to HTML `summary` elements for which all the following are tru
 
 Each target element has an [accessible name][] that is not empty (`""`), nor just the name of the `::marker` pseudo element.
 
-## Assumptions
-
-The rule assumes that all `summary` elements are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
-
-## Accessibility Support
-
-There is a difference in how user agents expose the triangle indicating the control's expand state. As a result, some user agents include the triangle in the accessible name of the summary element.
-
 ## Background
 
 This rule is only applicable to `summary` elements that the browser will use as controls for a `details` element. While this rule is not applicable to `summary` elements with an [explicit semantic role][], most of the time these likely do still require an [accessible name][]. This is covered by other rules, such as the [Button has non-empty accessible name][97a4e1].
@@ -46,6 +39,14 @@ This rule is only applicable to `summary` elements that the browser will use as 
 If the `summary` element is not included in the accessibility tree, but is still included in sequential focus navigation, this can result in accessibility issues not tested by this rule. This is covered under [Element with aria-hidden has no content in sequential focus navigation][6cfa84].
 
 Note that some user agents expose the `summary` element with a `button` role. This deviates from the implicit ARIA semantics described in [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-summary). Because some browsers do not give `summary` elements a button role, these elements need to be tested separately from the [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) ACT rule.
+
+### Assumptions
+
+The rule assumes that all `summary` elements are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
+
+### Accessibility Support
+
+There is a difference in how user agents expose the triangle indicating the control's expand state. As a result, some user agents include the triangle in the accessible name of the summary element.
 
 ### Bibliography
 

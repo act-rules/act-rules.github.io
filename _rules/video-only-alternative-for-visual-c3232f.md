@@ -1,6 +1,7 @@
 ---
 id: c3232f
 name: Video element visual-only content has accessible alternative
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that `video` elements without audio have an alternative available.
@@ -53,16 +54,16 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 - [`Video` Element Visual-Only Content Has Transcript](https://www.w3.org/WAI/standards-guidelines/act/rules/ee13b5/)
 - [`Video` Element Visual-Only Content Has Audio Track Alternative](https://www.w3.org/WAI/standards-guidelines/act/rules/d7ba54/)
 
-## Assumptions
+## Background
+
+### Assumptions
 
 - A mechanism is available to start the video and the video element is not simply used to display the [poster](https://html.spec.whatwg.org/multipage/media.html#attr-video-poster).
 - The language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
 The HTML `video` element can also have a `track` element that provides an audio description. This should provide assistive technologies with a timed text description of visual information in a video. However, there is no native support in any major browser for this technique. Technique [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/html/H96) can not be relied upon to conform to [1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded).
-
-## Background
 
 ### Bibliography
 

@@ -9,6 +9,7 @@ jobs:
       pull-requests: write
     env:
       branch_name: ${{ github.event.pull_request.head.ref }}
+      gh_repo: act-rules/act-rules.github.io
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4

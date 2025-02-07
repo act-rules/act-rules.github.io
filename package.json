@@ -123,6 +123,10 @@
 		{
 			"name": "Wilco Fiers",
 			"url": "https://github.com/wilcofiers"
+		},
+		{
+			"name": "Chris Loiselle",
+			"url": "https://github.com/ChrisLoiselle"
 		}
 	],
 	"devDependencies": {

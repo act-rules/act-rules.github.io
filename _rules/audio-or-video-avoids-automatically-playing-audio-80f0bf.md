@@ -1,6 +1,7 @@
 ---
 id: 80f0bf
 name: Audio or video element avoids automatically playing audio
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that audio or video that plays automatically does not have audio that lasts for more than 3 seconds or has an audio control mechanism to stop or mute it.
@@ -65,21 +66,21 @@ For each test target, the [outcome](#outcome) of at least one of the following r
 - [Audio Or Video That Plays Automatically Has A Control Mechanism](https://www.w3.org/WAI/standards-guidelines/act/rules/4c31df/)
 - [Audio Or Video That Plays Automatically Has No Audio That Lasts More Than 3 Seconds](https://www.w3.org/WAI/standards-guidelines/act/rules/aaa1bf/)
 
-## Assumptions
+## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Assumptions
 
 - This rule assumes that it is not possible to satisfy [Success Criterion 1.4.2 Audio Control][sc142] if the total length of the automatically playing audio is more than 3 seconds, even if there are pauses in the sound and no more than 3 seconds in a row with actual sound.
 - This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG22/#dfn-mechanism) to control the sound must be located in the same [web page][]. Mechanisms located on other pages can still create accessibility issues for users relying on sound to navigate (e.g. screen readers users) since the autoplaying sound will interfere with their ability to find and activate the mechanism. If a [mechanism](https://www.w3.org/TR/WCAG22/#dfn-mechanism) external to the [web page][] is provided, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 - This rule assumes that the [mechanism](https://www.w3.org/TR/WCAG22/#dfn-mechanism) to control the sound must be visible and accessible in order to be effective and usable by all kinds of users. If the mechanism is hidden to some users, it is possible to fail this rule but still satisfy [Success Criterion 1.4.2 Audio Control][sc142].
 
-## Accessibility Support
+### Accessibility Support
 
 The native `video` and `audio` controls in several browser and assistive technology combinations are not keyboard accessible and the `video` or `audio` element itself may not be announced. Authors are recommended to use custom controls for keyboard navigation and cross browser accessibility support in general. Some major browsers no longer automatically play the 'video' unless the 'video' is muted.
 
 User agents do not always automatically play media, even when an `autoplay` attribute is present. This is done to avoid autoplaying media interrupting the user when they do not want to, especially when the media is likely to contain sound. The decision to respect the `autoplay` attribute or not depends on user settings and previous behavior (interaction with the site). Therefore, some media files may fail this rule but satisfy [Success Criterion 1.4.2 Audio Control][sc142] on some combination of User Agent and user settings. The rule considers that the presence of the `autoplay` attribute is an indication of the author intention to have automatically playing media, and therefore requires the author to provide a mechanism to control the sound.
-
-## Background
-
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 1.4.2 Audio Control][sc142]. These extra requirements are left out of this rule, and should be tested separately.
 
 ### Bibliography
 

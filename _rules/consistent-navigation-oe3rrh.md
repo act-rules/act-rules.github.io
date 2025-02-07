@@ -28,7 +28,7 @@ This rule applies to any two pages within a given set of pages.
 
 ## Expectation 
 
-Navigational mechansisms that are repeated on multiple pages within a set of Web pages occur in the same relaative order each time they are repeated.
+For each target, navigational mechanisms that are present on both pages appear in the same relative order.
 
 ## Assumptions
 

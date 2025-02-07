@@ -1,6 +1,7 @@
 ---
 id: e6952f
 name: Attribute is not duplicated
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that HTML and SVG starting tags do not contain duplicated attributes.
@@ -43,15 +44,15 @@ This rule applies to any [starting tag](https://www.w3.org/TR/html5/syntax.html#
 
 For each test target, there are no duplicated [attributes](https://www.w3.org/TR/html5/syntax.html#elements-attributes).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

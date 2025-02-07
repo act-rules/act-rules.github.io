@@ -1,6 +1,7 @@
 ---
 id: 97a4e1
 name: Button has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `button` element has a non-empty accessible name.
@@ -30,19 +31,19 @@ This rule applies to elements that are [included in the accessibility tree][] an
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
+## Background
+
+This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
+
+### Assumptions
 
 - The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
 
-## Accessibility Support
+### Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 - Some elements have a role of `button` and a default accessible name defined by the [HTML Accessibility API Mapping][html aam input button], for example `input` elements whose `type` [attribute value][] is either `submit` or `reset`. This rule considers that these default names can be descriptive and therefore does not fail them.
-
-## Background
-
-This rule considers an exception for "image buttons" (i.e., `input` elements with a `type` [attribute value] of `image`). Image buttons failing this rule would fail [Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value) and [Success Criterion 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content) which is not part of the accessibility requirements for this rule.
 
 ### Related rules
 

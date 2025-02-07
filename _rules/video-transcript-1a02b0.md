@@ -1,6 +1,7 @@
 ---
 id: 1a02b0
 name: Audio and visuals of video element have transcript
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that non-streaming `video` elements have all audio and visual information available in a transcript.
@@ -45,15 +46,15 @@ The visual information of each test target is available through a text transcrip
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

@@ -1,6 +1,7 @@
 ---
 id: aaa1bf
 name: Audio or video element that plays automatically has no audio that lasts more than 3 seconds
+rules_format: 1.1
 rule_type: atomic
 description: |
   `audio` or `video` that plays automatically does not output audio for more than 3 seconds.
@@ -41,15 +42,15 @@ For each test target the total audio output does not last more than 3 seconds.
 
 **Note:** This rule does not cover single audio instances that play repeatedly for more than three seconds, or multiple audio instances for more than three seconds. The [WCAG Understanding documentation for 1.4.2 Audio Controls](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html) is ambiguous about how to handle these scenarios.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

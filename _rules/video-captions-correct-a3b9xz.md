@@ -1,5 +1,5 @@
 ---
-id:
+id: a3b9xz
 name: Video element auditory content has correct captions
 rules_format: 1.1
 rule_type: atomic

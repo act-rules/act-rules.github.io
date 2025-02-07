@@ -30,7 +30,7 @@ This rule applies to any element with a semantic role of modal dialog or alertdi
 
 ## Expectation
 
-The element that has the focus when the target element becomes visible is the same element that receives focus when the target element stops being visible.
+The element that triggers the target element to become visible is the same element that receives focus when the target element stops being visible.
 
 ## Background
 

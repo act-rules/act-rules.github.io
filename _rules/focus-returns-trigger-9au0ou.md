@@ -20,8 +20,8 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    -  Helen Burge
     -  Dan Tripp
+    -  Helen Burge
 ---
 
 ## Applicability

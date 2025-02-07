@@ -32,15 +32,15 @@ This rule applies to any element with a semantic role of dialog or alertdialog t
 
 The element that has the focus when the target element becomes visible is the same element that receives focus when the target element stops being visible.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

@@ -26,7 +26,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any element with a semantic role of dialog or alertdialog that is not visible.
+This rule applies to any element with a semantic role of modal dialog or alertdialog that is not visible.
 
 ## Expectation
 

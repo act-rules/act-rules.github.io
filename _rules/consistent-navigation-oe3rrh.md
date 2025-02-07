@@ -160,7 +160,7 @@ screen readers, which are used by people who are blind to read textual informati
 text-to-speech software, which is used by some people with cognitive, language, and learning disabilities to convert text into synthetic speech;
 speech recognition software, which may be used by people who have some physical disabilities;
 alternative keyboards, which are used by people with certain physical disabilities to simulate the keyboard (including alternate keyboards that use head pointers, single switches, sip/puff and other special input devices.);
-alternative pointing devices, which are used by people with certain physical disabilities to simulate mouse pointing and button activations.
+alternative pointing devices, which are used by people with certain physical disabilities to simulate mouse pointing and button activation.
 same relative order
 same position relative to other items
 

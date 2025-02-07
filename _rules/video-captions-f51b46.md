@@ -44,7 +44,7 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-For each test target, audio information that is not conveyed visually in the video, is available through [captions](https://www.w3.org/TR/WCAG22/#dfn-captions).
+For each test target, [captions](https://www.w3.org/TR/WCAG22/#dfn-captions) are provided.
 
 **Note:** Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
@@ -57,6 +57,10 @@ This rule assumes that the video element is used to play a video (for example, n
 ### Accessibility Support
 
 There are no accessibility support issues known.
+
+### Related Rules
+
+This rule does not evaluate the captions for accuracy or quality. See Video element auditory content has correct captions.
 
 ### Bibliography
 
@@ -79,11 +83,21 @@ A video element that has open captions for all of the audio content.
 
 #### Passed Example 2
 
-A video element with an associated track element that contains captions for all of the audio content.
+A video element has closed captions.
 
 ```html
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls>
 	<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+</video>
+```
+
+#### Passed Example 3
+
+A video element with an associated track element that contains incorrect captions. This rule does not evaluate the captions for accuracy or quality.
+
+```html
+<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+	<track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions" />
 </video>
 ```
 
@@ -99,17 +113,7 @@ A video element without any form of captions.
 
 #### Failed Example 2
 
-A video element with an associated track element that contains incorrect captions. Specifically, the captions flip the role of the mouse and computer by saying, "Not being able to use your mouse because your computer doesn't work is frustrating."
-
-```html
-<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
-	<track src="/test-assets/perspective-video/perspective-incorrect-caption.vtt" kind="captions" />
-</video>
-```
-
-#### Failed Example 3
-
-A video element with text on the same page that describes the audio in the video.
+A video element with text on the same page that describes the audio in the video but no captions.
 
 ```html
 <p>
@@ -120,9 +124,9 @@ A video element with text on the same page that describes the audio in the video
 <video src="/test-assets/perspective-video/perspective-video.mp4" controls></video>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
-A video element with an explicitly associated text on the same page that describes the audio in the video.
+A video element with an explicitly associated text on the same page that describes the audio in the video but no captions.
 
 ```html
 <p id="text">

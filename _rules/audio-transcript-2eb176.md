@@ -1,6 +1,7 @@
 ---
 id: 2eb176
 name: Audio element content has transcript
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that `audio` elements have a transcript that includes all auditory information.
@@ -33,15 +34,15 @@ The auditory information of each test target is available through a text transcr
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

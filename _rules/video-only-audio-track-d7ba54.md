@@ -1,6 +1,7 @@
 ---
 id: d7ba54
 name: Video element visual-only content has audio track alternative
+rules_format: 1.1
 rule_type: atomic
 description: |
   Non-streaming `video` elements without audio must have an audio alternative.
@@ -33,15 +34,15 @@ This rule applies to any [non-streaming](#non-streaming-media-element) `video` e
 
 The visual information of each test target is available through an audio track.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

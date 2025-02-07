@@ -1,6 +1,7 @@
 ---
 id: b49b2e
 name: Heading is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that headings describe the topic or purpose of the content.
@@ -35,19 +36,19 @@ Each target element describes the topic or purpose of the first [perceivable con
 
 **Note:** Headings do not need to be lengthy. A word, or even a single character, may be sufficient.
 
-## Assumptions
+## Background
+
+Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
+
+### Assumptions
 
 This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
 This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from assistive technologies. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
 
-## Accessibility Support
+### Accessibility Support
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
-## Background
-
-Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
 
 ### Bibliography
 

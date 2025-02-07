@@ -1,6 +1,7 @@
 ---
 id: qt1vmo
 name: Image accessible name is descriptive
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that the accessible names of images serve an equivalent purpose to the image.
@@ -52,15 +53,15 @@ This rule applies to any `img`, `canvas` or `svg` element that is [visible][] an
 
 Each test target has an [accessible name][] that serves an equivalent purpose to the [non-text content][] of that test target.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 Some popular browser / screen reader combinations do not pronounce the accessible names of `svg` elements. This can be resolved by adding an [explicit semantic role][] of `img` to the `svg` element.
-
-## Background
 
 ### Bibliography
 

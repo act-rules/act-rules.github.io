@@ -1,6 +1,7 @@
 ---
 id: b40fd1
 name: Document has a landmark with non-repeated content
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each page has an element with a landmark semantic role starting with non-repeated content
@@ -32,19 +33,19 @@ Within each test target, either there is no [non-repeated content after repeated
 - the first [perceivable content][] (in [tree order][] in the [flat tree][]) which is an [inclusive descendant][] of the element is [non-repeated content after repeated content][]; and
 - the element is [included in the accessibility tree][].
 
-## Assumptions
-
-- This rule assumes that [landmarks][landmark] are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
-
-## Accessibility Support
-
-Marking content with landmarks is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmarks navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
-
 ## Background
 
 Most of the time, this rule passes by enclosing the primary content of the page in a `main` landmark.
 
 [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] only checks that landmarks are correctly used, but does not check whether landmarks could have been used and were omitted. Therefore, failing this rule (not having enough landmarks) does not necessarily fail that technique, and it is not listed as an accessibility mapping.
+
+### Assumptions
+
+- This rule assumes that [landmarks][landmark] are intended to users of Assistive Technologies and are not necessarily rendered in a visible way. Therefore, it does not require the main landmark to be [visible][]. Similarly, technique [ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11] does not require landmarks to be [visible][] or have [visible][] content.
+
+### Accessibility Support
+
+Marking content with landmarks is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmarks navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 
 ### Bibliography
 

@@ -1,6 +1,7 @@
 ---
 id: 5c01ea
 name: ARIA state or property is permitted
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
@@ -50,14 +51,6 @@ For each test target, one of the following is true:
 
 No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
-
 ## Background
 
 The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
@@ -67,6 +60,14 @@ In HTML, there are language features that do not have corresponding implicit WAI
 This rule only applies to [explicitly set][aria set explicit] attributes since these have been provided by authors and using the wrong one is therefore an author issue. If an [implicitly set][aria set implicit] attribute is incorrect, this is not necessarily an author error, e.g., it can be the result of re-purposing an existing element.
 
 Assessing the value of the attribute is out of scope for this rule.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ### Related rules
 

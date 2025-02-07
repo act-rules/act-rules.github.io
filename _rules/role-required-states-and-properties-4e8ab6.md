@@ -1,6 +1,7 @@
 ---
 id: 4e8ab6
 name: Element with role attribute has required states and properties
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that elements that have an explicit role also specify all required states and properties.
@@ -39,21 +40,21 @@ For each test target, the [WAI-ARIA required states and properties][] for the ro
 
 The attributes may be [explicitly set][aria set explicit], [implicitly set][aria set implicit], or [set by default][aria set default].
 
-## Assumptions
-
-- The ARIA `role` is being used to conform to WCAG.
-
-## Accessibility Support
-
-This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties][] when a [WAI-ARIA implicit value for role][] is specified in [WAI-ARIA Specifications][].
-
-**Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
-
 ## Background
 
 Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
 
 The way the attribute is [set][aria set] doesn't matter for this rule. As long as authors can rely on User Agents or Assistive Technologies to set the attribute, this won't create problems for users. As per the [First Rule of ARIA use][], authors should rely on [implicitly set][aria set implicit] attributes when possible.
+
+### Assumptions
+
+- The ARIA `role` is being used to conform to WCAG.
+
+### Accessibility Support
+
+This rule relies on browsers and assistive technologies to support leaving out [WAI-ARIA required states and properties][] when a [WAI-ARIA implicit value for role][] is specified in [WAI-ARIA Specifications][].
+
+**Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
 ### Bibliography
 

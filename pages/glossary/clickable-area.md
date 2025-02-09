@@ -8,7 +8,7 @@ input_aspects:
   - DOM tree
 ---
 
-The _directly clickable area_ of an element is the set of all viewport coordinates for which the element is the [topmost event target][]
+The <dfn id="clickable-area:directly">_directly clickable area_</dfn> of an element is the set of all viewport coordinates for which the element is the [topmost event target][]
 
 The _clickable area_ of an element is the union of its _directly clickable area_ and that of its [implicit][implicit label] or [explicit label][]. Clickable areas may contain several disconnected parts.
 
@@ -16,7 +16,7 @@ An element has a <dfn id="clickable-area:empty">totally empty clickable area</df
 
 #### Examples of totally empty clickable areas
 
-This button has a totally empty clickable area because it is moved off-screen.
+This button has a totally empty clickable area because it is moved off-screen and cannot be brought into the viewport through scrolling.
 
 ```html
 <style>

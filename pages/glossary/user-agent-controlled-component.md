@@ -16,11 +16,11 @@ A _User-Agent Controlled Component_ is an [HTML element][namespace element] for 
 
 #### Examples of User-Agent Controlled Components
 
-Typically, radio buttons or checkboxes are User-Agent controlled, until an author does change their dimensions.
+Typically, radio buttons or checkboxes are User-Agent controlled, until an author changes their dimensions.
 
-Links and buttons usually aren't, because their (text) content is provided by the author and the width depends on it.
+Links and buttons usually aren't. Authors provide their (text) content which determines the width.
 
-Days in a calendar widget build with an `<input type="date">` element are also User-Agent controlled since their content isn't provided by the author and their dimension do not depend on values provided by the author.
+Days in a calendar widget build with an `<input type="date">` element are also User-Agent controlled. Their content is not provided by the author and dimensions do not depend on values provided by the author.
 
 Directly setting the `height` or `width` CSS properties makes an element not User-Agent controlled. Changing the `max-height` or `min-width` properties can make it not User-Agent controlled, if the added constraint impacts the [computed][computed values] `height` or `width` properties (i.e., if the `height` would be larger than `max-height` and is restricted by it; or if the `width` would be smaller than `min-width` and is changed by it).
 

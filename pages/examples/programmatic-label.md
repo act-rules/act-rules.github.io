@@ -58,7 +58,7 @@ The `div` element is not [labelable][]. Therefore, it is not a [labeled control]
 
 ## aria-labelledby on aside
 
-The `span` element is referenced by the `aria-labelledby` attribute on the `aside` element. Therefore, the `span` element is a programmatic label of the `div` element. Note that the `aria-labelledby` attribute works on any element, not just on the [labelable][] elements.
+The `span` element is referenced by the `aria-labelledby` attribute on the `aside` element. Therefore, the `span` element is a programmatic label of the `aside` element. Note that the `aria-labelledby` attribute works on any element, not just on the [labelable][] elements.
 
 ```html
 <span id="label_fname">Full name:</span>

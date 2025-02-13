@@ -4,7 +4,7 @@ command = "npm run pr:preview && cd wcag-act-rules-tmp && git submodule update -
 publish = "wcag-act-rules-tmp/_site"
 
 [build.environment]
-# RUBY_VERSION = "3.3.3"
+RUBY_VERSION = "3.3.3"
 
 [[redirects]]
   from = "/"

@@ -28,7 +28,7 @@ The purpose of this stage is to avoid that people spend a huge amount of time on
 
 ### Passes this stage and moves on to "To Do" when:
 
-- Currently no explicit criteria for passing this stage, but 3 initial approvals from different organizations  are recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Call for Review later.
+- Currently no explicit criteria for passing this stage, but 3 initial approvals from different organizations are recommended. This should give an indication on whether the rule can get 3 final approving reviews and get through Call for Review later.
 
 ### Fails this stage and becomes "Rejected" when:
 

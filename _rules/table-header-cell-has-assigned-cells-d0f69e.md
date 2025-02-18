@@ -1,6 +1,7 @@
 ---
 id: d0f69e
 name: Table header cell has assigned cells
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each table header has assigned cells in a table element.
@@ -36,18 +37,18 @@ This rule applies to any [HTML element][] with a [semantic][semantic role] [rowh
 
 Each target element is [assigned][] to at least one element with an [inheriting semantic][] [cell][].
 
-## Assumptions
-
-This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
-
-## Accessibility Support
-
-- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
-- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
 ## Background
 
 The roles inheriting from `cell` are `columnheader`, `gridcell`, and `rowheader`.
+
+### Assumptions
+
+This rule assumes that table header cells have a relationship conveyed through presentation with other cells within the same table. This excludes edge cases such as a table definition where there is only one header cell, or a table definition where there are multiple headers and no other cells. In such scenarios the rule fails, but [success criterion 1.3.1 Info and Relationships][sc1.3.1] could still be satisfied.
+
+### Accessibility Support
+
+- Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
+- Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
 ### Bibliography
 

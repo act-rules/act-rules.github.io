@@ -2,7 +2,7 @@
 title: Rule Design
 ---
 
-The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format 1.0](https://www.w3.org/TR/act-rules-format/):
+The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting documents. To achieve the goals the following approach is based on [ACT Rules Format](https://www.w3.org/TR/act-rules-format/):
 
 1. **[Rule properties](#rule-properties)**: Define the test subject and its environment. Includes identifier, name, type and description, as well as other meta data.
 
@@ -10,11 +10,11 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 3. **[Expectations](#expectations)**: Assert what must be true about the target elements, in order for them to pass the rule.
 
-4. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
+4. **[Background](#background)**: Provide information on relevant resources referenced when developing the rule.
 
-5. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
+5. **[Assumptions](#assumptions)**: Explicitly state all assumptions made by the rule to ensure accountability of the results.
 
-6. **[Background](#background)**: Provide information on relevant resources referenced when developing the rule.
+6. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
 
 7. **[Test cases](#test-cases)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 

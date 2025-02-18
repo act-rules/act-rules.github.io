@@ -1,6 +1,7 @@
 ---
 id: 5c01ea
 name: ARIA state or property is permitted
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
@@ -50,14 +51,6 @@ For each test target, one of the following is true:
 
 No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
-
 ## Background
 
 The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
@@ -65,6 +58,14 @@ The presence of prohibited ARIA attributes is often the result of a developer us
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
 
 Assessing the value of the attribute is out of scope for this rule.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ### Related rules
 
@@ -109,7 +110,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][].
+The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][], except where specifically prohibited.
 
 ```html
 <div role="button" aria-label="OK">✓</div>
@@ -149,7 +150,7 @@ The `aria-controls` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 9
 
-The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
+The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], except where specifically prohibited, including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
@@ -171,6 +172,34 @@ This `input` element does not have an [explicit role][] of `textbox`, but the `a
 
 ```html
 <label>Password<input type="password" aria-required="true"/></label>
+```
+
+#### Passed Example 12
+
+This `div` element has an [explicit role][] of `switch`; the `aria-required` [property][] is [inherited][] from the `checkbox` [superclass role](https://www.w3.org/TR/wai-aria-1.2/#superclassrole).
+
+```html
+<div role="switch" aria-checked="false" tabindex="0" aria-required="true">
+	<span class="label">Notifications</span>
+	<span
+		class="switch"
+		style="position: relative; display: inline-block; top: 6px; border: 2px solid black; border-radius: 12px; height: 20px; width: 40px;"
+	>
+		<span
+			style="position: absolute; top: 2px; left: 2px; display: inline-block; border: 2px solid black; border-radius: 8px; height: 12px; width: 12px; background: black;"
+		></span>
+	</span>
+	<span class="on" aria-hidden="true" style="display: none;">On</span>
+	<span class="off" aria-hidden="true">Off</span>
+</div>
+```
+
+#### Passed Example 13
+
+This `div` element has an [explicit role][] of `separator`. The `aria-valuemin`, `aria-valuemax` and `aria-valuenow` [properties][property] are [supported][] for the `separator` role when the element is [focusable][].
+
+```html
+<div role="separator" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" tabindex="0">My separator</div>
 ```
 
 ### Failed
@@ -197,6 +226,14 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 
 ```html
 <div aria-label="Bananas"></div>
+```
+
+#### Failed Example 4
+
+The `aria-label` property is [prohibited][] for an element with a `paragraph` role.
+
+```html
+<div role="paragraph" aria-label="Bananas"></div>
 ```
 
 ### Inapplicable

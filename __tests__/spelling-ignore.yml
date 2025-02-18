@@ -126,6 +126,7 @@
 # Notes and acronyms
 - TODO
 - TBD
+- CJK
 
 # Tool and library names
 - axe-core
@@ -177,7 +178,7 @@
 - x1
 - y1
 
-# HTML character references 
+# HTML character references
 - nbsp
 
 # DOM Events

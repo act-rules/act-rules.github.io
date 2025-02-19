@@ -56,7 +56,7 @@ This rule assumes that the visible label isn't rearranged with CSS so that it ap
 
 This rule assumes that the visible label doesn't use CSS to add whitespace where none exists in the DOM.
 
-This rule assumes that for any word which appears in both the accessible name and the visible label, the same spelling and hyphenation is used in both places. For example: if "non-negative" is used in the accessible name and "nonnegative" is used in the visible label, that would violate this assumption. Or if "color" is used in the accessible name and "colour" is used in the visible label, that would also violate this assumption.
+This rule assumes that for any word which appears in both the accessible name and the visible label, the same spelling and hyphenation is used in both places. For example: if "non-negative" is used in the accessible name and "nonnegative" is used in the visible label, that would violate this assumption. Similarly, if "color" is used in the accessible name and "colour" is used in the visible label, that would also violate this assumption.
 
 This rule assumes that all resources needed for rendering the page are properly loaded. Checking if resources are missing is out of the scope of rules. Missing resources may be rendered as text (for example, missing `img` are rendered as their `alt` attribute).
 

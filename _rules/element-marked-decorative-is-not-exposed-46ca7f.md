@@ -6,6 +6,8 @@ rule_type: atomic
 description: |
   This rule checks that elements marked as decorative either are not included in the accessibility tree, or have a presentational role.
 accessibility_requirements:
+  wcag20:1.1.1: # Non-text content (A)
+    secondary: This success criterion is **less strict** than this rule. Only when this rule is applied to decorative content does a failure of 1.1.1 occur.
 input_aspects:
   - Accessibility tree
   - CSS styling
@@ -35,7 +37,7 @@ Elements are normally [marked as decorative][] to convey the intention of the au
 
 Whenever such a conflict occurs, this indicates at the very least mismatching intentions. Such a conflict should be avoided.
 
-When these conflicts arise on [decorative][] [non-text content][], this is also a failure of [Success Criterion 1.1.1: Non-text Content][sc111] because [decorative][] [non-text content][] must be implemented in a way that allows assistive technologies to ignore it. When these conflicts arise on text content, or on content which is not [decorative][], this is not a failure of WCAG. Therefore this rule is not mapping to any specific WCAG Success Criterion, and is not an accessibility requirement for WCAG.
+When these conflicts arise on [decorative][] [non-text content][], this is also a failure of [Success Criterion 1.1.1: Non-text Content][sc111] because [decorative][] [non-text content][] must be implemented in a way that allows assistive technologies to ignore it. When these conflicts arise on text content, or on content which is not [decorative][], this is not a failure of WCAG. Therefore this rule maps to Non-text Content as a secondary requirement.
 
 ### Assumptions
 

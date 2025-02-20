@@ -1,6 +1,6 @@
 ---
-title: Can be target by a pointer event
-key: can-be-targeted-by-pointer-event
+title: Observed as a pointer events target
+key: observed-as-pointer-events-target
 unambiguous: true
 objective: true
 input_aspects:
@@ -8,12 +8,12 @@ input_aspects:
   - DOM tree
 ---
 
-An element _can be targeted by pointer events_ when all the following conditions are true:
+An element is _observed as a pointer events target_ when all the following conditions are true:
 
 - the element is a [semantic `widget`][semantic role]; and
 - the element is [focusable][]; and
 - the element [computed value][] of the `pointer-events` CSS property is `auto`; and
-- through scrolling, it is possible to have parts of the element's [border box][] which intersect the viewport and are not entirely covered by the [border boxes][] of elements with greater [computed][computed value] `z-index` and a [computed][computed value] `pointer-events` of `auto`.
+- through scrolling, it is possible to have parts of the element's [border box][] which intersect the viewport but do not intersect by the [border boxes][] any element that appears later in the [painting order][] and has a [computed][computed value] `pointer-events` of `auto`.
 
 #### Background
 
@@ -30,6 +30,7 @@ As a consequence, this definition has these two known limitations:
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
 [computed value]: https://www.w3.org/TR/css-cascade-3/#computed 'CSS definition of Computed Value'
 [focusable]: #focusable 'Definition of Focusable'
+[painting order]: https://drafts.csswg.org/css2/#painting-order 'CSS definition of Painting Order'
 [sc211]: https://www.w3.org/TR/WCAG22/#keyboard 'Success Criterion 2.1.1 Keyboard'
 [sc256]: https://www.w3.org/TR/WCAG22/#concurrent-input-mechanisms 'Success Criterion 2.5.6 Concurrent Input Mechanisms'
 [sc412]: https://www.w3.org/TR/WCAG22/#name-role-value 'Success Criterion 4.1.2 Name, Role, Value'

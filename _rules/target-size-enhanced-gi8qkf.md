@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML element][namespaced element] which [can be targeted by a pointer event][], except when one of the following is true:
+This rule applies to any [HTML element][namespaced element] which is [observed as a pointer events target][], except when one of the following is true:
 
 - the element has a [totally empty clickable area][]; or
 - the element is [rendered on a line]; or
@@ -711,7 +711,7 @@ These `input` elements and `button` are `disabled` and therefore not [focusable]
 
 #### Inapplicable Example 2
 
-This button cannot be [targeted by a pointer event][] because it is entirely covered by the `div` element with a dashed red border.
+This button is not [observed as a pointer events target][] because it is entirely covered by the `div` element with a dashed red border.
 
 ```html
 <head>
@@ -803,7 +803,7 @@ Location of ACT rules headquarters:
 ```
 
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
-[can be targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
+[observed as a pointer events target]: #observed-as-pointer-events-target 'Definition of Observed as a Pointer Events Target'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
 [essential size]: #essential-target-size 'Definition of Essential Target Size'
 [explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'

@@ -26,7 +26,7 @@ acknowledgments:
 This rule applies to any [HTML element][namespaced element] which is [observed as a pointer events target][], except when one of the following is true:
 
 - the element has an [always empty clickable area][]; or
-- the element is [rendered on a line]; or
+- the element is [in a block of text][]; or
 - the element is [User Agent controlled][user agent controlled component]; or
 - the element has [essential size][].
 
@@ -469,6 +469,18 @@ The `#small` button has a [clickable area][] of only 35×35px. The `#large` butt
 
 #### Failed Example 6
 
+These links are have a [clickable area][] of approximately 184×17px and 267×17px. There ancestor [block box][] is created by the `li` elements which contain no other [text node][] (except for the `::marker` pseudo-element), hence they are not [in a block of text][].
+
+```html
+<p>Useful links for the ACT rules group:</p>
+<ul>
+	<li><a href="https://github.com/act-rules/act-rules.github.io">ACT rules Github repository</a></li>
+	<li><a href="https://www.w3.org/community/act-r/">ACT Rules Community Group homepage</a></li>
+</ul>
+```
+
+#### Failed Example 7
+
 This button only has a [clickable area][] of approximately 20×45px, because it is obscured by the `div` with a dashed red border. The solid green lines hint at how a 44×44px area would fit inside the button, but not inside the non-obscured part.
 
 ```html
@@ -517,7 +529,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 </body>
 ```
 
-#### Failed Example 7
+#### Failed Example 8
 
 This button only has a [clickable area][] of approximately 20×45px, because it is obscured by the `div` with a dashed red border. Even though the `div` is scrollable, it is not scrollable fully out of the way and always obscures the button. The solid green lines hint at how a 44×44px area would fit inside the button, but not inside the never obscured part.
 
@@ -580,7 +592,7 @@ This button only has a [clickable area][] of approximately 20×45px, because it 
 </body>
 ```
 
-#### Failed Example 8
+#### Failed Example 9
 
 These radio buttons have their size modified by the author and are therefore not [User Agent controlled components][user agent controlled component]. Their [clickable area][] is too small.
 
@@ -598,7 +610,7 @@ These radio buttons have their size modified by the author and are therefore not
 </fieldset>
 ```
 
-#### Failed Example 9
+#### Failed Example 10
 
 The zoom buttons do not have [essential size][]; they are too small. The pin (red square) on this map has [essential size][].
 
@@ -639,7 +651,7 @@ Location of ACT rules headquarters:
 />
 ```
 
-#### Failed Example 10
+#### Failed Example 11
 
 The [clickable area][] of this button does not contain a 44×44px [aligned rectangle][].
 
@@ -655,7 +667,7 @@ The [clickable area][] of this button does not contain a 44×44px [aligned recta
 <button id="target" onclick="alert('Hello')">Hi</button>
 ```
 
-#### Failed Example 11
+#### Failed Example 12
 
 The [clickable area][] of this button does not contain a 44×44px [aligned rectangle][].
 
@@ -670,7 +682,7 @@ The [clickable area][] of this button does not contain a 44×44px [aligned recta
 <button id="target" onclick="alert('hello')">Hello</button>
 ```
 
-#### Failed Example 12
+#### Failed Example 13
 
 The [clickable area][] of this button only contains a 25×45px [aligned rectangle][].
 
@@ -753,7 +765,7 @@ This button has an [always empty clickable area][] because it is moved off-scree
 
 #### Inapplicable Example 4
 
-These links are [rendered on a line][].
+These links are [in a block of text][].
 
 ```html
 <p>
@@ -765,6 +777,21 @@ These links are [rendered on a line][].
 
 #### Inapplicable Example 5
 
+These links are [in a block of text][]
+
+```html
+<p>Useful links for the ACT rules group:</p>
+<ul>
+	<li>
+		<a href="https://github.com/act-rules/act-rules.github.io">ACT rules Github repository</a> where most of our work
+		happens;
+	</li>
+	<li><a href="https://www.w3.org/community/act-r/">ACT Rules Community Group homepage</a> to join the group.</li>
+</ul>
+```
+
+#### Inapplicable Example 6
+
 This checkbox is an [User Agent controlled component][].
 
 ```html
@@ -774,7 +801,7 @@ This checkbox is an [User Agent controlled component][].
 </p>
 ```
 
-#### Inapplicable Example 6
+#### Inapplicable Example 7
 
 The pin (red square) on this map has [essential size][] because it is important to pinpoint the exact location.
 
@@ -802,18 +829,19 @@ Location of ACT rules headquarters:
 ></a>
 ```
 
+[aligned rectangle]: #aligned-rectangle 'Definition of Aligned Rectangle'
+[always empty clickable area]: #clickable-area:empty 'Definition of Always Empty Clickable Area'
+[block box]: https://drafts.csswg.org/css-display/#block-box 'CSS definition of a Block Box'
 [border box]: https://www.w3.org/TR/css-box-3/#border-box 'CSS definition of Border Box'
-[observed as a pointer events target]: #observed-as-pointer-events-target 'Definition of Observed as a Pointer Events Target'
 [clickable area]: #clickable-area 'Definition of Clickable Area'
 [essential size]: #essential-target-size 'Definition of Essential Target Size'
 [explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'
 [focusable]: #focusable 'Definition of Focusable'
-[aligned rectangle]: #aligned-rectangle 'Definition of Aligned Rectangle'
 [implicit label]: #programmatic-label:implicit 'Definition of Implicit Label'
+[in a block of text]: #in-a-block-of-text 'Definition of In a Block of Text'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
-[rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
+[observed as a pointer events target]: #observed-as-pointer-events-target 'Definition of Observed as a Pointer Events Target'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
-[targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[always empty clickable area]: #clickable-area:empty 'Definition of Always Empty Clickable Area'
+[text node]: https://dom.spec.whatwg.org/#text 'DOM Definition of Text Node'
 [user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

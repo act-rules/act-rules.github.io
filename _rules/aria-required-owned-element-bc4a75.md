@@ -4,7 +4,7 @@ name: ARIA required owned elements
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that an element with an explicit role that restricts which elements it can own only owns such elements
+  This rule checks that an element with an explicit role that restricts which elements it can own only owns such elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true

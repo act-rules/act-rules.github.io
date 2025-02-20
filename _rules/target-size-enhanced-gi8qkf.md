@@ -25,7 +25,7 @@ acknowledgments:
 
 This rule applies to any [HTML element][namespaced element] which is [observed as a pointer events target][], except when one of the following is true:
 
-- the element has a [totally empty clickable area][]; or
+- the element has an [always empty clickable area][]; or
 - the element is [rendered on a line]; or
 - the element is [User Agent controlled][user agent controlled component]; or
 - the element has [essential size][].
@@ -34,12 +34,12 @@ This rule applies to any [HTML element][namespaced element] which is [observed a
 
 For each target element, at least one of the following is true:
 
-- the element can be brought into viewport though scrolling with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels; or
-- there is an [instrument][] to achieve an equivalent goal as the target element on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [horizontal rectangle][] with width and height of at least 44 CSS pixels.
+- the element can be brought into viewport though scrolling with a [clickable area][] containing an [aligned rectangle][] with width and height of at least 44 CSS pixels; or
+- there is an [instrument][] to achieve an equivalent goal as the target element on the same page, and through scrolling this [instrument][] can be brought into viewport with a [clickable area][] containing an [aligned rectangle][] with width and height of at least 44 CSS pixels.
 
 ## Background
 
-While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [horizontal rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with irregular clickable shapes, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contains a large enough [horizontal rectangle][]. In order to allow automated tools to have a consistent implementation of this rule, it does not contain such test cases, notably all Failed test cases have a [border box][] which is too small.
+While the rule, and [Success Criterion 2.5.5 Target Size (enhanced)][sc255], apply targets of any shape, the test cases mostly focus on targets whose [clickable area][] is itself an [aligned rectangle][]. This acknowledges the fact that the [border box][] of an element can easily be queried by automated tools (e.g., through the `getBoundingClientRect` function), and therefore it is expected that most automated tools will perform better on such elements. For elements with irregular clickable shapes, including `area` elements, nested targets, or elements that have been rotated or clipped, the actual [clickable area][] is much harder to determine and may be much smaller than the [border box][]. These elements could fail the rule while their [border box][] contains a large enough [aligned rectangle][]. In order to allow automated tools to have a consistent implementation of this rule, it does not contain such test cases, notably all Failed test cases have a [border box][] which is too small.
 
 ### Assumptions
 
@@ -347,7 +347,7 @@ This button has a 50×50px [clickable area][]. The `div` with a dashed red borde
 
 #### Passed Example 11
 
-The [clickable area][] of this button contains a 44×44px [horizontal rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
+The [clickable area][] of this button contains a 44×44px [aligned rectangle][]. Note that the actual [border box][] has to be much larger to account for the rounded corners.
 
 ```html
 <style>
@@ -362,7 +362,7 @@ The [clickable area][] of this button contains a 44×44px [horizontal rectangle]
 
 #### Passed Example 12
 
-This button has been clipped, leaving a [clickable area][] containing a 45×45px [horizontal rectangle][].
+This button has been clipped, leaving a [clickable area][] containing a 45×45px [aligned rectangle][].
 
 ```html
 <head>
@@ -641,7 +641,7 @@ Location of ACT rules headquarters:
 
 #### Failed Example 10
 
-The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
+The [clickable area][] of this button does not contain a 44×44px [aligned rectangle][].
 
 ```html
 <style>
@@ -657,7 +657,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 
 #### Failed Example 11
 
-The [clickable area][] of this button does not contain a 44×44px [horizontal rectangle][].
+The [clickable area][] of this button does not contain a 44×44px [aligned rectangle][].
 
 ```html
 <style>
@@ -672,7 +672,7 @@ The [clickable area][] of this button does not contain a 44×44px [horizontal re
 
 #### Failed Example 12
 
-The [clickable area][] of this button only contains a 25×45px [horizontal rectangle][].
+The [clickable area][] of this button only contains a 25×45px [aligned rectangle][].
 
 ```html
 <head>
@@ -736,7 +736,7 @@ This button is not [observed as a pointer events target][] because it is entirel
 
 #### Inapplicable Example 3
 
-This button has a [totally empty clickable area][] because it is moved off-screen and cannot be scrolled to.
+This button has an [always empty clickable area][] because it is moved off-screen and cannot be scrolled to.
 
 ```html
 <style>
@@ -808,12 +808,12 @@ Location of ACT rules headquarters:
 [essential size]: #essential-target-size 'Definition of Essential Target Size'
 [explicit label]: #programmatic-label:explicit 'Definition of Explicit Label'
 [focusable]: #focusable 'Definition of Focusable'
-[horizontal rectangle]: #horizontal-rectangle 'Definition of Horizontal Rectangle'
+[aligned rectangle]: #aligned-rectangle 'Definition of Aligned Rectangle'
 [implicit label]: #programmatic-label:implicit 'Definition of Implicit Label'
 [instrument]: #instrument-to-achieve-an-objective 'Definition of Instrument to Achieve an Objective'
 [namespaced element]: #namespaced-element 'Definition of Namespaced Element'
 [rendered on a line]: #rendered-on-a-line 'Definition of Rendered on a Line'
 [sc255]: https://www.w3.org/TR/WCAG22/#target-size-enhanced 'Success Criterion 2.5.5 Target Size (enhanced)'
 [targeted by a pointer event]: #can-be-targeted-by-pointer-event 'Definition of Can be Targeted by a Pointer Event'
-[totally empty clickable area]: #clickable-area:empty 'Definition of Totally Empty Clickable Area'
+[always empty clickable area]: #clickable-area:empty 'Definition of Always Empty Clickable Area'
 [user agent controlled component]: #user-agent-controlled-component 'Definition of UI Controlled Component'

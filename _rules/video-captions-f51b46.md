@@ -60,7 +60,7 @@ There are no accessibility support issues known.
 
 ### Related Rules
 
-This rule does not evaluate the captions for accuracy or quality. See Video element auditory content has correct captions.
+This rule does not evaluate the captions for accuracy or quality. See [Video element auditory content has correct captions](https://www.w3.org/WAI/standards-guidelines/act/rules/a3b9xz/).
 
 ### Bibliography
 
@@ -113,7 +113,7 @@ A video element without any form of captions.
 
 #### Failed Example 2
 
-A video element with text on the same page that describes the audio in the video but no captions.
+A video element with text on the same page that describes the audio in the video, but the video itself has no captions.
 
 ```html
 <p>
@@ -126,7 +126,7 @@ A video element with text on the same page that describes the audio in the video
 
 #### Failed Example 3
 
-A video element with an explicitly associated text on the same page that describes the audio in the video but no captions.
+A video element with an explicitly associated text on the same page that describes the audio in the video, but the video itself has no captions.
 
 ```html
 <p id="text">

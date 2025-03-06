@@ -181,19 +181,6 @@ This `combobox` does not have the required `aria-expanded` property. Prior to [W
 </ul>
 ```
 
-#### Failed Example 6
-
-This `combobox` uses `aria-owns` instead of using the required `aria-controls` property.
-
-```html
-<label for="tag_combo">Tag</label>
-<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-owns="popup_listbox" />
-<ul role="listbox" id="popup_listbox">
-	<li role="option">Zebra</li>
-	<li role="option" id="selected_option">Zoom</li>
-</ul>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1

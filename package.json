@@ -145,7 +145,7 @@
 		"is-url": "^1.2.4",
 		"jest": "^27.5.1",
 		"jest-27-expect-message": "^1.1.0",
-		"jest-extended": "^0.11.5",
+		"jest-extended": "^4.0.2",
 		"js-yaml": "^3.14.1",
 		"lint-staged": "^9.5.0",
 		"marked": "^4.0.10",
@@ -177,7 +177,8 @@
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
 		"test": "jest --coverage",
-		"build:wai": "zx .github/scripts/wai-build.mjs"
+		"build:wai": "zx .github/scripts/wai-build.mjs",
+		"pr:preview": "zx .github/scripts/pr-preview.mjs"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {
@@ -207,7 +208,7 @@
 	"jest": {
 		"verbose": false,
 		"setupFilesAfterEnv": [
-			"jest-extended",
+			"jest-extended/all",
 			"jest-27-expect-message"
 		],
 		"testPathIgnorePatterns": [

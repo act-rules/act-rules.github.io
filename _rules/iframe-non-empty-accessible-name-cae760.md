@@ -1,6 +1,7 @@
 ---
 id: cae760
 name: Iframe element has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `iframe` element has a non-empty accessible name.
@@ -33,23 +34,23 @@ This rule applies to `iframe` elements that are [included in the accessibility t
 
 Each target element has an [accessible name][] that is not empty (`""`).
 
-## Assumptions
+## Background
+
+The `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
+
+Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe` elements for which there is an attempt to hide them from assistive technologies. Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
+
+### Assumptions
 
 If an `iframe` is not perceived by the user as a single control, it does not qualify as a [user interface component][] under WCAG 2. In such a scenario, failing this rule would not fail [success criterion 4.1.2](https://www.w3.org/TR/WCAG22/#name-role-value). Unless the `iframe` is both removed from the accessibility tree and removed from [sequential focus navigation][], they usually are considered to be [user interface components][user interface component].
 
-## Accessibility Support
+### Accessibility Support
 
 - Browser and assistive technology support for `iframe` elements is currently **inconsistent**. Some examples of inconsistencies include (but are not limited to):
   - There is a known combination of a popular browser and assistive technology that ignores `aria-label` and only announces `title` attribute as an [accessible name][]
   - Some assistive technologies ignore empty `iframe` elements, regardless of if they are focusable or if they have an accessible name.
   - Some browsers instantly redirect focus from `iframe` elements to the first focusable element inside that iframe. This redirect makes it appear as though the `iframe` never receives focus. This occurs even if the `iframe` has a non-negative `tabindex` [attribute value][].
   - Not all browsers redirect focus on `iframe` elements. This ensures that the contents of `iframe` elements can be scrolled and accessed by using the keyboard. This must not be circumvented by using a negative tabindex, as this will make the `iframe` completely inaccessible for keyboard navigation.
-
-## Background
-
-The `frame` element is deprecated, this rule does not consider `frame` or `frameset` elements.
-
-Due to inconsistencies in handling focus on `iframe`, this rule ignores `iframe` elements for which there is an attempt to hide them from assistive technologies. Whether `iframe` elements that are inapplicable to this rule still require an accessible name varies between browsers.
 
 ### Bibliography
 

@@ -12,6 +12,7 @@ Use the [empty atomic rule template](https://raw.githubusercontent.com/act-rules
 ---
 id:
 name:
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks ...
@@ -57,14 +58,6 @@ This rule applies to any (??) element ...
 
 Each target element ...
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 - Links to Techniques for WCAG 2.2
@@ -73,6 +66,26 @@ There are no accessibility support issues known.
 - Links to test cases, test suites, unit tests, etc.
 - The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
+### Related Rules
+
+<!-- This section is optional -->
+
+- [rule name here](./abc123)
+
+### Bibliography
+
+<!-- This section is optional -->
+
+- [link here](#)
 
 ## Test Cases
 
@@ -131,6 +144,7 @@ For more about composite rules, see the [ACT Rules Format](https://www.w3.org/TR
 ---
 id:
 name:
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks ...
@@ -177,14 +191,6 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 - [Rule name](relative_link_to_rule.html)
 - ...
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 - Links to Techniques for WCAG 2.2
@@ -193,6 +199,26 @@ There are no accessibility support issues known.
 - Links to test cases, test suites, unit tests, etc.
 - The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
 - Other references
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
+### Related Rules
+
+<!-- This section is optional -->
+
+- [rule name here](./abc123)
+
+### Bibliography
+
+<!-- This section is optional -->
+
+- [link here](#)
 
 ## Test Cases
 

@@ -1,0 +1,15 @@
+[build]
+command = "npm run pr:preview && cd wcag-act-rules-tmp && git submodule update --init --remote && bundle install && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+# base = "wcag-act-rules-tmp"
+publish = "wcag-act-rules-tmp/_site"
+
+[build.environment]
+RUBY_VERSION = "3.3.3"
+
+[[redirects]]
+  from = "/"
+  to = "/standards-guidelines/act/rules/"
+
+[[redirects]]
+  from = "/standards-guidelines/act/rules/*"
+  to = "/standards-guidelines/at/rules/:splat/proposed"

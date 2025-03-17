@@ -239,6 +239,7 @@
 - unitless
 - luminance
 - disambiguated
+- superclass
 - grey
 
 # Parts of Unicode
@@ -294,3 +295,6 @@
 - A-lum-min
 - B-lum-max
 - B-lum-min
+
+#Browsers Internal Roles
+- SvgRoot

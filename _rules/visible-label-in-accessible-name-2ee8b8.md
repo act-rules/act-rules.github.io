@@ -223,7 +223,7 @@ This example passes the rule because "YYYY-MM-DD" is in brackets. Text in bracke
 
 #### Passed Example 15
 
-The passes for two reasons: 1) because the ellipsis ("…") is [non-text content][], and 2) because the ellipsis is neither a letter nor a digit and so is filtered out by the [label in name algorithm][].
+This passes for two reasons: 1) because the ellipsis ("…") is [non-text content][], and 2) because the ellipsis is neither a letter nor a digit and so is filtered out by the [label in name algorithm][].
 
 ```html
 <button aria-label="Next">Next…</button>

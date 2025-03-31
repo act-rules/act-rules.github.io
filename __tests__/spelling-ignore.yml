@@ -295,3 +295,6 @@
 - A-lum-min
 - B-lum-max
 - B-lum-min
+
+#Browsers Internal Roles
+- SvgRoot

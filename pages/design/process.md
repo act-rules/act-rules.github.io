@@ -204,7 +204,7 @@ Published rules
   - successfully survived its 2 week Call for Review (if applicable),
   - been merged and published as a proposed rule in the WAI website at https://www.w3.org/WAI/standards-guidelines/act/rules/ (ACT Rules on the WAI website are generally updated every Tuesday)
 
-### Rejected
+## Rejected
 
 Rules that have been rejected due to different reasons.
 

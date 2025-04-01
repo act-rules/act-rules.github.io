@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [explicit semantic role][] with [required owned elements][], except if the element has an [inclusive ancestor][] in the accessibility tree with an `aria-busy` [attribute value][] of `true`.
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [explicit or implicit semantic role][] with [required owned elements][], except if the element has an [inclusive ancestor][] in the accessibility tree with an `aria-busy` [attribute value][] of `true`.
 
 ## Expectation
 
@@ -93,8 +93,8 @@ This element with the `menu` role only owns elements with the `menuitem`, `menui
 
 ```html
 <div role="menu">
-	<li role="none"></li>
-	<li role="menuitem">Item 1</li>
+	<div role="none"></li>
+	<div role="menuitem">Item 1</li>
 	<div role="menuitemradio" aria-checked="false">Item 2</div>
 	<div role="menuitemcheckbox" aria-checked="false">Item 3</div>
 </div>
@@ -137,6 +137,16 @@ This element with the `menu` role only owns an element with a `group` role. The 
 		</div>
 	</div>
 </div>
+```
+
+#### Passed Example 7
+
+The element `ul` with an implicit `list` role owns an element `li` with an implicit role `listitem` role.
+
+```html
+<ul>
+	<li>Item 1</li>
+</ul>
 ```
 
 ### Failed
@@ -237,11 +247,11 @@ This element with the `list` role is not included in the accessibility tree beca
 
 #### Inapplicable Example 2
 
-This `ul` element does not have an [explicit semantic role][].
+This `div` element with the `list` role is not included in the accessibility tree because it is hidden .
 
 ```html
-<ul>
-	<li>Item 1</li>
+<div role='list' hidden>
+	<div role='listitem'>Item 1</li>
 </ul>
 ```
 

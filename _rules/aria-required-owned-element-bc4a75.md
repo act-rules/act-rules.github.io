@@ -93,8 +93,8 @@ This element with the `menu` role only owns elements with the `menuitem`, `menui
 
 ```html
 <div role="menu">
-	<div role="none"></li>
-	<div role="menuitem">Item 1</li>
+	<div role="none"></div>
+	<div role="menuitem">Item 1</div>
 	<div role="menuitemradio" aria-checked="false">Item 2</div>
 	<div role="menuitemcheckbox" aria-checked="false">Item 3</div>
 </div>
@@ -251,7 +251,7 @@ This `div` element with the `list` role is not included in the accessibility tre
 
 ```html
 <div role='list' hidden>
-	<div role='listitem'>Item 1</li>
+	<div role='listitem'>Item 1</div>
 </ul>
 ```
 

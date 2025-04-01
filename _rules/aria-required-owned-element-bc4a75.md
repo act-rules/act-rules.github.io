@@ -250,9 +250,9 @@ This element with the `list` role is not included in the accessibility tree beca
 This `div` element with the `list` role is not included in the accessibility tree because it is hidden .
 
 ```html
-<div role='list' hidden>
-	<div role='listitem'>Item 1</div>
-</ul>
+<div role="list" hidden>
+	<div role="listitem">Item 1</div>
+</div>
 ```
 
 #### Inapplicable Example 3

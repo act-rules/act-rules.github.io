@@ -141,12 +141,38 @@ This element with the `menu` role only owns an element with a `group` role. The 
 
 #### Passed Example 7
 
-The element `ul` with an implicit `list` role owns an element `li` with an implicit role `listitem` role.
+The element `ul` with an implicit `list` role owns an element `li` with an implicit `listitem` role.
 
 ```html
 <ul>
 	<li>Item 1</li>
 </ul>
+```
+
+#### Passed Example 8
+
+The element `select` with an implicit `listbox` role owns elements `option` with implicit `option` roles.
+
+```html
+<select multiple>
+	<option>Item 1</option>
+	<option>Item 2</option>
+	<option>Item 3</option>
+</select>
+```
+
+#### Passed Example 8
+
+The element `table` with an implicit `table` role owns an element `tr` with implicit `row` role that owns elements `td` with implicit `cell` roles.
+
+```html
+<table>
+	<tr>
+		<td>Item 1</td>
+		<td>Item 2</td>
+		<td>Item 3</td>
+	</tr>
+</table>
 ```
 
 ### Failed
@@ -235,6 +261,32 @@ This element with the `list` role owns an element with the `listitem` role and a
 </div>
 ```
 
+#### Failed Example 8
+
+This element with the `menu` role owns `option` elements with implicit `option` role. The `option` role is not one of the [required owned elements][] for `menu`.
+
+```html
+<select role="menu">
+	<option>Item 1</option>
+	<option>Item 2</option>
+	<option>Item 3</option>
+</select>
+```
+
+#### Failed Example 9
+
+This element with the `menu` role owns `tr` elements with implicit `row` role. The `row` role is not one of the [required owned elements][] for `menu`. In addition, the `tr` element with implicit `row` role owns `td` elements with explicit `menuitem` roles. The `menuitem` role is not one of the [required owned elements][] for `row`.
+
+```html
+<table role="menu">
+	<tr>
+		<td role="menuitem">Item 1</td>
+		<td role="menuitem">Item 2</td>
+		<td role="menuitem">Item 3</td>
+	</tr>
+</table>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -287,3 +339,4 @@ This element with the `menu` role has an `aria-busy` attribute set to `true`.
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [html or svg element]: #namespaced-element
 [inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'DOM Definition of Inclusive Ancestor'
+[implicit wai-aria semantics]: https://w3c.github.io/aria/#implicit_semantics

@@ -4,7 +4,7 @@ name: ARIA required owned elements
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that an element with an explicit semantic role has at least one of its required owned elements.
+  This rule checks that an element with a semantic role has at least one of its required owned elements.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -161,7 +161,7 @@ The element `select` with an implicit `listbox` role owns elements `option` with
 </select>
 ```
 
-#### Passed Example 8
+#### Passed Example 9
 
 The element `table` with an implicit `table` role owns an element `tr` with implicit `row` role that owns elements `td` with implicit `cell` roles.
 
@@ -339,4 +339,3 @@ This element with the `menu` role has an `aria-busy` attribute set to `true`.
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [html or svg element]: #namespaced-element
 [inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'DOM Definition of Inclusive Ancestor'
-[implicit wai-aria semantics]: https://w3c.github.io/aria/#implicit_semantics

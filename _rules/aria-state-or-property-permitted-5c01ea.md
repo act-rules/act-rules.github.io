@@ -238,7 +238,7 @@ The `aria-label` property is [prohibited][] for an element with a `paragraph` ro
 This `div` element has no [WAI-ARIA state or property][].
 
 ```html
-<div role="region">A region of content</div>
+<div role="group">A group of content</div>
 ```
 
 #### Inapplicable Example 2

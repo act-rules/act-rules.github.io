@@ -34,7 +34,7 @@ Each target element has an [accessible name][] that is not empty (`""`), nor jus
 
 ## Background
 
-This rule is only applicable to `summary` elements that the browser will use as controls for a `details` element. While this rule is not applicable to `summary` elements with an [explicit semantic role][], most of the time these likely do still require an [accessible name][]. This is covered by other rules, such as the [Button has non-empty accessible name][97a4e1].
+This rule is only applicable to `summary` elements that the browser will use as controls for a `details` element. While this rule is not applicable to `summary` elements with an [explicit role][], most of the time these likely do still require an [accessible name][]. This is covered by other rules, such as the [Button has non-empty accessible name][97a4e1].
 
 If the `summary` element is not included in the accessibility tree, but is still included in sequential focus navigation, this can result in accessibility issues not tested by this rule. This is covered under [Element with aria-hidden has no content in sequential focus navigation][6cfa84].
 

@@ -180,7 +180,7 @@ The element `table` with an implicit `table` role owns an element `tr` with impl
 The element `table` with an explicit `treegrid` role owns an element `tr` with implicit `row` role that in turn owns elements `td` with implicit `gridcell` roles.
 
 ```html
-<table role="treegrid">
+<table role="treegrid" aria-label="a test grid">
 	<tr>
 		<td>Item 1</td>
 		<td>Item 2</td>
@@ -280,7 +280,7 @@ This element with the `list` role owns an element with the `listitem` role and a
 This element with the `menu` role owns `option` elements with implicit `option` role. The `option` role is not one of the [required owned elements][] for `menu`.
 
 ```html
-<select role="menu">
+<select role="menu" aria-label="a test menu">
 	<option>Item 1</option>
 	<option>Item 2</option>
 	<option>Item 3</option>
@@ -289,14 +289,14 @@ This element with the `menu` role owns `option` elements with implicit `option` 
 
 #### Failed Example 9
 
-This element with the `menu` role owns `tr` elements with implicit `row` role. The `row` role is not one of the [required owned elements][] for `menu`. In addition, the `tr` element with implicit `row` role owns `td` elements with explicit `menuitem` roles. The `menuitem` role is not one of the [required owned elements][] for `row`.
+This element with the `menu` role owns `tr` elements with an explicit `list` role. The `list` role is not one of the [required owned elements][] for `menu`. In addition, the `tr` element with the explicit `list` role owns `td` elements with explicit `menuitem` roles. The `menuitem` role is not one of the [required owned elements][] for `list`.
 
 ```html
-<table role="menu">
-	<tr>
-		<td role="menuitem">Item 1</td>
-		<td role="menuitem">Item 2</td>
-		<td role="menuitem">Item 3</td>
+<table role="menu" aria-label="a test table" aria-activedescendant="item1" tabindex="0">
+	<tr role="list">
+		<td id="item1" role="menuitem">Item 1</td>
+		<td id="item2" role="menuitem">Item 2</td>
+		<td id="item3" role="menuitem">Item 3</td>
 	</tr>
 </table>
 ```

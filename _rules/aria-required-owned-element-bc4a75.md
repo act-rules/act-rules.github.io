@@ -163,10 +163,24 @@ The element `select` with an implicit `listbox` role owns elements `option` with
 
 #### Passed Example 9
 
-The element `table` with an implicit `table` role owns an element `tr` with implicit `row` role that owns elements `td` with implicit `cell` roles.
+The element `table` with an implicit `table` role owns an element `tr` with implicit `row` role that in turn owns elements `td` with implicit `cell` roles.
 
 ```html
 <table>
+	<tr>
+		<td>Item 1</td>
+		<td>Item 2</td>
+		<td>Item 3</td>
+	</tr>
+</table>
+```
+
+#### Passed Example 10
+
+The element `table` with an explicit `treegrid` role owns an element `tr` with implicit `row` role that in turn owns elements `td` with implicit `gridcell` roles.
+
+```html
+<table role="treegrid">
 	<tr>
 		<td>Item 1</td>
 		<td>Item 2</td>

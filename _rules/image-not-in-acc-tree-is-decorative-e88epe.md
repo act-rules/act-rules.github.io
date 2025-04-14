@@ -64,7 +64,7 @@ Each test target is [purely decorative][].
 
 According to the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) specification, the `role="graphics-document"` requires an accessible name. Additionally, the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/) set the default ARIA role for SVG elements to `graphics-document`, and [ARIA in HTML](https://www.w3.org/TR/html-aria/) maps the `<svg>` element to the same role.
 
-However, browser implementations vary. Some browsers expose `<svg>` elements without accessible names as images without alternative text. To address this, in the passed and inapplicable examples where the `<svg>` element is intended to be purely decorative, the role="none" attribute has been added.
+However, browser implementations vary. Some browsers expose `<svg>` elements without accessible names as images without alternative text. To address this, in the passed and inapplicable examples where the `<svg>` element is intended to be purely decorative, the `role="none"` attribute has been added.
 
 ### Bibliography
 

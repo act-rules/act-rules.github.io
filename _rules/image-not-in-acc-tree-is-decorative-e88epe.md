@@ -104,7 +104,7 @@ This `img` element that is ignored by assistive technologies because it has an [
 
 #### Passed Example 4
 
-This `svg` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to gurantee its presentational role.
+This `svg` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to guarantee its presentational role.
 
 ```html
 <p>Happy new year!</p>
@@ -226,7 +226,7 @@ This `img` element is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 4
 
-This `svg` element is ignored because it is a child of a link that provides its [accessible name][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to gurantee its presentational role.
+This `svg` element is ignored because it is a child of a link that provides its [accessible name][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to guarantee its presentational role.
 
 ```html
 <a href="https://example.org" aria-label="SVG star">

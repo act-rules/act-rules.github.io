@@ -62,7 +62,9 @@ Each test target is [purely decorative][].
 
 ### Accessibility Support
 
-There are no accessibility support issues known.
+According to the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/) specification, the `role="graphics-document"` requires an accessible name. Additionally, the [SVG Accessibility API Mappings](https://www.w3.org/TR/svg-aam-1.0/) set the default ARIA role for SVG elements to `graphics-document`, and [ARIA in HTML](https://www.w3.org/TR/html-aria/) maps the `<svg>` element to the same role.
+
+However, browser implementations vary. Some browsers expose `<svg>` elements without accessible names as images without alternative text. To address this, in the passed and inapplicable examples where the `<svg>` element is intended to be purely decorative, the role="none" attribute has been added.
 
 ### Bibliography
 
@@ -102,11 +104,11 @@ This `img` element that is ignored by assistive technologies because it has an [
 
 #### Passed Example 4
 
-This `svg` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][].
+This `svg` element that is ignored by assistive technologies because it has no attribute that would give it an [accessible name][] is [purely decorative][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to gurantee its presentational role.
 
 ```html
 <p>Happy new year!</p>
-<svg height="200" xmlns="http://www.w3.org/2000/svg">
+<svg height="200" xmlns="http://www.w3.org/2000/svg" role="none">
 	<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 </svg>
 ```
@@ -224,11 +226,11 @@ This `img` element is not [visible][] because it is positioned off screen.
 
 #### Inapplicable Example 4
 
-This `svg` element is ignored because it is a child of a link that provides its [accessible name][].
+This `svg` element is ignored because it is a child of a link that provides its [accessible name][]. Because some browsers expose the `svg` element with the `image` role, the `role="none"` attribute has been added to gurantee its presentational role.
 
 ```html
 <a href="https://example.org" aria-label="SVG star">
-	<svg height="200" xmlns="http://www.w3.org/2000/svg">
+	<svg height="200" xmlns="http://www.w3.org/2000/svg" role="none">
 		<polygon points="100,10 40,180 190,60 10,60 160,180" fill="yellow" />
 	</svg>
 </a>

@@ -126,7 +126,7 @@ The `aria-checked` [state][] is [required][] for the [semantic][semantic role] `
 
 #### Passed Example 6
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
 <div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
@@ -134,18 +134,18 @@ The `aria-controls` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
+<div role="combobox" aria-expanded="true" aria-controls="id1">My combobox</div>
 ```
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with `undefined` value is valid still applicable to this rule.
 
 ```html
-<div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
+<div role="combobox" aria-expanded="undefined" aria-controls="id1">My combobox</div>
 ```
 
 #### Passed Example 9
@@ -181,8 +181,13 @@ This `div` element has an [explicit role][] of `switch`; the `aria-required` [pr
 ```html
 <div role="switch" aria-checked="false" tabindex="0" aria-required="true">
 	<span class="label">Notifications</span>
-	<span class="switch" style="position: relative; display: inline-block; top: 6px; border: 2px solid black; border-radius: 12px; height: 20px; width: 40px;">
-		<span style="position: absolute; top: 2px; left: 2px; display: inline-block; border: 2px solid black; border-radius: 8px; height: 12px; width: 12px; background: black;"></span>
+	<span
+		class="switch"
+		style="position: relative; display: inline-block; top: 6px; border: 2px solid black; border-radius: 12px; height: 20px; width: 40px;"
+	>
+		<span
+			style="position: absolute; top: 2px; left: 2px; display: inline-block; border: 2px solid black; border-radius: 8px; height: 12px; width: 12px; background: black;"
+		></span>
 	</span>
 	<span class="on" aria-hidden="true" style="display: none;">On</span>
 	<span class="off" aria-hidden="true">Off</span>

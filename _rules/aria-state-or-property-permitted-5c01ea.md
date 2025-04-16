@@ -142,7 +142,7 @@ The `aria-expanded` [property][] is [required][] for the [semantic][semantic rol
 
 #### Passed Example 8
 
-The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with `undefined` value is valid still applicable to this rule.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with `undefined` value is still applicable to this rule.
 
 ```html
 <div role="combobox" aria-expanded="undefined" aria-controls="id1">My combobox</div>

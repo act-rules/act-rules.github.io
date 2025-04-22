@@ -405,7 +405,7 @@ The `table` is not [included in the accessibility tree][].
 This `table` doesn't have a role of `table`, `grid` or `treegrid`.
 
 ```html
-<table role="region">
+<table role="heading" aria-level="1">
 	<td id="self" headers="self">World</td>
 </table>
 ```

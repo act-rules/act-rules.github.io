@@ -196,7 +196,7 @@ This `div` does not have a [semantic role](#semantic-role).
 This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
 
 ```html
-<input type="checkbox" role="checkbox" />
+<input type="checkbox" role="checkbox" aria-label="Checkbox name"/>
 ```
 
 #### Inapplicable Example 3

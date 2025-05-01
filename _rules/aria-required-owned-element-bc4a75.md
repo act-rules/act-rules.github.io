@@ -250,7 +250,7 @@ This `ul` element does not have an [explicit semantic role][].
 This element with the `progressbar` role does not need [required owned elements][].
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Completion">20 %</div>
 ```
 
 #### Inapplicable Example 4

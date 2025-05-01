@@ -137,7 +137,7 @@ The `aria-expanded` [property][] is [required][] for the [semantic][semantic rol
 The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-expanded="true" aria-controls="id1">My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls="id1">My combobox</div>
 ```
 
 #### Passed Example 8

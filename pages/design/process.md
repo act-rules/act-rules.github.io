@@ -201,7 +201,7 @@ Published rules
 
 - A rule has:
   - received 3 approvals from 3 different organizations,
-  - successfully survived its 2 week Call for Review (if applicable),
+  - went through Call for Review (if applicable), and change requests have been resolved
   - been merged and published as a proposed rule in the WAI website at https://www.w3.org/WAI/standards-guidelines/act/rules/ (ACT Rules on the WAI website are generally updated every Tuesday)
 
 ## Rejected

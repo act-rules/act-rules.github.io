@@ -290,3 +290,4 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [viewport size]: #viewport-size
 [visible]: #visible
 [white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
+[sc144]: https://www.w3.org/TR/WCAG22/#resize-text

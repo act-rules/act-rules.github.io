@@ -131,7 +131,7 @@ The `aria-checked` [state][] is [required][] for the [semantic][semantic role] `
 The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
+<div role="combobox" aria-controls="id1" aria-expanded="false" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 7
@@ -139,7 +139,7 @@ The `aria-expanded` [property][] is [required][] for the [semantic][semantic rol
 The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-expanded="false" aria-controls="id1">My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls="id1" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 8
@@ -147,7 +147,7 @@ The `aria-expanded` [property][] is [required][] for the [semantic][semantic rol
 The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with `undefined` value are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-expanded="undefined" aria-controls="id1">My combobox</div>
+<div role="combobox" aria-expanded="undefined" aria-controls="id1" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 9

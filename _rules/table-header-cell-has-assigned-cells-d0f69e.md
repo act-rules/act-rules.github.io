@@ -80,7 +80,7 @@ This `th` element has an assigned `td` element.
 Each of the 2 `span` elements with role of `columnheader` has assigned `span` elements with a role of `cell`.
 
 ```html
-<div role="table">
+<div role="table" aria-label="Temperatures">
 	<div role="rowgroup">
 		<div role="row">
 			<span role="columnheader">Month</span>
@@ -125,7 +125,7 @@ Each of the 2 `th` elements has an assigned `td` element because this `td` eleme
 Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
 ```html
-<table role="grid">
+<table role="grid" aria-label="Meal times">
 	<thead>
 		<tr>
 			<td></td>

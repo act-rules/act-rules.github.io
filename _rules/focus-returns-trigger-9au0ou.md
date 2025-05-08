@@ -26,11 +26,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any element with a semantic role of modal dialog or alertdialog that is not visible.
+This rule applies when focus is trapped within a region activated by a trigger control that is dismissible.
 
 ## Expectation
 
-The element that triggers the target element to become visible is the same element that receives focus when the target element stops being visible.
+The element that triggers the target element to become visible, is still present in the screen behind the triggered content and is the same element that receives focus when the target element stops being visible.
 
 ## Background
 
@@ -40,7 +40,7 @@ There are no assumptions.
 
 ### Accessibility Support
 
-There are no accessibility support issues known.
+Some assistive technologies on known browsers still exhibit inconsistencies. Specifically, if an element is removed from the accessibility tree after being activated (e.g., a close button), and focus is moved via JavaScript to an element that is not inherently operable (e.g., a button works, but a div with tabindex="-1" may not), the assistive technology might automatically shift focus to the closest visible element, regardless of the intended JavaScript behavior.
 
 ### Bibliography
 

@@ -301,6 +301,17 @@ This element with the `menu` role owns `tr` elements with an explicit `list` rol
 </table>
 ```
 
+#### Failed Example 10
+
+This element with the implicit `list` role owns an element with the implicit `generic` role. The `generic` role is not one of the [required owned elements][] for `list`. Note that this example is for demonstration purpose only because it's not a valid HTML 5 structure.
+
+```html
+<ul>
+	<div></div>
+	<div></div>
+</ul>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

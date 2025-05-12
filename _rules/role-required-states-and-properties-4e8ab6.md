@@ -12,7 +12,6 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   aria12:requiredState:
-    title: ARIA 1.2, 5.2.2 Required States and Properties
     forConformance: true
     failed: not satisfied
     passed: satisfied

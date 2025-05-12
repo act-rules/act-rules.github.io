@@ -133,7 +133,7 @@ function validateAriaProperties(accessibilityRequirements) {
 		expect(aria12Key.split(':')[1]).toBeTruthy()
 
 		// Check that aria object has the required properties
-		const requiredAriaProps = ['title', 'forConformance', 'failed', 'passed']
+		const requiredAriaProps = ['title', 'forConformance', 'failed', 'passed', 'inapplicable']
 		test.each(requiredAriaProps)('has required property `%s`', requiredProp => {
 			expect(accessibilityRequirements[aria12Key]).toHaveProperty(requiredProp)
 		})

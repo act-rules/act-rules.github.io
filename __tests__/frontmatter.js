@@ -1,7 +1,7 @@
 const describeRule = require('../test-utils/describe-rule')
 const describePage = require('../test-utils/describe-page')
 
-describe('frontmatter', () => {
+describe.only('frontmatter', () => {
 	/**
 	 * Rules
 	 */
@@ -90,6 +90,7 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	 * Check if `accessibility_requirements` (if any) has expected values
 	 */
 	if (accessibility_requirements) {
+		validateAriaProperties(accessibility_requirements)
 		/**
 		 * The below check the `values` for every `key - value` pair of accessibility requirements
 		 */
@@ -122,4 +123,19 @@ function validateGlossaryFrontmatter({ frontmatter }) {
 	test.each(requiredProps)('has required property `%s`', requiredProp => {
 		expect(frontmatter).toHaveProperty(requiredProp)
 	})
+}
+
+function validateAriaProperties(accessibilityRequirements) {
+	const aria12Key = Object.keys(accessibilityRequirements).find(key => key.startsWith('aria12:'))
+
+	if (aria12Key) {
+		// Check that aria key has an anchor name
+		expect(aria12Key.split(':')[1]).toBeTruthy()
+
+		// Check that aria object has the required properties
+		const requiredAriaProps = ['title', 'forConformance', 'failed', 'passed']
+		test.each(requiredAriaProps)('has required property `%s`', requiredProp => {
+			expect(accessibilityRequirements[aria12Key]).toHaveProperty(requiredProp)
+		})
+	}
 }

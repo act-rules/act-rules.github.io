@@ -65,7 +65,7 @@ This `article` element has an `aria-atomic` attribute which is defined in [WAI-A
 This `div` element with a role of `dialog` has an `aria-modal` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
-<div role="dialog" aria-modal="true">Contains modal content...</div>
+<div role="dialog" aria-modal="true" aria-label="Modal title">Contains modal content...</div>
 ```
 
 #### Passed Example 3

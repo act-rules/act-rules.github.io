@@ -80,7 +80,7 @@ This element with the `list` role only owns elements with the `listitem` role. T
 This element with the `grid` role only owns elements with the `row` role, and the element with the `row` role only owns elements with the `gridcell` role. The `row` role is one of the [required owned elements][] for `grid`, and `gridcell` is one of the [required owned elements][] for `row`.
 
 ```html
-<table role="grid">
+<table role="grid" aria-label="grid name">
 	<tr role="row">
 		<td role="gridcell">Item 1</td>
 	</tr>
@@ -250,7 +250,7 @@ This `ul` element does not have an [explicit semantic role][].
 This element with the `progressbar` role does not need [required owned elements][].
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Completion">20 %</div>
 ```
 
 #### Inapplicable Example 4

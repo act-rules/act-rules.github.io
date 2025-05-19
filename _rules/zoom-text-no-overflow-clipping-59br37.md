@@ -86,7 +86,7 @@ This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 
 #### Passed Example 2
 
-This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. A link to a full version of the poem is also provided.
+This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. This fulfills expectation 1. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px;">
@@ -98,7 +98,7 @@ This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` a
 
 #### Passed Example 3
 
-This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. A link to a full version of the poem is also provided.
+This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. This fulfills expectation 2. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <style>
@@ -290,3 +290,4 @@ This [text node][] with the text "Web Content Accessibility Guidelines 2.1" is f
 [viewport size]: #viewport-size
 [visible]: #visible
 [white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
+[sc144]: https://www.w3.org/TR/WCAG22/#resize-text

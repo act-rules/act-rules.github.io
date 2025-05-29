@@ -1,7 +1,7 @@
 const describeRule = require('../test-utils/describe-rule')
 const describePage = require('../test-utils/describe-page')
 
-describe.only('frontmatter', () => {
+describe('frontmatter', () => {
 	/**
 	 * Rules
 	 */

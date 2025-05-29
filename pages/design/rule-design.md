@@ -113,17 +113,17 @@ The applicability of a rule must be unambiguous and should be written using obje
 
 With the development of ACT Rules format 1.1, subjectivity is now allowed in both the Applicability and the Expectation. However, depending on the rule, it can be difficult to know if a subjective phrase belongs in the Applicability or the Expectation. While we will continue to rely on the best judgment of the rule authors, most S.C. contain language suggesting where the subjectivity be placed. Lastly, at the bottom of this section, we provide some concrete examples of each of the cases below to help illustrate our point. 
 
-When determining the placement of subjectivity in an ACT rule, the main question to answer is whether the S.C. would apply at all to the given content or if the content would satisfy the criteria via a normative exception. For example, 
- - For S.C. 1.4.3 Contrast Minimum, non-text content or text that is not expressing something in human language (like an emoji) is not evaluated by the S.C. and so should not be applicable in an ACT rule for 1.4.3
- - For S.C. 1.4.3 Contrast Minimum, logos are a normative exception to the S.C., so they should be included as a passed exception to the Expectation for an ACT rule testing 1.4.3.
- - For S.C. 2.5.5 Target Size (Enhanced), a link inside of a paragraph of text and a pin on a map would fit the normative exceptions of "Inline" and "Essential" respectively, and so should be included as a passed exception in the Expectation. 
- - For S.C. 3.3.1: Error Identification, a page should not be applicable for an ACT rule until a form field error indicator exists, thus the presence of a form field error indicator should be included in the rule's applicability.
+When determining the placement of subjectivity in an ACT rule, the main question to answer is whether the success criterion would apply at all to the given content or if the content would satisfy the criteria via a normative exception. For example, 
+ - For SC 1.4.3 Contrast Minimum, non-text content or text that is not expressing something in human language (like an emoji) is not evaluated by the success criterion and so should not be applicable in an ACT rule for 1.4.3
+ - For SC 1.4.3 Contrast Minimum, logos are a normative exception to the success criterion, so they should be included as a passed exception to the Expectation for an ACT rule testing 1.4.3.
+ - For SC 2.5.5 Target Size (Enhanced), a link inside of a paragraph of text and a pin on a map would fit the normative exceptions of "Inline" and "Essential" respectively, and so should be included as passed exceptions in the Expectation. 
+ - For SC 3.3.1 Error Identification, a page should not be applicable for an ACT rule until a form field error indicator exists, thus the presence of a form field error indicator should be included in the rule's applicability.
 
-When making these determinations, it maybe helpful to consider the following circumstances:
- - If there was a page with only the content in question, would you expect it to be passed or inapplicable for an ACT rule. Passing would indicate the subjectivity belongs in the Expectation while inapplicable suggests it belongs in the Applicability.
- - Does the formulation of applicability and expectation lead to test cases that pass that should be inapplicable? If so, subjectivity likely needs to be added to the Applicability (possibility moved from the Expectation to the Applicability)
+When making these determinations, it may be helpful to consider the following circumstances:
+ - If a page contained only the specific example, would you expect it to pass or be deemed inapplicable for an ACT rule? Passing would imply the subjectivity belongs in the Expectation, while being inapplicable suggests it belongs in the Applicability.
+ - Does the formulation of applicability and expectation lead to test cases passing when they should be deemed inapplicable? If so, subjectivity likely needs to be added to the Applicability (possibility moved from the Expectation to the Applicability)
 
-As a final reminder, the end goal of allowing subjectivity in the applicability is allow the writing of rules that were previously impossible and to prevent rules from creating passed test cases that are inapplicable to the S.C. the rule is intended to test. 
+As a final reminder, the end goal of allowing subjectivity in the applicability is to allow the creation of rules that were previously impossible and to prevent rules from creating passed examples that are inapplicable to the success criteria the rule is intended to test. 
 
 For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 

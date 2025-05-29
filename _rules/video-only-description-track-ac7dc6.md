@@ -1,6 +1,7 @@
 ---
 id: ac7dc6
 name: Video element visual-only content has description track
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that description tracks that come with non-streaming `video` elements, without audio, are descriptive.
@@ -36,17 +37,17 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 The visual information of each test target is described with a description `track` element that has the same language as the video or the same language as the page.
 
-## Assumptions
-
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
-
-## Accessibility Support
-
-Currently the description track is not supported by most assistive technologies. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
-
 ## Background
 
 Multiple description `track` elements may be useful for different languages, but at least one must match the language of the video or the language of the page.
+
+### Assumptions
+
+This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+
+### Accessibility Support
+
+Currently the description track is not supported by most assistive technologies. Video players may be able to work around the lack of support for the description track by using aria-live but few do this today.
 
 ### Bibliography
 

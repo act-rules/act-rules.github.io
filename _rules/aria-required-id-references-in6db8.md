@@ -1,6 +1,7 @@
 ---
 id: in6db8
 name: ARIA required ID references exist
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that every ID reference required by WAI-ARIA exists
@@ -34,17 +35,17 @@ This rule applies to any `aria-controls` attribute defined on an [HTML element][
 
 Each test target's [attribute value][] is a space-separated list of one or more IDs. At least one of those IDs must match an `id` [attribute value][] in the same [shadow tree][] or, if not within a [shadow tree][], within the same [document][document tree].
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not IDs) while some treat them as case-insensitive.
-
 ## Background
 
 This rule is written specifically for `aria-controls`, because it is the only [ID Reference List][] property that is [required by WAI-ARIA][]. The `aria-controls` property is only required by the `scrollbar` role and by an expanded `combobox`. There are no [ID Reference][] properties that are required by WAI-ARIA for any role.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not IDs) while some treat them as case-insensitive.
 
 ### Bibliography
 
@@ -77,7 +78,7 @@ The `aria-controls` [attribute value][] of this `scrollbar` matches the `id` of 
 The `aria-controls` [attribute value][] of this expanded `combobox` matches the `id` of the `ul` element in the same document.
 
 ```html
-<label for="tag_combo">Tag</label>
+<label for="tag_combo" id="tag_label">Tag</label>
 <input
 	type="text"
 	id="tag_combo"
@@ -86,7 +87,7 @@ The `aria-controls` [attribute value][] of this expanded `combobox` matches the 
 	aria-controls="popup_listbox"
 	aria-activedescendant="selected_option"
 />
-<ul role="listbox" id="popup_listbox">
+<ul role="listbox" id="popup_listbox" aria-labelledby="tag_label">
 	<li role="option">Zebra</li>
 	<li role="option" id="selected_option">Zoom</li>
 </ul>

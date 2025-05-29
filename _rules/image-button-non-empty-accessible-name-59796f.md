@@ -1,6 +1,7 @@
 ---
 id: 59796f
 name: Image button has non-empty accessible name
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each image button element has a non-empty accessible name.
@@ -47,18 +48,18 @@ This rule applies to any `input` element with a `type` [attribute value][] of `i
 
 Each target element has an [accessible name][] that is neither empty (`""`), nor the default name for this element (localized version of "Submit Query").
 
-## Assumptions
+## Background
+
+Unlike for `img` elements, an empty `alt` attribute (`alt=""`) does not make an image button decorative; image buttons have a button role and are therefore exposed as interactive elements. An empty `alt` attribute therefore does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
+
+### Assumptions
 
 - This rule assumes that all image buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
 - This rule assumes that the default name for image buttons ("Submit Query"), as defined by the [HTML Accessibility API Mapping][html aam image button], is never descriptive.
 
-## Accessibility Support
+### Accessibility Support
 
-The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
-
-## Background
-
-Contrarily to `img` elements, an empty `alt` attribute (`alt=""`) does not make an image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first defined attribute, even if the attribute has an empty value. In contrast, some user agents and assistive technologies ignore empty attributes.
 
 ### Related rules
 
@@ -177,6 +178,6 @@ The image button is ignored by assistive technologies because it is not [include
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[attribute value]: #attribute-value:enumerated 'Definition of Attribute Value'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [html aam image button]: https://www.w3.org/TR/html-aam-1.0/#input-type-image 'HTML Accessibility API Mapping, image button'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

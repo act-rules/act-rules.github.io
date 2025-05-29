@@ -12,7 +12,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   using-aria:fourth:
-    title: Using ARIA: Fourth Rule of ARIA Use
+    title: Using ARIA, 2.4 Fourth Rule of ARIA Use
     forConformance: false
     failed: not satisfied
     passed: further testing needed

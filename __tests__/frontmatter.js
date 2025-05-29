@@ -1,7 +1,7 @@
 const describeRule = require('../test-utils/describe-rule')
 const describePage = require('../test-utils/describe-page')
 
-describe('frontmatter', () => {
+describe.only('frontmatter', () => {
 	/**
 	 * Rules
 	 */
@@ -90,22 +90,25 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 	 * Check if `accessibility_requirements` (if any) has expected values
 	 */
 	if (accessibility_requirements) {
-		validateAriaProperties(accessibility_requirements)
 		/**
 		 * The below check the `values` for every `key - value` pair of accessibility requirements
 		 */
-		const accRequirementValues = Object.values(accessibility_requirements)
-		test.each(accRequirementValues)('has expected keys for accessibility requirement: `%p`', accReq => {
-			expect(accReq).not.toBeNull()
-			expect(typeof accReq).toBe('object')
-			const keys = Object.keys(accReq).sort()
+		const accessibilityReqs = Object.entries(accessibility_requirements).map(([key, value]) => ({ key, value }))
+		test.each(accessibilityReqs)('has expected keys for accessibility requirement: `%p`', ({ key, value }) => {
+			expect(value).not.toBeNull()
+			expect(typeof value).toBe('object')
+			const keys = Object.keys(value).sort()
 
 			if (keys.includes('secondary')) {
 				expect(keys.length).toBe(1)
-				expect(typeof accReq.secondary).toBe('string')
+				expect(typeof value.secondary).toBe('string')
 			} else {
+				const requiredProps = ['failed', 'forConformance', 'inapplicable', 'passed']
+				if (!/wcag-technique:.*/.test(key) && !/wcag2\d:.*/.test(key)) {
+					requiredProps.push('title')
+				}
 				expect(keys.length).toBeGreaterThanOrEqual(4)
-				expect(keys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed'])
+				expect(keys).toIncludeAllMembers(requiredProps)
 			}
 		})
 	}
@@ -123,19 +126,4 @@ function validateGlossaryFrontmatter({ frontmatter }) {
 	test.each(requiredProps)('has required property `%s`', requiredProp => {
 		expect(frontmatter).toHaveProperty(requiredProp)
 	})
-}
-
-function validateAriaProperties(accessibilityRequirements) {
-	const aria12Key = Object.keys(accessibilityRequirements).find(key => key.startsWith('aria12:'))
-
-	if (aria12Key) {
-		// Check that aria key has an anchor name
-		expect(aria12Key.split(':')[1]).toBeTruthy()
-
-		// Check that aria object has the required properties
-		const requiredAriaProps = ['title', 'forConformance', 'failed', 'passed', 'inapplicable']
-		test.each(requiredAriaProps)('has required property `%s`', requiredProp => {
-			expect(accessibilityRequirements[aria12Key]).toHaveProperty(requiredProp)
-		})
-	}
 }

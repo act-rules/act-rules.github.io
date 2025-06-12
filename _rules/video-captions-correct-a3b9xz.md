@@ -11,11 +11,6 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  wcag20:1.2.4: # Captions (Live) (AA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
   wcag-technique:F8: # Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects
     forConformance: false
     failed: not satisfied

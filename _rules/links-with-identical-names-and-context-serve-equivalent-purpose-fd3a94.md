@@ -531,7 +531,7 @@ These two HTML `a` elements have the same [accessible name][], the same [accessi
 <div><a href="https://www.w3.org/International/">Read more</a> about the W3C internationalization</div>
 ```
 
-#### Inapplicable Example 7
+#### Inapplicable Example 8
 
 These two HTML `a` elements have the same [accessible name][] and [context][programmatically determined link context], but the second one is not [included in the accessibility tree][included in the accessibility tree].
 

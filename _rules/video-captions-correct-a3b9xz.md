@@ -49,6 +49,8 @@ For each test target, speech and non-speech audio information that is not convey
 
 ### Assumptions
 
+This rule assumes that the [non-streaming](#non-streaming-media-element) video is not a media alternative for text.
+
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
 ### Accessibility Support

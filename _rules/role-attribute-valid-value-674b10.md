@@ -55,7 +55,7 @@ There are no assumptions.
 
 ### Accessibility Support
 
-Older browsers do not support more than one token in the value for a role attribute. If multiple values are used in the role attribute, the attribute is ignored in these browsers.
+There are no accessibility support issues known.
 
 ### Bibliography
 
@@ -167,7 +167,7 @@ This `role` attribute is empty ("").
 This `role` attribute is only [ASCII whitespace][].
 
 ```html
-<input type="text" role=" " />
+<input type="text" role=" " aria-label="field name"/>
 ```
 
 #### Inapplicable Example 5

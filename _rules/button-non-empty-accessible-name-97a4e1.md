@@ -39,11 +39,11 @@ This rule considers an exception for "image buttons" (i.e., `input` elements wit
 
 - The rule assumes that all buttons are [user interface components as defined by WCAG 2](https://www.w3.org/TR/WCAG22/#dfn-user-interface-components).
 
+- Some elements have a role of `button` and a default accessible name defined by the [HTML Accessibility API Mapping][html aam input button], for example `input` elements whose `type` [attribute value][] is either `submit` or `reset`. This rule considers that these default names can be descriptive and therefore does not fail them.
+
 ### Accessibility Support
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `button` and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
-
-- Some elements have a role of `button` and a default accessible name defined by the [HTML Accessibility API Mapping][html aam input button], for example `input` elements whose `type` [attribute value][] is either `submit` or `reset`. This rule considers that these default names can be descriptive and therefore does not fail them.
 
 ### Related rules
 
@@ -226,7 +226,7 @@ This `button` element has an [explicit role][] of `none`; it is not [focusable][
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [explicit role]: #explicit-role 'Definition of explicit role'
 [focusable]: #focusable 'Definition of focusable'
-[html aam input button]: https://www.w3.org/TR/html-aam-1.0/#input-type-button-input-type-submit-and-input-type-reset 'HTML Accessibility API Mapping, reset and submit buttons'
+[html aam input button]: https://www.w3.org/TR/html-aam-1.0/#input-type-button-input-type-submit-and-input-type-reset-accessible-name-computation 'HTML Accessibility API Mapping, input button, input, and reset accessible name'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

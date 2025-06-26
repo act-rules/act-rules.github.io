@@ -7,7 +7,7 @@ description: |
   This rule checks that each heading has a non-empty accessible name.
 accessibility_requirements:
   aria12:namecalculation:
-    title: ARIA 1.2,5.2.8 Accessible Name Calculation
+    title: ARIA 1.2, 5.2.8 Accessible Name Calculation
     forConformance: true
     failed: not satisfied
     passed: further testing needed

@@ -11,7 +11,8 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  aria12:requiredState: # 5.2.2 Required States and Properties
+  aria12:requiredState:
+    title: ARIA 1.2, 5.2.2 Required States and Properties
     forConformance: true
     failed: not satisfied
     passed: satisfied
@@ -119,9 +120,9 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 
 ```html
-<label for="tag_combo">Tag</label>
-<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox" />
-<ul role="listbox" id="popup_listbox">
+<label for="tag_combo" id="tag_label">Tag</label>
+<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox"/>
+<ul role="listbox" id="popup_listbox" aria-labelledby="tag_label">
 	<li role="option">Zebra</li>
 	<li role="option" id="selected_option">Zoom</li>
 </ul>
@@ -181,19 +182,6 @@ This `combobox` does not have the required `aria-expanded` property. Prior to [W
 </ul>
 ```
 
-#### Failed Example 6
-
-This `combobox` uses `aria-owns` instead of using the required `aria-controls` property.
-
-```html
-<label for="tag_combo">Tag</label>
-<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-owns="popup_listbox" />
-<ul role="listbox" id="popup_listbox">
-	<li role="option">Zebra</li>
-	<li role="option" id="selected_option">Zoom</li>
-</ul>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -209,7 +197,7 @@ This `div` does not have a [semantic role](#semantic-role).
 This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
 
 ```html
-<input type="checkbox" role="checkbox" />
+<input type="checkbox" role="checkbox" aria-label="Checkbox name"/>
 ```
 
 #### Inapplicable Example 3

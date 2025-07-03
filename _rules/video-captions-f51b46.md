@@ -44,7 +44,7 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-For each test target, [captions](https://www.w3.org/TR/WCAG22/#dfn-captions) are provided.
+For each test target, [captions](https://www.w3.org/TR/WCAG22/#dfn-captions) are provided for audio information that is not conveyed visually in the video.
 
 **Note:** Captions can be either embedded in the video file itself or can be made available trough a separate track.
 

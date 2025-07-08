@@ -4,7 +4,7 @@ name: Orientation of the page is not restricted using CSS transforms
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms
+  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms.
 accessibility_requirements:
   wcag21:1.3.4: # Orientation
     forConformance: true
@@ -198,7 +198,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 #### Failed Example 3
 
-This page appears rotated at a slight angle of 2.5 degrees for stylistic purposes, but is locked in portrait orientation by applying a 92.5 degree rotation when in landscape orientation:
+This page appears rotated at a slight angle of 2.5 degrees for stylistic purposes, but is locked in `portrait` orientation by applying a 92.5 degree rotation when in `landscape` orientation:
 
 ```html
 <html lang="en">
@@ -300,7 +300,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	<head>
 		<title>Page with some content</title>
 		<style>
-			@media (orientation: lanscape) {
+			@media (orientation: landscape) {
 				body {
 					transform: rotateZ(0, 0, 1, 270deg);
 				}

@@ -1,6 +1,7 @@
 ---
 id: 5f99a7
 name: ARIA attribute is defined in WAI-ARIA
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that each `aria-` attribute specified is defined in ARIA 1.2.
@@ -26,17 +27,17 @@ This rule applies to any attribute that starts with `aria-`.
 
 Each target attribute is defined in [WAI-ARIA Specifications][].
 
-## Assumptions
-
-There are no assumptions.
-
-## Accessibility Support
-
-There are no accessibility support issues known.
-
 ## Background
 
 The presence of unknown ARIA attributes is often the result of a typo or other developer error. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
 
 ### Bibliography
 
@@ -64,7 +65,7 @@ This `article` element has an `aria-atomic` attribute which is defined in [WAI-A
 This `div` element with a role of `dialog` has an `aria-modal` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
-<div role="dialog" aria-modal="true">Contains modal content...</div>
+<div role="dialog" aria-modal="true" aria-label="Modal title">Contains modal content...</div>
 ```
 
 #### Passed Example 3

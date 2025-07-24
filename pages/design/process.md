@@ -1,5 +1,5 @@
 ---
-title: Process
+title: ACT-Rules CG Process
 ---
 
 ## Overview of process/workflow in ACT Rules Community Group:
@@ -14,7 +14,7 @@ title: Process
 
 (see workflow on the board here: https://github.com/act-rules/act-rules.github.io/projects/5)
 
-**Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls. This document however, is still work in progress.
+**Note:** The steps in the process, as outlined above, are agreed upon by the ACT Rules Community Group on teleconference calls.
 
 ## Ideas looking for initial approvals
 
@@ -38,11 +38,11 @@ The purpose of this stage is to avoid that people spend a huge amount of time on
 
 #### Rule author's job for this stage:
 
-- Creating the pull request (PR) for the rule already at this stage is recommended, but for content of the rule it should be enough to have e.g. a title, a description and success criteria listed, for reviewers to be able to evaluate the idea for the rule. Creating the rule as a pull request already here allows for keeping the discussion of the rule in one place. However, if a rule writer prefers using issues at this stage, this is also allowed.
+- Creating the pull request (PR) for the rule already at this stage is recommended, but for content of the rule it should be enough to have e.g. a title, a description and accessibility requirements listed, for reviewers to be able to evaluate the idea for the rule. Creating the rule as a pull request already here allows for keeping the discussion of the rule in one place. However, if a rule writer prefers using issues at this stage, this is also allowed.
 
 #### Reviewer's job for this stage:
 
-- Focus on whether the rule is a valid test for the accessibility requirements (WCAG success criteria) that it lists.
+- Focus on whether the rule is a valid test for the accessibility requirements (e.g. WCAG success criteria) that it lists.
 - Focus on whether you can agree to the general concept of the rule, or if the idea needs to be tweaked or rejected all together.
 - Be honest about your concerns, since rejecting a rule at this point will save a lot of resources compared to rejecting it at the Call for Review later.
 
@@ -83,7 +83,7 @@ Rule writing
 
 ### Passes this stage when:
 
-- There are no open comments from reviewers.
+- There are no open comments from reviewers to be addressed.
 
 ### Fails this stage and moves back a stage to "To Do" when:
 
@@ -127,7 +127,7 @@ Rules that have been fixed up by the author and are ready for review again, aimi
 #### Reviewer's job for this stage:
 
 - Review the rule thoroughly.
-- Use the [Definition of Done](https://act-rules.github.io/pages/design/definition-of-done/) as a checklist for the review.
+- Use the [Definition of Done](https://github.com/act-rules/act-rules.github.io/blob/develop/pages/design/definition-of-done.md) as a checklist for the review.
 - If you consider the rule to be:
   - ... ready for publication --> Use "Approve" status
   - ... in need of changes, big or small (even if you didn't do a full review) --> Use "Request changes" status (and make comments)
@@ -150,9 +150,9 @@ This stage was formerly called Final Call or Call for Consensus (CFC)
 #### Changes that do require a "Call for Review"
 
 Substantial changes, that require a "Call for Review", are in general changes that can affect the outcome of a rule.
-This includes, but might not be limited to changes that changes, extends or limits the scope of what is considered for these sections:
+This includes, but might not be limited to modifications that change, extend, or limit the scope of what is considered for these sections:
 
-- Accessibility Requirements (success criteria)
+- Accessibility Requirements (e.g. success criteria)
 - Applicability
 - Expectations
 - Test cases (Passed/Failed/Inapplicable)
@@ -193,15 +193,18 @@ If this happens, a new "Call for Review" should be launched after the first one.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
 - Keep up to date on Calls for Review using this list: https://github.com/act-rules/act-rules.github.io/issues/461
 
-### Done
+## Done
 
 Published rules
 
 ### Enters this stage when:
 
-- A rule has received 3 approvals from 3 different organizations and successfully survived its 2 week Call for Review (if applicable), and has been merged and is now shown on rules overview on the website: https://act-rules.github.io/rules/ (might take a few minutes to update after merge).
+- A rule has:
+  - received 3 approvals from 3 different organizations,
+  - went through Call for Review (if applicable), and change requests have been resolved
+  - been merged and published as a proposed rule in the WAI website at https://www.w3.org/WAI/standards-guidelines/act/rules/ (ACT Rules on the WAI website are generally updated every Tuesday)
 
-### Rejected
+## Rejected
 
 Rules that have been rejected due to different reasons.
 

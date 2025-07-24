@@ -72,3 +72,6 @@ yarn.lock
 
 # Tmp build directory
 wcag-act-rules-tmp/
+
+# Local Netlify folder
+.netlify

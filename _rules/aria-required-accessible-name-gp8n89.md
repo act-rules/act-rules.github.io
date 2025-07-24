@@ -109,24 +109,13 @@ The `div` element with role `checkbox` has an [accessible name][] provided thank
 
 #### Passed Example 5
 
-The `div` element with role `dialog` has an [accessible name][] provided by the `aria-labelledby` attribute.
-
-```html
-<div role="dialog" aria-modal="true" tabindex="-1" aria-labelledby="pass-terms">
-  <h1 id="pass-terms">Terms</h1>
-  <p>These are our terms.</p>
-</div>
-```
-
-#### Passed Example 6
-
 The `div` element with role `heading` has an [accessible name][] provided by its content.
 
 ```html
   <div role="heading" aria-level="1">Terms</div>
 ```
 
-#### Passed Example 7
+#### Passed Example 6
 
 This `div` element with role `heading` is not [visible][], but is still [included in the accessibility tree][]. It has a non-empty [accessible name][] provided by its content.
 
@@ -134,7 +123,7 @@ This `div` element with role `heading` is not [visible][], but is still [include
 <div role="heading" aria-level="1" style="position: absolute; left: -9999px">ACT rules</div>
 ```
 
-#### Passed Example 8
+#### Passed Example 7
 
 The `div` element with role `link` has an [accessible name][] provided by its content.
 
@@ -181,33 +170,13 @@ The `div` element with role `checkbox` doesn't have an [accessible name][].
 
 #### Failed Example 5
 
-The `dialog` role accepts an [accessible name][] only from the author and not from its content. Therefore, the `div` element with role `dialog` doesn't have an [accessible name][].
-
-```html
-<div role="dialog" aria-modal="true" tabindex="-1">
-  <h1>Terms</h1>
-  <p>These are our terms.</p>
-</div>
-```
-
-#### Failed Example 6
-
 The `div` element with role `heading` has an empty [accessible name][] due to the `display: none` CSS property set to its content.
 
 ```html
   <div role="heading" aria-level="1"><span style="display: none">Terms</span></div>
 ```
 
-#### Failed Example 7
-
-The `button` element has an empty [accessible name][] given by its `aria-labelledby` attribute.
-
-```html
-<span id="fail-heading"></span>
-<button aria-labelledby="fail-heading">Submit</button>
-```
-
-#### Failed Example 8
+#### Failed Example 6
 
 The `div` element with role `button` has an empty [accessible name][] because the `value` attribute does not count in the computation of the [accessible name][].
 
@@ -215,7 +184,7 @@ The `div` element with role `button` has an empty [accessible name][] because th
 <div role="button" value="test"></div>
 ```
 
-#### Failed Example 9
+#### Failed Example 7
 
 This `div` element with role `button` is not [visible][], but is still [included in the accessibility tree][]. It doesn't have an [accessible name][], therefore failing the rule.
 
@@ -223,7 +192,7 @@ This `div` element with role `button` is not [visible][], but is still [included
 <div role="button" style="position: absolute; left: -9999px" tabindex="0"></div>
 ```
 
-#### Failed Example 10
+#### Failed Example 8
 
 The `div` element with role `link` has an empty [accessible name][].
 

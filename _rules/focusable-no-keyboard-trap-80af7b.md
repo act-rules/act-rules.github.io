@@ -148,6 +148,22 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 <a id="link2" href="#">Link 2</a>
 ```
 
+#### Passed Example 7
+
+The [focusable][] `button` labeled "Button3" creates a keyboard trap when navigating forward, as it moves focus back to "Button1" preventing users to focus "Button3". However, when navigating backward, all focusable elements receive focus as expected. Therefore, according to the background notes, this behavior is considered compliant with the rule, despite being recognized as a poor practice in terms of keyboard accessibility.
+
+```html
+<button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
+	Button1
+</button>
+<button onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
+	Button2
+</button>
+<button>
+	Button3
+</button>
+```
+
 ### Failed
 
 #### Failed Example 1

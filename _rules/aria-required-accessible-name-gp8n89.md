@@ -58,11 +58,11 @@ For instance, consider a `search` landmark comprising an element with the `form`
 
 Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
 
-## Assumptions
+### Assumptions
 
 There are no assumptions.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
 

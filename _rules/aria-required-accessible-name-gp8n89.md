@@ -251,7 +251,7 @@ This `div` element has an [semantic role][] of `group`, which does not require a
 
 #### Inapplicable Example 3
 
-This `button` element has an [explicit semantic role][] of `none`. leading to a conflict resolved by [Presentational Roles Conflict Resolution][], which is not covered by this rule.
+This `button` element has an [explicit semantic role][] of `none`, leading to a conflict resolved by [Presentational Roles Conflict Resolution][], which is not covered by this rule.
 
 ```html
 <button role="none">submit</button>

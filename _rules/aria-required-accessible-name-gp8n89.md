@@ -58,6 +58,14 @@ For instance, consider a `search` landmark comprising an element with the `form`
 
 Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
 
+## Assumptions
+
+There are no assumptions.
+
+## Accessibility Support
+
+There are no accessibility support issues known.
+
 ### Bibliography
 
 - [WAI-ARIA 1.2][wai-aria 1.2]

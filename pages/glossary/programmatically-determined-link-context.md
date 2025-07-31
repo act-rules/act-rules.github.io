@@ -8,13 +8,12 @@ input_aspects:
   - DOM tree
 ---
 
-The _programmatically determined context_ of a link (or _programmatically determined link context_) is the set of all elements that are [included in the accessibility tree][], and have one or more of the following relationships to the link:
+The _programmatically determined context_ of a link (or _programmatically determined link context_) is the link's accessible description, combined with the set of all elements that are [included in the accessibility tree][], and have one or more of the following relationships to the link:
 
 - being an [ancestor][] of the link in the [flat tree][] with a [semantic role][] of `listitem`; or
 - being the closest [ancestor][] of the link in the [flat tree][] that generates a [block container][]; or
 - being the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`; or
-- being a header cell [assigned][] to the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`; or
-- being referenced by an `aria-describedby` attribute of the link.
+- being a header cell [assigned][] to the closest [ancestor][] of the link in the [flat tree][] that has a [semantic role][] of `cell` or `gridcell`.
 
 This definition is based on (but not equivalent to) the [WCAG definition of programmatically determined link context](https://www.w3.org/TR/WCAG22/#dfn-programmatically-determined-link-context).
 

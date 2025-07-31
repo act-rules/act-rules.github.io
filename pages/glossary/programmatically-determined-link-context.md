@@ -8,7 +8,7 @@ input_aspects:
   - DOM tree
 ---
 
-The _programmatically determined context_ of a link (or _programmatically determined link context_) is the link's [accessible description](https://www.w3.org/TR/accname/#dfn-accessible-description), combined with the set of all elements that are [included in the accessibility tree][], and have one or more of the following relationships to the link:
+The _programmatically determined context_ of a link (or _programmatically determined link context_) is the link's [accessible description][], combined with the set of all elements that are [included in the accessibility tree][], and have one or more of the following relationships to the link:
 
 - being an [ancestor][] of the link in the [flat tree][] with a [semantic role][] of `listitem`; or
 - being the closest [ancestor][] of the link in the [flat tree][] that generates a [block container][]; or

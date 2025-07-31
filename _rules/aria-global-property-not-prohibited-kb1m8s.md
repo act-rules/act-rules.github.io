@@ -1,10 +1,10 @@
 ---
-id: 5c01ea
-name: ARIA state or property is permitted
+id: kb1m8s
+name: ARIA global properties not used where prohibited
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that WAI-ARIA states or properties are allowed for the element they are specified on.
+  This rule checks that global WAI-ARIA properties are not on elements whose role prohibits them.
 accessibility_requirements:
   wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
     forConformance: false
@@ -27,10 +27,10 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Wilco Fiers
+  previous_authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
-  funding:
-    - WAI-Tools
   assets:
     - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
@@ -41,19 +41,13 @@ This rule applies to any [WAI-ARIA state or property][] that is specified on an 
 
 ## Expectation
 
-For each test target, one of the following is true:
-
-- **global**: the test target is a [global state or property][global]; or
-- **semantic role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
-- **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
+No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
 
 ## Background
 
 The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
 
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
-
-Assessing the value of the attribute is out of scope for this rule.
 
 ### Assumptions
 
@@ -65,7 +59,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ### Related rules
 
-- [ARIA global properties not used where prohibited](https://www.w3.org/WAI/standards-guidelines/act/rules/kb1m8s/)
+- [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/)
 - [ARIA state or property has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/)
 
 ### Bibliography

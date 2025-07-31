@@ -217,22 +217,6 @@ The `aria-orientation` property may not be used on `audio` element, nor can it b
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
 ```
 
-#### Failed Example 3
-
-The `aria-label` property is [prohibited][] for an element with a `generic` role.
-
-```html
-<div aria-label="Bananas"></div>
-```
-
-#### Failed Example 4
-
-The `aria-label` property is [prohibited][] for an element with a `paragraph` role.
-
-```html
-<div role="paragraph" aria-label="Bananas"></div>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -266,4 +250,3 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
-[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

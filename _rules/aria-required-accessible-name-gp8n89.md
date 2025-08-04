@@ -56,7 +56,7 @@ Although this ARIA rule mandates authors to ensure an [accessible name][] for ea
 
 For instance, consider a `search` landmark comprising an element with the `form` role, a search label, a search input, and a search submit button. According to ARIA specifications, the `searchbox` role necessitate an [accessible name][]. However, adhering strictly to this rule may lead to repetitive announcements by assistive technologies like screen readers, overwhelming users. Therefore, while this might technically breach ARIA specs, it does not necessarily translate to a violation of WCAG accessibility standards.
 
-Elements subjected to the [Presentational Roles Conflict Resolution][] are not part of this rule and must be tested separately.
+Any element subjected to the [Presentational Roles Conflict Resolution][] is inapplicable under this rule, and must be tested separately. Such an element is inapplicable because it has an [explicit][explicit semantic role] presentational role - even though that presentational role will be ignored by user agents, as a result of conflict resolution.
 
 ### Assumptions
 

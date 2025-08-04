@@ -149,7 +149,9 @@ A video element with a link to an incorrect text transcript on a different page.
 ```
 
 #### Failed Example 3
+
 This `video` element has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
+
 ```html
 <html lang="en">
 <video controls>

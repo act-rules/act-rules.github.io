@@ -16,7 +16,9 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.
+    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.  
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion does not require a transcript when the audio-only or video-only is a media alternative for text and is clearly labeled as such. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling

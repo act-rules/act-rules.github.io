@@ -16,7 +16,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: This success criterion is **related** to this rule. This is because the absence of a transcript means that information conveyed through visual means in the video content remains inaccessible to certain users, thus creating inequality in communication.
+    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.
 input_aspects:
   - DOM Tree
   - CSS Styling

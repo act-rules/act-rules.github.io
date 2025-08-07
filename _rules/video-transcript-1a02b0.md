@@ -118,6 +118,18 @@ Then he stops to scratch his bottom.</p>
 </html>
 ```
 
+#### Passed Example 4
+
+A video element with an associated track element that contains captions for all the audio and a transcript on the page.
+
+```html
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+	</video>
+	<p>	Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. (A computer user's mouse breaks when it falls off the desk.) Many people use only the keyboard to navigate websites. Either through preference or 		circumstance. (A person wearing a sling on her arm typing with one hand.) </p>
+</html>
+```
 ### Failed
 
 #### Failed Example 1
@@ -166,6 +178,17 @@ Then he stops to scratch his bottom.</p>
 </html>
 ```
 
+#### Failed Example 4
+
+A video element with audio does not have a text transcript.
+
+```html
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+	</video>
+</html>
+```
 ### Inapplicable
 
 #### Inapplicable Example 1

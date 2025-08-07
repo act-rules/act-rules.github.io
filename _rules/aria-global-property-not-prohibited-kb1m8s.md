@@ -6,17 +6,17 @@ rule_type: atomic
 description: |
   This rule checks that global WAI-ARIA properties are not on elements whose role prohibits them.
 accessibility_requirements:
+  aria12:prohibitedattributes:
+    title: ARIA 1.2, 5.2.5 Prohibited States and Properties
+    forConformance: true
+    failed: not satisfied
+    passed: satisfied
+    inapplicable: satisfied
   wcag-technique:ARIA5: # Using WAI-ARIA state and property attributes to expose the state of a user interface component
     forConformance: false
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
-  aria12:state_property_processing:
-    title: ARIA 1.2, 8.6 State and Property Attribute Processing
-    forConformance: true
-    failed: not satisfied
-    passed: satisfied
-    inapplicable: satisfied
   wcag20:1.3.1: # Info and Relationships (A)
     secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
   wcag20:4.1.2: # Name, Role, Value (A)
@@ -64,12 +64,11 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ### Bibliography
 
-- [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG22/Understanding/parsing.html)
+- [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
-- [WAI-ARIA 1.2, Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#states_and_properties)
+- [WAI-ARIA 1.2, Prohibited States and Properties](https://www.w3.org/TR/wai-aria/#prohibitedattributes)
 - [WAI-ARIA 1.2, Global States and Properties](https://www.w3.org/TR/wai-aria-1.2/#global_states)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
-- [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 
 ## Test Cases
 
@@ -85,11 +84,11 @@ This generic `div` element is allowed the global `aria-live` property.
 
 #### Passed Example 2
 
-This `div` element allowed the `aria-braillelabel` property because its [explicit role][] of `heading` does not prohibit this.
+This `button` element allowed the `aria-label` property.
 
 ```html
 <button aria-label="I like bananas">
-	I ❤️ 🍌🍌
+	🧑 ❤️ 🍌🍌
 </button>
 ```
 
@@ -110,7 +109,7 @@ This `div` element allowed the `aria-braillelabel` property because its [explici
 The `aria-label` property is [prohibited][] for an element with a `generic` role.
 
 ```html
-<div aria-label="Bananas"></div>
+<div aria-label="Bananas">🍌</div>
 ```
 
 #### Failed Example 2
@@ -119,10 +118,10 @@ The `aria-labelledby` property is [prohibited][] for an element with a `paragrap
 
 ```html
 <h1 id="bananas">I like bananas</h1>
-<p aria-labelledby="Bananas"></p>
+<p aria-labelledby="Bananas">🧑 ❤️ 🍌🍌</p>
 ```
 
-#### Failed Example 2
+#### Failed Example 3
 
 The `aria-braillelabel` property is [prohibited][] for an element with a `paragraph` role.
 
@@ -132,7 +131,7 @@ The `aria-braillelabel` property is [prohibited][] for an element with a `paragr
 
 #### Failed Example 4
 
-The `aria-roledescription` property is [prohibited][] for an element with a `div` role.
+The `aria-roledescription` property is [prohibited][] for an element with a `generic` role.
 
 ```html
 <div aria-roledescription="Banana text">I like bananas</div>

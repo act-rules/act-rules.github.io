@@ -130,6 +130,7 @@ A video element with an associated track element that contains captions for all 
 	<p>	Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. (A computer user's mouse breaks when it falls off the desk.) Many people use only the keyboard to navigate websites. Either through preference or 		circumstance. (A person wearing a sling on her arm typing with one hand.) </p>
 </html>
 ```
+
 ### Failed
 
 #### Failed Example 1

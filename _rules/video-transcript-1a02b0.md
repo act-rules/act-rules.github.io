@@ -190,6 +190,7 @@ A video element with audio does not have a text transcript.
 	</video>
 </html>
 ```
+
 ### Inapplicable
 
 #### Inapplicable Example 1

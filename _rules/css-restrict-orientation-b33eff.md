@@ -1,9 +1,10 @@
 ---
 id: b33eff
 name: Orientation of the page is not restricted using CSS transforms
+rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms
+  This rule checks that page content is not restricted to either `landscape` or `portrait` orientation using CSS transforms.
 accessibility_requirements:
   wcag21:1.3.4: # Orientation
     forConformance: true
@@ -45,7 +46,9 @@ The target element is neither rotated clockwise nor counter clockwise around the
 
 **Note:** Imagine the display of a smartphone with cartoon figure at its center. With this example, if a user turns the smartphone a quarter turn, that is a partial move from one orientation to the other, the user would expect that the cartoon figure continues to remain facing upwards. The smartphone accomplishes this by rotating the contents of its display a quarter turn to counter the users change in orientation. In effect, the cartoon figure has remained in place and its rotation relative from one orientation to the other is 0 degrees. Now imagine that a developer facilitated this rotation of the cartoon figure by a quarter turn _only_ when the smartphone starts from one orientation and not the other; its rotation relative from one orientation to the other would then be 90 degrees and it would appear stuck, or locked, as the user moves between orientations. What the developer has done is effectively counter the smartphone's attempt at countering the user's change in orientation.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule does not consider and may produce incorrect results for:
 
@@ -53,11 +56,9 @@ This rule does not consider and may produce incorrect results for:
 - The existence of any control on the page that can change the orientation on demand.
 - Scripts are not used to adjust the CSS orientation lock.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 
@@ -197,7 +198,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 
 #### Failed Example 3
 
-This page appears rotated at a slight angle of 2.5 degrees for stylistic purposes, but is locked in portrait orientation by applying a 92.5 degree rotation when in landscape orientation:
+This page appears rotated at a slight angle of 2.5 degrees for stylistic purposes, but is locked in `portrait` orientation by applying a 92.5 degree rotation when in `landscape` orientation:
 
 ```html
 <html lang="en">
@@ -299,7 +300,7 @@ A page where CSS [transform](https://www.w3.org/TR/css-transforms/#propdef-trans
 	<head>
 		<title>Page with some content</title>
 		<style>
-			@media (orientation: lanscape) {
+			@media (orientation: landscape) {
 				body {
 					transform: rotateZ(0, 0, 1, 270deg);
 				}

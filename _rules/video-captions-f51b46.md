@@ -1,6 +1,7 @@
 ---
 id: f51b46
 name: Video element auditory content has captions
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that captions are available for audio information in non-streaming `video` elements.
@@ -47,15 +48,15 @@ For each test target, audio information that is not conveyed visually in the vid
 
 **Note:** Captions can be either embedded in the video file itself or can be made available trough a separate track.
 
-## Assumptions
+## Background
+
+### Assumptions
 
 This rule assumes that the video element is used to play a video (for example, not only used to display an image), and that there is a mechanism to start the video.
 
-## Accessibility Support
+### Accessibility Support
 
 There are no accessibility support issues known.
-
-## Background
 
 ### Bibliography
 

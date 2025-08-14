@@ -34,7 +34,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [programmatic label][] of an element which has one of the following [semantic roles][semantic role]:
+This rule applies to any element which has one of the following [semantic roles][semantic role]:
 
 - `checkbox`
 - `combobox`
@@ -50,7 +50,11 @@ This rule applies to any [programmatic label][] of an element which has one of t
 
 and where both the element and the [programmatic label][] are [visible][].
 
-## Expectation
+## Expectation 1
+
+Each test target has a label, and the label is descriptive.
+
+## Expectation 2
 
 Each test target, together with its [visual context][], describes the purpose of the associated element.
 
@@ -69,7 +73,6 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 
 ### Assumptions
 
-- This rule assumes that [labels][label] are intended for sighted users, and that hiding a [visible][] [label][] from assistive technologies, is a failure of [Success Criterion 4.1.2: Name, Role and Value][sc412], but not of [Success Criterion 2.4.6: Headings and Labels][sc246].
 - This rule assumes that the [programmatic labels][programmatic label] of an element are also part of its [visual context][].
 
 ### Accessibility Support

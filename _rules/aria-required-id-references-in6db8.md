@@ -22,6 +22,8 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+deprecated: |
+  This rule has been deprecated because the `aria-controls` attribute is no longer required by the combobox and scrollbar roles. This rule is not maintained anymore and should not be used.
 ---
 
 ## Applicability

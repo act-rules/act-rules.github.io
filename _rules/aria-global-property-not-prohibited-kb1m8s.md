@@ -19,8 +19,6 @@ accessibility_requirements:
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationships (A)
     secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
-  wcag20:4.1.2: # Name, Role, Value (A)
-    secondary: This success criterion is **less strict** than this rule. This is because the rule does not ignore irrelevant ARIA properties. Some of the failed examples satisfy this success criterion.
 input_aspects:
   - Accessibility Tree
   - CSS styling
@@ -55,6 +53,8 @@ There are no assumptions.
 
 ### Accessibility Support
 
+Browsers and assistive technologies behave differently when prohibited attributes are used. Some may assign a role so that the property is available to assistive technologies, where others ignore the attribute.
+
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have a [semantic role][] of `none` and their attributes fail this rule with some technologies but users of other technology would not experience any accessibility issue.
 
 ### Related rules
@@ -84,12 +84,12 @@ This generic `div` element is allowed the global `aria-live` property.
 
 #### Passed Example 2
 
-This `button` element allowed the `aria-label` property.
+This `a` element allowed the `aria-label` property.
 
 ```html
-<button aria-label="I like bananas">
-	🧑 ❤️ 🍌🍌
-</button>
+<a href="#" aria-label="Previously 100, now 1 euro">
+	<s>€100</s> / <b>€1</b>
+</h1>
 ```
 
 #### Passed Example 3
@@ -109,7 +109,7 @@ This `div` element allowed the `aria-braillelabel` property because its [explici
 The `aria-label` property is [prohibited][] for an element with a `generic` role.
 
 ```html
-<div aria-label="Bananas">🍌</div>
+<div aria-label="Previously 100, now 1 euro"><s>€100</s> / <b>€1</b></div>
 ```
 
 #### Failed Example 2
@@ -123,7 +123,7 @@ The `aria-labelledby` property is [prohibited][] for an element with a `paragrap
 
 #### Failed Example 3
 
-The `aria-braillelabel` property is [prohibited][] for an element with a `paragraph` role.
+The `aria-braillelabel` property is [prohibited][] for an element with a `button` role.
 
 ```html
 <p aria-braillelabel="I love Bananas">I ❤️ Bananas</p>
@@ -157,9 +157,7 @@ The generic `div` element is hidden.
 
 [attribute value]: #attribute-value 'Definition of attribute value'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
-[focusable]: #focusable 'Definition of focusable'
 [global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'
-[implicit role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
 [inherited]: https://www.w3.org/TR/wai-aria-1.2/#inheritedattributes 'Definition of Inherited ARIA States and Properties'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
@@ -168,6 +166,5 @@ The generic `div` element is hidden.
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [state]: https://www.w3.org/TR/wai-aria-1.2/#dfn-state 'Definition of ARIA State'
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
-[wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
 [prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

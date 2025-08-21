@@ -148,6 +148,22 @@ These focusable `button` elements have scripts that create a keyboard trap. The 
 <a id="link2" href="#">Link 2</a>
 ```
 
+#### Passed Example 7
+
+The [focusable][] `button` labeled "Button3" creates a keyboard trap when navigating forward, as it moves focus back to "Button1" preventing users to focus "Button3". However, when navigating backward, all focusable elements receive focus as expected. Therefore, according to the background notes, this behavior is considered compliant with the rule, despite being recognized as a poor practice in terms of keyboard accessibility.
+
+```html
+<button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
+	Button1
+</button>
+<button onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
+	Button2
+</button>
+<button>
+	Button3
+</button>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -164,22 +180,6 @@ This [focusable][] element creates a keyboard trap bringing focus to the `button
 
 #### Failed Example 2
 
-These [focusable][] `button` elements create a keyboard trap preventing the last `button` to be reached using the keyboard.
-
-```html
-<button onblur="setTimeout(() => this.nextElementSibling.focus(), 10)">
-	Button1
-</button>
-<button onblur="setTimeout(() => this.previousElementSibling.focus(), 10)">
-	Button2
-</button>
-<button>
-	Button3
-</button>
-```
-
-#### Failed Example 3
-
 This `button` element is between other `button` elements creating a keyboard trap.
 
 ```html
@@ -188,7 +188,7 @@ This `button` element is between other `button` elements creating a keyboard tra
 <button onblur="setTimeout(() => this.focus(), 10)">Button 3</button>
 ```
 
-#### Failed Example 4
+#### Failed Example 3
 
 These focusable `button` elements create a keyboard trap with no instructions.
 
@@ -205,7 +205,7 @@ These focusable `button` elements create a keyboard trap with no instructions.
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 These focusable `button` elements create a keyboard trap with instructions that don't give advice on the method for proceeding.
 
@@ -223,7 +223,7 @@ These focusable `button` elements create a keyboard trap with instructions that 
 <a id="link2" href="#">Link 2</a>
 ```
 
-#### Failed Example 6
+#### Failed Example 5
 
 These focusable `button` elements create a keyboard trap with help text, where the method advised doesn't work.
 

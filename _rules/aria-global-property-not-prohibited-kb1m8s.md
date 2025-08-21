@@ -87,9 +87,7 @@ This generic `div` element is allowed the global `aria-live` property.
 This `a` element allowed the `aria-label` property.
 
 ```html
-<a href="#" aria-label="Previously 100, now 1 euro">
-	<s>€100</s> / <b>€1</b>
-</h1>
+<a href="#" aria-label="Previously 100, now 1 euro"> <s>€100</s> / <b>€1</b> </a>
 ```
 
 #### Passed Example 3
@@ -155,7 +153,6 @@ The generic `div` element is hidden.
 <div aria-label="Bananas" hidden></div>
 ```
 
-[attribute value]: #attribute-value 'Definition of attribute value'
 [explicit role]: #explicit-role 'Definition of Explicit Role'
 [global]: https://www.w3.org/TR/wai-aria-1.2/#global_states 'Definition of Global ARIA States and Properties'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

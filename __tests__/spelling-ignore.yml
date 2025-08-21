@@ -151,6 +151,8 @@
 - href
 - src
 - srcset
+- aria-braillelabel
+- aria-brailleroledescription
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete

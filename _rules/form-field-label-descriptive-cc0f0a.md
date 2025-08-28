@@ -52,7 +52,7 @@ and where both the element and the [programmatic label][] are [visible][].
 
 ## Expectation 1
 
-Each test target has at least one label, and the label is descriptive.
+Each test target has at least one label.
 
 ## Expectation 2
 

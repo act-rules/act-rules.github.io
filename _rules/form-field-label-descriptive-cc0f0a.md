@@ -52,11 +52,11 @@ and where both the element and the [programmatic label][] are [visible][].
 
 ## Expectation 1
 
-Each test target has a label, and the label is descriptive.
+Each test target has at least one label, and the label is descriptive.
 
 ## Expectation 2
 
-Each test target, together with its [visual context][], describes the purpose of the associated element.
+All of the test target's labels describe the purpose of the test target.
 
 ## Background
 

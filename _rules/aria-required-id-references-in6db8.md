@@ -201,3 +201,4 @@ There is no `aria-controls` attribute.
 [required by wai-aria]: https://www.w3.org/TR/wai-aria-1.2/#requiredState 'WAI-ARIA Required States and Properties'
 [id reference list]: https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref_list 'WAI-ARIA definition of ID Reference List'
 [id reference]: https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref 'WAI-ARIA definition of ID Reference'
+[namespaced element]: #namespaced-element 'Definition of namespaced element'

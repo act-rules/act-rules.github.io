@@ -55,7 +55,7 @@ This rule assumes that a mechanism is available to start the video and that the 
 
 There are only a few implementations of video players (without third party technologies) that support audio description tracks at the time of writing.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded)
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G78)

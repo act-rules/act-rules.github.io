@@ -68,7 +68,7 @@ There are no accessibility support issues known.
 - [HTML page has `lang` attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/)
 - [HTML page `lang` attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 3.1.1: Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html)
 - [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG22/Techniques/html/H57)

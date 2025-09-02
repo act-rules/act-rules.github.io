@@ -81,7 +81,7 @@ There are no accessibility support issues known.
 
 - [rule name here](./abc123)
 
-### Bibliography
+### Other Resources
 
 <!-- This section is optional -->
 
@@ -214,7 +214,7 @@ There are no accessibility support issues known.
 
 - [rule name here](./abc123)
 
-### Bibliography
+### Other Resources
 
 <!-- This section is optional -->
 

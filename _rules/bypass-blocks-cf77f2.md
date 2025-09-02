@@ -85,7 +85,7 @@ If the [instruments][instrument] used to pass some of the atomic rules are not k
 
 This rule only checks if there is a way to bypass at least one section of repeated content. On pages with several interleaved repeated and non-repeated content, this is not sufficient to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. Checking for more sections to bypass was considered but rejected due to both the added complexity it would create, and the risk of failing on pages that might be correct.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - Creating links to skip blocks of content:

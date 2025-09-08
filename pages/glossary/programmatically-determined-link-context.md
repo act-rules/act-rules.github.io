@@ -26,3 +26,4 @@ This definition assumes that the HTML document with the link is a document using
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [semantic role]: #semantic-role 'Definition of semantic role'
 [accessible description]: https://www.w3.org/TR/accname/#dfn-accessible-description 
+[accessible name]: https://www.w3.org/TR/accname/#dfn-accessible-name

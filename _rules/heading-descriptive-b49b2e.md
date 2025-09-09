@@ -50,7 +50,7 @@ This rule also assumes that the content the heading is intended to describe is [
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-There is currently a screen reader / browser combination which actively exposes empty headings `<hx></hx>` or `<span role="heading" aria-level="x"></span>` when querying the sccreen reader for the list of page headings. These constructs are not applicable for this rule but can still cause accessibility issues if relying exclusively on that particular combination.
+There is currently a screen reader / browser combination which actively exposes empty headings `<hx></hx>` or `<span role="heading" aria-level="x"></span>` when querying the screen reader for the list of page headings. These constructs are not applicable for this rule but can still cause accessibility issues if relying exclusively on that particular combination.
 
 ### Bibliography
 

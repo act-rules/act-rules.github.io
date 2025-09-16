@@ -155,7 +155,7 @@ This includes, but might not be limited to modifications that change, extend, or
 - Accessibility Requirements (e.g. success criteria)
 - Applicability
 - Expectations
-- Test cases (Passed/Failed/Inapplicable)
+- Examples (Passed/Failed/Inapplicable)
 
 #### Changes that do not require a "Call for Review"
 
@@ -189,7 +189,7 @@ If this happens, a new "Call for Review" should be launched after the first one.
 - When commenting, please note whether you consider the suggested changes to be substantial or not (whether the change falls into the category of changes that do require a "Call for Review", or the ones that do not require a "Call for Review").
 - For tool vendors and testing methodology owners: Implement rule in tools and methodologies
   - At this stage, the rule should be quite stable, minimizing the risk of doing a too-early implementation, that has to be re-done from scratch later due to changes in the rule.
-  - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with test cases, ambiguities in applicability or expectations, missing definitions etc.
+  - Implementations are important at this stage, since we often find things that needs to be changed in rules as soon as we start implementing them, e.g. issues with examples, ambiguities in applicability or expectations, missing definitions etc.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
 - Keep up to date on Calls for Review using this list: https://github.com/act-rules/act-rules.github.io/issues/461
 

@@ -46,7 +46,7 @@ This rule is restricted to direct parent-child relation in the [accessibility tr
 
 [Subclass roles][subclass role] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.2/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.2/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.2/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.2/#list) role.
 
-Some user agents try to correct missing [required context roles][] or incorrect [content model][]. This often results, for example, in an isolated list item being presented as part of a one-item list containing only itself. Therefore, most test cases contain several targets to try and circumvent these corrections in order to better demonstrate the issue.
+Some user agents try to correct missing [required context roles][] or incorrect [content model][]. This often results, for example, in an isolated list item being presented as part of a one-item list containing only itself. Therefore, most examples contain several targets to try and circumvent these corrections in order to better demonstrate the issue.
 
 ### Assumptions
 
@@ -80,7 +80,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 2
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [implicit role][] of `ul`. Note that this test case does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [implicit role][] of `ul`. Note that this example does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>

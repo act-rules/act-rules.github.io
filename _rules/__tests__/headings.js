@@ -58,7 +58,7 @@ describeRule('headings', ruleData => {
 	/**
 	 * Check for `required` `h2` headings
 	 */
-	const requiredH2 = [`Applicability`, `Background`, `Test Cases`]
+	const requiredH2 = [`Applicability`, `Background`, `examples`]
 	const h2Headings = getHeadingOfDepth(headings, 2)
 	test.each(requiredH2)('has required `h2` - `%s`', heading => {
 		expect(h2Headings).toContain(heading)

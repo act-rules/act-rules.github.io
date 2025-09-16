@@ -68,16 +68,16 @@ async function updateRuleVersionsYaml({ tmpDir }, ruleId) {
 }
 
 async function approveTestCaseJson({ tmpDir }, ruleId) {
-  let testCaseCount = 0;
-  const testCaseJsonPath = `${tmpDir}content-assets/wcag-act-rules/testcases.json`;
-  const testCaseJson = JSON.parse(fs.readFileSync(testCaseJsonPath, 'utf8'));
-  testCaseJson.testcases.forEach((testCase, index) => {
-    if (testCase.ruleId === ruleId) {
+  let exampleCount = 0;
+  const exampleJsonPath = `${tmpDir}content-assets/wcag-act-rules/testcases.json`;
+  const exampleJson = JSON.parse(fs.readFileSync(exampleJsonPath, 'utf8'));
+  exampleJson.testcases.forEach((example, index) => {
+    if (example.ruleId === ruleId) {
       // Override rather than update so that `approved` isn't at the bottom
-      testCaseJson.testcases[index] = { ruleId, approved: true, ...testCase }
-      testCaseCount++
+      exampleJson.testcases[index] = { ruleId, approved: true, ...example }
+      exampleCount++
     }
   });
-  console.log(`Set ${testCaseCount} test cases of rule ${ruleId} to be approved in testcases.json`);
-  fs.writeFileSync(testCaseJsonPath, JSON.stringify(testCaseJson, null, 2), 'utf8');
+  console.log(`Set ${exampleCount} examples of rule ${ruleId} to be approved in testcases.json`);
+  fs.writeFileSync(exampleJsonPath, JSON.stringify(exampleJson, null, 2), 'utf8');
 }

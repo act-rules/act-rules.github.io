@@ -18,15 +18,15 @@ assignees: ''
 
 ### Test case 1 ...
 
-(( Add test case here ))
+(( Add example here ))
 
 ```html
 code snippet here
 ```
 
-[Open this test case]()
+[Open this example]()
 
-(( Add a link to a code pen or other hosted test case. Keep in mind this test case needs to be accessible and persistent. ))
+(( Add a link to a code pen or other hosted example. Keep in mind this example needs to be accessible and persistent. ))
 
 #### Preconditions
 
@@ -39,12 +39,12 @@ Before running the test, check your settings. In many cases default settings are
 
 #### Test instructions
 
-(( Provide instructions on how to test the test case, this should include: ))
+(( Provide instructions on how to test the example, this should include: ))
 
 - Which technologies to use
 - Any setting changes necessary to run the test
 - Any variation in how to operate the different assistive technologies
-- Step by step instructions on how to check the test case
+- Step by step instructions on how to check the example
 - What the expected results are
 
 ### External links

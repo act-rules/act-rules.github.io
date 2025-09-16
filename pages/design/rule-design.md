@@ -16,7 +16,7 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 6. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
 
-7. **[Test cases](#test-cases)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
+7. **[examples](#examples)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 
 8. **Glossary**: A list of any defined terms used within the rule file.
 
@@ -149,11 +149,11 @@ For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-r
 
 ## Examples
 
-The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
+The examples are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
 
 > _For example_: a passing example of a page with a `title` element might omit the `lang` attribute on the `html` element, and the `head` and `body` elements in order to be succinct. A failing example might also omit the `title` element. Meanwhile a passing example of a descriptive `title` element would include the `lang` attribute because it is relevant.
 
-Each test case must be named in the format "Passed/Failed/Inapplicable Example X", where X is a number sequentially increasing for each of the three kinds of outcome, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
+Each example must be named in the format "Passed/Failed/Inapplicable Example X", where X is a number sequentially increasing for each of the three kinds of outcome, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
 
 The description should:
 
@@ -165,7 +165,7 @@ The description should:
 
 > _For example: "This page has a `title` element with content."_
 
-For a detailed description on what to write test cases for see [test case design](../test-cases). For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
+For a detailed description on what to write examples for see [example design](../test-cases). For more details, see [ACT Rules Format: examples](https://www.w3.org/TR/act-rules-format/#examples).
 
 ## Listed conditions
 
@@ -186,6 +186,6 @@ This phrasing is designed to be easily readable, but may not work in every situa
 - Put things in order of how common they likely are. Even for unordered lists, this helps understand the list.
 - Avoid nested conditional lists. These are difficult to read. Instead try to restructure the conditionals. This can be done by either moving some of the list items into the condition phrase, or putting all the subconditions in a single phrase in the condition item. In expectations, use multiple conditions.
 - Group similar concepts into the same list item. For example, if something can have `absolute` or `fixed`, these two are closely related so putting them down as one item helps limit the number of conditions.
-- Write test cases that check each condition of the list individually. This helps understand why that specific condition is needed.
-- Refer to the labels of the condition in the test case description to make the link explicit.
-- Order the test cases in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that test cases are also ordered by importance.
+- Write examples that check each condition of the list individually. This helps understand why that specific condition is needed.
+- Refer to the labels of the condition in the example description to make the link explicit.
+- Order the examples in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that examples are also ordered by importance.

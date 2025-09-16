@@ -63,8 +63,8 @@ Each target element ...
 - Links to Techniques for WCAG 2.2
 - Latest version: Techniques for WCAG 2.2 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- Links to examples, test suites, unit tests, etc.
+- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for examples is the W3C Before and After Demonstration.
 - Other references
 
 ### Assumptions
@@ -196,8 +196,8 @@ For each test target, the outcome of (at least one of / all of / any of etc.) th
 - Links to Techniques for WCAG 2.2
 - Latest version: Techniques for WCAG 2.2 W3C Working Group Note 8 April 2014
 - Link to other methodologies, test specifications or tools
-- Links to test cases, test suites, unit tests, etc.
-- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for test cases is the W3C Before and After Demonstration.
+- Links to examples, test suites, unit tests, etc.
+- The WCAG 2.2 Techniques already contain examples and code snippets to illustrate which content passes or fails the test. Whenever possible WCAG-ACT-RULES-CG refers to those. Another source for examples is the W3C Before and After Demonstration.
 - Other references
 
 ### Assumptions

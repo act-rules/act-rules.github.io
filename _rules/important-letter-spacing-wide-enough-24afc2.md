@@ -62,9 +62,9 @@ While some assistive technologies are able to set [user origin][] or [user agent
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-### About test cases
+### About examples
 
-Test cases descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+Example descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
 
 ## Examples
 

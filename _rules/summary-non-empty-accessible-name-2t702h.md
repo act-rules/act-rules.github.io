@@ -55,7 +55,7 @@ There is a difference in how user agents expose the triangle indicating the cont
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 - [Summary element entry for ARIA in HTML](https://www.w3.org/TR/html-aria/#el-summary)
 
-## Test Cases
+## Examples
 
 ### Passed
 

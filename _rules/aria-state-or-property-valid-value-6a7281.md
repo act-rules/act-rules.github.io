@@ -64,7 +64,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 - [WAI-ARIA 1.2, Characteristics of States and Properties, Value](https://www.w3.org/TR/wai-aria-1.2/#propcharacteristic_value)
 - [Uniform Resource Identifier (URI): Generic Syntax (RFC 3986)](https://www.ietf.org/rfc/rfc3986.txt)
 
-## Test Cases
+## Examples
 
 ### Passed
 

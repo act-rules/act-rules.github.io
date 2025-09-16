@@ -63,7 +63,7 @@ The rule assumes that the [explicit role][] of the applicable elements is approp
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Required Context Role][]
 
-## Test Cases
+## Examples
 
 ### Passed
 

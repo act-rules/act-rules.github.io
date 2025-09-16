@@ -71,7 +71,7 @@ The HTML `video` element can also have a `track` element that provides an audio 
 - [G159: Providing an alternative for time-based media for video-only content](https://www.w3.org/WAI/WCAG22/Techniques/general/G159.html)
 - [G166: Providing audio that describes the important video content and describing it as such](https://www.w3.org/WAI/WCAG22/Techniques/general/G166.html)
 
-## Test Cases
+## Examples
 
 ### Passed
 

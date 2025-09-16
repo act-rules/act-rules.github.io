@@ -70,7 +70,7 @@ The [accessible name][] of each target element together with its [programmatical
 - [H79: Identifying the purpose of a link in a data table using the link text combined with its enclosing table cell and associated table header cells](https://www.w3.org/WAI/WCAG22/Techniques/html/H79)
 - [H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested](https://www.w3.org/WAI/WCAG22/Techniques/html/H81)
 
-## Test Cases
+## Examples
 
 ### Passed
 

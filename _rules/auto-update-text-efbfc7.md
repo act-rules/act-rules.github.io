@@ -72,7 +72,7 @@ There are no accessibility support issues known.
 - [G186: Using a control in the Web page that stops moving, blinking, or auto-updating content][g186]
 - [F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content][f16]
 
-## Test Cases
+## Examples
 
 ### Passed
 

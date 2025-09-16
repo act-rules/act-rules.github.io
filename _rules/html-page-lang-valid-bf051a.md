@@ -67,7 +67,7 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
 - [The `lang` and `xml:lang` attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
 
-## Test Cases
+## Examples
 
 ### Passed
 

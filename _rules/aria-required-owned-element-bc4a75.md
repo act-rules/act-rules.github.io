@@ -60,7 +60,7 @@ If the [semantic role][] on the target element is incorrectly used, and any rela
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.2/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element)
 
-## Test Cases
+## Examples
 
 ### Passed
 

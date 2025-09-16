@@ -59,7 +59,7 @@ There are no accessibility support issues known.
 - [G213: Provide conventional controls and an application setting for motion activated input](https://www.w3.org/WAI/WCAG22/Techniques/general/G213.html)
 - [DeviceOrientation Event Specification](https://www.w3.org/TR/orientation-event/)
 
-## Test Cases
+## Examples
 
 ### Passed
 

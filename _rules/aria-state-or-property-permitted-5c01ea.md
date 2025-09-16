@@ -82,7 +82,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 
-## Test Cases
+## Examples
 
 ### Passed
 

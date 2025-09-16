@@ -53,7 +53,7 @@ There are no assumptions.
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 - [Technique H42: Using h1-h6 to identify headings][tech h42]
 
-## Test Cases
+## Examples
 
 ### Passed
 

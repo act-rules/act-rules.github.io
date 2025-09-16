@@ -51,7 +51,7 @@ There are no accessibility support issues known.
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 
-## Test Cases
+## Examples
 
 To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `aside` and `nav` elements are each a [block of repeated content][] due to the link inside the `nav` element to a page with similar [blocks of content][block of content].
 

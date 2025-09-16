@@ -71,7 +71,7 @@ There are no accessibility support issues known.
 
 - [link here](#)
 
-## Test Cases
+## Examples
 
 ### Passed
 

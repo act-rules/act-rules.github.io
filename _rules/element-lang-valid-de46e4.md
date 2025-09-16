@@ -63,7 +63,7 @@ There are differences in how assistive technologies handle unknown and invalid l
 - [RFC 5646: Tags for Identifying Languages](https://www.rfc-editor.org/rfc/rfc5646.html)
 - [Understanding Success Criterion 3.1.2: Language of Parts](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts)
 
-## Test Cases
+## Examples
 
 ### Passed
 

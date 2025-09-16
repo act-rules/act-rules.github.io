@@ -87,7 +87,7 @@ User agents do not always automatically play media, even when an `autoplay` attr
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html)
 - [Accessible Multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia)
 
-## Test Cases
+## Examples
 
 ### Passed
 

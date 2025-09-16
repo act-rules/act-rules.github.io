@@ -14,7 +14,7 @@ assignees: ''
 
 - ... List the rules here, link to its acc support section
 
-## Test cases
+## Examples
 
 ### Test case 1 ...
 

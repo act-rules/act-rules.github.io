@@ -48,7 +48,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 
-## Test Cases
+## Examples
 
 ### Passed
 

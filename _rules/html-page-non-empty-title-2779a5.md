@@ -75,7 +75,7 @@ There are no accessibility support issues known.
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG22/Techniques/html/H25)
 - [HTML Specification - The `title` element](https://html.spec.whatwg.org/#the-title-element)
 
-## Test Cases
+## Examples
 
 ### Passed
 

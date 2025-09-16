@@ -85,7 +85,7 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 
-## Test Cases
+## Examples
 
 ### Passed
 

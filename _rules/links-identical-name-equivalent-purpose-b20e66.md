@@ -64,7 +64,7 @@ When followed, the links in each set of target elements resolve to the [same res
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html)
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 
-## Test Cases
+## Examples
 
 ### Passed
 

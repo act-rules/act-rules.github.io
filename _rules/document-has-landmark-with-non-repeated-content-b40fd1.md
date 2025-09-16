@@ -54,7 +54,7 @@ Marking content with landmarks is sufficient to pass [Success Criterion 2.4.1 By
 - [CSS scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 - [The `main` role](https://www.w3.org/TR/wai-aria-1.2/#main)
 
-## Test Cases
+## Examples
 
 In most examples, the `nav` element is a [block of repeated content][].
 

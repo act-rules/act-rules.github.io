@@ -78,7 +78,7 @@ There are no accessibility support issues known.
 - [HTML Specification - URL parsing](https://html.spec.whatwg.org/#resolving-urls)
 - [Ambiguous to users in general](https://www.w3.org/TR/WCAG22/#dfn-ambiguous-to-users-in-general)
 
-## Test Cases
+## Examples
 
 ### Passed
 

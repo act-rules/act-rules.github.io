@@ -68,7 +68,7 @@ There are no accessibility support issues known.
 - [F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location](https://www.w3.org/WAI/WCAG22/Techniques/failures/F14)
 - [F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F26)
 
-## Test Cases
+## Examples
 
 ### Passed
 

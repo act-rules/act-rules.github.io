@@ -40,8 +40,9 @@ This rule applies to any [HTML element][] that has [visible][] [children][] in t
 
 ## Expectation
 
-For each target element, at least one of the following is true: 
-- the element is included in [sequential focus navigation][]; or 
+For each target element, at least one of the following is true:
+
+- the element is included in [sequential focus navigation][]; or
 - the element has a [descendant][] in the [flat tree][] that is included in [sequential focus navigation][]; or
 - the element is [inert][].
 
@@ -66,7 +67,7 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)
 - [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG22/Techniques/general/G202)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -119,7 +120,7 @@ This [scrollable][] `section` element is [inert][] because of the modal dialog, 
 ```html
 <style>
 	dialog:-internal-dialog-in-top-layer::backdrop {
-    		background: rgba(1, 1, 1, 0.8);
+		background: rgba(1, 1, 1, 0.8);
 	}
 </style>
 <section style="height: 100px; width: 500px; overflow: scroll;" tabindex="0">
@@ -144,11 +145,11 @@ This [scrollable][] `section` element is [inert][] because of the modal dialog, 
 </dialog>
 <script>
 	const openDialog = () => {
-		ppDialog.showModal();
+		ppDialog.showModal()
 		myFrame.tabIndex = '-1'
 	}
-	ppDialog.addEventListener('close', () => myFrame.tabIndex = 0)
-	window.addEventListener('DOMContentLoaded', openDialog);
+	ppDialog.addEventListener('close', () => (myFrame.tabIndex = 0))
+	window.addEventListener('DOMContentLoaded', openDialog)
 </script>
 ```
 

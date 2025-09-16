@@ -69,7 +69,7 @@ The HTML `video` element can also have a `track` element that provides an audio 
 - [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G173)
 - [G8: Providing a movie with extended audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G8)
 
-## Test Cases
+## Examples
 
 ### Passed
 

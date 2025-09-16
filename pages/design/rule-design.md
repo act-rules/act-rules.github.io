@@ -147,7 +147,7 @@ While optional, this provides background information relevant to the development
 
 For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-rules-format/#background).
 
-## Test cases
+## Examples
 
 The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
 

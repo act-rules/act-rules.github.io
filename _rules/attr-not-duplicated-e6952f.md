@@ -58,7 +58,7 @@ There are no accessibility support issues known.
 
 - [H94: Ensuring that elements do not contain duplicate attributes](https://www.w3.org/WAI/WCAG22/Techniques/html/H94)
 
-## Test Cases
+## Examples
 
 ### Passed
 

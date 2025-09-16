@@ -64,7 +64,7 @@ The native `video` and `audio` controls in several browser and assistive technol
 - [Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG22/Techniques/failures/F93)
 - [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](https://www.w3.org/WAI/WCAG22/Techniques/general/G170)
 
-## Test Cases
+## Examples
 
 ### Passed
 

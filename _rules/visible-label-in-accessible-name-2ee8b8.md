@@ -60,7 +60,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [Understanding Success Criterion 2.5.3: Label in Name][understand253]
 - [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG22/Techniques/general/G208)
 
-## Test Cases
+## Examples
 
 ### Passed
 

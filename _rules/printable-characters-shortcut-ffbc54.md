@@ -58,7 +58,7 @@ Currently [keyboard events][keyboard event] only support the types `keydown` and
 - [G217 Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG22/Techniques/general/G217)
 - [F99 Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG22/Techniques/failures/F99)
 
-## Test Cases
+## Examples
 
 ### Passed
 

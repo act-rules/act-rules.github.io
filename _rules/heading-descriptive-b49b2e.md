@@ -59,7 +59,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12)
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
-## Test Cases
+## Examples
 
 ### Passed
 

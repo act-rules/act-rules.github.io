@@ -54,7 +54,7 @@ Until browser support for the [SVG Accessibility API Mappings][] is more consist
 - [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6)
 - [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA10)
 
-## Test Cases
+## Examples
 
 ### Passed
 

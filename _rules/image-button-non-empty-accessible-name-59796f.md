@@ -72,7 +72,7 @@ The [input type="image" Accessible Name Computation algorithm](https://www.w3.or
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG22/Techniques/html/H36)
 - [HTML Accessibility API Mappings for computing the accessible name of image buttons](https://www.w3.org/TR/html-aam-1.0/#input-type-image)
 
-## Test Cases
+## Examples
 
 ### Passed
 

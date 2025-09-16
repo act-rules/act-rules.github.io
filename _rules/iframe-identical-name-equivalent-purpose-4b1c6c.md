@@ -54,7 +54,7 @@ This rule assumes that assistive technologies are exposing all `iframe` elements
 - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H64)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value][usc412]
 
-## Test Cases
+## Examples
 
 ### Passed
 

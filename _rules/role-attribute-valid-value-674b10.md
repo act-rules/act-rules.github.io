@@ -66,7 +66,7 @@ There are no accessibility support issues known.
 - [WAI-ARIA 1.2 Categorization of Roles](https://www.w3.org/TR/wai-aria-1.2/#roles_categorization)
 - [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.2/#introroles)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -167,7 +167,7 @@ This `role` attribute is empty ("").
 This `role` attribute is only [ASCII whitespace][].
 
 ```html
-<input type="text" role=" " aria-label="field name"/>
+<input type="text" role=" " aria-label="field name" />
 ```
 
 #### Inapplicable Example 5

@@ -64,7 +64,7 @@ There are no accessibility support issues known.
 - [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G173)
 - [G203: Using a static text alternative to describe a talking head video](https://www.w3.org/WAI/WCAG22/Techniques/general/G203)
 
-## Test Cases
+## Examples
 
 ### Passed
 

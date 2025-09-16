@@ -58,7 +58,7 @@ Each test target has an [accessible name][] which describes its purpose.
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7)
 - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA8)
 
-## Test Cases
+## Examples
 
 ### Passed
 

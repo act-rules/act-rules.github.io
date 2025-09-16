@@ -78,7 +78,7 @@ Not all major web browsers parse the value of the `content` attribute in the sam
 - [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/TR/WCAG-TECHS/F40.html)
 - [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](https://www.w3.org/TR/WCAG-TECHS/F41.html)
 
-## Test Cases
+## Examples
 
 ### Passed
 

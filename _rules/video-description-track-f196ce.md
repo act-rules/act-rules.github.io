@@ -63,7 +63,7 @@ This means that the rule can only provide a pass for these success criteria if a
 - [G78: Providing a second, user-selectable, audio track that includes audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G78)
 - [H96: Using the track element to provide audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/html/H96)
 
-## Test Cases
+## Examples
 
 ### Passed
 

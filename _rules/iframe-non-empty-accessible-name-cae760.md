@@ -58,7 +58,7 @@ If an `iframe` is not perceived by the user as a single control, it does not qua
 - [Understanding Success Criterion 4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
 - [User interface component][]
 
-## Test Cases
+## Examples
 
 ### Passed
 

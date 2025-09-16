@@ -66,7 +66,7 @@ While some assistive technologies are able to set [user origin][] or [user agent
 
 Test cases descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
 
-## Test Cases
+## Examples
 
 ### Passed
 

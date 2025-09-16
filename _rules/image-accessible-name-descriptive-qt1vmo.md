@@ -70,7 +70,7 @@ Some popular browser / screen reader combinations do not pronounce the accessibl
 - [G95: Providing short text alternatives that provide a brief description of the non-text content](https://www.w3.org/WAI/WCAG22/Techniques/general/G95)
 - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)](https://www.w3.org/WAI/WCAG22/Techniques/failures/F30)
 
-## Test Cases
+## Examples
 
 ### Passed
 

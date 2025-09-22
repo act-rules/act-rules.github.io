@@ -113,7 +113,7 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 #### Passed Example 3
 
 The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
-Although this construct does not conform to the [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-td) or [HTML specifications](https://html.spec.whatwg.org/#attributes-common-to-td-and-th-elements), it behaves the same as using a `th` element instead of a `td` element with a role of `columnheader`.
+Although this construct does not conform to the [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-td) or [HTML specifications](https://html.spec.whatwg.org/#attributes-common-to-td-and-th-elements), it behaves the same as using a `th` element instead of a `td` element with a role of `columnheader`, on all popular browser / screen reader combinations, at the time of writing.
 
 ```html
 <table>

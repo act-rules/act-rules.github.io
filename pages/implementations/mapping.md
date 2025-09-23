@@ -20,7 +20,7 @@ An accessibility tool or methodology can also have multiple implementation proce
 
 ## Automated Mapping
 
-The correctness of an implementation procedure is based on the results from running the [examples](../testcases/) in a tool or test procedure. The three types of examples have a range of outcomes that are allowed:
+The correctness of an implementation procedure is based on the results from running the [examples](../examples/) in a tool or test procedure. The three types of examples have a range of outcomes that are allowed:
 
 | Example Type | Allowed outcomes                       |
 | ------------ | -------------------------------------- |

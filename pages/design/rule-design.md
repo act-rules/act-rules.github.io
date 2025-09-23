@@ -16,7 +16,7 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 6. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
 
-7. **[examples](#examples)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
+7. **[examples](#examples)**: Define a range of code snippets that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 
 8. **Glossary**: A list of any defined terms used within the rule file.
 

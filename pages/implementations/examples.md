@@ -54,7 +54,7 @@ In the `testcases.json` file, examples are included on the `testcases` array, ea
 
 To run the examples, go through each URL run the necessary tests on that page. Tools and test procedures do not need to have a one-to-one mapping to ACT-R rules. While you could run all tests in an implementation on every example, for efficiency we recommend doing one of the following:
 
-1. Only run tests relevant for the `ruleAccessibilityRequirements` (e.g. for a example that maps to success criterion 1.1.1, only run tests related to success criterion 1.1.1)
+1. Only run tests relevant for the `ruleAccessibilityRequirements` (e.g. for an example that maps to success criterion 1.1.1, only run tests related to success criterion 1.1.1)
 
 2. Maintain a manual many-to-many mapping of rules in your implementation to ACT-R Rules
 

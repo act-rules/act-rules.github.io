@@ -26,7 +26,7 @@ On the top level object, there should be a `@context` and `@graph`. The `@contex
 
 ### Test Subject
 
-Create a single test subject for each [example](../testcase/). The `TestSubject` has three required properties:
+Create a single test subject for each [example](../example/). The `TestSubject` has three required properties:
 
 - `@type`: Must be `TestSubject`, to distinguish it from other data types that might exist in an EARL report.
 - `source`: This must be the URL of the example.

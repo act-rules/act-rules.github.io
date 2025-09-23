@@ -10,7 +10,7 @@ Need for Call for Review:
 This can be merged with 1 approval << choose reason: editorial changes to website/test code, adding new contributor, other (explain). >>
 This will not require a Call for Review << choose reason(s): editorial changes (including to the applicability, expectation or examples section), changes to assumptions, background, accessibility support, change to website/test code (not rule), other (explain). >>
 This will require a 1 week Call for Review << small changes affecting a small number of examples, if in doubt do not use this. >>
-This will require a 2 weeks Call for Review << new rule, or substantial changes affecting a WWlarge number of examples, if in doubt, use this. >>
+This will require a 2 weeks Call for Review << new rule, or substantial changes affecting a large number of examples, if in doubt, use this. >>
 
 ---
 

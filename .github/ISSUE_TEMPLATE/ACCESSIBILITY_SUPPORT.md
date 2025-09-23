@@ -16,7 +16,7 @@ assignees: ''
 
 ## Examples
 
-### Test case 1 ...
+### Example 1 ...
 
 (( Add example here ))
 

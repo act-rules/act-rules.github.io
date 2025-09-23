@@ -165,7 +165,7 @@ The description should:
 
 > _For example: "This page has a `title` element with content."_
 
-For a detailed description on what to write examples for see [example design](../test-cases). For more details, see [ACT Rules Format: examples](https://www.w3.org/TR/act-rules-format/#examples).
+For a detailed description on what to include in examples, see [example design](../examples). For more details, see [ACT Rules Format: examples](https://www.w3.org/TR/act-rules-format/#examples).
 
 ## Listed conditions
 

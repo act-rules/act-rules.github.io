@@ -3,7 +3,7 @@ const getMarkdownAstNodesOfType = require('../../utils/get-markdown-ast-nodes-of
 
 describeRule('testcase has heading', ({ filename, markdownAST }) => {
 	/**
-	 * get all headings of example examples (eg: #### Failed Example 1)
+	 * get all headings of examples (eg: #### Failed Example 1)
 	 */
 	const testcaseHeadings = getMarkdownAstNodesOfType(markdownAST, 'heading')
 		.filter(({ depth, children }) => {

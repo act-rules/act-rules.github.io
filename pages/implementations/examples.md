@@ -2,7 +2,7 @@
 title: Examples
 ---
 
-All ACT rules include a number of examples, which are designed for easy consumption by accessibility test tools and test methodologies. examples are updated regularly as part of rule writing. All examples are described in a JSON file:
+All ACT rules include a number of examples, which are designed for easy consumption by accessibility test tools and test methodologies. Examples are updated regularly as part of rule writing. All examples are described in a JSON file:
 
  <a class='btn' href='https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases.json'>
 	See the Examples JSON

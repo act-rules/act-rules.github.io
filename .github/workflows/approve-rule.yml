@@ -9,6 +9,21 @@ on:
       branch:
         description: 'Target branch name (new or existing)'
         required: true
+      change1:
+        description: 'Change 1 (only for updating approved rules)'
+        required: false
+      change2:
+        description: 'Change 2 (leave blank if not needed)'
+        required: false
+      change3:
+        description: 'Change 3'
+        required: false
+      change4:
+        description: 'Change 3'
+        required: false
+      change5:
+        description: 'Change 3'
+        required: false
 
 jobs:
   dispatch:
@@ -38,4 +53,12 @@ jobs:
           git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
           git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
       - name: Set rule to approved
-        run: npx zx .github/scripts/approve-rule.mjs --ruleId "${{ github.event.inputs.ruleId }}" --branch "${{ github.event.inputs.branch }}"
+        run: |
+          npx zx .github/scripts/approve-rule.mjs \
+            --ruleId "${{ github.event.inputs.ruleId }}" \
+            --branch "${{ github.event.inputs.branch }}" \
+            --changes "${{ github.event.inputs.change1 }}" \
+            --changes "${{ github.event.inputs.change2 }}" \
+            --changes "${{ github.event.inputs.change3 }}" \
+            --changes "${{ github.event.inputs.change4 }}" \
+            --changes "${{ github.event.inputs.change5 }}"

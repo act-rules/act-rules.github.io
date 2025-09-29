@@ -131,6 +131,10 @@
 		{
 			"name": "Helen Burge",
 			"url": "https://github.com/HelenBurge"
+		},
+		{
+			"name": "Kathy Eng",
+			"url": "https://github.com/kengdoj"
 		}
 	],
 	"devDependencies": {

@@ -37,7 +37,7 @@ This rule applies to any [WAI-ARIA global state or property][global] that is spe
 
 ## Expectation
 
-No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
+The test target is not [prohibited][] for the [semantic role][] of the element on which it is specified.
 
 ## Background
 

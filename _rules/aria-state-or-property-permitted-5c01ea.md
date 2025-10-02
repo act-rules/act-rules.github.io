@@ -107,7 +107,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][], except where specifically prohibited.
+The `aria-label` [property][] is a [global][] [property][].
 
 ```html
 <div role="button" aria-label="OK">✓</div>

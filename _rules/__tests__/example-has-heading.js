@@ -1,11 +1,11 @@
 const describeRule = require('../../test-utils/describe-rule')
 const getMarkdownAstNodesOfType = require('../../utils/get-markdown-ast-nodes-of-type')
 
-describeRule('testcase has heading', ({ filename, markdownAST }) => {
+describeRule('example has heading', ({ filename, markdownAST }) => {
 	/**
 	 * get all headings of examples (eg: #### Failed Example 1)
 	 */
-	const testcaseHeadings = getMarkdownAstNodesOfType(markdownAST, 'heading')
+	const exampleHeadings = getMarkdownAstNodesOfType(markdownAST, 'heading')
 		.filter(({ depth, children }) => {
 			return depth === 4 && children && children.length > 0
 		})
@@ -17,13 +17,13 @@ describeRule('testcase has heading', ({ filename, markdownAST }) => {
 	/**
 	 * get code blocks in markdown body
 	 */
-	const testcaseCodeSnippets = getMarkdownAstNodesOfType(markdownAST, 'code')
+	const exampleCodeSnippets = getMarkdownAstNodesOfType(markdownAST, 'code')
 
 	/**
 	 * Check if filename has `id` as a part of the name
 	 */
-	test('each testcase has a heading', () => {
+	test('each example has a heading', () => {
 		const msg = `Not all examples have headings in ${filename}.`
-		expect(testcaseHeadings.length, msg).toBe(testcaseCodeSnippets.length)
+		expect(exampleHeadings.length, msg).toBe(exampleCodeSnippets.length)
 	})
 })

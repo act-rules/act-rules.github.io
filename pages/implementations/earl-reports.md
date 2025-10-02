@@ -37,7 +37,7 @@ Create a single test subject for each [example](../example/). The `TestSubject` 
   "@context": "https://act-rules.github.io/earl-context.json",
   "@graph": [{
     "@type": "TestSubject",
-    "source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+    "source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
     "assertions": [ ... ]
   }]
 }
@@ -67,7 +67,7 @@ The following properties are required for each Assertion:
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",
@@ -93,7 +93,7 @@ For each result, we'll need to know which rule or procedure in the tool reported
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",
@@ -121,7 +121,7 @@ Alternatively, it is possible to specify WCAG 2 success criteria by number inste
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",

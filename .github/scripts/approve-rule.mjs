@@ -24,7 +24,7 @@ if (!argv['skip-clone']) {
 await createOrCheckoutBranch(config, argv.branch);
 await generateApprovedRulePages(config, argv.ruleId);
 await updateRuleVersionsYaml(config, argv.ruleId);
-await approveTestCaseJson(config, argv.ruleId);
+await approveexampleJson(config, argv.ruleId);
 await commitAndPush(config, `Set ${argv.ruleId} to approved`);
 
 async function generateApprovedRulePages({ tmpDir, rulesDir, glossaryDir, testAssetsDir }, ruleId) {
@@ -67,17 +67,17 @@ async function updateRuleVersionsYaml({ tmpDir }, ruleId) {
   console.log(`Added ${ruleId} to rule-versions.yml`);
 }
 
-async function approveTestCaseJson({ tmpDir }, ruleId) {
+async function approveexampleJson({ tmpDir }, ruleId) {
   let exampleCount = 0;
-  const exampleJsonPath = `${tmpDir}content-assets/wcag-act-rules/testcases.json`;
+  const exampleJsonPath = `${tmpDir}content-assets/wcag-act-rules/examples.json`;
   const exampleJson = JSON.parse(fs.readFileSync(exampleJsonPath, 'utf8'));
-  exampleJson.testcases.forEach((example, index) => {
+  exampleJson.examples.forEach((example, index) => {
     if (example.ruleId === ruleId) {
       // Override rather than update so that `approved` isn't at the bottom
-      exampleJson.testcases[index] = { ruleId, approved: true, ...example }
+      exampleJson.examples[index] = { ruleId, approved: true, ...example }
       exampleCount++
     }
   });
-  console.log(`Set ${exampleCount} examples of rule ${ruleId} to be approved in testcases.json`);
+  console.log(`Set ${exampleCount} examples of rule ${ruleId} to be approved in examples.json`);
   fs.writeFileSync(exampleJsonPath, JSON.stringify(exampleJson, null, 2), 'utf8');
 }

@@ -4,7 +4,7 @@ title: Examples
 
 All ACT rules include a number of examples, which are designed for easy consumption by accessibility test tools and test methodologies. Examples are updated regularly as part of rule writing. All examples are described in a JSON file:
 
- <a class='btn' href='https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases.json'>
+ <a class='btn' href='https://www.w3.org/WAI/content-assets/wcag-act-rules/examples.json'>
 	See the Examples JSON
  </a>
 
@@ -12,9 +12,9 @@ All ACT rules include a number of examples, which are designed for easy consumpt
 
 ## Example Format
 
-In the `testcases.json` file, examples are included on the `testcases` array, each with the following properties:
+In the `examples.json` file, examples are included on the `examples` array, each with the following properties:
 
-- `testcaseId`: Hash of the example, changes when the example is updated
+- `exampleId`: Hash of the example, changes when the example is updated
 - `url`: Standalone page containing the example.
 - `expected`: Expected outcome of the example (`passed`, `failed`, or `inapplicable`)
 - `ruleId`: Unique identifier for the rule.
@@ -28,7 +28,7 @@ In the `testcases.json` file, examples are included on the `testcases` array, ea
 	"website": "https://www.w3.org/WAI/standards-guidelines/act/rules/",
 	"license": "https://act-rules.github.io/pages/license/",
 	"count": 1132,
-	"testcases": [
+	"examples": [
 		{
 			"ruleId": "97a4e1",
 			"ruleName": "Button has non-empty accessible name",
@@ -41,10 +41,10 @@ In the `testcases.json` file, examples are included on the `testcases` array, ea
 				}
 			},
 			"expected": "passed",
-			"testcaseId": "a4cc71b0434f71f4ea0069c409f73e0207dfb403",
-			"testcaseTitle": "Passed Example 1",
-			"relativePath": "testcases/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
-			"url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
+			"exampleId": "a4cc71b0434f71f4ea0069c409f73e0207dfb403",
+			"exampleTitle": "Passed Example 1",
+			"relativePath": "examples/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
+			"url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/examples/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
 			"rulePage": "https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/proposed/"
 		}, ... ]
 }

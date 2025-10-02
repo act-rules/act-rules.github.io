@@ -90,7 +90,7 @@ This `a` element is allowed the `aria-label` property.
 
 #### Passed Example 3
 
-This `div` element allowed the `aria-braillelabel` property because its [explicit role][] of `heading` does not prohibit this.
+This `div` element is allowed the `aria-braillelabel` property because its [explicit role][] of `heading` does not prohibit this.
 
 ```html
 <div role="heading" aria-braillelabel="I like bananas">

@@ -29,8 +29,6 @@ acknowledgments:
   previous_authors:
     - Anne Thyme Nørregaard
     - Jean-Yves Moyen
-  assets:
-    - JFK's "We Choose the Moon" speech excerpt is courtesy of NASA.
 ---
 
 ## Applicability

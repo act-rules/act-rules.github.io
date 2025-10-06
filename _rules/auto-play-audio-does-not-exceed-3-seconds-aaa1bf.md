@@ -59,7 +59,7 @@ There are no accessibility support issues known.
 - [G60: Playing a sound that turns off automatically within three seconds](https://www.w3.org/WAI/WCAG22/Techniques/general/G60)
 - [G171: Playing sounds only on user request](https://www.w3.org/WAI/WCAG22/Techniques/general/G171)
 
-## Test Cases
+## Examples
 
 ### Passed
 

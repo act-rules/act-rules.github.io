@@ -89,7 +89,7 @@ There are no accessibility support issues known.
 - [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG22/Techniques/general/G84)
 - [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG22/Techniques/general/G85)
 
-## Test Cases
+## Examples
 
 ### Passed
 

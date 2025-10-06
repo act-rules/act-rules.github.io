@@ -74,7 +74,7 @@ There are no accessibility support issues known.
 
 In all examples, the `html` element has itself a `lang` attribute in order to make sure that the examples satisfy [Success Criterion 3.1.1 Language of Page](https://www.w3.org/TR/WCAG22/#language-of-page). These `html` elements are, however, never applicable because they are not descendants of a `body` element, and the example descriptions do not mention them further.
 
-## Test Cases
+## Examples
 
 ### Passed
 

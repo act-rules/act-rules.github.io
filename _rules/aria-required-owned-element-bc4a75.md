@@ -60,7 +60,7 @@ If the [semantic role][] on the target element is incorrectly used, and any rela
 - [Required Owned Element](https://www.w3.org/TR/wai-aria-1.2/#mustContain)
 - [Owned Element](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -116,7 +116,7 @@ This element with the `tablist` role only owns elements with the `tab` role. The
 
 This element with the `list` role only owns elements with the `listitem` role through the `aria-owns` attribute. The `listitem` role is one of the [required owned elements][] for `list`.
 
-**Note:** This test case follows the definition of [owned by][]. If implemented differently, this definition could cause differences in outcome of this test case.
+**Note:** This example follows the definition of [owned by][]. If implemented differently, this definition could cause differences in outcome of this example.
 
 ```html
 <div role="list" aria-owns="id1"></div>
@@ -238,7 +238,7 @@ This element with the `grid` role only owns elements with the `row` role, but th
 
 This element with the `list` role owns an element with the `tab` role through the `aria-owns` attribute. The `tab` role is not one of the [required owned elements][] for `list`.
 
-**Note:** This test case follows the definition of [owned by][]. If implemented differently, this definition could cause differences in outcome of this test case.
+**Note:** This example follows the definition of [owned by][]. If implemented differently, this definition could cause differences in outcome of this example.
 
 ```html
 <div role="list" aria-owns="id2"></div>

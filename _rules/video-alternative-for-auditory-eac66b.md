@@ -68,7 +68,7 @@ There are no accessibility support issues known.
 - [G87: Providing closed captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G87)
 - [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG22/Techniques/html/H95)
 
-## Test Cases
+## Examples
 
 ### Passed
 

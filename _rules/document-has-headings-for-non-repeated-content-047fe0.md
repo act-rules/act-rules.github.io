@@ -60,9 +60,9 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - [H69: Providing heading elements at the beginning of each section of content][h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-## Test Cases
+## Examples
 
-To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
+To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its examples to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
 
 ### Passed
 

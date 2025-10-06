@@ -71,7 +71,7 @@ However, browser implementations vary. Some browsers expose `<svg>` elements wit
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG22/Techniques/html/H67.html)
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 
-## Test Cases
+## Examples
 
 ### Passed
 

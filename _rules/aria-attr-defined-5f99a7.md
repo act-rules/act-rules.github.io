@@ -48,7 +48,7 @@ There are no accessibility support issues known.
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
-## Test Cases
+## Examples
 
 ### Passed
 

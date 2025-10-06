@@ -77,7 +77,7 @@ The purpose of a control is programmatically identifiable even when its `autocom
 - [Definition: programmatically determined (programmatically determinable)](https://www.w3.org/TR/WCAG22/#dfn-programmatically-determinable)
 - [Autofill](https://html.spec.whatwg.org/#autofill)
 
-## Test Cases
+## Examples
 
 ### Passed
 

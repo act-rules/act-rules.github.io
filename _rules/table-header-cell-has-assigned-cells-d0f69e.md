@@ -56,7 +56,7 @@ This rule assumes that table header cells have a relationship conveyed through p
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]
 
-## Test Cases
+## Examples
 
 ### Passed
 

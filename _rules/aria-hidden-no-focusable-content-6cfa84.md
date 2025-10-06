@@ -66,7 +66,7 @@ Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 - [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
 - [Element with presentational children has no focusable content](presentational-children-no-focusable-content-307n5z.md)
 
-## Test Cases
+## Examples
 
 ### Passed
 

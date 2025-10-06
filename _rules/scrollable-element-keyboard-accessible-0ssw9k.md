@@ -67,7 +67,7 @@ Some browsers restrict scrolling to the [content box](https://drafts.csswg.org/c
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)
 - [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG22/Techniques/general/G202)
 
-## Test Cases
+## Examples
 
 ### Passed
 

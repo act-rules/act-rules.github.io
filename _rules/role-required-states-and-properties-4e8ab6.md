@@ -61,7 +61,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
-## Test Cases
+## Examples
 
 ### Passed
 

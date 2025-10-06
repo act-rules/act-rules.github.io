@@ -70,7 +70,7 @@ There are no accessibility support issues known.
 - [Orientation](https://www.w3.org/TR/css3-mediaqueries/#orientation)
 - [The Transform Rendering Model](https://drafts.csswg.org/css-transforms/#transform-rendering)
 
-## Test Cases
+## Examples
 
 ### Passed
 

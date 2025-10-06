@@ -77,7 +77,7 @@ This rule is closely related to [success criterion 1.4.3 Contrast (Minimum)][sc1
 - [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/WAI/WCAG22/Techniques/failures/F83)
 - [CSS Scoping Module Level 1 (Editor's Draft)](https://drafts.csswg.org/css-scoping/)
 
-## Test Cases
+## Examples
 
 ### Passed
 

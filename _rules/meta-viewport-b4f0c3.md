@@ -79,7 +79,7 @@ The exact way the `content` attribute should be parsed (notably, for error handl
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]
 
-## Test Cases
+## Examples
 
 ### Passed
 

@@ -62,7 +62,7 @@ There are no accessibility support issues known.
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
 - [Understanding Success Criterion 1.4.9: Images of Text (No Exception)][sc1.4.9]
 
-## Test Cases
+## Examples
 
 ### Passed
 

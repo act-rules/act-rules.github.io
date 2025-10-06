@@ -62,7 +62,7 @@ There are no assumptions.
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
 - [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG22/Techniques/html/H65)
 
-## Test Cases
+## Examples
 
 ### Passed
 

@@ -57,7 +57,7 @@ The [MIME type][] of the resource embedded in the `data` attribute impacts how t
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 
-## Test Cases
+## Examples
 
 ### Passed
 

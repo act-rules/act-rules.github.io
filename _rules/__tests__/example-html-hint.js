@@ -30,7 +30,7 @@ const htmlHintRules = {
 	'empty-tag-not-self-closed': false,
 }
 
-describeRule('testcases', ruleData => {
+describeRule('examples', ruleData => {
 	const { frontmatter, body } = ruleData
 	const { id, name, htmlHintIgnore = [] } = frontmatter
 

@@ -49,7 +49,7 @@ Each test target has an [accessible name][] which describes its purpose.
 
 - [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)][usc249]
 - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG22/Techniques/general/G91)

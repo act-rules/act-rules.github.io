@@ -57,7 +57,7 @@ This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.4.5: Images of Text][sc1.4.5]
 - [Understanding Success Criterion 1.4.9: Images of Text (No Exception)][sc1.4.9]

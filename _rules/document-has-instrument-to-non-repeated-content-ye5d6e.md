@@ -57,7 +57,7 @@ This rule assumes that there is at least one [block of repeated content][] befor
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Technique G1: Adding a link at the top of each page that goes directly to the main content area][tech g1]
 - [Technique G123: Adding a link at the beginning of a block of repeated content to go to the end of the block][tech g123]

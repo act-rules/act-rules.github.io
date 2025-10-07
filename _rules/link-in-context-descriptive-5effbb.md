@@ -55,7 +55,7 @@ The [accessible name][] of each target element together with its [programmatical
 - [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/)
 - [Link is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/aizyf1/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html)
 - [Understanding Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html)

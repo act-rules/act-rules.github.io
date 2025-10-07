@@ -56,7 +56,7 @@ Some user agents treat the value of `aria-*` attribute as case-sensitive (even w
 - [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/)
 - [ARIA required ID references exist](https://www.w3.org/WAI/standards-guidelines/act/rules/in6db8/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)

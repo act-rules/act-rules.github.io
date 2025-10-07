@@ -47,7 +47,7 @@ Usually the same [instrument][] removes both [visibility][visible] and [inclusio
 
 There are no accessibility support issues known.
 
-### Other Resources
+### Bibliography
 
 - [Technique SCR28: Using an expandable and collapsible menu to bypass block of content][tech scr28]
 

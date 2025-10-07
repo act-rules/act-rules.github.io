@@ -68,7 +68,7 @@ There are no accessibility support issues known.
 
 - [rule name here](./abc123)
 
-### Other Resources
+### Bibliography
 
 <!-- This section is optional -->
 

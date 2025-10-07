@@ -43,13 +43,13 @@ This rule assumes that elements that are part of [sequential focus navigation][]
 
 Several major browsers ignore the WAI-ARIA requirements on [presentational children][] for most or sometimes all roles, or in presence of focusable content. Since some browsers implement presentational children while others do not, pages failing this rule may only be problematic with some browsers.
 
-This rule is often misunderstood as applying to elements with an _explicit_ role of `presentation`. In fact, this rule only applies to elements which have been given an _implicit_ role of `presentation` through the [presentational children][] mechanism. Similarly, this rule does not apply to elements with `aria-hidden="true"`.
+This rule is often misunderstood as applying to elements with an _explicit_ role of `presentation`.  In fact, this rule only applies to elements which have been given an _implicit_ role of `presentation` through the [presentational children][] mechanism.  Similarly, this rule does not apply to elements with `aria-hidden="true"`.
 
 ### Related rules
 
 - [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/)
 
-### Other Resources
+### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
@@ -97,11 +97,12 @@ This element with the `menuitemcheckbox` role has an `input` element as a descen
 
 #### Passed Example 4
 
-This `<button>` element has an `a` element as a [child][]. The `a` element has no `href` attribute, so it isn't included in [sequential focus navigation][]. So this `button` element passes the rule.
+This `<button>` element has an `a` element as a [child][].  The `a` element has no `href` attribute, so it isn't included in [sequential focus navigation][].  So this `button` element passes the rule.
 
 ```html
 <button><a>button/link</a></button>
 ```
+
 
 ### Failed
 
@@ -139,7 +140,7 @@ This element with the `menuitemcheckbox` role has a checkbox as a child. Because
 
 #### Failed Example 4
 
-This element with the `tab` role contains an `a` element. The `tab` role has [presentational children][]. The `a` element is included in [sequential focus navigation][]. So the element with the `tab` role fails the rule. (This tablist implementation is non-functional for users. It's not meant to function - it's only meant to show roles.)
+This element with the `tab` role contains an `a` element.  The `tab` role has [presentational children][].  The `a` element is included in [sequential focus navigation][].  So the element with the `tab` role fails the rule.  (This tablist implementation is non-functional for users.  It's not meant to function - it's only meant to show roles.)
 
 ```html
 <ul role="tablist">
@@ -151,7 +152,7 @@ This element with the `tab` role contains an `a` element. The `tab` role has [pr
 
 #### Failed Example 5
 
-This element with the `img` role contains an `a` element. The `img` role has [presentational children][]. The `a` element is included in [sequential focus navigation][]. So the element with the `img` role fails the rule.
+This element with the `img` role contains an `a` element.  The `img` role has [presentational children][].  The `a` element is included in [sequential focus navigation][].  So the element with the `img` role fails the rule.
 
 ```html
 <span role="img" aria-label="some ASCII art">****** This ASCII art ******* <a href="#">contains a link.</a></span>
@@ -161,7 +162,7 @@ This element with the `img` role contains an `a` element. The `img` role has [pr
 
 #### Inapplicable Example 1
 
-None of the roles that build this semantic table structure (`table` for `table`, `row` for `tr`, `columnheader` for `th`, and `cell` for `td`) have [presentational children][]. So this rule does not apply to them.
+None of the roles that build this semantic table structure (`table` for `table`, `row` for `tr`, `columnheader` for `th`, and `cell` for `td`) have [presentational children][].  So this rule does not apply to them.
 
 ```html
 <table>
@@ -180,7 +181,7 @@ None of the roles that build this semantic table structure (`table` for `table`,
 
 #### Inapplicable Example 2
 
-This `a` element has a `link` role, which does not have [presentational children][]. So this `a` element does not fail this rule, because it's inapplicable. To have a "focusable element within a focusable element" like this is a bad practice, but this rule doesn't directly check for it.
+This `a` element has a `link` role, which does not have [presentational children][].  So this `a` element does not fail this rule, because it's inapplicable.  To have a "focusable element within a focusable element" like this is a bad practice, but this rule doesn't directly check for it.
 
 ```html
 <a href="https://w3.org"><span tabindex="0">W3C Website</span></a>

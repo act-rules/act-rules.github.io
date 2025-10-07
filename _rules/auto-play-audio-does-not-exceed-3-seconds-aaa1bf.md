@@ -52,7 +52,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Other Resources
+### Bibliography
 
 - [Understanding Success Criterion 1.4.2: Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html)
 - [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG22/Techniques/failures/F23)

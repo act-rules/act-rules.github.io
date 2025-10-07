@@ -76,7 +76,7 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-### Other Resources
+### Bibliography
 
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]

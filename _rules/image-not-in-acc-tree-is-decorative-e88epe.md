@@ -66,7 +66,7 @@ According to the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-
 
 However, browser implementations vary. Some browsers expose `<svg>` elements without accessible names as images without alternative text. To address this, in the passed and inapplicable examples where the `<svg>` element is intended to be purely decorative, the `role="none"` attribute has been added.
 
-### Other Resources
+### Bibliography
 
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG22/Techniques/html/H67.html)
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)

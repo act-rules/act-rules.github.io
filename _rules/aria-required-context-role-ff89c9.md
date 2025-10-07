@@ -58,7 +58,7 @@ The rule assumes that the [explicit role][] of the applicable elements is approp
 - `aria-owns` has limited support in some user agents.
 - There exist some combination of popular browsers and assistive technologies who do not announce correctly relationships based on a mix of [implicit][implicit role] and [explicit][explicit role] roles.
 
-### Other Resources
+### Bibliography
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Required Context Role][]

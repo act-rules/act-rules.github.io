@@ -47,7 +47,7 @@ Most of the time, this rule passes by enclosing the primary content of the page 
 
 Marking content with landmarks is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, this will only benefit users who can actually navigate using landmark roles (such a functionality is usually provided by assistive technologies, but could also be provided by browsers or browsers plugins). Users without any possibility for landmarks navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 
-### Other Resources
+### Bibliography
 
 - [Technique ARIA11: Using ARIA landmarks to identify regions of a page][tech aria11]
 - [ARIA Landmarks Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)

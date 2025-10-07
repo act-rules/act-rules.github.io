@@ -46,7 +46,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Other Resources
+### Bibliography
 
 - [Understanding SC 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
 

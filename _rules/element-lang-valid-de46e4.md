@@ -56,7 +56,7 @@ For each test target, the `lang` [attribute value][] has a [known primary langua
 
 There are differences in how assistive technologies handle unknown and invalid language tags. Some will default to the language of the page, whereas others will default to the closest ancestor with a valid lang attribute.
 
-### Other Resources
+### Bibliography
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG22/Techniques/html/H58)

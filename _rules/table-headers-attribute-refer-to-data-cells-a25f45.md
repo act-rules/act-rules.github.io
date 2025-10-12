@@ -23,6 +23,7 @@ acknowledgments:
   authors:
     - Audrey Maniez
     - Jey Nandakumar
+    - Tom Brunet
   funding:
     - WAI-Tools
 ---
@@ -37,7 +38,7 @@ This rule applies to any `headers` attribute specified on a [`cell`][] within a 
 
 ## Expectation 1
 
-Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, that is a [`cell`][] of the same [`table`][].
+Each target's [attribute value][] is a [set of space separated tokens][]. Each token is the value of the `id` attribute of an element, which is a `th` element of the same [`table`][].
 
 ## Expectation 2
 
@@ -53,7 +54,7 @@ Each target's [attribute value][] is a [set of space separated tokens][], and no
 
 ### Accessibility Support
 
-There are no accessibility support issues known.
+Screen reader support for the `headers` attribute does not follow the HTML specification at this time. Some screen readers will allow `td` elements to be referenced by the `headers` attribute. Other screen readers will ignore the `headers` attribute completely and look for `th` elements within the column. Note also that HTML specification says that the `headers` element must reference a `th` element, but some screen readers allow `headers` to reference semantic headers (i.e., ARIA role defined) also.
 
 ### Other Resources
 
@@ -111,14 +112,14 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 
 #### Passed Example 3
 
-The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
+The `headers` attribute on the data cells in the second row refers to a `th` element with a role of `columnheader` within the same `table`.
 
 ```html
 <table>
 	<thead>
 		<tr>
-			<td role="columnheader" id="header1">Projects</td>
-			<td role="columnheader" id="header2">Objective</td>
+			<th id="header1">Projects</th>
+			<th id="header2">Objective</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -281,7 +282,7 @@ The `td` element has a `headers` attribute referring to its own ID.
 
 #### Failed Example 4
 
-The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which does not have a role of `rowheader` or `columnheader`.
+The `headers` attribute on the data cells in the second row refers to an element inside the same `table` which is not a [`cell`][] nor a `th` element.
 
 ```html
 <table>
@@ -301,6 +302,27 @@ The `headers` attribute on the data cells in the second row refers to an element
 			10%
 		</td>
 	</tr>
+</table>
+```
+
+#### Failed Example 5
+
+The `headers` attribute on the data cells refers to a `td` element within the same `table` and not a `th` element.
+
+```html
+<table>
+	<thead>
+		<tr>
+			<td id="header1">Projects</td>
+			<td id="header2">Objective</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td headers="header1">15%</td>
+			<td headers="header2">10%</td>
+		</tr>
+	</tbody>
 </table>
 ```
 

@@ -55,13 +55,13 @@ This rule relies on browsers and assistive technologies to support leaving out [
 
 **Note:** The required states and properties with implicit values can be found in the Core Accessibility API Mappings 1.1 [Overview of default values for missing required attributes](https://www.w3.org/TR/core-aam-1.1/#authorErrorDefaultValuesTable).
 
-### Bibliography
+### Other Resources
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -121,7 +121,7 @@ This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>
-<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox"/>
+<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox" />
 <ul role="listbox" id="popup_listbox" aria-labelledby="tag_label">
 	<li role="option">Zebra</li>
 	<li role="option" id="selected_option">Zoom</li>
@@ -197,7 +197,7 @@ This `div` does not have a [semantic role](#semantic-role).
 This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
 
 ```html
-<input type="checkbox" role="checkbox" aria-label="Checkbox name"/>
+<input type="checkbox" role="checkbox" aria-label="Checkbox name" />
 ```
 
 #### Inapplicable Example 3

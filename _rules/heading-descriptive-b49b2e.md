@@ -52,7 +52,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 There is currently a screen reader / browser combination which actively exposes empty headings `<hx></hx>` or `<span role="heading" aria-level="x"></span>` when querying the screen reader for the list of page headings. These constructs are not applicable for this rule but can still cause accessibility issues if relying exclusively on that particular combination.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html)
@@ -61,7 +61,7 @@ There is currently a screen reader / browser combination which actively exposes 
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12)
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
-## Test Cases
+## Examples
 
 ### Passed
 

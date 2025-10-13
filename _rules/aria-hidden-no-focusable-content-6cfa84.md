@@ -57,7 +57,7 @@ Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 
 - [Element with presentational children has no focusable content](https://www.w3.org/WAI/standards-guidelines/act/rules/307n5z/)
 
-### Bibliography
+### Other Resources
 
 - [CSS Scoping Module Level 1 (editor's draft)](https://drafts.csswg.org/css-scoping/)
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
@@ -66,7 +66,7 @@ Some user agents treat the value of `aria-hidden` attribute as case-sensitive.
 - [Fourth rule of ARIA use](https://www.w3.org/TR/using-aria/#fourth)
 - [Element with presentational children has no focusable content](presentational-children-no-focusable-content-307n5z.md)
 
-## Test Cases
+## Examples
 
 ### Passed
 

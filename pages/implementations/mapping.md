@@ -20,14 +20,14 @@ An accessibility tool or methodology can also have multiple implementation proce
 
 ## Automated Mapping
 
-The correctness of an implementation procedure is based on the results from running the [test cases](../testcases/) in a tool or test procedure. The three types of test cases have a range of outcomes that are allowed:
+The correctness of an implementation procedure is based on the results from running the [examples](../examples/) in a tool or test procedure. The three types of examples have a range of outcomes that are allowed:
 
-| Test Case Type | Allowed outcomes                       |
-| -------------- | -------------------------------------- |
-| Passed         | `passed`, `cantTell` or `inapplicable` |
-| Failed         | `failed` or `cantTell`                 |
-| Inapplicable   | `inapplicable`, `cantTell` or `passed` |
+| Example Type | Allowed outcomes                       |
+| ------------ | -------------------------------------- |
+| Passed       | `passed`, `cantTell` or `inapplicable` |
+| Failed       | `failed` or `cantTell`                 |
+| Inapplicable | `inapplicable`, `cantTell` or `passed` |
 
-An implementation procedure that returns one of the allowed outcomes for all test cases in an ACT rule is a _correct implementation_. A procedure that has all passed and inapplicable test cases correct, but only has some of the failed test cases correct is called a _partial implementation_. If a tool or methodology has partial implementations for an ACT rule that together get all failed test cases correct, this _implementation procedure set_ is considered a _correct implementation_.
+An implementation procedure that returns one of the allowed outcomes for all examples in an ACT rule is a _correct implementation_. A procedure that has all passed and inapplicable examples correct, but only has some of the failed examples correct is called a _partial implementation_. If a tool or methodology has partial implementations for an ACT rule that together get all failed examples correct, this _implementation procedure set_ is considered a _correct implementation_.
 
 An implementation procedure can be _automated_, _semi-automated_ or _manual_. This is based on the **[mode](https://www.w3.org/TR/EARL10-Schema/#mode)** of the test and whether or not any of the outcomes is `cantTell`. An implementation is _automated_ if the test mode is "[automatic](https://www.w3.org/TR/EARL10-Schema/#automatic)" and none of the outcomes are `cantTell`. An implementation is _manual_ if one or more of the mode is "[manual](https://www.w3.org/TR/EARL10-Schema/#manual)". In all other cases, the procedure is considered _semi-automated_. If the test mode is not provided in the results, the implementation's default will be assumed.

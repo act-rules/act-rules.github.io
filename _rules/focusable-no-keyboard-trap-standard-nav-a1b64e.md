@@ -46,13 +46,13 @@ This rule only requires navigation in one direction (either forward or backward)
 
 Some browsers have settings that will immediately cycle focus back to the web document. This fulfills the expectation because focus can cycle to the browser UI and the browser UI cycles focus back to the web document.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.1.2: No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
 - [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG22/Techniques/general/G21)
 - [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG22/Techniques/failures/F10)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -88,43 +88,43 @@ use [standard keyboard navigation](#standard-keyboard-navigation) using the Esca
 ```html
 <div>Main page content with <a href="#">some link</a></div>
 <div aria-hidden="true">
-    <a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
-        >Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
-    >
+	<a href="#" id="sentinelBefore" style="position:absolute; top:-999em"
+		>Upon receiving focus, this focus sentinel should wrap focus to the bottom of the modal</a
+	>
 </div>
 <div
-    id="sampleModal"
-    role="dialog"
-    aria-label="Sample Modal"
-    aria-modal="true"
-    style="border: solid black 1px; padding: 1rem;"
+	id="sampleModal"
+	role="dialog"
+	aria-label="Sample Modal"
+	aria-modal="true"
+	style="border: solid black 1px; padding: 1rem;"
 >
-    <label>First and last name <input id="dialogFirst"/></label><br />
-    <button id="closeButton">Close button</button>
+	<label>First and last name <input id="dialogFirst"/></label><br />
+	<button id="closeButton">Close button</button>
 </div>
 <div aria-hidden="true">
-    <a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
-        >Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
-    >
+	<a href="#" id="sentinelAfter" style="position:absolute; top:-999em"
+		>Upon receiving focus, this focus sentinel should wrap focus to the top of the modal</a
+	>
 </div>
 <script>
-    window.addEventListener('load', () => {
-        document.getElementById('dialogFirst').focus();
-    })
-    document.getElementById('sentinelBefore').addEventListener('focus', () => {
-        document.getElementById('closeButton').focus()
-    })
-    document.getElementById('sentinelAfter').addEventListener('focus', () => {
-        document.getElementById('dialogFirst').focus()
-    })
-    document.getElementById('closeButton').addEventListener('click', () => {
-        document.getElementById('sampleModal').style.display = 'none'
-    })
-    document.getElementById('sampleModal').addEventListener('keydown', (evt) => {
-        if (evt.key === "Escape") {
-            document.getElementById('sampleModal').style.display = 'none';    
-        }
-    })
+	window.addEventListener('load', () => {
+		document.getElementById('dialogFirst').focus()
+	})
+	document.getElementById('sentinelBefore').addEventListener('focus', () => {
+		document.getElementById('closeButton').focus()
+	})
+	document.getElementById('sentinelAfter').addEventListener('focus', () => {
+		document.getElementById('dialogFirst').focus()
+	})
+	document.getElementById('closeButton').addEventListener('click', () => {
+		document.getElementById('sampleModal').style.display = 'none'
+	})
+	document.getElementById('sampleModal').addEventListener('keydown', evt => {
+		if (evt.key === 'Escape') {
+			document.getElementById('sampleModal').style.display = 'none'
+		}
+	})
 </script>
 ```
 

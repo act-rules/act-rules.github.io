@@ -47,13 +47,13 @@ There are no assumptions.
 
 Some user agents treat the value of `aria-*` attribute as case-sensitive (even when these are not IDs) while some treat them as case-insensitive.
 
-### Bibliography
+### Other Resources
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -201,3 +201,4 @@ There is no `aria-controls` attribute.
 [required by wai-aria]: https://www.w3.org/TR/wai-aria-1.2/#requiredState 'WAI-ARIA Required States and Properties'
 [id reference list]: https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref_list 'WAI-ARIA definition of ID Reference List'
 [id reference]: https://www.w3.org/TR/wai-aria-1.2/#valuetype_idref 'WAI-ARIA definition of ID Reference'
+[namespaced element]: #namespaced-element 'Definition of namespaced element'

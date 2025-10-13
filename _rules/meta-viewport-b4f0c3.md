@@ -71,7 +71,7 @@ Desktop browsers ignore the viewport `meta` element, and most modern mobile brow
 
 The exact way the `content` attribute should be parsed (notably, for error handling) is not fully specified. CSS specification includes a [non-normative parsing algorithm](https://www.w3.org/TR/css-device-adapt-1/#parsing-algorithm). Different user agents may behave differently in some cases.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text)
 - [Understanding Success Criterion 1.4.10: Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow)
@@ -79,7 +79,7 @@ The exact way the `content` attribute should be parsed (notably, for error handl
 - [The initial-scale, minimum-scale, and maximum-scale properties][maximum-scale]
 - [The user-scalable property][user-scalable]
 
-## Test Cases
+## Examples
 
 ### Passed
 

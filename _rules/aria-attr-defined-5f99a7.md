@@ -39,7 +39,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Other Resources
+### Bibliography
 
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
 - [WAI ARIA Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#supportedState)

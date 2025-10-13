@@ -44,7 +44,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Other Resources
+### Bibliography
 
 - [Understanding SC 1.2.1:Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
 - [G158: Providing an alternative for time-based media for audio-only content](https://www.w3.org/WAI/WCAG22/Techniques/general/G158)

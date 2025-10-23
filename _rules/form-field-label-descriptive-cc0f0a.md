@@ -58,7 +58,7 @@ Each test target is positioned and styled so that it has a visual relationship w
 
 ## Expectation 2
 
-All of the test target's labels describe the purpose of the test target.
+Each test target's purpose is described by its labels (from expectation 1).
 
 ## Background
 

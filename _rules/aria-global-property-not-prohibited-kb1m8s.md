@@ -82,7 +82,7 @@ This generic `div` element is allowed the global `aria-live` property.
 
 #### Passed Example 2
 
-This `a` element is allowed the `aria-label` property.
+This `a` element with an [implicit role][] of `link` is allowed the `aria-label` property.
 
 ```html
 <a href="#" aria-label="Previously 100, now 1 euro"> <s>€100</s> / <b>€1</b> </a>

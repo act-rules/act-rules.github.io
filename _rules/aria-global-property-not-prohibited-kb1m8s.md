@@ -68,7 +68,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [WAI-ARIA 1.2, Global States and Properties](https://www.w3.org/TR/wai-aria-1.2/#global_states)
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 
-## Test Cases
+## Examples
 
 ### Passed
 

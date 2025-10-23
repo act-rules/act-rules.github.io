@@ -52,7 +52,9 @@ and where both the element and the [programmatic label][] are [visible][].
 
 ## Expectation 1
 
-Each test target has at least one label.
+Each test target is positioned and styled so that it has a visual relationship with at least one [label][].
+
+**Note**: Labels are not just adjacent text. They can include captions or headings for groups of controls or adjacent buttons, and they may be non-textual content.
 
 ## Expectation 2
 

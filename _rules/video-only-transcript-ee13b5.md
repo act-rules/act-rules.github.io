@@ -12,7 +12,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript. 
+    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     secondary: This success criterion is **less strict** than this rule. This is because this criterion does not require a transcript when the audio-only or video-only is a media alternative for text and is clearly labeled as such. Some of the failed examples may satisfy this success criterion.
 
@@ -145,22 +145,6 @@ This `video` element, which has no audio, has an incorrect text transcript avail
 ```
 
 #### Failed Example 3
-
-This `video` element, which has no audio, has a text transcript available on the same page, but the transcript is not [visible][].
-
-```html
-<html lang="en">
-<video controls>
-  <source src="/test-assets/rabbit-video/silent.mp4" type="video/mp4"></source>
-  <source src="/test-assets/rabbit-video/silent.webm" type="video/webm"></source>
-</video>
-<p style="text-indent: -9999px;">This video shows a giant fat rabbit climbing out of a hole in the ground.
-He stretches, yawns, and then starts walking.
-Then he stops to scratch his bottom.</p>
-</html>
-```
-
-#### Failed Example 4
 
 This `video` element, which has no audio, has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
 

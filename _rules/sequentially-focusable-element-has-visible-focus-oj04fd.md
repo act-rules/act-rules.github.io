@@ -135,7 +135,6 @@ Each of these three [focusable][] elements has a blue square in front of it when
 #### Passed Example 5
 
 Each of these three [focusable][] elements uses a `::before` pseudo-element with a black arrow as its `content`, which appears in front of the element when it is [focused][]. The arrow's `hsl` value (`hsl(0, 0%, 0%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the arrow appears.
-<body>
 
 ```html
 <style>

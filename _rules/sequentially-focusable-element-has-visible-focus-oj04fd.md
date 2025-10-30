@@ -186,10 +186,10 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 
 ```html
 <style>
-body {background:#FFF;}
-a:focus {outline-color:#FFF}
+	body {background: white;}
+	a:focus {outline-color: white;}
 </style>
-<a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
+<a href="https://act-rules.github.io/">ACT rules</a>
 ```
 
 #### Failed Example 3
@@ -247,7 +247,7 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 
 <ul class="nav">
 	<li>
-		<a href="#">Home</a>
+		<a href="#">ACT Rules</a>
 		<div class="fly-out">
 			<ul>
 				<li>Link 1</li>
@@ -257,7 +257,7 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 		</div>
 	</li>
 	<li>
-		<a href="#">About</a>
+		<a href="#">WCAG</a>
 		<div class="fly-out">
 			<ul>
 				<li>Link 1</li>
@@ -267,7 +267,7 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 		</div>
 	</li>
 	<li>
-		<a href="#">Contact</a>
+		<a href="#">WAI-ARIA</a>
 		<div class="fly-out">
 			<ul>
 				<li>Link 1</li>

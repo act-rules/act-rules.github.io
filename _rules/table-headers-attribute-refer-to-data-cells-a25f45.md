@@ -53,7 +53,8 @@ Each target's [attribute value][] is a [set of space separated tokens][], and no
 
 ### Accessibility Support
 
-There are no accessibility support issues known.
+Different screen reader and browser combinations may fail to correctly associate table headers and cells when using the headers and id attributes.
+While these constructs are technically valid, relying solely on them can still lead to accessibility issues depending on the user’s setup.
 
 ### Other Resources
 
@@ -112,6 +113,7 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 #### Passed Example 3
 
 The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
+Although this construct does not conform to the [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-td) or [HTML specifications](https://html.spec.whatwg.org/#attributes-common-to-td-and-th-elements), it behaves the same as using a `th` element instead of a `td` element with a role of `columnheader`, on all popular browser / screen reader combinations, at the time of writing.
 
 ```html
 <table>

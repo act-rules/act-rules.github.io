@@ -192,17 +192,6 @@ This `video` element does not play for longer than 3 seconds.
 
 #### Inapplicable Example 4
 
-This `video` element does not autoplay.
-
-```html
-<video>
-	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
-</video>
-```
-
-#### Inapplicable Example 5
-
 This `video` element autoplays but paused.
 
 ```html
@@ -214,6 +203,17 @@ This `video` element autoplays but paused.
 <script>
   document.getElementById('paused').pause();
 </script>
+```
+
+#### Inapplicable Example 5
+
+This `video` element does not play automatically.
+
+```html
+<video>
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+</video>
 ```
 
 #### Inapplicable Example 6

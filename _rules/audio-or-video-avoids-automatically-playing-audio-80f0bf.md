@@ -101,7 +101,7 @@ This `audio` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Passed Example 2
 
-This `video` element is longer than 3 seconds and autoplays, and has an [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element is longer than 3 seconds, autoplays, and has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <head>

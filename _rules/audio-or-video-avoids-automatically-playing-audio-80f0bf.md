@@ -192,7 +192,7 @@ This `video` element does not play for longer than 3 seconds.
 
 #### Inapplicable Example 4
 
-This `video` element autoplays but paused.
+This `video` element autoplays but is paused.
 
 ```html
 <video id="paused" autoplay>

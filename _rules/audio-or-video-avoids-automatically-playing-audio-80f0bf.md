@@ -57,7 +57,8 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
 - **not muted**: the element has a `muted` [attribute value][] of `false`; and
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **duration**: the element has a [media resource][] lasting more than 3 seconds and that contains audio.
+- **play time**: the element has a [media resource][] that contains audio and that stops no more than 3 seconds
+This can be changed by authors, for example using a [temporal media fragment URI](https://www.w3.org/TR/media-frags/#naming-time) (`#t`) in the source URI.
 
 ## Expectation
 

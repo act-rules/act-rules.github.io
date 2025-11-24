@@ -45,7 +45,7 @@ The list of roles in the applicability is derived by taking all the roles from [
 - have [semantic roles][] that inherit from the `input`, `menuitem` or `select` role; and
 - are form field controls (this notably excludes `menu`, `option` or `tree`).
 
-This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`. These should be tested separately. Because certain input types such as date and color have no semantic role, these are listed as a separate item in the applicability.
+This rule does not test other control-like roles such as `button` and `menuitem`, because these do not inherit from `input` or `select`; these should be tested separately. This rule tests explicitly input types such as date and color because they have no semantic role, but still require an accessible name.
 
 This rule does not map to [3.3.2 Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) as there are sufficient techniques within 3.3.2 that don't need the elements to have an [accessible name][]. For example "[G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G131)" **AND** "[G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG22/Techniques/general/G162)" would be sufficient.
 

@@ -50,7 +50,7 @@ Each target element has an [accessible name][] that is neither empty (`""`), nor
 
 ## Background
 
-Contrarily to `img` elements, an empty `alt` attribute (`alt=""`) does not make an image button decorative; image buttons have a button role and are therefore exposed as interactive elements. Consequently, an empty `alt` attribute does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
+Unlike for `img` elements, an empty `alt` attribute (`alt=""`) does not make an image button decorative; image buttons have a button role and are therefore exposed as interactive elements. An empty `alt` attribute therefore does not provide a "usable string" for image buttons and the computation defaults to other means of providing a name, as defined in [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation).
 
 ### Assumptions
 
@@ -59,20 +59,20 @@ Contrarily to `img` elements, an empty `alt` attribute (`alt=""`) does not make 
 
 ### Accessibility Support
 
-The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first non-empty name, but some user agents and assistive technologies combinations stop at the first existing one, even if empty.
+The [input type="image" Accessible Name Computation algorithm](https://www.w3.org/TR/html-aam/#input-type-image-accessible-name-computation) uses the first defined attribute, even if the attribute has an empty value. In contrast, some user agents and assistive technologies ignore empty attributes.
 
 ### Related rules
 
 - [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG22/Techniques/html/H36)
 - [HTML Accessibility API Mappings for computing the accessible name of image buttons](https://www.w3.org/TR/html-aam-1.0/#input-type-image)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -178,6 +178,6 @@ The image button is ignored by assistive technologies because it is not [include
 ```
 
 [accessible name]: #accessible-name 'Definition of Accessible Name'
-[attribute value]: #attribute-value:enumerated 'Definition of Attribute Value'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [html aam image button]: https://www.w3.org/TR/html-aam-1.0/#input-type-image 'HTML Accessibility API Mapping, image button'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

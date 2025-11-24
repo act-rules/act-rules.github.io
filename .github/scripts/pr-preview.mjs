@@ -5,8 +5,8 @@ import { config, cloneWcagActRules, commitAndPush } from './commons.mjs'
 await cloneWcagActRules(config);
 await generateProposedRulePages(config);
 await generateexamples(config);
-const commitMessage = (await $`git log -1 --pretty=%B`).stdout;
-await commitAndPush(config, commitMessage);
+// const commitMessage = (await $`git log -1 --pretty=%B`).stdout;
+// await commitAndPush(config, commitMessage);
 
 async function generateProposedRulePages({ tmpDir, rulesDir, glossaryDir, testAssetsDir }) {
   await $`node ./node_modules/act-tools/dist/cli/rule-transform.js \

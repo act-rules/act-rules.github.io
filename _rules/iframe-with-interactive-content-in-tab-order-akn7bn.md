@@ -4,9 +4,14 @@ name: Iframe with interactive elements is not excluded from tab-order
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that `iframe` elements which contain an interactive (tabbable) element are not excluded from sequential focus navigation.
+  This rule checks that `iframe` elements which contain keyboard focusable elements are not excluded from sequential focus navigation.
 accessibility_requirements:
   wcag20:2.1.1: # Keyboard (A)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+  wcag20:2.1.3: # Keyboard (No exceptions) (AAA)
     forConformance: true
     failed: not satisfied
     passed: further testing needed
@@ -54,12 +59,12 @@ This rule assumes that interactive content inside `iframe` elements is used to p
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.1.1: Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
 - [WCAG Technique G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG22/Techniques/general/G202)
 
-## Test Cases
+## Examples
 
 ### Passed
 

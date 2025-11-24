@@ -41,11 +41,7 @@ Each target element has an [accessible name][] that is not empty (`""`).
 
 Testing that the [accessible name][] describes the purpose of the `object` element is not part of this rule and must be tested separately.
 
-Non-supported media formats make screen readers render the text content of the element instead of other attributes.
-
-`Object` elements without an accessible name are ignored by assistive technologies unless they have an [explicit role][].
-
-When the object resource is not loaded, the fallback content is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video."
+When the object resource is not loaded, the fallback content, if present, is rendered as shown in the Inapplicable Example: "This `object` element does not need an accessible name because it loads no image, audio, or video.". When screen readers encounter an unsupported media format they will also use the fallback content instead of other attributes.
 
 ### Assumptions
 
@@ -57,11 +53,11 @@ Some screen readers announce `object` elements even if they do not have an acces
 
 The [MIME type][] of the resource embedded in the `data` attribute impacts how the [accessible name][] of the `object` is computed. For example, `object` embedding [image MIME type][] may use their `alt` attribute to compute their [accessible name][], but `object` embedding [audio or video MIME types][] may not. An `object` does not officially support the use of an `alt` so this may behave differently according to the browser used.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 
-## Test Cases
+## Examples
 
 ### Passed
 

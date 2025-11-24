@@ -53,9 +53,10 @@ Each target's [attribute value][] is a [set of space separated tokens][], and no
 
 ### Accessibility Support
 
-There are no accessibility support issues known.
+Different screen reader and browser combinations may fail to correctly associate table headers and cells when using the headers and id attributes.
+While these constructs are technically valid, relying solely on them can still lead to accessibility issues depending on the user’s setup.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
@@ -64,7 +65,7 @@ There are no accessibility support issues known.
 * `headers` attribute referencing elements that are non-existent or not in the table are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 * `headers` attribute referencing to the cell itself are ignored when [assigning header cells (step 3, first case, point 2)](https://html.spec.whatwg.org/multipage/tables.html#algorithm-for-assigning-header-cells).
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -112,6 +113,7 @@ The `headers` attribute on the cell refers to a `th` element within the same `ta
 #### Passed Example 3
 
 The `headers` attribute on the data cells in the second row refers to a `td` element with a role of `columnheader` within the same `table`.
+Although this construct does not conform to the [ARIA in HTML](https://www.w3.org/TR/html-aria/#el-td) or [HTML specifications](https://html.spec.whatwg.org/#attributes-common-to-td-and-th-elements), it behaves the same as using a `th` element instead of a `td` element with a role of `columnheader`, on all popular browser / screen reader combinations, at the time of writing.
 
 ```html
 <table>
@@ -371,7 +373,7 @@ The `table` is not [visible][] in page.
 The rule applies only to `headers` attribute within a `table` element.
 
 ```html
-<div role="table">
+<div role="table" aria-label="Grades">
 	<div role="row">
 		<div role="columnheader" id="header1">Projects</div>
 		<div role="columnheader" id="header2">Exams</div>
@@ -405,7 +407,7 @@ The `table` is not [included in the accessibility tree][].
 This `table` doesn't have a role of `table`, `grid` or `treegrid`.
 
 ```html
-<table role="region">
+<table role="heading" aria-level="1">
 	<td id="self" headers="self">World</td>
 </table>
 ```

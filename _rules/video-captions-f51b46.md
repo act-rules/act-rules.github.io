@@ -58,14 +58,14 @@ This rule assumes that the video element is used to play a video (for example, n
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.2.2: Captions (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
 - [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G93)
 - [G87: Providing closed captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G87)
 - [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG22/Techniques/html/H95)
 
-## Test Cases
+## Examples
 
 ### Passed
 

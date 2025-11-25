@@ -153,6 +153,16 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 </html>
 ```
 
+#### Passed Example 7
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date` and describes its purpose.
+
+```html
+<html lang="en">
+	<label>Date of birth:<input id="dob" type="date" name="dob"/></label>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -215,6 +225,16 @@ These `button` and `span` elements are both [programmatic labels][programmatic l
 	<span id="search" style="display: none">Search</span>
 	<input type="text" name="search" aria-labelledby="submit search" />
 	<button id="submit">Go</button>
+</html>
+```
+
+#### Failed Example 6
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date`, but the label text "Info" does not describe the purpose of the form field.
+
+```html
+<html lang="en">
+	<label>Info:<input id="dob" type="date" name="dob"/></label>
 </html>
 ```
 

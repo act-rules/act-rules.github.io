@@ -17,7 +17,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.3.1: # Info and Relationships (A)
-    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.
+    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.  
   wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
     secondary: This success criterion is **less strict** than this rule. This is because this criterion does not require a transcript when the audio-only or video-only is a media alternative for text and is clearly labeled as such. Some of the failed examples may satisfy this success criterion.
 input_aspects:
@@ -128,12 +128,7 @@ A video element with an associated track element that contains captions for all 
 	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
 		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
 	</video>
-	<p>
-		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse
-		doesn't work, is frustrating. (A computer user's mouse breaks when it falls off the desk.) Many people use only the
-		keyboard to navigate websites. Either through preference or circumstance. (A person wearing a sling on her arm
-		typing with one hand.)
-	</p>
+	<p>	Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse doesn't work, is frustrating. (A computer user's mouse breaks when it falls off the desk.) Many people use only the keyboard to navigate websites. Either through preference or 		circumstance. (A person wearing a sling on her arm typing with one hand.) </p>
 </html>
 ```
 

@@ -134,7 +134,7 @@
 		}
 	],
 	"devDependencies": {
-		"act-tools": "github:act-rules/act-tools",
+		"act-tools": "github:act-rules/act-tools#main",
 		"aria-query": "^4.2.2",
 		"dictionary-en-us": "^2.2.1",
 		"fastmatter": "^2.1.1",
@@ -146,7 +146,7 @@
 		"jest": "^27.5.1",
 		"jest-27-expect-message": "^1.1.0",
 		"jest-extended": "^4.0.2",
-		"js-yaml": "^3.14.1",
+		"js-yaml": "^4.1.1",
 		"lint-staged": "^9.5.0",
 		"marked": "^4.0.10",
 		"moment": "^2.29.4",
@@ -164,7 +164,7 @@
 		"unified": "^9.2.1",
 		"unist-util-visit": "^2.0.3",
 		"vfile-reporter": "^6.0.2",
-		"zx": "^7.2.1"
+		"zx": "^8.8.5"
 	},
 	"keywords": [
 		"WCAG",
@@ -177,7 +177,8 @@
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
 		"test": "jest --coverage",
-		"build:wai": "zx .github/scripts/wai-build.mjs"
+		"build:wai": "zx .github/scripts/wai-build.mjs",
+		"pr:preview": "zx .github/scripts/pr-preview.mjs"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",
 	"repository": {

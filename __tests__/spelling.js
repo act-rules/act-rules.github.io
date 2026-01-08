@@ -109,7 +109,7 @@ function getCuratedMarkdownBody(body, options = {}) {
  * @returns {String[]}
  */
 function getSpellIgnored() {
-	const ignoreConfigured = yaml.safeLoad(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'), {
+	const ignoreConfigured = yaml.load(fs.readFileSync('./__tests__/spelling-ignore.yml', 'utf8'), {
 		schema: yaml.FAILSAFE_SCHEMA,
 	}) //added schema due to entries starting with a non-zero digit
 

@@ -151,6 +151,8 @@
 - href
 - src
 - srcset
+- aria-braillelabel
+- aria-brailleroledescription
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -239,6 +241,7 @@
 - unitless
 - luminance
 - disambiguated
+- superclass
 - grey
 
 # Parts of Unicode
@@ -251,7 +254,7 @@
 - 4E00–9FFF
 
 # JSON attributes/ metadata/ methods
-- testcases
+- examples
 - ruleId
 - ruleName
 - rulePage
@@ -294,3 +297,6 @@
 - A-lum-min
 - B-lum-max
 - B-lum-min
+
+#Browsers Internal Roles
+- SvgRoot

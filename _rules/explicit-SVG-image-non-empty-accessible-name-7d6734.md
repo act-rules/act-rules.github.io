@@ -45,7 +45,7 @@ Browser and assistive technology support for SVG `<title>` and `<desc>` elements
 
 Until browser support for the [SVG Accessibility API Mappings][] is more consistent it is recommended to explicitly remove decorative `<svg>` elements from the accessibility tree.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 - [SVG Accessibility API Mappings (working draft)][svg accessibility api mappings]
@@ -54,7 +54,7 @@ Until browser support for the [SVG Accessibility API Mappings][] is more consist
 - [ARIA6: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6)
 - [ARIA10: Using aria-labelledby to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA10)
 
-## Test Cases
+## Examples
 
 ### Passed
 

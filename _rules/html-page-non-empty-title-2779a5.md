@@ -68,14 +68,14 @@ There are no accessibility support issues known.
 
 - [HTML page title is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/c4a8a4/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.2: Page Titled](https://www.w3.org/WAI/WCAG22/Understanding/page-titled)
 - [G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG22/Techniques/general/G88)
 - [H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG22/Techniques/html/H25)
 - [HTML Specification - The `title` element](https://html.spec.whatwg.org/#the-title-element)
 
-## Test Cases
+## Examples
 
 ### Passed
 

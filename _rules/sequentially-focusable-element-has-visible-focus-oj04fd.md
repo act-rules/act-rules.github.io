@@ -186,8 +186,12 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 
 ```html
 <style>
-	body {background: white;}
-	a:focus {outline-color: white;}
+	body {
+		background: white;
+	}
+	a:focus {
+		outline-color: white;
+	}
 </style>
 <a href="https://act-rules.github.io/">ACT rules</a>
 ```

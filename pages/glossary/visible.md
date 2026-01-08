@@ -14,4 +14,4 @@ Content is considered _visible_ if making it fully transparent would result in a
 
 [Content is defined in WCAG](https://www.w3.org/TR/WCAG22/#dfn-content).
 
-For more details, see [examples of visible](https://act-rules.github.io/pages/examples/visible/).
+For more details, see [examples of visible](https://act-rules.github.io/pages/examples/exuqdg/).

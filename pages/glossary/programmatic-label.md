@@ -17,4 +17,4 @@ For more details, see [examples of programmatic label][].
 **Note**: a given element may have more than one programmatic label.
 
 [labeled control]: https://html.spec.whatwg.org/multipage/forms.html#labeled-control 'Definition of labeled control'
-[examples of programmatic label]: https://act-rules.github.io/pages/examples/programmatic-label/
+[examples of programmatic label]: https://www.w3.org/WAI/standards-guidelines/act/rules/terms/programmatic-label/examples/

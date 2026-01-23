@@ -34,21 +34,12 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [programmatic label][] of an element which has one of the following [semantic roles][semantic role]:
+This rule applies to any [programmatic label][] of an element for which one of the following is true:
 
-- `checkbox`
-- `combobox`
-- `listbox`
-- `menuitemcheckbox`
-- `menuitemradio`
-- `radio`
-- `searchbox`
-- `slider`
-- `spinbutton`
-- `switch`
-- `textbox`
+- the element has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`; or
+- the element is an `input` with no [semantic role][] and a `type` [attribute value][] of `color`, `date`, `datetime-local`, `file`, `month`, `password`, `time`, or `week`.
 
-and where both the element and the [programmatic label][] are [visible][].
+In addition, both the element and the [programmatic label][] must be [visible][].
 
 ## Expectation
 
@@ -58,8 +49,10 @@ Each test target, together with its [visual context][], describes the purpose of
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
 
-- inherit from the `input`, `menuitem` or `select` role, and
+- inherit from the `input`, `menuitem` or `select` role; and
 - are form field controls (this notably excludes `menu`, `option` or `tree`).
+
+This rule also applies to `input` elements whose `type` [attribute value][] is `color`, `date`, `datetime-local`, `file`, `month`, `password`, `time`, or `week`. These input types have no semantic role but still require a descriptive [programmatic label][] so users can understand their purpose.
 
 [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
 
@@ -160,6 +153,16 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 </html>
 ```
 
+#### Passed Example 7
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date` and describes its purpose.
+
+```html
+<html lang="en">
+	<label>Date of birth:<input id="dob" type="date" name="dob"/></label>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -222,6 +225,16 @@ These `button` and `span` elements are both [programmatic labels][programmatic l
 	<span id="search" style="display: none">Search</span>
 	<input type="text" name="search" aria-labelledby="submit search" />
 	<button id="submit">Go</button>
+</html>
+```
+
+#### Failed Example 6
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date`, but the label text "Info" does not describe the purpose of the form field.
+
+```html
+<html lang="en">
+	<label>Info:<input id="dob" type="date" name="dob"/></label>
 </html>
 ```
 

@@ -275,6 +275,7 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.2'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG22/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

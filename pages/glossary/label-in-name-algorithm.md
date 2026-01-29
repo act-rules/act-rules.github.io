@@ -14,13 +14,13 @@ Let 'label' be the [visible inner text][] of the target element.  Let 'name' be 
 
 Sub-algorithm to tokenize a string:
 
-- Do Unicode [case folding][] on the string then convert it to [normalization form KD][].
-- For each character that either a) represents non-text content, or b) isn't a letter or a digit: replace that character with a space character.
+1. Do Unicode [case folding][] on the string then convert it to [normalization form KD][].
+1. For each character that either a) represents non-text content, or b) isn't a letter or a digit: replace that character with a space character.
     - For a) Judgment of "non-text" probably can't be fully automated.  For example: "X" for "close" probably can be automated, but presumably there are more cases than this.
     - For b) Use the Unicode classes Letter, Mark, and "Number, Decimal Digit [Nd]". (This will exclude hyphens, punctuation, emoji, and more.)
-- Remove parentheses (also known as round brackets) and all characters that are between an opening and closing parenthesis.
+1. Remove parentheses (also known as round brackets) and all characters that are between an opening and closing parenthesis.
     - Don't do this for square brackets, nor braces.
-- Split the string into a list of strings, one string per word, according to the word segmentation rules for the inherited programmatic language.
+1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the inherited programmatic language.
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].
         - If the input string contains nothing but [whitespace][] before this operation: return an empty list.

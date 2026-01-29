@@ -273,21 +273,13 @@ This link's [accessible name][] contains two tokens (according to the[label in n
 
 #### Failed Example 5
 
-This link has an [accessible name][] which contains a hyphen. The [label in name algorithm][] breaks up words on hyphens. So it turns "non-standard" into two tokens: "non" and "standard". So this fails the rule.
-
-```html
-<a href="#" aria-label="non-standard">nonstandard</a>
-```
-
-#### Failed Example 6
-
 The rule has no special handling for acronyms or initialisms.
 
 ```html
 <a aria-label="WCAG" href="#">W C A G</a>
 ```
 
-#### Failed Example 7
+#### Failed Example 6
 
 The rule has no special handling for abbreviations.
 
@@ -295,7 +287,7 @@ The rule has no special handling for abbreviations.
 <a aria-label="University Avenue" href="#">University Ave.</a>
 ```
 
-#### Failed Example 8
+#### Failed Example 7
 
 This link has [visible inner text][] with mathematical symbols and is not contained within the [accessible name][] because the mathematical symbols are represented as English words (not digits) in the accessible name. This is [explicitly mentioned in WCAG](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name#mathematical-expressions-and-formulae).
 
@@ -303,7 +295,7 @@ This link has [visible inner text][] with mathematical symbols and is not contai
 <a href="/" aria-label="Proof of two multiplied by two is four">Proof of 2&times;2=4</a>
 ```
 
-#### Failed Example 9
+#### Failed Example 8
 
 Similar to the previous example. This rule has no special handling for converting mathematical symbols into words, or vice versa.
 
@@ -311,7 +303,7 @@ Similar to the previous example. This rule has no special handling for convertin
 <button aria-label="11 times 3 equals 33">11×3=33</button>
 ```
 
-#### Failed Example 10
+#### Failed Example 9
 
 This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the sublist check part of the [label in name algorithm][], and so it fails the rule.
 
@@ -319,7 +311,7 @@ This button's accessible name contains the same tokens that are in the visible l
 <button aria-label="how are you"><span>you</span><span>how</span><span>are</span></button>
 ```
 
-#### Failed Example 11
+#### Failed Example 10
 
 This button's accessible name contains the word "the" in the middle of it, which causes the sublist check of the [label in name algorithm][] (in particular: the "consecutive" requirement of that check) to fail. So it fails the rule.
 
@@ -327,7 +319,7 @@ This button's accessible name contains the word "the" in the middle of it, which
 <button aria-label="Download the specification">Download specification</button>
 ```
 
-#### Failed Example 12
+#### Failed Example 11
 
 This link's accessible name contains the same digits that are in the visible label, and in the same order. But they have different spaces and punctuation between them, so they are considered separate tokens. So this fails the rule.
 
@@ -335,7 +327,7 @@ This link's accessible name contains the same digits that are in the visible lab
 <a aria-label="1 2 3. 4 5 6. 7 8 9 0" href="tel:1234567890">123.456.7890</a>
 ```
 
-#### Failed Example 13
+#### Failed Example 12
 
 This rule has no special handling which tries to guess when number have the same semantic meaning. It operates on tokens only.
 
@@ -343,7 +335,7 @@ This rule has no special handling which tries to guess when number have the same
 <a href="#2021" aria-label="20 21">2021</a>
 ```
 
-#### Failed Example 14
+#### Failed Example 13
 
 Similar to the previous example.
 
@@ -351,7 +343,7 @@ Similar to the previous example.
 <a aria-label="fibonacci: 0 1 1 2 3 5 8 13 21 34">fibonacci: 0112358132134</a>
 ```
 
-#### Failed Example 15
+#### Failed Example 14
 
 This rule has no special handling for converting digits into words, or vice versa.
 
@@ -359,7 +351,7 @@ This rule has no special handling for converting digits into words, or vice vers
 <a href="#2021" aria-label="twenty twenty-one">two thousand twenty-one</a>
 ```
 
-#### Failed Example 16
+#### Failed Example 15
 
 (Same as above.) This rule has no special handling for converting digits into words, or vice versa.
 
@@ -367,7 +359,7 @@ This rule has no special handling for converting digits into words, or vice vers
 <a aria-label="two zero two three" href="#">2 0 2 3</a>
 ```
 
-#### Failed Example 17
+#### Failed Example 16
 
 This rule has no special handling for digits that appear next to letters with no spaces in between.
 
@@ -375,7 +367,7 @@ This rule has no special handling for digits that appear next to letters with no
 <a aria-label="1a" href="#">1</a>
 ```
 
-#### Failed Example 18
+#### Failed Example 17
 
 The definition of [visible inner text][] doesn't treat text any differently if it's excluded from the accessibility tree with aria-hidden. So this rule effectively ignores aria-hidden. So this element fails the rule.
 
@@ -395,7 +387,7 @@ This `nav` is not a widget, so the [visible inner text][] does not need to match
 
 #### Inapplicable Example 2
 
-This email text field does not need to have its [visible inner text][] match the [accessible name][]. The content of a textfield shows its value instead of its label; it does not [support name from content][supports name from content]. The label is usually adjacent to the textfield instead.
+This email text field does not need to have its [visible inner text][] match the [accessible name][]. The content of a text field shows its value instead of its label; it does not [support name from content][supports name from content]. The label is usually adjacent to the text field instead.
 
 ```html
 <div>E-mail</div>

@@ -50,13 +50,13 @@ This rule assumes that table header cells have a relationship conveyed through p
 - Table markup and header cell association is not well supported by some popular assistive technologies. Passing this rule can still cause issues for users of those assistive technologies.
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Information and relationships][sc1.3.1]
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43)
 - [Forming relationships between data cells and header cells][assigned]
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -80,7 +80,7 @@ This `th` element has an assigned `td` element.
 Each of the 2 `span` elements with role of `columnheader` has assigned `span` elements with a role of `cell`.
 
 ```html
-<div role="table">
+<div role="table" aria-label="Temperatures">
 	<div role="rowgroup">
 		<div role="row">
 			<span role="columnheader">Month</span>
@@ -125,7 +125,7 @@ Each of the 2 `th` elements has an assigned `td` element because this `td` eleme
 Each of the 4 `th` elements has an assigned `td` element, within the same `table` element having a [semantic role][] of `grid`.
 
 ```html
-<table role="grid">
+<table role="grid" aria-label="Meal times">
 	<thead>
 		<tr>
 			<td></td>

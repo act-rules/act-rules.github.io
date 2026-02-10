@@ -154,6 +154,8 @@
 - href
 - src
 - srcset
+- aria-braillelabel
+- aria-brailleroledescription
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -266,7 +268,7 @@
 - KD
 
 # JSON attributes/ metadata/ methods
-- testcases
+- examples
 - ruleId
 - ruleName
 - rulePage
@@ -309,3 +311,6 @@
 - A-lum-min
 - B-lum-max
 - B-lum-min
+
+#Browsers Internal Roles
+- SvgRoot

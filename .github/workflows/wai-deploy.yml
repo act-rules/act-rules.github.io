@@ -9,12 +9,12 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '16'
+          node-version: '24'
           cache: npm
-      - uses: actions/cache@v3
+      - uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -23,6 +23,9 @@ jobs:
       - run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
       - name: Install dependencies
         run: npm ci
+      # Since we control this we can safely just always use the latest
+      - name: Install act-tools latest
+        run: npm install github:act-rules/act-tools#main
       - name: Configure git
         run: |
           git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"

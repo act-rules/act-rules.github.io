@@ -38,9 +38,8 @@ This rule applies to any element for which all the following is true:
 - The element has [visible text content][]; and
 - The element has an `aria-label` or `aria-labelledby` attribute.
 - The element does not contain any [rendered image resources][rendered image resource].
-- If there are any words that appear in both the element's accessible name and its visible label, then for each such pair, the same spelling and hyphenation is used in both places. 
+- If there are any words that appear in both the element's accessible name and its visible label, then for each such pair, the same spelling and hyphenation is used in both places.
 - Both the element's accessible name and its visible label do not contain any abbreviations.
-
 
 ## Expectation
 
@@ -60,18 +59,18 @@ This rule assumes that the visible label isn't rearranged with CSS so that it ap
 
 This rule assumes that the visible label doesn't use CSS to add whitespace where none exists in the DOM.
 
-This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that the algorithm's treatment of parentheses is appropriate in the given human language.  "Parentheses" are also known as "round brackets".  The algorithm's treatment of parentheses is to remove them and all characters within them.  This assumption can be reworded as: content within parentheses can be ignored.  This assumption is almost always true in English.  It is known to be often false in other languages, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks).  Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
+This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that the algorithm's treatment of parentheses is appropriate in the given human language. "Parentheses" are also known as "round brackets". The algorithm's treatment of parentheses is to remove them and all characters within them. This assumption can be reworded as: content within parentheses can be ignored. This assumption is almost always true in English. It is known to be often false in other languages, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
 
 ### Accessibility Support
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.5.3: Label in Name][understand253]
 - [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG22/Techniques/general/G208)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -178,7 +177,9 @@ The [visible inner text][] is "Download specification". The words "the" and "giz
 The [visible inner text][] is "Download specification", which includes a space character between the two words due to the second clause of the definition of [visible inner text of a text node][].
 
 ```html
-<a aria-label="Download specification" href="#"><span>Download</span><span id="space"> </span><span>specification</span></a>
+<a aria-label="Download specification" href="#"
+	><span>Download</span><span id="space"> </span><span>specification</span></a
+>
 ```
 
 #### Passed Example 12
@@ -409,8 +410,6 @@ This link's label contains an abbreviation, so it is not applicable.
 ```html
 <a aria-label="University Avenue" href="#">University Ave.</a>
 ```
-
-
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [label in name algorithm]: #label-in-name-algorithm 'Definition of Label in Name Algorithm'

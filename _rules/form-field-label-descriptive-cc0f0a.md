@@ -34,21 +34,12 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [programmatic label][] of an element which has one of the following [semantic roles][semantic role]:
+This rule applies to any [programmatic label][] of an element for which one of the following is true:
 
-- `checkbox`
-- `combobox`
-- `listbox`
-- `menuitemcheckbox`
-- `menuitemradio`
-- `radio`
-- `searchbox`
-- `slider`
-- `spinbutton`
-- `switch`
-- `textbox`
+- the element has one of the following [semantic roles][semantic role]: `checkbox`, `combobox`, `listbox`, `menuitemcheckbox`, `menuitemradio`, `radio`, `searchbox`, `slider`, `spinbutton`, `switch`, `textbox`; or
+- the element is an `input` with no [semantic role][] and a `type` [attribute value][] of `color`, `date`, `datetime-local`, `file`, `month`, `password`, `time`, or `week`.
 
-and where both the element and the [programmatic label][] are [visible][].
+In addition, both the element and the [programmatic label][] must be [visible][].
 
 ## Expectation
 
@@ -58,8 +49,10 @@ Each test target, together with its [visual context][], describes the purpose of
 
 The list of applicable [semantic roles][semantic role] is derived by taking all the [ARIA 1.2][aria12] roles that:
 
-- inherit from the `input`, `menuitem` or `select` role, and
+- inherit from the `input`, `menuitem` or `select` role; and
 - are form field controls (this notably excludes `menu`, `option` or `tree`).
+
+This rule also applies to `input` elements whose `type` [attribute value][] is `color`, `date`, `datetime-local`, `file`, `month`, `password`, `time`, or `week`. These input types have no semantic role but still require a descriptive [programmatic label][] so users can understand their purpose.
 
 [Labels][label] in WCAG are not restricted to the `label` element of HTML and can be any element. This rule is only concerned about actual `label` elements, and elements that are programmatically marked as [labels][label] via the `aria-labelledby` attribute.
 
@@ -76,7 +69,7 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 
 - Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some elements can have one of the applicable [semantic roles][semantic role] and fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-### Bibliography
+### Other Resources
 
 - [Accessible Rich Internet Applications (WAI-ARIA) 1.2][aria12]
 - [Understanding Success Criterion 2.4.6: Headings and Labels][usc246]
@@ -85,7 +78,7 @@ Having a [label][] which is not included in the [accessible name][] is a violati
 - [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44)
 - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -160,6 +153,16 @@ Both the `div` and the `span` elements are [programmatic labels][programmatic la
 </html>
 ```
 
+#### Passed Example 7
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date` and describes its purpose.
+
+```html
+<html lang="en">
+	<label>Date of birth:<input id="dob" type="date" name="dob"/></label>
+</html>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -225,6 +228,16 @@ These `button` and `span` elements are both [programmatic labels][programmatic l
 </html>
 ```
 
+#### Failed Example 6
+
+The `label` element is a [programmatic label][] of the `input` element whose `type` attribute value is `date`, but the label text "Info" does not describe the purpose of the form field.
+
+```html
+<html lang="en">
+	<label>Info:<input id="dob" type="date" name="dob"/></label>
+</html>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -262,6 +275,7 @@ The `label` is a [visible][] [programmatic label][] of the `input` element. Howe
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [aria12]: https://www.w3.org/TR/wai-aria-1.2/ 'Accessible Rich Internet Applications 1.2'
+[attribute value]: #attribute-value 'Definition of Attribute Value'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
 [label]: https://www.w3.org/TR/WCAG22/#dfn-labels 'Definition of label'
 [presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'

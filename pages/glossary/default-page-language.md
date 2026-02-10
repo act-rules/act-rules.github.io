@@ -17,4 +17,4 @@ For more details, see [examples of default language][].
 [document]: https://dom.spec.whatwg.org/#document-element 'DOM document element, as of 2020/06/05'
 [most common language]: #most-common-element-language 'Definition of Most Common Language of an Element'
 [web page]: #web-page-html 'Definition of Web Page (HTML)'
-[examples of default language]: https://act-rules.github.io/pages/examples/element-language/
+[examples of default language]: https://www.w3.org/WAI/standards-guidelines/act/rules/terms/element-language/examples/

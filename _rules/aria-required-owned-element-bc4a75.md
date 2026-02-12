@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [semantic role][] with [required owned elements][], except if the element has an [inclusive ancestor][] in the accessibility tree with an `aria-busy` [attribute value][] of `true`.
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][] [semantic role][] with [required owned elements][].
 
 ## Expectation
 
@@ -45,7 +45,9 @@ The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][w
 
 ### Assumptions
 
-If the [semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships).
+- If the [semantic role][] on the target element is incorrectly used, and any relationships between elements are already programmatically determinable, failing this rule may not result in accessibility issues for users of assistive technologies, and it should then not be considered a failure under [WCAG success criterion 1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships).
+
+- Adding `aria-busy` to an element does not create an exception to this rule. The purpose of `aria-busy` is to communicate that a live region is in the process of updating, so that screen readers can hold off an announcing a change until the update is completed. It is not intended to communicating a loading state, or allow placing loading messages inside elements that aren't fully rendered.
 
 ### Accessibility Support
 
@@ -312,6 +314,16 @@ This element with the implicit `list` role owns an element with the implicit `ge
 </ul>
 ```
 
+#### Failed Example 11
+
+Even though element with the `menu` role has an `aria-busy` attribute set to `true`, that does not permit using other roles as children.
+
+```html
+<ul role="menu" aria-busy="true">
+	Loading
+</ul>
+```
+
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -338,16 +350,6 @@ This element with the `progressbar` role does not need [required owned elements]
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Completion">20 %</div>
-```
-
-#### Inapplicable Example 4
-
-This element with the `menu` role has an `aria-busy` attribute set to `true`.
-
-```html
-<ul role="menu" aria-busy="true">
-	Loading
-</ul>
 ```
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'

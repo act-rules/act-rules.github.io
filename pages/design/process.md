@@ -210,10 +210,10 @@ To give implementors of ACT Rules time to update implementation data, pull reque
 
 1. Pull requests in [act-rules/act-rules.github.io][] can be merged Monday through Thursday.
 2. Implementors have Friday, Saturday or Sunday to update implementation data.
-3. Monday morning a publication candidate is created as a pull request in [w3c/wcag-act-rules][], for review by WAI staff.
-4. Somewhere that week, usually Monday or Tuesday, the publication candidate is approved and published to the WAI website.
+3. Monday morning, a pull request for updating the WAI website is created in [w3c/wcag-act-rules][], for review by WAI staff.
+4. The publication candidate is approved and published to the WAI website. This usually happens sometime during the week, typically Monday or Tuesday. For more information, see the [publication workflow](https://wai-website-theme.netlify.app/workflow/).
 
-For substantial changes, implementors may request a publication be skipped to allow extra time for implementation. This should be done on the publication candidate pull request. It is up to discretion of W3C staff to decide whether the publication is skipped.
+For substantial changes, implementors may request that a publication be skipped to allow extra time for implementation. This should be done on the pull request in [w3c/wcag-act-rules][]. It is up at the discretion of W3C staff to decide whether the publication is skipped.
 
 ## Rejected
 

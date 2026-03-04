@@ -141,7 +141,7 @@ This button has [visible inner text][] that, according to the [label in name alg
 
 #### Passed Example 8
 
-Similar to the previous example.
+Similar to the previous example, showing how the [label in name algorithm][] handles whitespace.
 
 ```html
 <a href="#" aria-label="Some article by John Doe">

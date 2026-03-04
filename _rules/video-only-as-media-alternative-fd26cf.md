@@ -45,11 +45,11 @@ A mechanism is available to start the video and that the video element is not si
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
 
-## Test Cases
+## Examples
 
 ### Passed
 

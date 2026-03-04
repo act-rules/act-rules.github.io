@@ -39,7 +39,7 @@ acknowledgments:
 
 This rule applies to any [WAI-ARIA state or property][] that is specified on an [HTML or SVG element][namespaced element] that is [included in the accessibility tree][].
 
-## Expectation 1
+## Expectation
 
 For each test target, one of the following is true:
 
@@ -47,15 +47,13 @@ For each test target, one of the following is true:
 - **semantic role**: the test target is an [inherited][], [supported][], or [required][] [state][] or [property][] of the [semantic role][] of the element on which the test target is specified; or
 - **language feature**: the test target is specified on an [HTML element][namespaced element] and is allowed on that element. Which ARIA states or properties may be used on which element is described in [ARIA in HTML](https://w3c.github.io/html-aria/).
 
-## Expectation 2
-
-No test target is [prohibited][] on the [semantic role][] of the element on which it is specified.
-
 ## Background
 
-The presence of prohibited ARIA attributes is often the result of a developer using an incorrect role, or a misunderstanding of the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that a state or property which should exist is missing.
+The use of ARIA attributes that are not supported by a role is often the result of a developer using either an incorrect role, or misunderstanding the attribute. These attributes are ignored by browsers and other assistive technologies. This often means that information that should exist is missing to assistive technology users.
 
 In HTML, there are language features that do not have corresponding implicit WAI-ARIA semantics. As per [ARIA in HTML](https://www.w3.org/TR/html-aria/), those elements can have [global states or properties][global]. Some of those elements can also have [inherited][], [supported][], or [required][] [states][state] or [properties][property] that correspond to a [WAI-ARIA role](https://www.w3.org/TR/wai-aria-1.2/#introroles). For example, the `audio` element has no corresponding ARIA semantics but it can have [inherited][], [supported][], or [required][] [states][state] or [properties][property] of the [`application` role](https://www.w3.org/TR/wai-aria-1.2/#application).
+
+Note that required WAI-ARIA states or properties for a role may change with the advance of the WAI-ARIA specifications. For example, both aria-expanded and aria-controls were required in [ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/#combobox) for combobox role, but the aria-controls was removed from required states or properties in [ARIA 1.3](https://www.w3.org/TR/wai-aria-1.3/#combobox). The examples in this rule follow [ARIA 1.3](https://www.w3.org/TR/wai-aria-1.3/#combobox).
 
 Assessing the value of the attribute is out of scope for this rule.
 
@@ -69,9 +67,10 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 
 ### Related rules
 
+- [ARIA global properties not used where prohibited](https://www.w3.org/WAI/standards-guidelines/act/rules/kb1m8s/)
 - [ARIA state or property has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 4.1.1: Parsing](https://www.w3.org/WAI/WCAG22/Understanding/parsing.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
@@ -80,7 +79,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
 - [Document conformance requirements for use of ARIA attributes in HTML](https://www.w3.org/TR/html-aria/#docconformance)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -110,7 +109,7 @@ The `aria-busy` [state][] is a [global][] [state][] that is [supported][] by all
 
 #### Passed Example 4
 
-The `aria-label` [property][] is a [global][] [property][]. It is allowed on any [semantic role][], except where specifically prohibited.
+The `aria-label` [property][] is a [global][] [property][].
 
 ```html
 <div role="button" aria-label="OK">✓</div>
@@ -126,31 +125,31 @@ The `aria-checked` [state][] is [required][] for the [semantic][semantic role] `
 
 #### Passed Example 6
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-controls="id1" aria-expanded="false">My combobox</div>
+<div role="combobox" aria-controls="id1" aria-expanded="false" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 7
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value are still applicable to this rule.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`.
 
 ```html
-<div role="combobox" aria-expanded="false" aria-controls>My combobox</div>
+<div role="combobox" aria-expanded="false" aria-controls="id1" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 8
 
-The `aria-controls` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with empty value (specified as an empty string) are still applicable to this rule.
+The `aria-expanded` [property][] is [required][] for the [semantic][semantic role] `combobox`. [WAI-ARIA states and properties][wai-aria state or property] with `undefined` value are still applicable to this rule.
 
 ```html
-<div role="combobox" aria-expanded="false" aria-controls="">My combobox</div>
+<div role="combobox" aria-expanded="undefined" aria-controls="id1" aria-label="My combobox">My combobox</div>
 ```
 
 #### Passed Example 9
 
-The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], except where specifically prohibited, including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
+The `aria-label` [property][] is [global][]. It is allowed on any [semantic role][], including roles from the [WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0). This rule is applicable to SVG elements.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" role="graphics-object" width="100" height="100" aria-label="yellow circle">
@@ -220,22 +219,6 @@ The `aria-orientation` property may not be used on `audio` element, nor can it b
 <audio src="/test-assets/moon-audio/moon-speech.mp3" controls aria-orientation="horizontal"></audio>
 ```
 
-#### Failed Example 3
-
-The `aria-label` property is [prohibited][] for an element with a `generic` role.
-
-```html
-<div aria-label="Bananas"></div>
-```
-
-#### Failed Example 4
-
-The `aria-label` property is [prohibited][] for an element with a `paragraph` role.
-
-```html
-<div role="paragraph" aria-label="Bananas"></div>
-```
-
 ### Inapplicable
 
 #### Inapplicable Example 1
@@ -243,7 +226,7 @@ The `aria-label` property is [prohibited][] for an element with a `paragraph` ro
 This `div` element has no [WAI-ARIA state or property][].
 
 ```html
-<div role="region">A region of content</div>
+<div role="group">A group of content</div>
 ```
 
 #### Inapplicable Example 2
@@ -269,4 +252,3 @@ This `div` element is not [included in the accessibility tree][], hence its [WAI
 [supported]: https://www.w3.org/TR/wai-aria-1.2/#supportedState 'Definition of Supported ARIA States and Properties'
 [wai-aria state or property]: https://www.w3.org/TR/wai-aria-1.2/#state_prop_def 'Definition of ARIA States and Properties'
 [namespaced element]: #namespaced-element
-[prohibited]: https://www.w3.org/TR/wai-aria-1.2/#prohibitedattributes 'WAI-ARIA 1.2 Definition of Prohibited States and Properties'

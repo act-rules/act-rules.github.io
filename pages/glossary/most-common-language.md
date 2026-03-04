@@ -16,4 +16,4 @@ For more details, see [examples of most common language][].
 
 [language subtag registry]: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry 'Language Subtag Registry'
 [text inheriting its programmatic language]: #text-inheriting-language 'Definition of Text Inheriting its Programmatic Language from an Element'
-[examples of most common language]: https://act-rules.github.io/pages/examples/element-language/
+[examples of most common language]: https://www.w3.org/WAI/standards-guidelines/act/rules/terms/element-language/examples/

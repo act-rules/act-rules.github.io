@@ -39,7 +39,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
 - [WAI ARIA Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#supportedState)
@@ -48,7 +48,7 @@ There are no accessibility support issues known.
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -65,7 +65,7 @@ This `article` element has an `aria-atomic` attribute which is defined in [WAI-A
 This `div` element with a role of `dialog` has an `aria-modal` attribute which is defined in [WAI-ARIA Specifications][].
 
 ```html
-<div role="dialog" aria-modal="true">Contains modal content...</div>
+<div role="dialog" aria-modal="true" aria-label="Modal title">Contains modal content...</div>
 ```
 
 #### Passed Example 3

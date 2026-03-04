@@ -55,12 +55,12 @@ This rule assumes that the language of each test target can be correctly determi
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding SC 1.2.1: Audio-only and Video-only (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
 - [G158: Providing an alternative for time-based media for audio-only content](https://www.w3.org/WAI/WCAG22/Techniques/general/G158)
 
-## Test Cases
+## Examples
 
 ### Passed
 

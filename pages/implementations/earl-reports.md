@@ -6,7 +6,7 @@ title: Reporting Format
 
 If you developed an accessibility tool or a testing methodology and would like to have your implementation included in the WAI website, there are two ways you can do so.
 
-1. If you have a tool that can return a data format, you will need to run your tests against the [test cases](../testcases/) and [submit a report](../reporting/).
+1. If you have a tool that can return a data format, you will need to run your tests against the [examples](../examples/) and [submit a report](../reporting/).
 2. If you have a manual test methodology where you fill results into some report template or semi-automated tool, you [can use the ACT Implementor tool](https://act-implementor.netlify.app/#/) instead to produce implementation reports.
 
 ## Understanding the Reporting format
@@ -26,10 +26,10 @@ On the top level object, there should be a `@context` and `@graph`. The `@contex
 
 ### Test Subject
 
-Create a single test subject for each [test case](../testcase/). The `TestSubject` has three required properties:
+Create a single test subject for each [example](../example/). The `TestSubject` has three required properties:
 
 - `@type`: Must be `TestSubject`, to distinguish it from other data types that might exist in an EARL report.
-- `source`: This must be the URL of the test case.
+- `source`: This must be the URL of the example.
 - `assertions`: This contains an array of `Assertion` objects
 
 ```json
@@ -37,7 +37,7 @@ Create a single test subject for each [test case](../testcase/). The `TestSubjec
   "@context": "https://act-rules.github.io/earl-context.json",
   "@graph": [{
     "@type": "TestSubject",
-    "source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+    "source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
     "assertions": [ ... ]
   }]
 }
@@ -47,7 +47,7 @@ Create a single test subject for each [test case](../testcase/). The `TestSubjec
 
 ### Assertion
 
-Add an `Assertion` object to the `assertions` array for each outcome provided by any of the rules / test procedures in your implementation. Generally, test cases are atomic enough that every implemented rule would only have a single outcome, although in some cases (such as duplicate IDs) a rule may return more than one outcome. In such cases, there should be multiple Assertions, one for each outcome.
+Add an `Assertion` object to the `assertions` array for each outcome provided by any of the rules / test procedures in your implementation. Generally, examples are atomic enough that every implemented rule would only have a single outcome, although in some cases (such as duplicate IDs) a rule may return more than one outcome. In such cases, there should be multiple Assertions, one for each outcome.
 
 The following properties are required for each Assertion:
 
@@ -55,11 +55,11 @@ The following properties are required for each Assertion:
 - `test`: See [Test Criterion](#test-criterion).
 - `result.outcome`: One of the following values:
 
-  - `earl:passed`: A node in the test case passed the rule
-  - `earl:failed`: A node in the test case failed the rule
-  - `earl:inapplicable`: The rule is inapplicable in the test case
+  - `earl:passed`: A node in the example passed the rule
+  - `earl:failed`: A node in the example failed the rule
+  - `earl:inapplicable`: The rule is inapplicable in the example
   - `earl:cantTell`: The tool could not be sure whether or not a node passed of failed the rule
-  - `earl:untested`: The rule was not executed on the test case
+  - `earl:untested`: The rule was not executed on the example
 
 ```json
 {
@@ -67,7 +67,7 @@ The following properties are required for each Assertion:
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",
@@ -93,7 +93,7 @@ For each result, we'll need to know which rule or procedure in the tool reported
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",
@@ -121,7 +121,7 @@ Alternatively, it is possible to specify WCAG 2 success criteria by number inste
 	"@graph": [
 		{
 			"@type": "TestSubject",
-			"source": "https://act-rules.github.io/testcases/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
+			"source": "https://act-rules.github.io/examples/a1b64e/6c3ac31577c3cb2d968fc26c4075dd533b5513fc.html",
 			"assertions": [
 				{
 					"@type": "Assertion",

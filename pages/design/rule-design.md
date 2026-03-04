@@ -16,7 +16,7 @@ The WCAG-ACT-RULES-CG rule design builds on WCAG 2.x and its supporting document
 
 6. **[Accessibility Support](#accessibility-support)**: Provide information on any known feature support issues from assistive technologies or user agents.
 
-7. **[Test cases](#test-cases)**: Define a range of code examples that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
+7. **[examples](#examples)**: Define a range of code snippets that demonstrate pass, fail and inapplicable outcomes for readers and for validating implementations.
 
 8. **Glossary**: A list of any defined terms used within the rule file.
 
@@ -105,9 +105,27 @@ While optional, this can provide information on authors, previous authors, and o
 
 Applicability describes which (elements of) web pages should be tested using the rule. These elements are known as test targets. Applicability must be written in plain language, as well-formed grammatically correct sentences, so that it can be used by QA testers. Applicability must rely on well defined properties of the technologies that are tested. For instance, a rule may be applicable to all `video` elements, but it can not be applicable to all `object` elements used to show video, unless the term "video" is further defined.
 
-Use objective, unambiguous definitions within applicability. Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. The intent here is to ensure repeatability of the rule. Not everything in WCAG testing is entirely repeatable, but when it comes to rule applicability, this is a hard requirement.
+The applicability of a rule must be unambiguous and should be written using objective statements and in plain language. Finding objective definitions to use in rules can be difficult, if not outright impossible in some cases. New in version 1.1 of the ACT rules format is the ability to write rules using a subjective applicability. For rules that include a subjectivity, it is preferred to include a list of features (either in line or as part of a definition) that describes how an element should be evaluated for matching the accessibility (see the "Styled as a Heading" example in the [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability)). Additionally, in the past, exception statements have been included in the Expectation that can now be directly placed in the applicability. Placing exceptions in the Applicability is now the recommended approach when the test subject is inapplicable, instead of artificially making the test subject pass the rule by having the subjectivity in the expectation (see the "Subjectivity in Applicability vs Expectation" example below). As a reminder, the intent here is to ensure repeatability of the rule.
 
 > _For example:_ A rule testing that page titles are descriptive should only apply to specific `title` elements and this could be stated as _"This rule applies to the first HTML `title` element that is a descendant of the `html` element of a web page, and contains children that are text nodes that are not only whitespace."_.
+
+### Subjectivity in Applicability vs Expectation Examples
+
+With the development of ACT Rules format 1.1, subjectivity is now allowed in both the Applicability and the Expectation. However, depending on the rule, it can be difficult to know if a subjective phrase belongs in the Applicability or the Expectation. While we will continue to rely on the best judgment of the rule authors, most S.C. contain language suggesting where the subjectivity be placed. Lastly, at the bottom of this section, we provide some concrete examples of each of the cases below to help illustrate our point.
+
+When determining the placement of subjectivity in an ACT rule, the main question to answer is whether the success criterion would apply at all to the given content or if the content would satisfy the criteria via a normative exception. For example,
+
+- For SC 1.4.3 Contrast Minimum, non-text content or text that is not expressing something in human language (like an emoji) is not evaluated by the success criterion and so should not be applicable in an ACT rule for 1.4.3
+- For SC 1.4.3 Contrast Minimum, logos are a normative exception to the success criterion, so they should be included as a passed exception to the Expectation for an ACT rule testing 1.4.3.
+- For SC 2.5.5 Target Size (Enhanced), a link inside of a paragraph of text and a pin on a map would fit the normative exceptions of "Inline" and "Essential" respectively, and so should be included as passed exceptions in the Expectation.
+- For SC 3.3.1 Error Identification, a page should not be applicable for an ACT rule until a form field error indicator exists, thus the presence of a form field error indicator should be included in the rule's applicability.
+
+When making these determinations, it may be helpful to consider the following circumstances:
+
+- If a page contained only the specific example, would you expect it to pass or be deemed inapplicable for an ACT rule? Passing would imply the subjectivity belongs in the Expectation, while being inapplicable suggests it belongs in the Applicability.
+- Does the formulation of applicability and expectation lead to test cases passing when they should be deemed inapplicable? If so, subjectivity likely needs to be added to the Applicability (possibility moved from the Expectation to the Applicability)
+
+As a final reminder, the end goal of allowing subjectivity in the applicability is to allow the creation of rules that were previously impossible and to prevent rules from creating passed examples that are inapplicable to the success criteria the rule is intended to test.
 
 For more details, see [ACT Rules Format: Applicability](https://www.w3.org/TR/act-rules-format/#applicability).
 
@@ -147,13 +165,13 @@ While optional, this provides background information relevant to the development
 
 For more details, see [ACT Rules Format: Background](https://www.w3.org/TR/act-rules-format/#background).
 
-## Test cases
+## Examples
 
-The test cases are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
+The examples are snippets of code that help with understanding and can be used for validating implementations of the rule. There must be at least one example for **pass**, **fail** and **inapplicable** outcomes, with reasonable coverage of all logically possible cases. All examples should demonstrate good practice, with allowances for omitting code not directly relevant for the rule, so as to be succinct. Additionally, a failing example should clearly fail in only one demonstrated aspect relevant for that rule.
 
 > _For example_: a passing example of a page with a `title` element might omit the `lang` attribute on the `html` element, and the `head` and `body` elements in order to be succinct. A failing example might also omit the `title` element. Meanwhile a passing example of a descriptive `title` element would include the `lang` attribute because it is relevant.
 
-Each test case must be named in the format "Passed/Failed/Inapplicable Example X", where X is a number sequentially increasing for each of the three kinds of outcome, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
+Each example must be named in the format "Passed/Failed/Inapplicable Example X", where X is a number sequentially increasing for each of the three kinds of outcome, _e.g. "Passed Example 1"_. Each must also include a brief description that explains why the example has the outcome it claims to have.
 
 The description should:
 
@@ -165,7 +183,7 @@ The description should:
 
 > _For example: "This page has a `title` element with content."_
 
-For a detailed description on what to write test cases for see [test case design](../test-cases). For more details, see [ACT Rules Format: Test Cases](https://www.w3.org/TR/act-rules-format/#test-cases).
+For a detailed description on what to include in examples, see [example design](../examples). For more details, see [ACT Rules Format: examples](https://www.w3.org/TR/act-rules-format/#examples).
 
 ## Listed conditions
 
@@ -186,6 +204,6 @@ This phrasing is designed to be easily readable, but may not work in every situa
 - Put things in order of how common they likely are. Even for unordered lists, this helps understand the list.
 - Avoid nested conditional lists. These are difficult to read. Instead try to restructure the conditionals. This can be done by either moving some of the list items into the condition phrase, or putting all the subconditions in a single phrase in the condition item. In expectations, use multiple conditions.
 - Group similar concepts into the same list item. For example, if something can have `absolute` or `fixed`, these two are closely related so putting them down as one item helps limit the number of conditions.
-- Write test cases that check each condition of the list individually. This helps understand why that specific condition is needed.
-- Refer to the labels of the condition in the test case description to make the link explicit.
-- Order the test cases in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that test cases are also ordered by importance.
+- Write examples that check each condition of the list individually. This helps understand why that specific condition is needed.
+- Refer to the labels of the condition in the example description to make the link explicit.
+- Order the examples in the same order than the conditions they check, with conditions ordered from most important to least important, this implies that examples are also ordered by importance.

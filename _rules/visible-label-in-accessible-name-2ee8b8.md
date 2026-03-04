@@ -320,7 +320,7 @@ This link's accessible name contains the same digits that are in the visible lab
 
 #### Failed Example 11
 
-This rule has no special handling which tries to guess when number have the same semantic meaning. It operates on tokens only.
+This rule has no special handling which tries to guess when numbers have the same semantic meaning. It operates on tokens only.
 
 ```html
 <a href="#2021" aria-label="20 21">2021</a>

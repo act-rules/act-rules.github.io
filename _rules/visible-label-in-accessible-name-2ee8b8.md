@@ -214,7 +214,7 @@ This example shows that the [label in name algorithm][] handles many kinds of wh
 
 #### Passed Example 14
 
-This example passes the rule because "YYYY-MM-DD" is in brackets. Text in brackets is removed by the [label in name algorithm][], because it is not normally spoken by speech-input users.
+This example passes the rule because "YYYY-MM-DD" is in round brackets. Text in round brackets is removed by the [label in name algorithm][], because it is not normally spoken by speech-input users.
 
 ```html
 <button aria-label="Search by date">Search by date (YYYY-MM-DD)</button>

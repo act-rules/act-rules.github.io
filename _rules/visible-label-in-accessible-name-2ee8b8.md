@@ -410,7 +410,13 @@ This link's label contains an abbreviation, so it is not applicable.
 <a aria-label="University Avenue" href="#">University Ave.</a>
 ```
 
+#### Inapplicable Example 6
 
+This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation.  So it's not applicable.
+
+```html
+<a href="#" aria-label="non-standard">nonstandard</a>
+```
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [label in name algorithm]: #label-in-name-algorithm 'Definition of Label in Name Algorithm'

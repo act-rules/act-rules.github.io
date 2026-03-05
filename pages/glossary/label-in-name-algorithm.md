@@ -29,7 +29,8 @@ Sub-algorithm to tokenize a string:
 
 Then do the check: is the tokenized 'label' a sublist of the tokenized 'name'?
 - This 'sublist' check has these properties:
-    - It checks whether elements are consecutive or not.  That is: it checks for a substring, in the computer science sense of the term.  Not a subsequence.
+    - Each string comparison (between a list element in the tokenized label and a list element in the tokenized name) is a simple string equality check.
+    - It checks whether list elements are consecutive or not.  That is: it checks for a substring, in the computer science sense of the term.  Not a subsequence.
     - An empty list is a sublist of any list.
 
 If the answer is "yes" (that is: the tokenized 'label' is a sublist of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".

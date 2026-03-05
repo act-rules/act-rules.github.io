@@ -256,7 +256,7 @@ This button has [visible inner text][] that is only partially contained within t
 
 #### Failed Example 3
 
-This button has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy our [label in name algorithm][], which works on full words. So this fails the rule.
+This button has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy the [label in name algorithm][], which works on full words. So this fails the rule.
 
 ```html
 <a href="#" aria-label="Discover Italy">Discover It</a>
@@ -352,7 +352,7 @@ This rule has no special handling for converting digits into words, or vice vers
 
 #### Failed Example 15
 
-This rule has no special handling for digits that appear next to letters with no spaces in between.
+The [label in name algorithm][] works on full words.  That is: it requires that each full word in the visible label ("1" in this case) is equal to a full word in the accessible name ("1a" in this case).  Those two words - "1" and "1a" - are not equal, so this element fails the rule.
 
 ```html
 <a aria-label="1a" href="#">1</a>

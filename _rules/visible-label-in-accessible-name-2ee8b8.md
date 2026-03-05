@@ -37,7 +37,6 @@ This rule applies to any element for which all the following is true:
 - The element has a [semantic role][] that is a [widget][widget role] that [supports name from content][]; and
 - The element has [visible text content][]; and
 - The element has an `aria-label` or `aria-labelledby` attribute.
-- The element does not contain any [rendered image resources][rendered image resource].
 - If there are any words that appear in both the element's accessible name and its visible label, then for each such pair, the same spelling and hyphenation is used in both places.
 - Both the element's accessible name and its visible label do not contain any abbreviations.
 
@@ -50,6 +49,9 @@ For the target element, the [visible inner text][] is contained within the [acce
 This rule applies to elements with a [widget role][] that [support name from content][supports name from content]. This includes the following: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch`, `tab`, `treeitem`.
 
 The understanding document of [2.5.3 Label in Name][understand253] use the term "symbolic text characters" to refer to a type of [non-text content][] that uses text characters as symbols, such as using "x" to mean "close". This rule considers them as "characters expressing non-text content". Unicode emojis are another example of characters expressing non-text content, although these are not "symbolic text characters".
+
+Regarding images of text: if the target element contains an [image of text](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-image-of-text), it may pass this rule but fail [2.5.3 Label in Name][understand253].  So further testing is needed.  This case might be handled by a different rule in the future.
+
 
 ### Assumptions
 

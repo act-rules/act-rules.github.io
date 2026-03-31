@@ -1,6 +1,6 @@
 #!/usr/bin/env zx
 import 'zx/globals';
-import { config, cloneWcagActRules, commitAndPush } from './commons.mjs'
+import { config, cloneWcagActRules } from './commons.mjs'
 
 const ACT_TOOLS_PATH = process.env.ACT_TOOLS_PATH || './node_modules/act-tools';
 
@@ -8,8 +8,6 @@ await cloneWcagActRules(config);
 await generateProposedRulePages(config);
 await generateexamples(config);
 await generateGlossaryPage({ ...config, wcagActRulesDir: config.tmpDir });
-const commitMessage = (await $`git log -1 --pretty=%B`).stdout;
-await commitAndPush(config, commitMessage);
 
 async function generateGlossaryPage({ tmpDir, rulesDir, glossaryDir, testAssetsDir }) {
   await $`node ${ACT_TOOLS_PATH}/dist/cli/generate-glossary.js \

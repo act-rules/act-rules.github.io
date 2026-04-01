@@ -7,7 +7,7 @@ const ACT_TOOLS_PATH = process.env.ACT_TOOLS_PATH || './node_modules/act-tools';
 await cloneWcagActRules(config);
 await generateProposedRulePages(config);
 await generateexamples(config);
-await generateGlossaryPage({ ...config, wcagActRulesDir: config.tmpDir });
+await generateGlossaryPage(config);
 
 async function generateGlossaryPage({ tmpDir, rulesDir, glossaryDir, testAssetsDir }) {
   await $`node ${ACT_TOOLS_PATH}/dist/cli/generate-glossary.js \

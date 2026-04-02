@@ -207,7 +207,7 @@ This image resource referenced by the `background-image` property of the `div` e
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
 ```
 
-#### Failed Example 5
+#### Failed Example 4
 
 This `img` element loads an SVG with text as an image resource. Because the SVG is loaded as an image resource, instead of being embedded in HTML the text cannot be selected or customized.
 

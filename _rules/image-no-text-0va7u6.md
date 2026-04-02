@@ -42,11 +42,14 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 - <dfn id="0va7u6:decorative">decorative</dfn>: The image with text is [purely decorative][]; or
 - <dfn id="0va7u6:incidental">incidental</dfn>: The text is not a [significant][insignificant] part of the image; or
-- <dfn id="0va7u6:essential">essential</dfn>: The presentation of the text is [essential][].
+- <dfn id="0va7u6:essential">essential</dfn>: The presentation of the text is [essential][]; or
+- <dfn id="0va7u6:redundant">redundant</dfn>: The same information conveyed by the image of text is also available as real text.
 
 ## Background
 
 This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
+
+[SC 1.4.5 Images of Text][sc1.4.5] explicitly clarifies in its note that the success criterion is meant to address cases where images of text are used instead of actual text. If images of text are used in addition to real text to convey the same information, then the success criterion is satisfied.
 
 ### Assumptions
 
@@ -166,6 +169,15 @@ These image resources referenced by the `input` elements are images of text (the
 />
 ```
 
+#### Passed Example 9
+
+This image resource referenced by the `img` element contains text that provides [redundant](#0va7u6:redundant) information. In fact, the same information conveyed by the image of text is also available as real text.
+
+```html
+<img src="/test-assets/0va7u6/welcome.png" alt="" />
+<p>Welcome to our website</p>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -193,15 +205,6 @@ This image resource referenced by the `background-image` property of the `div` e
 
 ```html
 <div style="background-image: url(/test-assets/0va7u6/textimage.jpg); width: 500px; height: 200px;" />
-```
-
-#### Failed Example 4
-
-This image resource referenced by the `img` element contains text that provides redundant information, but it still is information, therefore it is not [decorative](#0va7u6:decorative).
-
-```html
-<img src="/test-assets/0va7u6/welcome.png" alt="" />
-<p>Welcome to our website</p>
 ```
 
 #### Failed Example 5

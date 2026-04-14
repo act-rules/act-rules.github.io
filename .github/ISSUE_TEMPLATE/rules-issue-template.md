@@ -4,7 +4,6 @@ about: issues related with ACT Rules
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 Please describe the issue with references and relevant examples where necessary.

@@ -167,7 +167,7 @@ This `role` attribute is empty ("").
 This `role` attribute is only [ASCII whitespace][].
 
 ```html
-<input type="text" role=" " aria-label="field name"/>
+<input type="text" role=" " aria-label="field name" />
 ```
 
 #### Inapplicable Example 5

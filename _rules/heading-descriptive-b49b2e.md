@@ -215,26 +215,6 @@ This `h1` heading element is not [included in the accessibility tree][].
 </html>
 ```
 
-#### Inapplicable Example 3
-
-This `h1` heading element has an empty [accessible name][].
-
-```html
-<html lang="en">
-	<h1></h1>
-</html>
-```
-
-#### Inapplicable Example 4
-
-Semantic heading has an empty [accessible name][].
-
-```html
-<html lang="en">
-	<p role="heading" aria-level="1"></p>
-</html>
-```
-
 [decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
 [flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'

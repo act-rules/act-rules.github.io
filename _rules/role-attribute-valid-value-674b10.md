@@ -49,6 +49,8 @@ The `role` attribute is a set of [space separated tokens][]. Having a [whitespac
 
 Not every role can be used on every element. Which ARIA roles may be used on which HTML elements is defined in [ARIA in HTML](https://www.w3.org/TR/html-aria/). Testing this is not part of this rule.
 
+This rule considers the [value of the attribute as set in the HTML code][html attribute value], which differs from the [attribute value][attribute value] obtained after parsing it and discarding invalid tokens.
+
 ### Assumptions
 
 There are no assumptions.
@@ -167,7 +169,7 @@ This `role` attribute is empty ("").
 This `role` attribute is only [ASCII whitespace][].
 
 ```html
-<input type="text" role=" " aria-label="field name"/>
+<input type="text" role=" " aria-label="field name" />
 ```
 
 #### Inapplicable Example 5
@@ -179,7 +181,9 @@ This `role` attribute is specified on an element which is [programmatically hidd
 ```
 
 [ascii whitespace]: https://infra.spec.whatwg.org/#ascii-whitespace 'Definition of ASCII whitespace'
+[attribute value]: #attribute-value:role 'Definition of Attribute Value of the Role Attribute'
 [html or svg element]: #namespaced-element
+[html attribute value]: https://html.spec.whatwg.org/multipage/dom.html#attributes 'HTML Specification of Attribute Value'
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [programmatically hidden]: #programmatically-hidden 'Definition of Programmatically Hidden'
 [role attribute]: https://www.w3.org/TR/role-attribute/ 'Specification of the Role attribute'

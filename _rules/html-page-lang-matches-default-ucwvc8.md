@@ -23,8 +23,8 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Wilco Fiers
     - Giacomo Petri
+    - Wilco Fiers
   funding:
     - WAI-Tools
 htmlHintIgnore:

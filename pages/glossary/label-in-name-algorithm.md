@@ -19,7 +19,7 @@ Sub-algorithm to tokenize a string:
     - For a) Judgment of "non-text" probably can't be fully automated.  For example: "X" for "close" probably can be automated, but presumably there are more cases than this.
     - For b) Use the Unicode general categories "L" (Letter) and "N" (Number).  (This will exclude hyphens, punctuation, emoji, and more.)
 1. Remove parentheses (also known as round brackets) and all characters that are between an opening and closing parenthesis.
-    - Don't do this for square brackets, nor braces.
+    - Don't do this for other kind of brackets such as square brackets, braces, …
 1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the inherited programmatic language.
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].

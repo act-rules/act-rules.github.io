@@ -20,8 +20,8 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Jey Nandakumar
     - Giacomo Petri
+    - Jey Nandakumar
   previous_authors:
     - Annika Nietzio
   funding:

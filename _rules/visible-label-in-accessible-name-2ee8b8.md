@@ -132,7 +132,7 @@ This `button` element has the text "search" rendered as a magnifying glass icon 
 
 #### Passed Example 7
 
-This button has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the <p> tags insert whitespace into the result in the former but not the latter.
+This button has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the `<p>` tags insert whitespace into the result in the former but not the latter.
 
 ```html
 <button aria-label="Hello world">

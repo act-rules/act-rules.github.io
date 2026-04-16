@@ -177,7 +177,7 @@ The [visible inner text][] is "Download specification". The words "the" and "giz
 
 #### Passed Example 11
 
-The [visible inner text][] is "Download specification", which includes a space character between the two words due to the [second clause of the definition of visible inner text of a text node][visible-inner-text:for-text-clause-2].
+The [visible inner text][] is "Download specification", which includes a space character between the two words due to the [second clause of the definition of visible inner text of a text node][].
 
 ```html
 <a aria-label="Download specification" href="#"
@@ -432,5 +432,6 @@ This word - non-standard / nonstandard - appears in both the element's accessibl
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
 [visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
+[second clause of the definition of visible inner text of a text node]#visible-inner-text:for-text-clause-2 'Second clause of the definition of Visible inner text of a text node'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'

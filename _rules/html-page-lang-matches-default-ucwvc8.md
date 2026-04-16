@@ -24,6 +24,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Wilco Fiers
+    - Giacomo Petri
   funding:
     - WAI-Tools
 htmlHintIgnore:

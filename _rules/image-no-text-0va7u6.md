@@ -12,10 +12,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   wcag20:1.4.9: # Images of Text (No Exception) (AAA)
-    forConformance: true
-    failed: not satisfied
-    passed: further testing needed
-    inapplicable: further testing needed
+    secondary: This success criterion is **more strict** than this rule. This is because the rule considers redundancy when information presented as an image of text is also conveyed in text. Some of the passed examples do not satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -49,7 +46,7 @@ Each test target has no [visible][] [text][human language], except if at least o
 
 This rule is designed specifically for [SC 1.4.5 Images of Text][sc1.4.5]. There are however only minimal differences between this criterion and [SC 1.4.9 Images of Text (No Exception)][sc1.4.9]. The two differences are that customizable images of text are allowed, and that images of text are allowed when the presentation cannot otherwise be achieved. These scenarios are so rare the rule ignores them as part of the assumptions, and so the [accessibility requirements mapping](#accessibility-requirements-mapping) of these two criteria is the same.
 
-[SC 1.4.5 Images of Text][sc1.4.5] explicitly clarifies in its note that the success criterion is meant to address cases where images of text are used instead of actual text. If images of text are used in addition to real text to convey the same information, then the success criterion is satisfied.
+[Understanding SC 1.4.5 Images of Text][understanding sc1.4.5] explicitly clarifies in its note that the success criterion is meant to address cases where images of text are used instead of actual text. If images of text are used in addition to real text to convey the same information, then the success criterion is satisfied.
 
 ### Assumptions
 
@@ -250,7 +247,7 @@ This `svg` element does not have `image` element descendants.
 [image button]: https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)
 [purely decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG 2.2, Purely decorative'
 [rendered image resources]: #rendered-image-resource 'Definition of rendered image resource'
-[sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
+[understanding sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page (HTML)'

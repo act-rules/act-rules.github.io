@@ -16,5 +16,9 @@ For more details, see [examples of programmatic label][].
 
 **Note**: a given element may have more than one programmatic label.
 
+The label L of a [labeled control][] T is its <dfn id="programmatic-label:explicit">explicit label</dfn> if L has a `for` attribute referencing T's `id` attribute.
+
+The label L of a [labeled control][] T is its <dfn id="programmatic-label:implicit">implicit label</dfn> if L has no `for` attribute and is an ancestor of T in the DOM tree. Note that explicit labels take precedence over implicit label, and that [labeled controls][labeled control] do not cross shadow boundaries nor content documents.
+
 [labeled control]: https://html.spec.whatwg.org/multipage/forms.html#labeled-control 'Definition of labeled control'
 [examples of programmatic label]: https://www.w3.org/WAI/standards-guidelines/act/rules/terms/programmatic-label/examples/

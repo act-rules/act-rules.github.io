@@ -1,0 +1,13 @@
+---
+title: Aligned rectangle
+key: aligned-rectangle
+unambiguous: true
+objective: true
+input_aspects:
+---
+
+A set of coordinates R is an _aligned rectangle_ if there exist a coordinate _(x, y)_ and numbers _w_ and _h_ such that all coordinates _(a, b)_ with _x ⩽ a ⩽ x+w_ and _y ⩽ b ⩽ y+h_ are part of R, and reciprocally all coordinates _(a, b)_ in R verify _x ⩽ a ⩽ x+w_ and _y ⩽ b ⩽ y+h_.
+
+R is then said to have corner _(x, y)_, width _w_, and height _h_.
+
+Note that the rectangle is "aligned" in the sense that its sides align with the axis of the coordinate system.

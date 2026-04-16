@@ -55,7 +55,7 @@ If the target element contains an [image of text](https://www.w3.org/WAI/WCAG22/
 
 ### Assumptions
 
-This rule assumes that the [visible inner text][] is equal to the [label][https://www.w3.org/wai/wcag21/understanding/label-in-name#dfn-label], even though "label" is not precisely defined at this point in history.
+This rule assumes that the [visible inner text][] is equal to the [label as defined by WCAG][(ttps://www.w3.org/wai/wcag21/understanding/label-in-name#dfn-label), even though "label" is not precisely defined at this point in history.
 
 This rule assumes that the visible label isn't rearranged with CSS so that it appears to the user in a different order than it appears in the DOM.
 

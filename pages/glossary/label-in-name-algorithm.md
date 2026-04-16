@@ -20,7 +20,7 @@ Sub-algorithm to tokenize a string:
     - For b) Use the Unicode general categories "L" (Letter) and "N" (Number).  (This will exclude hyphens, punctuation, emoji, and more.)
 1. Remove parentheses (also known as round brackets) and all characters that are between an opening and closing parenthesis.
     - Don't do this for other kind of brackets such as square brackets, braces, …
-1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the inherited programmatic language.
+1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the [language of the element][https://html.spec.whatwg.org/multipage/dom.html#language].
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].
         - If the input string contains nothing but [whitespace][] before this operation: return an empty list.

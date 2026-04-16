@@ -21,6 +21,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
+    - Giacomo Petri
   previous_authors:
     - Annika Nietzio
   funding:
@@ -33,7 +34,8 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 
 - has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace); and
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) [text node][] which is neither empty nor only [whitespace][].
 
 ## Expectation
 
@@ -73,18 +75,39 @@ This rule is only applicable to non-embedded HTML pages. HTML pages embedded int
 
 #### Passed Example 1
 
-This `html` element has a `lang` attribute with a [known primary language tag][].
+This `html` element has a `lang` attribute with a [known primary language tag][] and non-empty `body` content.
 
 ```html
-<html lang="FR"></html>
+<html lang="it">
+	<body>
+		<p>Amo le regole ACT!</p>
+	</body>
+</html>
 ```
 
 #### Passed Example 2
 
+This `html` element has a `lang` attribute with a [known primary language tag][] and non-empty `title`.
+
+```html
+<html lang="it">
+	<head>
+		<title>Amo le regole ACT!</title>
+	</head>
+	<body></body>
+</html>
+```
+
+#### Passed Example 3
+
 This `html` element has a `lang` attribute with a [known primary language tag][] even though the [region subtag][] is not.
 
 ```html
-<html lang="en-US-GB"></html>
+<html lang="en-US-GB">
+	<body>
+		<p lang="en">I love ACT rules!</p>
+	</body>
+</html>
 ```
 
 ### Failed
@@ -94,7 +117,11 @@ This `html` element has a `lang` attribute with a [known primary language tag][]
 This `html` element has a `lang` attribute, with no [known primary language tag][].
 
 ```html
-<html lang="em-US"></html>
+<html lang="em-US">
+	<body>
+		<p lang="en">I love ACT rules!</p>
+	</body>
+</html>
 ```
 
 #### Failed Example 2
@@ -102,7 +129,11 @@ This `html` element has a `lang` attribute, with no [known primary language tag]
 This `html` element has a `lang` attribute, with no [known primary language tag][].
 
 ```html
-<html lang="#1"></html>
+<html lang="#1">
+	<body>
+		<p lang="en">I love ACT rules!</p>
+	</body>
+</html>
 ```
 
 #### Failed Example 3
@@ -137,6 +168,16 @@ This rule does not apply to `svg` elements.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" lang="fr"></svg>
+```
+
+#### Inapplicable Example 2
+
+This rule does not apply to content that is empty or contains only [whitespace][].
+
+```html
+<html lang="em-US">
+	<body></body>
+</html>
 ```
 
 [grandfathered tags]: https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.8

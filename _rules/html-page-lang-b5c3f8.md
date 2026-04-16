@@ -21,6 +21,7 @@ input_aspects:
 acknowledgments:
   authors:
     - Jey Nandakumar
+    - Giacomo Petri
   previous_authors:
     - Annika Nietzio
   funding:

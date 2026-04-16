@@ -121,7 +121,7 @@ This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>
-<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox"/>
+<input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox" />
 <ul role="listbox" id="popup_listbox" aria-labelledby="tag_label">
 	<li role="option">Zebra</li>
 	<li role="option" id="selected_option">Zoom</li>
@@ -197,7 +197,7 @@ This `div` does not have a [semantic role](#semantic-role).
 This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
 
 ```html
-<input type="checkbox" role="checkbox" aria-label="Checkbox name"/>
+<input type="checkbox" role="checkbox" aria-label="Checkbox name" />
 ```
 
 #### Inapplicable Example 3

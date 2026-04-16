@@ -36,9 +36,9 @@ This rule applies to any element for which all the following is true:
 
 - The element has a [semantic role][] that is a [widget][widget role] that [supports name from content][]; and
 - The element has [visible text content][]; and
-- The element has an `aria-label` or `aria-labelledby` attribute.
-- If there are any words that appear in both the element's accessible name and its visible label, then for each such pair, the same spelling and hyphenation is used in both places.
-- Both the element's accessible name and its visible label do not contain any abbreviations.
+- The element has an `aria-label` or `aria-labelledby` attribute; and
+- Neither the element's accessible name nor its visible label contains any abbreviations; and
+- Every word that appear in both the element's accessible name and its visible label uses the same spelling and hyphenation in both places.
 
 ## Expectation
 

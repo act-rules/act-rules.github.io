@@ -50,7 +50,7 @@ This rule applies to elements with a [widget role][] that [support name from con
 
 The understanding document of [2.5.3 Label in Name][understand253] use the term "symbolic text characters" to refer to a type of [non-text content][] that uses text characters as symbols, such as using "x" to mean "close". This rule considers them as "characters expressing non-text content". Unicode emojis are another example of characters expressing non-text content, although these are not "symbolic text characters".
 
-Regarding images of text: if the target element contains an [image of text](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-image-of-text), it may pass this rule but fail [2.5.3 Label in Name][understand253].  So further testing is needed.  This case might be handled by a different rule in the future.
+If the target element contains an [image of text](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-image-of-text), it may pass this rule but fail [2.5.3 Label in Name][understand253] (because the accessible name should then match the text inside the image, which is not taken into account by this rule). So further testing is needed. This case might be handled by a different rule in the future.
 
 
 ### Assumptions

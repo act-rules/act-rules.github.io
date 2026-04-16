@@ -177,7 +177,7 @@ The [visible inner text][] is "Download specification". The words "the" and "giz
 
 #### Passed Example 11
 
-The [visible inner text][] is "Download specification", which includes a space character between the two words due to the second clause of the definition of [visible inner text of a text node][].
+The [visible inner text][] is "Download specification", which includes a space character between the two words due to the [second clause of the definition of visible inner text of a text node][visible-inner-text:for-text-clause-2].
 
 ```html
 <a aria-label="Download specification" href="#"

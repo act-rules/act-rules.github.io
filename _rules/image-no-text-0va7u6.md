@@ -250,6 +250,5 @@ This `svg` element does not have `image` element descendants.
 [sc1.4.5]: https://www.w3.org/TR/WCAG22/#images-of-text
 [understanding sc1.4.5]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text
 [sc1.4.9]: https://www.w3.org/TR/WCAG22/#images-of-text-no-exception
-[understanding sc1.4.9]: https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception
 [visible]: #visible 'Definition of visible'
 [web page]: #web-page-html 'Definition of web page (HTML)'

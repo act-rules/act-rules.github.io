@@ -14,7 +14,7 @@ The <dfn>visible inner text of a node</dfn> depends on the kind of node.
 
 The <dfn id="visible-inner-text:for-text">visible inner text of a [text node][]</dfn> is:
 1.   if the [text node][] is [visible][], its visible inner text is its [data][] with whitespace normalized by replacing contiguous [whitespace][] with the string `" "` (a single ASCII space character);
-1.   <span id="visible-inner-text:for-text-clause-2">if the [text node][] is not [visible][]</span>, is [rendered][], and contains only [whitespace][], its visible inner text is the string `" "` (a single ASCII space character);
+1.   <span id="visible-inner-text:for-text-clause-2">if the [text node][] is not [visible][], is [rendered][], and contains only [whitespace][], its visible inner text is the string `" "` (a single ASCII space character);</span>
 1.   otherwise, the visible inner text of the [text node][] is the empty string (`""`).
 
 

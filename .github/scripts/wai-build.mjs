@@ -2,7 +2,7 @@
 import 'zx/globals';
 import { config, cloneWcagActRules } from './commons.mjs'
 
-const ACT_TOOLS_PATH = process.env.ACT_TOOLS_PATH || './node_modules/act-tools';
+const ACT_TOOLS_PATH = process.env.ACT_TOOLS_PATH ?? './node_modules/act-tools';
 
 await cloneWcagActRules(config);
 await generateProposedRulePages(config);

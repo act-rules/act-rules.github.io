@@ -345,7 +345,7 @@ This rule has no special handling for converting digits into words, or vice vers
 
 #### Failed Example 14
 
-(Same as above.) This rule has no special handling for converting digits into words, or vice versa.
+This rule has no special handling for converting digits into words, or vice versa.
 
 ```html
 <a aria-label="two zero two three" href="#">2 0 2 3</a>

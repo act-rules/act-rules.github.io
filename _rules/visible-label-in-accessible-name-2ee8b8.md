@@ -289,7 +289,7 @@ This link has [visible inner text][] with mathematical symbols and is not contai
 
 #### Failed Example 7
 
-Similar to the previous example. This rule has no special handling for converting mathematical symbols into words, or vice versa.
+This rule has no special handling for converting mathematical symbols into words, or vice versa.
 
 ```html
 <button aria-label="11 times 3 equals 33">11×3=33</button>
@@ -329,7 +329,7 @@ This rule has no special handling which tries to guess when numbers have the sam
 
 #### Failed Example 12
 
-Similar to the previous example. This rule has no special handling which tries to guess when numbers have the same semantic meaning. It operates on tokens only.
+This rule has no special handling which tries to guess when numbers have the same semantic meaning. It operates on tokens only.
 
 ```html
 <a aria-label="fibonacci: 0 1 1 2 3 5 8 13 21 34">fibonacci: 0112358132134</a>

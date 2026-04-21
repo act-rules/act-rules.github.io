@@ -18,14 +18,14 @@ Sub-algorithm to tokenize a string:
 1. For each character that either a) represents non-text content, or b) isn't a letter or a digit: replace that character with a space character.
     - For a) Judgment of "non-text" probably can't be fully automated.  For example: "X" for "close" probably can be automated, but presumably there are more cases than this.
     - For b) Use the Unicode general categories "L" (Letter) and "N" (Number).  (This will exclude hyphens, punctuation, emoji, and more.)
-1. Remove parentheses (also known as round brackets) and all characters that are between an opening and closing parenthesis.
-    - Don't do this for other kind of brackets such as square brackets, braces, …
+1. Remove parentheses (U+0028 LEFT PARENTHESIS and U+0029 RIGHT PARENTHESIS, known colloquially as round brackets) and all characters that are between a left and right parenthesis.
+    - Don't do this for other kind of brackets such as square brackets and curly brackets.
 1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the [language of the element][https://html.spec.whatwg.org/multipage/dom.html#language].
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].
         - If the input string contains nothing but [whitespace][] before this operation: return an empty list.
     - In English and most other European languages, a greedy [whitespace][] regular expression will accomplish this.  In languages such as Thai, Chinese, and Japanese, it won't.
-    - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered.  That includes the Unicode code point U+00A0 - the "No-Break Space" - which can be represented by the HTML named character reference `&nbsp;`.
+    - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered.  That includes the Unicode code point U+00A0 NO-BREAK SPACE (NBSP), which can be represented by the HTML named character reference `&nbsp;`.
 
 Then do the check: is the tokenized 'label' a sublist of the tokenized 'name'?
 - This 'sublist' check has these properties:

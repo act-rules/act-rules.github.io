@@ -13,18 +13,18 @@ input_aspects:
 The <dfn>visible inner text of a node</dfn> depends on the kind of node. 
 
 The <dfn id="visible-inner-text:for-text">visible inner text of a [text node][]</dfn> is:
-1.   if the [text node][] is [visible][], its visible inner text is its [data][] with whitespace normalized by replacing contiguous [whitespace][] with the string `" "` (a single ASCII space character);
-1.   <span id="visible-inner-text:for-text-clause-2">if the [text node][] is not [visible][], is [rendered][], and contains only [whitespace][], its visible inner text is the string `" "` (a single ASCII space character);</span>
-1.   otherwise, the visible inner text of the [text node][] is the empty string (`""`).
+1.   if the [text node][] is [visible][], its visible inner text is its [data][] with whitespace normalized by replacing contiguous [whitespace][] with `" "` (U+0020 SPACE);
+1.   <span id="visible-inner-text:for-text-clause-2">if the [text node][] is not [visible][], is [rendered][], and contains only [whitespace][], its visible inner text is `" "` (U+0020 SPACE);</span>
+1.   otherwise, the visible inner text of the [text node][] is `""` (the empty string).
 
 
 The <dfn id="visible-inner-text:for-element">visible inner text of an [element][]</dfn> is:
-1.   if the [element][] is not [rendered][], its visible inner text is the empty string (`""`);
-1.   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width greater than 0, its visible inner text is an ASCII space character (`" "`);
-1.   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width of 0, its visible inner text is the empty string (`""`);
-1.   if the [element][] is a [`<br>`][<br>] element, its visible inner text is a newline character (`"\n"`);
-1.   if the [computed][] [`display`][display] property of the [element][] has an [outer display type][] of `block`, or an [inner display type][] of `table-caption`, the visible inner text of the [element][] is the concatenation of a newline character (`"\n"`) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus a newline character (`"\n"`);
-1.   if the [computed][] [`display`][display] property of the [element][] has an [inner display type][] of `table-cell` or `table-row`, the visible inner text of the [element][] is the concatenation of an ASCII space character (`" "`) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus an ASCII space character (`" "`);
+1.   if the [element][] is not [rendered][], its visible inner text is `""` (the empty string);
+1.   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width greater than 0, its visible inner text is `" "` (U+0020 SPACE);
+1.   if the [element][] is [rendered][] and not [visible][] and has a [bounding box][] which has width of 0, its visible inner text is `""` (the empty string);
+1.   if the [element][] is a [`<br>`][<br>] element, its visible inner text is `"\n"` (U+000A END OF LINE).
+1.   if the [computed][] [`display`][display] property of the [element][] has an [outer display type][] of `block`, or an [inner display type][] of `table-caption`, the visible inner text of the [element][] is the concatenation of is `"\n"` (U+000A END OF LINE) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus another `"\n"` (U+000A END OF LINE);
+1.   if the [computed][] [`display`][display] property of the [element][] has an [inner display type][] of `table-cell` or `table-row`, the visible inner text of the [element][] is the concatenation of `" "` (U+0020 SPACE) plus the visible inner text of its children (in [tree order][] in the [flat tree][]) plus another `" "` (U+0020 SPACE);
 1.   otherwise, the visible inner text of the [element][] is the concatenation of the visible inner text of its children (in [tree order][] in the [flat tree][]).
 
 

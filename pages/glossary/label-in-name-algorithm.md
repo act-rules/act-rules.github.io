@@ -10,7 +10,7 @@ input_aspects:
 
 To check whether an [element][] has <dfn>its label contained in its name</dfn>, follow this algorithm:
 
-Let 'label' be the [visible inner text][] of the target element.  Let 'name' be the [accessible name][] of the target element.  Both 'label' and 'name' are strings.
+Let `label` be the [visible inner text][] of the target element.  Let `name` be the [accessible name][] of the target element.  Both `label` and `name` are strings.
 
 Sub-algorithm to tokenize a string:
 

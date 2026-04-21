@@ -332,7 +332,7 @@ This rule has no special handling which tries to guess when numbers have the sam
 This rule has no special handling which tries to guess when numbers have the same semantic meaning. It operates on tokens only.
 
 ```html
-<a aria-label="fibonacci: 0 1 1 2 3 5 8 13 21 34">fibonacci: 0112358132134</a>
+<a href="#" aria-label="fibonacci: 0 1 1 2 3 5 8 13 21 34">fibonacci: 0112358132134</a>
 ```
 
 #### Failed Example 13

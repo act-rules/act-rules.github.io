@@ -27,7 +27,7 @@ Sub-algorithm to tokenize a string:
     - In English and most other European languages, a greedy [whitespace][] regular expression will accomplish this.  In languages such as Thai, Chinese, and Japanese, it won't.
     - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered.  That includes the Unicode code point U+00A0 NO-BREAK SPACE (NBSP), which can be represented by the HTML named character reference `&nbsp;`.
 
-Then do the check: is the tokenized 'label' a sublist of the tokenized 'name'?
+Then do the check: is the tokenized `label` a sublist of the tokenized `name`?
 - This 'sublist' check has these properties:
     - Each string comparison (between a list element in the tokenized label and a list element in the tokenized name) is a simple string equality check.
     - It checks whether list elements are consecutive or not.  That is: it checks for a substring, in the computer science sense of the term.  Not a subsequence.

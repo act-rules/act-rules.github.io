@@ -40,4 +40,4 @@ If the answer is "yes" (that is: the tokenized 'label' is a sublist of the token
 [element]: https://dom.spec.whatwg.org/#element
 [normalization form KD]: https://www.unicode.org/glossary/#normalization_form_kd
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
-[whitespace][]: #whitespace 'Definition of whitespace'
+[whitespace]: #whitespace 'Definition of whitespace'

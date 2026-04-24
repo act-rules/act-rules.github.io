@@ -17,7 +17,7 @@ Sub-algorithm to tokenize a string:
 1. Do Unicode [case folding][] on the string then convert it to [normalization form KD][].
 1. For each character that either a) represents non-text content, or b) isn't a letter or a digit: replace that character with a space character.
     - For a) Judgment of "non-text" probably can't be fully automated.  For example: "X" for "close" probably can be automated, but presumably there are more cases than this.
-    - For b) Use the Unicode general categories "L" (Letter) and "N" (Number).  (This will exclude hyphens, punctuation, emoji, and more.)
+    - For b) Use the [Unicode general categories "L" (Letter) and "N" (Number)][https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/#G134153].  (This will exclude hyphens, punctuation, emoji, and more.)
 1. Remove parentheses (U+0028 LEFT PARENTHESIS and U+0029 RIGHT PARENTHESIS, known colloquially as round brackets) and all characters that are between a left and right parenthesis.
     - Don't do this for other kind of brackets such as square brackets and curly brackets.
 1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the [language of the element][https://html.spec.whatwg.org/multipage/dom.html#language].

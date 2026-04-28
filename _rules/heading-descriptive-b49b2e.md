@@ -40,6 +40,8 @@ Each target element describes the topic or purpose of the first [perceivable con
 
 Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
 
+Testing tools treat empty headings `<h1></h1>` or `div role="heading" aria-level="1"></div>` differently. Some fail empty headings under 1.3.1, others under 2.4.6, others pass these headings because they are ignored by most assistive technologies, not causing accessibility barriers at all. This rule doesn't include examples of empty headings because there is currently no harmonized approach for testing them.
+
 ### Assumptions
 
 This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.

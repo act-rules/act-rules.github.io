@@ -35,7 +35,10 @@ This rule applies to any [document element](https://dom.spec.whatwg.org/#documen
 - has a `lang` attribute that is neither empty ("") nor only [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace); and
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
 - has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
-- has at least one [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) [text node][] which is neither empty nor only [whitespace][].
+- has at least one of the following [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is not empty or only [whitespace][]:
+	- [text node][] that is included in the accessibility tree; or
+ 	- an element's [accessible name][] or [accessible description](https://www.w3.org/TR/accname-1.1/#dfn-accessible-description) that is exposed in the accessibility tree; or
+  	- the document's title.
 
 ## Expectation
 

@@ -27,10 +27,10 @@ Sub-algorithm to tokenize a string:
     - In English and most other European languages, a greedy [whitespace][] regular expression will accomplish this.  In languages such as Thai, Chinese, and Japanese, it won't.
     - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered.  That includes the Unicode code point U+00A0 NO-BREAK SPACE (NBSP), which can be represented by the HTML named character reference `&nbsp;`.
 
-Then do the check: is the tokenized `label` a sublist of the tokenized `name`?
-- This 'sublist' check has these properties:
+Then do the check: is the tokenized `label` a contiguous subsequence of the tokenized `name`?
+- This 'contiguous subsequence' check has these properties:
     - Each string comparison (between a list element in the tokenized label and a list element in the tokenized name) is a simple string equality check.
-    - It checks whether list elements are consecutive or not.  That is: it checks for a substring, in the computer science sense of the term.  Not a subsequence.
+    - The "contiguous" aspect means that it's crucial that the elements are consecutive in the original list.  Put another way: a subsequence of X can be obtained by removing any number of tokens from the start and/or end (but not the middle) of X.  For example: ["A", "B", "C"] is a subsequence of ["A", "B", "C", "D"].  ["A", "B", "D"] is not.
     - An empty list is a sublist of any list.
 
 If the answer is "yes" (that is: the tokenized 'label' is a sublist of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".

@@ -31,9 +31,9 @@ Then do the check: is the tokenized `label` a contiguous subsequence of the toke
 - This 'contiguous subsequence' check has these properties:
     - Each string comparison (between a list element in the tokenized label and a list element in the tokenized name) is a simple string equality check.
     - The "contiguous" aspect means that it's crucial that the elements are consecutive in the original list.  Put another way: a subsequence of X can be obtained by removing any number of tokens from the start and/or end (but not the middle) of X.  For example: ["A", "B", "C"] is a subsequence of ["A", "B", "C", "D"].  ["A", "B", "D"] is not.
-    - An empty list is a sublist of any list.
+    - An empty list is a contiguous subsequence of any list.
 
-If the answer is "yes" (that is: the tokenized 'label' is a sublist of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".
+If the answer is "yes" (that is: the tokenized 'label' is a contiguous subsequence of the tokenized 'name'), then this algorithm returns "is contained".  Otherwise, it returns "is not contained".
 
 [accessible name]: #accessible-name 'Definition of accessible name'
 [case folding]: https://www.w3.org/TR/charmod-norm/#dfn-case-folding

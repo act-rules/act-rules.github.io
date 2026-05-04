@@ -61,7 +61,7 @@ This rule assumes that the visible label isn't rearranged with CSS so that it ap
 
 This rule assumes that the visible label doesn't use CSS to add whitespace where none exists in the DOM.
 
-This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that the algorithm's treatment of parentheses is appropriate in the given human language. "Parentheses" are also known as "round brackets". The algorithm's treatment of parentheses is to remove them and all characters within them. This assumption can be reworded as: content within parentheses can be ignored. This assumption is almost always true in English. It is known to be often false in other languages, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
+This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that content within parentheses can be ignored.  ("Parentheses" are also known as "round brackets".)  This is important becuase the algorithm's treatment of parentheses is to remove them and all characters within them. This assumption is almost always true in English.  Exceptions include links with names such "Dune (1984 film)" and "Dune (2021 film)". This assumption is known to be often false in languages other than English, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
 
 ### Accessibility Support
 

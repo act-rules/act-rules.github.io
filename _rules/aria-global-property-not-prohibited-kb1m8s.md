@@ -135,10 +135,10 @@ The `aria-roledescription` property is [prohibited][] for an element with a `gen
 
 #### Failed Example 5
 
-The `aria-brailleroledescription` property is [prohibited][] for an element with a `none` role.
+The `aria-brailleroledescription` property is [prohibited][] for an element with a `generic` role.
 
 ```html
-<h1 role="none" aria-brailleroledescription="Banana text">I like bananas</h1>
+<div aria-brailleroledescription="Banana text">I like bananas</div>
 ```
 
 ### Inapplicable

@@ -22,7 +22,7 @@ jobs:
             ${{ runner.os }}-node-
       - run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
       - name: Install dependencies (including act-tools dev dependencies)
-        run: npm ci --include=dev
+        run: npm i --include=dev
       - name: Configure git
         run: |
           git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"

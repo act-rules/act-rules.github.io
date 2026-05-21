@@ -193,7 +193,7 @@ If this happens, a new "Call for Review" should be launched after the first one.
 - Be aware that this is last chance to object to the rule, on everything from spelling and grammar to accessibility requirements mapping and use of definitions.
 - Keep up to date on Calls for Review using this list: https://github.com/act-rules/act-rules.github.io/issues/461
 
-## Done
+## Publication
 
 Published rules
 
@@ -204,6 +204,17 @@ Published rules
   - went through Call for Review (if applicable), and change requests have been resolved
   - been merged and published as a proposed rule in the WAI website at https://www.w3.org/WAI/standards-guidelines/act/rules/ (ACT Rules on the WAI website are generally updated every Tuesday)
 
+### Merge and publication policy
+
+To give implementors of ACT Rules time to update implementation data, pull requests cannot be merged on Friday, Saturday, or Sunday. Those three days are reserved for implementors to update their implementation data (automated or otherwise). The publication cycle works as follows:
+
+1. Pull requests in [act-rules/act-rules.github.io][] can be merged Monday through Thursday.
+2. Implementors have Friday, Saturday or Sunday to update implementation data.
+3. Monday morning, a pull request for updating the WAI website is created in [w3c/wcag-act-rules][], for review by WAI staff.
+4. The publication candidate is approved and published to the WAI website. This usually happens sometime during the week, typically Monday or Tuesday. For more information, see the [publication workflow](https://wai-website-theme.netlify.app/workflow/).
+
+For substantial changes, implementors may request that a publication be skipped to allow extra time for implementation. This should be done on the pull request in [w3c/wcag-act-rules][]. It is up at the discretion of W3C staff to decide whether the publication is skipped.
+
 ## Rejected
 
 Rules that have been rejected due to different reasons.
@@ -212,3 +223,6 @@ Rules that have been rejected due to different reasons.
 
 - Initial rules don't get the backing they need to move on through the process.
 - When a rule at any stage is dropped because it lacks backing in the Community Group, e.g. because it is not considered feasible, or is subject to disagreement on whether the rule is actually testing for something that can improve accessibility.
+
+[w3c/wcag-act-rules]: https://github.com/w3c/wcag-act-rules
+[act-rules/act-rules.github.io]: https://github.com/act-rules/act-rules.github.io/

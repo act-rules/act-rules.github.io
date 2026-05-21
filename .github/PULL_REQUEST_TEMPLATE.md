@@ -27,6 +27,7 @@ This will require a 2 weeks Call for Review << new rule, or substantial changes 
 - [ ] Add label to indicate if it's a `Rule`, `Definition` or `Chore`.
 - [ ] [Link the PR to any issue it solves](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue). This will be done automatically by [referencing the issue](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) at the top of this comment in the indicated place.
 - [ ] Optionally request feedback from anyone in particular by assigning them as "Reviewers".
+- [ ] If your PR is for a new rule with an Accessibility Support note, or for updating the Accessibility Support note of an existing section, make sure to open a corresponding Accessibility Support issue.
 
 ### **When merging a PR:**
 

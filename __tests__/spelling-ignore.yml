@@ -10,6 +10,8 @@
 - https
 - wai-aria
 - validator
+- w3c
+- wcag-act-rules
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`

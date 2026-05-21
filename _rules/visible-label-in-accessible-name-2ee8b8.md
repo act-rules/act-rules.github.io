@@ -428,7 +428,6 @@ This word - non-standard / nonstandard - appears in both the element's accessibl
 [supports name from content]: https://www.w3.org/TR/wai-aria-1.2/#namefromcontent 'Definition of Supports name from content'
 [understand253]: https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
-[visible inner text of a text node]: #visible-inner-text:for-text 'Definition of Visible inner text of a text node'
 [visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
 [second clause of the definition of visible inner text of a text node]: #visible-inner-text:for-text-clause-2 'Second clause of the definition of Visible inner text of a text node'
 [visible text content]: #visible-text-content 'Definition of Visible text content'

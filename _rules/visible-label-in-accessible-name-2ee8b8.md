@@ -52,16 +52,15 @@ The understanding document of [2.5.3 Label in Name][understand253] use the term 
 
 If the target element contains an [image of text](https://www.w3.org/TR/WCAG22/#label-in-name), it may pass this rule but fail [2.5.3 Label in Name][understand253] (because the accessible name should then match the text inside the image, which is not taken into account by this rule). So further testing is needed. This case might be handled by a different rule in the future.
 
-
 ### Assumptions
 
-This rule assumes that the [visible inner text][] is equal to the [label as defined by WCAG][(https://www.w3.org/wai/wcag22/understanding/label-in-name#dfn-label), even though "label" is not precisely defined at this point in history.
+This rule assumes that the [visible inner text][] is equal to the [label as defined by WCAG](https://www.w3.org/wai/wcag22/understanding/label-in-name#dfn-label), even though "label" is not precisely defined at this point in history.
 
 This rule assumes that the visible label isn't rearranged with CSS so that it appears to the user in a different order than it appears in the DOM.
 
 This rule assumes that the visible label doesn't use CSS to add whitespace where none exists in the DOM.
 
-This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that content within parentheses can be ignored.  ("Parentheses" are also known as "round brackets".)  This is important becuase the algorithm's treatment of parentheses is to remove them and all characters within them. This assumption is almost always true in English.  Exceptions include links with names such "Dune (1984 film)" and "Dune (2021 film)". This assumption is known to be often false in languages other than English, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
+This rule - specifically, the [label in name algorithm][] that this rule relies on - assumes that content within parentheses can be ignored. ("Parentheses" are also known as "round brackets".) This is important because the algorithm's treatment of parentheses is to remove them and all characters within them. This assumption is almost always true in English. Exceptions include links with names such "Dune (1984 film)" and "Dune (2021 film)". This assumption is known to be often false in languages other than English, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
 
 ### Accessibility Support
 
@@ -143,8 +142,7 @@ This button has [visible inner text][] that, according to the [label in name alg
 
 #### Passed Example 8
 
-(Similar to previous example.)  This link has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the `<h6>` tags insert whitespace into the result in the former but not the latter.
-
+(Similar to previous example.) This link has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the `<h6>` tags insert whitespace into the result in the former but not the latter.
 
 ```html
 <a href="#" aria-label="Some article by John Doe">
@@ -159,7 +157,9 @@ The [visible inner text][] of this link is "ACT" (with no spaces) because of the
 
 ```html
 <a href="#" aria-label="ACT">
-	<div style="display: inline">A</div><div style="display: inline">C</div><div style="display: inline">T</div>
+	<div style="display: inline">A</div>
+	<div style="display: inline">C</div>
+	<div style="display: inline">T</div>
 </a>
 ```
 
@@ -353,7 +353,7 @@ This rule has no special handling for converting digits into words, or vice vers
 
 #### Failed Example 15
 
-The [label in name algorithm][] works on full words.  That is: it requires that each full word in the visible label ("1" in this case) is equal to a full word in the accessible name ("1a" in this case).  Those two words - "1" and "1a" - are not equal, so this element fails the rule.
+The [label in name algorithm][] works on full words. That is: it requires that each full word in the visible label ("1" in this case) is equal to a full word in the accessible name ("1a" in this case). Those two words - "1" and "1a" - are not equal, so this element fails the rule.
 
 ```html
 <a aria-label="1a" href="#">1</a>
@@ -414,7 +414,7 @@ This link's label contains an abbreviation, so it is not applicable.
 
 #### Inapplicable Example 6
 
-This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation.  So it's not applicable.
+This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation. So it's not applicable.
 
 ```html
 <a href="#" aria-label="non-standard">nonstandard</a>

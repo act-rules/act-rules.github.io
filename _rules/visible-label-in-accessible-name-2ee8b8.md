@@ -109,7 +109,7 @@ This button has [visible inner text][] that is contained within the [accessible 
 
 #### Passed Example 5
 
-This button has [visible inner text][] that does not need to be contained within the [accessible name][], because the "x" text node is [non-text content][]. Note: this would need to meet SC 1.1.1 Non text content.
+This button has [visible inner text][] that does not need to be contained within the [accessible name][], because the "X" text node is [non-text content][]; the [label in name algorithm][] therefore ignores it. Note: this would need to meet SC 1.1.1 Non text content.
 
 ```html
 <button aria-label="anything">X</button>
@@ -117,7 +117,7 @@ This button has [visible inner text][] that does not need to be contained within
 
 #### Passed Example 6
 
-This `button` element has the text "search" rendered as a magnifying glass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
+This `button` element has the text "search" rendered as a magnifying glass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][]; and the [label in name algorithm][] ignores it.
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -153,7 +153,7 @@ This button has [visible inner text][] that, according to the [label in name alg
 
 #### Passed Example 9
 
-The [visible inner text][] of this link is "ACT" (with no spaces) because of the explicit styles of `display: inline` on the `p` elements and the absence of whitespace between the `div` elements. The cases of `display: inline` and `display: block` are handled by the definition of [visible inner text of an element][]. This example shows that the definition agrees with the visual rendering done by the browser.
+The [visible inner text][] of this link is "ACT" (with no spaces) because of the explicit styles of `display: inline` on the `div` elements and the absence of whitespace between them. The cases of `display: inline` and `display: block` are handled by the definition of [visible inner text of an element][]. This example shows that the definition agrees with the visual rendering done by the browser.
 
 ```html
 <a href="#" aria-label="ACT">

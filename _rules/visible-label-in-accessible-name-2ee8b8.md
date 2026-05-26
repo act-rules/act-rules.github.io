@@ -188,7 +188,6 @@ This example shows that the [visible inner text][] isn't always the same as the 
 ```html
 <style>
 	.visually-hidden {
-		/* Source: https://www.tpgi.com/the-anatomy-of-visually-hidden/ */
 		clip-path: inset(50%);
 		height: 1px;
 		overflow: hidden;

@@ -157,9 +157,7 @@ The [visible inner text][] of this link is "ACT" (with no spaces) because of the
 
 ```html
 <a href="#" aria-label="ACT">
-	<div style="display: inline">A</div>
-	<div style="display: inline">C</div>
-	<div style="display: inline">T</div>
+	<div style="display: inline">A</div><div style="display: inline">C</div><div style="display: inline">T</div>
 </a>
 ```
 

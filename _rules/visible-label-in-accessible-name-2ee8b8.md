@@ -153,7 +153,7 @@ This button has [visible inner text][] that, according to the [label in name alg
 
 #### Passed Example 9
 
-The [visible inner text][] of this link is "ACT" (with no spaces) because of the explicit styles of `display: inline` on the `p` elements and the absence of whitespace between the `div` elements. The cases of `display: inline` and `display: block` are handled by the definition of [visible inner text of an element][]. This example shows that the definition agrees with the visual rendering done by the browser.
+The [visible inner text][] of this link is "ACT" (with no spaces) because of the explicit styles of `display: inline` on the `div` elements and the absence of whitespace between them. The cases of `display: inline` and `display: block` are handled by the definition of [visible inner text of an element][]. This example shows that the definition agrees with the visual rendering done by the browser.
 
 ```html
 <a href="#" aria-label="ACT">

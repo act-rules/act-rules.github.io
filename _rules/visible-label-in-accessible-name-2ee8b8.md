@@ -117,7 +117,7 @@ This button has [visible inner text][] that does not need to be contained within
 
 #### Passed Example 6
 
-This `button` element has the text "search" rendered as a magnifying glass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][].
+This `button` element has the text "search" rendered as a magnifying glass icon by the font. Because the text is rendered as [non-text content][], the text does not need to be contained within the [accessible name][]; and the [label in name algorithm][] ignores it.
 
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />

@@ -183,7 +183,7 @@ The [visible inner text][] is "Download specification", which includes a space c
 
 #### Passed Example 12
 
-This example shows that the [visible inner text][] isn't always the same as the [`innerText` IDL attribute](https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute). The visible inner text is "Download specification". The `innerText` is `Download \ngizmo\nspecification`. This rule uses the visible inner text - not innerText.
+This example shows that the [visible inner text][] isn't always the same as the [`innerText` IDL attribute](https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute). The visible inner text is "Download specification". The `innerText` is `Download \ngizmo\nspecification`. This rule uses the visible inner text — not innerText.
 
 ```html
 <style>

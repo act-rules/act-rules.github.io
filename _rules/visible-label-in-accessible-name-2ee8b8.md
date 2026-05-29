@@ -302,7 +302,7 @@ This button's accessible name contains the same tokens that are in the visible l
 
 #### Failed Example 9
 
-This button's accessible name contains the word "the" in the middle of it, which causes the [contiguous subsequence][] check of the [label in name algorithm][] (in particular: the "consecutive" requirement of that check) to fail. So it fails the rule.
+This button's accessible name contains the word "the" in the middle of it, which causes the [contiguous subsequence][] check of the [label in name algorithm][] (in particular: the "contiguous" requirement) to fail. So it fails the rule.
 
 ```html
 <button aria-label="Download the specification">Download specification</button>

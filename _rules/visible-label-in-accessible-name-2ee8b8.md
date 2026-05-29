@@ -376,7 +376,7 @@ This `nav` is not a widget, so the [visible inner text][] does not need to match
 
 #### Inapplicable Example 2
 
-This email text field does not need to have its [visible inner text][] match the [accessible name][]. The content of a text field shows its value instead of its label; it does not [support name from content][supports name from content]. The label is usually adjacent to the text field instead.
+This email text field has a role of `textbox` which does not [support name from content][supports name from content]; so it does not need to have its [visible inner text][] match the [accessible name][]. The content of a text field shows its value instead of its label. The label is usually adjacent to the text field instead.
 
 ```html
 <div>E-mail</div>

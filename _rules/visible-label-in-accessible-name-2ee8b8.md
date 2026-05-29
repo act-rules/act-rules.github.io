@@ -393,7 +393,7 @@ This `div` element does not have a widget role, so the [visible inner text][] do
 
 #### Inapplicable Example 4
 
-This link has no [visible inner text][].
+This link has no [visible text content][].
 
 ```html
 <a href="https://w3.org" aria-label="W3C homepage">

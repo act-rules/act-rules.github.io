@@ -294,7 +294,7 @@ This rule has no special handling for converting mathematical symbols into words
 
 #### Failed Example 8
 
-This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the sublist check part of the [label in name algorithm][], and so it fails the rule.
+This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the contiguous subsequence check part of the [label in name algorithm][], and so it fails the rule.
 
 ```html
 <button aria-label="how are you"><span>you</span><span>how</span><span>are</span></button>

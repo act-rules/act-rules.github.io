@@ -294,7 +294,7 @@ This rule has no special handling for converting mathematical symbols into words
 
 #### Failed Example 8
 
-This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the contiguous subsequence check part of the [label in name algorithm][], and so it fails the rule.
+This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the [contiguous subsequence][] check part of the [label in name algorithm][], and so it fails the rule.
 
 ```html
 <button aria-label="how are you"><span>you</span><span>how</span><span>are</span></button>
@@ -302,7 +302,7 @@ This button's accessible name contains the same tokens that are in the visible l
 
 #### Failed Example 9
 
-This button's accessible name contains the word "the" in the middle of it, which causes the sublist check of the [label in name algorithm][] (in particular: the "consecutive" requirement of that check) to fail. So it fails the rule.
+This button's accessible name contains the word "the" in the middle of it, which causes the [contiguous subsequence][] check of the [label in name algorithm][] (in particular: the "consecutive" requirement of that check) to fail. So it fails the rule.
 
 ```html
 <button aria-label="Download the specification">Download specification</button>
@@ -429,3 +429,4 @@ This word - non-standard / nonstandard - appears in both the element's accessibl
 [definition of Visible inner text of a text node for text which is visible whitespace]: #visible-inner-text:for-text-whitespace 'definition of Visible inner text of a text node for text which is visible whitespace'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'
+[contiguous subsequence]: #label-in-name-algorithm:contiguous-subsequence 'Definition of contiguous subsequence'

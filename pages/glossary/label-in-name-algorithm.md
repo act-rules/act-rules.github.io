@@ -28,7 +28,7 @@ Sub-algorithm to tokenize a string:
     - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered. That includes the Unicode code point U+00A0 NO-BREAK SPACE (NBSP), which can be represented by the HTML named character reference `&nbsp;`.
 
 Then do the check: is the tokenized `label` a contiguous subsequence of the tokenized `name`?
-- This 'contiguous subsequence' check has these properties:
+- This "<dfn id="label-in-name-algorithm:contiguous-subsequence">contiguous subsequence</dfn>" check has these properties:
     - Each string comparison (between a list element in the tokenized label and a list element in the tokenized name) is a simple string equality check.
     - The "contiguous" aspect means that it's crucial that the elements are consecutive in the original list. Put another way: a contiguous subsequence of X can be obtained by removing any number of tokens from the start and/or end (but not the middle) of X. For example: ["A", "B", "C"] is a contiguous subsequence of ["A", "B", "C", "D"]; but ["A", "B", "D"] is not.
     - An empty list is a contiguous subsequence of any list.

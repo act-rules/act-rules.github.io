@@ -24,7 +24,7 @@ Sub-algorithm to tokenize a string:
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].
         - If the input string contains nothing but [whitespace][] before this operation: return an empty list.
-    - In English and most other European languages, a greedy [whitespace][] regular expression will accomplish this.  In languages such as Thai, Chinese, and Japanese, it won't.
+    - In English and most other European languages, a greedy [whitespace][] regular expression will accomplish this. In languages such as Thai, Chinese, and Japanese, it won't.
     - A consequence of using the ACT definition of [whitespace][] here is that all kinds of whitespace are covered. That includes the Unicode code point U+00A0 NO-BREAK SPACE (NBSP), which can be represented by the HTML named character reference `&nbsp;`.
 
 Then do the check: is the tokenized `label` a contiguous subsequence of the tokenized `name`?

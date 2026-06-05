@@ -40,7 +40,7 @@ Each target element describes the topic or purpose of the first [perceivable con
 
 Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
 
-Testing tools treat empty headings `<h1></h1>` or `div role="heading" aria-level="1"></div>` differently. Some report that empty headings fail under 1.3.1 Info and Relationships, others under 2.4.6 Labels or Instructions. Other tools report that these headings pass because they are ignored by most assistive technologies causing no accessibility barriers at all. This rule does not include examples of empty headings because there is currently no harmonized approach for testing them.
+Testing tools treat empty headings `<h1></h1>` or `div role="heading" aria-level="1"></div>` differently. Some report that empty headings fail under 1.3.1 Info and Relationships or 2.4.6 Labels or Instructions. Other tools report that these headings pass because they are ignored by most assistive technologies and cause no accessibility barriers at all. This rule does not include examples of empty headings because there is currently no harmonized approach for testing them.
 
 ### Assumptions
 

@@ -4,7 +4,7 @@ name: Heading is relevant and meaningful
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that headings describe the topic or purpose of the content.
+  This rule checks that headings are relevant to a specific topic, purpose or page or they are not meaningless.
 accessibility_requirements:
   wcag20:2.4.6: # Headings and labels (AA)
     forConformance: true
@@ -28,7 +28,9 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
+This rule applies to any visible content that is perceived as a heading on a given page, as well as to any semantic heading element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") while not visible. In other words, this rule applies to headings and their relation to the content, regardless of their compliance with any other accessibility criteria.
+
+This rule requires that testing be limited to the wording in headings, in plain language.
 
 ## Expectation
 

@@ -4,7 +4,7 @@ name: Heading is relevant and meaningful
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that headings are relevant to a specific topic, purpose or page or they are not meaningless.
+  This rule checks that headings are meaningful and they are relevant to a specific topic, purpose or page.
 accessibility_requirements:
   wcag20:2.4.6: # Headings and labels (AA)
     forConformance: true
@@ -13,7 +13,6 @@ accessibility_requirements:
     inapplicable: further testing needed
 input_aspects:
   - Accessibility Tree
-  - DOM Tree
   - CSS Styling
   - Language
 acknowledgments:
@@ -47,19 +46,28 @@ Each heading is relevant to the content on the page where it appears. This conte
 
 ## Background
 
-Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
+This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While these varied implementations may simultaneously trigger failures under other WCAG success criteria, they are all equally applicable under this rule.
 
-Testing tools treat empty headings `<h1></h1>` or `div role="heading" aria-level="1"></div>` differently. Some fail empty headings under 1.3.1, others under 2.4.6, while others pass these headings because they are ignored by most assistive technologies causing no accessibility barriers at all. This rule doesn't include examples of empty headings because there is currently no harmonized approach for testing them.
+To pass, a heading must convey meaning and be relevant to its associated content. Headings consisting purely of non-default placeholder text or uninformative character strings fail this rule inherently. Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
 
 ### Assumptions
+This rule assumes that the tester evaluating the content possesses the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
 
-This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Labels][sc246] is still satisfied.
+#### Limitations
+The following scenarios present inherent limitations to evaluation, and the headings being tested may be deemed out of scope:
+* Multilingual Content: Web pages containing content in multiple languages (e.g., a heading in one language preceding content in another) where the tester does not possess professional working proficiency in all languages present.
+* Rapidly Changing or Real-Time Content Streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
+* Transient Loading States: Temporary layout interfaces, such as skeletal loaders or placeholder templates, where the final text content has not yet completely rendered in the Document Object Model (DOM).
 
-This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from assistive technologies. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Labels][sc246] is still satisfied.
+#### Exceptions
+The following scenarios constitute exceptions to this rule, as the contextual intent of the author cannot be objectively determined by a general evaluator:
+* Highly Specialized or Technical Domains: Content involving advanced scientific, technical, or academic material (e.g., specialized research documentation) that requires domain-specific expertise.
+* Abstract or Creative Works: Content consisting of creative literary works, poetry, or abstract text where relevance is interpretive or non-linear rather than purely informational.
+* Legally Mandated or Standardized Boilerplate: Documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures or government forms) and cannot be altered by the author.
 
 ### Accessibility Support
 
-Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
+This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing environments. Because evaluating the relevance of textual content is non-technical, findings may be subject to varying interpretations by individuals regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation. Testers should default to a passing result unless an irrelevance or lack of meaning is obvious; any identified failure should be immediately apparent and acknowledgeable by the content creators or those familiar with the page context.
 
 ### Other Resources
 

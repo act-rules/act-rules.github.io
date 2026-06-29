@@ -80,15 +80,15 @@ Headings that are compliant under this criterion, while exhibiting no other acce
 #### Passed Example 1
 This `h1` element provides a relevant heading that states the functional purpose of the page content.
 ```html
-	<h1>Passport Renewal</h1>
+	<h1>Renew Your Passport Online</h1>
 	<!-- Followed by a page that has instructions, images and a form about how to make the renewal application -->
 ```
 
 #### Passed Example 2
 This `h1` element provides a relevant heading for the marketing content that follows it.
 ```html
-	<h1>Fresh deals just dropped</h1>
-	<!-- Followed by a carousel displaying newly arrived products on a shopping website -->
+	<h1>Fresh deals just dropped: Printers/h1>
+	<!-- Followed by a carousel displaying newly arrived printers on a shopping website -->
 ```
 
 #### Passed Example 3
@@ -99,29 +99,57 @@ This `h1` element provides a relevant heading for the informational data that fo
 ```
 
 ### Passed (category 2)
-Headings that are compliant under this criterion, despite exhibiting other accessibility or structural failures under WCAG.
+Headings that serve as structural or sequential identifiers, which are inherently compliant regardless of the specific content that follows.
 
 #### Passed Example 4
+This `h1` element provides a sequential identifier for a major document section.
+```html
+	<h1>Chapter 4</h1>
+	<!-- The content that follows can make no difference -->
+```
+
+#### Passed Example 5
+This `h1` element provides a structural identifier for a section of a musical work.
+```html
+	<h1>1st movement</h1>
+	<!-- The content that follows describes the mood of the first movement of a symphony -->
+```
+
+#### Passed Example 6
+This `h1` element provides an official legal citation that serves as an unambiguous identifier for the section.
+```html
+	<h1>Act, SC 2002, c 29</h1>
+	<!-- The content that follows is about that specific act -->
+```
+
+### Passed (category 3)
+Headings that are compliant under this criterion, despite exhibiting other accessibility or structural failures under WCAG.
+
+#### Passed Example 7
 This `h1` element provides a relevant heading that states the purpose of the page content. It passes this rule despite exhibiting other WCAG failures, as the text is hidden from assistive technologies and has an insufficient contrast ratio.
 ```html
 	<h1 style="color: darkgrey; background-color: black;" aria-hidden="true">Your Future Starts at Our University</h1>
 	<!-- Followed by the name of the university and some other promotional content -->
 ```
 
-#### Passed Example 5
+#### Passed Example 8
 This `p` element is perceived as a heading. It passes this rule because its text is relevant, despite failing other WCAG criteria by relying entirely on visual presentation to convey heading structure and utilizing an invalid ARIA role and value.
 ```html
 	<p class="h1" role="headline">A Million Different Journeys</p>
 	<!-- Followed by the home page of a travel website that advertises their services -->
 ```
 
-#### Passed Example 6
+#### Passed Example 9
 This `img` element is perceived as a heading. It passes this rule because its text content is relevant, despite failing other WCAG criteria by lacking an accessible name.
 ```html
-<!-- The image of text below is large and reads "Our Mortgage Interest Rates" -->
-<img src="image-of-text.png" style="max-width: 100%; height: auto;" alt="" />
-<!-- Followed by a data table showing different rates for different amortizations -->
+	<!-- The image of text below is large and reads "Our Mortgage Interest Rates" -->
+	<img src="image-of-text.png" style="max-width: 100%; height: auto;" alt="" />
+	<!-- Followed by a data table showing different rates for different amortizations -->
 ```
+
+
+______________________ CHANGES MADE FINISH HERE _____________________________
+
 
 ### Failed
 

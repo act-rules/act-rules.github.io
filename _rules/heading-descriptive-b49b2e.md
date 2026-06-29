@@ -1,6 +1,6 @@
 ---
 id: b49b2e
-name: Heading is descriptive
+name: Heading is relevant and meaningful
 rules_format: 1.1
 rule_type: atomic
 description: |

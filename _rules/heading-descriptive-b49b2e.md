@@ -128,7 +128,7 @@ Headings that are compliant under this criterion, despite exhibiting other acces
 #### Passed Example 7
 This `h1` element provides a relevant heading that states the purpose of the page content. It passes this rule despite exhibiting other WCAG failures, as the text is hidden from assistive technologies and has an insufficient contrast ratio.
 ```html
-	<h1 style="color: darkgrey; background-color: black;" aria-hidden="true">Your Future Starts at Our University</h1>
+	<h1 style="color: darkgrey; background-color: black;" aria-hidden="true">Your Future Starts Here, at Our University</h1>
 	<!-- Followed by the name of the university and some other promotional content -->
 ```
 
@@ -142,7 +142,7 @@ This `p` element is perceived as a heading. It passes this rule because its text
 #### Passed Example 9
 This `img` element is perceived as a heading. It passes this rule because its text content is relevant, despite failing other WCAG criteria by lacking an accessible name.
 ```html
-	<!-- The image of text below is large and reads "Our Mortgage Interest Rates" -->
+	<!-- The image of text below is large and reads "Today’s Mortgage Rates at Our Bank" -->
 	<img src="image-of-text.png" style="max-width: 100%; height: auto;" alt="" />
 	<!-- Followed by a data table showing different rates for different amortizations -->
 ```

@@ -18,6 +18,7 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
+    - Armagan Tekdoner
     - Carlos Duarte
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -32,11 +33,17 @@ This rule applies to any visible content that is perceived as a heading on a giv
 
 This rule requires that testing be limited to the wording in headings, in plain language.
 
+### None of the following is within this rule's scope:
+* Complete lack of headings
+* Heading structure and hierarchy (incorrectly nested, skipped, or missing heading levels, or heading elements that do not follow a logical sequence)
+* Source code errors, provided that the heading is visible or exposed to assistive technologies
+* Grammar or spelling errors in headings, unless they render the text entirely unintelligible
+* Styling and presentation, unless the styling renders the heading completely illegible
+* Other accessibility failures covered by distinct WCAG success criteria, regardless of their severity
+
 ## Expectation
 
-Each target element describes the topic or purpose of the first [perceivable content][] after the test target that is not [decorative][]. The order of elements is determined by the [flat tree][].
-
-**Note:** Headings do not need to be lengthy. A word, or even a single character, may be sufficient.
+Each heading is relevant to the content on the page where it appears. This content may encompass the entire page, the section or paragraph immediately following the heading, or elements clustered within its visual or structural scope.
 
 ## Background
 

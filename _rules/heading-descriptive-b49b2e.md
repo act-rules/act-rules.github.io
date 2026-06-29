@@ -68,7 +68,7 @@ This rule is inherently subjective and relies entirely on human judgment; it is 
 ### Other Resources
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html)
 - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG22/Techniques/general/G130)
-- [Understanding Success Criterion 2.4.10 Section Headings)](https://www.w3.org/WAI/WCAG21/Understanding/section-headings)
+- [Understanding Success Criterion 2.4.10 Section Headings](https://www.w3.org/WAI/WCAG21/Understanding/section-headings)
 - [Use headings to convey meaning and structure](https://www.w3.org/WAI/tips/writing/#use-headings-to-convey-meaning-and-structure)
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 

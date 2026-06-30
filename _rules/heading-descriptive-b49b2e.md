@@ -74,7 +74,7 @@ This rule is inherently subjective and relies entirely on human judgment; it is 
 
 ## Test Cases
 
-### Passed (situation A)
+### Passed (Situation A)
 Headings that are compliant under this criterion, while exhibiting no other accessibility or structural failures under WCAG.
 
 #### Passed Example 1
@@ -87,8 +87,8 @@ This `h1` element provides a relevant heading that states the functional purpose
 #### Passed Example 2
 This `h1` element provides a relevant heading for the marketing content that follows it.
 ```html
-<h1>Fresh deals just dropped: Printers</h1>
-<!-- Followed by a carousel displaying newly arrived printers on a shopping website -->
+  <h1>Fresh deals just dropped: Printers</h1>
+  <!-- Followed by a carousel displaying newly arrived printers on a shopping website -->
 ```
 
 #### Passed Example 3
@@ -98,7 +98,7 @@ This `h1` element provides a relevant heading for the informational data that fo
 	<!-- Followed by a data table that contains info about the weather forecast -->
 ```
 
-### Passed (situation B)
+### Passed (Situation B)
 Headings that serve as structural or sequential identifiers, which are inherently compliant regardless of the specific content that follows.
 Similarly:  
 - Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed.
@@ -132,7 +132,7 @@ This `h1` element is a reminder heading. The content that follows makes no diffe
 	<!-- The content that follows is an items list -->
 ```
 
-### Passed (situation C)
+### Passed (Situation C)
 Headings that are compliant under this criterion, despite exhibiting other accessibility or structural failures under WCAG.
 
 #### Passed Example 8
@@ -157,4 +157,40 @@ Because this `img` element is visually presented as a heading, it is perceived a
 	<!-- Followed by a data table showing different rates for different amortizations -->
 ```
 
-### Passed (situation D)
+### Passed (Situation D)
+Headings that are compliant under this criterion by remaining meaningful and relevant, irrespective of whether they could be optimized for length, contain redundant phrasing, are entirely unnecessary, or provide editorially unnecessary descriptions.
+
+#### Passed Example 11
+This `h1` element provides a relevant heading from which the purpose of the page content can be understood. It passes this rule despite being overly casual and including unnecessary details.
+```html
+	<h1>Welcome to Our State-of-the-art New Wizard That Will Mail Your Driver's Licence Home</h1>
+	<!-- Followed by a page that has instructions, images, and a form about how to make the driver's licence renewal application -->
+```
+
+#### Passed Example 12
+This `h1` element provides a relevant heading from which the purpose of the page content can be understood. It passes this rule despite containing completely redundant phrasing.
+```html
+	<h1>Travel Advisories and Travel Advisory Information</h1>
+	<!-- Followed by a page that contains a list of hyperlinks to sections about other countries -->
+```
+
+#### Passed Example 13
+This `h2` element accurately describes the content of the promotional banner that follows it. It passes this rule despite being entirely unnecessary, as it repeats the text of the accompanying `figcaption` element verbatim.
+```html
+	<h2>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites</h2>
+	<figure>
+		<img src="hotel-promo-banner.png" alt="Panoramic view of a mountain ski resort in winter, with the modern hotel facade illuminated in the foreground." />
+		<figcaption>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites.</figcaption>
+	</figure>
+```
+
+#### Passed Example 14
+This `h2` element provides a relevant heading that accurately describes the content of the section. It passes this rule despite being editorially unnecessary because the following list of hyperlinks makes the purpose of the section immediately obvious. Although an alternative like "Links to External Resources" would provide better clarity, headings cannot be deemed non-compliant under this rule for merely stating the obvious, as such choices remain strictly within the editorial domain.
+```html
+	<h2>List of Links</h2>
+	<!-- Followed by a list of links to external resources -->
+```
+
+### Passed (Situation E)
+
+______________________ CHANGES MADE FINISH HERE _____________________________

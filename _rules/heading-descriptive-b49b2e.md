@@ -45,7 +45,7 @@ Each heading is relevant to the content on the page where it appears. This conte
 ## Background
 This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While these varied implementations may simultaneously trigger failures under other WCAG success criteria, they are all equally applicable under this rule.
 
-To pass, a heading must convey meaning and be relevant to its associated content. Headings consisting purely of non-default placeholder text or uninformative character strings fail this rule inherently. Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
+To pass, a heading must convey meaning and be relevant to its associated content. Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
 
 ### Assumptions
 This rule assumes that the tester evaluating the content possesses the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
@@ -81,7 +81,7 @@ Headings that are compliant under this criterion, while exhibiting no other acce
 This `h1` element provides a relevant heading that states the functional purpose of the page content.
 ```html
 	<h1>Renew Your Passport Online</h1>
-	<!-- Followed by a page that has instructions, images, and a form about how to make the renewal application -->
+	<!-- Followed by a page that has instructions, images, and a form to make the renewal application -->
 ```
 
 #### Passed Example 2

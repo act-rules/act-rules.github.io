@@ -192,5 +192,112 @@ This `h2` element provides a relevant heading that accurately describes the cont
 ```
 
 ### Passed (Situation E)
+Headings whose relevance or relationship to the section content is not immediately apparent, but becomes evident upon evaluation of the surrounding content or structural context.
+
+#### Passed Example 15
+This `h2` element uses a satirical or metaphorical phrase to introduce the topic. Although the heading text does not literally match the vocabulary of the section, its contextual relevance becomes evident when considering the immediate context of the paragraph that follows. Headings that use literary devices remain compliant under this rule, as the determination of tone or stylistic approach falls within the editorial domain.
+```html
+	<h2>Final Day for Savings</h2>
+  <p>Everything will be more expensive tomorrow.</p>
+	<!-- Followed by the subsection of an analysis article about inflation that begins with the above paragraph, explaining how long-term economic trends cause prices to rise continuously. -->
+```
+
+#### Passed Example 16
+This `h1` element employs irony to introduce the topic. Although the heading text does not explicitly reference the literal vocabulary of the section, its contextual relevance becomes evident when the primary purpose of the content is determined. Headings that utilize literary or stylistic devices remain compliant under this rule, as the determination of editorial tone falls outside the scope of accessibility evaluation.
+```html
+	<h1>Nobel's Peace Prize Office is Temporarily Closed Due to Declining Business</h1>
+	<!-- Followed by an opinion piece that provides statistics regarding active global conflicts and advocates for international peace. -->
+```
+
+#### Passed Example 16
+This `h3` element employs an interrogative structure to introduce the section topic. Although the heading itself asks a question rather than providing a direct declaration, its contextual relevance becomes immediately evident upon evaluating the concise response that follows in the immediate text. 
+```html
+	<h3>Opening hours?</h3>
+	<p>24/7</p>
+  <p>No opening hours. We are at your service round the clock!<p>
+```
+
+### Failed (Situation A)
+Headings that contain unintended or malformed text resulting from programmatic errors, publishing anomalies, or unremoved development artifacts. These structural failures are typically identifiable through programmatic or visual evaluation without requiring a deep analysis of the surrounding content.
+
+#### Failed Example 1
+This `h1` element contains unremoved placeholder text from a content template. It fails this rule because the text serves as a developmental instruction rather than describing the purpose or topic of the page content.
+```html
+	<h1>[Replace this text with heading 1]</h1>
+```
+
+#### Failed Example 2
+This `h1` element contains a raw back-end runtime error message injected during server-side execution. It fails this rule because the displayed text is a system-generated message rather than an intentional heading describing the purpose or topic of the page content.
+```html
+	<h1>Uncaught Error: Call to undefined function get_user_data() in /var/www/html/profile.php on line 42</h1>
+	<!-- Followed by a page with a form that collects user information. -->  
+```
+
+#### Failed Example 3
+This `h1` element contains only a raw timestamp. Due to a publishing or layout logic failure, this metadata was incorrectly rendered within the primary heading container rather than as a document footer element. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
+```html
+  <h1>2026-06-30 13:46 UTC</h1>
+  <!-- Followed by the list of academic programs available at a college -->
+```
+
+### Failed (Situation B)
+Headings that consist entirely of generic phrases, sequential locators, or conversational greetings that, on their face, lack the descriptive property required to identify a specific topic. Because these labels are inherently ambiguous, they typically fail this rule based on their textual content alone, without necessitating any evaluation of the surrounding content.
+
+#### Failed Example 4
+This `h1` element contains a brief, conversational greeting. It fails this rule on its face because the informal text possesses no descriptive value and provides no indication of the highly specific transactional nature of the form that follows.
+```html
+  <h1>Hi</h1>
+  <!-- Followed by a form that collects personal and financial data for a credit card application -->
+```
+
+#### Failed Example 5
+This `h1` element consists solely of a sequential placeholder. It fails this rule because the text lacks any topic-specific descriptor to identify the subject of the section, unless the page is part of a multi-volume document or a strictly paginated publication where the sequence itself serves as the primary identifier. A rapid evaluation of the immediate context confirms that this is a standard product listing, meaning the sequential label provides no descriptive utility.
+```html
+  <h1>Page 1</h1>
+  <!-- Followed by a list of kitchen appliances on sale -->
+```
+
+#### Failed Example 6
+This `span` element utilizes the `role="heading"` attribute to programmatically identify itself as an `h1` equivalent, but contains a generic operational description of the site structure rather than a descriptive label for the current view. It fails this rule because the text describes the navigational tier instead of identifying the unique topic, aggregate purpose, or functional scope of the content that follows; consequently, it provides no discernable indication whatsoever regarding the actual nature of the articles being presented.
+```html
+  <span role="heading" aria-level="1">Home Page of Our Newspaper</span>
+  <!-- Followed by several image buttons that open their own articles  -->
+```
+
+### Failed (Situation C)
+Headings that contain explicitly incorrect, mislabeled, or contradictory information that misrepresents the actual purpose, functional scope, or transactional nature of the content that follows.
+Unlike subjective editorial choices, these failures are characterized by objective, glaring mismatches that can be easily identified by a human reviewer within seconds of contextual evaluation. This situation focuses primarily on structural errors that cause immediate, severe consequences for most users, but especially for screen reader users and for users with cognitive disabilities the consequences may be more severe.
+
+#### Failed Example 7
+This `h2` element misrepresents the operational direction of a financial transaction. The element fails this rule because the heading text explicitly contradicts the functional purpose of the content it introduces.
+By providing an entirely inaccurate label for the transaction, the heading possesses zero descriptive utility and fails to identify the true topic or purpose. When a heading explicitly states an inbound transaction ("Request Money") but the interactive form executes an outbound transaction ("Send Money"), a user may inadvertently authorize an irreversible transfer of funds, resulting in immediate financial loss.
+```html
+  <h2>Request Money</h2>
+  <!-- Followed by the e-transfer screen for sending out money -->
+```
+
+#### Failed Example 8
+This `h1` element contains an explicit mismatch regarding the organizational topic of the page. At first glance, a user or tester is led to believe they are accessing Human Resources information, only to find that the subsequent headings and content are obviously dedicated to Information Technology.
+The `h1` element fails this rule because the primary heading text explicitly misidentifies the subject matter of the content it precedes. A rapid evaluation of the heading structure reveals a direct contradiction between the primary title and the functional content sections, meaning the h1 provides zero accurate descriptive value for the document view.
+
+```html
+<h1>Contact Human Resources</h1>
+<main>
+  <h2>Information Technology (IT) management contact information</h2>
+  <!-- Followed by a list of emails and phones of managers and directors with their job titles clearly posted under their names -->
+</main>
+```
+
+#### Failed Example 9
+This `h1` element contains an explicitly erroneous transactional label, which is directly refuted by the form labels and input fields immediately following it. This `h1` element fails this rule because the primary heading text provides a completely false description of the page's functional utility.
+
+```html
+<h1>Apply for Urgent Passport Renewal</h1>
+<main>
+  <label for="dl-number">Enter your 15-digit Driver's Licence Number:</label>
+  <input type="text" id="dl-number" name="dlNumber" required>
+  <!-- Followed by fields for driving restrictions, vision test results, and vehicle class selections -->
+</main>
+```
 
 ______________________ CHANGES MADE FINISH HERE _____________________________

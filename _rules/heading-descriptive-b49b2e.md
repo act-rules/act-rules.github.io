@@ -74,162 +74,87 @@ This rule is inherently subjective and relies entirely on human judgment; it is 
 
 ## Test Cases
 
-### Passed (category 1)
+### Passed (situation A)
 Headings that are compliant under this criterion, while exhibiting no other accessibility or structural failures under WCAG.
 
 #### Passed Example 1
 This `h1` element provides a relevant heading that states the functional purpose of the page content.
 ```html
 	<h1>Renew Your Passport Online</h1>
-	<!-- Followed by a page that has instructions, images and a form about how to make the renewal application -->
+	<!-- Followed by a page that has instructions, images, and a form about how to make the renewal application -->
 ```
 
 #### Passed Example 2
 This `h1` element provides a relevant heading for the marketing content that follows it.
 ```html
-	<h1>Fresh deals just dropped: Printers/h1>
-	<!-- Followed by a carousel displaying newly arrived printers on a shopping website -->
+<h1>Fresh deals just dropped: Printers</h1>
+<!-- Followed by a carousel displaying newly arrived printers on a shopping website -->
 ```
 
 #### Passed Example 3
 This `h1` element provides a relevant heading for the informational data that follows it.
 ```html
 	<h1>Current Weather in New York</h1>
-	<!-- Followed by a data table that contains icons and other legend -->
+	<!-- Followed by a data table that contains info about the weather forecast -->
 ```
 
-### Passed (category 2)
+### Passed (situation B)
 Headings that serve as structural or sequential identifiers, which are inherently compliant regardless of the specific content that follows.
+Similarly:  
+- Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed.
+- Headings serving as call-to-action items, reminders, or warnings followed by list items or other relevant content – such as "Don't Forget To:", "Please Bring...", or "Doors are closed at 10:00 pm sharp!" – are considered compliant, unless a clear contextual mismatch is observed (such as appearing on an unrelated page).
 
 #### Passed Example 4
-This `h1` element provides a sequential identifier for a major document section.
+This `h1` element provides a sequential identifier for a major document section. The content that follows makes no difference to the outcome of this test.
 ```html
 	<h1>Chapter 4</h1>
-	<!-- The content that follows can make no difference -->
+	<!-- Any content -->
 ```
 
 #### Passed Example 5
-This `h1` element provides a structural identifier for a section of a musical work.
+This `h1` element provides a structural identifier for a section of a musical work. The content that follows makes no difference to the outcome of this test, unless an obvious misplacement is observed.
 ```html
 	<h1>1st movement</h1>
 	<!-- The content that follows describes the mood of the first movement of a symphony -->
 ```
 
 #### Passed Example 6
-This `h1` element provides an official legal citation that serves as an unambiguous identifier for the section.
+This `h1` element is for a standard document section. The content that follows makes no difference unless an obvious error indicates it is not a glossary section.
 ```html
-	<h1>Act, SC 2002, c 29</h1>
-	<!-- The content that follows is about that specific act -->
+	<h1>Glossary</h1>
+	<!-- Terms and explanations of them -->
 ```
 
-### Passed (category 3)
+#### Passed Example 7
+This `h1` element is a reminder heading. The content that follows makes no difference unless a clear contextual mismatch indicates it belongs on another page.
+```html
+	<h1>Don't Forget To Bring:</h1>
+	<!-- The content that follows is an items list -->
+```
+
+### Passed (situation C)
 Headings that are compliant under this criterion, despite exhibiting other accessibility or structural failures under WCAG.
 
-#### Passed Example 7
-This `h1` element provides a relevant heading that states the purpose of the page content. It passes this rule despite exhibiting other WCAG failures, as the text is hidden from assistive technologies and has an insufficient contrast ratio.
+#### Passed Example 8
+This `h1` element provides a relevant heading that states the purpose of the page content. It passes this rule despite exhibiting other WCAG failures, such as hiding the text from assistive technologies and having a severely low contrast ratio.
 ```html
 	<h1 style="color: darkgrey; background-color: black;" aria-hidden="true">Your Future Starts Here, at Our University</h1>
 	<!-- Followed by the name of the university and some other promotional content -->
 ```
 
-#### Passed Example 8
-This `p` element is perceived as a heading. It passes this rule because its text is relevant, despite failing other WCAG criteria by relying entirely on visual presentation to convey heading structure and utilizing an invalid ARIA role and value.
+#### Passed Example 9
+Because this `p` element looks like a heading, it is perceived as a heading. It passes this rule as its text is relevant, despite failing other WCAG criteria due to using changes in text presentation without using the appropriate markup and utilizing an invalid ARIA role and value.
 ```html
 	<p class="h1" role="headline">A Million Different Journeys</p>
 	<!-- Followed by the home page of a travel website that advertises their services -->
 ```
 
-#### Passed Example 9
-This `img` element is perceived as a heading. It passes this rule because its text content is relevant, despite failing other WCAG criteria by lacking an accessible name.
+#### Passed Example 10
+Because this `img` element is visually presented as a heading, it is perceived as a heading. It passes this rule as its text is relevant, despite failing other WCAG criteria by relying entirely on an image of text and lacking an accessible name.
 ```html
 	<!-- The image of text below is large and reads "Today’s Mortgage Rates at Our Bank" -->
 	<img src="image-of-text.png" style="max-width: 100%; height: auto;" alt="" />
 	<!-- Followed by a data table showing different rates for different amortizations -->
 ```
 
-
-______________________ CHANGES MADE FINISH HERE _____________________________
-
-
-### Failed
-
-#### Failed Example 1
-
-This `h1` heading element does not describes the topic of the following paragraph.
-
-```html
-<html lang="en">
-	<h1>Weather</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Failed Example 2
-
-This heading marked up with an [explicit role][] of `heading` does not describe the topic of the following paragraph.
-
-```html
-<html lang="en">
-	<span role="heading" aria-level="1">Weather</span>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Failed Example 3
-
-This heading marked up with an [explicit role][] of `heading` does not describe the topic of the following paragraph. The heading is positioned off screen but is [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
-	<p>
-		We are open Monday through Friday from 10 to 16
-	</p>
-</html>
-```
-
-#### Failed Example 4
-
-This `h1` heading element does not describe the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
-
-```html
-<html lang="en">
-	<h1>Weather</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-	<p>It is going to rain tomorrow</p>
-</html>
-```
-
-### Inapplicable
-
-#### Inapplicable Example 1
-
-There is no heading.
-
-```html
-<html lang="en">
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Inapplicable Example 2
-
-This `h1` heading element is not [included in the accessibility tree][].
-
-```html
-<html lang="en">
-	<h1 hidden>Opening Hours</h1>
-	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-[decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
-[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
-[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
-[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
-[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships ' Success Criterion 1.3.1 Info and Relationships'
-[sc246]: https://www.w3.org/TR/WCAG22/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
-[semantic role]: #semantic-role 'Definition of semantic role'
-[visible]: #visible 'Definition of visible'
-[accessible name]: #accessible-name 'Definition of accessible name'
-[perceivable content]: #perceivable-content 'Definition of perceivable content'
+### Passed (situation D)

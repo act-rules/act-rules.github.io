@@ -29,12 +29,14 @@ acknowledgments:
 ## Applicability
 This rule applies to any visible content that is perceived as a heading on a given page, as well as to any semantic heading element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") while not visible. In other words, this rule applies to headings and their relation to the content, regardless of their compliance with any other accessibility criteria.
 
-This rule requires that testing be limited to the wording in headings, in plain language.
+This rule requires that testing be limited to the wording in everything that can be perceived or presented as headings.
+
+Because evaluating the relevance and meaning of textual content is non-technical, findings may be subject to varying interpretations by individuals regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation, assuming failures are exceptions. Testers should default to a passing or not applicable result, when in doubt.
 
 ### None of the following is within this rule's scope:
 - Complete lack of headings
 - Heading structure and hierarchy (incorrectly nested, skipped, or missing heading levels, or heading elements that do not follow a logical sequence)
-- Source code errors, provided that the heading is visible or exposed to assistive technologies
+- Coding errors, provided that the heading is visible or exposed to assistive technologies
 - Grammar or spelling errors in headings, unless they render the text entirely unintelligible
 - Styling and presentation, unless the styling renders the heading completely illegible
 - Other accessibility failures covered by distinct WCAG success criteria, regardless of their severity
@@ -43,27 +45,29 @@ This rule requires that testing be limited to the wording in headings, in plain 
 Each heading is relevant to the content on the page where it appears. This content may encompass the entire page, the section or paragraph immediately following the heading, or elements clustered within its visual or structural scope.
 
 ## Background
-This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While these varied implementations may simultaneously trigger failures under other WCAG success criteria, they are all equally applicable under this rule.
+This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While these varied implementations may simultaneously trigger failures under other WCAG success criteria, they are all subject to this rule.
 
-To pass, a heading must convey meaning and be relevant to its associated content. Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
+To pass, a heading must convey meaning and be relevant to its associated content. Headings consisting purely of non-default placeholder text or uninformative character strings fail this rule inherently. Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
 
 ### Assumptions
-This rule assumes that the tester evaluating the content possesses the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
+This rule assumes that testers evaluating the content possess the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
 
 #### Limitations
 The following scenarios present inherent limitations to evaluation, and the headings being tested may be deemed out of scope:
 - Multilingual Content: Web pages containing content in multiple languages (e.g., a heading in one language preceding content in another) where the tester does not possess professional working proficiency in all languages present.
 - Rapidly Changing or Real-Time Content Streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
 - Transient Loading States: Temporary layout interfaces, such as skeletal loaders or placeholder templates, where the final text content has not yet completely rendered in the Document Object Model (DOM).
+- This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing tools.
 
 #### Exceptions
-The following scenarios constitute exceptions to this rule, as the contextual intent of the author cannot be objectively determined by a general evaluator:
-- Highly Specialized or Technical Domains: Content involving advanced scientific, technical, or academic material (e.g., specialized research documentation) that requires domain-specific expertise.
-- Abstract or Creative Works: Content consisting of creative literary works, poetry, or abstract text where relevance is interpretive or non-linear rather than purely informational.
-- Legally Mandated or Standardized Boilerplate: Documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures or government forms) and cannot be altered by the author.
+The following scenarios constitute exceptions to this rule, as the contextual intent of the author cannot be objectively determined by a web accessibility content guidelines specialist:
+- Highly specialized or technical domains: content involving advanced scientific, technical, or academic material (e.g., specialized research documentation) that requires domain-specific expertise.
+- Abstract or creative Works: content consisting of creative literary works, poetry, or abstract text where relevance is interpretive or non-linear rather than purely informational.
+- Legally mundated or standardized statements: documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that cannot be altered by the author.
 
 ### Accessibility Support
-This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing environments. Because evaluating the relevance of textual content is non-technical, findings may be subject to varying interpretations by individuals regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation. Testers should default to a passing result unless an irrelevance or lack of meaning is obvious; any identified failure should be immediately apparent and acknowledgeable by the content creators or those familiar with the page context.
+This rule does not rely on the support for particular accessibility features by different assistive technologies and user agents. 
+
 
 ### Other Resources
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html)
@@ -81,7 +85,7 @@ Headings that are compliant under this criterion, while exhibiting no other acce
 This `h1` element provides a relevant heading that states the functional purpose of the page content.
 ```html
 	<h1>Renew Your Passport Online</h1>
-	<!-- Followed by a page that has instructions, images, and a form to make the renewal application -->
+	<!-- Followed by a page that has instructions, images, and a form about how to make the renewal application -->
 ```
 
 #### Passed Example 2
@@ -349,5 +353,3 @@ This `h2` element utilizes an incorrect word substitution resulting from a liter
 	<!-- Followed by a digital menu interface, a shopping cart summary, and a checkout button of an online food delivery company -->
 ```
 ______________________ CHANGES MADE END HERE _____________________________
-
-

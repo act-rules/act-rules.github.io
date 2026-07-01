@@ -35,7 +35,7 @@ Because evaluating the relevance and meaning of textual content is non-technical
 
 ### None of the following is within this rule's scope:
 - Complete lack of headings
-- Heading structure and hierarchy (incorrectly nested, skipped, or missing heading levels, or heading elements that do not follow a logical sequence)
+- Heading structure or hierarchy
 - Coding errors, provided that the heading is visible or exposed to assistive technologies
 - Grammar or spelling errors in headings, unless they render the text entirely unintelligible
 - Styling and presentation, unless the styling renders the heading completely illegible

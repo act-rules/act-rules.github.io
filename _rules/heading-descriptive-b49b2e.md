@@ -29,9 +29,7 @@ acknowledgments:
 ## Applicability
 This rule applies to any visible content that is perceived as a heading on a given page, as well as to any semantic heading element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") while not visible. In other words, this rule applies to headings and their relation to the content, regardless of their compliance with any other accessibility criteria.
 
-This rule requires that testing be limited to the wording in everything that can be perceived or presented as headings.
-
-Because evaluating the relevance and meaning of textual content is non-technical, findings may be subject to varying interpretations by individuals regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation, assuming failures are exceptions. Testers should default to a passing or not applicable result, when in doubt.
+The testing scope under this rule is limited exclusively to the wording in elements perceived or presented as headings.
 
 ### None of the following is within this rule's scope:
 - Complete lack of headings
@@ -41,8 +39,9 @@ Because evaluating the relevance and meaning of textual content is non-technical
 - Styling and presentation, unless the styling renders the heading completely illegible
 - Other accessibility failures covered by distinct WCAG success criteria, regardless of their severity
 
-## Expectation
-Each heading is relevant to the content on the page where it appears. This content may encompass the entire page, the section or paragraph immediately following the heading, or elements clustered within its visual or structural scope.
+## Expectations
+- Each heading text is sufficiently intelligible and carries meaning
+- Each heading is relevant to the specific page or section where it appears
 
 ## Background
 This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While these varied implementations may simultaneously trigger failures under other WCAG success criteria, they are all subject to this rule.
@@ -53,11 +52,11 @@ To pass, a heading must convey meaning and be relevant to its associated content
 This rule assumes that testers evaluating the content possess the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
 
 #### Limitations
-The following scenarios present inherent limitations to evaluation, and the headings being tested may be deemed out of scope:
-- Multilingual Content: Web pages containing content in multiple languages (e.g., a heading in one language preceding content in another) where the tester does not possess professional working proficiency in all languages present.
-- Rapidly Changing or Real-Time Content Streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
-- Transient Loading States: Temporary layout interfaces, such as skeletal loaders or placeholder templates, where the final text content has not yet completely rendered in the Document Object Model (DOM).
-- This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing tools.
+The following scenarios present inherent limitations to evaluation and the headings being tested may be deemed out of scope:
+- Multilingual content: Web pages containing content in multiple languages (e.g., a heading in one language preceding content in another) where the tester does not possess professional working proficiency in all languages present.
+- Rapidly changing or real-time content streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
+- Use of automated testing tools: This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing tools.
+- Exposure to controversies: Because evaluating the relevance and meaning of textual content is non-technical, findings can be contested by anyone regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation, meaning failures are exceptions. Testers should default to a passing or not applicable result when in doubt.
 
 #### Exceptions
 The following scenarios constitute exceptions to this rule, as the contextual intent of the author cannot be objectively determined by a web accessibility content guidelines specialist:
@@ -67,7 +66,6 @@ The following scenarios constitute exceptions to this rule, as the contextual in
 
 ### Accessibility Support
 This rule does not rely on the support for particular accessibility features by different assistive technologies and user agents. 
-
 
 ### Other Resources
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html)
@@ -353,3 +351,66 @@ This `h2` element utilizes an incorrect word substitution resulting from a liter
 	<!-- Followed by a digital menu interface, a shopping cart summary, and a checkout button of an online food delivery company -->
 ```
 ______________________ CHANGES MADE END HERE _____________________________
+
+
+
+
+
+#### Failed Example 3
+
+This heading marked up with an [explicit role][] of `heading` does not describe the topic of the following paragraph. The heading is positioned off screen but is [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<span role="heading" aria-level="1" style="position: absolute; top: -9999px; left: -9999px;">Weather</span>
+	<p>
+		We are open Monday through Friday from 10 to 16
+	</p>
+</html>
+```
+
+#### Failed Example 4
+
+This `h1` heading element does not describe the first [perceivable content][] after it (the first `p` element). The next [perceivable content][] (the second `p` element) is not considered by this rule.
+
+```html
+<html lang="en">
+	<h1>Weather</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+	<p>It is going to rain tomorrow</p>
+</html>
+```
+
+### Inapplicable
+
+#### Inapplicable Example 1
+
+There is no heading.
+
+```html
+<html lang="en">
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
+```
+
+#### Inapplicable Example 2
+
+This `h1` heading element is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+	<h1 hidden>Opening Hours</h1>
+	<p>We are open Monday through Friday from 10 to 16</p>
+</html>
+```
+
+[decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships ' Success Criterion 1.3.1 Info and Relationships'
+[sc246]: https://www.w3.org/TR/WCAG22/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[perceivable content]: #perceivable-content 'Definition of perceivable content'

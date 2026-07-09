@@ -32,12 +32,14 @@ This rule applies to any visible content that is perceived as a heading on a giv
 The testing scope under this rule is limited exclusively to the wording in elements perceived or presented as headings.
 
 ### None of the following is within this rule's scope:
-- Complete lack of headings
-- Heading structure or hierarchy
-- Coding errors, provided that the heading is visible or exposed to assistive technologies
-- Grammar or spelling errors in headings, unless they render the text entirely unintelligible
-- Styling and presentation, unless the styling renders the heading completely illegible
-- Other accessibility failures covered by distinct WCAG success criteria, regardless of their severity
+- Heading structure or hierarchy, such as evaluating whether an `h2` incorrectly skips to an `h5`
+- Coding or parsing errors, provided that the heading is visible or exposed to assistive technologies, such as mismatched tags like `<h2>A meaningful heading</h3>` which browsers automatically correct in the DOM
+- Grammar or spelling errors in headings, unless they render the text entirely unintelligible, such as common typos or minor translation mistaakes like "Command your food" instead of "Order your food"
+- Styling and presentation, unless the styling renders the heading completely illegible, such as using a cursive font that is still legible
+- Highly specialized or technical domains with content involving advanced scientific, technical, or academic material (such as specialized research documentation) where evaluating the exact relevance of the terminology requires domain-specific expertise
+- Abstract or creative content consisting of literary works, poetry, or avant-garde text where relevance is interpretive or non-linear rather than purely informational
+- Legally mundated or standardized statements, documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that should not be altered by the author
+- Other accessibility failures in headings covered by distinct WCAG success criteria, regardless of their severity
 
 ## Expectations
 - Each heading text is sufficiently intelligible and carries meaning
@@ -59,12 +61,6 @@ The following scenarios present inherent limitations to evaluation and the headi
 - Rapidly changing or real-time content streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
 - Use of automated testing tools: This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing tools.
 - Exposure to controversies: Because evaluating the relevance and meaning of textual content is non-technical, findings can be contested by anyone regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation, meaning failures are exceptions. Testers should default to a passing or not applicable result when in doubt.
-
-#### Exceptions
-The following scenarios constitute exceptions to this rule, as the contextual intent of the author cannot be objectively determined by a web accessibility content guidelines specialist:
-- Highly specialized or technical domains: content involving advanced scientific, technical, or academic material (e.g., specialized research documentation) that requires domain-specific expertise.
-- Abstract or creative Works: content consisting of creative literary works, poetry, or abstract text where relevance is interpretive or non-linear rather than purely informational.
-- Legally mundated or standardized statements: documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that cannot be altered by the author.
 
 ### Accessibility Support
 This rule does not rely on the support for particular accessibility features by different assistive technologies and user agents. 
@@ -222,27 +218,27 @@ This `h3` element employs an interrogative structure to introduce the section to
 ```
 
 ### Passed (Situation F)
-Headings that are compliant under this criterion, while containing errors in spelling, punctuation, capitalization, syntax, vocabulary, or structure. They may also include replicated text fragments resulting from copy-paste errors. These headings are considered passing if the text remains fairly intelligible. This is because the severity of these errors does not introduce ambiguity, distort the user's comprehension of the page structure, or cause any adverse material impact on any group of users.
+Headings containing errors due to copy-pasting, forgotten placeholder text along with the actual heading, or left-over markup code that should not be visible. These headings are considered passing if the text remains meaningful and relevant, not introducing a risk for user misunderstanding. 
 
 #### Passed Example 17
-This `h2` element contains a combination of language errors. Despite the poor linguistic quality of the text, it remains compliant with this rule because the meaning is completely preserved, leaving no room for user misinterpretation or navigational barriers.
-```html
-	<h2>The Goverment is Planing to Introducing New Regulations!.</h2>
-	<!-- Followed by an opinion piece about the upcoming regulations -->
-```
-
-#### Passed Example 18
-This `h3` element contains a duplicated text fragment and a trailing white space resulting from a mechanical copy-paste or rendering error. It remains compliant because the core descriptive intent remains entirely unambiguous, not introducing a risk for user misunderstanding.
+This `h3` element contains a duplicated word and a trailing white space resulting from a manual copy-paste error. It passes this rule despite a repeated word, as the second "Contact" word could cause no misunderstanding. 
 ```html
 	<h3>Contact Contact Customer Support </h3>
 	<!-- Followed by the contact details for customer support -->
 ```
 
-#### Passed Example 19
-This `h2` element utilizes an incorrect word substitution resulting from a literal cross-linguistic translation. While the word "command" cannot replace "order" in English here, the heading remains compliant because the immediate operational context allows the action to be unmistakably understood, not introducing a risk for user misunderstanding.
+#### Passed Example 18
+This `h3` element contains the former placeholder text (h3) at the end of the heading. The web publisher forgot to remove it after pasting the actual heading. It passes this rule despite the forgotten (h3), as it is still clearly about contacting customer support. 
 ```html
-	<h2>Command your food for delivery</h2>
-	<!-- Followed by a digital menu interface, a shopping cart summary, and a checkout button -->
+	<h3>Contact Customer Support (h3)</h3>
+	<!-- Followed by the contact details for customer support -->
+```
+
+#### Passed Example 19
+This `h3` element contains an extra angle bracket at the end that resulted from a local markup formatting oversight. It passes this rule despite the extra angle bracket which may not be noticeable by some, as the meaning of the heading is not affected. 
+```html
+	<h3>Contact Customer Support <</h3>
+	<!-- Followed by the contact details for customer support -->
 ```
 
 ### Failed (Situation A)
@@ -329,28 +325,102 @@ This `h1` element contains an explicitly erroneous transactional label, which is
 ```
 
 ### Failed (Situation D)
-Headings that contain errors in spelling, punctuation, capitalization, syntax, vocabulary, or structure. They may also include replicated text fragments resulting from copy-paste errors. These headings are considered failing if the text no longer remains fairly intelligible. This is because the severity of these errors introduces ambiguity, distorts the user's comprehension of the page structure, or causes an adverse material impact on some group of users.
+Headings containing errors due to copy-pasting, forgotten placeholder text along with the actual heading, or left-over markup code that should not be visible. These headings are considered failing if the text no longer remains meaningful and relevant,  introducing a risk for user misunderstanding. 
 
 #### Failed Example 10
-This `h2` element contains severe mechanical text fragments and truncations, likely caused by an automated find-and-replace or script error. It fails to comply with this criterion because the structural degradation of the words prevents users from determining the topic or purpose of the subsequent content.
-
-```html
-	<h2>The gov regu next year</h2>
-	<!-- Followed by an opinion piece about upcoming government regulations -->
-```
-
-#### Failed Example 11
-This `h3` element contains fragmented, truncated text resulting from a catastrophic copy-paste or rendering error. It fails to comply with this criterion because the remaining text fragment fails to convey any meaningful topic, leaving it entirely irrelevant to the underlying content.
+This `h3` element contains fragmented, truncated text resulting from a catastrophic copy-paste error. It fails this rule because the remaining text fragment fails to convey any meaningful topic, leaving it entirely irrelevant to the underlying content.
 ```html
 	<h3>ortcontact Custo</h3>
 	<!-- Followed by the contact details for customer support -->
 ```
 
-#### Failed Example 12
-This `h2` element utilizes an incorrect word substitution resulting from a literal cross-linguistic translation. While the developer intended to convey "finalize or complete your order," the word "terminate" instead implies canceling or deleting the items. The heading is non-compliant because it introduces severe ambiguity and a risk of user misunderstanding.
+#### Failed Example 11
+This `h3` element contains the former placeholder text at the beginning of the heading. The web publisher forgot to remove it after pasting the actual heading. It fails this rule because the heading will cause confusion and it cannot be reasonably considered meaningful for many users. 
 ```html
-	<h2>Terminate your food basket here</h2>
-	<!-- Followed by a digital menu interface, a shopping cart summary, and a checkout button of an online food delivery company -->
+	<h3>Insert Your Heading Righ Here and Do It by the End of Day Contact Customer Support</h3>
+	<!-- Followed by the contact details for customer support -->
 ```
-______________________ CHANGES MADE END HERE _____________________________
 
+#### Failed Example 12
+This `h3` element reveals an HTML comment that should have been invisible to users, due to a coding mistake the web developer made. It fails this rule because the heading will cause confusion and it cannot be reasonably considered meaningful for many users. 
+```html
+	<h3><!-Make sure to update-> Contact Customer Support</h3>
+	<!-- Followed by the contact details for customer support -->
+```
+
+
+### Inapplicable (Situation A)
+Lack of headings. If the page contains neither semantic headings nor any element that can be perceived as a heading, this rule is inapplicable on that page.
+
+#### Inapplicable Example 1
+The page lacks all of the following elements, regardless of what they may contain:
+
+- `h1` through `h6` elements:
+```html
+	<h1>
+```
+
+- Elements with an explicit ARIA heading role:
+```html
+	<div role="heading" aria-level="1">
+```
+
+- Visually hidden semantic headings designed exclusively for assistive technologies:
+```html
+	<h1 class="visually-hidden">
+```
+
+- Visually hidden elements utilizing an ARIA heading role:
+```html
+	<div role="heading" aria-level="1" class="visually-hidden">
+```
+
+- Elements styled to be visually perceived as a heading despite lacking semantic markers:
+```html
+	<p class="h1">
+```
+
+- Images of text perceived as a heading, regardless of the validity or presence of an `alt` attribute:
+```html
+  <img src="image-of-text.png" alt="" />
+```
+
+### Inapplicable (Situation B)
+Empty headings. If the page contains semantic headings or any element that can be perceived as a heading without any content in it, this rule is inapplicable on that page.
+
+#### Inapplicable Example 2
+The page has one or more of the following elements, containing nothing, nothing visible, or nothing exposed to assistive technology:
+
+- Empty `h1` through `h6` elements:
+```html
+	<h1></h1>
+```
+
+- Empty elements with an explicit ARIA heading role:
+```html
+	<div role="heading" aria-level="1"></div>
+```
+
+- Empty visually hidden semantic headings designed exclusively for assistive technologies:
+```html
+	<h1 class="visually-hidden"></h1>
+```
+
+- Empty visually hidden elements utilizing an ARIA heading role:
+```html
+	<div role="heading" aria-level="1" class="visually-hidden"></div>
+```
+
+- Empty elements styled to be visually perceived as a heading despite lacking semantic markers:
+```html
+	<p class="h1"></p>
+```
+
+- Deeply nested empty heading elements within structural sections:
+```html
+  <section>
+    <h1>
+      <div></div>
+    </h1>
+  </section> 
+```

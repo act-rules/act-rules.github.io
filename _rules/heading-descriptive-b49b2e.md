@@ -34,8 +34,8 @@ The testing scope under this rule is limited exclusively to the wording in eleme
 ### None of the following is within this rule's scope:
 - Heading structure or hierarchy, such as evaluating whether an `h2` incorrectly skips to an `h5`
 - Coding or parsing errors, provided that the heading is visible or exposed to assistive technologies, such as mismatched tags like `<h2>A meaningful heading</h3>` which browsers automatically correct in the DOM
-- Grammar or spelling errors in headings, unless they render the text entirely unintelligible, such as common typos or minor translation mistaakes like "Command your food" instead of "Order your food"
-- Styling and presentation, unless the styling renders the heading completely illegible, such as using a cursive font that is still legible
+- Grammar or spelling errors in headings, unless they render the text entirely unintelligible, such as common typos or minor translation mistakes like "Command your food" instead of "Order your food"
+- Styling and presentation, unless the styling renders the heading completely illegible, such as the usage of a cursive font that is still legible
 - Highly specialized or technical domains with content involving advanced scientific, technical, or academic material (such as specialized research documentation) where evaluating the exact relevance of the terminology requires domain-specific expertise
 - Abstract or creative content consisting of literary works, poetry, or avant-garde text where relevance is interpretive or non-linear rather than purely informational
 - Legally mundated or standardized statements, documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that should not be altered by the author
@@ -197,7 +197,7 @@ Headings whose relevance or relationship to the section content is not immediate
 #### Passed Example 15
 This `h2` element uses a satirical or metaphorical phrase to introduce the topic. Although the heading text does not literally match the vocabulary of the section, its contextual relevance becomes evident when considering the immediate context of the paragraph that follows. Headings that use literary devices remain compliant under this rule, as the determination of tone or stylistic approach falls within the editorial domain.
 ```html
-	<h2>Final Day for Savings</h2>
+  <h2>Final Day for Savings</h2>
   <p>Everything will be more expensive tomorrow.</p>
 	<!-- Followed by the subsection of an analysis article about inflation that begins with the above paragraph, explaining how long-term economic trends cause prices to rise continuously -->
 ```
@@ -212,8 +212,8 @@ This `h1` element employs irony to introduce the topic. Although the heading tex
 #### Passed Example 16
 This `h3` element employs an interrogative structure to introduce the section topic. Although the heading itself asks a question rather than providing a direct declaration, its contextual relevance becomes immediately evident upon evaluating the concise response that follows in the immediate text. 
 ```html
-	<h3>Opening hours?</h3>
-	<p>24/7</p>
+  <h3>Opening hours?</h3>
+  <p>24/7</p>
   <p>No opening hours. We are at your service round the clock!<p>
 ```
 
@@ -416,11 +416,9 @@ The page has one or more of the following elements, containing nothing, nothing 
 	<p class="h1"></p>
 ```
 
-- Deeply nested empty heading elements within structural sections:
+- Heading elements that contain markup only:
 ```html
-  <section>
-    <h1>
-      <div></div>
-    </h1>
-  </section> 
+  <h1>
+    <div></div>
+  </h1>
 ```

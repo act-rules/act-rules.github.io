@@ -3,7 +3,7 @@ id: b49b2e
 name: Heading is relevant and meaningful
 rules_format: 1.1
 rule_type: atomic
-description: |
+description:
   This rule checks that headings are meaningful and they are relevant to a specific topic, purpose or page.
 accessibility_requirements:
   wcag20:2.4.6: # Headings and labels (AA)
@@ -17,7 +17,7 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
-    - Armagan Tekdoner
+    - Armağan Tekdöner
     - Carlos Duarte
     - Dagfinn Rømen
     - Geir Sindre Fossøy
@@ -27,40 +27,42 @@ acknowledgments:
 ---
 
 ## Applicability
-This rule applies to any visible content that is perceived as a heading on a given page, as well as to any semantic heading element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") while not visible. In other words, this rule applies to headings and their relation to the content, regardless of their compliance with any other accessibility criteria.
-
-The testing scope under this rule is limited exclusively to the wording in elements perceived or presented as headings.
+This rule applies to any visible content styled or perceived as a heading on a given page, as well as to any semantic heading element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") while not visible. This evaluation focuses strictly on whether these headings are meaningful and relevant to their associated topic, purpose, or page, regardless of their compliance with any other accessibility criteria.  
+The testing scope is limited to evaluating the text of the heading in relation to its context, rather than programmatic implementation or visual styling.
 
 ### None of the following is within this rule's scope:
-- Heading structure or hierarchy, such as evaluating whether an `h2` incorrectly skips to an `h5`
-- Coding or parsing errors, provided that the heading is visible or exposed to assistive technologies, such as mismatched tags like `<h2>A meaningful heading</h3>` which browsers automatically correct in the DOM
-- Grammar or spelling errors in headings, unless they render the text entirely unintelligible, such as common typos or minor translation mistakes like "Command your food" instead of "Order your food"
-- Styling and presentation, unless the styling renders the heading completely illegible, such as the usage of a cursive font that is still legible
-- Highly specialized or technical domains with content involving advanced scientific, technical, or academic material (such as specialized research documentation) where evaluating the exact relevance of the terminology requires domain-specific expertise
-- Abstract or creative content consisting of literary works, poetry, or avant-garde text where relevance is interpretive or non-linear rather than purely informational
-- Legally mundated or standardized statements, documents or user interfaces where the text and structure of headings are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that should not be altered by the author
-- Other accessibility failures in headings covered by distinct WCAG success criteria, regardless of their severity
+- The sequential order of heading levels, such as evaluating whether a heading skips levels in the hierarchy (e.g., moving from an `h2` directly to an `h5`)
+- Coding or parsing errors in headings (assuming that the heading is visible or exposed to assistive technologies), such as mismatched tags like `<h2>Meaningful and relevant heading</h3>` which browsers automatically correct in the DOM
+- Factual accuracy of headings, such as the verification of historical dates, including names, locations, technical facts
+- Technical mistakes related to numeration or ordering in headings, such as skipped numbers, sequencing or arithmetical mistakes, chronological validity, incorrect ordering of section headers
+- Objective truth in headings, such as editorial biases, opinions, or controversial theories
+- Grammar or spelling errors in headings (unless they render the text entirely unintelligible), such as common typos or minor translation mistakes like "Command your food" instead of "Order your food"
+- Headings of highly specialized or technical domains consisting of advanced scientific, technical, or academic material, where evaluating the relevance of the terminology requires domain-specific expertise
+- Headings of abstract or creative content consisting of literary works, poetry, or avant-garde text where relevance is interpretive or non-linear rather than purely informational
+- Headings of legally mandated or standardized statements, documents, or user interfaces where their heading text and structure are rigidly dictated by statutory, regulatory, or legal mandates (e.g., standardized privacy disclosures) that should not be altered by the author
+- Compliance with other WCAG success criteria applicable to headings that are evaluated independently
 
 ## Expectations
-- Each heading text is sufficiently intelligible and carries meaning
+- Each heading text carries meaning and is sufficiently intelligible
 - Each heading is relevant to the specific page or section where it appears
 
 ## Background
-This rule evaluates any element that functions as a heading, including those perceived visually by sighted users or explicitly exposed as headings to assistive technologies. The scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`). While various implementations may simultaneously trigger failures under other WCAG success criteria, they are all subject to this rule.
+This rule evaluates any element that is a semantic heading, that functions as a heading (including those perceived visually as headings by sighted users), or that is explicitly exposed as a heading to assistive technologies.  
+In other words, the scope encompasses fully accessible headings (e.g., `<h1>Meaningful and relevant heading</h1>`), visual headings that lack assistive technology support (e.g., `<p class="h1">Meaningful and relevant heading</p>`), and structural headings that are hidden from visual presentation (e.g., `<h1 class="visually-hidden">Meaningful and relevant heading</h1>`).
 
 Under this rule, "content" refers to any textual or non-textual element presented on the web page, including sections, paragraphs, forms, user interface components, media galleries, lists, or hyperlinks.
 
-To pass, a heading must have a meaning and be relevant to its associated content. Headings consisting of placeholder text or uninformative character strings fail this rule inherently.
+To pass, a heading must have a meaning and be relevant to its associated content. (Headings consisting of placeholder text or uninformative character strings fail this rule inherently.)
 
 ### Assumptions
 This rule assumes that testers evaluating the content possess the necessary language proficiency and contextual comprehension required to assess the relationship between the headings and their associated content. 
 
 #### Limitations
-The following scenarios present inherent limitations to evaluation and the headings being tested may be deemed out of scope:
+The following scenarios present inherent limitations to evaluation and the headings being tested in such cases may be deemed out of scope:
 - Multilingual content: Web pages containing content in multiple languages (e.g., a heading in one language preceding content in another) where the tester does not possess professional working proficiency in all languages present.
 - Rapidly changing or real-time content streams: Live, dynamic content fields (e.g., streaming data feeds, live social walls, or active chat interfaces) where the content updates at a rate that prevents static evaluation against its structural headings.
 - Use of automated testing tools: This rule is inherently subjective and relies entirely on human judgment; it is not intended for automated testing tools.
-- Exposure to controversies: Because evaluating the relevance and meaning of textual content is non-technical, findings can be contested by anyone regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation, meaning failures are exceptions. Testers should default to a passing or not applicable result when in doubt.
+- Exposure to controversies: Because evaluating the relevance and meaning of textual content is non-technical, findings can be contested by anyone regardless of their technical background. Consequently, this rule is designed as a test-to-pass evaluation and failures should be reserved for exceptional cases. Testers should default to a passing or not applicable result when in doubt.
 
 ### Accessibility Support
 This rule does not rely on the support for particular accessibility features by different assistive technologies and user agents. 
@@ -359,27 +361,22 @@ The page lacks all of the following elements:
 ```html
 <h1>
 ```
-
 - Elements with an explicit ARIA heading role:
 ```html
 <div role="heading" aria-level="1">
 ```
-
 - Visually hidden semantic headings designed exclusively for assistive technologies:
 ```html
 <h1 class="visually-hidden">
 ```
-
 - Visually hidden elements utilizing an ARIA heading role:
 ```html
 <div role="heading" aria-level="1" class="visually-hidden">
 ```
-
 - Elements styled to be visually perceived as a heading despite lacking semantic markers:
 ```html
 <p class="h1">
 ```
-
 - Images of text perceived as a heading, regardless of the validity or presence of an `alt` attribute:
 ```html
 <img src="image-of-text.png" alt="" />
@@ -395,27 +392,22 @@ The page has one or more of the following elements, containing nothing, nothing 
 ```html
 <h1></h1>
 ```
-
 - Empty elements with an explicit ARIA heading role:
 ```html
 <div role="heading" aria-level="1"></div>
 ```
-
 - Empty visually hidden semantic headings designed exclusively for assistive technologies:
 ```html
 <h1 class="visually-hidden"></h1>
 ```
-
 - Empty visually hidden elements utilizing an ARIA heading role:
 ```html
 <div role="heading" aria-level="1" class="visually-hidden"></div>
 ```
-
 - Empty elements styled to be visually perceived as a heading despite lacking semantic markers:
 ```html
 <p class="h1"></p>
 ```
-
 - Heading elements that contain markup only:
 ```html
 <h1>

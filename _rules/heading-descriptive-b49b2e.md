@@ -392,6 +392,10 @@ The page has one or more of the following elements, containing nothing, nothing 
 ```html
 <h1></h1>
 ```
+- Empty elements styled to be visually perceived as a heading despite lacking semantic markers:
+```html
+<p class="h1"></p>
+```
 - Empty elements with an explicit ARIA heading role:
 ```html
 <div role="heading" aria-level="1"></div>
@@ -404,11 +408,7 @@ The page has one or more of the following elements, containing nothing, nothing 
 ```html
 <div role="heading" aria-level="1" class="visually-hidden"></div>
 ```
-- Empty elements styled to be visually perceived as a heading despite lacking semantic markers:
-```html
-<p class="h1"></p>
-```
-- Heading elements that contain markup only:
+- Heading elements that contain no content other than markup:
 ```html
 <h1>
   <div></div>

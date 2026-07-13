@@ -97,7 +97,7 @@ This element with the `menuitemcheckbox` role has an `input` element as a descen
 
 #### Passed Example 4
 
-This `<button>` element has an `a` element as a [child][]. The `a` element has no `href` attribute, so it isn't included in [sequential focus navigation][]. So this `button` element passes the rule.
+This `<button>` element has an `a` element as a [child][]. The `a` element has no `href` attribute, so it isn't included in [sequential focus navigation][].
 
 ```html
 <button><a>button/link</a></button>
@@ -139,7 +139,7 @@ This element with the `menuitemcheckbox` role has a checkbox as a child. Because
 
 #### Failed Example 4
 
-This element with the `tab` role contains an `a` element. The `tab` role has [presentational children][]. The `a` element is included in [sequential focus navigation][]. So the element with the `tab` role fails the rule. (This tablist implementation is non-functional for users. It's not meant to function - it's only meant to show roles.)
+This element with the `tab` role contains an `a` element. The `tab` role has [presentational children][]. The `a` element is included in [sequential focus navigation][]. (This tablist implementation is non-functional for users. It's not meant to function - it's only meant to show roles.)
 
 ```html
 <ul role="tablist">
@@ -151,7 +151,7 @@ This element with the `tab` role contains an `a` element. The `tab` role has [pr
 
 #### Failed Example 5
 
-This element with the `img` role contains an `a` element. The `img` role has [presentational children][]. The `a` element is included in [sequential focus navigation][]. So the element with the `img` role fails the rule.
+This element with the `img` role contains an `a` element. The `img` role has [presentational children][]. The `a` element is included in [sequential focus navigation][].
 
 ```html
 <span role="img" aria-label="some ASCII art">****** This ASCII art ******* <a href="#">contains a link.</a></span>

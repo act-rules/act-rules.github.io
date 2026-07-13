@@ -29,8 +29,8 @@ This rule applies to any element containing visible content or functional compon
 
 Each target element:
 Retains all content and functionality when viewed at 320 CSS pixels; and
-Does not hide, remove, or make content unavailable as a result of viewport constraints, zoom, or responsive behaviour; and
-Ensures that any content that is visually hidden at this viewport size is still programmatically available and accessible to users.
+- Does not hide, remove, or make content unavailable as a result of viewport constraints, zoom, or responsive behaviour; and
+- Ensures that any content that is visually hidden at this viewport size is still programmatically available and accessible to users.
 
 ## Background
 

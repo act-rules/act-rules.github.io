@@ -142,7 +142,7 @@ This button has [visible inner text][] that, according to the [label in name alg
 
 #### Passed Example 8
 
-(Similar to previous example.) This link has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the `<h6>` tags insert whitespace into the result in the former but not the latter.
+Similar to the previous example, this link has [visible inner text][] that, according to the [label in name algorithm][], is contained within the [accessible name][]. This example shows why the [label in name algorithm][] uses the [visible inner text][] and not the [visible text content][]: the `<h6>` tags insert whitespace into the result in the former but not the latter.
 
 ```html
 <a href="#" aria-label="Some article by John Doe">

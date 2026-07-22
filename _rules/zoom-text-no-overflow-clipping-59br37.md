@@ -1,6 +1,7 @@
 ---
 id: 59br37
 name: Zoomed text node is not clipped with CSS overflow
+rules_format: 1.1
 rule_type: atomic
 description: |
   This rule checks that text nodes are not unintentionally clipped by overflow, when a page is zoomed to 200% on 1280 by 1024 viewport;
@@ -41,7 +42,11 @@ Each test target is not [horizontally clipped by overflow][horizontally clipped]
 
 Each test target is not [vertically clipped by overflow][vertically clipped] of an [ancestor][] in the [flat tree][] when in a [viewport size][] of 640 by 512, except if the [clipping][vertically clipped] [ancestor][] has a [used][] [line-height][] equal to or greater than the height of its [bounding box][], or in case of a [computed][] [overflow-y][overflow] of `clip`, its [content box][].
 
-## Assumptions
+## Background
+
+When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used][] value is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
+
+### Assumptions
 
 If any of the following assumptions is true, failing this rule may not result in a failure of [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG22/#resize-text):
 
@@ -51,13 +56,9 @@ If any of the following assumptions is true, failing this rule may not result in
 
 - While [success criterion 1.4.4 Resize text](https://www.w3.org/TR/WCAG22/#resize-text) does not explicitly mention which viewport size has to be resized up to 200%, it is assumed that a [viewport size][] of 1280 by 1024 is applicable. A 1280 by 1024 [viewport size][] is explicitly mentioned under [success criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow).
 
-## Accessibility Support
+### Accessibility Support
 
 Some user agents treat the value of the `aria-hidden` attribute as case-sensitive.
-
-## Background
-
-When the [computed][] value of the `line-height` property is `normal`, the [used][] value depends on font specific metrics. [CSS specifications][line-height normal] recommend that the [used][] value is between 1.0 and 1.2 and major browsers are effectively using values close to 1.2.
 
 ### Bibliography
 
@@ -85,7 +86,7 @@ This [text node][] is fully [visible][] at a [viewport size][] of 640 by 512.
 
 #### Passed Example 2
 
-This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. A link to a full version of the poem is also provided.
+This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` at a [viewport size][] of 640 by 512. This fulfills expectation 1. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px;">
@@ -97,7 +98,7 @@ This [text node][] is [horizontally clipped][] using `text-overflow: ellipsis` a
 
 #### Passed Example 3
 
-This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. A link to a full version of the poem is also provided.
+This [text node][] is restricted to a single line, by setting a `line-height` that is the same as the `height`. This fulfills expectation 2. A link to a full version of the poem is also provided. The link to the full version is not required by this rule, but is necessary to satisfy [success criterion 1.4.4 Resize text][sc144].
 
 ```html
 <style>
@@ -313,3 +314,4 @@ None of these [text nodes][text node] has an [ancestor][] with `overflow: hidden
 [viewport size]: #viewport-size
 [visible]: #visible
 [white-space]: https://www.w3.org/TR/CSS22/text.html#propdef-white-space
+[sc144]: https://www.w3.org/TR/WCAG22/#resize-text

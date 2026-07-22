@@ -1,6 +1,7 @@
 ---
 id: cf77f2
 name: Bypass Blocks of Repeated Content
+rules_format: 1.1
 rule_type: composite
 description: |
   This rule checks that each page has a mechanism to bypass repeated blocks of content.
@@ -64,7 +65,11 @@ For each test target, the outcome of at least one of the following rules is pass
 - [_Document has a landmark with non-repeated content_][document has landmark]; or
 - [_Document has an instrument to move focus to non-repeated content_][document has instrument to main].
 
-## Assumptions
+## Background
+
+The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.4.1 Bypass Block][sc241]. These extra requirements are left out of this rule, and should be tested separately.
+
+### Assumptions
 
 - This rule assumes that the mean to bypass blocks is included in the content of the [HTML web page][]. For example, server-side scripting, or a global "settings" page, can provide a functionality similar to [_Block of repeated content is collapsible_][block collapsible] by serving a modified version of the page; in which case this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
 - This rule assumes that `frame` and `frameset` elements are not used, given that they are deprecated in HTML5. They can be used to organize content as per [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG22/Techniques/html/H70) and [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H64), in that case, this rule would fail but [Success Criterion 2.4.1 Bypass blocks][sc241] could nonetheless be satisfied.
@@ -72,17 +77,13 @@ For each test target, the outcome of at least one of the following rules is pass
 - This rule assumes that repeated content that is at the end of the page (and not followed any non-repeated content) can be bypassed by means provided by user agents (such as pressing the "End" key to scroll to the bottom of the page). Therefore, they do not need any other way of being bypassed and are ignored by this rule. If there isn't a way to bypass them, this rule may pass while [Success Criterion 2.4.1 Bypass blocks][sc241] is not satisfied.
 - This rule assumes that the language of each test target can be correctly determined (either programmatically or by analyzing the content), and sufficiently understood.
 
-## Accessibility Support
+### Accessibility Support
 
 Techniques and solutions that identify blocks of content are sufficient ways of passing [Success Criterion 2.4.1 Bypass blocks][sc241]. They are, however, only beneficial for users who have ways of navigating with this information. For example, adding headings to a document will only help users who can "jump" from heading to heading (such a possibility can be provided by browsers, browsers plugins, screen readers, or other assistive technologies). Techniques and solutions based on links will benefit all users (for example, sighted keyboard users with no other assistive technology) and are therefore recommended.
 
 If the [instruments][instrument] used to pass some of the atomic rules are not keyboard accessible, or not [included in the accessibility tree][], passing this rule can still leave many users without a way to bypass blocks of repeated content. WCAG's definition of [mechanism][] has a note saying that it "needs to meet all success criteria for the conformance level claimed". This includes [Success Criterion 2.1.1 Keyboard](https://www.w3.org/TR/WCAG22/#keyboard-accessible) and [Success Criterion 4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG22/#name-role-value) which are both at level A.
 
 This rule only checks if there is a way to bypass at least one section of repeated content. On pages with several interleaved repeated and non-repeated content, this is not sufficient to satisfy [Success Criterion 2.4.1 Bypass blocks][sc241]. Checking for more sections to bypass was considered but rejected due to both the added complexity it would create, and the risk of failing on pages that might be correct.
-
-## Background
-
-The [instruments][instrument] used to pass this rule (if any), must meet all level A Success Criteria in order to fully satisfy [Success Criterion 2.4.1 Bypass Block][sc241]. These extra requirements are left out of this rule, and should be tested separately.
 
 ### Bibliography
 

@@ -19,8 +19,8 @@ Sub-algorithm to tokenize a string:
 1. Do Unicode [case folding][] on the string then convert it to [normalization form KD][].
 1. For each character that either a) represents non-text content, or b) isn't a letter or a digit: replace that character with a space character.
     - For a) Determination of what "non-text" is often requires a judgment call.  Non-text includes, but is not limited to, emoji, and the use of the letter 'X' as a symbol which means 'close this modal dialog'.
-    - For b) Use the [Unicode general categories "L" (Letter) and "N" (Number)][https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/#G134153].  (This will exclude hyphens, punctuation, emoji, and more.)
-1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the [language of the element][https://html.spec.whatwg.org/multipage/dom.html#language].
+    - For b) Use the [Unicode general categories "L" (Letter) and "N" (Number)](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/#G134153).  (This will exclude hyphens, punctuation, emoji, and more.)
+1. Split the string into a list of strings, one string per word, according to the word segmentation rules for the [language of the element](https://html.spec.whatwg.org/multipage/dom.html#language).
     - This 'split' operation must:
         - Effectively remove leading and trailing [whitespace][].
         - If the input string contains nothing but [whitespace][] before this operation: return an empty list.

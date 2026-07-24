@@ -254,7 +254,7 @@ This button has [visible inner text][] that is only partially contained within t
 
 #### Failed Example 3
 
-This link has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy the [label in name algorithm][], which works on full words. So this fails the rule.
+This link has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy the [label in name algorithm][], which works on full words.
 
 ```html
 <a href="#" aria-label="Discover Italy">Discover It</a>
@@ -262,7 +262,7 @@ This link has [visible inner text][] that is fully contained within the [accessi
 
 #### Failed Example 4
 
-This link's [accessible name][] contains two tokens (according to the [label in name algorithm][]) and the [visible inner text][] contains one token. So it fails the rule.
+This link's [accessible name][] contains two tokens (according to the [label in name algorithm][]) and the [visible inner text][] contains one token.
 
 ```html
 <a aria-label="just ice" href="#">justice</a>
@@ -294,7 +294,7 @@ This rule has no special handling for converting mathematical symbols into words
 
 #### Failed Example 8
 
-This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the [contiguous subsequence][] check part of the [label in name algorithm][], and so it fails the rule.
+This button's accessible name contains the same tokens that are in the visible label. But they aren't in the same order, so it fails the [contiguous subsequence][] check part of the [label in name algorithm][].
 
 ```html
 <button aria-label="how are you"><span>you</span><span>how</span><span>are</span></button>
@@ -302,7 +302,7 @@ This button's accessible name contains the same tokens that are in the visible l
 
 #### Failed Example 9
 
-This button's accessible name contains the word "the" in the middle of it, which causes the [contiguous subsequence][] check of the [label in name algorithm][] (in particular: the "contiguous" requirement) to fail. So it fails the rule.
+This button's accessible name contains the word "the" in the middle of it, which causes the [contiguous subsequence][] check of the [label in name algorithm][] (in particular: the "contiguous" requirement) to fail.
 
 ```html
 <button aria-label="Download the specification">Download specification</button>
@@ -310,7 +310,7 @@ This button's accessible name contains the word "the" in the middle of it, which
 
 #### Failed Example 10
 
-This link's accessible name contains the same digits that are in the visible label, and in the same order. But they have different spaces and punctuation between them, so they are considered separate tokens. So this fails the rule.
+This link's accessible name contains the same digits that are in the visible label, and in the same order. But they have different spaces and punctuation between them, so they are considered separate tokens.
 
 ```html
 <a aria-label="1 2 3. 5 5 5. 0 1 2 3" href="tel:1235550123">123.555.0123</a>
@@ -350,7 +350,7 @@ This rule has no special handling for converting digits into words, or vice vers
 
 #### Failed Example 15
 
-The [label in name algorithm][] works on full words. That is: it requires that each full word in the visible label ("1" in this case) is equal to a full word in the accessible name ("1a" in this case). Those two words - "1" and "1a" - are not equal, so this element fails the rule.
+The [label in name algorithm][] works on full words. That is: it requires that each full word in the visible label ("1" in this case) is equal to a full word in the accessible name ("1a" in this case). Those two words - "1" and "1a" - are not equal.
 
 ```html
 <a aria-label="1a" href="#">1</a>
@@ -358,7 +358,7 @@ The [label in name algorithm][] works on full words. That is: it requires that e
 
 #### Failed Example 16
 
-The definition of [visible inner text][] doesn't treat text any differently if it's excluded from the accessibility tree with aria-hidden. So this rule effectively ignores aria-hidden. So this element fails the rule.
+The definition of [visible inner text][] doesn't treat text any differently if it's excluded from the accessibility tree with aria-hidden. This rule effectively ignores aria-hidden.
 
 ```html
 <a aria-label="Download specification" href="#">Download <span aria-hidden="true">gizmo</span> specification</a>
@@ -403,7 +403,7 @@ This link has no [visible text content][].
 
 #### Inapplicable Example 5
 
-This link's label contains an abbreviation, so it is not applicable.
+This link's label contains an abbreviation.
 
 ```html
 <a aria-label="University Avenue" href="#">University Ave.</a>
@@ -411,7 +411,7 @@ This link's label contains an abbreviation, so it is not applicable.
 
 #### Inapplicable Example 6
 
-This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation. So it's not applicable.
+This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation.
 
 ```html
 <a href="#" aria-label="non-standard">nonstandard</a>

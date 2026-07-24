@@ -254,7 +254,7 @@ This button has [visible inner text][] that is only partially contained within t
 
 #### Failed Example 3
 
-This button has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy the [label in name algorithm][], which works on full words.
+This link has [visible inner text][] that is fully contained within the [accessible name][] when viewed as a character-by-character substring. But that does not satisfy the [label in name algorithm][], which works on full words.
 
 ```html
 <a href="#" aria-label="Discover Italy">Discover It</a>
@@ -262,7 +262,7 @@ This button has [visible inner text][] that is fully contained within the [acces
 
 #### Failed Example 4
 
-This link's [accessible name][] contains two tokens (according to the[label in name algorithm][]) and the [visible inner text][] contains one token.
+This link's [accessible name][] contains two tokens (according to the [label in name algorithm][]) and the [visible inner text][] contains one token.
 
 ```html
 <a aria-label="just ice" href="#">justice</a>

@@ -262,7 +262,7 @@ This link has [visible inner text][] that is fully contained within the [accessi
 
 #### Failed Example 4
 
-This link's [accessible name][] contains two tokens (according to the[label in name algorithm][]) and the [visible inner text][] contains one token. So it fails the rule.
+This link's [accessible name][] contains two tokens (according to the [label in name algorithm][]) and the [visible inner text][] contains one token. So it fails the rule.
 
 ```html
 <a aria-label="just ice" href="#">justice</a>

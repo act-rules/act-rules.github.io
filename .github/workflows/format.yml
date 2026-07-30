@@ -1,0 +1,70 @@
+# Formats changed files in pull requests, including changes made through GitHub's
+# web interface, where the local Husky pre-commit hook does not run.
+name: format
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Format changed files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mapfile -d '' files < <(
+            git diff --name-only --diff-filter=ACMR -z "$BASE_SHA" HEAD |
+              while IFS= read -r -d '' file; do
+                case "$file" in
+                  *.json|*.md|*.js|*.html|*.css|*.yml)
+                    printf '%s\0' "$file"
+                    ;;
+                esac
+              done
+          )
+
+          if (( ${#files[@]} )); then
+            npx prettier --write "${files[@]}"
+          else
+            echo "No changed files need formatting."
+          fi
+      - name: Commit formatting changes
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          if git diff --quiet; then
+            echo "All changed files are already formatted."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          git commit -m "style: format changed files"
+          git push origin "HEAD:$HEAD_BRANCH"
+      - name: Check formatting for forked pull request
+        if: github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::Some changed files need formatting. The workflow cannot update a forked pull request."
+            git diff --stat
+            exit 1
+          fi

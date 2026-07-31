@@ -4,7 +4,7 @@ on:
   pull_request:
 permissions:
   contents: write
-  workflows: write
+  actions: write
 jobs:
   prettier:
     runs-on: ubuntu-latest

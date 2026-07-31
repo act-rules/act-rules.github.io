@@ -4,7 +4,6 @@ on:
   pull_request:
 permissions:
   contents: write
-  actions: write
 jobs:
   prettier:
     runs-on: ubuntu-latest
@@ -54,6 +53,11 @@ jobs:
             echo "prose_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
+      - name: Configure git
+        run: |
+          git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
+          git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
 
       - name: Commit and push changes
         if: steps.run_prettier.outputs.prettier_changes == 'true'

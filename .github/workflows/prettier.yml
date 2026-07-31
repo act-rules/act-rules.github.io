@@ -26,8 +26,10 @@ jobs:
       - name: Get changed files and run Prettier
         id: run_prettier
         run: |
+          export PATH="$PWD/node_modules/.bin:$PATH"
+
           # Compare with the previous commit to find changed files
-          changed_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(js|json|css|html|md|yml|)$' || true)
+          changed_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(js|json|css|html|md|yml)$' || true)
 
           if [[ -n "$changed_files" ]]; then
             echo "Found changed files to format:"

@@ -62,5 +62,5 @@ jobs:
 
           git add .
           git commit -m "Chore: Format files with Prettier"
-          git push origin HEAD:${{ github.ref_name }}
+          git push origin HEAD:${{ github.head_ref }}
           echo "Changes committed and pushed successfully"

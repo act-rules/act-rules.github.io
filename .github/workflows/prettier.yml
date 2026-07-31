@@ -26,17 +26,15 @@ jobs:
       - name: Get changed files and run Prettier
         id: run_prettier
         run: |
-          export PATH="$PWD/node_modules/.bin:$PATH"
-
           # Compare with the previous commit to find changed files
-          changed_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(js|json|css|html|md|yml)$' || true)
+          changed_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(js|mjs|cjs|json|css|html|md|yml)$' || true)
 
           if [[ -n "$changed_files" ]]; then
             echo "Found changed files to format:"
             echo "$changed_files"
             
             # Run prettier on the changed files
-            echo "$changed_files" | xargs prettier --write
+            echo "$changed_files" | xargs npx --no-install prettier --write
             
             # Check if prettier actually made any changes
             if git diff --quiet && git diff --cached --quiet; then
@@ -49,19 +47,16 @@ jobs:
             
             echo "prose_changes=true" >> "$GITHUB_OUTPUT"
           else
-            echo "No JavaScript, JSON, CSS, or HTML files were changed in this commit."
+            echo "No relevant files were changed in this commit."
             echo "prose_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-      - name: Configure git
-        run: |
-          git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
-          git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
-
       - name: Commit and push changes
         if: steps.run_prettier.outputs.prettier_changes == 'true'
         run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add .
           git commit -m "Chore: Format files with Prettier"
           git push origin HEAD:${{ github.head_ref }}

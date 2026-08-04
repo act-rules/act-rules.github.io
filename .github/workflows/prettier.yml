@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 0 # Needed to compare with origin/main
+          fetch-depth: 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -26,8 +26,10 @@ jobs:
       - name: Get changed files and run Prettier
         id: run_prettier
         run: |
-          # Compare with the previous commit to find changed files
-          changed_files=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(js|mjs|cjs|json|css|html|md|yml)$' || true)
+          # Fetch only the base branch tip and compare it with the checked-out PR merge commit
+          git fetch --no-tags --depth=1 origin \
+            "+refs/heads/${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}"
+          changed_files=$(git diff --name-only --diff-filter=ACMRT origin/${{ github.base_ref }}..HEAD | grep -E '\.(js|mjs|cjs|json|css|html|md|yml)$' || true)
 
           if [[ -n "$changed_files" ]]; then
             echo "Found changed files to format:"
@@ -47,10 +49,17 @@ jobs:
             
             echo "prose_changes=true" >> "$GITHUB_OUTPUT"
           else
-            echo "No relevant files were changed in this commit."
+            echo "No relevant files were changed in this pull request branch."
             echo "prose_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
+      - name: Warn when PR is from fork
+        if: steps.run_prettier.outputs.prettier_changes == 'true' && github.event.pull_request.head.repo.fork == true
+        run: |
+          echo "::warning title=Fork PR detected::Prettier made changes, but this workflow cannot push commits to fork branches. Please run Prettier locally and push the formatting commit or allow edits from maintainers."
+          echo "### Fork PR notice" >> "$GITHUB_STEP_SUMMARY"
+          echo "Prettier found formatting changes, but auto-commit is skipped for forks. Run prettier locally or allow edits from maintainers." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit and push changes
         if: steps.run_prettier.outputs.prettier_changes == 'true'

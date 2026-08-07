@@ -33,6 +33,7 @@ This rule applies to semantic heading elements that are [included in the accessi
 Rule contains subjective applicability, depending on whether the element evaluated as a heading by implementers should be considered a heading.
 
 ## Expectations
+
 Each heading is relevant to the specific page or section where it appears and it is sufficiently intelligible.
 
 ## Background

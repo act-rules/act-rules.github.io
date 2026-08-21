@@ -401,22 +401,6 @@ This link has no [visible text content][].
 </a>
 ```
 
-#### Inapplicable Example 5
-
-This link's label contains an abbreviation.
-
-```html
-<a aria-label="University Avenue" href="#">University Ave.</a>
-```
-
-#### Inapplicable Example 6
-
-This word - non-standard / nonstandard - appears in both the element's accessible name and its visible label, using different hyphenation.
-
-```html
-<a href="#" aria-label="non-standard">nonstandard</a>
-```
-
 [accessible name]: #accessible-name 'Definition of accessible name'
 [label in name algorithm]: #label-in-name-algorithm 'Definition of Label in Name Algorithm'
 [non-text content]: https://www.w3.org/TR/WCAG22/#dfn-non-text-content 'WCAG Definition of Non-text content'

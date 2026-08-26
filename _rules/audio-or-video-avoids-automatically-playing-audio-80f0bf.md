@@ -57,7 +57,7 @@ This rule applies to any `audio` or `video` element for which all the following 
 - **autoplay**: the element has an `autoplay` [attribute value][] of `true`; and
 - **not muted**: the element has a `muted` [attribute value][] of `false`; and
 - **not paused**: the element has a `paused` [attribute value][] of `false`; and
-- **duration**: the element has a [media resource][] lasting more than 3 seconds and that contains audio.
+- **play time**: the element has a [media resource][] that contains audio and that stops after no more than 3 seconds. This can be changed by authors, for example using a [temporal media fragment URI](https://www.w3.org/TR/media-frags/#naming-time) (`#t`) in the source URI.
 
 ## Expectation
 
@@ -101,18 +101,7 @@ This `audio` element has an [instrument][] to pause, stop, or turn the audio vol
 
 #### Passed Example 2
 
-This `video` element does not play for longer than 3 seconds.
-
-```html
-<video autoplay>
-	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
-	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
-</video>
-```
-
-#### Passed Example 3
-
-This `video` element autoplays and has an [instrument][] to pause, stop, or turn the audio volume off.
+This `video` element is longer than 3 seconds, autoplays, and has an [instrument][] to pause, stop, or turn the audio volume off.
 
 ```html
 <head>
@@ -191,6 +180,43 @@ This `video` element has no audio output.
 ```
 
 #### Inapplicable Example 3
+
+This `video` element does not play for longer than 3 seconds.
+
+```html
+<video autoplay>
+	<source src="/test-assets/rabbit-video/video.mp4#t=8,10" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm#t=8,10" type="video/webm" />
+</video>
+```
+
+#### Inapplicable Example 4
+
+This `video` element autoplays but is paused.
+
+```html
+<video id="paused" autoplay>
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+</video>
+
+<script>
+  document.getElementById('paused').pause();
+</script>
+```
+
+#### Inapplicable Example 5
+
+This `video` element does not play automatically.
+
+```html
+<video>
+	<source src="/test-assets/rabbit-video/video.mp4" type="video/mp4" />
+	<source src="/test-assets/rabbit-video/video.webm" type="video/webm" />
+</video>
+```
+
+#### Inapplicable Example 6
 
 This `audio` element does not play automatically.
 

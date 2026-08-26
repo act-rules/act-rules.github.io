@@ -248,6 +248,7 @@
 - focusability
 - unitless
 - luminance
+- checkboxes # this seems to be the correct plural
 - disambiguated
 - superclass
 - grey

@@ -1,0 +1,285 @@
+---
+id: sc9kkf
+name: Content is not missing at 320 CSS pixels
+rules_format: 1.1
+rule_type: atomic
+description: |
+  This rule checks content is not missing when the viewport is set to 320 CSS pixels in the orientation of the text.
+accessibility_requirements:
+  wcag21:1.4.10: # Reflow (AA)
+    forConformance: true
+    failed: not satisfied
+    passed: further testing needed
+    inapplicable: further testing needed
+input_aspects:
+  - DOM Tree
+  - CSS Styling
+acknowledgments:
+  authors:
+    -  Helen Burge
+  previous_authors:
+    - 
+---
+
+## Applicability
+
+This rule applies to any element containing visible content or functional components. It is rendered when the viewport is set to 320 CSS pixels in the orientation of the text.
+
+## Expectation (1)
+
+Each target element:
+Retains all content and functionality when viewed at 320 CSS pixels; and
+- Does not hide, remove, or make content unavailable as a result of viewport constraints, zoom, or responsive behaviour; and
+- Ensures that any content that is visually hidden at this viewport size is still programmatically available and accessible to users.
+
+## Background
+
+This rule supports WCAG 2.1 Success Criterion 1.4.10 Reflow, which requires that content be presented without loss of information or functionality at a width equivalent to 320 CSS pixels. When content is missing at smaller viewport sizes, users may lose access to essential information or controls, even if the layout appears functional. Responsive design should reposition or adapt content, not remove it entirely, unless an equivalent mechanism provides access.
+
+### Assumptions
+
+There are no assumptions.
+
+### Accessibility Support
+
+There are no accessibility support issues known.
+
+## Examples
+
+### Passed
+
+#### Passed Example 1
+
+Content reflows but remains fully available.
+
+```html
+<div style="max-width: 100%;">
+  <p>
+    All text content remains visible and accessible when the viewport is reduced.
+  </p>
+</div>
+```
+
+#### Passed Example 2
+
+Navigation collapses into a menu but remains accessible. Content is not removed, only hidden behind an accessible control.
+
+```html
+<button aria-expanded="false">Menu</button>
+<nav hidden>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+```
+
+#### Passed Example 3
+
+Content is visually hidden but remains available programmatically.
+
+```html
+<p class="visually-hidden">
+  Additional instructions available to screen reader users.
+</p>
+```
+
+#### Passed Example 4
+
+Content is moved in the layout but still present.
+
+```html
+<style>
+  .sidebar {
+    order: 2;
+  }
+</style>
+<div class="sidebar">
+  <p>Sidebar content is still available, just repositioned.</p>
+</div>
+```
+
+#### Passed Example 5
+
+Accordion reveals content without removing it.
+
+```html
+<button aria-expanded="false">Show details</button>
+<div hidden>
+  <p>Additional content remains available when expanded.</p>
+</div>
+```
+
+#### Passed Example 6
+
+Images resize but are still visible.
+
+```html
+<img src="example.jpg" style="max-width: 100%;">
+```
+
+#### Passed Example 7
+
+Form fields collapse but remain accessible.
+
+```html
+<form>
+  <label for="name">Name</label>
+  <input id="name" type="text">
+</form>
+```
+
+#### Passed Example 8
+
+Content requiring two-dimensional layout (covered under reflow exceptions).
+
+```html
+<table>
+  <tr><th>Column</th><th>Column</th></tr>
+</table>
+```
+
+### Failed
+
+#### Failed Example 1
+
+Content removed at smaller viewport.
+
+```html
+<style>
+  @media (max-width: 400px) {
+    .important-content {
+      display: none;
+    }
+  }
+</style>
+<div class="important-content">
+  This content disappears on smaller screens.
+</div>
+```
+
+#### Failed Example 2
+
+Navigation items removed instead of adapted.
+
+```html
+<style>
+  @media (max-width: 400px) {
+    nav li:nth-child(n+3) {
+      display: none;
+    }
+  }
+</style>
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+```
+
+#### Failed Example 3
+
+Content visually clipped and inaccessible.
+
+```html
+<div style="height: 50px; overflow: hidden;">
+  <p>
+    Important content is hidden and cannot be accessed or revealed.
+  </p>
+</div>
+```
+
+#### Failed Example 4
+
+Content moved off-screen and not reachable.
+
+```html
+<div style="position: absolute; left: -9999px;">
+  Hidden content that cannot be accessed by users.
+</div>
+```
+
+#### Failed Example 5
+
+Interactive element missing at smaller viewport.
+
+```html
+<style>
+  @media (max-width: 400px) {
+    button {
+      display: none;
+    }
+  }
+</style>
+<button>Submit</button>
+```
+
+#### Failed Example 6
+
+Image removed without alternative.
+
+```html
+<style>
+  @media (max-width: 400px) {
+    img {
+      display: none;
+    }
+  }
+</style>
+<img src="important-diagram.png" alt="Important diagram">
+```
+
+#### Failed Example 7
+
+Collapsed content has no mechanism to access it.
+
+```html
+<div style="display: none;">
+  <p>This content is permanently hidden.</p>
+</div>
+```
+
+### Inapplicable
+
+#### Inapplicable Example 1
+
+Decorative content.
+
+```html
+<div role="presentation">
+  Decorative content only.
+</div>
+```
+
+#### Inapplicable Example 2
+
+Content explicitly hidden from all users.
+
+```html
+<div hidden>
+  Hidden content not intended for display.
+</div>
+```
+
+#### Inapplicable Example 3
+
+Content outside the user viewport by design (e.g. off-canvas patterns before interaction).
+
+```html
+<div aria-hidden="true" class="offscreen-menu">
+  Menu content appears only when activated.
+</div>
+```
+
+#### Inapplicable Example 4
+
+Content that is replaced by an equivalent alternative. The full content is replaced with an equivalent that preserves meaning.
+
+```html
+<p class="mobile">Short summary version</p>
+<p class="desktop">Full detailed version</p>
+```

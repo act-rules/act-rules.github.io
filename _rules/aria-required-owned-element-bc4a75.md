@@ -211,7 +211,7 @@ This element with the `menu` role has no accessibility child. Note because the e
 
 #### Passed Example 13
 
-The both `div` elements with explicit `list` roles have no accessible children. The `listitem` element is either with `aria-hidden` or has no owned element through `aira-own` in the first `div` element.
+The both `div` elements with explicit `list` roles have no accessibility children. The `listitem` element is either with `aria-hidden` or has no owned element through `aira-own` in the first `div` element.
 
 ```html
 <div role="list">

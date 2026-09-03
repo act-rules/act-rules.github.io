@@ -363,7 +363,7 @@ This element with the `progressbar` role does not need [allowed accessibility ch
 
 [attribute value]: #attribute-value 'Definition of Attribute Value'
 [dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
-[allowed accessibility child roles]: https://w3c.github.io/aria/#mustContain 'Define allowed accessibility child roles'
+[allowed accessibility child roles]: https://www.w3.org/TR/wai-aria-1.3/#mustContain 'Define allowed accessibility child roles'
 [owns]: #owned-by
 [owned by]: #owned-by
 [semantic role]: #semantic-role

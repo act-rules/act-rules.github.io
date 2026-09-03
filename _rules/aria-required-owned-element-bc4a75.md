@@ -4,7 +4,7 @@ name: ARIA allowed accessibility child roles
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that an element with a semantic role contains only children with allowed accessibilility roles.
+  This rule checks that an element with a semantic role contains only children with allowed accessibility roles.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true

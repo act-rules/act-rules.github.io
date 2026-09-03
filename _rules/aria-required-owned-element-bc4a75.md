@@ -51,7 +51,7 @@ If the [semantic role][] on the target element is incorrectly used, and any rela
 
 - User agents do not all have the same accessibility tree. Particularly the method of deriving which element owns which other elements varies between browsers. This can lead to different results for this rule, depending on which accessibility tree is used as input.
 - `aria-owns` has limited support in some user agents.
-- Assistive technologies are not consistent in how they handle situations where a [allowed accessibility child roles][] has a missing or incorrect role. This can lead to situations where inaccurate owned elements behave as expected in one assistive technology, but not in another.
+- Assistive technologies are not consistent in how they handle situations where an element which is supposed to have an [allowed accessibility child roles][allowed accessibility child role] has a missing or incorrect role. This can lead to situations where inaccurate elements behave as expected in one assistive technology, but not in another.
 
 ### Other Resources
 

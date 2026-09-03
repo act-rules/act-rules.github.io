@@ -201,7 +201,7 @@ This `div` element with the implicit `list` role owns only elements with the imp
 
 #### Passed Example 12
 
-This element with the `menu` role has no accessibile child. Note because the element also has an `aria-busy` attribute set to `true`, it also passes ARIA 1.2.
+This element with the `menu` role has no accessibility child. Note because the element also has an `aria-busy` attribute set to `true`, it also passes ARIA 1.2.
 
 ```html
 <ul role="menu" aria-busy="true">

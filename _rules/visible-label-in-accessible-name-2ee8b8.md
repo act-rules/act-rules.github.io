@@ -52,6 +52,8 @@ The understanding document of [2.5.3 Label in Name][understand253] use the term 
 
 If the target element contains an [image of text](https://www.w3.org/TR/WCAG22/#dfn-images-of-text), it may pass this rule but fail [2.5.3 Label in Name][understand253] (because the accessible name should then match the text inside the image, which is not taken into account by this rule). So further testing is needed. This case might be handled by a different rule in the future.
 
+This rule does not include examples of abbreviations or differently hyphenated text because the label in name algorithm should not be used. While such examples are not covered by this rule, [Success Criterion 2.5.3 Label in Name][sc253] could apply.
+
 ### Assumptions
 
 This rule assumes that the [visible inner text][] is equal to the [label as defined by WCAG](https://www.w3.org/wai/wcag22/understanding/label-in-name#dfn-label), even though "label" is not precisely defined at this point in history.

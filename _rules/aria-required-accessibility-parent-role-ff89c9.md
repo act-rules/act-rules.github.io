@@ -1,6 +1,6 @@
 ---
 id: ff89c9
-name: ARIA required context role
+name: ARIA required accessibility parent role
 rules_format: 1.1
 rule_type: atomic
 description: |

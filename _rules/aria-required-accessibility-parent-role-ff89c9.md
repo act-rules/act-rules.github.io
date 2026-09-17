@@ -4,7 +4,7 @@ name: ARIA required accessibility parent role
 rules_format: 1.1
 rule_type: atomic
 description: |
-  This rule checks that an element with an explicit semantic role exists inside its required context.
+  This rule checks that an element with an explicit semantic role exists inside its required accessibility parent role.
 accessibility_requirements:
   wcag20:1.3.1: # Info and Relationships (A)
     forConformance: true
@@ -28,15 +28,19 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.2][aria 1.2] [explicit semantic role][] with a [required context role][], except if the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.3][aria 1.3] [explicit semantic role][] which has one of more [required accessibility parent roles][required accessibility parent role], except if the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
 
 ## Expectation
 
-Each test target is the child in the [accessibility tree][] of an element that has a [semantic role][] that is one of the [required context roles][] of the target element.
+Each test target is the child in the [accessibility tree][] of an element that has a [semantic role][] that is one of the [required accessibility parent roles][] of the target element.
 
 ## Background
 
-The applicability of this rule is limited to the [WAI-ARIA 1.2 Recommendation][aria 1.2] roles. The [WAI-ARIA Graphics Module][] does not include any [required context roles][]. The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] only has two roles with [required context roles][] (`doc-biblioentry` and `doc-endnote`); both of them have issues with their use of role inheritance, and both of them are deprecated in the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] editor's draft.
+The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][aria 1.3] roles.
+
+The [WAI-ARIA Graphics Module][] does not include any [required accessibility parent roles][].
+
+The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles which have any [required accessibility parent roles][].  The earlier version [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] did have two such roles.  (dpub 1.0 used the older term "Required Context Role" rather than "Required Accessibility Parent Roles".)  Both of those roles were removed in dpub 1.1.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
@@ -250,8 +254,8 @@ There is no element with an [explicit role][] different from its [implicit role]
 [implicit role]: #implicit-role 'Definition of Implicit Role'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'
-[required context role]: https://www.w3.org/TR/wai-aria-1.2/#scope 'WAI ARIA definition of Required Context Role'
-[required context roles]: https://www.w3.org/TR/wai-aria-1.2/#scope 'WAI ARIA definition of Required Context Role'
+[required accessibility parent role]: https://www.w3.org/TR/wai-aria-1.3/#scope 'WAI ARIA definition of Required Accessibility Parent Role'
+[required accessibility parent roles]: https://www.w3.org/TR/wai-aria-1.3/#scope 'WAI ARIA definition of Required Accessibility Parent Role'
 [sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
 [sc411]: https://www.w3.org/TR/WCAG22/#parsing 'Success Criterion 4.1.1 Parsing'
 [semantic role]: #semantic-role 'Definition of Semantic Role'

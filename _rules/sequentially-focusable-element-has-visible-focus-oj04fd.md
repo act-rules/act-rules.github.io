@@ -132,6 +132,43 @@ Each of these three [focusable][] elements has a blue square in front of it when
 <span id="indicator-final" class="indicator solid"></span>
 ```
 
+#### Passed Example 5
+
+Each of these three [focusable][] elements uses a `::before` pseudo-element with a black arrow as its `content`, which appears in front of the element when it is [focused][]. The arrow's `hsl` value (`hsl(0, 0%, 0%)`) is different to the `hsl` value of the background (`hsl(0, 0%, 100%)`) over which the arrow appears.
+
+```html
+<style>
+	body {
+		background: white;
+	}
+	ul {
+		list-style-type: none;
+	}
+	a {
+		display: inline-block;
+	    color: black;
+	    text-decoration: none;
+	    padding: 4px 6px;
+		outline: none;
+	}
+	
+	a:focus::before {
+		content: "→ ";
+	}
+</style>
+<ul>
+	<li>
+		<a href="#">ACT Rules</a>
+	</li>
+	<li>
+		<a href="#">WCAG</a>
+	</li>
+	<li>
+		<a href="#">WAI-ARIA</a>
+	</li>
+</ul>
+```
+
 ### Failed
 
 #### Failed Example 1
@@ -141,6 +178,117 @@ The [focusable][] element does not have any pixel changing color when it is [foc
 ```html
 <link rel="stylesheet" href="/test-assets/focus-visible-oj04fd/styles.css" />
 <a class="no-focus-default" href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Failed Example 2
+
+The [focusable][] element does not have any pixel changing color when it is [focused][] because the focus indicator's color matches the background's color, making the outline imperceptible.
+
+```html
+<style>
+	body {
+		background: white;
+	}
+	a:focus {
+		outline-color: white;
+	}
+</style>
+<a href="https://act-rules.github.io/">ACT rules</a>
+```
+
+#### Failed Example 3
+
+The [focusable][] element does not have any pixel changing color when it is [focused][] because the focus indicator's is covered by another element.
+
+```html
+<style>
+    body {
+		background: white;
+		box-sizing: border-box;
+    }
+    body * {
+		box-sizing: border-box;
+    }
+	ul {
+		list-style-type: none;
+	}
+    ul.nav {
+		background: #ccc;
+		list-style-type: none;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		position: relative
+    }
+    ul.nav > li {
+		display: inline-block;
+    }
+    a {
+		display: inline-block;
+		color: black;
+		text-decoration: none;
+		padding: 20px 20px;
+		outline: none;
+		border-bottom: 2px solid #ccc;
+    }
+    a:focus {
+		border-bottom: 2px solid #000;
+    }
+    .fly-out {
+		display: none;
+		position: absolute;
+		top: calc(100% - 2px);
+		left: 0;
+		background: #f4f4f4;
+		border: 1px solid #ccc;
+		padding: 0.5rem;
+		width: 100%;
+    }
+	li:focus-within .fly-out {
+		display: block;
+    }
+</style>
+
+<ul class="nav">
+	<li>
+		<a href="#">ACT Rules</a>
+		<div class="fly-out">
+			<ul>
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<a href="#">WCAG</a>
+		<div class="fly-out">
+			<ul>
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<a href="#">WAI-ARIA</a>
+		<div class="fly-out">
+			<ul>
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+			</ul>
+		</div>
+	</li>
+</ul>
+```
+
+#### Failed Example 4
+
+The [focusable][] element does not have any pixel changing color when it is [focused][] because the element size is equal to the [scrolling area][] of the [viewport][].
+
+```html
+<div tabindex="0" style="width: 100vw; height: 100vh;">ACT rules</div>
 ```
 
 ### Inapplicable

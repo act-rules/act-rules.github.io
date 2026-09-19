@@ -90,7 +90,7 @@ This `h2` element is a relevant heading for the informational data that follows 
 ```
 
 #### Passed Example 4
-Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed pass.
+Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed.
 This `h2` element contains a structural identifier of the order of content sections. The content that follows makes no difference to the outcome of this test.
 ```html
 <h2>Chapter 4</h2>

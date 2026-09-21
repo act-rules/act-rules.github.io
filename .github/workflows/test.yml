@@ -24,3 +24,4 @@ jobs:
       - run: |
           npm install
           npm test
+          npm run test:approve-rule

@@ -143,7 +143,7 @@ An `h1` element precedes a page that has instructions, images, and a form about 
 ```
 
 #### Passed Example 12
-This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule as its meaning or efficacy of the description despite containing completely redundant phrasing.
+This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule despite containing completely redundant phrasing.
 ```html
 <h1>Travel Advisories and Travel Advisory Information</h1>
 <!-- Followed by a page that contains a list of hyperlinks to sections about other countries -->

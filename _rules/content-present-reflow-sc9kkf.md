@@ -27,16 +27,16 @@ Starting from a baseline mid-range desktop resolution of 1280 x 1024 pixels, thi
 
 ## Expectation
 
-Each target element:
+For each target element, when the viewport is set to 320 by 256 CSS pixels, the content is not cut off, removed, or obscured by another element, except if one of the following is true:
 
-Retains all content and functionality when viewed with a height of at least 320 CSS pixels on pages with vertical scrolling, or a height of at least 256 CSS pixels on pages with horizontal scrolling:
-- Does not cut-off, remove, or make content unavailable as a result of viewport constraints, zoom, or responsive behaviour; and
-- Ensures that any content that is visually cut-off at this viewport size is still programmatically available and accessible to users, even if not immediately visible; and
-- Allows a scroll because the content cannot change to the size of the screen without losing meaning.
+- the hidden content can be scrolled into view, or
+- an [instrument][] is available to reveal the content.
 
 ## Background
 
-This rule supports WCAG 2.1 Success Criterion 1.4.10 Reflow, which requires that content be presented without loss of information or functionality at a width equivalent to 320 CSS pixels. When content is missing at smaller viewport sizes, users may lose access to essential information or controls, even if the layout appears functional. Responsive design should reposition or adapt content, not remove it entirely, unless an equivalent mechanism provides access.
+This rule supports WCAG 2.1 Success Criterion 1.4.10 Reflow, which requires that content be presented without loss of information or functionality at a width equivalent to 320 CSS pixels. When content is missing at smaller viewport sizes, users may lose access to essential information or controls, even if the layout appears functional. Responsive design should reposition or adapt content, not remove it entirely, unless an equivalent mechanism provides access. 
+
+The person testing the content is aware of the content's requirements to allow word wrap and specific spacing, for example, a programming language like Python.
 
 ### Assumptions
 
@@ -255,3 +255,5 @@ Content outside the user viewport by design (e.g. off-canvas patterns before int
   Menu content appears only when activated.
 </div>
 ```
+
+[instrument]: #instrument 'Definition of instrument'

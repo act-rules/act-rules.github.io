@@ -131,6 +131,37 @@ Content requiring two-dimensional layout (covered under reflow exceptions).
 </table>
 ```
 
+#### Passed Example 8
+
+Python code that allows a scroll as cannot include a word wrap to function.
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passing Code Reflow</title>
+    <style>
+        /* Prevents wrapping and allows scrolling at 320px wide */
+        pre {
+            max-width: 320px;
+            overflow-x: auto;
+            white-space: pre;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+        /* Visual cue for keyboard users */
+        pre:focus { outline: 2px solid #005a9c; }
+    </style>
+</head>
+<body>
+    <!-- tabindex="0" ensures keyboard-only users can scroll the long line -->
+    <pre tabindex="0" role="region" aria-label="Python code"><code>def check_data(items):
+    for item in items:
+        if item.status == "active" and item.value > 100:
+            print(f"Valid ID: {item.id} with high value.")</code></pre>
+</body>
+```
+
 ### Failed
 
 #### Failed Example 1

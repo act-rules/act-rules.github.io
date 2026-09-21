@@ -17,7 +17,7 @@ export function parseChanges({ change, changesFile } = {}) {
 		changes.every(changeEntry => typeof changeEntry === 'string' && changeEntry.trim().length > 0),
 		'Each changelog entry must be a non-empty string'
 	)
-	return changes
+	return changes.map(changeEntry => changeEntry.trim())
 }
 
 export function updateRuleVersions({ ruleVersions, ruleId, proposedDate, w3cDate, isoDate, changes = [] }) {

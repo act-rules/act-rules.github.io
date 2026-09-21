@@ -5,6 +5,7 @@ import moment from 'moment'
 
 import { config, cloneWcagActRules, createOrCheckoutBranch, commitAndPush } from './commons.mjs'
 import { parseChanges, updateRuleVersions } from './update-rule-versions.mjs'
+import { rewriteArchivedFrontmatter } from './archive-rule-snapshot.mjs'
 
 const w3cDataFormat = 'D MMMM YYYY'
 const isoDateFormat = 'YYYY-MM-DD'
@@ -57,7 +58,12 @@ function prepareRuleVersionsUpdate({ tmpDir }, ruleId, changes) {
 
 	if (result.isReapproval) {
 		const ruleDir = `${tmpDir}content/rules/${ruleId}/`
-		fs.copyFileSync(`${ruleDir}index.md`, `${ruleDir}${result.previousIsoDate}.md`)
+		const archived = rewriteArchivedFrontmatter({
+			text: fs.readFileSync(`${ruleDir}index.md`, 'utf8'),
+			ruleId,
+			isoDate: result.previousIsoDate,
+		})
+		fs.writeFileSync(`${ruleDir}${result.previousIsoDate}.md`, archived, 'utf8')
 		console.log(`Archived ${ruleId}/index.md as ${result.previousIsoDate}.md`)
 	}
 

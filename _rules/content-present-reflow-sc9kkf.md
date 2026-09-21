@@ -23,7 +23,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any non-excepted element containing visible content or functional components, requiring text to reflow when the viewport is set to a width of 320 CSS pixels for horizontal languages or a height of 256 CSS pixels for vertical languages; to align applicability more closely with these reflow requirements, it can be refined to target only visible content with a height of at least 320 CSS pixels on pages with vertical scrolling, or a height of at least 256 CSS pixels on pages with horizontal scrolling.
+Starting from a baseline mid-range desktop resolution of 1280 x 1024 pixels, this rule requires content to scale cleanly down to smaller viewports without forcing users to scroll in two dimensions. It applies to any element containing visible content or functional components that excludes components that inherently require a two-dimensional layout to be understood. When scaling down to a width of 320 CSS pixels for horizontal languages (or a height of 256 CSS pixels for vertical languages, equivalent to 400% browser zoom), content must smoothly reflow.
 
 ## Expectation
 

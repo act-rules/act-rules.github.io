@@ -34,5 +34,7 @@ For info on how to use this GitHub repository, see the [ACT-Rules GitHub Guideli
 
 This repository automatically pushes changes to rules to the [w3c/wcag-act-rules](https://github.com/w3c/wcag-act-rules/) repository. There is an "Approve rule" action available which can be triggered manually by an ACT Task Force facilitator, which will set a proposed rule to "approved".
 
+Rule updates require an explicit changelog when using the approval script. Pass entries with repeated `--change "..."` flags, with `--changesFile path.yaml` containing a YAML list of strings, or with both. First-time approvals do not require a changelog.
+
 [wcag22]: https://www.w3.org/TR/WCAG22/
 [act-r]: https://www.w3.org/community/act-r/

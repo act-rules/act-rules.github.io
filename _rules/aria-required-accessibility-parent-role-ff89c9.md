@@ -41,7 +41,7 @@ The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][a
 
 The [WAI-ARIA Graphics Module][] does not include any [required accessibility parent roles][].
 
-The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles which have any [required accessibility parent roles][].  The earlier version [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] did have two such roles.  (dpub 1.0 used the older term "Required Context Role" rather than "Required Accessibility Parent Roles".)  Both of those roles were removed in dpub 1.1.
+The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles which have any [required accessibility parent roles][].  The earlier version [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] did have two such roles.  (dpub 1.0 used the older term "required accessibility parent role" rather than "Required Accessibility Parent Roles".)  Both of those roles were removed in dpub 1.1.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
@@ -49,9 +49,9 @@ Being a child in the [accessibility tree][] is different from being a child in t
 
 This rule is restricted to [accessibility parents][accessibility parent], which means /direct/ parents.  Not grandparents.  Also, the definition of [accessibility parent][] handles aria-owns, so this rule doesn't need to handle it too.
 
-[Subclass roles][subclass role] of [required context roles][] are not automatically included as possible [required context roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) role is not a possible [required context role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.3/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.3/#list) role.
+[Subclass roles][subclass role] of [required accessibility parent roles][] are not automatically included as possible [required accessibility parent roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) role is not a possible [required accessibility parent role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.3/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.3/#list) role.
 
-Some user agents try to correct missing [required context roles][] or incorrect [content model][]. This often results, for example, in an isolated list item being presented as part of a one-item list containing only itself. Therefore, most examples contain several targets to try and circumvent these corrections in order to better demonstrate the issue.
+Some user agents try to correct missing [required accessibility parent roles][] or incorrect [content model][]. This often results, for example, in an isolated list item being presented as part of a one-item list containing only itself. Therefore, most examples contain several targets to try and circumvent these corrections in order to better demonstrate the issue.
 
 ### Assumptions
 
@@ -66,7 +66,8 @@ The rule assumes that the [explicit role][] of the applicable elements is approp
 ### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
-- [Required Context Role][]
+- [required accessibility parent role]
+- [accessibility parent]
 
 ## Examples
 
@@ -74,7 +75,7 @@ The rule assumes that the [explicit role][] of the applicable elements is approp
 
 #### Passed Example 1
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [explicit role][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [explicit role][].
 
 ```html
 <div role="list">
@@ -85,7 +86,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 2
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][], `list`, expressed as an [implicit role][] of `ul`. Note that this example does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [implicit role][] of `ul`. Note that this example does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>
@@ -96,7 +97,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 3
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its children in DOM. The presentational node is not [included in the accessibility tree][].
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its children in DOM.  Instead, they are grandchildren.  The element with `role="presentation"` is not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -109,7 +110,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 4
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.2/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -119,7 +120,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 5
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required context role](https://www.w3.org/TR/wai-aria-1.2/#scope).
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
 
 ```html
 <div role="list" aria-owns="item1 item2">
@@ -132,7 +133,7 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 
 #### Passed Example 6
 
-These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required context role][] because the [accessibility tree][] mimics the DOM tree across shadow boundaries.
+These elements with an [explicit role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] because the [accessibility tree][] mimics the DOM tree across shadow boundaries.
 
 ```html
 <div id="host" role="list"></div>
@@ -144,11 +145,27 @@ These elements with an [explicit role][] of `listitem` are children in the [acce
 </script>
 ```
 
+#### Passed Example 7
+
+These elements with an [explicit role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][]. The intervening `div`, which has an `aria-live` attribute, doesn't change that fact.  The `div` is [included in the accessibility tree][] because it has a [global attribute](https://www.w3.org/TR/wai-aria-1.3/#global_states) (the `aria-live` attribute).  The `div` has a role of `generic`.  An element with a role of `generic` does not change the parent-child relationship.
+
+This example failed in ARIA 1.2.  It passes in ARIA 1.3.
+
+```html
+<div role="list">
+	<div aria-live="polite">
+		<div role="listitem">List item 1</div>
+		<div role="listitem">List item 2</div>
+	</div>
+</div>
+```
+
+
 ### Failed
 
 #### Failed Example 1
 
-This element with an [explicit role][] of `listitem` is not a child in the [accessibility tree][] of an element with its [required context role][].
+This element with an [explicit role][] of `listitem` is not a child in the [accessibility tree][] of an element with its [required accessibility parent role][].
 
 ```html
 <div role="listitem">List item 1</div>
@@ -156,7 +173,7 @@ This element with an [explicit role][] of `listitem` is not a child in the [acce
 
 #### Failed Example 2
 
-These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][], but of an element with the `tabpanel` role.
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required accessibility parent role][], but of an element with the `tabpanel` role.
 
 ```html
 <div role="list">
@@ -169,20 +186,7 @@ These elements with an [explicit role][] of `listitem` are not children in the [
 
 #### Failed Example 3
 
-These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][]. They are instead children in the [accessibility tree][] of the `div` with an `aria-live` attribute; even though this `div` has no role, it has a global ARIA attribute and is thus [included in the accessibility tree][].
-
-```html
-<div role="list">
-	<div aria-live="polite">
-		<div role="listitem">List item 1</div>
-		<div role="listitem">List item 2</div>
-	</div>
-</div>
-```
-
-#### Failed Example 4
-
-These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required context role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
+These elements with an [explicit role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required accessibility parent role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -200,7 +204,7 @@ These elements with an [explicit role][] of `listitem` are not children in the [
 
 #### Inapplicable Example 1
 
-This element with an [explicit role][] of `listitem` is not [included in the accessibility tree][].
+This element with an [explicit role][] of `listitem` is not [included in the accessibility tree][], because it has the CSS `display:none`.
 
 ```html
 <div role="listitem" style="display:none;">List item 1</div>
@@ -228,7 +232,7 @@ This `section` element with an [explicit role][] of `doc-abstract` has a role fr
 
 #### Inapplicable Example 4
 
-There is no element whose role has [required context role][] because the `heading` role does not have one.
+There is no element whose role has [required accessibility parent role][] because the `heading` role does not have one.
 
 ```html
 <div role="heading" aria-level="1">Hello!</div>
@@ -265,4 +269,5 @@ There is no element with an [explicit role][] different from its [implicit role]
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [html or svg element]: #namespaced-element
 [accessibility parent]: https://www.w3.org/TR/wai-aria-1.3/#dfn-accessibility-parent
+[accessibility child]: https://www.w3.org/TR/wai-aria-1.3/#dfn-accessibility-child
 

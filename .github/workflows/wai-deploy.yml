@@ -31,5 +31,7 @@ jobs:
           git config --global url."https://${{ secrets.WAI_GIT_NAME }}:${{ secrets.WAI_GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
           git config --global user.name "${{ secrets.WAI_GIT_NAME }}"
           git config --global user.email "${{ secrets.WAI_GIT_EMAIL }}"
-      - name: Build and deploy WAI update
+      - name: Build WAI update
         run: npm run build:wai
+      - name: Push WAI update
+        run: npm run push:wai

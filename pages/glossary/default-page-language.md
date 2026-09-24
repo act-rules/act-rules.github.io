@@ -10,7 +10,7 @@ input_aspects:
   - Language
 ---
 
-The _default language of a [web page][]_ is the [most common language][] of its [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) [document][], if it is unique. If this [document][] has either no or several [most common languages][most common language], then it has no default language.
+The _default language of a [web page][]_ is the [most common language][] of its [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context) [document][], if it is unique. If this [document][] has no [most common languages][most common language], then it has no default language.
 
 For more details, see [examples of default language][].
 

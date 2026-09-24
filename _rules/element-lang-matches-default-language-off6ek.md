@@ -141,6 +141,8 @@ This `div` element has a `lang` [attribute value][] of `en` (English), which mat
 
 This `span` element has a `lang` [attribute value][] of `fr` (French), which matches one of its [most common languages][most common language]. The most common languages are both English and French because all the words belong to both languages.
 
+**Note**: The `body` element in HTML are optional and will be added by the browser.
+
 ```html
 <html lang="en">
 	<p>

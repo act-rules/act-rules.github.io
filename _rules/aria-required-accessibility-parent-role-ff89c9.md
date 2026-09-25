@@ -57,7 +57,7 @@ Some user agents try to correct missing [required accessibility parent roles][] 
 
 ### Assumptions
 
-The rule assumes that the [explicit semantic role][] of the applicable elements is appropriate for their element. For example: a heading incorrectly marked up with `role="cell"` does not fail [success criterion 1.3.1 Info and Relationships][sc131] for not being in the context of a `row`. Having an inappropriate role is itself an issue under 1.3.1 Info and Relationships, so in either scenario a failure of this rule means this success criterion is not satisfied.
+The rule assumes that the [explicit semantic role][] of the applicable elements is appropriate for their element. For example: a heading incorrectly marked up with `role="cell"` does not fail [success criterion 1.3.1 Info and Relationships][sc131] because it doesn't have a `row` as its parent. Having an inappropriate role is itself an issue under 1.3.1 Info and Relationships, so in either scenario a failure of this rule means this success criterion is not satisfied.
 
 ### Accessibility Support
 

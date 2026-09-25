@@ -43,7 +43,7 @@ The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][a
 
 The [WAI-ARIA Graphics Module][] does not include any [required accessibility parent roles][].
 
-The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles which have any [required accessibility parent roles][].  The earlier version [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] did have two such roles.  (dpub 1.0 used the older term "required accessibility parent role" rather than "Required Accessibility Parent Roles".)  Both of those roles were removed in dpub 1.1.
+The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles which have any [required accessibility parent roles][].  The earlier version [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0] did have two such roles.  (dpub 1.0 used the older term "Required Context Role" rather than "Required Accessibility Parent Roles".)  Both of those roles were removed in dpub 1.1.
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 

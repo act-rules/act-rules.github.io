@@ -222,7 +222,7 @@ There is no element with an [explicit semantic role][].
 
 #### Inapplicable Example 3
 
-This `section` element with an [explicit semantic role][] of `doc-abstract` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.2 Recommendation][aria 1.2].
+This `section` element with an [explicit semantic role][] of `doc-abstract` has a role from the [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0][dpub 1.0], not the [WAI-ARIA 1.3 Recommendation][aria 1.3].
 
 ```html
 <section role="doc-abstract" aria-label="Abstract">
@@ -250,7 +250,7 @@ There is no element with an [explicit semantic role][] different from its [impli
 ```
 
 [accessibility tree]: https://www.w3.org/TR/act-rules-aspects/#input-aspects-accessibility 'Definition of accessibility tree'
-[aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/ 'WAI ARIA 1.2 specifications'
+[aria 1.3]: https://www.w3.org/TR/wai-aria-1.3/ 'WAI ARIA 1.3 Recommendation'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/ 'Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0'
 [dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"

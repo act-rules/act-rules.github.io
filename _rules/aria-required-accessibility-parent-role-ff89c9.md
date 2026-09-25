@@ -37,7 +37,7 @@ Each test target is the child in the [accessibility tree][] of an element that h
 
 ## Background
 
-Some [allowed accessibility parent roles][] are only valid if they in turn have an [accessibility parent][] with a given [semantic role][]. This is denoted by the words "with accessibility parent" in the [aria 1.3][] in the role description. For example, the [role `treeitem`](https://www.w3.org/TR/wai-aria-1.3/#treeitem) has as one of its [required accessibility parent roles][] `group with accessibility parent treeitem`.  This means that an element with a role of `treeitem` may only have as its [accessibility parent][] an element with a role of `group` if that group element has as its [accessibility parent][] an element with a role of `treeitem`.
+Some [required accessibility parent roles][] are only valid if they in turn have an [accessibility parent][] with a given [semantic role][]. This is denoted by the words "with accessibility parent" in the [aria 1.3][] in the role description. For example, the [role `treeitem`](https://www.w3.org/TR/wai-aria-1.3/#treeitem) has as one of its [required accessibility parent roles][] `group with accessibility parent treeitem`.  This means that an element with a role of `treeitem` may only have as its [accessibility parent][] an element with a role of `group` if that group element has as its [accessibility parent][] an element with a role of `treeitem`.
 
 The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][aria 1.3] roles.
 

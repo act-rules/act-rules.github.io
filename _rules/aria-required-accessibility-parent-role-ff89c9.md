@@ -166,7 +166,7 @@ This example failed in ARIA 1.2.  It passes in ARIA 1.3.
 
 Both `treeitem` elements have a required accessibility parent role. The outer `treeitem` element has a `tree` accessibility parent. The inner `treeitem` element has a `group` parent which in turn has a `treeitem` accessibility parent.
 
-This example also passed in ARIA 1.2.
+This example also passed in the ARIA 1.2 version of this rule.
 
 ```html
 <div role="tree" aria-label="Files">
@@ -217,6 +217,20 @@ These elements with an [explicit semantic role][] of `listitem` are not children
 	root.innerHTML = '<div id="item1" role="listitem">List item 1</div> <div id="item2" role="listitem">List item 2</div>'
 </script>
 ```
+
+#### Failed Example 4
+
+In ARIA 1.3, the [required accessibility parent roles][] of [`treeitem`](https://www.w3.org/TR/wai-aria-1.3/#treeitem) are "tree" and "group with accessibility parent treeitem".  This `treeitem` element has neither.
+
+This example passed in the ARIA 1.2 version of this rule.
+
+```html
+<div role="group">
+	<div role="treeitem" aria-label="file.txt">
+	</div>
+</div>
+```
+
 
 ### Inapplicable
 

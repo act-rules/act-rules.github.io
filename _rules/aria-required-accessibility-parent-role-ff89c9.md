@@ -162,6 +162,22 @@ This example failed in ARIA 1.2.  It passes in ARIA 1.3.
 </div>
 ```
 
+#### Passed Example 8
+
+Both `treeitem` elements have a required accessibility parent role. The outer `treeitem` element has a `tree` accessibility parent. The inner `treeitem` element has a `group` parent which in turn has a `treeitem` accessibility parent.
+
+This example also passed in ARIA 1.2.
+
+```html
+<div role="tree" aria-label="Files">
+	<div role="treeitem" aria-label="Folder 1">
+		<div role="group">
+			<div role="treeitem" aria-label="file.txt">
+			</div>
+		</div>
+	</div>
+</div>
+```
 
 ### Failed
 

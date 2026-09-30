@@ -218,18 +218,6 @@ These elements with an [explicit semantic role][] of `listitem` are not children
 </script>
 ```
 
-#### Failed Example 4
-
-In ARIA 1.3, the [required accessibility parent roles][] of [`treeitem`](https://www.w3.org/TR/wai-aria-1.3/#treeitem) are "tree" and "group with accessibility parent treeitem".  This `treeitem` element has neither.
-
-This example passed in the ARIA 1.2 version of this rule.
-
-```html
-<div role="group">
-	<div role="treeitem" aria-label="file.txt">
-	</div>
-</div>
-```
 
 
 ### Inapplicable

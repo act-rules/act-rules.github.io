@@ -33,7 +33,7 @@ This rule applies to any [HTML or SVG element][] that is [included in the access
 
 ## Expectation
 
-Each test target is the child in the [accessibility tree][] of an element that has a [semantic role][] that is one of the [required accessibility parent roles][] of the target element.
+Each test target is an [accessibility child][] of an element whose [semantic role][] is one of the target element's [required accessibility parent roles][]. If a required accessibility parent role includes a "with accessibility parent" constraint, that parent element in turn has an [accessibility parent][] with the specified [semantic role][].
 
 ## Background
 

@@ -29,7 +29,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.3][aria 1.3] [explicit semantic role][] which has one of more [required accessibility parent roles][required accessibility parent role], except if the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.3][aria 1.3] [explicit semantic role][] which has one or more [required accessibility parent roles][required accessibility parent role], except if the element has an [implicit semantic role][] that is identical to its [explicit semantic role][].
 
 ## Expectation
 

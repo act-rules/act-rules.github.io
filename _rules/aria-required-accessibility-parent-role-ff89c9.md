@@ -88,7 +88,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 2
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [implicit semantic role][] of `ul`. Note that this example does not satisfy [Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [implicit semantic role][] of `ul`. Note that this example does not satisfy [WCAG 2.1 Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>
@@ -280,7 +280,7 @@ There is no element with an [explicit semantic role][] different from its [impli
 [required accessibility parent role]: https://www.w3.org/TR/wai-aria-1.3/#scope 'WAI ARIA definition of Required Accessibility Parent Role'
 [required accessibility parent roles]: https://www.w3.org/TR/wai-aria-1.3/#scope 'WAI ARIA definition of Required Accessibility Parent Role'
 [sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships 'Success Criterion 1.3.1 Info and Relationships'
-[sc411]: https://www.w3.org/TR/WCAG22/#parsing 'Success Criterion 4.1.1 Parsing'
+[sc411]: https://www.w3.org/TR/WCAG21/#parsing 'WCAG 2.1 Success Criterion 4.1.1 Parsing'
 [semantic role]: #semantic-role 'Definition of Semantic Role'
 [subclass role]: https://www.w3.org/TR/wai-aria-1.3/#subclassroles 'ARIA Specification of Subclass Role'
 [ul]: https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element 'HTML specification of the ul element'

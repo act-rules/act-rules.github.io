@@ -47,7 +47,7 @@ The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles 
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So a child in the [accessibility tree][] can correspond to a grandchild in the DOM tree. Also, the `aria-owns` attribute can change the accessibility tree structure to something that is not a subtree of the DOM tree.
+Being an [accessibility child][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So an [accessibility child][] can correspond to a grandchild in the DOM tree. Also, the `aria-owns` attribute can change the accessibility tree structure to something that is not a subtree of the DOM tree.
 
 This rule is restricted to [accessibility parents][accessibility parent], which means /direct/ parents.  Not grandparents.  Also, the definition of [accessibility parent][] handles aria-owns, so this rule doesn't need to handle it too.
 
@@ -77,7 +77,7 @@ The rule assumes that the [explicit semantic role][] of the applicable elements 
 
 #### Passed Example 1
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [explicit semantic role][].
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][], `list`, expressed as an [explicit semantic role][].
 
 ```html
 <div role="list">
@@ -88,7 +88,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 2
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][], `list`, expressed as an [implicit semantic role][] of `ul`. Note that this example does not satisfy [WCAG 2.1 Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][], `list`, expressed as an [implicit semantic role][] of `ul`. Note that this example does not satisfy [WCAG 2.1 Success Criterion 4.1.1 Parsing][sc411] because the [`ul` element][ul] does not respect its [content model][].
 
 ```html
 <ul>
@@ -99,7 +99,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 3
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its children in DOM.  Instead, they are grandchildren.  The element with `role="presentation"` is not [included in the accessibility tree][].
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][] even though they are not its children in DOM.  Instead, they are grandchildren.  The element with `role="presentation"` is not [included in the accessibility tree][].
 
 ```html
 <div role="list">
@@ -112,7 +112,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 4
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][] even though they are not its DOM descendants. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>
@@ -122,7 +122,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 5
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][] even though they are not its DOM children. The `aria-owns` attribute is used to alter the accessibility tree and place the target elements in their [required accessibility parent role][].
 
 ```html
 <div role="list" aria-owns="item1 item2">
@@ -135,7 +135,7 @@ These elements with an [explicit semantic role][] of `listitem` are children in 
 
 #### Passed Example 6
 
-These elements with an [explicit semantic role][] of `listitem` are children in the [accessibility tree][] of an element with their [required accessibility parent role][] because the [accessibility tree][] mimics the DOM tree across shadow boundaries.
+These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][] because the [accessibility tree][] mimics the DOM tree across shadow boundaries.
 
 ```html
 <div id="host" role="list"></div>
@@ -195,7 +195,7 @@ This element with an [explicit semantic role][] of `listitem` is an [accessibili
 
 #### Failed Example 1
 
-This element with an [explicit semantic role][] of `listitem` is not a child in the [accessibility tree][] of an element with its [required accessibility parent role][].
+This element with an [explicit semantic role][] of `listitem` is not an [accessibility child][] of an element with its [required accessibility parent role][].
 
 ```html
 <div role="listitem">List item 1</div>
@@ -203,7 +203,7 @@ This element with an [explicit semantic role][] of `listitem` is not a child in 
 
 #### Failed Example 2
 
-These elements with an [explicit semantic role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required accessibility parent role][], but of an element with the `tabpanel` role.
+These elements with an [explicit semantic role][] of `listitem` are not [accessibility children][accessibility child] of an element with their [required accessibility parent role][], but of an element with the `tabpanel` role.
 
 ```html
 <div role="list">
@@ -216,7 +216,7 @@ These elements with an [explicit semantic role][] of `listitem` are not children
 
 #### Failed Example 3
 
-These elements with an [explicit semantic role][] of `listitem` are not children in the [accessibility tree][] of an element with their [required accessibility parent role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
+These elements with an [explicit semantic role][] of `listitem` are not [accessibility children][accessibility child] of an element with their [required accessibility parent role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
 
 ```html
 <div role="list" aria-owns="item1 item2"></div>

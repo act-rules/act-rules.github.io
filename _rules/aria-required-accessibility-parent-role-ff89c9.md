@@ -273,7 +273,7 @@ There is no element with an [explicit semantic role][] different from its [impli
 [aria 1.3]: https://www.w3.org/TR/wai-aria-1.3/ 'WAI ARIA 1.3'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/ 'Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0'
-[dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
+[dpub 1.1]: https://www.w3.org/TR/dpub-aria-1.1/ 'Digital Publishing WAI-ARIA Module (DPUB-ARIA) 1.1 Recommendation'
 [explicit semantic role]: #explicit-role 'Definition of Explicit Semantic Role'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Semantic Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

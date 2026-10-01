@@ -65,6 +65,7 @@ There are no accessibility support issues known.
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
 ## Examples
+## Examples
 
 ### Passed
 
@@ -90,7 +91,7 @@ This `h2` element is a relevant heading for the informational data that follows 
 ```
 
 #### Passed Example 4
-Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed.
+Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed pass.
 This `h2` element contains a structural identifier of the order of content sections. The content that follows makes no difference to the outcome of this test.
 ```html
 <h2>Chapter 4</h2>
@@ -129,27 +130,20 @@ The heading passes this rule as its content is relevant and descriptive, despite
 ```
 
 #### Passed Example 10
-There is large image of text that reads "Today’s Mortgage Rates at Our Bank", which is followed by a data table showing different rates for different amortizations.
-Because this `img` element is visually presented as a heading, it is perceived as a heading. It passes this rule as its text is relevant, despite failing other WCAG criteria by relying entirely on an image of text and lacking an accessible name.
-```html
-<img src="image-of-text.png" style="max-width: 100%; height: auto;" alt="" />
-```
-
-#### Passed Example 11
 Headings that are compliant under this criterion by remaining relevant or descriptive, irrespective of whether they could be optimized for length, contain redundant phrasing, are entirely unnecessary, or provide editorially unnecessary descriptions.
 An `h1` element precedes a page that has instructions, images, and a form about how to make the driver's licence renewal application. This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule despite being overly casual and including unnecessary details.
 ```html
 <h1>Welcome to Our State-of-the-art New Wizard That Will Mail Your Driver's Licence Home</h1>
 ```
 
-#### Passed Example 12
-This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule despite containing completely redundant phrasing.
+#### Passed Example 11
+This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule as its meaning or efficacy of the description despite containing completely redundant phrasing.
 ```html
 <h1>Travel Advisories and Travel Advisory Information</h1>
 <!-- Followed by a page that contains a list of hyperlinks to sections about other countries -->
 ```
 
-#### Passed Example 13
+#### Passed Example 12
 This `h2` element describes the content of the promotional banner that follows it. It passes this rule despite it repeats the text of the accompanying `figcaption` element verbatim and the redundant tooltip.
 ```html
 <h2>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites</h2>
@@ -159,28 +153,28 @@ This `h2` element describes the content of the promotional banner that follows i
 </figure>
 ```
 
-#### Passed Example 14
+#### Passed Example 13
 The section that precedes the `h2` element contains an unordered list of hyperlinks.
 This `h2` element provides a relevant heading that describes the content of the section. It passes this rule despite being editorially unnecessary because the following list of hyperlinks makes the purpose of the section immediately obvious. Although an alternative like "Useful Links to External Resources" would provide better clarity, headings cannot be deemed non-compliant under this rule for merely stating the obvious, as such choices remain strictly within the editorial domain.
 ```html
 <h2>List of Links</h2>
 ```
 
-#### Passed Example 15
+#### Passed Example 14
 This `h2` element uses a satirical or metaphorical phrase to introduce the topic. Although the heading text does not seem to match the vocabulary of the section, its contextual relevance becomes evident when considering the immediate context that follows, which is an analysis article about inflation, explaining how long-term economic trends cause prices to rise continuously. Headings that use literary devices remain compliant under this rule, as the determination of tone or stylistic approach falls within the editorial domain.
 ```html
 <h2>Final Day for Savings</h2>
 <p>Everything will be more expensive tomorrow.</p>
 ```
 
-#### Passed Example 16
+#### Passed Example 15
 A heading for an opinion piece that provides statistics regarding active global conflicts and advocates for international peace.
 This `h1` element employs irony to introduce the topic. Although the heading text does not explicitly reference the literal vocabulary of the section, its contextual relevance becomes evident when the primary purpose of the content is determined. Headings that utilize literary or stylistic devices remain compliant under this rule, as the determination of editorial tone falls outside the scope of accessibility evaluation.
 ```html
 <h1>Nobel's Peace Prize Office is Temporarily Closed Due to Declining Business</h1>
 ```
 
-#### Passed Example 17
+#### Passed Example 16
 This `h3` element employs an interrogative structure to introduce the section topic. Although the heading itself asks a question rather than providing a direct declaration, its contextual relevance becomes immediately evident upon evaluating the concise response that follows in the immediate text. 
 ```html
 <h3>Opening hours?</h3>
@@ -188,19 +182,19 @@ This `h3` element employs an interrogative structure to introduce the section to
 <p>No opening hours. We are at your service round the clock!<p>
 ```
 
-#### Passed Example 18
+#### Passed Example 17
 This `h3` element contains a duplicated word and a trailing white space resulting from a manual copy-paste error. It is followed by the contact details for customer support. It passes this rule despite a repeated word, as the second "Contact" word could cause no misunderstanding. 
 ```html
 <h3>Contact Contact Customer Support </h3>
 ```
 
-#### Passed Example 19
+#### Passed Example 18
 This `h3` element contains the former placeholder text (h3) at the end of the heading. It is followed by the contact details for customer support. The web publisher forgot to remove it after pasting the actual heading. It passes this rule despite the forgotten (h3), as it is still clearly about contacting customer support. 
 ```html
 <h3>Contact Customer Support (h3)</h3>
 ```
 
-#### Passed Example 20
+#### Passed Example 19
 This `h3` element contains an extra angle bracket at the end that resulted from a local markup formatting oversight. It is followed by the contact details for customer support. It passes this rule despite the extra angle bracket which may not be noticeable by some, as the meaning of the heading is not affected. 
 ```html
 <h3>Contact Customer Support <</h3>
@@ -235,9 +229,11 @@ This `h1` element for a credit card application page contains a brief, conversat
 ```
 
 #### Failed Example 5
-This `h1` element, followed by a list of kitchen appliances on sale, consists solely of a sequential placeholder. It fails this rule because the text lacks any topic-specific descriptor to identify the subject of the section, unless the page is part of a multi-volume document or a strictly paginated publication where the sequence itself serves as the primary identifier. A rapid evaluation of the immediate context confirms that this is a standard product listing, meaning the sequential label provides no descriptive utility.
+There is a large image of text that reads "Page 1". It is very sharp with a good contrast ratio with its background and it looks like real text. Its alt text reads what is displayed as image of text, exactly as required under the "Images of Text" criterion. Because this `img` element is visually presented as a heading, it is perceived as a heading.
+It is followed by a list of kitchen appliances on sale. A rapid evaluation of the immediate context confirms that this is a standard product listing, meaning a sequential label cannot provide descriptive utility.
+It fails this rule because the text lacks any topic-specific descriptor to identify the subject of the section, despite passing other applicable WCAG criteria.
 ```html
-<h1>Page 1</h1>
+<img src="image-of-text.svg" style="max-width: 1360px; height: auto;" alt="Page 1" />
 ```
 
 #### Failed Example 6
@@ -294,7 +290,7 @@ This `h3` element reveals an HTML comment that should have been invisible to use
 ### Inapplicable
 
 #### Inapplicable Example 1
-Lack of the following elements:
+Lack of any of the following elements:
 
 - `h1` through `h6` elements:
 ```html

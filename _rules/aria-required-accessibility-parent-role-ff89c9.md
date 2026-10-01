@@ -179,6 +179,18 @@ This example also passed in the ARIA 1.2 version of this rule.
 </div>
 ```
 
+#### Passed Example 9
+
+This element with an [explicit semantic role][] of `listitem` is an [accessibility child][] of the element with the role of `list`.  This is the case even though it's not a child in the DOM.  Instead, it's a grandchild.  `list` is one of the [required accessibility parent roles][] of `listitem`.  The definition of [accessibility child][] allows for an intervening `<div>` element such as this one (with an [implicit semantic role][] of `generic`) to be present without preventing the `listitem` from being an accessibility child of the `list`.
+
+```html
+<div role="list">
+	<div>
+		<div role="listitem">List item 1</div>
+	</div>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1

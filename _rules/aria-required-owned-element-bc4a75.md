@@ -27,7 +27,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [WAI-ARIA 1.3][] [semantic role][] with [allowed accessibility child roles][].
+This rule applies to any [HTML or SVG element][] that is [included in the accessibility tree][] and has a [wai-aria 1.3][] [semantic role][] with [allowed accessibility child roles][].
 
 ## Expectation
 
@@ -65,7 +65,7 @@ If the [semantic role][] on the target element is incorrectly used, and any rela
 
 #### Passed Example 1
 
-This element with the `list` role only owns elements with the `listitem` role. The `listitem` role is one of the [required owned elements][] for `list`.
+This element with the `list` role only owns elements with the `listitem` role. The `listitem` role is one of the [allowed accessibility child roles][] for `list`.
 
 ```html
 <div role="list">
@@ -190,13 +190,13 @@ The element `table` with an explicit `treegrid` role owns an element `tr` with i
 
 #### Passed Example 11
 
-This `div` element with the implicit `list` role owns only elements with the implicit `generic` role, thus no accessible children. 
+This `div` element with the implicit `list` role owns only elements with the implicit `generic` role, thus no accessible children.
 
 ```html
 <div role="list">
 	<div></div>
 	<div></div>
-</ul>
+</div>
 ```
 
 #### Passed Example 12
@@ -211,12 +211,12 @@ This element with the `menu` role has no accessibility child. Note because the e
 
 #### Passed Example 13
 
-The both `div` elements with explicit `list` roles have no accessibility children. The `listitem` element is either with `aria-hidden` or has no owned element through `aira-own` in the first `div` element.
+The both `div` elements with explicit `list` roles have no accessibility children. The `listitem` element is either with `aria-hidden` or has no owned element through `aria-owns` in the first `div` element.
 
 ```html
 <div role="list">
 	<div role="listitem" aria-hidden="true">Excluded element</div>
-  	<div role="listitem" id="reparented">Reparented element</div>
+	<div role="listitem" id="reparented">Reparented element</div>
 </div>
 <div role="list" aria-owns="reparented"></div>
 ```
@@ -361,7 +361,6 @@ This element with the `progressbar` role does not need [allowed accessibility ch
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Completion">20 %</div>
 ```
 
-[attribute value]: #attribute-value 'Definition of Attribute Value'
 [dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
 [allowed accessibility child roles]: https://www.w3.org/TR/wai-aria-1.3/#mustContain 'Define allowed accessibility child roles'
 [owns]: #owned-by
@@ -369,7 +368,6 @@ This element with the `progressbar` role does not need [allowed accessibility ch
 [semantic role]: #semantic-role
 [included in the accessibility tree]: #included-in-the-accessibility-tree
 [wai-aria 1.3]: https://www.w3.org/TR/wai-aria-1.3/
-[dpub 1.1]: https://www.w3.org/TR/dpub-aria-1.1/
 [wai-aria graphics module]: https://www.w3.org/TR/graphics-aria-1.0/ 'WAI-ARIA Graphics Module 1.0'
 [html or svg element]: #namespaced-element
-[inclusive ancestor]: https://dom.spec.whatwg.org/#concept-tree-inclusive-ancestor 'DOM Definition of Inclusive Ancestor'
+[allowed accessibility child roles]: https://w3c.github.io/aria/#mustContain 'Allowed Accessibility Child Roles'

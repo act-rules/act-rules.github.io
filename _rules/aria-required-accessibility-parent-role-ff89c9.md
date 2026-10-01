@@ -47,7 +47,7 @@ The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles 
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So a child in the [accessibility tree][] can correspond to a /grandchild/ in the DOM tree. Also, the use of `aria-owns` attribute can change the accessibility tree structure to something which is not a subtree in the DOM tree.
+Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So a child in the [accessibility tree][] can correspond to a grandchild in the DOM tree. Also, the `aria-owns` attribute can change the accessibility tree structure to something that is not a subtree of the DOM tree.
 
 This rule is restricted to [accessibility parents][accessibility parent], which means /direct/ parents.  Not grandparents.  Also, the definition of [accessibility parent][] handles aria-owns, so this rule doesn't need to handle it too.
 
@@ -273,7 +273,7 @@ There is no element with an [explicit semantic role][] different from its [impli
 [aria 1.3]: https://www.w3.org/TR/wai-aria-1.3/ 'WAI ARIA 1.3'
 [content model]: https://html.spec.whatwg.org/multipage/dom.html#concept-element-content-model 'HTML definition of the Content Model'
 [dpub 1.0]: https://www.w3.org/TR/dpub-aria-1.0/ 'Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.0'
-[dpub 1.1]: https://w3c.github.io/dpub-aria/ "Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editor's Draft)"
+[dpub 1.1]: https://www.w3.org/TR/dpub-aria-1.1/ 'Digital Publishing WAI-ARIA Module (DPUB-ARIA) 1.1 Recommendation'
 [explicit semantic role]: #explicit-role 'Definition of Explicit Semantic Role'
 [implicit semantic role]: #implicit-role 'Definition of Implicit Semantic Role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in the Accessibility Tree'

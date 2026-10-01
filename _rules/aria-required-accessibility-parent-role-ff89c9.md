@@ -47,7 +47,7 @@ The [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1][dpub 1.1] has no roles 
 
 An example of an element that has an [implicit semantic role][] that is identical to its [explicit semantic role][] is a `<li role="listitem">` element. These elements are not applicable because they have extra requirements and should thus be checked separately.
 
-Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So a child in the [accessibility tree][] can correspond to a /grandchild/ in the DOM tree. Also, the use of `aria-owns` attribute can change the accessibility tree structure to something which is not a subtree in the DOM tree.
+Being a child in the [accessibility tree][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So a child in the [accessibility tree][] can correspond to a grandchild in the DOM tree. Also, the `aria-owns` attribute can change the accessibility tree structure to something that is not a subtree of the DOM tree.
 
 This rule is restricted to [accessibility parents][accessibility parent], which means /direct/ parents.  Not grandparents.  Also, the definition of [accessibility parent][] handles aria-owns, so this rule doesn't need to handle it too.
 

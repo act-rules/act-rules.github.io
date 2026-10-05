@@ -20,6 +20,7 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
+    - Giacomo Petri
     - Jey Nandakumar
   previous_authors:
     - Annika Nietzio
@@ -32,7 +33,11 @@ acknowledgments:
 This rule applies to any [document element](https://dom.spec.whatwg.org/#document-element) if it is an `html` element for which all the following are true:
 
 - is in a [top-level browsing context](https://html.spec.whatwg.org/#top-level-browsing-context); and
-- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`.
+- has a [node document](https://dom.spec.whatwg.org/#concept-node-document) with a [content type](https://dom.spec.whatwg.org/#concept-document-content-type) of `text/html`; and
+- has at least one of the following [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is not empty or only [whitespace][]:
+	- [text node][] that is included in the accessibility tree; or
+ 	- an element's [accessible name][] or [accessible description](https://www.w3.org/TR/accname-1.1/#dfn-accessible-description) that is exposed in the accessibility tree; or
+  	- the document's title.
 
 **Note:** `html` elements within `iframe` and `object` elements are not applicable as `iframe` and `object` elements create [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context). However, as these elements are meant to provide a layer of isolation, the declared language of their [parent browsing context](https://html.spec.whatwg.org/#parent-browsing-context) will likely not be inherited, making it possible for empty `lang` attributes in [nested browsing contexts](https://html.spec.whatwg.org/#nested-browsing-context) to also cause accessibility issues.
 
@@ -150,6 +155,16 @@ This rule does not apply to a `math` element.
 <math lang="en">
     The quick brown fox jumps over the lazy dog.
 </math>
+```
+
+#### Inapplicable Example 3
+
+This rule does not apply to content that is empty or contains only [whitespace][].
+
+```html
+<html>
+	<body></body>
+</html>
 ```
 
 [attribute value]: #attribute-value

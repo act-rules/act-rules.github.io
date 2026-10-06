@@ -31,7 +31,7 @@ This rule applies to any [HTML or SVG element][] that is [included in the access
 
 ## Expectation
 
-Each test target only [owns][] elements with a [semantic role][] from the [allowed accessibility child roles][] list for the test target's [semantic role]().
+Each test target only [owns][] elements with a [semantic role][] from its [allowed accessibility child roles][] list.
 
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element). See more in the [owned by][] definition.
 

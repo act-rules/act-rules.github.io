@@ -416,3 +416,4 @@ This link has no [visible text content][].
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'
 [contiguous subsequence]: #label-in-name-algorithm:contiguous-subsequence 'Definition of contiguous subsequence'
+[sc253]: https://www.w3.org/TR/wcag22/#label-in-name

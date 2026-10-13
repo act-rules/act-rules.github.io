@@ -183,6 +183,7 @@
 		"test": "jest --coverage",
 		"test:approve-rule": "node --test './.github/scripts/*.test.mjs'",
 		"build:wai": "zx .github/scripts/wai-build.mjs",
+		"push:wai": "zx .github/scripts/wai-push.mjs",
 		"pr:preview": "zx .github/scripts/pr-preview.mjs"
 	},
 	"homepage": "https://github.com/act-rules/act-rules.github.io",

@@ -1,0 +1,23 @@
+.highlight {
+	position: absolute;
+	z-index: 0;
+}
+
+.good {
+	border: green solid 1px;
+}
+.bad {
+	border: red dashed 1px;
+}
+
+.highlightable {
+	position: relative;
+	z-index: 5;
+}
+
+.placeholder {
+	background-color: transparent;
+	border: dashed 2px black;
+	padding: 0;
+	position: absolute;
+}

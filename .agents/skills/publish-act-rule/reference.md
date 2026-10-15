@@ -2,9 +2,27 @@
 
 ## Inputs
 
-### Board snapshot (optional)
+### Checkouts
 
-Path: `/Users/wilcofiers/Projects/act-board/data/snapshot.json`
+Sibling directories next to this repository. Do not hardcode a home directory.
+
+- WAI clone: `../wcag-act-rules`, a clone of `https://github.com/w3c/wcag-act-rules`. If that directory is missing, ask for the path. Stop if the user has none.
+- Board snapshot (optional): `../act-board/data/snapshot.json`. If that file is missing, ask once for a snapshot path. If the user has none, use the fallback below.
+
+Fetch, then read blobs from `origin/main`. Do not read the WAI working tree. Do not read or write `./wcag-act-rules-tmp/` while drafting. A normal `approve-rule` run deletes that directory.
+
+```bash
+git -C ../wcag-act-rules fetch origin main
+git -C ../wcag-act-rules show origin/main:content/rules/{ruleId}/proposed.md
+git -C ../wcag-act-rules show origin/main:content/rules/{ruleId}/index.md
+git -C ../wcag-act-rules show origin/main:_data/wcag-act-rules/rule-versions.yml
+```
+
+Use the path from this section in place of `../wcag-act-rules`.
+
+`proposed.md` on `origin/main` is a precondition, not the changelog source. If that `git show` fails, stop. `approve-rule` reads `content/rules/{ruleId}/proposed.md` in its fresh clone and throws when `last_modified` is missing, before `rule-transform` runs. A missing `index.md` blob is a different case: first-time approval, covered under Changelog diff.
+
+### Board snapshot (optional)
 
 The file is a JSON array of classifier rows. It may be missing or `[]` on a given machine. An empty file is a fallback case, not a blocker.
 
@@ -22,35 +40,47 @@ When a row exists for this `ruleId`, use these fields (names match `act-tools` `
 
 `changes[].subject` is raw material for understanding the history. Write new prose for `changes:`. Copying subjects into the list is out of scope for this skill.
 
-If the snapshot row and the files disagree (for example status `Proposed, reviewable` while an `index.md` version exists, or `Approved, unpublished changes` with no `index.md` version), stop and report the mismatch.
+If the snapshot row and `origin/main` disagree (for example status `Proposed, reviewable` while an `index.md` version exists, or `Approved, unpublished changes` with no `index.md` version), stop and report the mismatch.
 
 ### Fallback when the snapshot has no row
 
-Read `/Users/wilcofiers/Projects/wcag-act-rules/_data/wcag-act-rules/rule-versions.yml`.
+Read `origin/main:_data/wcag-act-rules/rule-versions.yml` from the WAI clone.
 
 - A version with `file: index.md` for this id means re-approval.
 - No such version means first-time approval.
 
 Say so in the confirm message. Board status, blockers, implementation completeness, and an in-review WAI pull request were not checked. User acceptance of the draft covers that gap.
 
-### Pages to diff
+### Changelog diff
 
-Draft from the persistent clone, not from the script's temporary clone:
+`approve-rule` publishes a fresh `rule-transform` of the current `_rules/` file onto a new clone of `main`. Draft from that pair, not from `proposed.md` in a working tree.
 
-- Community Group rule: `act-rules.github.io/_rules/*-{ruleId}.md`
-- WAI proposed page: `/Users/wilcofiers/Projects/wcag-act-rules/content/rules/{ruleId}/proposed.md`
-- WAI approved page: `/Users/wilcofiers/Projects/wcag-act-rules/content/rules/{ruleId}/index.md`
-- Version list: `/Users/wilcofiers/Projects/wcag-act-rules/_data/wcag-act-rules/rule-versions.yml`
+- Community Group rule: `_rules/*-{ruleId}.md` in this repo
+- Approved baseline: `origin/main:content/rules/{ruleId}/index.md` in the WAI clone
+- Version list: `origin/main:_data/wcag-act-rules/rule-versions.yml` in the WAI clone
 
-For a re-approval:
+If `index.md` is absent on `origin/main`, this is first-time approval. There is no approved page, so omit `changes:`. `proposed.md` must still exist on `origin/main`.
+
+For a re-approval, render the approved page with the same arguments as `approve-rule` (no `--proposed`). Use a scratch directory, not `./wcag-act-rules-tmp/` and not the WAI clone:
 
 ```bash
+mkdir -p /tmp/act-rule-render-{ruleId}
+node ./node_modules/act-tools/dist/cli/rule-transform.js \
+  --rulesDir ./_rules/ \
+  --glossaryDir ./pages/glossary/ \
+  --testAssetsDir ./test-assets/ \
+  --outDir /tmp/act-rule-render-{ruleId} \
+  --ruleIds {ruleId}
+git -C ../wcag-act-rules show origin/main:content/rules/{ruleId}/index.md \
+  > /tmp/act-rule-render-{ruleId}/approved-index.md
 diff -u \
-  /Users/wilcofiers/Projects/wcag-act-rules/content/rules/{ruleId}/index.md \
-  /Users/wilcofiers/Projects/wcag-act-rules/content/rules/{ruleId}/proposed.md
+  /tmp/act-rule-render-{ruleId}/approved-index.md \
+  /tmp/act-rule-render-{ruleId}/content/rules/{ruleId}/index.md
 ```
 
-Glossary text used by the rule is inlined in those pages under `## Glossary`. A definition-only commit (`touchedRule: false`, `touchedDefinitionKeys` set) becomes a bullet only when that inlined text, or a rule section that depends on it, changed. Phrase the bullet as the effect on **this** rule, with the glossary term in double quotes. Community Group glossary sources, when needed for context, are `pages/glossary/<key>.md` in `act-rules.github.io`.
+Run this from the `act-rules.github.io` root. If `rule-transform.js` is missing, stop and report it. The render writes `content/rules/{ruleId}/index.md` under the scratch directory. That diff is the changelog source.
+
+Glossary text used by the rule is inlined under `## Glossary` in both `index.md` files. A definition-only commit (`touchedRule: false`, `touchedDefinitionKeys` set) becomes a bullet only when that inlined text, or a rule section that depends on it, changed. Phrase the bullet as the effect on **this** rule, with the glossary term in double quotes. Community Group glossary sources, when needed for context, are `pages/glossary/<key>.md` in this repo.
 
 Ignore in the changelog:
 
@@ -83,7 +113,7 @@ Re-approval requires a non-empty list of non-empty strings. First-time approval 
 
 ## AGWG pull-request paragraph
 
-One paragraph. The script commit message stays `Set {ruleId} to approved`. This paragraph is for the AGWG pull request, which this skill does not open.
+One paragraph. The script commit message stays `Set {ruleId} to approved`. This paragraph is the opening of the draft pull request body. The `## Changes` and `## Preview` sections are added after the branch is pushed, in Draft pull request.
 
 Re-approval:
 
@@ -109,12 +139,12 @@ Include:
 - Rule name and `_rules/{filename}`
 - Approved snapshot: `approvalIsoDate`, or `none`
 - Commits since approval: `ruleCommitCount` on the rule file and `definitionCommitCount` definition-only, or `unknown`
-- A short summary of what `proposed.md` changes relative to `index.md`. For first-time approval, say there is no approved page.
+- A short summary of what the rendered `index.md` changes relative to `index.md` on `origin/main`. For first-time approval, say there is no approved page.
 - The YAML `changes:` list. For first-time approval, write `omitted — first-time approval` and do not include a list.
 - Under the list, each bullet labeled substantive or editorial
 - The one-paragraph AGWG body
 - The exact command for this mode (re-approval includes `--changesFile` or repeated `--change`; first-time includes neither)
-- This sentence: the command commits in `./wcag-act-rules-tmp/` and pushes branch `approve-{ruleId}` to `w3c/wcag-act-rules`. It does not open a pull request.
+- This sentence: the command commits in `./wcag-act-rules-tmp/` and pushes branch `approve-{ruleId}` to `w3c/wcag-act-rules`. After that push succeeds, open one draft pull request on that branch.
 - A closing line that you will not run the script until the user accepts this text or pastes a replacement.
 
 A reply that supplies replacement bullets or a replacement paragraph accepts **that** text. If the user asks for a change without the new wording, revise the draft and stop again.
@@ -143,14 +173,13 @@ The script calls `node ./node_modules/act-tools/dist/cli/rule-transform.js`. If 
 
 1. Unless `--skip-clone`: deletes `./wcag-act-rules-tmp/` and shallow-clones `https://github.com/w3c/wcag-act-rules.git` branch `main` into it.
 2. Checks out `--branch`, or creates it.
-3. Runs `rule-transform` for this `ruleId` (approved pages).
-4. Updates `_data/wcag-act-rules/rule-versions.yml`.
-5. On re-approval, archives the previous `index.md` to `{previousIsoDate}.md` and sets `changes` on the new `index.md` version. An empty list throws `Re-approval of {ruleId} requires at least one changelog entry`.
-6. On first approval, writes `proposed.md` and `index.md` versions with no `changes` key.
-7. Sets `approved: true` on this rule's entries in `examples.json`.
-8. Commits `Set {ruleId} to approved` and pushes the branch.
+3. Reads `content/rules/{ruleId}/proposed.md` and requires `last_modified`. On re-approval, archives the current `index.md` to `{previousIsoDate}.md` and builds the new `index.md` version with `changes`. An empty list throws `Re-approval of {ruleId} requires at least one changelog entry`. On first approval, builds `proposed.md` and `index.md` versions with no `changes` key. The version object stays in memory.
+4. Runs `rule-transform` for this `ruleId` (approved pages), which overwrites `index.md` after the archive step.
+5. Writes `_data/wcag-act-rules/rule-versions.yml`.
+6. Sets `approved: true` on this rule's entries in `examples.json`.
+7. Commits `Set {ruleId} to approved` and pushes the branch. If the diff is empty, `commitAndPush` returns without committing or pushing.
 
-`--skip-clone` still uses `./wcag-act-rules-tmp/` and still pushes. Use it only when that directory is already a clone the user is willing to commit and push. Drafting reads `/Users/wilcofiers/Projects/wcag-act-rules`. The script has no flag to target that clone.
+`--skip-clone` still uses `./wcag-act-rules-tmp/` and still pushes. Use it only when that directory is already a clone the user is willing to commit and push. Drafting does not read that directory. The script has no flag to target the sibling WAI clone.
 
 Default branch name: `approve-{ruleId}`, unless the user names another branch.
 
@@ -163,13 +192,12 @@ Default branch name: `approve-{ruleId}`, unless the user names another branch.
 
 File entries come first, then CLI entries. Every entry must be a non-empty string after trim.
 
-Re-approval, file:
+Re-approval, file. This is the default command. It clones `main` into `./wcag-act-rules-tmp/`:
 
 ```bash
 npx zx .github/scripts/approve-rule.mjs \
   --ruleId abcd12 \
   --branch approve-abcd12 \
-  --skip-clone \
   --changesFile /tmp/abcd12-changes.yml
 ```
 
@@ -198,16 +226,71 @@ npx zx .github/scripts/approve-rule.mjs \
   --branch approve-abcd12
 ```
 
-Omit `--skip-clone` unless `./wcag-act-rules-tmp/` is already the intended clone. The examples above that include `--skip-clone` assume that directory exists.
+`--skip-clone` is a separate case. It still commits and pushes `./wcag-act-rules-tmp/`. Use it only when that directory is already the clone the user is willing to push:
+
+```bash
+npx zx .github/scripts/approve-rule.mjs \
+  --ruleId abcd12 \
+  --branch approve-abcd12 \
+  --skip-clone \
+  --changesFile /tmp/abcd12-changes.yml
+```
 
 ### After the script
 
-Report the branch, the commit result, and the confirmed paragraph. Do not run `gh pr create`. Opening the single AGWG pull request is [act-tools#67](https://github.com/act-rules/act-tools/issues/67). Weekly board sync must not call this skill or this script.
+If the script exits non-zero, or `commitAndPush` skipped the push because the diff was empty, stop. Report the branch state and the error. Do not open a pull request.
+
+When the push succeeds, continue to Draft pull request.
+
+## Draft pull request
+
+One draft pull request on `w3c/wcag-act-rules`, base `main`, head `approve-{ruleId}` (or the branch the user named). Title: `Set {ruleId} to approved`.
+
+If that head already has an open pull request, edit its body. Do not open another.
+
+The Netlify preview URL includes the pull request number, so create the draft first, then set the body:
+
+```bash
+gh pr create --repo w3c/wcag-act-rules --base main --head approve-abcd12 --draft \
+  --title "Set abcd12 to approved" \
+  --body "Opening draft for abcd12."
+```
+
+Take the number from the URL `gh pr create` prints, then `gh pr edit` that number with the body below.
+
+### Body
+
+Start with the accepted paragraph. Then:
+
+```markdown
+## Changes
+
+- Account for whitespace in the applicability
+- Add assumption about text containing human language
+
+## Preview
+
+- [Updated rule (preview)](https://deploy-preview-999--wai-wcag-act-rules.netlify.app/standards-guidelines/act/rules/abcd12/)
+- [Current rule](https://www.w3.org/WAI/standards-guidelines/act/rules/abcd12/)
+- [Review the difference](https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fwww.w3.org%2FWAI%2Fstandards-guidelines%2Fact%2Frules%2Fabcd12%2F&doc2=https%3A%2F%2Fdeploy-preview-999--wai-wcag-act-rules.netlify.app%2Fstandards-guidelines%2Fact%2Frules%2Fabcd12%2F)
+```
+
+Use the accepted changelog bullets under `## Changes`. For a first-time approval, write `No changelog. This is the first approval.` instead of a bullet list.
+
+`## Preview` links, with `{n}` the pull request number and `{ruleId}` the id:
+
+- Updated rule (preview): `https://deploy-preview-{n}--wai-wcag-act-rules.netlify.app/standards-guidelines/act/rules/{ruleId}/`
+- Current rule: `https://www.w3.org/WAI/standards-guidelines/act/rules/{ruleId}/`
+- Review the difference: `https://services.w3.org/htmldiff?doc1={current}&doc2={preview}` where `{current}` and `{preview}` are the two URLs, percent-encoded. `doc1` is the published page. `doc2` is the Netlify preview.
+
+For a first-time approval there is no published page. Include only Updated rule (preview). Omit Current rule and Review the difference.
+
+Report the pull request URL when the body is set. Weekly board sync must not call this skill or this script. [act-tools#67](https://github.com/act-rules/act-tools/issues/67) is the later `workflow_dispatch` path. It does not replace this draft pull request.
 
 ## Out of scope
 
 - Weekly or on-demand act-board sync
 - More than one `ruleId` in a run
-- Opening many pull requests, or opening the AGWG pull request from this skill
+- Opening more than one pull request, or opening a pull request before the branch is on `origin`
 - Filling `changes:` with classifier subjects, `git log` subjects, or formatter / `last_modified` noise
 - Depending on `workflow_dispatch` for the changelog (`approve-rule.yml` passes only `ruleId` and `branch` today)

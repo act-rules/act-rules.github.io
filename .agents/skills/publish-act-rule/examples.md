@@ -63,7 +63,7 @@ Snapshot `changes[].subject` might look like:
 - `fix focusable (#1234)`
 - `glossary: programmatically hidden`
 
-The page diff for the same history shows whitespace handling in Applicability, a new human-language assumption, and inlined glossary edits for "focusable" and "programmatically hidden".
+The diff of the rendered approved page against `index.md` on `main` for the same history shows whitespace handling in Applicability, a new human-language assumption, and inlined glossary edits for "focusable" and "programmatically hidden".
 
 Publish the effects, collapsed:
 
@@ -74,7 +74,7 @@ Publish the effects, collapsed:
 - Let hidden attribute be handled by display:none in "programmatically hidden" definition
 ```
 
-Leave `prettier` and `last_modified` out. A definition commit that does not change this rule's proposed page versus its approved page does not get a bullet.
+Leave `prettier` and `last_modified` out. A definition commit that does not change the rendered approved page versus `index.md` on `main` does not get a bullet.
 
 Labels for the confirm message (they stay out of the YAML):
 
@@ -128,4 +128,4 @@ npx zx .github/scripts/approve-rule.mjs \
   --change "Let hidden attribute be handled by display:none in \"programmatically hidden\" definition"
 ```
 
-These examples are documentation. Do not run them while reading the skill, and do not run them against a real rule until the confirm gate for that rule has been accepted.
+These examples are documentation. Do not run them while reading the skill, and do not run them against a real rule until the confirm gate for that rule has been accepted. After that command pushes the branch, the draft pull request body is the accepted paragraph plus `## Changes` and `## Preview`, as specified in `reference.md` (Draft pull request).

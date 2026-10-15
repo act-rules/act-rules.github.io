@@ -143,6 +143,7 @@ Include:
 - The YAML `changes:` list. For first-time approval, write `omitted — first-time approval` and do not include a list.
 - Under the list, each bullet labeled substantive or editorial
 - The one-paragraph AGWG body
+- The pull request title from Draft pull request. The script commit message stays `Set {ruleId} to approved`.
 - The exact command for this mode (re-approval includes `--changesFile` or repeated `--change`; first-time includes neither)
 - This sentence: the command commits in `./wcag-act-rules-tmp/` and pushes branch `approve-{ruleId}` to `w3c/wcag-act-rules`. After that push succeeds, open one draft pull request on that branch.
 - A closing line that you will not run the script until the user accepts this text or pastes a replacement.
@@ -244,7 +245,14 @@ When the push succeeds, continue to Draft pull request.
 
 ## Draft pull request
 
-One draft pull request on `w3c/wcag-act-rules`, base `main`, head `approve-{ruleId}` (or the branch the user named). Title: `Set {ruleId} to approved`.
+One draft pull request on `w3c/wcag-act-rules`, base `main`, head `approve-{ruleId}` (or the branch the user named).
+
+The script commit message stays `Set {ruleId} to approved`. The pull request title is separate, so the list shows the rule name and whether this is a re-approval:
+
+- Re-approval: `Update approved rule: {name} ({ruleId})`
+- First approval: `Approve rule: {name} ({ruleId})`
+
+`{name}` is the frontmatter `name`. Example: `Update approved rule: Orientation of the page is not restricted using CSS transforms (b33eff)`.
 
 If that head already has an open pull request, edit its body. Do not open another.
 
@@ -252,7 +260,7 @@ The Netlify preview URL includes the pull request number, so create the draft fi
 
 ```bash
 gh pr create --repo w3c/wcag-act-rules --base main --head approve-abcd12 --draft \
-  --title "Set abcd12 to approved" \
+  --title "Update approved rule: Example rule name (abcd12)" \
   --body "Opening draft for abcd12."
 ```
 

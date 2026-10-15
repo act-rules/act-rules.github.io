@@ -29,7 +29,7 @@ Weekly board sync, publishing more than one rule, opening a batch of AGWG pull r
 
 6. **Run the script only after confirmation.** First-time: invoke with no `--change` and no `--changesFile`. Re-approval: pass the accepted non-empty list via repeated `--change` and/or `--changesFile`. Refuse an empty list before invoking. Preconditions and the push side effect are in `reference.md` (Run approve-rule).
 
-7. **Open one draft pull request after the branch is on `origin`.** Follow `reference.md` (Draft pull request). If the script did not push, stop and report that. Do not open a second pull request for the same branch.
+7. **Open one draft pull request after the branch is on `origin`.** Follow `reference.md` (Draft pull request), including the title. A re-approval is `Update approved rule: {name} ({ruleId})`. A first approval is `Approve rule: {name} ({ruleId})`. If the script did not push, stop and report that. Do not open a second pull request for the same branch.
 
 ## Further detail
 

@@ -70,10 +70,17 @@ There are no accessibility support issues known.
 ### Passed
 
 #### Passed Example 1
-An `h1` element is followed by a page that has instructions about how to make the renewal application and an application form.
-This `h1` element states the functional purpose of the page content.
+This `h1` element is on a landing page that has information about how to make the passport renewal application.
+It states the functional purpose of the page content accurately.
 ```html
-<h1>Renew Your Passport Online</h1>
+<h1>Renewing Your Passport Online</h1>
+<p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>
+<ul>
+  <li><a href="#a1">Who can renew online</a></li>
+  <li><a href="#a2">You need a digital photo to renew online</a></li>
+  <li><a href="#a3">Your current passport will be cancelled and the new one will be mailed to you</a></li>
+  <li><a href="#a4">Sign in or register for an account</a></li>
+</ul>
 ```
 
 #### Passed Example 2

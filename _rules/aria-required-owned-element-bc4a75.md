@@ -32,13 +32,13 @@ This rule applies to any [HTML or SVG element][] that is [included in the access
 
 ## Expectation
 
-Each test target only [owns][] elements with a [semantic role][] from the [allowed accessibility child roles][] list for the test target's [semantic role]().
+Each test target only [owns][] elements with a [semantic role][] from its [allowed accessibility child roles][] list.
 
 **Note:** The definition of [owned by][] used in this rule is different than the definition of ["owned element" in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#dfn-owned-element). See more in the [owned by][] definition.
 
 ## Background
 
-Some [allowed accessibility child roles][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [allowed accessibility child roles][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
+Some [allowed accessibility child roles][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by the words "with accessibility child" in the role description. For example, the role `menu` has `group with accessibility child menuitemradio` as one of its [allowed accessibility child roles][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
 The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][wai-aria 1.3] roles. The [WAI-ARIA Graphics Module][] and [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editors draft)][dpub 1.1] do not include any [allowed accessibility child roles][].
 
@@ -215,8 +215,8 @@ This element with the `menu` role has no accessibility child. Note because the e
 The both `div` elements with explicit `list` roles have no accessibility children. The `listitem` element is either with `aria-hidden` or has no owned element through `aria-owns` in the first `div` element.
 
 ```html
-<div role="list">
-	<div role="listitem" aria-hidden="true">Excluded element</div>
+<div role="tree">
+	<div role="listitem" aria-hidden="true"></div>
 	<div role="listitem" id="reparented">Reparented element</div>
 </div>
 <div role="list" aria-owns="reparented"></div>

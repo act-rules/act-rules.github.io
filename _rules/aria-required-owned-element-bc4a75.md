@@ -214,8 +214,8 @@ This element with the `menu` role has no accessibility child. Note because the e
 The both `div` elements with explicit `list` roles have no accessibility children. The `listitem` element is either with `aria-hidden` or has no owned element through `aria-owns` in the first `div` element.
 
 ```html
-<div role="list">
-	<div role="listitem" aria-hidden="true">Excluded element</div>
+<div role="tree">
+	<div role="listitem" aria-hidden="true"></div>
 	<div role="listitem" id="reparented">Reparented element</div>
 </div>
 <div role="list" aria-owns="reparented"></div>

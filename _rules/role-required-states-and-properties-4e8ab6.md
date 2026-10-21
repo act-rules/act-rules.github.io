@@ -26,7 +26,6 @@ input_aspects:
 acknowledgments:
   authors:
     - Anne Thyme Nørregaard
-    - Shunguo Yan
     - Tom Brunet
   funding:
     - WAI-Tools

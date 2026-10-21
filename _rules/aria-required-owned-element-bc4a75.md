@@ -17,10 +17,11 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Wilco Fiers
+    - Shunguo Yan
   previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
+	- Wilco Fiers
   funding:
     - WAI-Tools
 ---
@@ -205,7 +206,7 @@ This element with the `menu` role has no accessibility child. Note because the e
 
 ```html
 <ul role="menu" aria-busy="true">
-	Loading
+	<li role="none">Loading...</li>
 </ul>
 ```
 

@@ -17,11 +17,10 @@ input_aspects:
   - DOM Tree
 acknowledgments:
   authors:
-    - Shunguo Yan
+    - Wilco Fiers
   previous_authors:
     - Audrey Maniez
     - Jey Nandakumar
-	- Wilco Fiers
   funding:
     - WAI-Tools
 ---

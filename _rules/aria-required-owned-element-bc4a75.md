@@ -37,7 +37,7 @@ Each test target only [owns][] elements with a [semantic role][] from its [allow
 
 ## Background
 
-Some [allowed accessibility child roles][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by an arrow (meaning "containing") in the role description. For example, the role `menu` has `group → menuitemradio` as one of its [allowed accessibility child roles][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
+Some [allowed accessibility child roles][] are only valid if they themselves [own][owns] (or "contain") elements with a given [semantic role][]. This is denoted by the words "with accessibility child" in the role description. For example, the role `menu` has `group with accessibility child menuitemradio` as one of its [allowed accessibility child roles][], meaning that elements with a role of `menu` may only [own][owns] elements with a role of `group` who themselves only [own][owns] elements with a role of `menuitemradio`.
 
 The applicability of this rule is limited to the [WAI-ARIA 1.3 Recommendation][wai-aria 1.3] roles. The [WAI-ARIA Graphics Module][] and [Digital Publishing WAI-ARIA Module (DPUB ARIA) 1.1 (Editors draft)][dpub 1.1] do not include any [allowed accessibility child roles][].
 

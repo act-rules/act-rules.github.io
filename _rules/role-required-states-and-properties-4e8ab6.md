@@ -142,7 +142,7 @@ This `heading` does not have the required property `aria-level`. Per [WAI-ARIA 1
 
 #### Failed Example 2
 
-This `switch` does not have the required `aria-checked` property. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `switch` does not have the required property `aria-checked`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
 
 ```html
 <div role="switch">

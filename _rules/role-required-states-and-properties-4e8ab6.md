@@ -171,7 +171,7 @@ This `separator` does not have the required `aria-valuenow` property. This is re
 
 #### Failed Example 5
 
-This `combobox` does not have the required `aria-expanded` property. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `combobox` does not have the required property `aria-expanded`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
 
 ```html
 <label for="tag_combo">Tag</label>

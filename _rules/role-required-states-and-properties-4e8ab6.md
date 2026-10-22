@@ -86,7 +86,7 @@ This `checkbox` has the required `aria-checked` property.
 
 #### Passed Example 3
 
-This `scrollbar` has the required properties `aria-valuenow`. The optional `aria-controls` refers to the element with "content" as ID. Also, `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
+This `scrollbar` has the required property `aria-valuenow`. The optional `aria-controls` refers to the element with "content" as ID. Also, `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
 
 ```html
 <div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>
@@ -117,7 +117,7 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 #### Passed Example 6
 
-This `combobox` has the required properties `aria-expanded`, and an optional `aria-controls`.
+This `combobox` has the required properties `aria-expanded`, and an optional `aria-controls` property.
 
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>

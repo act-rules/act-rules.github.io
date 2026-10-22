@@ -95,7 +95,7 @@ This `scrollbar` has the required property `aria-valuenow`. The optional `aria-c
 
 #### Passed Example 4
 
-These `option` nodes do not need `aria-selected` property because it has a default value of `false`.
+These `option` nodes do not need the `aria-selected` property because it has a default value of `false`.
 
 ```html
 <div id="label">Tags</div>

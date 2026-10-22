@@ -132,7 +132,7 @@ This `combobox` has the required property `aria-expanded`, and an optional `aria
 
 #### Failed Example 1
 
-This `heading` does not have the required `aria-level` property. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `heading` does not have the required property `aria-level`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
 
 ```html
 <div role="heading">

@@ -117,7 +117,7 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 #### Passed Example 6
 
-This `combobox` has the required properties `aria-expanded`, and an optional `aria-controls` property.
+This `combobox` has the required property `aria-expanded`, and an optional `aria-controls`.
 
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>

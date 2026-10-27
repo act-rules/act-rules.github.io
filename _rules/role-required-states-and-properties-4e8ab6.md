@@ -41,7 +41,7 @@ For each test target, the [WAI-ARIA required states and properties][] for the ro
 
 ## Background
 
-Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.3][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tab` roles for the `aria-selected` property.
+Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior may be not defined. For example, per [WAI-ARIA 1.3][], for the `aria-selected` property, only the `option`, `tab` and `treeitem` roles permit user agents to provide an implicit value when specified conditions are met. For all other roles that support the `aria-selected` property (`gridcell`, `row`, `columnheader`, and `columnheader`), the value for the `aria-selected` property, if not specified by the developer, is `undefined`, indicating the element is not selectable.
 
 This rule is testing author built components that specify [explicit semantic roles][explicit semantic role] and not components that keep their [implicit semantic role][]. For components that keep their [implicit semantic role][], all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState). Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings][html aam].
 

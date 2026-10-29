@@ -190,7 +190,7 @@ The element `table` with an explicit `treegrid` role owns an element `tr` with i
 
 #### Passed Example 11
 
-This `div` element with the implicit `list` role owns only elements with the implicit `generic` role, thus no accessible children.
+This `div` element with the explicit `list` role owns only elements with the implicit `generic` role, thus no accessible children.
 
 ```html
 <div role="list">

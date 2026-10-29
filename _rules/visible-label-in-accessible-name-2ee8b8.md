@@ -62,7 +62,7 @@ This rule assumes that the visible label isn't rearranged with CSS so that it ap
 
 This rule assumes that the visible label doesn't use CSS to add whitespace where none exists in the DOM.
 
-This rule — specifically, the [label in name algorithm][] that this rule relies on — assumes that content within parentheses can be ignored ("Parentheses" are also known as "round brackets"). This is important because the algorithm's treatment of parentheses is to remove them and all characters within them. This assumption is almost always true in English.  Exceptions include links with names such "Dune (1984 film)" and "Dune (2021 film)". This assumption is known to be often false in languages other than English, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
+This rule — specifically, the [label in name algorithm][] that this rule relies on — assumes that content within parentheses can be ignored ("Parentheses" are also known as "round brackets"). This is important because the algorithm's treatment of parentheses is to remove them and all characters within them. This assumption is almost always true in English. Exceptions include links with names such "Dune (1984 film)" and "Dune (2021 film)". This assumption is known to be often false in languages other than English, such as German (where parentheses indicate dual states) and Arabic (where parentheses are often used as quotation marks). Violations of this assumption will, in real-world scenarios, more often result in a false negative for this rule rather than a false positive.
 
 ### Accessibility Support
 
@@ -159,7 +159,9 @@ The [visible inner text][] of this link is "ACT" (with no spaces) because of the
 
 ```html
 <a href="#" aria-label="ACT">
-	<div style="display: inline">A</div><div style="display: inline">C</div><div style="display: inline">T</div>
+	<div style="display: inline">A</div>
+	<div style="display: inline">C</div>
+	<div style="display: inline">T</div>
 </a>
 ```
 
@@ -412,7 +414,7 @@ This link has no [visible text content][].
 [understand253]: https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html
 [visible inner text]: #visible-inner-text 'Definition of Visible inner text'
 [visible inner text of an element]: #visible-inner-text:for-element 'Definition of Visible inner text of an element'
-[definition of Visible inner text of a text node for text which is visible whitespace]: #visible-inner-text:for-text-whitespace 'definition of Visible inner text of a text node for text which is visible whitespace'
+[definition of visible inner text of a text node for text which is visible whitespace]: #visible-inner-text:for-text-whitespace 'definition of Visible inner text of a text node for text which is visible whitespace'
 [visible text content]: #visible-text-content 'Definition of Visible text content'
 [widget role]: https://www.w3.org/TR/wai-aria-1.2/#widget_roles 'Definition of Widget role'
 [contiguous subsequence]: #label-in-name-algorithm:contiguous-subsequence 'Definition of contiguous subsequence'

@@ -65,13 +65,11 @@ There are no accessibility support issues known.
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
 ## Examples
-## Examples
 
 ### Passed
 
 #### Passed Example 1
-This `h1` element is on a landing page that has information about how to make the passport renewal application.
-It states the functional purpose of the page content accurately.
+This `h1` element that states the functional purpose of the page content is relevant.
 ```html
 <h1>Renewing Your Passport Online</h1>
 <p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>
@@ -84,74 +82,142 @@ It states the functional purpose of the page content accurately.
 ```
 
 #### Passed Example 2
-An `h1` element is followed by a carousel displaying newly arrived printers on a shopping website.
-This `h1` element contains a heading about the marketing content that follows it.
+This `h1` element about the marketing content that follows is relevant.
 ```html
 <h1>Fresh deals just dropped: Printers</h1>
+<div class="carousel" aria-label="Fresh deals">
+  <div class="carousel-slides">
+    <div class="slide active">
+      <img src="printer1.jpg" alt="Compact All-in-One Laser Printer">
+    </div>
+    <div class="slide">
+      <img src="printer2.jpg" alt="High-Speed Wireless Inkjet Printer">
+    </div>
+    <div class="slide">
+      <img src="printer3.jpg" alt="Heavy-Duty Office Color Printer">
+    </div>
+    <div class="slide">
+      <img src="printer4.jpg" alt="Photo Quality Portable Printer">
+    </div>
+    <div class="slide">
+      <img src="printer5.jpg" alt="Eco-Friendly Tank Printer">
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button type="button" id="toggle-btn" aria-label="Pause slide rotation">Pause</button>
+  </div>
+</div>
 ```
 
 #### Passed Example 3
-An `h2` element precedes a data table that contains info about the weather forecast.
-This `h2` element is a relevant heading for the informational data that follows it.
+This `h2` element for the structured weather forecast table that follows is relevant.
 ```html
 <h2>Current Weather in New York</h2>
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Condition</th>
+    <th>High / Low</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>Partly Cloudy</td>
+    <td>18°C / 12°C</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>Sunny</td>
+    <td>22°C / 14°C</td>
+  </tr>
+</table>
 ```
 
 #### Passed Example 4
-Headings denoting standard document sections – such as "Glossary," "Summary," or "Appendix" – are inherently compliant, unless an obvious error is observed pass.
-This `h2` element contains a structural identifier of the order of content sections. The content that follows makes no difference to the outcome of this test.
+This `h2` element acting as a structural identifier for sequential content sections is relevant, where the content that follows rarely alters whether it is relevant as long as an obvious misplacement is not observed.
 ```html
 <h2>Chapter 4</h2>
+<p>
+  It was the White Rabbit, trotting slowly back again, and looking anxiously about as it went, as if it had lost something; and she heard it muttering to itself "The Duchess! The Duchess! Oh my dear paws! Oh my fur and whiskers! She'll get me executed, as sure as ferrets are ferrets! Where can I have dropped them, I wonder?" Alice guessed in a moment that it was looking for the fan and the pair of white kid gloves, and she very good-naturedly began hunting about for them, but they were nowhere to be seen.
+</p>
 ```
 
 #### Passed Example 5
-This `h2` element contains a structural identifier for a section of a musical work. The content that follows makes no difference to the outcome of this test, unless an obvious misplacement is observed.
+This `h3` element used as a generic section heading is relevant, as long as the section content retains basic contextual relevance.
 ```html
-<h2>1st movement</h2>
+<h3>Glossary</h3>
+<ol>
+  <li><strong>API (Application Programming Interface):</strong> A set of rules and protocols that allows different software applications to communicate with each other.</li>
+  <li><strong>Cache:</strong> A temporary storage area that saves web page resources to improve loading speed on subsequent visits.</li>
+  <li><strong>DOM (Document Object Model):</strong> A programming interface for web documents that represents the page structure as a node tree.</li>
+  <li><strong>Metadata:</strong> Information embedded within a document or web page that describes its content, author, or properties.</li>
+  <li><strong>Responsive Design:</strong> A design approach that ensures web pages render adaptively across a variety of screen sizes and devices.</li>
+</ol>
 ```
 
 #### Passed Example 6
-This `h3` element is for a standard document section, preceding terms and explanations of them.
+This `h1` element introducing the subsequent list is relevant, as long as the section content retains basic contextual relevance.
 ```html
-<h3>Glossary</h3>
+<h1>Don't Forget To Bring:</h1>
+<ul>
+  <li>A valid government-issued photo ID (e.g., passport, driver's license, health card, etc.)</li>
+  <li>Two recent proof of address documents (e.g., utility bill, bank statement, tax letter, etc.)</li>
+  <li>Your printed appointment confirmation letter</li>
+</ul>
 ```
 
 #### Passed Example 7
-This `h1` element contains an important reminder for users. The content that follows makes no difference, unless there is a clear contextual mismatch, i.e. the content clearly belongs on another page.
+This `h1` element is relevant to the page content despite exhibiting another WCAG failure for having a severely low contrast ratio.
 ```html
-<h1>Don't Forget To Bring:</h1>
+<img src="dummy-university-banner" alt="University Name" />
+<h1 style="color: gray; background-color: dimgray;">Your Future Starts Here, at Our University</h1>
+<p>
+  Discover world-class academic programs, vibrant campus life, and pioneering research opportunities designed to help you achieve your professional goals. Apply today to join our global community of scholars.
+</p>
 ```
 
 #### Passed Example 8
-An `h1` element precedes the name of a university and some other promotional content.
-This `h1` element contains a relevant heading to the page content. It passes this rule despite exhibiting another WCAG failure for having a severely low contrast ratio.
+This `p` element styled as a heading is relevant to the section content, despite failing other WCAG criteria due to using changes in text presentation without using the appropriate markup and utilizing an invalid ARIA value.
 ```html
-<h1 style="color: darkgrey; background-color: black;">Your Future Starts Here, at Our University</h1>
+<p class="h1" role="headline">A Million Different Journeys</p>
+<ul>
+  <li>Curated international vacation packages</li>
+  <li>Last-minute flight and hotel deals</li>
+  <li>Guided eco-tours and adventure trips</li>
+</ul>
 ```
 
 #### Passed Example 9
-The home page of a travel website that advertises their services. The heading content is contained in a `p` element,  but its presentation style is intended to be perceived visually as a heading.
-The heading passes this rule as its content is relevant and descriptive, despite failing other WCAG criteria due to using changes in text presentation without using the appropriate markup and utilizing an invalid ARIA role and value.
+This `h1` element is relevant to the purpose of the page content, despite being overly casual and unnecessarily verbose. 
 ```html
-<p class="h1" role="headline">A Million Different Journeys</p>
+<h1>Welcome to Our State-of-the-Art Brand New Wizard That Will Mail Your Beautiful Loyalty Card Right to Your Doorstep</h1>
+<p>Step 1 of 4: Personal Information</p>
+<form action="#" method="post">
+  <div>
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name">
+  </div>
+  <div>
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+  </div>
+  <button type="submit">Next</button>
+</form>
 ```
 
 #### Passed Example 10
-Headings that are compliant under this criterion by remaining relevant or descriptive, irrespective of whether they could be optimized for length, contain redundant phrasing, are entirely unnecessary, or provide editorially unnecessary descriptions.
-An `h1` element precedes a page that has instructions, images, and a form about how to make the driver's licence renewal application. This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule despite being overly casual and including unnecessary details.
+This `h1` element identifying the topic of a travel safety guidance page is relevant, despite containing redundant phrasing.
 ```html
-<h1>Welcome to Our State-of-the-art New Wizard That Will Mail Your Driver's Licence Home</h1>
+<h1>Travel Advisories and Travel Advisory Information</h1>
+<ul>
+  <li>Keep digital copies of your passport and vital documents stored securely.</li>
+  <li>Monitor local news and official safety channels while abroad.</li>
+  <li>Register your contact details with your embassy prior to departure.</li>
+</ul>
 ```
 
 #### Passed Example 11
-This `h1` element contains a heading from which the purpose of the page content can be understood. It passes this rule as its meaning or efficacy of the description despite containing completely redundant phrasing.
-```html
-<h1>Travel Advisories and Travel Advisory Information</h1>
-<!-- Followed by a page that contains a list of hyperlinks to sections about other countries -->
-```
-
-#### Passed Example 12
-This `h2` element describes the content of the promotional banner that follows it. It passes this rule despite it repeats the text of the accompanying `figcaption` element verbatim and the redundant tooltip.
+This `h2` element for the promotional banner that follows is relevant, regardless of redundant text present verbatim in the title attribute or the accompanying `figcaption` element.
 ```html
 <h2>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites</h2>
 <figure>
@@ -160,87 +226,140 @@ This `h2` element describes the content of the promotional banner that follows i
 </figure>
 ```
 
-#### Passed Example 13
-The section that precedes the `h2` element contains an unordered list of hyperlinks.
-This `h2` element provides a relevant heading that describes the content of the section. It passes this rule despite being editorially unnecessary because the following list of hyperlinks makes the purpose of the section immediately obvious. Although an alternative like "Useful Links to External Resources" would provide better clarity, headings cannot be deemed non-compliant under this rule for merely stating the obvious, as such choices remain strictly within the editorial domain.
+#### Passed Example 12
+This `h2` element is relevant because it describes the section content, even though the wording is generic and the heading states the obvious.
 ```html
 <h2>List of Links</h2>
+<ul>
+  <li><a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (WAI)</a></li>
+  <li><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide (APG)</a></li>
+</ul>
 ```
 
-#### Passed Example 14
-This `h2` element uses a satirical or metaphorical phrase to introduce the topic. Although the heading text does not seem to match the vocabulary of the section, its contextual relevance becomes evident when considering the immediate context that follows, which is an analysis article about inflation, explaining how long-term economic trends cause prices to rise continuously. Headings that use literary devices remain compliant under this rule, as the determination of tone or stylistic approach falls within the editorial domain.
+#### Passed Example 13
+This `h2` element is relevant despite using a metaphorical phrase to introduce a satirical article on inflation. It passes this rule because it is contextually relevant when read alongside the content, even though it relies on stylistic phrasing.
 ```html
 <h2>Final Day for Savings</h2>
 <p>Everything will be more expensive tomorrow.</p>
+<p>Persistent inflation continues to erode purchasing power, forcing consumers to adjust to steadily rising costs across basic goods and services.</p>
+```
+
+#### Passed Example 14
+This `h1` element is relevant to the section content despite using irony to introduce an opinion piece on global peace, regardless of editorial style or literary tone.
+```html
+<h1>Nobel's Peace Prize Office is Temporarily Closed Due to Declining Business</h1>
+<p>Recent diplomatic data shows active armed conflicts reaching a two-decade high across multiple continents.</p>
+<p>While international peace organizations struggle to broker lasting ceasefires, humanitarian efforts require immediate global support and renewed commitment to de-escalation.</p>
 ```
 
 #### Passed Example 15
-A heading for an opinion piece that provides statistics regarding active global conflicts and advocates for international peace.
-This `h1` element employs irony to introduce the topic. Although the heading text does not explicitly reference the literal vocabulary of the section, its contextual relevance becomes evident when the primary purpose of the content is determined. Headings that utilize literary or stylistic devices remain compliant under this rule, as the determination of editorial tone falls outside the scope of accessibility evaluation.
-```html
-<h1>Nobel's Peace Prize Office is Temporarily Closed Due to Declining Business</h1>
-```
-
-#### Passed Example 16
-This `h3` element employs an interrogative structure to introduce the section topic. Although the heading itself asks a question rather than providing a direct declaration, its contextual relevance becomes immediately evident upon evaluating the concise response that follows in the immediate text. 
+This `h1` element that uses a question to introduce the section topic is relevant.
 ```html
 <h3>Opening hours?</h3>
 <p>24/7</p>
-<p>No opening hours. We are at your service round the clock!<p>
+<p>No opening hours. We are at your service round the clock!</p>
+```
+
+#### Passed Example 16
+This `h3` element is relevant to the section despite containing a duplicated word from a paste error. 
+```html
+<h3>Contact Contact Customer Support</h3>
+<p>Email: support@example.com</p>
+<p>Phone: 1-800-555-5555</p>
 ```
 
 #### Passed Example 17
-This `h3` element contains a duplicated word and a trailing white space resulting from a manual copy-paste error. It is followed by the contact details for customer support. It passes this rule despite a repeated word, as the second "Contact" word could cause no misunderstanding. 
+This `h3` element is relevant to the section despite containing residual placeholder text, a trailing whitespace, and a stray angle bracket at the end that resulted from publishing errors. 
 ```html
-<h3>Contact Contact Customer Support </h3>
+<h3>Contact Customer Support (h3) <</h3>
+<p>Email: support@example.com</p>
+<p>Phone: 1-800-555-5555</p>
 ```
 
-#### Passed Example 18
-This `h3` element contains the former placeholder text (h3) at the end of the heading. It is followed by the contact details for customer support. The web publisher forgot to remove it after pasting the actual heading. It passes this rule despite the forgotten (h3), as it is still clearly about contacting customer support. 
-```html
-<h3>Contact Customer Support (h3)</h3>
-```
-
-#### Passed Example 19
-This `h3` element contains an extra angle bracket at the end that resulted from a local markup formatting oversight. It is followed by the contact details for customer support. It passes this rule despite the extra angle bracket which may not be noticeable by some, as the meaning of the heading is not affected. 
-```html
-<h3>Contact Customer Support <</h3>
-```
 
 ### Failed
 
 #### Failed Example 1
-This `h1` element contains unremoved placeholder text from a content template. It fails this rule because the text serves as a developmental instruction rather than describing the purpose or topic of the page content.
+This `h1` element is not relevant as its sole content is unremoved placeholder text from a content template. It fails this rule because the heading text serves as a developmental instruction rather than describing the purpose or topic of the page content.
 ```html
 <h1>[Replace this text with heading 1]</h1>
+<p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>
+<ul>
+  <li><a href="#a1">Who can renew online</a></li>
+  <li><a href="#a2">You need a digital photo to renew online</a></li>
+  <li><a href="#a3">Your current passport will be cancelled and the new one will be mailed to you</a></li>
+  <li><a href="#a4">Sign in or register for an account</a></li>
+</ul>
 ```
 
 #### Failed Example 2
-A page displays a form, but its heading mistakenly shows a back-end error message.
-This `h1` element contains a raw back-end runtime error message injected during server-side execution. It fails this rule because the displayed text is a system-generated message rather than an intentional heading describing the purpose or topic of the page content.
+This `h1` element containing a raw back-end runtime error message injected during server-side execution is not relevant. It fails this rule because the displayed text is a system-generated message rather than an intentional heading describing the purpose or topic of the page content.
 ```html
 <h1>Uncaught Error: Call to undefined function get_user_data() in /var/www/html/profile.php on line 42</h1>
+<div class="carousel" aria-label="Fresh deals">
+  <div class="carousel-slides">
+    <div class="slide active">
+      <img src="printer1.jpg" alt="Compact All-in-One Laser Printer">
+    </div>
+    <div class="slide">
+      <img src="printer2.jpg" alt="High-Speed Wireless Inkjet Printer">
+    </div>
+    <div class="slide">
+      <img src="printer3.jpg" alt="Heavy-Duty Office Color Printer">
+    </div>
+    <div class="slide">
+      <img src="printer4.jpg" alt="Photo Quality Portable Printer">
+    </div>
+    <div class="slide">
+      <img src="printer5.jpg" alt="Eco-Friendly Tank Printer">
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button type="button" id="toggle-btn" aria-label="Pause slide rotation">Pause</button>
+  </div>
+</div>
 ```
 
 #### Failed Example 3
-A page contains list of academic programs available at a college, but its heading mistakenly shows timestamp.
-This `h1` element contains only a raw timestamp. Due to a publishing or layout logic failure, this metadata was incorrectly rendered within the primary heading container rather than as a document footer element. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
+This `h1` element containing only a raw timestamp is not relevant. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
 ```html
+<img src="dummy-university-banner" alt="University Name" />
 <h1>2026-06-30 13:46 UTC</h1>
+<p>
+  Discover world-class academic programs, vibrant campus life, and pioneering research opportunities designed to help you achieve your professional goals. Apply today to join our global community of scholars.
+</p>
 ```
 
 #### Failed Example 4
-This `h1` element for a credit card application page contains a brief, conversational greeting. It fails this rule on its face because the informal text possesses no descriptive value and provides no indication of the highly specific transactional nature of the form that follows.
+This `h1` element for any application process is not relevant.
 ```html
 <h1>Hi</h1>
+<p>Step 1 of 4: Personal Information</p>
+<form action="#" method="post">
+  <div>
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name">
+  </div>
+  <div>
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+  </div>
+  <button type="submit">Next</button>
+</form>
 ```
 
 #### Failed Example 5
-There is a large image of text that reads "Page 1". It is very sharp with a good contrast ratio with its background and it looks like real text. Its alt text reads what is displayed as image of text, exactly as required under the "Images of Text" criterion. Because this `img` element is visually presented as a heading, it is perceived as a heading.
-It is followed by a list of kitchen appliances on sale. A rapid evaluation of the immediate context confirms that this is a standard product listing, meaning a sequential label cannot provide descriptive utility.
-It fails this rule because the text lacks any topic-specific descriptor to identify the subject of the section, despite passing other applicable WCAG criteria.
+This `img` element displaying an image of text that visually acts like a heading is not relevant because "Page 1" as a heading lacks any topic-specific descriptor for the content that follows, despite passing other applicable WCAG criteria.
 ```html
-<img src="image-of-text.svg" style="max-width: 1360px; height: auto;" alt="Page 1" />
+<img src="image-of-text-that-reads-page-1.svg" style="max-width: 1360px; height: auto;" alt="Page 1" />
+<ul>
+  <li>Stainless Steel Countertop Microwave</li>
+  <li>Convection Toaster Oven</li>
+  <li>10-Cup Programmable Coffee Maker</li>
+  <li>Quiet-Operation Blender</li>
+</ul>
 ```
 
 #### Failed Example 6

@@ -439,12 +439,14 @@ This `h3` element is not relevant as it contains the former placeholder text at 
 #### Inapplicable Example 1
 This snippet is inapplicable because the page contains no headings, explicit heading roles, visual heading styles, or images of text acting as headings.
 ```html
+<body>
 <ul>
   <li><a href="/products/widget-alpha">Widget Alpha</a></li>
   <li><a href="/products/widget-beta">Widget Beta</a></li>
   <li><a href="/products/widget-gamma">Widget Gamma</a></li>
   <li><a href="/products/widget-delta">Widget Delta</a></li>
 </ul>
+</body>
 ```
 
 #### Inapplicable Example 2

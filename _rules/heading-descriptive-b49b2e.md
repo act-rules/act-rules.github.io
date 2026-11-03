@@ -74,10 +74,10 @@ This `h1` element that states the functional purpose of the page content is rele
 <h1>Renewing Your Passport Online</h1>
 <p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>
 <ul>
-  <li><a href="#a1">Who can renew online</a></li>
-  <li><a href="#a2">You need a digital photo to renew online</a></li>
+  <li><a href="#a1">Who can renew their passports online</a></li>
+  <li><a href="#a2">You need a digital photo for your new passport</a></li>
   <li><a href="#a3">Your current passport will be cancelled and the new one will be mailed to you</a></li>
-  <li><a href="#a4">Sign in or register for an account</a></li>
+  <li><a href="#a4">Sign in or register for an account for passports</a></li>
 </ul>
 ```
 
@@ -277,7 +277,6 @@ This `h3` element is relevant to the section despite containing residual placeho
 <p>Phone: 1-800-555-5555</p>
 ```
 
-
 ### Failed
 
 #### Failed Example 1
@@ -333,7 +332,7 @@ This `h1` element containing only a raw timestamp is not relevant. It fails this
 ```
 
 #### Failed Example 4
-This `h1` element for any application process is not relevant.
+This `h1` element is not relevant because the text "Hi" provides no context for the personal information form that follows.
 ```html
 <h1>Hi</h1>
 <p>Step 1 of 4: Personal Information</p>
@@ -363,112 +362,93 @@ This `img` element displaying an image of text that visually acts like a heading
 ```
 
 #### Failed Example 6
-A page contains several image buttons that open their own articles.
-This `span` element utilizes the `role="heading"` attribute to programmatically identify itself as an `h1` equivalent, but the only word it contains provides no discernable indication whatsoever regarding the actual nature of the articles being presented. It passes other criteria, failing under this criterion only.
+This `span` element with role="heading" is not relevant because the text provides no discernable context regarding the article links that follow, despite passing other criteria.
 ```html
-<span role="heading" aria-level="1">Home</span>
+<span class="h1" role="heading" aria-level="1">Welcome</span>
+<div>
+  <a href="/articles/space-exploration">
+    <img src="mars-rover.jpg" alt="Read article: Latest findings from the Mars rover mission">
+  </a>
+  <a href="/articles/deep-sea-discovery">
+    <img src="trench-expedition.jpg" alt="Read article: Deep sea expedition uncovers new oceanic species">
+  </a>
+  <a href="/articles/renewable-energy">
+    <img src="solar-grid.jpg" alt="Read article: Advancements in next-generation solar panels">
+  </a>
+</div>
 ```
 
 #### Failed Example 7
-An e-transfer screen for sending out money.
-This `h2` element misrepresents the operational direction of a financial transaction. The element fails this rule because the heading text explicitly contradicts the functional purpose of the content it introduces.
-By providing an entirely inaccurate label for the transaction, the heading fails to identify the true topic or purpose. When a heading explicitly states an inbound transaction ("Request Money") but the interactive form executes an outbound transaction ("Send Money"), a user may inadvertently authorize an irreversible transfer of funds, resulting in immediate financial loss.
+This `h2` element misrepresents the operational direction of a financial transaction. The heading text is not relevant, as it explicitly contradicts the functional purpose of the content it introduces.
 ```html
 <h2>Request Money</h2>
+<form action="/send-transfer" method="post">
+  <p>Complete the fields below to transfer funds from your account to a recipient.</p>
+  <div>
+    <label for="recipient-email">Recipient Email Address</label>
+    <input type="email" id="recipient-email" name="recipient-email" required>
+  </div>
+  <div>
+    <label for="transfer-amount">Amount ($ CAD)</label>
+    <input type="number" id="transfer-amount" name="transfer-amount" min="1" step="0.01" required>
+  </div>
+  <div>
+    <label for="security-question">Security Question</label>
+    <input type="text" id="security-question" name="security-question" required>
+  </div>
+  <div>
+    <label for="security-answer">Security Answer</label>
+    <input type="text" id="security-answer" name="security-answer" required>
+  </div>
+  <button type="submit">Send Money Now</button>
+</form>
 ```
 
 #### Failed Example 8
-A page about the IT unit employees.
-This `h1` element contains an explicit mismatch regarding the organizational topic of the page. At first glance, a user or tester is led to believe they are accessing Human Resources information, only to find that the subsequent headings and content are obviously dedicated to Information Technology.
+This `h1` element that incorrectly states the functional purpose of the page content is not relevant.
 ```html
-<h1>Contact Human Resources</h1>
-<main>
-  <h2>Information Technology (IT) management contact information</h2>
-</main>
+<h1>Renewing Your Passport Online</h1>
+<p>If you meet all of these criteria explained in the sections listed below, you can renew your driver's licence online.</p>
+<ul>
+  <li><a href="#a1">Who can renew their driver's licences online</a></li>
+  <li><a href="#a2">You need a digital photo for your new driver's licence</a></li>
+  <li><a href="#a3">Your current driver's licence will be cancelled and the new one will be mailed to you</a></li>
+  <li><a href="#a4">Sign in or register for an account for driver's licences</a></li>
+</ul>
 ```
 
 #### Failed Example 9
-A page about driver's licence renewal.
-This `h1` element contains an explicitly erroneous transactional label, which is directly refuted by the form labels and input fields immediately following it. This `h1` element fails this rule because the primary heading text provides a completely false description of the page's functional utility.
-
+This `h3` element is not relevant to the section as the text it contains cannot be reliably interpreted to understand what the following emails and phone numbers are for. 
 ```html
-<h1>Apply for Urgent Passport Renewal</h1>
+<h3>ortcontact Custo</h3>
+<p>Email: support@example.com</p>
+<p>Phone: 1-800-555-5555</p>
+
 ```
 
 #### Failed Example 10
-This `h3` element contains fragmented, truncated text resulting from a catastrophic copy-paste error. It fails this rule because the remaining text fragment fails to convey any meaningful topic, leaving it entirely irrelevant to the underlying content.
-```html
-<h3>ortcontact Custo</h3>
-```
-
-#### Failed Example 11
-This `h3` element contains the former placeholder text at the beginning of the heading. The web publisher forgot to remove it after pasting the actual heading. It fails this rule because the heading will cause confusion and it cannot be reasonably considered meaningful for many users. 
+This `h3` element is not relevant as it contains the former placeholder text at the beginning of the heading.
 ```html
 <h3>Insert Your Heading Righ Here and Do It by the End of Day Contact Customer Support</h3>
-```
-
-#### Failed Example 12
-This `h3` element reveals an HTML comment that should have been invisible to users, due to a coding mistake the web developer made. It fails this rule because the heading will cause confusion and it cannot be reasonably considered meaningful for many users. 
-```html
-<h3><!-Make sure to update-> Contact Customer Support</h3>
+<p>Email: support@example.com</p>
+<p>Phone: 1-800-555-5555</p>
 ```
 
 ### Inapplicable
 
 #### Inapplicable Example 1
-Lack of any of the following elements:
-
-- `h1` through `h6` elements:
+This snippet is inapplicable because the page contains no headings, explicit heading roles, visual heading styles, or images of text acting as headings.
 ```html
-<h1>
-```
-- Elements with an explicit ARIA heading role:
-```html
-<div role="heading" aria-level="1">
-```
-- Visually hidden semantic headings designed exclusively for assistive technologies:
-```html
-<h1 class="visually-hidden">
-```
-- Visually hidden elements utilizing an ARIA heading role:
-```html
-<div role="heading" aria-level="1" class="visually-hidden">
-```
-- Elements styled to be visually perceived as a heading despite lacking semantic markers:
-```html
-<p class="h1">
-```
-- Images of text perceived as a heading, regardless of the validity or presence of an `alt` attribute:
-```html
-<img src="image-of-text.png" alt="" />
+<ul>
+  <li><a href="/products/widget-alpha">Widget Alpha</a></li>
+  <li><a href="/products/widget-beta">Widget Beta</a></li>
+  <li><a href="/products/widget-gamma">Widget Gamma</a></li>
+  <li><a href="/products/widget-delta">Widget Delta</a></li>
+</ul>
 ```
 
 #### Inapplicable Example 2
-The page has one or more of the following elements with no content, nothing visible, or nothing exposed to assistive technology:
-
-- Empty `h1` through `h6` elements:
+This snippet is inapplicable because the heading element has no content to evaluate.
 ```html
 <h1></h1>
-```
-- Empty elements styled to be visually perceived as a heading despite lacking semantic markers:
-```html
-<p class="h1"></p>
-```
-- Empty elements with an explicit ARIA heading role:
-```html
-<div role="heading" aria-level="1"></div>
-```
-- Empty visually hidden semantic headings designed exclusively for assistive technologies:
-```html
-<h1 class="visually-hidden"></h1>
-```
-- Empty visually hidden elements utilizing an ARIA heading role:
-```html
-<div role="heading" aria-level="1" class="visually-hidden"></div>
-```
-- Heading elements that contain no content other than markup:
-```html
-<h1>
-  <div></div>
-</h1>
 ```

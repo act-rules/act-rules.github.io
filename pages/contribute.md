@@ -3,6 +3,8 @@ title: Contributing
 order: 20
 ---
 
+If you use AI tools to write issues, comments, reviews, pull requests or rules, follow the [Use of AI policy](../ai-policy/).
+
 ## Feedback on rules
 
 ### Discussing ideas

@@ -4,6 +4,8 @@ Closes issue(s):
 
 - closes #XXX (ADD ISSUE NUMBER HERE)
 
+AI use: << "none", or which parts were written with AI. See the [Use of AI policy](https://act-rules.github.io/pages/ai-policy/) >>
+
 Need for Call for Review:
 << choose one of the following and remove the rest >>
 << check [Process Document on Call for Review](https://act-rules.github.io/pages/design/process/#call-for-review) >>
@@ -19,6 +21,7 @@ This will require a 2 weeks Call for Review << new rule, or substantial changes 
 ### **When creating PR:**
 
 - [ ] Make sure you're requesting to **pull a branch** (right side) to the `develop` branch (left side).
+- [ ] If you used AI, make sure you reviewed all of it, and that it is concise.
 - [ ] Make sure you do not remove the "How to Review and Approve" section in your pull request description
 
 ### **After creating PR:**

@@ -110,6 +110,14 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 
 #### Failed Example 2
 
+The `aria-label` property is [prohibited][] for an element with an explicit ARIA role of `tooltip`.
+
+```html
+<div role="tooltip" aria-label="Info">This is useful tooltip information</div>
+```
+
+#### Failed Example 3
+
 The `aria-labelledby` property is [prohibited][] for an element with a `paragraph` role.
 
 ```html
@@ -117,7 +125,7 @@ The `aria-labelledby` property is [prohibited][] for an element with a `paragrap
 <p aria-labelledby="Bananas">🧑 ❤️ 🍌🍌</p>
 ```
 
-#### Failed Example 3
+#### Failed Example 4
 
 The `aria-braillelabel` property is [prohibited][] for an element with a `button` role.
 
@@ -125,7 +133,7 @@ The `aria-braillelabel` property is [prohibited][] for an element with a `button
 <p aria-braillelabel="I love Bananas">I ❤️ Bananas</p>
 ```
 
-#### Failed Example 4
+#### Failed Example 5
 
 The `aria-roledescription` property is [prohibited][] for an element with a `generic` role.
 
@@ -133,7 +141,7 @@ The `aria-roledescription` property is [prohibited][] for an element with a `gen
 <div aria-roledescription="Banana text">I like bananas</div>
 ```
 
-#### Failed Example 5
+#### Failed Example 6
 
 The `aria-brailleroledescription` property is [prohibited][] for an element with a `none` role.
 

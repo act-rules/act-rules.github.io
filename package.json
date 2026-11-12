@@ -145,15 +145,13 @@
 		"gfm-code-blocks": "^1.0.0",
 		"globby": "^10.0.2",
 		"htmlhint": "^1.1.4",
-		"husky": "^3.1.0",
 		"is-url": "^1.2.4",
 		"jest": "^30.2.0",
 		"jest-27-expect-message": "^1.1.0",
 		"jest-extended": "^4.0.2",
-		"js-yaml": "^4.1.1",
-		"lint-staged": "^9.5.0",
+		"js-yaml": "^4.3.2",
 		"marked": "^4.0.10",
-		"moment": "^2.29.4",
+		"moment": "^2.31.0",
 		"prettier": "^1.19.1",
 		"remark-frontmatter": "^1.3.2",
 		"remark-parse": "^9.0.0",
@@ -181,6 +179,7 @@
 		"formatRulesDir": "prettier --write './_rules/**/*.md'",
 		"format": "prettier --write *.{json,md,js,html,css,yml} './{__tests__,_rules,.github,pages,test-assets,test-utils,utils}/**/*.{json,md,js,html,css,yml}'",
 		"test": "jest --coverage",
+		"test:approve-rule": "node --test './.github/scripts/*.test.mjs'",
 		"build:wai": "zx .github/scripts/wai-build.mjs",
 		"pr:preview": "zx .github/scripts/pr-preview.mjs"
 	},
@@ -218,18 +217,8 @@
 		"testPathIgnorePatterns": [
 			"<rootDir>/test-utils/",
 			"<rootDir>/.cache/",
-			"<rootDir>/.public/"
+			"<rootDir>/.public/",
+			"<rootDir>/.github/scripts/"
 		]
-	},
-	"lint-staged": {
-		"*.{json,md,js,html,css,yml}": [
-			"prettier --write",
-			"git add"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
 	}
 }

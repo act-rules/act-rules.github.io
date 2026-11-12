@@ -110,7 +110,9 @@ The `aria-label` property is [prohibited][] for an element with a `generic` role
 
 #### Failed Example 2
 
-The `aria-label` property is [prohibited][] for an element with an explicit ARIA role of `tooltip`.  (Note: this was allowed in ARIA 1.2, then became prohibited in ARIA 1.3.)
+The `aria-label` property is [prohibited][] for an element with an explicit ARIA role of `tooltip`.  
+
+**Note**: this was allowed in ARIA 1.2, then became prohibited in ARIA 1.3.
 
 ```html
 <div role="tooltip" aria-label="Info">This is useful tooltip information</div>

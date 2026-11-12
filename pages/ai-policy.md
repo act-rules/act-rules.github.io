@@ -3,7 +3,7 @@ title: Use of AI
 order: 25
 ---
 
-You may use AI tools when you contribute to ACT Rules, as long as you take full responsibility for what you post. This policy applies to issues, comments, pull requests and reviews in the ACT Rules repositories.
+You may use AI tools when you contribute to ACT Rules, as long as you take full responsibility for what you post. This policy applies to issues, comments, pull requests, reviews and anything else in the ACT Rules repositories.
 
 ## Disclose it
 
@@ -30,12 +30,12 @@ Other people's time is what limits this group. AI tools tend to be verbose, so e
 - Don't restate the issue, the rule, or earlier comments.
 - In reviews, comment on what needs to change. Don't summarize the changes back to the author.
 
-## Rules, definitions and test cases
+## Rules, definitions and examples
 
-Rules, definitions and test cases written with AI need human verification, just like any other content:
+Rules, definitions and examples written with AI need human verification, just like any other content:
 
 - In the pull request, say which parts were written with AI.
-- Check every test case by hand, including that it passes, fails or is inapplicable as stated and that it behaves that way in browsers and assistive technologies.
+- Check every example by hand, including that it passes, fails or is inapplicable as stated and that it behaves that way in browsers and assistive technologies.
 - The usual [review process](../design/process/) and [Definition of "Done"](../design/definition-of-done) apply.
 
 ## If a contribution doesn't follow this policy

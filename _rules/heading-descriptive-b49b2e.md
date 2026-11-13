@@ -244,6 +244,15 @@ This `h3` element is relevant to the section despite containing a duplicated wor
 <p>Phone: 1-800-555-5555</p>
 ```
 
+#### Passed Example 12
+
+This `h2` element containing an eyebrow label is relevant to the content that follows.
+
+```html
+<h2><span class="eyebrow">Case study</span> How Acme cut support calls in half</h2>
+<p>Acme replaced its phone menu with an online help centre and halved its call volume in a year.</p>
+```
+
 ### Failed
 
 #### Failed Example 1

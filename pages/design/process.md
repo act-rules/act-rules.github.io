@@ -220,7 +220,7 @@ For substantial changes, implementors may request that a publication be skipped 
 Rules published on the WAI website start as proposed rules. They become approved rules once the W3C Working Group responsible for the rule's accessibility requirements has reviewed them:
 
 - The Accessibility Guidelines Working Group (AGWG) for rules that map to WCAG.
-- The Accessible Rich Internet Applications Working Group (ARIA WG) for rules that map to WAI-ARIA.
+- The Accessible Rich Internet Applications (ARIA) Working Group for rules that map to WAI-ARIA.
 
 A rule that maps to requirements of both groups goes to both. The ACT Rules Community Group runs this process. Approval is needed both for new rules and for substantial changes to rules that are already approved.
 
@@ -228,9 +228,9 @@ A rule that maps to requirements of both groups goes to both. The ACT Rules Comm
 
 - A rule is published as a proposed rule on the WAI website, and
 - the rule has at least one complete implementation, and
-- the rule has no open issues labelled `Blocker`.
+- the rule has no open issues labeled `Blocker`.
 
-The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions, as "Proposed, reviewable" or "Approved, unpublished changes".
+The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions.
 
 ### Approval round
 
@@ -253,7 +253,7 @@ Working Group participants review the pull request of the rule. Feedback counts 
 
 ### Fails this stage when:
 
-- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
+- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labeled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
 
 ## Rejected
 

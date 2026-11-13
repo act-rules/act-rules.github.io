@@ -222,7 +222,7 @@ This `h2` element is relevant because it describes the section content, even tho
 
 #### Passed Example 10
 
-This `h2` element is relevant despite using a metaphorical phrase to introduce a satirical article on inflation. It passes this rule because it is contextually relevant when read alongside the content, even though it relies on stylistic phrasing.
+This `h2` element is relevant because it relies on satirical phrasing that connects to the discussion of persistent inflation that follows.
 
 ```html
 <h2>Final Day for Savings</h2>

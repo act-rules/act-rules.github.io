@@ -228,9 +228,9 @@ A rule that maps to requirements of both groups goes to both. The ACT Rules Comm
 
 - A rule is published as a proposed rule on the WAI website, and
 - the rule has at least one complete implementation, and
-- the rule has no open issues labeled `Blocker`.
+- the rule has no open issues labelled `Blocker`.
 
-The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions.
+The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions, as "Proposed, reviewable" or "Approved, unpublished changes".
 
 ### Approval round
 
@@ -253,7 +253,7 @@ Working Group participants review the pull request of the rule. Feedback counts 
 
 ### Fails this stage when:
 
-- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labeled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
+- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
 
 ## Rejected
 

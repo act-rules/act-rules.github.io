@@ -232,28 +232,28 @@ A rule that maps to requirements of both groups goes to both. The ACT Rules Comm
 
 The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions, as "Proposed, reviewable" or "Approved, unpublished changes".
 
-### Quarterly approval round
+### Approval round
 
-Rules go to the Working Groups in batches, once a quarter:
+Rules go to the Working Groups in batches, every other week:
 
 1. The CG chairs select rules that are ready for approval.
 2. For each selected rule, a pull request is opened in [w3c/wcag-act-rules][]. It contains the rule as it would be published and a short list of what changed since the last approved version.
-3. The CG chairs send the list of pull requests to the mailing list of each Working Group whose rules are in the batch. This starts a two-week review period in which participants of that Working Group can comment.
+3. The CG chairs send the list of pull requests to each Working Group whose rules are in the batch, in whatever way that Working Group takes input. This starts a two-week review period in which participants of that Working Group can comment.
 
 ### Reviewer's job for this stage:
 
-Working Group participants comment on the pull request of the rule. Each comment should say what kind of comment it is:
+Working Group participants review the pull request of the rule. Feedback counts as one of two kinds:
 
-- **Blocker**: the rule should not be published as an approved rule until this is resolved. Use this for problems such as an incorrect accessibility requirements mapping, or examples with the wrong outcome.
-- **Suggestion**: anything else. Suggestions are moved to issues in [act-rules/act-rules.github.io][] for future work. They do not hold back publication.
+- **Blocker**: a "Request changes" review on the pull request, or a 👎 reaction on the pull request description. The rule is not published as an approved rule until this is resolved. Use this for problems such as an incorrect accessibility requirements mapping, or examples with the wrong outcome.
+- **Suggestion**: any other feedback, such as comments or "Comment" reviews. Suggestions are moved to issues in [act-rules/act-rules.github.io][] for future work. They do not hold back publication.
 
 ### Passes this stage when:
 
-- The review period has ended and the rule has no unresolved blocker comments. The rule is then published as an approved rule.
+- The review period has ended and the rule has no unresolved blockers. The rule is then published as an approved rule.
 
 ### Fails this stage when:
 
-- A blocker comment is left on the rule. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
+- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
 
 ## Rejected
 

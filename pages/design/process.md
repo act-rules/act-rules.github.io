@@ -215,6 +215,41 @@ To give implementors of ACT Rules time to update implementation data, pull reque
 
 For substantial changes, implementors may request that a publication be skipped to allow extra time for implementation. This should be done on the pull request in [w3c/wcag-act-rules][]. It is up at the discretion of W3C staff to decide whether the publication is skipped.
 
+## AGWG Approval
+
+Rules published on the WAI website start as proposed rules. They become approved rules once the Accessibility Guidelines Working Group (AGWG) has reviewed them. The ACT Rules Community Group runs this process. Approval is needed both for new rules and for substantial changes to rules that are already approved.
+
+### Enters this stage when:
+
+- A rule is published as a proposed rule on the WAI website, and
+- the rule has at least one complete implementation, and
+- the rule has no open issues labelled `Blocker`.
+
+The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions, as "Proposed, reviewable" or "Approved, unpublished changes".
+
+### Quarterly approval round
+
+Rules go to AGWG in batches, once a quarter:
+
+1. The CG chairs select rules that are ready for approval.
+2. For each selected rule, a pull request is opened in [w3c/wcag-act-rules][]. It contains the rule as it would be published and a short list of what changed since the last approved version.
+3. The CG chairs send the list of pull requests to the AGWG mailing list. This starts a two-week review period in which AGWG participants can comment.
+
+### Reviewer's job for this stage:
+
+AGWG participants comment on the pull request of the rule. Each comment should say what kind of comment it is:
+
+- **Blocker**: the rule should not be published as an approved rule until this is resolved. Use this for problems such as an incorrect accessibility requirements mapping, or examples with the wrong outcome.
+- **Suggestion**: anything else. Suggestions are moved to issues in [act-rules/act-rules.github.io][] for future work. They do not hold back publication.
+
+### Passes this stage when:
+
+- The review period has ended and the rule has no unresolved blocker comments. The rule is then published as an approved rule.
+
+### Fails this stage when:
+
+- A blocker comment is left on the rule. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
+
 ## Rejected
 
 Rules that have been rejected due to different reasons.

@@ -421,3 +421,14 @@ This snippet is inapplicable because the heading element has no content to evalu
 ```html
 <h1></h1>
 ```
+
+[decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure decoration'
+[flat tree]: https://drafts.csswg.org/css-scoping/#flat-tree 'Definition of flat tree'
+[included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of included in the accessibility tree'
+[presentational roles conflict resolution]: https://www.w3.org/TR/wai-aria-1.2/#conflict_resolution_presentation_none 'Presentational Roles Conflict Resolution'
+[sc131]: https://www.w3.org/TR/WCAG22/#info-and-relationships ' Success Criterion 1.3.1 Info and Relationships'
+[sc246]: https://www.w3.org/TR/WCAG22/#headings-and-labels 'Success Criterion 2.4.6 Headings and Labels'
+[semantic role]: #semantic-role 'Definition of semantic role'
+[visible]: #visible 'Definition of visible'
+[accessible name]: #accessible-name 'Definition of accessible name'
+[perceivable content]: #perceivable-content 'Definition of perceivable content'

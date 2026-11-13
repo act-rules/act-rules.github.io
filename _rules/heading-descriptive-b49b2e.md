@@ -84,7 +84,9 @@ This `h1` element that states the functional purpose of the page content is rele
 ```
 
 #### Passed Example 2
+
 This `h1` element about the marketing content that follows is relevant.
+
 ```html
 <h1>Fresh deals just dropped: Printers</h1>
 <div class="carousel" aria-label="Fresh deals">
@@ -113,7 +115,9 @@ This `h1` element about the marketing content that follows is relevant.
 ```
 
 #### Passed Example 3
+
 This `h2` element for the structured weather forecast table that follows is relevant.
+
 ```html
 <h2>Current Weather in New York</h2>
 <table>
@@ -136,7 +140,9 @@ This `h2` element for the structured weather forecast table that follows is rele
 ```
 
 #### Passed Example 4
-This `h2` element acting as a structural identifier for sequential content sections is relevant, where the content that follows rarely alters whether it is relevant as long as an obvious misplacement is not observed.
+
+This `h2` element is descriptive in its function of introducing a chapter of a book.
+
 ```html
 <h2>Chapter 4</h2>
 <p>
@@ -145,7 +151,9 @@ This `h2` element acting as a structural identifier for sequential content secti
 ```
 
 #### Passed Example 5
-This `h3` element used as a generic section heading is relevant, as long as the section content retains basic contextual relevance.
+
+This `h3` element used as a generic section heading is relevant.
+
 ```html
 <h3>Glossary</h3>
 <ol>
@@ -158,7 +166,9 @@ This `h3` element used as a generic section heading is relevant, as long as the 
 ```
 
 #### Passed Example 6
-This `h1` element introducing the subsequent list is relevant, as long as the section content retains basic contextual relevance.
+
+This `h1` element introducing the subsequent list is relevant.
+
 ```html
 <h1>Don't Forget To Bring:</h1>
 <ul>
@@ -169,28 +179,9 @@ This `h1` element introducing the subsequent list is relevant, as long as the se
 ```
 
 #### Passed Example 7
-This `h1` element is relevant to the page content despite exhibiting another WCAG failure for having a severely low contrast ratio.
-```html
-<img src="dummy-university-banner" alt="University Name" />
-<h1 style="color: gray; background-color: dimgray;">Your Future Starts Here, at Our University</h1>
-<p>
-  Discover world-class academic programs, vibrant campus life, and pioneering research opportunities designed to help you achieve your professional goals. Apply today to join our global community of scholars.
-</p>
-```
 
-#### Passed Example 8
-This `p` element styled as a heading is relevant to the section content, despite failing other WCAG criteria due to using changes in text presentation without using the appropriate markup and utilizing an invalid ARIA value.
-```html
-<p class="h1" role="headline">A Million Different Journeys</p>
-<ul>
-  <li>Curated international vacation packages</li>
-  <li>Last-minute flight and hotel deals</li>
-  <li>Guided eco-tours and adventure trips</li>
-</ul>
-```
+This `h1` element is relevant to the purpose of the page content, despite being overly casual and unnecessarily verbose.
 
-#### Passed Example 9
-This `h1` element is relevant to the purpose of the page content, despite being overly casual and unnecessarily verbose. 
 ```html
 <h1>Welcome to Our State-of-the-Art Brand New Wizard That Will Mail Your Beautiful Loyalty Card Right to Your Doorstep</h1>
 <p>Step 1 of 4: Personal Information</p>
@@ -207,8 +198,10 @@ This `h1` element is relevant to the purpose of the page content, despite being 
 </form>
 ```
 
-#### Passed Example 10
+#### Passed Example 8
+
 This `h1` element identifying the topic of a travel safety guidance page is relevant, despite containing redundant phrasing.
+
 ```html
 <h1>Travel Advisories and Travel Advisory Information</h1>
 <ul>
@@ -218,18 +211,10 @@ This `h1` element identifying the topic of a travel safety guidance page is rele
 </ul>
 ```
 
-#### Passed Example 11
-This `h2` element for the promotional banner that follows is relevant, regardless of redundant text present verbatim in the title attribute or the accompanying `figcaption` element.
-```html
-<h2>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites</h2>
-<figure>
-  <img title="Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites." src="hotel-promo-banner.png" alt="Panoramic view of a mountain ski resort in winter, with the modern hotel facade illuminated in the foreground." />
-  <figcaption>Our hotel, conveniently located near the historic town center, features 118 guest rooms and 18 luxury suites.</figcaption>
-</figure>
-```
+#### Passed Example 9
 
-#### Passed Example 12
 This `h2` element is relevant because it describes the section content, even though the wording is generic and the heading states the obvious.
+
 ```html
 <h2>List of Links</h2>
 <ul>
@@ -239,42 +224,22 @@ This `h2` element is relevant because it describes the section content, even tho
 </ul>
 ```
 
-#### Passed Example 13
+#### Passed Example 10
+
 This `h2` element is relevant despite using a metaphorical phrase to introduce a satirical article on inflation. It passes this rule because it is contextually relevant when read alongside the content, even though it relies on stylistic phrasing.
+
 ```html
 <h2>Final Day for Savings</h2>
 <p>Everything will be more expensive tomorrow.</p>
 <p>Persistent inflation continues to erode purchasing power, forcing consumers to adjust to steadily rising costs across basic goods and services.</p>
 ```
 
-#### Passed Example 14
-This `h1` element is relevant to the section content despite using irony to introduce an opinion piece on global peace, regardless of editorial style or literary tone.
-```html
-<h1>Nobel's Peace Prize Office is Temporarily Closed Due to Declining Business</h1>
-<p>Recent diplomatic data shows active armed conflicts reaching a two-decade high across multiple continents.</p>
-<p>While international peace organizations struggle to broker lasting ceasefires, humanitarian efforts require immediate global support and renewed commitment to de-escalation.</p>
-```
+#### Passed Example 11
 
-#### Passed Example 15
-This `h1` element that uses a question to introduce the section topic is relevant.
-```html
-<h3>Opening hours?</h3>
-<p>24/7</p>
-<p>No opening hours. We are at your service round the clock!</p>
-```
+This `h3` element is relevant to the section despite containing a duplicated word and a misspelling of "support." 
 
-#### Passed Example 16
-This `h3` element is relevant to the section despite containing a duplicated word from a paste error. 
 ```html
-<h3>Contact Contact Customer Support</h3>
-<p>Email: support@example.com</p>
-<p>Phone: 1-800-555-5555</p>
-```
-
-#### Passed Example 17
-This `h3` element is relevant to the section despite containing residual placeholder text, a trailing whitespace, and a stray angle bracket at the end that resulted from publishing errors. 
-```html
-<h3>Contact Customer Support (h3) <</h3>
+<h3>Contact Contact Customer Suport</h3>
 <p>Email: support@example.com</p>
 <p>Phone: 1-800-555-5555</p>
 ```
@@ -282,7 +247,9 @@ This `h3` element is relevant to the section despite containing residual placeho
 ### Failed
 
 #### Failed Example 1
+
 This `h1` element is not relevant as its sole content is unremoved placeholder text from a content template. It fails this rule because the heading text serves as a developmental instruction rather than describing the purpose or topic of the page content.
+
 ```html
 <h1>[Replace this text with heading 1]</h1>
 <p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>
@@ -295,36 +262,18 @@ This `h1` element is not relevant as its sole content is unremoved placeholder t
 ```
 
 #### Failed Example 2
-This `h1` element containing a raw back-end runtime error message injected during server-side execution is not relevant. It fails this rule because the displayed text is a system-generated message rather than an intentional heading describing the purpose or topic of the page content.
+
+This `h1` element containing an error message is not relevant. It fails this rule because the displayed text is a system-generated message rather than a heading describing the purpose or topic of the page content.
+
 ```html
 <h1>Uncaught Error: Call to undefined function get_user_data() in /var/www/html/profile.php on line 42</h1>
-<div class="carousel" aria-label="Fresh deals">
-  <div class="carousel-slides">
-    <div class="slide active">
-      <img src="printer1.jpg" alt="Compact All-in-One Laser Printer">
-    </div>
-    <div class="slide">
-      <img src="printer2.jpg" alt="High-Speed Wireless Inkjet Printer">
-    </div>
-    <div class="slide">
-      <img src="printer3.jpg" alt="Heavy-Duty Office Color Printer">
-    </div>
-    <div class="slide">
-      <img src="printer4.jpg" alt="Photo Quality Portable Printer">
-    </div>
-    <div class="slide">
-      <img src="printer5.jpg" alt="Eco-Friendly Tank Printer">
-    </div>
-  </div>
-
-  <div class="carousel-controls">
-    <button type="button" id="toggle-btn" aria-label="Pause slide rotation">Pause</button>
-  </div>
-</div>
+<p>Welcome to your user account dashboard. You can update your profile details and settings below.</p>
 ```
 
 #### Failed Example 3
-This `h1` element containing only a raw timestamp is not relevant. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
+
+This `h1` element containing only a timestamp is not relevant. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
+
 ```html
 <img src="dummy-university-banner" alt="University Name" />
 <h1>2026-06-30 13:46 UTC</h1>
@@ -334,7 +283,9 @@ This `h1` element containing only a raw timestamp is not relevant. It fails this
 ```
 
 #### Failed Example 4
+
 This `h1` element is not relevant because the text "Hi" provides no context for the personal information form that follows.
+
 ```html
 <h1>Hi</h1>
 <p>Step 1 of 4: Personal Information</p>
@@ -352,7 +303,9 @@ This `h1` element is not relevant because the text "Hi" provides no context for 
 ```
 
 #### Failed Example 5
+
 This `img` element displaying an image of text that visually acts like a heading is not relevant because "Page 1" as a heading lacks any topic-specific descriptor for the content that follows, despite passing other applicable WCAG criteria.
+
 ```html
 <img src="image-of-text-that-reads-page-1.svg" style="max-width: 1360px; height: auto;" alt="Page 1" />
 <ul>
@@ -364,7 +317,9 @@ This `img` element displaying an image of text that visually acts like a heading
 ```
 
 #### Failed Example 6
+
 This `span` element with role="heading" is not relevant because the text provides no discernable context regarding the article links that follow, despite passing other criteria.
+
 ```html
 <span class="h1" role="heading" aria-level="1">Welcome</span>
 <div>
@@ -381,7 +336,9 @@ This `span` element with role="heading" is not relevant because the text provide
 ```
 
 #### Failed Example 7
+
 This `h2` element misrepresents the operational direction of a financial transaction. The heading text is not relevant, as it explicitly contradicts the functional purpose of the content it introduces.
+
 ```html
 <h2>Request Money</h2>
 <form action="/send-transfer" method="post">
@@ -407,7 +364,9 @@ This `h2` element misrepresents the operational direction of a financial transac
 ```
 
 #### Failed Example 8
+
 This `h1` element that incorrectly states the functional purpose of the page content is not relevant.
+
 ```html
 <h1>Renewing Your Passport Online</h1>
 <p>If you meet all of these criteria explained in the sections listed below, you can renew your driver's licence online.</p>
@@ -420,18 +379,11 @@ This `h1` element that incorrectly states the functional purpose of the page con
 ```
 
 #### Failed Example 9
+
 This `h3` element is not relevant to the section as the text it contains cannot be reliably interpreted to understand what the following emails and phone numbers are for. 
+
 ```html
 <h3>ortcontact Custo</h3>
-<p>Email: support@example.com</p>
-<p>Phone: 1-800-555-5555</p>
-
-```
-
-#### Failed Example 10
-This `h3` element is not relevant as it contains the former placeholder text at the beginning of the heading.
-```html
-<h3>Insert Your Heading Righ Here and Do It by the End of Day Contact Customer Support</h3>
 <p>Email: support@example.com</p>
 <p>Phone: 1-800-555-5555</p>
 ```
@@ -439,7 +391,9 @@ This `h3` element is not relevant as it contains the former placeholder text at 
 ### Inapplicable
 
 #### Inapplicable Example 1
-This snippet is inapplicable because the page contains no headings, explicit heading roles, visual heading styles, or images of text acting as headings.
+
+This rule is inapplicable because there is no heading.
+
 ```html
 <body>
 <ul>
@@ -452,7 +406,9 @@ This snippet is inapplicable because the page contains no headings, explicit hea
 ```
 
 #### Inapplicable Example 2
+
 This snippet is inapplicable because the heading element has no content to evaluate.
+
 ```html
 <h1></h1>
 ```

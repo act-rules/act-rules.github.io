@@ -69,7 +69,9 @@ There are no accessibility support issues known.
 ### Passed
 
 #### Passed Example 1
+
 This `h1` element that states the functional purpose of the page content is relevant.
+
 ```html
 <h1>Renewing Your Passport Online</h1>
 <p>If you meet all of these criteria explained in the sections listed below, you can renew your passport online.</p>

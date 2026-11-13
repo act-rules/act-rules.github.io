@@ -28,7 +28,7 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic](semantic-role "Definition of semantic role") `heading` element that is [included in the accessibility tree](included-in-the-accessibility-tree "Definition of included in the accessibility tree") and has a non-empty `""` [accessible name](accessible-name "Definition of accessible name"). It also applies to other elements that are not semantically `heading` elements, but that are presented as headings.
+This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
 
 ### Applicability Type Designation
 

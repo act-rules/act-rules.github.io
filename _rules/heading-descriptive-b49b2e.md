@@ -280,11 +280,8 @@ This `h1` element containing an error message is not relevant. It fails this rul
 This `h1` element containing only a timestamp is not relevant. It fails this rule because the date and time string do not identify or describe the primary purpose or topic of the page content.
 
 ```html
-<img src="dummy-university-banner" alt="University Name" />
 <h1>2026-06-30 13:46 UTC</h1>
-<p>
-  Discover world-class academic programs, vibrant campus life, and pioneering research opportunities designed to help you achieve your professional goals. Apply today to join our global community of scholars.
-</p>
+<p>Our university offers accredited undergraduate and graduate programs across twenty academic departments. Students gain practical experience through faculty-led research labs and community partnerships. Applications for the upcoming fall semester are now open to domestic and international students.</p>
 ```
 
 #### Failed Example 4

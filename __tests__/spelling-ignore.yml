@@ -90,6 +90,8 @@
 - rfc
 - webauthn
 - customizable
+- labelled
+- reviewable
 
 # spell checker checks against strict casing & hence some repeated words here
 - Autocomplete

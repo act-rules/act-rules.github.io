@@ -215,6 +215,46 @@ To give implementors of ACT Rules time to update implementation data, pull reque
 
 For substantial changes, implementors may request that a publication be skipped to allow extra time for implementation. This should be done on the pull request in [w3c/wcag-act-rules][]. It is up at the discretion of W3C staff to decide whether the publication is skipped.
 
+## Working Group Approval
+
+Rules published on the WAI website start as proposed rules. They become approved rules once the W3C Working Group responsible for the rule's accessibility requirements has reviewed them:
+
+- The Accessibility Guidelines Working Group (AGWG) for rules that map to WCAG.
+- The Accessible Rich Internet Applications (ARIA) Working Group for rules that map to WAI-ARIA.
+
+A rule that maps to requirements of both groups goes to both. The ACT Rules Community Group runs this process. Approval is needed both for new rules and for substantial changes to rules that are already approved.
+
+### Enters this stage when:
+
+- A rule is published as a proposed rule on the WAI website, and
+- the rule has at least one complete implementation, and
+- the rule has no open issues labelled `Blocker`.
+
+The [ACT board](https://github.com/act-rules/act-board) shows which rules meet these conditions, as "Proposed, reviewable" or "Approved, unpublished changes".
+
+### Approval round
+
+Rules go to the Working Groups in batches, every other week:
+
+1. The CG chairs select rules that are ready for approval.
+2. For each selected rule, a pull request is opened in [w3c/wcag-act-rules][]. It contains the rule as it would be published and a short list of what changed since the last approved version.
+3. The CG chairs send the list of pull requests to each Working Group whose rules are in the batch, in whatever way that Working Group takes input. This starts a two-week review period in which participants of that Working Group can comment.
+
+### Reviewer's job for this stage:
+
+Working Group participants review the pull request of the rule. Feedback counts as one of two kinds:
+
+- **Blocker**: a "Request changes" review on the pull request, or a 👎 reaction on the pull request description. The rule is not published as an approved rule until this is resolved. Use this for problems such as an incorrect accessibility requirements mapping, or examples with the wrong outcome.
+- **Suggestion**: any other feedback, such as comments or "Comment" reviews. Suggestions are moved to issues in [act-rules/act-rules.github.io][] for future work. They do not hold back publication.
+
+### Passes this stage when:
+
+- The review period has ended and the rule has no unresolved blockers. The rule is then published as an approved rule.
+
+### Fails this stage when:
+
+- A Working Group participant requests changes or leaves a 👎 reaction on the pull request description. Only that rule is held back; the rest of the batch continues. The blocker becomes an issue labelled `Blocker` in [act-rules/act-rules.github.io][], and once it is resolved the rule can go into a later round.
+
 ## Rejected
 
 Rules that have been rejected due to different reasons.

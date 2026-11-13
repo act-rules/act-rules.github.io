@@ -215,9 +215,14 @@ To give implementors of ACT Rules time to update implementation data, pull reque
 
 For substantial changes, implementors may request that a publication be skipped to allow extra time for implementation. This should be done on the pull request in [w3c/wcag-act-rules][]. It is up at the discretion of W3C staff to decide whether the publication is skipped.
 
-## AGWG Approval
+## Working Group Approval
 
-Rules published on the WAI website start as proposed rules. They become approved rules once the Accessibility Guidelines Working Group (AGWG) has reviewed them. The ACT Rules Community Group runs this process. Approval is needed both for new rules and for substantial changes to rules that are already approved.
+Rules published on the WAI website start as proposed rules. They become approved rules once the W3C Working Group responsible for the rule's accessibility requirements has reviewed them:
+
+- The Accessibility Guidelines Working Group (AGWG) for rules that map to WCAG.
+- The Accessible Rich Internet Applications Working Group (ARIA WG) for rules that map to WAI-ARIA.
+
+A rule that maps to requirements of both groups goes to both. The ACT Rules Community Group runs this process. Approval is needed both for new rules and for substantial changes to rules that are already approved.
 
 ### Enters this stage when:
 
@@ -229,15 +234,15 @@ The [ACT board](https://github.com/act-rules/act-board) shows which rules meet t
 
 ### Quarterly approval round
 
-Rules go to AGWG in batches, once a quarter:
+Rules go to the Working Groups in batches, once a quarter:
 
 1. The CG chairs select rules that are ready for approval.
 2. For each selected rule, a pull request is opened in [w3c/wcag-act-rules][]. It contains the rule as it would be published and a short list of what changed since the last approved version.
-3. The CG chairs send the list of pull requests to the AGWG mailing list. This starts a two-week review period in which AGWG participants can comment.
+3. The CG chairs send the list of pull requests to the mailing list of each Working Group whose rules are in the batch. This starts a two-week review period in which participants of that Working Group can comment.
 
 ### Reviewer's job for this stage:
 
-AGWG participants comment on the pull request of the rule. Each comment should say what kind of comment it is:
+Working Group participants comment on the pull request of the rule. Each comment should say what kind of comment it is:
 
 - **Blocker**: the rule should not be published as an approved rule until this is resolved. Use this for problems such as an incorrect accessibility requirements mapping, or examples with the wrong outcome.
 - **Suggestion**: anything else. Suggestions are moved to issues in [act-rules/act-rules.github.io][] for future work. They do not hold back publication.

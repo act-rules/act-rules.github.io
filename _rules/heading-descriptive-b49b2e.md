@@ -30,10 +30,6 @@ acknowledgments:
 
 This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
 
-### Applicability Type Designation
-
-Rule contains subjective applicability, depending on whether the target element should be considered a heading.
-
 ## Expectations
 
 Each heading is relevant to the specific page or section where it appears and it is sufficiently intelligible.

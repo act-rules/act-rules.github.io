@@ -89,7 +89,7 @@ This `h1` element about the marketing content that follows is relevant.
 
 ```html
 <h1>Fresh deals just dropped: Printers</h1>
-<div class="carousel" aria-label="Fresh deals">
+<article class="carousel" aria-label="Fresh deals">
   <div class="carousel-slides">
     <div class="slide active">
       <img src="printer1.jpg" alt="Compact All-in-One Laser Printer">
@@ -111,7 +111,7 @@ This `h1` element about the marketing content that follows is relevant.
   <div class="carousel-controls">
     <button type="button" id="toggle-btn" aria-label="Pause slide rotation">Pause</button>
   </div>
-</div>
+</article>
 ```
 
 #### Passed Example 3

@@ -309,10 +309,10 @@ This `h1` element is not relevant because the text "Hi" provides no context for 
 
 #### Failed Example 5
 
-This `img` element displaying an image of text that visually acts like a heading is not relevant because "Page 1" as a heading lacks any topic-specific descriptor for the content that follows, despite passing other applicable WCAG criteria.
+This `h1` element is not relevant because "Page 1" as a heading lacks any topic-specific descriptor for the content that follows.
 
 ```html
-<img src="image-of-text-that-reads-page-1.svg" style="max-width: 1360px; height: auto;" alt="Page 1" />
+<h1>Page 1</h1>
 <ul>
   <li>Stainless Steel Countertop Microwave</li>
   <li>Convection Toaster Oven</li>

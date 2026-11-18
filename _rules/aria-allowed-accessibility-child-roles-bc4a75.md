@@ -221,6 +221,22 @@ The both `div` elements with explicit `list` roles have no accessibility childre
 <div role="list" aria-owns="reparented"></div>
 ```
 
+#### Passed Example 14
+
+This element with the role `feed` owns elements with roles `heading`, `article`, and `separator`, all of which are [allowed accessibility child roles][] `feed`. 
+
+**Note:** `heading` and `separator` as children of `feed` were not allowed in ARIA 1.2, then became allowed in ARIA 1.3.
+
+```html
+<div role="feed" aria-label="News">
+	<h2>Today</h2>
+	<article aria-label="Story 1">...</article>
+	<hr />
+	<h2>Yesterday</h2>
+	<article aria-label="Story 2">...</article>
+</div>
+```
+
 ### Failed
 
 #### Failed Example 1

@@ -50,7 +50,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-[Content][] remains fully available after reflow.
+The [content][] remains fully available after reflow.
 
 ```html
 <div style="max-width: 100%;">
@@ -62,7 +62,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 2
 
-Navigation collapses into a menu but remains accessible. [Content][] is not removed, only not immeditately visible behind an accessible control.
+Navigation collapses into a menu but remains accessible. The [content][] is not removed, only not immeditately visible behind an accessible control.
 
 ```html
 <button aria-expanded="false">Menu</button>
@@ -77,7 +77,7 @@ Navigation collapses into a menu but remains accessible. [Content][] is not remo
 
 #### Passed Example 3
 
-[Content][] is visually hidden on the first view but remains available programmatically and visual in a sub page.
+The [content][] is visually hidden on the first view but remains available programmatically and visual in a sub page.
 
 ```html
 <p>
@@ -87,7 +87,7 @@ Navigation collapses into a menu but remains accessible. [Content][] is not remo
 
 #### Passed Example 4
 
-Content is moved in the layout but still present.
+The [content][] is moved in the layout but still present.
 
 ```html
 <style>
@@ -121,7 +121,7 @@ Form fields collapse in an accordian but remain accessible when expanded.
 
 #### Passed Example 7
 
-[Content][] requiring two-dimensional layout (covered under reflow exceptions).
+The [content][] is requiring two-dimensional layout (covered under reflow exceptions).
 
 ```html
 <table>
@@ -203,7 +203,7 @@ Navigation items removed instead of adapted.
 
 #### Failed Example 3
 
-[Content][] visually clipped and inaccessible.
+The [content][] is visually clipped and inaccessible.
 
 ```html
 <div style="height: 50px; overflow: hidden;">
@@ -215,7 +215,7 @@ Navigation items removed instead of adapted.
 
 #### Failed Example 4
 
-[Content][] moved off-screen and not reachable when it should be visible.
+The [content][] is moved off-screen and not reachable when it should be visible.
 
 ```html
 <div style="position: absolute; left: -9999px;">
@@ -267,7 +267,7 @@ Collapsed [content][] has no mechanism to access it.
 
 #### Inapplicable Example 1
 
-[Content][] explicitly hidden from all users.
+The [content][] is explicitly hidden from all users.
 
 ```html
 <div hidden>
@@ -277,7 +277,7 @@ Collapsed [content][] has no mechanism to access it.
 
 #### Inapplicable Example 2
 
-[Content][] outside the user viewport by design (e.g. off-canvas patterns before interaction).
+The [content][] is outside the user viewport by design (e.g. off-canvas patterns before interaction).
 
 ```html
 <div aria-hidden="true" class="offscreen-menu">

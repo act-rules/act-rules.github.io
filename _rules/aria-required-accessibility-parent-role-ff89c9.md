@@ -149,21 +149,6 @@ These elements with an [explicit semantic role][] of `listitem` are [accessibili
 
 #### Passed Example 7
 
-These elements with an [explicit semantic role][] of `listitem` are [accessibility children][accessibility child] of an element with their [required accessibility parent role][]. The intervening `div`, which has an `aria-live` attribute, doesn't change that fact.  The `div` is [included in the accessibility tree][] because it has a [global attribute](https://www.w3.org/TR/wai-aria-1.3/#global_states) (the `aria-live` attribute).  The `div` has a role of `generic`.  An element with a role of `generic` does not change the parent-child relationship.
-
-This example failed in ARIA 1.2.  It passes in ARIA 1.3.
-
-```html
-<div role="list">
-	<div aria-live="polite">
-		<div role="listitem">List item 1</div>
-		<div role="listitem">List item 2</div>
-	</div>
-</div>
-```
-
-#### Passed Example 8
-
 Both `treeitem` elements have a required accessibility parent role. The outer `treeitem` element has a `tree` accessibility parent. The inner `treeitem` element has a `group` parent which in turn has a `treeitem` accessibility parent.
 
 This example also passed in the ARIA 1.2 version of this rule.
@@ -179,7 +164,7 @@ This example also passed in the ARIA 1.2 version of this rule.
 </div>
 ```
 
-#### Passed Example 9
+#### Passed Example 8
 
 This element with an [explicit semantic role][] of `listitem` is an [accessibility child][] of the element with the role of `list`.  This is the case even though it's not a child in the DOM.  Instead, it's a grandchild.  `list` is one of the [required accessibility parent roles][] of `listitem`.  The definition of [accessibility child][] allows for an intervening `<div>` element such as this one (with an [implicit semantic role][] of `generic`) to be present without preventing the `listitem` from being an accessibility child of the `list`.
 
@@ -215,6 +200,18 @@ These elements with an [explicit semantic role][] of `listitem` are not [accessi
 ```
 
 #### Failed Example 3
+
+This element with an `role="listitem"` is not an [accessibility child][] of the element with `role="list"`.  Instead, it is the [accessibility child][] of the element with `aria-live="polite"`.  The `aria-live` attribute prevents the element that it's on from being considered a "transparent element".  So the element with `aria-live` - rather than the element with `role="list"` - is the [accessibility parent][] of the element with `role="listitem"`.  The element with `aria-live` has an implicit role of `generic`.  `generic` is not the [required accessibility parent role][] of `listitem`, so the element with `role="listitem"` fails the rule.
+
+```html
+<div role="list">
+	<div aria-live="polite">
+		<div role="listitem">List item 1</div>
+	</div>
+</div>
+```
+
+#### Failed Example 4
 
 These elements with an [explicit semantic role][] of `listitem` are not [accessibility children][accessibility child] of an element with their [required accessibility parent role][] because explicit parent-child relation in the [accessibility tree][] (set by `aria-owns`) does not cross shadow boundaries.
 

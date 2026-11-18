@@ -49,7 +49,7 @@ An example of an element that has an [implicit semantic role][] that is identica
 
 Being an [accessibility child][] is different from being a child in the DOM tree. Some DOM nodes have no corresponding node in the [accessibility tree][] (for example, because they are marked with `role="presentation"`). So an [accessibility child][] can correspond to a grandchild in the DOM tree. Also, the `aria-owns` attribute can change the accessibility tree structure to something that is not a subtree of the DOM tree.
 
-This rule is restricted to [accessibility parents][accessibility parent], which means /direct/ parents., not grandparents.  Also, the definition of [accessibility parent][] handles `aria-owns`, so this rule doesn't need to handle it too.
+This rule is restricted to [accessibility parents][accessibility parent], which means _direct_ parents, not grandparents.  Also, the definition of [accessibility parent][] handles `aria-owns`, so this rule doesn't need to handle it too.
 
 [Subclass roles][subclass role] of [required accessibility parent roles][] are not automatically included as possible [required accessibility parent roles][]. For example, the [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) role is not a possible [required accessibility parent role][] for [`listitem`](https://www.w3.org/TR/wai-aria-1.3/#listitem), even though [`feed`](https://www.w3.org/TR/wai-aria-1.3/#feed) is a [subclass role][] of the [`list`](https://www.w3.org/TR/wai-aria-1.3/#list) role.
 

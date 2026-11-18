@@ -23,24 +23,22 @@ acknowledgments:
 
 ## Applicability
 
-Starting from a baseline mid-range desktop resolution of 1280 x 1024 pixels, this rule requires content to scale cleanly down to smaller viewports without forcing users to scroll in two dimensions. It applies to any element containing visible content or functional components that excludes components that inherently require a two-dimensional layout to be understood. When scaling down to a width of 320 CSS pixels for horizontal languages (or a height of 256 CSS pixels for vertical languages, equivalent to 400% browser zoom), content must smoothly reflow.
+This rule applies to any non-[decorative][] HTML [content][] that is [visible][] in a [viewport][] of 1280 by 1024 [CSS pixels][], and not [visible][] in a [viewport][] of 320 by 256 [CSS pixels][].
 
 ## Expectation
 
-For each target element, when the viewport is set to 320 by 256 CSS pixels, the content is not cut off, removed, or obscured by another element, except if one of the following is true:
+For each target element, when the [viewport][] is set to 320 by 256 CSS pixels, the [content][] is not cut off, removed, or obscured by another element, except if one of the following is true:
 
 - the hidden content can be scrolled into view, or
 - an [instrument][] is available to reveal the content.
 
 ## Background
 
-This rule supports WCAG 2.1 Success Criterion 1.4.10 Reflow, which requires that content be presented without loss of information or functionality at a width equivalent to 320 CSS pixels. When content is missing at smaller viewport sizes, users may lose access to essential information or controls, even if the layout appears functional. Responsive design should reposition or adapt content, not remove it entirely, unless an equivalent mechanism provides access. 
-
-The person testing the content is aware of the content's requirements to allow word wrap and specific spacing, for example, a programming language like Python.
+This rule supports the Success Criterion [1.4.10 Reflow][sc1410], which requires that content be presented without loss of information or functionality at a width equivalent to 320 [CSS pixels][]. When content is missing at smaller [viewport][] sizes, users may lose access to [essential][] information or controls, even if the layout appears functional. Responsive design should reposition or adapt content, not remove it entirely, unless an equivalent [mechanism][] provides access. 
 
 ### Assumptions
 
-There are no assumptions.
+The person testing the [content][] is aware of the requirements to allow word wrap and specific spacing, for example, a programming language like Python.
 
 ### Accessibility Support
 
@@ -52,7 +50,7 @@ There are no accessibility support issues known.
 
 #### Passed Example 1
 
-Content remains fully available after reflow.
+[Content][] remains fully available after reflow.
 
 ```html
 <div style="max-width: 100%;">
@@ -64,7 +62,7 @@ Content remains fully available after reflow.
 
 #### Passed Example 2
 
-Navigation collapses into a menu but remains accessible. Content is not removed, only not immeditately visible behind an accessible control.
+Navigation collapses into a menu but remains accessible. [Content][] is not removed, only not immeditately visible behind an accessible control.
 
 ```html
 <button aria-expanded="false">Menu</button>
@@ -79,11 +77,11 @@ Navigation collapses into a menu but remains accessible. Content is not removed,
 
 #### Passed Example 3
 
-Content is visually hidden on the first view but remains available programmatically and visual in a sub page.
+[Content][] is visually hidden on the first view but remains available programmatically and visual in a sub page.
 
 ```html
-<p class="visually-hidden">
-  Additional instructions available to screen reader users.
+<p>
+   <a href="instructions.html">Read full instructions</a>
 </p>
 ```
 
@@ -112,7 +110,7 @@ Images resize but are still visible.
 
 #### Passed Example 6
 
-Form fields collapse in an accordian but remain accessible when expended.
+Form fields collapse in an accordian but remain accessible when expanded.
 
 ```html
 <form>
@@ -123,7 +121,7 @@ Form fields collapse in an accordian but remain accessible when expended.
 
 #### Passed Example 7
 
-Content requiring two-dimensional layout (covered under reflow exceptions).
+[Content][] requiring two-dimensional layout (covered under reflow exceptions).
 
 ```html
 <table>
@@ -166,7 +164,7 @@ Python code that allows a scroll as cannot include a word wrap to function.
 
 #### Failed Example 1
 
-Static content removed at smaller viewport.
+Static [content][] removed completely at smaller viewport.
 
 ```html
 <style>
@@ -205,7 +203,7 @@ Navigation items removed instead of adapted.
 
 #### Failed Example 3
 
-Content visually clipped and inaccessible.
+[Content][] visually clipped and inaccessible.
 
 ```html
 <div style="height: 50px; overflow: hidden;">
@@ -217,7 +215,7 @@ Content visually clipped and inaccessible.
 
 #### Failed Example 4
 
-Content moved off-screen and not reachable when it should be visible.
+[Content][] moved off-screen and not reachable when it should be visible.
 
 ```html
 <div style="position: absolute; left: -9999px;">
@@ -227,7 +225,7 @@ Content moved off-screen and not reachable when it should be visible.
 
 #### Failed Example 5
 
-Interactive element missing at smaller viewport.
+Interactive element missing at smaller [viewport][].
 
 ```html
 <style>
@@ -257,7 +255,7 @@ Image removed without alternative.
 
 #### Failed Example 7
 
-Collapsed content has no mechanism to access it.
+Collapsed [content][] has no mechanism to access it.
 
 ```html
 <div style="display: none;">
@@ -269,7 +267,7 @@ Collapsed content has no mechanism to access it.
 
 #### Inapplicable Example 1
 
-Content explicitly hidden from all users.
+[Content][] explicitly hidden from all users.
 
 ```html
 <div hidden>
@@ -279,7 +277,7 @@ Content explicitly hidden from all users.
 
 #### Inapplicable Example 2
 
-Content outside the user viewport by design (e.g. off-canvas patterns before interaction).
+[Content][] outside the user viewport by design (e.g. off-canvas patterns before interaction).
 
 ```html
 <div aria-hidden="true" class="offscreen-menu">
@@ -288,3 +286,11 @@ Content outside the user viewport by design (e.g. off-canvas patterns before int
 ```
 
 [instrument]: #instrument 'Definition of instrument'
+[decorative]: https://www.w3.org/TR/WCAG22/#dfn-pure-decoration 'WCAG definition of Pure Decoration'
+[content]: https://www.w3.org/TR/WCAG22/#dfn-content 'WCAG definition of Content (Web content)'
+[visible]: #visible 'Definition of visible'
+[viewport]: https://www.w3.org/TR/WCAG22/#dfn-viewport 'WCAG definition of Viewport'
+[css pixels]: https://www.w3.org/TR/css3-values/#reference-pixel 'CSS 3 definition, reference pixel'
+[sc1410]: https://www.w3.org/TR/WCAG22/#reflow 'WCAG 2.2 Success Criterion 1.4.10 Reflow'
+[essential]: https://www.w3.org/TR/WCAG22/#dfn-essential 'WCAG definition of Essential'
+[mechanism]: https://www.w3.org/TR/WCAG22/#dfn-mechanism 'WCAG definition of Mechanism'

@@ -155,9 +155,11 @@ This example also passed in the ARIA 1.2 version of this rule.
 
 ```html
 <div role="tree" aria-label="Files">
-	<div role="treeitem" aria-label="Folder 1">
+	<div role="treeitem">
+		Folder 1
 		<div role="group">
-			<div role="treeitem" aria-label="file.txt">
+			<div role="treeitem">
+				file.txt
 			</div>
 		</div>
 	</div>

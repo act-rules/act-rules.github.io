@@ -23,6 +23,7 @@ input_aspects:
   - Language
 acknowledgments:
   authors:
+    - Giacomo Petri
     - Wilco Fiers
   funding:
     - WAI-Tools
@@ -39,7 +40,11 @@ This rule applies to any [document element][] if it is an `html` element for whi
 - The [document element][] has a `lang` attribute with a value that has a [known primary language tag][]; and
 - The [document element][] is in a [top-level browsing context][]; and
 - The [document element][] has a [content type][] of `text/html`; and
-- The [document element][] has a defined [default page language][].
+- The [document element][] has a defined [default page language][]; and
+- The [document element][] has at least one of the following [descendant](https://dom.spec.whatwg.org/#concept-tree-descendant) that is not empty or only [whitespace][]:
+	- [text node][] that is included in the accessibility tree; or
+ 	- an element's [accessible name][] or [accessible description](https://www.w3.org/TR/accname-1.1/#dfn-accessible-description) that is exposed in the accessibility tree; or
+  	- the document's title.
 
 ## Expectation
 
@@ -319,6 +324,16 @@ The `lang` [attribute value][] of this page is a [grandfathered tag][grandfather
 	<body>
 		<p lang="lb">Lëtzebuerg ass e Land an Europa.</p>
 	</body>
+</html>
+```
+
+#### Inapplicable Example 7
+
+This rule does not apply to content that is empty or contains only [whitespace][].
+
+```html
+<html lang="em-US">
+	<body></body>
 </html>
 ```
 

@@ -10,7 +10,7 @@ input_aspects:
   - Language
 ---
 
-The _most common language of an element_ is determined by counting the number of _words_ in the [text inheriting its programmatic language][] from this element that are part of any of the languages in the [language subtag registry][]. The same word can be part of multiple languages. In case of ties, the element has several most common languages. If there are no words in the [text inheriting its programmatic language][] from the element, then it has no most common language.
+The _most common language of an element_ is determined by counting the number of _words_ in the [text inheriting its programmatic language][] from this element that are part of any of the languages in the [language subtag registry][]. The same word can be part of multiple languages. In case of a tie, the first of the tied languages used in the text is the most common language. If there are no words in the [text inheriting its programmatic language][] from the element or the tie cannot be resolved, then it has no most common language.
 
 For more details, see [examples of most common language][].
 

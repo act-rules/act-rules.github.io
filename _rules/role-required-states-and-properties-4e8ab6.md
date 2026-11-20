@@ -121,6 +121,8 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 This `combobox` has the required property `aria-expanded`, and an optional `aria-controls`.
 
+**Note:** `aria-controls` was required in ARIA 1.2.  It became optional in ARIA 1.3.
+
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>
 <input type="text" id="tag_combo" role="combobox" aria-expanded="true" aria-controls="popup_listbox" />

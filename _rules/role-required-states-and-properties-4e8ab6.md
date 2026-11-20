@@ -77,7 +77,7 @@ This `heading` has the required `aria-level` property.
 
 #### Passed Example 2
 
-This `checkbox` has the required `aria-checked` property.
+This `checkbox` has the required `aria-checked` state.
 
 ```html
 <div role="checkbox" aria-checked="false" aria-labelledby="label"></div>
@@ -97,7 +97,7 @@ This `scrollbar` has the required property `aria-valuenow`. The optional `aria-c
 
 #### Passed Example 4
 
-The `option` role has no required properties.
+The `option` role has no required states or properties.
 
 **Note:** In ARIA 1.2, `aria-selected` was required and had a default value of `false`.  In ARIA 1.3, `aria-selected` became optional.  So this example passes in both ARIA 1.2 and 1.3, but for different reasons.
 
@@ -121,7 +121,7 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 #### Passed Example 6
 
-This `combobox` has the required property `aria-expanded`, and an optional `aria-controls`.
+This `combobox` has the required state `aria-expanded`, and an optional `aria-controls`.
 
 **Note:** `aria-controls` was required in ARIA 1.2.  It became optional in ARIA 1.3.
 
@@ -148,7 +148,7 @@ This `heading` does not have the required property `aria-level`. Per [WAI-ARIA 1
 
 #### Failed Example 2
 
-This `switch` does not have the required property `aria-checked`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `switch` does not have the required state `aria-checked`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <div role="switch">
@@ -158,7 +158,7 @@ This `switch` does not have the required property `aria-checked`. Per [WAI-ARIA 
 
 #### Failed Example 3
 
-This `checkbox` does not have the required property `aria-checked`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `checkbox` does not have the required state `aria-checked`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <div role="checkbox" aria-labelledby="label"></div>
@@ -177,7 +177,7 @@ This `separator` does not have the required `aria-valuenow` property. This is re
 
 #### Failed Example 5
 
-This `combobox` does not have the required property `aria-expanded`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
+This `combobox` does not have the required state `aria-expanded`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <label for="tag_combo">Tag</label>

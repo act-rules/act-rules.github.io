@@ -88,6 +88,8 @@ This `checkbox` has the required `aria-checked` property.
 
 This `scrollbar` has the required property `aria-valuenow`. The optional `aria-controls` refers to the element with "content" as ID. Also, `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
 
+**Note:** `aria-controls` was required in ARIA 1.2.  It became optional in ARIA 1.3.
+
 ```html
 <div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>
 <main id="content"></main>

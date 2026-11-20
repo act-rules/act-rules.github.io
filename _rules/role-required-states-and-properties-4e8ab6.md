@@ -192,7 +192,7 @@ This `combobox` does not have the required property `aria-expanded`. Per [WAI-AR
 
 #### Inapplicable Example 1
 
-This `div` does not have an [explicit semantic role](#explicit-role).
+This `div` does not have an [explicit semantic role][].
 
 ```html
 <div>Some Content</div>
@@ -200,7 +200,7 @@ This `div` does not have an [explicit semantic role](#explicit-role).
 
 #### Inapplicable Example 2
 
-This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
+This `checkbox` has an [implicit semantic role][] that is identical to the [explicit semantic role][]. This allows native HTML `checked` attribute to apply.
 
 ```html
 <input type="checkbox" role="checkbox" aria-label="Checkbox name" />

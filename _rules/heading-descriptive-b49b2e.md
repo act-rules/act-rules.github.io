@@ -28,7 +28,11 @@ acknowledgments:
 
 ## Applicability
 
-This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty (`””`) [accessible name][].
+This rule applies to any [semantic][semantic role] `heading` element that is [included in the accessibility tree][] and has a non-empty ("") [accessible name][].
+
+Elements presented as headings that are not in the accessibility tree fail [Success Criterion 1.3.1 Info and Relationships][sc131] regardless of their content. The content of such elements is within the scope of [Success Criterion 2.4.6 Headings and Labels][sc246], while their semantics is not.
+
+A heading does not need to describe all of the content in its section. It is relevant if it describes the content or aligns with the purpose of that section.
 
 ## Expectations
 
@@ -87,29 +91,26 @@ This `h1` element about the marketing content that follows is relevant.
 
 ```html
 <h1>Fresh deals just dropped: Printers</h1>
-<article class="carousel" aria-label="Fresh deals">
-  <div class="carousel-slides">
-    <div class="slide active">
-      <img src="printer1.jpg" alt="Compact All-in-One Laser Printer">
-    </div>
-    <div class="slide">
-      <img src="printer2.jpg" alt="High-Speed Wireless Inkjet Printer">
-    </div>
-    <div class="slide">
-      <img src="printer3.jpg" alt="Heavy-Duty Office Color Printer">
-    </div>
-    <div class="slide">
-      <img src="printer4.jpg" alt="Photo Quality Portable Printer">
-    </div>
-    <div class="slide">
-      <img src="printer5.jpg" alt="Eco-Friendly Tank Printer">
-    </div>
+<div style="display: flex; gap: 1.5rem;">
+  <div>
+    <svg width="128" height="128" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 2h12v5H6V2zm-2 7h16a2 2 0 0 1 2 2v6h-4v5H6v-5H2v-6a2 2 0 0 1 2-2zm4 8v3h8v-3H8z" />
+    </svg>
+    <p>All-in-One Laser Printers</p>
   </div>
-
-  <div class="carousel-controls">
-    <button type="button" id="toggle-btn" aria-label="Pause slide rotation">Pause</button>
+  <div>
+    <svg width="128" height="128" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 4h10v3H7V4zm-4 5h18a1 1 0 0 1 1 1v6h-4v5H6v-5H2v-6a1 1 0 0 1 1-1zm5 8v2h8v-2H8z" />
+    </svg>
+    <p>Wireless Inkjet Printers</p>
   </div>
-</article>
+  <div>
+    <svg width="128" height="128" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 3h8v4H8V3zm-3 6h14a3 3 0 0 1 3 3v4h-3v5H5v-5H2v-4a3 3 0 0 1 3-3zm3 8v2h8v-2H8z" />
+    </svg>
+    <p>Photo Quality Portable Printers</p>
+  </div>
+</div>
 ```
 
 #### Passed Example 3

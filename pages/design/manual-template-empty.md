@@ -71,13 +71,13 @@ There are no accessibility support issues known.
 
 - [rule name here](./abc123)
 
-### Bibliography
+### Other Resources
 
 <!-- This section is optional -->
 
 - [link here](#)
 
-## Test Cases
+## Examples
 
 ### Passed
 

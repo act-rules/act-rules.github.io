@@ -93,18 +93,22 @@ function validateRuleFrontmatter({ frontmatter }, metaData) {
 		/**
 		 * The below check the `values` for every `key - value` pair of accessibility requirements
 		 */
-		const accRequirementValues = Object.values(accessibility_requirements)
-		test.each(accRequirementValues)('has expected keys for accessibility requirement: `%p`', accReq => {
-			expect(accReq).not.toBeNull()
-			expect(typeof accReq).toBe('object')
-			const keys = Object.keys(accReq).sort()
+		const accessibilityReqs = Object.entries(accessibility_requirements).map(([key, value]) => ({ key, value }))
+		test.each(accessibilityReqs)('has expected keys for accessibility requirement: `%p`', ({ key, value }) => {
+			expect(value).not.toBeNull()
+			expect(typeof value).toBe('object')
+			const keys = Object.keys(value).sort()
 
 			if (keys.includes('secondary')) {
 				expect(keys.length).toBe(1)
-				expect(typeof accReq.secondary).toBe('string')
+				expect(typeof value.secondary).toBe('string')
 			} else {
+				const requiredProps = ['failed', 'forConformance', 'inapplicable', 'passed']
+				if (!/wcag-technique:.*/.test(key) && !/wcag2\d:.*/.test(key)) {
+					requiredProps.push('title')
+				}
 				expect(keys.length).toBeGreaterThanOrEqual(4)
-				expect(keys).toIncludeAllMembers(['failed', 'forConformance', 'inapplicable', 'passed'])
+				expect(keys).toIncludeAllMembers(requiredProps)
 			}
 		})
 	}

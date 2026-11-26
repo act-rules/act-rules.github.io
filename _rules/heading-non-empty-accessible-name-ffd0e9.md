@@ -48,12 +48,12 @@ There are no assumptions.
 
 - The [accessible name and description computation][] suggests that if an `aria-labelledby` attribute refers to an existing but empty element, the computation should stop and return an empty name without defaulting to the next steps. Several user agents and assistive technologies chose to use the next step in the computation in this case (ultimately defaulting to the content).
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships][usc131]
 - [Technique H42: Using h1-h6 to identify headings][tech h42]
 
-## Test Cases
+## Examples
 
 ### Passed
 

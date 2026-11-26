@@ -2,11 +2,11 @@
 title: Testing Tools
 ---
 
-## For consuming Test Cases
+## For consuming Examples
 
-| Tool Name    | Tool URL                                                                           | Language   | Tool Description                                                                                                                                                                                          |
-| ------------ | ---------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `testrunner` | [https://github.com/act-rules/testrunner](https://github.com/act-rules/testrunner) | JavaScript | A [puppeteer](https://github.com/GoogleChrome/puppeteer) based implementation that allows running a configurable test tool against all the above test cases on a per page basis, and returns raw results. |
+| Tool Name    | Tool URL                                                                           | Language   | Tool Description                                                                                                                                                                                        |
+| ------------ | ---------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `testrunner` | [https://github.com/act-rules/testrunner](https://github.com/act-rules/testrunner) | JavaScript | A [puppeteer](https://github.com/GoogleChrome/puppeteer) based implementation that allows running a configurable test tool against all the above examples on a per page basis, and returns raw results. |
 
 ## For creating reports
 

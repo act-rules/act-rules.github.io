@@ -60,12 +60,12 @@ If any of the following assumptions is true, failing this rule may not result in
 
 Some user agents treat the value of the `aria-hidden` attribute as case-sensitive.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.4.4: Resize text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
 - [G42: Using a technology that has commonly-available user agents that support zoom](https://www.w3.org/WAI/WCAG22/Techniques/general/G142)
 
-## Test Cases
+## Examples
 
 ### Passed
 

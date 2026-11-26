@@ -10,6 +10,8 @@
 - https
 - wai-aria
 - validator
+- w3c
+- wcag-act-rules
 
 # Tag(s)
 - svg # `aria-query` dom tags does not list `svg`
@@ -136,7 +138,7 @@
 - ozplayer
 - GitHub
 
-# Test case anamolies
+# Test case anomalies
 - brewitt-taylor
 - level2-frame1
 - level1-frame2
@@ -146,11 +148,16 @@
 - Sumei
 - Tuttle
 - lnik # intentional misspelling
+- ngizmo
+- nspecification
+- thelabel
 
 # Attributes (repeated words with casing as retext-spell has no config to ignore casing)
 - href
 - src
 - srcset
+- aria-braillelabel
+- aria-brailleroledescription
 - aria-labelled # used to demonstrate wrong attribute
 - autofill-field
 - autocomplete
@@ -174,6 +181,9 @@
 - isComposing
 - x1
 - y1
+
+# HTML character references
+- nbsp
 
 # DOM Events
 - auxclick
@@ -241,6 +251,12 @@
 - disambiguated
 - superclass
 - grey
+- substring
+- initialisms
+- sublist
+- tokenize
+- tokenized
+- subsequence
 
 # Parts of Unicode
 - 000A
@@ -250,9 +266,11 @@
 - 4E00
 - 9FFF
 - 4E00–9FFF
+- 00A0
+- KD
 
 # JSON attributes/ metadata/ methods
-- testcases
+- examples
 - ruleId
 - ruleName
 - rulePage

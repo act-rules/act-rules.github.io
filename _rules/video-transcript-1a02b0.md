@@ -16,6 +16,10 @@ accessibility_requirements:
     failed: not satisfied
     passed: further testing needed
     inapplicable: further testing needed
+  wcag20:1.3.1: # Info and Relationships (A)
+    secondary: This success criterion is **related** to this rule. This is because this criterion applies to a visible transcript.
+  wcag20:1.2.1: # Audio-only and Video-only (Prerecorded) (A)
+    secondary: This success criterion is **less strict** than this rule. This is because this criterion does not require a transcript when the audio-only or video-only is a media alternative for text and is clearly labeled as such. Some of the failed examples may satisfy this success criterion.
 input_aspects:
   - DOM Tree
   - CSS Styling
@@ -42,7 +46,7 @@ This rule applies to every [non-streaming](#non-streaming-media-element) `video`
 
 ## Expectation
 
-The visual information of each test target is available through a text transcript that is [visible][], [included in the accessibility tree][], and is either on the page or linked.
+The visual information of each test target is available through a text transcript that is [included in the accessibility tree][], and is either on the page or linked.
 
 **Note:** A "text transcript" in the context of this rule is defined in WCAG 2 as an [alternative for time based media](https://www.w3.org/TR/WCAG22/#dfn-alternative-for-time-based-media).
 
@@ -50,13 +54,14 @@ The visual information of each test target is available through a text transcrip
 
 ### Assumptions
 
-This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- This rule assumes that a mechanism is available to start the video and that the video element is not simply used to display the [poster](https://www.w3.org/TR/html5/semantics-embedded-content.html#element-attrdef-video-poster).
+- Users who are not visually impaired can comprehend the contents of the video through visual cues and information presented visually.
 
 ### Accessibility Support
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded)
 - [Understanding Success Criterion 1.2.8: Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded)
@@ -64,13 +69,13 @@ There are no accessibility support issues known.
 - [G173: Providing a version of a movie with audio descriptions](https://www.w3.org/WAI/WCAG22/Techniques/general/G173)
 - [G203: Using a static text alternative to describe a talking head video](https://www.w3.org/WAI/WCAG22/Techniques/general/G203)
 
-## Test Cases
+## Examples
 
 ### Passed
 
 #### Passed Example 1
 
-A video element with a text transcript on the same page.
+A video element with a visible text transcript on the same page.
 
 ```html
 <html lang="en">`
@@ -95,6 +100,40 @@ A video element with a link to a text transcript on a different page.
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/transcript.html">Transcript</a>
+</html>
+```
+
+#### Passed Example 3
+
+This `video` element has a non-visible text transcript available on the same page.
+
+```html
+<html lang="en">
+<video controls>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
+<p style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
+Then he stops to scratch his bottom.</p>
+</html>
+```
+
+#### Passed Example 4
+
+A video element with an associated track element that contains captions for all the audio and a transcript on the page.
+
+```html
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+	</video>
+	<p>
+		Web Accessibility Perspectives: Keyboard Accessibility. Not being able to use your computer because your mouse
+		doesn't work, is frustrating. (A computer user's mouse breaks when it falls off the desk.) Many people use only the
+		keyboard to navigate websites. Either through preference or circumstance. (A person wearing a sling on her arm
+		typing with one hand.)
+	</p>
 </html>
 ```
 
@@ -127,6 +166,34 @@ A video element with a link to an incorrect text transcript on a different page.
   <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
 </video>
 <a href="/test-assets/rabbit-video/incorrect-transcript.html">Transcript</a>
+</html>
+```
+
+#### Failed Example 3
+
+This `video` element has a text transcript available on the same page, but the transcript is not [included in the accessibility tree][].
+
+```html
+<html lang="en">
+<video controls>
+  <source src="/test-assets/rabbit-video/video.mp4" type="video/mp4"></source>
+  <source src="/test-assets/rabbit-video/video.webm" type="video/webm"></source>
+</video>
+<p aria-hidden="true">The above video shows a giant fat rabbit climbing out of a hole in the ground.
+He stretches, yaws, and then starts walking.
+Then he stops to scratch his bottom.</p>
+</html>
+```
+
+#### Failed Example 4
+
+A video element with audio does not have a text transcript.
+
+```html
+<html lang="en">
+	<video src="/test-assets/perspective-video/perspective-video.mp4" controls>
+		<track src="/test-assets/perspective-video/perspective-caption.vtt" kind="captions" />
+	</video>
 </html>
 ```
 

@@ -70,7 +70,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 
 - [Link in context is descriptive](https://www.w3.org/WAI/standards-guidelines/act/rules/5effbb/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.4: Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
 - [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7)
@@ -78,7 +78,7 @@ The rule assumes that all links are [user interface components](https://www.w3.o
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [F89: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible name for an image which is the only content in a link](https://www.w3.org/WAI/WCAG22/Techniques/failures/F89)
 
-## Test Cases
+## Examples
 
 ### Passed
 

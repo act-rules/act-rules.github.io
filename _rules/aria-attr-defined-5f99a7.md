@@ -39,7 +39,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/#index-aria-global)
 - [WAI ARIA Supported States and Properties](https://www.w3.org/TR/wai-aria-1.2/#supportedState)
@@ -48,7 +48,7 @@ There are no accessibility support issues known.
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
 - [Semantics and ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
 
-## Test Cases
+## Examples
 
 ### Passed
 

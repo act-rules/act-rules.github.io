@@ -4,7 +4,7 @@ import { config, cloneWcagActRules, commitAndPush } from './commons.mjs'
 
 await cloneWcagActRules(config);
 await generateProposedRulePages(config);
-await generateTestCases(config);
+await generateexamples(config);
 const commitMessage = (await $`git log -1 --pretty=%B`).stdout;
 await commitAndPush(config, commitMessage);
 
@@ -18,7 +18,7 @@ async function generateProposedRulePages({ tmpDir, rulesDir, glossaryDir, testAs
   `;
 }
 
-async function generateTestCases({ tmpDir, rulesDir, testAssetsDir }) {
+async function generateexamples({ tmpDir, rulesDir, testAssetsDir }) {
   await $`node ./node_modules/act-tools/dist/cli/build-examples.js \
     --rulesDir "${rulesDir}" \
     --testAssetsDir "${testAssetsDir}" \

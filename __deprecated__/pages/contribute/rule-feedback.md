@@ -41,7 +41,7 @@ To start giving feedback and doing reviews for draft rules:
 
 We also welcome any feedback and suggestions for changes to already published rules. The published rules should be as precise as possible, limiting the number of potential false positives and false negatives. For this, it is important to draw on as many tool and methodology implementations and expert opinions as possible.
 
-Feedback and corrections for existing rules can target any of the sections of the rule itself (Applicability, Expectations, Accessibility Support, etc.), as well as the test cases, for example to expand the edge case coverage.
+Feedback and corrections for existing rules can target any of the sections of the rule itself (Applicability, Expectations, Accessibility Support, etc.), as well as the examples, for instance to expand the edge case coverage.
 
 You have several options for correcting existing rules:
 

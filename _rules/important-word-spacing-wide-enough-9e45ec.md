@@ -56,17 +56,17 @@ CSS specifications define each declaration as being either [important][] (if it 
 
 While some assistive technologies are able to set [user origin][] or [user agent origin][] styles, others, such as browser extensions, are only able to set styles with the [author origin][]. Such assistive technologies cannot create styles "winning" the [cascade sort][] over a `style` attribute with an [important][] declaration.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html)
 - [CSS Text Module Level 3 - Spacing](https://www.w3.org/TR/css-text-3/#spacing)
 - [CSS Visual formatting model details](https://drafts.csswg.org/css2/visudet.html)
 
-### About test cases
+### About examples
 
-Test cases descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
+Example descriptions abusively refer to the CSS properties of text nodes, meaning the one of their parent.
 
-## Test Cases
+## Examples
 
 ### Passed
 

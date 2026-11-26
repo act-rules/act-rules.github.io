@@ -45,7 +45,7 @@ There are no assumptions.
 
 There are no accessibility support issues known.
 
-### Bibliography
+### Other Resources
 
 - [Success Criterion 2.4.7 Focus Visible][sc247]
 - [Success Criterion 2.4.11 Focus Appearance][sc2411]
@@ -54,7 +54,7 @@ There are no accessibility support issues known.
 - [Understanding Success Criterion 2.4.11: Focus Appearance][usc2411]
 - [Understanding Success Criterion 2.4.12: Focus Not Obscured (Minimum)][usc2412]
 
-## Test Cases
+## Examples
 
 ### Passed
 

@@ -1,5 +1,5 @@
 [build]
-command = "npm install && npm run pr:preview && cd wcag-act-rules-tmp && git submodule update --init --remote && bundle install && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+command = "npm ci && npm run pr:preview && cd wcag-act-rules-tmp && git submodule update --init --remote && bundle install && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
 # base = "wcag-act-rules-tmp"
 publish = "wcag-act-rules-tmp/_site"
 

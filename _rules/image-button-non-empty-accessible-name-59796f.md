@@ -65,14 +65,14 @@ The [input type="image" Accessible Name Computation algorithm](https://www.w3.or
 
 - [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.1.1: Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 - [Understanding Success Criterion 4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
 - [WCAG Technique H36: Using alt attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG22/Techniques/html/H36)
 - [HTML Accessibility API Mappings for computing the accessible name of image buttons](https://www.w3.org/TR/html-aam-1.0/#input-type-image)
 
-## Test Cases
+## Examples
 
 ### Passed
 

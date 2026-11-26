@@ -65,13 +65,13 @@ There are currently no assumptions.
 
 - [HTML page has non-empty title](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/)
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.2: Page titled](https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html)
 - [Technique G88: Providing descriptive titles for Web pages](https://www.w3.org/WAI/WCAG22/Techniques/general/G88)
 - [Technique H25: Providing a title using the title element](https://www.w3.org/WAI/WCAG22/Techniques/html/H25)
 
-## Test Cases
+## Examples
 
 ### Passed
 

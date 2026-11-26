@@ -40,17 +40,19 @@ Each target element describes the topic or purpose of the first [perceivable con
 
 Headings that are visible but not in the accessibility tree are a failure of [Success Criterion 1.3.1 Info and Relationships][sc131]. These are not tested by this rule but they can still fail [Success Criterion 2.4.6 Headings and Labels][sc246].
 
+Testing tools treat empty headings `<h1></h1>` or `div role="heading" aria-level="1"></div>` differently. Some report that empty headings fail under 1.3.1 Info and Relationships or 2.4.6 Labels or Instructions. Other tools report that these headings pass because they are ignored by most assistive technologies and cause no accessibility barriers at all. This rule does not include examples of empty headings because there is currently no harmonized approach for testing them.
+
 ### Assumptions
 
-This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule assumes that the [flat tree][] order is close to the reading order as elements are rendered on the page. Due to positioning, it is possible to render a document in an order that greatly differs from the tree order, in which case the content which is visually associated with a heading might not be the content following it in tree order and this rule might fail while [Success Criterion 2.4.6 Headings and Labels][sc246] is still satisfied.
 
-This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from assistive technologies. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Label][sc246] is still satisfied.
+This rule also assumes that the content the heading is intended to describe is [visible][] and not hidden from assistive technologies. Otherwise, cases such as expandable content using a heading might fail this rule while [Success Criterion 2.4.6 Headings and Labels][sc246] is still satisfied.
 
 ### Accessibility Support
 
 Implementation of [Presentational Roles Conflict Resolution][] varies from one browser or assistive technology to another. Depending on this, some [semantic][semantic role] `heading` elements can fail this rule with some technology but users of other technologies would not experience any accessibility issue.
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 1.3.1: Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html)
 - [Understanding Success Criterion 2.4.6: Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html)
@@ -59,7 +61,7 @@ Implementation of [Presentational Roles Conflict Resolution][] varies from one b
 - [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12)
 - [HTML Specification - Heading content](https://html.spec.whatwg.org/#heading-content)
 
-## Test Cases
+## Examples
 
 ### Passed
 
@@ -212,26 +214,6 @@ This `h1` heading element is not [included in the accessibility tree][].
 <html lang="en">
 	<h1 hidden>Opening Hours</h1>
 	<p>We are open Monday through Friday from 10 to 16</p>
-</html>
-```
-
-#### Inapplicable Example 3
-
-This `h1` heading element has an empty [accessible name][].
-
-```html
-<html lang="en">
-	<h1></h1>
-</html>
-```
-
-#### Inapplicable Example 4
-
-Semantic heading has an empty [accessible name][].
-
-```html
-<html lang="en">
-	<p role="heading" aria-level="1"></p>
 </html>
 ```
 

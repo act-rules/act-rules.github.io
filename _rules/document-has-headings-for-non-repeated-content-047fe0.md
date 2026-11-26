@@ -54,15 +54,15 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 - Having a heading for the non-repeated content is sufficient to pass [Success Criterion 2.4.1 Bypass blocks][sc241]. However, if headings are used for that goal, they will only benefit users who can actually navigate from heading to heading (such a functionality can be provided by browsers, browsers plugins, screen readers or other assistive technologies). Users without any possibility for headings navigation will be left without way of bypassing blocks of repeated content and will still experience accessibility issues. Therefore, it is recommended to provide other ways of bypassing blocks.
 - When headings are rendered without sufficient visual cues, they are not perceived as headings by sighted users. In this case, passing this rule might still fail [Technique H69: Providing heading elements at the beginning of each section of content][h69] and [Success Criterion 2.4.1 Bypass blocks][sc241]. Additionally, this is likely a failure of [Success Criterion 1.3.1 Info and Relationships][sc131].
 
-### Bibliography
+### Other Resources
 
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - [H69: Providing heading elements at the beginning of each section of content][h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
 
-## Test Cases
+## Examples
 
-To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its test cases to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
+To avoid using landmarks for the non-repeated content, which would satisfy [Success Criterion 2.4.1 Bypass Block][sc241], which this rule is designed for, this rule uses `<div id="main">` in its examples to indicate where non-repeating content exists. It is recommended to use the `main` landmark instead. The `nav` element is a [block of repeated content][] due to the link inside it to a page with similar [blocks of content][block of content].
 
 ### Passed
 

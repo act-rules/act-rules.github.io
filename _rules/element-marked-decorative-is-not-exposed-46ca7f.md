@@ -47,7 +47,7 @@ There are no assumptions.
 
 Implementation of the [Presentational Roles Conflict Resolution][] differs slightly from one user agent to the other. Hence, some elements might be exposed by one user agent and not by another, and consequently might create accessibility issues only for some users. Nevertheless, triggering the conflict is a bad practice.
 
-## Test Cases
+## Examples
 
 ### Passed
 

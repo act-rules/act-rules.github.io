@@ -12,7 +12,7 @@ accessibility_requirements:
     passed: further testing needed
     inapplicable: further testing needed
   aria12:requiredState:
-    title: ARIA 1.2, 5.2.2 Required States and Properties
+    title: ARIA 1.3, 5.2.2 Required States and Properties
     forConformance: true
     failed: not satisfied
     passed: satisfied
@@ -41,7 +41,7 @@ For each test target, the [WAI-ARIA required states and properties][] for the ro
 
 ## Background
 
-Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When required properties are missing and a default value is not specified by [WAI-ARIA Specifications][], the behavior is not defined. For [WAI-ARIA 1.2][], the only [explicit semantic roles][explicit semantic role] with a required property with a default value are the `option` and `tabs roles` for the `aria-selected` property.
+Omitting [WAI-ARIA required states and properties][] is often the result of a developer error. When a required state or property is missing and an [implicit value for role][WAI-ARIA implicit value for role] is not specified by the [WAI-ARIA Specifications][], the behavior is not defined. For example, in [WAI-ARIA 1.3][], for the [`checkbox` role](https://www.w3.org/TR/wai-aria-1.3/#checkbox), the `aria-checked` state is required and has no [implicit value for role][WAI-ARIA implicit value for role].
 
 This rule is testing author built components that specify [explicit semantic roles][explicit semantic role] and not components that keep their [implicit semantic role][]. For components that keep their [implicit semantic role][], all native HTML and SVG elements have native attributes that are mapped to all of the [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria/#requiredState). Most of these mappings are defined in the [HTML Accessibility API Mappings, Attribute State and Property Mappings][html aam].
 
@@ -58,7 +58,7 @@ This rule relies on browsers and assistive technologies to support leaving out [
 ### Other Resources
 
 - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5)
-- [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.2/#requiredState)
+- [WAI-ARIA required states and properties](https://www.w3.org/TR/wai-aria-1.3/#requiredState)
 - [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)
 
 ## Examples
@@ -77,7 +77,7 @@ This `heading` has the required `aria-level` property.
 
 #### Passed Example 2
 
-This `checkbox` has the required `aria-checked` property.
+This `checkbox` has the required `aria-checked` state.
 
 ```html
 <div role="checkbox" aria-checked="false" aria-labelledby="label"></div>
@@ -86,7 +86,9 @@ This `checkbox` has the required `aria-checked` property.
 
 #### Passed Example 3
 
-This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`. `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
+This `scrollbar` has the required property `aria-valuenow`. The optional `aria-controls` refers to the element with "content" as its ID. Also, `aria-valuemin` has a default value of 0 and `aria-valuemax` of 100.
+
+**Note:** `aria-controls` was required in ARIA 1.2.  It became optional in ARIA 1.3.
 
 ```html
 <div role="scrollbar" aria-controls="content" aria-valuenow="0"></div>
@@ -95,7 +97,9 @@ This `scrollbar` has the required properties `aria-controls` and `aria-valuenow`
 
 #### Passed Example 4
 
-These `option` nodes do not need the required `aria-selected` property because it has a default value of `false`.
+The `option` role has no required states or properties.
+
+**Note:** In ARIA 1.2, `aria-selected` was required and had a default value of `false`.  In ARIA 1.3, `aria-selected` became optional.  So this example passes in both ARIA 1.2 and 1.3, but for different reasons.
 
 ```html
 <div id="label">Tags</div>
@@ -117,7 +121,9 @@ This `separator` is not a `widget` because it is not [focusable][]. The `separat
 
 #### Passed Example 6
 
-This `combobox` has the required properties `aria-controls` and `aria-expanded`.
+This `combobox` has the required state `aria-expanded`, and an optional `aria-controls`.
+
+**Note:** `aria-controls` was required in ARIA 1.2.  It became optional in ARIA 1.3.
 
 ```html
 <label for="tag_combo" id="tag_label">Tag</label>
@@ -132,7 +138,7 @@ This `combobox` has the required properties `aria-controls` and `aria-expanded`.
 
 #### Failed Example 1
 
-This `heading` does not have the required `aria-level` property. Prior to [WAI-ARIA 1.2][] the `heading` role had an implicit default `aria-level` value of `2`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `heading` does not have the required property `aria-level`. Per [WAI-ARIA 1.3][] this property must be explicitly set.
 
 ```html
 <div role="heading">
@@ -142,7 +148,7 @@ This `heading` does not have the required `aria-level` property. Prior to [WAI-A
 
 #### Failed Example 2
 
-This `switch` does not have the required `aria-checked` property. Prior to [WAI-ARIA 1.2][] the `switch` role had an implicit default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `switch` does not have the required state `aria-checked`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <div role="switch">
@@ -152,7 +158,7 @@ This `switch` does not have the required `aria-checked` property. Prior to [WAI-
 
 #### Failed Example 3
 
-This `checkbox` does not have the required property `aria-checked`. Prior to [WAI-ARIA 1.2][] the `checkbox` had an implicit default `aria-checked` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `checkbox` does not have the required state `aria-checked`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <div role="checkbox" aria-labelledby="label"></div>
@@ -171,7 +177,7 @@ This `separator` does not have the required `aria-valuenow` property. This is re
 
 #### Failed Example 5
 
-This `combobox` does not have the required `aria-expanded` property. Prior to [WAI-ARIA 1.2][] the `combobox` had an implicit default `aria-expanded` value of `false`. As of WAI-ARIA 1.2 this property must be explicitly set.
+This `combobox` does not have the required state `aria-expanded`. Per [WAI-ARIA 1.3][] this state must be explicitly set.
 
 ```html
 <label for="tag_combo">Tag</label>
@@ -186,7 +192,7 @@ This `combobox` does not have the required `aria-expanded` property. Prior to [W
 
 #### Inapplicable Example 1
 
-This `div` does not have a [semantic role](#semantic-role).
+This `div` does not have an [explicit semantic role][].
 
 ```html
 <div>Some Content</div>
@@ -194,7 +200,7 @@ This `div` does not have a [semantic role](#semantic-role).
 
 #### Inapplicable Example 2
 
-This `checkbox` has an [implicit semantic role](#implicit-role) that is identical to the [explicit semantic role](#explicit-role). This allows native HTML `checked` attribute to apply.
+This `checkbox` has an [implicit semantic role][] that is identical to the [explicit semantic role][]. This allows native HTML `checked` attribute to apply.
 
 ```html
 <input type="checkbox" role="checkbox" aria-label="Checkbox name" />
@@ -212,9 +218,9 @@ This `combobox` is not [included in the accessibility tree][] due to its styling
 [html aam]: https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings 'Specification of HTML attributes value mapping to ARIA states and properties'
 [implicit semantic role]: #implicit-role 'Definition of implicit semantic role'
 [included in the accessibility tree]: #included-in-the-accessibility-tree 'Definition of Included in The Accessibility Tree'
-[wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.2/#requiredState
+[wai-aria required states and properties]: https://www.w3.org/TR/wai-aria-1.3/#requiredState
 [wai-aria specifications]: #wai-aria-specifications 'Definition of WAI-ARIA Specifications'
-[wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.2/#implictValueForRole
-[wai-aria 1.2]: https://www.w3.org/TR/wai-aria-1.2/
+[wai-aria implicit value for role]: https://www.w3.org/TR/wai-aria-1.3/#implictValueForRole
+[wai-aria 1.3]: https://www.w3.org/TR/wai-aria-1.3/
 [html or svg element]: #namespaced-element
 [focusable]: #focusable
